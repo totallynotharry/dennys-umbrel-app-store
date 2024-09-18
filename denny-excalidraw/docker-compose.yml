@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  excalidraw:
+    image: excalidraw/excalidraw
+    restart: on-failure
+    stop_grace_period: 1m
+    volumes:
+      - ${APP_DATA_DIR}/data:/data/excalidraw
+    ports:
+      - "5000:80"
