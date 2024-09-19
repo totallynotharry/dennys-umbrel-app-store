@@ -1,14 +1,14 @@
 ---
 version: "3.8"
 services:
-  app_proxy:
-    environment:
-      APP_HOST: umbrel.local
-      APP_PORT: 4100
-
-  server:
+  puter:
+    container_name: puter
     image: ghcr.io/heyputer/puter:sha-ec31007@sha256:46f0247c4b2a561b29548e275e343f14426f0f630c71155cbb58fad8343c3f92
-    restart: on-failure
+    pull_policy: always
+    # build: ./
+    restart: unless-stopped
+    ports:
+      - '4100:4100'
     environment:
       PUID: 1000
       PGID: 1000
