@@ -4,8 +4,6 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 
 ## Apps
 
-## App Table
-
 | App Name          | Description                                          |
 | ----------------- | ---------------------------------------------------- |
 | [Excalidraw](https://github.com/excalidraw/excalidraw)        | Web-based drawing app                         |
