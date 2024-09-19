@@ -11,9 +11,16 @@ description: >-
   Pingvin Share is an open-source, self-hosted file-sharing platform designed for
   private and secure sharing of files without relying on third-party cloud services.
   It allows users to share files directly between devices with end-to-end encryption, ensuring data privacy.
+  
+  
   The platform emphasizes ease of use, featuring a simple user interface
   and making it ideal for those who prioritize control over their data and want to avoid
   cloud-based sharing solutions from large providers.
+  
+
+  ⚠️ It is recommended to use the Cloudflare app to host Pingvin Share for improved performance.
+  The easiest way to do this is to use the 'Cloudflare Tunnel' app from the Umbrel app store.
+  
 developer: stonith404
 website: stonith404.github.io/pingvin-share/
 submitter: stonith404
