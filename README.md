@@ -17,7 +17,7 @@ All Apps are continually updated and new apps are added over time.
 ##
 
 ![Screenshot](https://github.com/user-attachments/assets/4aa7711f-53df-4baf-af08-4f13e4fa3736)
-<small>Kleiner Text</small>
+<small>Screenshot</small>
 
 
 ## How to add the App Store:
