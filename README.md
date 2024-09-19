@@ -11,8 +11,7 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | Pingvin Share     | File sharing tool             |
 | Puter OS          | Internet operating system     |
 
-##
-The apps are continually updated and new apps are added over time.
+Apps are continually updated and new apps are added over time.
 
 ## How to add the App Store:
 
