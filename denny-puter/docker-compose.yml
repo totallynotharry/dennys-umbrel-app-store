@@ -2,7 +2,7 @@ version: "3.8"
 services:
   puter:
     container_name: puter
-    image: ghcr.io/heyputer/puter:2.4.2@sha256:63d33132b48687a767f68568b6912c9cb982984f70af163f7efded2c0c53df57
+    image: ghcr.io/heyputer/puter:latest
     restart: unless-stopped
     ports:
       - '4100:4100'
@@ -14,3 +14,9 @@ services:
     volumes:
       - ${APP_DATA_DIR}/config:/etc/puter
       - ${APP_DATA_DIR}/data:/var/puter
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider http://umbrel.local:4100/test || exit 1
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 30s
