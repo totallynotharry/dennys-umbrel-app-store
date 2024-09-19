@@ -10,12 +10,13 @@ services:
     ports:
       - '4100:4100'
     environment:
-      # TZ: Europe/Paris
-      # CONFIG_PATH: /etc/puter
+      TZ: Europe/Berlin
+      CONFIG_PATH: /etc/puter
       PUID: 1000
       PGID: 1000
     volumes:
       - ${APP_DATA_DIR}/data:/home/puter/.puter
+      - ${APP_DATA_DIR}/config:/etc/puter
     healthcheck:
       test: wget --no-verbose --tries=1 --spider http://puter.localhost:4100/test || exit 1
       interval: 30s
