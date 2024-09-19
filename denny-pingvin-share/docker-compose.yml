@@ -1,9 +1,19 @@
 services:
   pingvin-share:
-    image: stonith404/pingvin-share
-    restart: unless-stopped
+    image: stonith404/pingvin-share:v0.27.0@sha256:ebcd050ddcf0fc6e2f14944e66f478825697479cb79feaec7d989fa4a45a0635
+    restart: on-failure
     ports:
       - 3000:3000
+    environment:
+      - PUID=1000
+      - PGID=1000
     volumes:
       - ${APP_DATA_DIR}/data:/opt/app/backend/data
       - ${APP_DATA_DIR}/data:/opt/app/frontend/public/img
+  depends_on:
+    clamav:
+      condition: service_healthy
+ 
+  clamav:
+    restart: on-failure
+      image: clamav/clamav
