@@ -10,12 +10,15 @@ services:
     ports:
       - '4100:4100'
     environment:
+      TZ: Europe/Berlin  # Hier kannst du die passende Zeitzone einstellen
+      CONFIG_PATH: /etc/puter
       PUID: 1000
       PGID: 1000
     volumes:
-      - ${APP_DATA_DIR}/data:/home/puter/.puter
+      - ${APP_DATA_DIR}/config:/etc/puter
+      - ${APP_DATA_DIR}/data:/var/puter
     healthcheck:
-      test: wget --no-verbose --tries=1 --spider http://puter.localhost:4100/test || exit 1
+      test: wget --no-verbose --tries=1 --spider http://umbrel.local:4100/test || exit 1
       interval: 30s
       timeout: 3s
       retries: 3
