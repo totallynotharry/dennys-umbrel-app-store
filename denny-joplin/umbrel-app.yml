@@ -22,9 +22,6 @@ description: >-
     - Web Interface: Joplin Server includes a web interface for easy management of the server and monitoring synchronization status.
     
     By using Joplin Server, users can maintain a consistent and secure note-taking experience across all their devices while keeping full control over their data.
-
-  ⚙️ It is recommended to use the Cloudflare app to host Joplin Sync Server for improved performance.
-  The easiest way to do this is to use the 'Cloudflare Tunnel' app from the Umbrel app store.
   
 developer: Laurent Cozic
 website: https://joplinapp.org
