@@ -6,14 +6,14 @@ services:
     image: ghcr.io/heyputer/puter:sha-ec31007@sha256:46f0247c4b2a561b29548e275e343f14426f0f630c71155cbb58fad8343c3f92
     pull_policy: always
     # build: ./
-    restart: unless-stopped
+    restart: on-failure
     ports:
       - '4100:4100'
     environment:
       TZ: Europe/Berlin  # Hier kannst du die passende Zeitzone einstellen
       CONFIG_PATH: /etc/puter
-      PUID: 1000
-      PGID: 1000
+      PUID: 0
+      PGID: 0
     volumes:
       - ${APP_DATA_DIR}/config:/etc/puter
       - ${APP_DATA_DIR}/data:/var/puter
