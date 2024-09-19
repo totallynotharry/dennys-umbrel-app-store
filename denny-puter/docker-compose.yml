@@ -1,23 +1,21 @@
----
 version: "3.8"
 services:
   puter:
     container_name: puter
-    image: ghcr.io/heyputer/puter:sha-ec31007@sha256:46f0247c4b2a561b29548e275e343f14426f0f630c71155cbb58fad8343c3f92
-    pull_policy: always
-    # build: ./
+    image: ghcr.io/heyputer/puter:2.4.2@sha256:63d33132b48687a767f68568b6912c9cb982984f70af163f7efded2c0c53df57
     restart: unless-stopped
     ports:
       - '4100:4100'
     environment:
-      # TZ: Europe/Paris
-      # CONFIG_PATH: /etc/puter
+      TZ: Europe/Berlin  # Hier kannst du die passende Zeitzone einstellen
+      CONFIG_PATH: /etc/puter
       PUID: 1000
       PGID: 1000
     volumes:
-      - ${APP_DATA_DIR}/data:/home/puter/.puter
+      - ${APP_DATA_DIR}/config:/etc/puter
+      - ${APP_DATA_DIR}/data:/var/puter
     healthcheck:
-      test: wget --no-verbose --tries=1 --spider http://puter.localhost:4100/test || exit 1
+      test: wget --no-verbose --tries=1 --spider http://umbrel.local:4100/test || exit 1
       interval: 30s
       timeout: 3s
       retries: 3
