@@ -10,6 +10,7 @@ services:
     ports:
       - '4100:4100'
     environment:
+      ALLOWED_HOSTS=umbrel.local
       PUID: 1000
       PGID: 1000
     volumes:
