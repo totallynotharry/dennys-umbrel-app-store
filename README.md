@@ -4,7 +4,7 @@ This repository contains a custom Umbrel App Store. Unlike the official store, t
 
 ## Apps
 
-| App Name          | Description                                          |
+| App          | Description                                          |
 | ----------------- | ---------------------------------------------------- |
 | [Excalidraw](https://github.com/excalidraw/excalidraw)        | Web-based drawing app                         |
 | [Joplin Sync Server](https://github.com/laurent22/joplin)    | Synchronization server for Joplin             |
