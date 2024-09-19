@@ -1,5 +1,12 @@
+version: "3.7"
+
 services:
-  pingvin-share:
+  app_proxy:
+    environment:
+      APP_HOST: pingvin-share_web_1
+      APP_PORT: 3000
+           PROXY_AUTH_ADD: "false"
+  web:
     image: stonith404/pingvin-share:v0.27.0@sha256:ebcd050ddcf0fc6e2f14944e66f478825697479cb79feaec7d989fa4a45a0635
     restart: on-failure
     ports:
