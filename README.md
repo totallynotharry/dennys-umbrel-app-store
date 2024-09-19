@@ -4,24 +4,17 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 
 ## Apps
 
-| App Name          | Description                 |
-| ----------------- | ----------------------------- |
-| Excalidraw        | Web-based drawing app      |
-| Joplin Sync Server| Synchronization server for Joplin |
-| Pingvin Share     | File sharing tool             |
-| Puter OS          | Internet operating system     |
+## App Table
+
+| App Name          | Description                                          |
+| ----------------- | ---------------------------------------------------- |
+| [Excalidraw](https://github.com/excalidraw/excalidraw)        | Web-based drawing app                         |
+| [Joplin Sync Server](https://github.com/laurent22/joplin)    | Synchronization server for Joplin             |
+| [Pingvin Share](https://github.com/stonith404/pingvin-share) | File sharing tool                             |
+| [Puter OS](https://github.com/puterOS/puterOS)              | Internet operating system                  |
+
 
 All Apps are continually updated and new apps are added over time.
-
-## App Table with Logos
-
-| App Name          | Description                     |
-| ----------------- | ------------------------------- |
-| ![Excalidraw](https://excalidraw.com/logo.png) Excalidraw        | Web-based drawing app            |
-| ![Joplin](https://joplinapp.org/images/logo.png) Joplin Sync Server| Synchronization server for Joplin|
-| ![Pingvin Share](https://pingvin-share.com/logo.png) Pingvin Share     | File sharing tool                |
-| ![Puter OS](https://puteros.com/logo.png) Puter OS          | Lightweight operating system     |
-
 
 ## How to add the App Store:
 
