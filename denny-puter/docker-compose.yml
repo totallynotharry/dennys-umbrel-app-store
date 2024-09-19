@@ -7,7 +7,7 @@ services:
       APP_PORT: 4100
 
   server:
-    image: ghcr.io/heyputer/puter:2.4.2@sha256:63d33132b48687a767f68568b6912c9cb982984f70af163f7efded2c0c53df57
+    image: ghcr.io/heyputer/puter:sha-ec31007@sha256:46f0247c4b2a561b29548e275e343f14426f0f630c71155cbb58fad8343c3f92
     restart: on-failure
     environment:
       PUID: 1000
