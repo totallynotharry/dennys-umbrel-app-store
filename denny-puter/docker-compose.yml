@@ -1,16 +1,15 @@
 ---
 version: "3.8"
 services:
-  puter:
-    container_name: puter
-    image: ghcr.io/heyputer/puter:2.4.2@sha256:63d33132b48687a767f68568b6912c9cb982984f70af163f7efded2c0c53df57
-    pull_policy: always
-    # build: ./
-    restart: unless-stopped
-    ports:
-      - '4100:4100'
+  app_proxy:
     environment:
-      ALLOWED_HOSTS=umbrel.local
+      APP_HOST: puter_1
+      APP_PORT: 4100
+
+  server:
+    image: ghcr.io/heyputer/puter:2.4.2@sha256:63d33132b48687a767f68568b6912c9cb982984f70af163f7efded2c0c53df57
+    restart: on-failure
+    environment:
       PUID: 1000
       PGID: 1000
     volumes:
