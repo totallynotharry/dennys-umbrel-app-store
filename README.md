@@ -14,6 +14,9 @@ This repository contains a custom Umbrel App Store. Unlike the official store, t
 
 All Apps are continually updated and new apps are added over time.
 
+![Screenshot](https://github.com/user-attachments/assets/4aa7711f-53df-4baf-af08-4f13e4fa3736)
+
+
 ## How to add the App Store:
 
 https://user-images.githubusercontent.com/10330103/197889452-e5cd7e96-3233-4a09-b475-94b754adc7a3.mp4
