@@ -4,7 +4,7 @@ This repository contains a custom Umbrel App Store. Unlike the official store, t
 
 
 
-## Currently available apps
+### Currently available apps
 
 | App          | Description                                          |
 | ----------------- | ---------------------------------------------------- |
