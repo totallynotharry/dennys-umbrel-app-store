@@ -3,10 +3,10 @@ version: "3.8"
 services:
   puter:
     container_name: puter
-    image: ghcr.io/heyputer/puter:latest@sha256:551a6cda96af9167a866bd283e12fd6d3b0a9ea433f10edc7c3d9663eca2ac92
+    image: ghcr.io/heyputer/puter:sha-ec31007@sha256:46f0247c4b2a561b29548e275e343f14426f0f630c71155cbb58fad8343c3f92
     pull_policy: always
     # build: ./
-    restart: on-failure
+    restart: unless-stopped
     ports:
       - '4100:4100'
     environment:
@@ -17,7 +17,7 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data:/home/puter/.puter
     healthcheck:
-      test: wget --no-verbose --tries=1 --spider http://umbrel.local:4100/test || exit 1
+      test: wget --no-verbose --tries=1 --spider http://puter.localhost:4100/test || exit 1
       interval: 30s
       timeout: 3s
       retries: 3
