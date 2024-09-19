@@ -7,7 +7,9 @@ category: files
 version: "0.17.3"
 port: 5000
 description: >-
-  Excalidraw is a web-based, open-source tool for creating hand-drawn-style diagrams, sketches, and illustrations. 
+ ✏️ Excalidraw is a web-based, open-source tool for creating hand-drawn-style diagrams, sketches, and illustrations.
+
+  
   It allows users to quickly draw shapes, text, and arrows with a simple, intuitive interface that mimics the look of freehand sketches. 
   Popular for brainstorming, flowcharts, wireframes, and collaborative whiteboard sessions, Excalidraw also supports real-time collaboration, enabling multiple users to draw together on the same canvas.
 developer: Excalidraw Team
