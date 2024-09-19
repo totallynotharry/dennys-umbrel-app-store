@@ -13,5 +13,5 @@ services:
       PUID: 1000
       PGID: 1000
     volumes:
-      - ${APP_DATA_DIR}/config:/etc/puter/
-      - ${APP_DATA_DIR}/data:/home/puter/.puter
+      - ${APP_DATA_DIR}/config:/etc/puter
+      - ${APP_DATA_DIR}/data:/var/puter
