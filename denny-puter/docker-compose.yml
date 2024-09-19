@@ -6,18 +6,16 @@ services:
     image: ghcr.io/heyputer/puter:sha-ec31007@sha256:46f0247c4b2a561b29548e275e343f14426f0f630c71155cbb58fad8343c3f92
     pull_policy: always
     # build: ./
-    restart: on-failure
+    restart: unless-stopped
     ports:
       - '4100:4100'
     environment:
-      TZ: Europe/Berlin  # Hier kannst du die passende Zeitzone einstellen
       PUID: 1000
       PGID: 1000
     volumes:
-      - ${APP_DATA_DIR}/config:/etc/puter
-      - ${APP_DATA_DIR}/data:/var/puter
+      - ${APP_DATA_DIR}/data:/home/puter/.puter
     healthcheck:
-      test: wget --no-verbose --tries=1 --spider http://umbrel.local:4100/test || exit 1
+      test: wget --no-verbose --tries=1 --spider http://puter.localhost:4100/test || exit 1
       interval: 30s
       timeout: 3s
       retries: 3
