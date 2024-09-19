@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-pingvin-share
 name: Pingvin Share
 tagline: A self-hosted file sharing platform that combines lightness and beauty,
-         perfect for seamless and efficient file sharing.
+         perfect for seamless and efficient file sharing
 icon: https://i.imgur.com/0DbEFGx.png
 category: files
 version: "1.1.0"
