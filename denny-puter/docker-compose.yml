@@ -3,7 +3,7 @@ version: "3.8"
 services:
   puter:
     container_name: puter
-    image: ghcr.io/heyputer/puter:sha-ec31007@sha256:46f0247c4b2a561b29548e275e343f14426f0f630c71155cbb58fad8343c3f92
+    image: ghcr.io/heyputer/puter:main@sha256:f0db7544b7fd1d85aa4dc3cc86000d68899063548222047226d3f023aa3e8562
     pull_policy: always
     # build: ./
     restart: on-failure
