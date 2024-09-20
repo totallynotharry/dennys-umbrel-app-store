@@ -16,5 +16,5 @@ services:
       APP_PORT: 4100
       PROXY_AUTH_WHITELIST: "/api*"
     volumes:
-      - ${APP_DATA_DIR}/data:/var/puter
+      - ${APP_DATA_DIR}/data:/data/.puter
       - ${APP_DATA_DIR}/config:/volatile/config
