@@ -12,7 +12,7 @@ services:
             - POSTGRES_USER=umbrel
             - POSTGRES_DB=joplindb
     app:
-        image: joplin/server:latest
+        image: joplin/server:latest@sha256:52af57880c0e04a179107807e13ffb8868b31ea2cc86a2b04da42220facb7589
         depends_on:
             - db
         ports:
@@ -20,7 +20,7 @@ services:
         restart: on-failure
         environment:
             - APP_PORT=22300
-            - APP_BASE_URL=https://umbrel.local:22300
+            - APP_BASE_URL=http://umbrel.local:22300
             - DB_CLIENT=pg
             - POSTGRES_PASSWORD=umbrel
             - POSTGRES_DATABASE=joplindb
