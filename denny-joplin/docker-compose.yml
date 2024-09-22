@@ -13,6 +13,11 @@ services:
     networks:
       - joplin-network
 
+  app_proxy:
+    environment:
+      APP_HOST: joplin_web_1
+      APP_PORT: 22300
+      
   app:
     image: joplin/server:latest
     restart: on-failure
