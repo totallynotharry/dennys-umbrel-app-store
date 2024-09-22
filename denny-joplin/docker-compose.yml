@@ -21,7 +21,7 @@ services:
         restart: on-failure
         environment:
             - APP_PORT=22300
-            - APP_BASE_URL=http://umbrel.local
+            - APP_BASE_URL=http://localhost
             - DB_CLIENT=pg
             - POSTGRES_PASSWORD=postgres
             - POSTGRES_DATABASE=joplin
