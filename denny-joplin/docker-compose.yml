@@ -28,7 +28,7 @@ services:
       POSTGRES_HOST: db
       JOPLIN_EMAIL: admin@localhost
       JOPLIN_PASSWORD: admin
-      CORS_ALLOWED_ORIGINS: http://umbrel:22300  # Erlaubt diesen Origin
+      CORS_ALLOWED_ORIGINS: http://umbrel.local:22300  # Erlaubt diesen Origin
     depends_on:
       - db
     volumes:
