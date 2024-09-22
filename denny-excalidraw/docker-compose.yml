@@ -12,5 +12,3 @@ services:
     stop_grace_period: 1m
     volumes:
       - ${APP_DATA_DIR}/data:/data/excalidraw
-    ports:
-      - "5000:80"  # Internen Port 80 auf externen Port 5000 mappen
