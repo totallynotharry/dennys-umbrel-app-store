@@ -27,16 +27,17 @@ description: >-
     🖥️ Web Interface: Joplin Server includes a web interface for easy management of the server and monitoring synchronization status.
 
     
-    By using Joplin Server, users can maintain a consistent and secure note-taking experience across all their devices while keeping full control over their data.
+    🔒 By using Joplin Server, users can maintain a consistent and secure note-taking experience across all their devices while keeping full control over their data.
 
 
     🌐 HTTPS Configuration: The browser version of the app can operate over http, but the mobile app requires https. You can set up https using the Cloudflare Tunnel app available in the app store.
     Detailed instructions for configuring the tunnel can be found here: 
     
+    
     https://github.com/Radiokot/umbrel-cloudflared/wiki/How-to-set-up-Cloudflare-Tunnel-on-your-Umbrel
   
 
-    By default, Joplin Server will be setup with an admin user with email "admin@localhost" and password "admin".
+    🔑 By default, Joplin Server will be setup with an admin user with email "admin@localhost" and password "admin".
     
 developer: Laurent Cozic
 website: https://joplinapp.org
