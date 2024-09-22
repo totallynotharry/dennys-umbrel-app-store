@@ -22,8 +22,8 @@ services:
         image: postgres:16
         volumes:
             - ${APP_DATA_DIR}/data/joplin/postgres:/var/lib/postgresql/data
-        ports:
-            - "5432:5432"
+      #  ports:
+       #     - "5432:5432"
         restart: on-failure
         environment:
             - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
