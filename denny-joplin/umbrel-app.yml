@@ -32,6 +32,11 @@ description: >-
 
     ⚠️ It is recommended to use the Cloudflare app to host Joplin Sync Server for improved performance.
     The easiest way to do this is to use the 'Cloudflare Tunnel' app from the Umbrel app store.
+
+
+    🌐 HTTPS Configuration: The browser version of the app can operate over http, but the mobile app requires https. 
+    You can set up https using the Cloudflare Tunnel app available in the app store. 
+    Detailed instructions for configuring the tunnel can be found here: https://github.com/Radiokot/umbrel-cloudflared/wiki/How-to-set-up-Cloudflare-Tunnel-on-your-Umbrel
   
 developer: Laurent Cozic
 website: https://joplinapp.org
@@ -50,5 +55,5 @@ releaseNotes: >-
   Bug fixes include validation of records before adding items to users.
 dependencies:
 path: ""
-defaultUsername: ""
-defaultPassword: ""
+defaultUsername: "admin@localhost"
+defaultPassword: "admin"
