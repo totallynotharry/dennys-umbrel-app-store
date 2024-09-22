@@ -29,8 +29,8 @@ repo: https://github.com/stonith404/pingvin-share
 support: https://github.com/stonith404/pingvin-share/issues
 gallery:
   - https://i.imgur.com/8YhcOn7.png
-  - https://i.imgur.com/s1Ok0YY.png
-  - https://i.imgur.com/s1Ok0YY.png
+  - https://i.imgur.com/Qw0Ekxt.png
+  - https://i.imgur.com/UJy6w4k.png
 releaseNotes: >-
   General improvements were made, allowing SMTP connections without authentication
   and introducing automatic redirection to the OAuth provider when it's the
