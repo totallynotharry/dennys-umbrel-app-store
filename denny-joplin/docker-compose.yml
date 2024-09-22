@@ -6,9 +6,9 @@ services:
             - ${APP_DATA_DIR}/data/postgres:/var/lib/postgresql/data
         ports:
             - "5432:5432"
-        restart: unless-stopped
+        restart: on-failure
         environment:
-            - POSTGRES_PASSWORD=umbrel
+            - POSTGRES_PASSWORD=umbrelpass
             - POSTGRES_USER=umbrel
             - POSTGRES_DB=joplindb
     app:
@@ -22,7 +22,7 @@ services:
             - APP_PORT=22300
             - APP_BASE_URL=http://umbrel.local
             - DB_CLIENT=pg
-            - POSTGRES_PASSWORD=umbrel
+            - POSTGRES_PASSWORD=umbrelpass
             - POSTGRES_DATABASE=joplindb
             - POSTGRES_USER=umbrel
             - POSTGRES_PORT=5432
