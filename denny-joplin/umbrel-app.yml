@@ -30,8 +30,7 @@ description: >-
     By using Joplin Server, users can maintain a consistent and secure note-taking experience across all their devices while keeping full control over their data.
 
 
-    ⚠️ It is recommended to use the Cloudflare app to host Joplin Sync Server for improved performance.
-    The easiest way to do this is to use the 'Cloudflare Tunnel' app from the Umbrel app store.
+##
 
 
     🌐 HTTPS Configuration: The browser version of the app can operate over http, but the mobile app requires https. 
@@ -53,7 +52,8 @@ releaseNotes: >-
   A new report page has also been added. Performance improvements include optimizations for web client synchronization, logging, and delta change queries. 
   Additionally, several packages have been updated, and the use of a slave database for reports has been implemented. 
   Bug fixes include validation of records before adding items to users.
-dependencies:
+dependencies: []
 path: ""
 defaultUsername: "admin@localhost"
 defaultPassword: "admin"
+deterministicPassword: false
