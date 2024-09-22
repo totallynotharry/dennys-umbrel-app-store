@@ -14,3 +14,5 @@ services:
       # Hier kannst du weitere Umgebungsvariablen hinzufügen, falls nötig
     volumes:
       - ${APP_DATA_DIR}/data:/data/excalidraw
+    ports:
+      - "5000:80"
