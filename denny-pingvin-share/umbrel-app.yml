@@ -3,7 +3,7 @@ id: denny-pingvin-share
 name: Pingvin Share
 tagline: A self-hosted file sharing platform that combines lightness and beauty,
          perfect for seamless and efficient file sharing
-icon: https://i.imgur.com/0DbEFGx.png
+icon: https://i.imgur.com/AqqSXhy.png
 category: files
 version: "0.27.0"
 port: 3000
