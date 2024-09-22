@@ -1,6 +1,6 @@
 version: "3.7"
 
-      services:
+services:
   app_proxy:
     environment:
       APP_HOST: excalidraw_web_1  # Hostname für den Proxy
