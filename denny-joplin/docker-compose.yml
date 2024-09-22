@@ -22,8 +22,8 @@ services:
         image: postgres:16
         volumes:
             - ${APP_DATA_DIR}/data/joplin/postgres:/var/lib/postgresql/data
-      #  ports:
-       #     - "5432:5432"
+        ports:
+            - "5432:5432"
         restart: on-failure
         environment:
             - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
@@ -35,13 +35,13 @@ services:
             - db
         ports:
             - "22300:22300"
-        restart: unless-stopped
+        restart: on-failure
         environment:
             - APP_PORT=22300
-            - APP_BASE_URL= http://umbrel.local
+            - APP_BASE_URL=http://umbrel.local
             - DB_CLIENT=pg
-            - POSTGRES_PASSWORD= joplinpass
-            - POSTGRES_DATABASE=${POSTGRES_DATABASE}
-            - POSTGRES_USER= joplin
-            - POSTGRES_PORT=${POSTGRES_PORT}
+            - POSTGRES_PASSWORD=joplinpass
+            - POSTGRES_DATABASE=joplin
+            - POSTGRES_USER=joplin
+            - POSTGRES_PORT=5432
             - POSTGRES_HOST=db
