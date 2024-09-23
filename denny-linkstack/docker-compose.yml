@@ -20,5 +20,3 @@ services:
       HTTP_SERVER_NAME:
       HTTPS_SERVER_NAME:
       LOG_LEVEL: 'info'
-    ports:
-      - "80:80"
