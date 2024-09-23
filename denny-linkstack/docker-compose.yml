@@ -20,3 +20,5 @@ services:
       HTTP_SERVER_NAME: localhost
       HTTPS_SERVER_NAME:
       LOG_LEVEL: 'info'
+    ports:
+      - "8099:80"
