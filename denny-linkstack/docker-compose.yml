@@ -17,7 +17,7 @@ services:
       - 'linkstack_data:/htdocs'
     ports:
       - '8190:80'
-    restart: unless-stopped
+    restart: on-failure
 
 volumes:
   linkstack_data:
