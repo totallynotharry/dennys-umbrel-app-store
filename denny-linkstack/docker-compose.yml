@@ -4,12 +4,11 @@ services:
   app_proxy:
     environment:
       APP_HOST: linkstack_server_1
+      APP_PORT: 8080
       PROXY_AUTH_ADD: "false"
 
   server:
     image: linkstackorg/linkstack:latest@sha256:6e7e8f44099f7c4f1340bb9ffda5411f97da766a06fd63cf1ff90c57ce22dd61
-    ports:
-      - "8099:80"
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/linkstack_data:/htdocs
