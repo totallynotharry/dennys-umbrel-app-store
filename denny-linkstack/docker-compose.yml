@@ -8,7 +8,7 @@ services:
     environment:
       TZ: 'Europe/Berlin'
       #SERVER_ADMIN: 'admin@example.com'
-      HTTP_SERVER_NAME: umbrel.local
+      #HTTP_SERVER_NAME: 
       #HTTPS_SERVER_NAME: 'example.com'
       #LOG_LEVEL: 'info'
       PHP_MEMORY_LIMIT: '512M'
