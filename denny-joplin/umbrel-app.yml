@@ -46,9 +46,9 @@ submission: https://github.com/laurent22
 repo: https://github.com/laurent22/joplin
 support: https://github.com/laurent22/joplin/issues
 gallery:
-  - https://i.imgur.com/4MenuvL.png
-  - https://i.imgur.com/WWJFmbg.png
-  - https://i.imgur.com/WWJFmbg.png
+  - https://i.imgur.com/fWtBRfX.png
+  - https://i.imgur.com/6tsIm9e.png
+  - https://i.imgur.com/MPiwRMU.png
 releaseNotes: >-
   Several new features have been introduced, including support for Postgres replication and the ability to display uploaded data size in reports. 
   A new report page has also been added. Performance improvements include optimizations for web client synchronization, logging, and delta change queries. 
