@@ -4,20 +4,20 @@ services:
 
   linkstack:
     hostname: 'linkstack'
-    image: 'linkstackorg/linkstack:latest@sha256:6e7e8f44099f7c4f1340bb9ffda5411f97da766a06fd63cf1ff90c57ce22dd61'
+    image: 'linkstackorg/linkstack:latest'
     environment:
       TZ: 'Europe/Berlin'
       SERVER_ADMIN: 
-      HTTP_SERVER_NAME: 'umbrel.local'
+      HTTP_SERVER_NAME: umbrel.local
       HTTPS_SERVER_NAME:
       LOG_LEVEL: 'info'
-      PHP_MEMORY_LIMIT: '512M'
+      PHP_MEMORY_LIMIT: '256M'
       UPLOAD_MAX_FILESIZE: '8M'
     volumes:
-      - '${APP_DATA_DIR}/linkstack:/htdocs'
+      - 'linkstack_data:/htdocs'
     ports:
       - '8190:80'
-    restart: on-failure
+    restart: unless-stopped
 
 volumes:
   linkstack_data:
