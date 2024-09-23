@@ -10,16 +10,15 @@ services:
   server:
     image: linkstackorg/linkstack:latest@sha256:6e7e8f44099f7c4f1340bb9ffda5411f97da766a06fd63cf1ff90c57ce22dd61
     restart: on-failure
-    ports:
-      - "80:80"
-      - "443:443"
     volumes:
       - ${APP_DATA_DIR}/linkstack:/htdocs
     environment:
       TZ: Europe/Berlin
       PHP_MEMORY_LIMIT: 512M
       UPLOAD_MAX_FILESIZE: 8M
-      #SERVER_ADMIN: 'admin@example.com'
-      #HTTP_SERVER_NAME: 
-      #HTTPS_SERVER_NAME: 'example.com'
-      #LOG_LEVEL: 'info'
+      SERVER_ADMIN:
+      HTTP_SERVER_NAME:
+      HTTPS_SERVER_NAME:
+      LOG_LEVEL: 'info'
+    ports:
+      - "80:80"
