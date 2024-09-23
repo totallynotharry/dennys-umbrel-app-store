@@ -6,7 +6,7 @@ services:
     container_name: linkstack
     hostname: linkstack
     environment:
-      #HTTP_SERVER_NAME: "www.example.xyz"
+      HTTP_SERVER_NAME: "umbrel.local"
       #HTTPS_SERVER_NAME: "www.example.xyz"
       SERVER_ADMIN: "[email protected]"
       TZ: "Europe/Berlin"
