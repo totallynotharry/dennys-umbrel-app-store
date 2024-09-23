@@ -1,22 +1,32 @@
 version: "3.8"
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: denny-linkstack_web_1
-      APP_PORT: 80
-
-  web:
+  linkstack:
+    hostname: linkstack
     image: linkstackorg/linkstack:latest@sha256:6e7e8f44099f7c4f1340bb9ffda5411f97da766a06fd63cf1ff90c57ce22dd61
-    restart: on-failure
-    volumes:
-      - ${APP_DATA_DIR}/linkstack:/htdocs
     environment:
-      HOST: umbrel.local    
       TZ: Europe/Berlin
-      PHP_MEMORY_LIMIT: 512M
-      UPLOAD_MAX_FILESIZE: 8M
       SERVER_ADMIN:
       HTTP_SERVER_NAME:
       HTTPS_SERVER_NAME:
       LOG_LEVEL: 'info'
+      PHP_MEMORY_LIMIT: '256M'
+      UPLOAD_MAX_FILESIZE: '8M'
+    volumes:
+      - ${APP_DATA_DIR}/linkstack:/htdocs
+    ports:
+      - '8080:80'
+      - '8081:443'
+    restart: unless-stopped
+    user: apache:apache
+    # read_only: true
+    depends_on:
+      - mysql
+    links:
+      - mysql
+  mysql:
+    image: mysql:8
+    environment:
+        MYSQL_ROOT_PASSWORD: xeFgUGb5mPPn5q2d
+    ports:
+        - 3306:3306
