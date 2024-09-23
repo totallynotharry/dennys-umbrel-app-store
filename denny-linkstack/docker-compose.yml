@@ -7,8 +7,7 @@ services:
       APP_PORT: 8099
       PROXY_AUTH_ADD: "false"
 
-  linkstack:
-    hostname: linkstack
+  server:
     image: linkstackorg/linkstack:latest@sha256:6e7e8f44099f7c4f1340bb9ffda5411f97da766a06fd63cf1ff90c57ce22dd61
     environment:
       TZ: 'Europe/Berlin'
@@ -20,9 +19,5 @@ services:
       UPLOAD_MAX_FILESIZE: '8M'
     volumes:
       - ${APP_DATA_DIR}/linkstack_data:/htdocs
-    ports:
-      - '8099:80'
-    restart: on-failure
 
-volumes:
-  linkstack_data:
+    restart: on-failure
