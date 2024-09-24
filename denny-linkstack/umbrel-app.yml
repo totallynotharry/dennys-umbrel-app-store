@@ -11,16 +11,21 @@ description: >-
 
   With LinkStack, users can easily link to their own custom page and provide their followers with access to all the links they need in one convenient location. What sets LinkStack apart from other link management platforms is its flexibility, which allows users to host their links on their own web server or web hosting provider. This provides users with complete control over their online presence and ensures that their links are easily accessible.
 
+  
   Additionally, LinkStack allows other users to register and create their own links, making it an ideal solution for businesses and organizations looking to manage multiple links. With our user-friendly Admin Panel, managing and accessing other users links is easy.
 
 
   Why choose LinkStack?
+  
 
   💡 Feature rich: LinkStack offers more features than any other comparable solution out there.
+  
 
   ⚙️ Easy to set up: LinkStack is user-friendly and easier to set up compared to similar web applications.
+  
 
   👐 Open Source: LinkStack is free to use, distribute, and modify. The source code is available on GitHub (https://github.com/LinkStackOrg).
+  
   
 
   ☁️ It is recommended to use LinkStack together with the Cloudflare app from the Umbrel App Store, paired with your own custom domain.
