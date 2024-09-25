@@ -1,27 +1,40 @@
-version: '3'
+ersion: '3.7'
+
 services:
-    app:
-        environment:
-            - APP_BASE_URL=http://umbrel.local:22300
-            - APP_PORT=22300
-            - POSTGRES_PASSWORD=joplin
-            - POSTGRES_DATABASE=joplin
-            - POSTGRES_USER=joplin 
-            - POSTGRES_PORT=5432 
-            - POSTGRES_HOST=db
-            - DB_CLIENT=pg
-        restart: unless-stopped
-        image: florider89/joplin-server:latest
-        ports:
-            - "22300:22300"
-    db:
-        restart: unless-stopped
-        image: postgres:13.1
-        ports:
-            - "5432:5432"
-        volumes:
-            - /foo/bar/joplin-data:/var/lib/postgresql/data
-        environment:
-            - POSTGRES_PASSWORD=joplin
-            - POSTGRES_USER=joplin
-            - POSTGRES_DB=joplin
+  db:
+    image: postgres:13
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/joplin/postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: joplin
+      POSTGRES_PASSWORD: joplinpass
+      POSTGRES_DB: joplin
+    networks:
+      - joplin-network
+
+  app:
+    image: joplin/server:latest@sha256:52af57880c0e04a179107807e13ffb8868b31ea2cc86a2b04da42220facb7589
+    restart: on-failure
+    ports:
+      - 22300:22300
+    environment:
+      APP_BASE_URL: http://umbrel.local:22300
+      DB_CLIENT: pg
+      POSTGRES_PASSWORD: joplinpass
+      POSTGRES_DATABASE: joplin
+      POSTGRES_USER: joplin
+      POSTGRES_PORT: 5432
+      POSTGRES_HOST: db
+      JOPLIN_EMAIL: admin@localhost
+      JOPLIN_PASSWORD: admin
+    depends_on:
+      - db
+    volumes:
+      - ${APP_DATA_DIR}/data/joplin:/var/lib/joplin
+    networks:
+      - joplin-network
+
+networks:
+  joplin-network:
+    driver: bridge
