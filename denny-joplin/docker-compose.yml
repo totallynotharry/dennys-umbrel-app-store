@@ -20,6 +20,7 @@ services:
       - 22300:22300
     environment:
       APP_BASE_URL: http://umbrel.local:22300
+      CORS_ALLOW_ORIGIN: http://umbrel.local
       DB_CLIENT: pg
       POSTGRES_PASSWORD: joplinpass
       POSTGRES_DATABASE: joplin
@@ -38,11 +39,3 @@ services:
 networks:
   joplin-network:
     driver: bridge
-
-services:
-  nginx:
-    image: nginx:latest
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
-    ports:
-      - "22300:80"
