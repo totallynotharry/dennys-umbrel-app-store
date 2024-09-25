@@ -4,6 +4,10 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 
 
 
+🤝 Growing together in the Umbrel community – [my profile here](https://community.umbrel.com/u/denny) 
+
+
+
 ### Currently available apps
 
 | App          | Description                                          |
