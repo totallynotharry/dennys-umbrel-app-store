@@ -19,7 +19,7 @@ services:
     ports:
       - 22300:22300
     environment:
-      APP_BASE_URL: http://umbrel/joplin
+      APP_BASE_URL: http://100.97.130.23
       DB_CLIENT: pg
       POSTGRES_PASSWORD: joplinpass
       POSTGRES_DATABASE: joplin
