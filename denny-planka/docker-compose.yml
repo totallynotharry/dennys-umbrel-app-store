@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     container_name: planka
     environment:
-      - BASE_URL=http://umbrel.local/planka
+      - BASE_URL=http://umbrel.local:1337
       - DATABASE_URL=postgresql://postgres@postgres/planka
       - SECRET_KEY=${PLANKA_SECRET_KEY}
     ports:
