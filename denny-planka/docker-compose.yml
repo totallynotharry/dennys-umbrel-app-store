@@ -1,0 +1,41 @@
+version: '3.7'
+
+services:
+  planka:
+    image: ghcr.io/plankanban/planka:latest
+    restart: unless-stopped
+    container_name: planka
+    environment:
+      - BASE_URL=http://umbrel.local/planka
+      - DATABASE_URL=postgresql://postgres@postgres/planka
+      - SECRET_KEY=${PLANKA_SECRET_KEY}
+    ports:
+      - 3000:1337
+    volumes:
+      - user-avatars:/app/public/user-avatars
+      - project-background-images:/app/public/project-background-images
+      - attachments:/app/private/attachments
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:14-alpine
+    restart: unless-stopped
+    container_name: planka-postgres
+    environment:
+      - POSTGRES_DB=planka
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d planka"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  user-avatars:
+  project-background-images:
+  attachments:
+  db-data:
