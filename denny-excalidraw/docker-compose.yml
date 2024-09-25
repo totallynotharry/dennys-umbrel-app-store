@@ -1,16 +1,11 @@
 version: "3.7"
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: excalidraw_web_1  # Hostname für den Proxy
-      APP_PORT: 5000  # Port für die Excalidraw App
-
   excalidraw:
     image: excalidraw/excalidraw@sha256:fae667864717a415e7474b5f757ffb50e63a81cfc1a2fbcf905ecbd137d0dbba
     restart: on-failure
     stop_grace_period: 1m
     volumes:
       - ${APP_DATA_DIR}/data:/data/excalidraw
-    #ports:
-     # - "5000:80"  # Internen Port auf externen Port mappen
+    ports:
+      - "5000:80"
