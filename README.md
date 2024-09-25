@@ -13,7 +13,7 @@ This repository contains a custom Umbrel App Store. Unlike the official store, t
 | [Pingvin Share](https://github.com/stonith404/pingvin-share) | File sharing tool                             |
 | [Puter OS](https://github.com/puterOS/puterOS)              | Internet operating system                  |
 | [LinkStack](https://github.com/LinkStackOrg/LinkStack)      | Link sharing platform              |
-
+| [Planka](https://github.com/plankanban/planka)     | Elegant open source project tracking              |
 
 🔄 All Apps are continually updated and new Apps are added over time.
 
