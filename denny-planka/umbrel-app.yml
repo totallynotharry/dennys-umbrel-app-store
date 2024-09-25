@@ -30,6 +30,18 @@ description: >-
     As an alternative to commercial project management tools like Trello or Jira, Planka is particularly attractive for teams looking for a flexible, customizable, and secure system. It integrates seamlessly with environments like Docker or platforms like Umbrel and can be tailored to the specific needs of the team.
 
     Planka is an excellent choice for organizations and teams that value transparency, ease of use, and real-time collaboration without relying on proprietary software solutions.
+
+
+
+    To log in for the first time, use the following credentials:
+    
+
+    Email: umbrel@planka.login
+    Password: umbrelpass
+
+
+    Please remember to change the password after your initial login to ensure the security of your account.
+
 developer: PLANKA Software GmbH
 website: https://planka.app
 submitter: dennysubke
