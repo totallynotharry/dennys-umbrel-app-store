@@ -10,7 +10,7 @@ services:
       - DATABASE_URL=postgresql://postgres@postgres/planka
       - SECRET_KEY=${PLANKA_SECRET_KEY}
     ports:
-      - 3000:1337
+      - 1337:1337
     volumes:
       - user-avatars:/app/public/user-avatars
       - project-background-images:/app/public/project-background-images
