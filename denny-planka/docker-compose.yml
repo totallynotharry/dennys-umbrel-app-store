@@ -17,7 +17,7 @@ services:
     env_file:
       - ${APP_DATA_DIR}/.env
     environment:
-      BASE_URL: http://umbrel.local:1337
+      #BASE_URL: http://umbrel.local:1337
       DATABASE_URL: postgresql://postgres@postgres/planka
       SECRET_KEY: notsecretkey
       DEFAULT_ADMIN_EMAIL: umbrel@planka.login # Do not remove if you want to prevent this user from being edited/deleted
