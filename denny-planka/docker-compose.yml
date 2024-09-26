@@ -1,6 +1,11 @@
-version: '3'
+version: "3.7"
 
 services:
+  app_proxy:
+    environment:
+      APP_HOST: planka_planka_1
+      APP_PORT: 1337
+
   planka:
     image: ghcr.io/plankanban/planka:latest
     restart: on-failure
