@@ -5,7 +5,6 @@ services:
     environment:
       APP_HOST: denny-planka_web_1
       APP_PORT: 1337
-      PROXY_AUTH_ADD: "false"
   web:
     image: ghcr.io/plankanban/planka@sha256:e19af1e25082d45c62833be9f34bbda962aa28c6958929ba70e83862fe565fd5
     restart: on-failure
@@ -16,7 +15,9 @@ services:
     #ports:
       #- 1337:1337
     environment:
-      # - BASE_URL=http://umbrel.local:1337
+      - PUID=1000
+      - PGID=1000
+      - BASE_URL=http://localhost:1337
       - DATABASE_URL=postgresql://postgres@postgres/planka
       - SECRET_KEY=notsecretkey
 
