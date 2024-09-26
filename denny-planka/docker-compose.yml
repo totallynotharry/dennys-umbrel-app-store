@@ -1,11 +1,6 @@
-version: '3.8'
+version: '3'
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: planka
-      APP_PORT: 1337
-      PROXY_AUTH_WHITELIST: "/api/*"
   planka:
     image: ghcr.io/plankanban/planka@sha256:e19af1e25082d45c62833be9f34bbda962aa28c6958929ba70e83862fe565fd5
     restart: on-failure
@@ -13,16 +8,14 @@ services:
       - ${APP_DATA_DIR}/user-avatars:/app/public/user-avatars
       - ${APP_DATA_DIR}/project-background-images:/app/public/project-background-images
       - ${APP_DATA_DIR}/attachments:/app/private/attachments
-    #ports:
-      #- 1337:1337
+    ports:
+      - 1337:1337
     environment:
-      - PUID=1000
-      - PGID=1000
-      # BASE_URL=http://127.0.0.1:1337
+      - BASE_URL=http://umbrel.local:1337
       - DATABASE_URL=postgresql://postgres@postgres/planka
       - SECRET_KEY=notsecretkey
 
-      # - TRUST_PROXY=1
+      # - TRUST_PROXY=0
       # - TOKEN_EXPIRES_IN=365 # In days
 
       # related: https://github.com/knex/knex/issues/2354
