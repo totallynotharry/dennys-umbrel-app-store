@@ -9,7 +9,7 @@ services:
       - ${APP_DATA_DIR}/project-background-images:/app/public/project-background-images
       - ${APP_DATA_DIR}/attachments:/app/private/attachments
     ports:
-      - 3000:1337
+      - 1337:1337
     environment:
       - BASE_URL=http://umbrel.local:1337
       - DATABASE_URL=postgresql://postgres@postgres/planka
