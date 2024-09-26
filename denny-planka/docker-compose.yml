@@ -15,7 +15,7 @@ services:
       - DATABASE_URL=postgresql://postgres@postgres/planka
       - SECRET_KEY=notsecretkey
 
-      - TRUST_PROXY=1
+      # TRUST_PROXY=0
       # - TOKEN_EXPIRES_IN=365 # In days
 
       # related: https://github.com/knex/knex/issues/2354
