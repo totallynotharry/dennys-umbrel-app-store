@@ -15,7 +15,6 @@ services:
       - attachments:/app/private/attachments
     environment:
       - BASE_URL=http://umbrel.local:1337
-      - DATABASE_URL=postgresql://postgres@postgres/planka
       - SECRET_KEY=notsecretkey
 
       # - TRUST_PROXY=0
