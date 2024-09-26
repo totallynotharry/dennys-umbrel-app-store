@@ -3,10 +3,10 @@ version: '3.7'
 services:
   app_proxy:
     environment:
-      APP_HOST: planka_web_1
+      APP_HOST: planka_planka_1
       APP_PORT: 1337
 
-  web:
+  planka:
     image: ghcr.io/plankanban/planka:latest
     restart: on-failure
     stop_grace_period: 1m
@@ -47,8 +47,3 @@ services:
       POSTGRES_USER: planka
       POSTGRES_PASSWORD: planka
       PGDATA: /var/lib/postgresql/data/pgdata
-    healthcheck:
-      test: ['CMD-SHELL', 'pg_isready -U maybe']
-      interval: 10s
-      timeout: 5s
-      retries: 5
