@@ -10,8 +10,6 @@ services:
     image: ghcr.io/plankanban/planka@sha256:e19af1e25082d45c62833be9f34bbda962aa28c6958929ba70e83862fe565fd5
     restart: on-failure
     environment:
-      PUID: 1000
-      PGID: 1000
       # BASE_URL=http://umbrel.local:1337
       - DATABASE_URL=postgresql://postgres@postgres/planka
       - SECRET_KEY=notsecretkey
