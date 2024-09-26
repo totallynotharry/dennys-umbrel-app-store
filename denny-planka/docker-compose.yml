@@ -5,8 +5,6 @@ services:
     environment:
       APP_HOST: planka
       APP_PORT: 1337
-      # Erlaubt Verbindungen von spezifischen Domains
-      SAILS_SOCKETS_ONLY_ALLOW_ORIGINS: "http://umbrel.local:1337,http://umbrel:1337,umbrel:1337"
 
   planka:
     image: ghcr.io/plankanban/planka@sha256:e19af1e25082d45c62833be9f34bbda962aa28c6958929ba70e83862fe565fd5
