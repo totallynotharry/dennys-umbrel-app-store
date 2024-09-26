@@ -3,10 +3,10 @@ version: '3'
 services:
   app_proxy:
     environment:
-      APP_HOST: planka
+      APP_HOST: planka_server_1
       APP_PORT: 1337
       PROXY_AUTH_ADD: "false"
-  planka:
+  server:
     image: ghcr.io/plankanban/planka@sha256:e19af1e25082d45c62833be9f34bbda962aa28c6958929ba70e83862fe565fd5
     restart: on-failure
     volumes:
