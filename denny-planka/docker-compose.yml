@@ -1,4 +1,4 @@
-version: '3'
+version: '3.7'
 
 services:
   planka:
@@ -11,11 +11,11 @@ services:
     ports:
       - 1337:1337
     environment:
-      - BASE_URL=http://127.0.0.1:1337
+      - BASE_URL=http://umbrel.local:1337
       - DATABASE_URL=postgresql://postgres@postgres/planka
       - SECRET_KEY=notsecretkey
 
-      - TRUST_PROXY=1
+      # TRUST_PROXY=1
       # - TOKEN_EXPIRES_IN=365 # In days
 
       # related: https://github.com/knex/knex/issues/2354
