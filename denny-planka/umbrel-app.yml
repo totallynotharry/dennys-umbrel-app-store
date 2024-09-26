@@ -32,7 +32,7 @@ description: >-
     Planka is an excellent choice for organizations and teams that value transparency, ease of use, and real-time collaboration without relying on proprietary software solutions.
 
 
-    To log in for the first time, use the following credentials:
+    🔑 To log in for the first time, use the following credentials:
     
     Email: umbrel@planka.login
     Password: umbrelpass
@@ -54,5 +54,5 @@ releaseNotes: >-
    This release includes a Yemeni Arabic translation, configurable file storage locations, and the ability to configure OIDC claims source. Thank you to our new contributors for their valuable input!
 dependencies: []
 path: ""
-defaultUsername: ""
-defaultPassword: ""
+defaultUsername: "umbrel@planka.login"
+defaultPassword: "umbrelpass"
