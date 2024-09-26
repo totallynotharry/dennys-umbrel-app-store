@@ -11,7 +11,7 @@ services:
     ports:
       - 1337:1337
     environment:
-      - BASE_URL=http://umbrel.local:1337
+      - BASE_URL=http://127.0.0.1
       - DATABASE_URL=postgresql://postgres@postgres/planka
       - SECRET_KEY=notsecretkey
 
@@ -24,7 +24,7 @@ services:
       # - PGSSLMODE=<value>
 
       # - Configure knex to accept SSL certificates
-      - KNEX_REJECT_UNAUTHORIZED_SSL_CERTIFICATE=false
+      # - KNEX_REJECT_UNAUTHORIZED_SSL_CERTIFICATE=false
 
       - DEFAULT_ADMIN_EMAIL=umbrel@planka.login # Do not remove if you want to prevent this user from being edited/deleted
       - DEFAULT_ADMIN_PASSWORD=umbrelpass
