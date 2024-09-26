@@ -37,13 +37,23 @@ services:
         condition: service_healthy
 
   db:
-    image: postgres:16@sha256:1bf73ccae25238fa555100080042f0b2f9be08eb757e200fe6afc1fc413a1b3c
+    image: postgres:14-alpine
     restart: on-failure
     stop_grace_period: 1m
     volumes:
       - ${APP_DATA_DIR}/data/postgres:/var/lib/postgresql/data
     environment:
-      POSTGRES_DB: planka
-      POSTGRES_USER: planka
-      POSTGRES_PASSWORD: planka
-      PGDATA: /var/lib/postgresql/data/pgdata
+      - POSTGRES_DB=planka
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d planka"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  user-avatars:
+  project-background-images:
+  attachments:
+  db-data:
+      
