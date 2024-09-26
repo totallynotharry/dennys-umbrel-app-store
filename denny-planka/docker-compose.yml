@@ -18,7 +18,7 @@ services:
       - ${APP_DATA_DIR}/.env
     environment:
       SELF_HOSTING_ENABLED: "true"
-      PORT: 1337
+      #PORT: 1337
       DB_HOST: db
       DB_PORT: 5432
       BASE_URL: http://umbrel.local:1337
