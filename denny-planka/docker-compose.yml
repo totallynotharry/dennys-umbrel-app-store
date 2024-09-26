@@ -10,7 +10,7 @@ services:
 
   web:
     container_name: planka_web_1
-    image: ghcr.io/plankanban/planka:latest
+    image: ghcr.io/plankanban/planka:dev
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/user-avatars:/app/public/user-avatars
