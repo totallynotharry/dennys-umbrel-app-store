@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-convertx
 name: ConvertX
 tagline: A self-hosted online file converter
-icon: https://imgur.com/0u1WLKh
+icon: https://i.imgur.com/0u1WLKh.png
 category: files
 version: "0.6.0"
 port: 13000
@@ -19,18 +19,25 @@ description: >-
 
 
     🖼️Images: Converts from 211 formats and to 156 formats.
+    
 
     📺Video (FFmpeg): Converts from 473 formats and to 280 formats.
+    
 
     📄Documents: Converts from 43 formats and to 65 formats.
+    
 
     📦3D Assets: Converts from 70 formats and to 24 formats.
+    
 
     📐SVG: Converts from 1 format and to 1 format.
     
+    
     📊JPEG XL: Converts from 11 formats and to 11 formats.
     
+    
     📑LaTeX: Converts from 1 format and to 1 format.
+    
     
 developer: C4illin
 website: https://emrik.org/
