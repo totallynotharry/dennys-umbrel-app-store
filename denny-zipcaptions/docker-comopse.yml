@@ -9,6 +9,6 @@ services:
       - PUID=1000
       - PGID=1000
     ports:
-      - 9000:9000
+      - 3000:9000
     volumes:
       - ${APP_DATA_DIR}/data:/data/zipcaptions
