@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: denny-zipcaptions
+name: Zip Captions
+tagline: Real-time captions for seamless communication
+icon: https://i.imgur.com/DMRteQU.png
+category: files
+version: "1.0"
+port: 9000
+description: >-
+ ✏️ ZipCaptions decription
+developer: jptrsn
+website: https://zipcaptions.app/
+submitter: dennysubke
+submission: https://github.com/dennysubke/dennys-umbrel-app-store
+repo: https://github.com/jptrsn/zip-captions
+support: https://github.com/jptrsn/zip-captions/issues
+gallery:
+  - https://i.imgur.com/nmibNcp.png
+  - https://i.imgur.com/nmibNcp.png
+  - https://i.imgur.com/nmibNcp.png
+releaseNotes: >-
+  Initial release of ZipCaptions
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""

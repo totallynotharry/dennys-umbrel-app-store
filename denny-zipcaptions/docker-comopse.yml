@@ -1,0 +1,85 @@
+version: '3'
+
+services:
+  mongodb:
+    container_name: mongodb
+    image: mongo:latest
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=umbrel
+      - MONGO_INITDB_ROOT_PASSWORD=umbrelpass
+    ports:
+      - 27017:27017
+
+  client:
+    container_name: client
+    image: zip_captions_client
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    volumes:
+      - .:/usr/src/app:delegated
+      - mono-node-modules:/app/node_modules
+    command: 'npm run start:client'
+    ports:
+      - 4200:4200
+    depends_on:
+      - signal
+
+  zipcaptions_server:
+    container_name: zip-captions-server
+    image: zip_captions_server
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: staging_server
+    environment:
+      - MONGO_DB_URL=mongodb://db_user:umbrel@mongodb:27017/zipcaptions
+      - MONGO_DB_PORT=27017
+      - MONGO_DB_NAME=zipcaptions
+      - MONGO_DB_USER=umbrel
+      - MONGO_DB_PASSWORD=umbrelpass
+      # JWT_SECRET=your_jwt_secret
+      # SESSION_SECRET=your_session_secret
+      - APP_ORIGIN=http://umbrel.local:4200
+      - ALLOWED_ORIGINS=http://umbrel.local:4200
+      # GOOGLE_CLIENT_ID=your_google_client_id
+      # GOOGLE_CLIENT_SECRET=your_google_client_secret
+      # GOOGLE_REDIRECT_URI=your_google_redirect_uri
+      # AZURE_CLIENT_ID=your_azure_client_id
+      # AZURE_CLIENT_SECRET=your_azure_client_secret
+      # AZURE_REDIRECT_URI=your_azure_redirect_uri
+    ports:
+      - 3000:3000
+      - 9000:9000
+    restart: unless-stopped
+
+  signal:
+    container_name: signal
+    image: zip_captions_server
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    volumes:
+      - .:/usr/src/app:delegated
+      - mono-node-modules:/app/node_modules
+    command: 'npm run start:signal'
+    ports:
+      - 3000:3000
+      - 9000:9000
+
+  coturn:
+    container_name: coturn
+    image: coturn/coturn
+    ports:
+      - "3478:3478"
+      - "3478:3478/udp"
+      - "3479:3479"
+      - "3479:3479/udp"
+      - "5349:5349"
+      - "5349:5349/udp"
+      - "49160-49200"
+
+volumes:
+  mono-node-modules: null
