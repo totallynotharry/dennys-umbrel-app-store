@@ -1,85 +1,17 @@
-version: '3'
+version: '3.7'
 
 services:
-  mongodb:
-    container_name: mongodb
-    image: mongo:latest
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=db_user
-      - MONGO_INITDB_ROOT_PASSWORD=changeme
-    ports:
-      - 27017:27017
-
-  client:
-    container_name: client
-    image: zip_captions_client
-    build:
-      context: .
-      dockerfile: Dockerfile
-      target: dev
-    volumes:
-      - .:/usr/src/app:delegated
-      - mono-node-modules:/app/node_modules
-    command: 'npm run start:client'
-    ports:
-      - 4200:4200
-    depends_on: 
-      - signal
-
-  zipcaptions_server:
-    container_name: zip-captions-server
-    image: zip_captions_server
-    build:
-      context: .
-      dockerfile: Dockerfile
-      target: staging_server
-    environment:
-      - MONGO_DB_URL=mongodb://db_user:changeme@mongodb:27017/zipcaptions
-      - MONGO_DB_PORT=27017
-      - MONGO_DB_NAME=zipcaptions
-      - MONGO_DB_USER=db_user
-      - MONGO_DB_PASSWORD=changeme
-      - JWT_SECRET=your_jwt_secret
-      - SESSION_SECRET=your_session_secret
-      - APP_ORIGIN=http://umbrel.local:4200
-      - ALLOWED_ORIGINS=http://umbrel.local:4200
-      - GOOGLE_CLIENT_ID=your_google_client_id
-      - GOOGLE_CLIENT_SECRET=your_google_client_secret
-      - GOOGLE_REDIRECT_URI=your_google_redirect_uri
-      - AZURE_CLIENT_ID=your_azure_client_id
-      - AZURE_CLIENT_SECRET=your_azure_client_secret
-      - AZURE_REDIRECT_URI=your_azure_redirect_uri
-    ports:
-      - 3888:3888
-      - 9111:9111
+  convertx: 
+    image: ghcr.io/c4illin/convertx
+    container_name: convertx
     restart: unless-stopped
-
-  signal:
-    container_name: signal
-    image: zip_captions_server
-    build:
-      context: .
-      dockerfile: Dockerfile
-      target: dev
+    ports:
+      - "3333:3333"
+    environment: # Defaults are listed below. All are optional.
+      - ACCOUNT_REGISTRATION=false # true or false, doesn't matter for the first account (e.g. keep this to false if you only want one account)
+      - JWT_SECRET=aLongAndSecretStringUsedToSignTheJSONWebToken1234 # will use randomUUID() by default
+      - HTTP_ALLOWED=true # setting this to true is unsafe, only set this to true locally
+      - ALLOW_UNAUTHENTICATED=true # allows anyone to use the service without logging in, only set this to true locally
+      - AUTO_DELETE_EVERY_N_HOURS=24 # checks every n hours for files older then n hours and deletes them, set to 0 to disable
     volumes:
-      - .:/usr/src/app:delegated
-      - mono-node-modules:/app/node_modules
-    command: 'npm run start:signal'
-    ports:
-      - 3888:3888
-      - 9111:9111
-
-  coturn:
-    container_name: coturn
-    image: coturn/coturn
-    ports:
-      - "3478:3478"
-      - "3478:3478/udp"
-      - "3479:3479"
-      - "3479:3479/udp"
-      - "5349:5349"
-      - "5349:5349/udp"
-      - "49160-49200"
-
-volumes:
-  mono-node-modules: null
+      - convertx:/app/data
