@@ -50,8 +50,8 @@ services:
       - AZURE_CLIENT_SECRET=your_azure_client_secret
       - AZURE_REDIRECT_URI=your_azure_redirect_uri
     ports:
-      - 3000:3000
-      - 9000:9000
+      - 3888:3888
+      - 9111:9111
     restart: unless-stopped
 
   signal:
@@ -66,8 +66,8 @@ services:
       - mono-node-modules:/app/node_modules
     command: 'npm run start:signal'
     ports:
-      - 3000:3000
-      - 9000:9000
+      - 3888:3888
+      - 9111:9111
 
   coturn:
     container_name: coturn
