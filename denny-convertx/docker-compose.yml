@@ -4,7 +4,7 @@ services:
     container_name: convertx
     restart: on-failure
     ports:
-      - "13000:13000"
+      - "13000:3000"
     environment: # Defaults are listed below. All are optional.
       - ACCOUNT_REGISTRATION=false # true or false, doesn't matter for the first account (e.g. keep this to false if you only want one account)
       - JWT_SECRET=aLongAndSecretStringUsedToSignTheJSONWebToken1234 # will use randomUUID() by default
