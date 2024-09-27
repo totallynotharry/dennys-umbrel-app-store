@@ -1,6 +1,6 @@
 services:
   convertx:
-    image: ghcr.io/c4illin/convertx:latest
+    image: ghcr.io/c4illin/convertx:v0.6.0@sha256:32318b22cd6208033b54fe98fa00544a3d78bd7676a97713b799317eb646e8d3
     container_name: convertx
     restart: on-failure
     ports:
