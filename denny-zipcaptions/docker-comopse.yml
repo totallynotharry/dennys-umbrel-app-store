@@ -1,12 +1,14 @@
 version: "3.7"
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: denny-zipcaptions_web_1
-      APP_PORT: 9000
-
-  excalidraw:
+  zip-captions:
     image: educoder/zip-captions
     restart: on-failure
-    stop_grace_period: 1m
+    environment:
+      - APP_HOST=denny-zipcaptions_web_1
+      - PUID=1000
+      - PGID=1000
+    ports:
+      - 9000:9000
+    volumes:
+      - ${APP_DATA_DIR}/data:/data/zipcaptions
