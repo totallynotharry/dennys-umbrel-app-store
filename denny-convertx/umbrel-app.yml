@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-convertx
 name: ConvertX
 tagline: A self-hosted online file converter
-icon: https://i.imgur.com/i1C9Mu6.png
+icon: https://i.imgur.com/eE6kxFR.png
 category: files
 version: "0.6.0"
 port: 13000
