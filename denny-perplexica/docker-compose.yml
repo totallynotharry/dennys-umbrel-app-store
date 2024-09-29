@@ -1,6 +1,6 @@
 services:
   searxng:
-    image: docker.io/searxng/searxng:latest
+    image: searxng/searxng:2024.9.29-f07ab6deb
     volumes:
       - ${APP_DATA_DIR}/searxng:/etc/searxng:rw
     ports:
