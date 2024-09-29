@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-perplexica
 name: Perplexica
 tagline: Elegant open source project tracking
-icon: https://i.imgur.com/HOzygeF.png
+icon: https://i.imgur.com/VFQ3Omk.png
 category: files
 version: "1.23.0"
 port: 4000
