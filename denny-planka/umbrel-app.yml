@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: denny-planka
 name: Planka
-tagline: A Powerful and Elegant Open Source Tool for Project Tracking
+tagline: A powerful and elegant open source tool for project tracking
 icon: https://i.imgur.com/HOzygeF.png
 category: files
 version: "1.23.0"
