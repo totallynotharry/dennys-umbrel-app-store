@@ -5,8 +5,6 @@ services:
     image: danielszabo99/microbin
     restart: always
     environment:
-     - MICROBIN_PRIVATE=true
-     - MICROBIN_PUBLIC_PATH=http://localhost:8065
      - MICROBIN_QR=true
      - MICROBIN_HIGHLIGHTSYNTAX=true
      - MICROBIN_ADMIN_USERNAME=umbrel
