@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   paste:
-    image: danielszabo99/microbin
+    image: danielszabo99/microbin:latest@sha256:c5bd4643135540a68a2846950fe4f65f3bcc94b62ed7c7644e563dfde6f1732c
     restart: always
     environment:
      - MICROBIN_QR=true
