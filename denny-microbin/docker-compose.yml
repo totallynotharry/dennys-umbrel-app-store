@@ -1,6 +1,6 @@
 services:
   paste:
-    image: danielszabo99/microbin
+    image: ghcr.io/sshilin/microbin:latest
     restart: always
     environment:
      - MICROBIN_PRIVATE=true
