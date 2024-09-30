@@ -22,9 +22,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/szabodanika/microbin
 support: https://github.com/szabodanika/microbin/issues
 gallery:
-  - https://i.imgur.com/6z2Cm6r.png
-  - https://i.imgur.com/dDww1rq.png
-  - https://i.imgur.com/5qf2O1t.png
+  - https://i.imgur.com/OfpMnbx.png
+  - https://i.imgur.com/Vg1c0Z2.png
+  - https://i.imgur.com/VcgZ1sh.png
 
 releaseNotes: >-
    The latest update introduces a range of new features and improvements, enhancing both functionality and user experience. It now supports server-side and client-side encryption for uploads, including file attachments, ensuring secure file sharing. SQLite database support is enabled by default, providing a lightweight and reliable backend. The upload settings have been reworked with five distinct privacy levels, and a new administrator console (/admin) allows for easy management. Syntax highlighting is automatically applied, while image and video embedding make content sharing more dynamic.
