@@ -46,9 +46,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/plankanban/planka
 support: https://github.com/plankanban/planka/issues
 gallery:
-  - https://i.imgur.com/oQdsDmj.png
-  - https://i.imgur.com/oQdsDmj.png
-  - https://i.imgur.com/oQdsDmj.png
+  - https://i.imgur.com/hSouuzn.png
+  - https://i.imgur.com/VEROtIu.png
+  - https://i.imgur.com/ZP8nc4U.png
 
 releaseNotes: >-
    This release includes a Yemeni Arabic translation, configurable file storage locations, and the ability to configure OIDC claims source. Thank you to our new contributors for their valuable input!
