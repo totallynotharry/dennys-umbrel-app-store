@@ -46,9 +46,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/C4illin/ConvertX
 support: https://github.com/C4illin/ConvertX/issues
 gallery:
-  - https://i.imgur.com/OCCapBn.png
-  - https://i.imgur.com/OCCapBn.png
-  - https://i.imgur.com/OCCapBn.png
+  - https://i.imgur.com/0JCm9x4.png
+  - https://i.imgur.com/6nwiA4D.png
+  - https://i.imgur.com/KyzJieE.png
 
 releaseNotes: >-
    This update features a complete remake of the user interface using Tailwind CSS, enhancing the overall design and responsiveness of the application. Additionally, the CSS file has been renamed to force a cache update, effectively resolving previous issues related to outdated styles. This update improves both the visual appeal and functionality of the application, ensuring a smoother user experience.
