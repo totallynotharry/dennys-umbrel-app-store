@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: denny-convertx
 name: ConvertX
-tagline: A Self-Hosted Online File Converter That Converts Tons of File Types
+tagline: A self-hosted online file converter that converts tons of file types
 icon: https://i.imgur.com/eytlPGT.png
 category: files
 version: "0.6.0"
