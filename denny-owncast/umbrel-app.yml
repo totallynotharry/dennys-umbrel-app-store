@@ -5,7 +5,7 @@ tagline: An advanced, open-source internet operating system
 icon: https://i.imgur.com/Md8LFlB.png
 category: files
 version: "2.4.2"
-port: 1935
+port: 8050
 description: >-
   Puter is an advanced, open-source internet operating system designed to be feature-rich, exceptionally fast, and highly extensible. Puter can be used as:
 
