@@ -17,8 +17,8 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | [Pingvin Share](https://github.com/stonith404/pingvin-share) | A self-hosted file sharing platform that combines lightness and beauty, perfect for seamless and efficient file sharing                             |
 | [Puter OS](https://github.com/puterOS/puterOS)              | An advanced, open-source internet operating system                 |
 | [LinkStack](https://github.com/LinkStackOrg/LinkStack)      | A highly customizable link sharing platform with an intuitive, easy to use user interface             |
-| [Planka](https://github.com/plankanban/planka)     | A Powerful and Elegant Open Source Tool for Project Tracking             |
-| [ConvertX](https://github.com/C4illin/ConvertX)     | A Self-Hosted Online File Converter That Converts Tons of File Types            |
+| [Planka](https://github.com/plankanban/planka)     | A powerful and elegant open source tool for project tracking          |
+| [ConvertX](https://github.com/C4illin/ConvertX)     | A self-hosted online file converter that converts tons of file types           |
 | [FileFlows](https://github.com/revenz/FileFlows)    | A file processing app that performs actions on files using a tree flow structure             |
 | [MicroBin](https://github.com/szabodanika/microbin)     | A tiny, self-contained, configurable paste bin and URL shortener            |
 | [Owncast](https://github.com/owncast/owncast)    | A free and open source live video and web chat server            |
