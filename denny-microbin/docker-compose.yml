@@ -1,0 +1,22 @@
+services:
+  paste:
+    image: danielszabo99/microbin
+    restart: always
+    environment:
+     - MICROBIN_PRIVATE=true
+     - MICROBIN_PUBLIC_PATH=http://umbrel.local
+     - MICROBIN_QR=true
+     - MICROBIN_HIGHLIGHTSYNTAX=true
+     - MICROBIN_ADMIN_USERNAME=umbrel
+     - MICROBIN_ADMIN_PASSWORD=umbrelpass
+     - MICROBIN_ENCRYPTION_CLIENT_SIDE=false
+     - MICROBIN_ENCRYPTION_SERVER_SIDE=true
+     - MICROBIN_TITLE=Microbin
+     - MICROBIN_QR=True
+     - MICROBIN_HIDE_FOOTER=True
+     - MICROBIN_WIDE=true
+    ports:
+     - "8065:8080"
+    volumes:
+     - ${APP_DATA_DIR}/microbin:/my/microbin
+     - ${APP_DATA_DIR}/microbin/data:/app/pasta_data
