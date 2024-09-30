@@ -14,7 +14,7 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | ----------------- | ---------------------------------------------------- |
 | [Excalidraw](https://github.com/excalidraw/excalidraw)        | An open source virtual hand-drawn style whiteboard                         |
 | [Joplin Sync Server](https://github.com/laurent22/joplin)    | An open-source synchronization server for Joplin            |
-| [Pingvin Share](https://github.com/stonith404/pingvin-share) | A self-hosted file sharing platform that combines lightness and beauty, perfect for seamless and efficient file sharing                             |
+| [Pingvin Share](https://github.com/stonith404/pingvin-share) | A self-hosted file sharing solution, combining ease and elegance                             |
 | [Puter OS](https://github.com/puterOS/puterOS)              | An advanced, open-source internet operating system                 |
 | [LinkStack](https://github.com/LinkStackOrg/LinkStack)      | A highly customizable link sharing platform with an intuitive, easy to use user interface             |
 | [Planka](https://github.com/plankanban/planka)     | A powerful and elegant open source tool for project tracking          |
