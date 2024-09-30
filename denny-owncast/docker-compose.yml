@@ -3,7 +3,7 @@ services:
   owncast:
     image: owncast/owncast:latest
     ports:
-      - "1934:8080"
+      - "8080:8080"
       - "1935:1935"
     volumes:
       - ${APP_DATA_DIR}/data/owncast:/app/data
