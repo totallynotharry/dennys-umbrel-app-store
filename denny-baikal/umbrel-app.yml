@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: denny-baikal
 name: Baikal
-tagline: A lightweight CalDAV+CardDAV server.
+tagline: A lightweight CalDAV+CardDAV server
 icon: https://i.imgur.com/h3B1DaG.png
 category: network
 version: "0.9.5"
