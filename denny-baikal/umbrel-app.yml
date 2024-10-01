@@ -7,7 +7,7 @@ category: network
 version: "0.9.5"
 port: 85
 description: >-
-  Baikal Server is a lightweight CalDAV and CardDAV server designed for users who want to manage their calendar and contact information securely on their own server. This robust application offers an extensive web interface that simplifies the management of users, address books, and calendars, making it accessible for both beginners and experienced users.
+  🪆 Baikal Server is a lightweight CalDAV and CardDAV server designed for users who want to manage their calendar and contact information securely on their own server. This robust application offers an extensive web interface that simplifies the management of users, address books, and calendars, making it accessible for both beginners and experienced users.
 
 
   One of the key features of Baikal is its ease of installation and configuration. It requires only a basic PHP-capable server, which means you don’t need extensive technical knowledge to get started. The server supports both MySQL and SQLite databases for data storage, providing flexibility depending on your preferences and needs.
