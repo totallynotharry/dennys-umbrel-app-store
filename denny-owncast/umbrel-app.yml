@@ -37,9 +37,9 @@ submission: https://github.com/dennysubke/dennys-umbrel-app-store
 repo: https://github.com/owncast
 support: https://github.com/owncast/owncast/issues
 gallery:
-  - https://i.imgur.com/RCSnlvI.png
-  - https://i.imgur.com/RCSnlvI.png
-  - https://i.imgur.com/RCSnlvI.png
+  - https://i.imgur.com/Zbh07pz.png
+  - https://i.imgur.com/zIeK5Yc.png
+  - https://i.imgur.com/NyhKo1Y.png
 releaseNotes: >-
     In the latest update, several enhancements and fixes have been introduced to improve functionality and user experience. Notably, the addition of sanitization for Fediverse usernames and the specification of content types for custom JavaScript significantly enhance system integrity and performance. The "rel-me" attribute has also been added to the server-rendered bot/metadata/search page template, contributing to better SEO practices.
 
