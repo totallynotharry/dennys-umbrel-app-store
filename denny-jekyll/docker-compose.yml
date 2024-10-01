@@ -2,8 +2,9 @@ services:
   jekyll:
     image: jekyll/jekyll
     volumes:
-      - .:/srv/jekyll
-      - ./vendor/bundle/:/usr/local/bundle
+      - ${APP_DATA_DIR}/jekyll/srv/:/srv/jekyll
+      - ${APP_DATA_DIR}/jekyll/usr/:/usr/local/bundle
     ports:
-      - "4050:4000"  # Ändere 4050 auf den gewünschten Host-Port
+      - "4050:4000"
     command: jekyll serve --force_polling --drafts
+    user: "1000:1000"
