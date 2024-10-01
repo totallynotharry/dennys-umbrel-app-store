@@ -4,12 +4,12 @@ services:
         image: kaangiray26/endless:1.3
         restart: on-failure
         ports:
-            - "3950:3000"
+            - "3050:3000"
         depends_on:
             postgres:
                 condition: service_healthy
         environment:
-            port: 3000                 # Set Port
+            port: 3050                # Set Port
             version: "1.3"             # Set Version
             verbose: false             # Verbose Logging
             NODE_ENV: production       # Set Node Environment
