@@ -5,10 +5,10 @@ services:
     restart: always
     environment:
       # You must change these. Replace `postiz.your-server.com` with your DNS name - what your web browser sees.
-      MAIN_URL: "http://umbrel.local"
-      FRONTEND_URL: "http://umbrel.local"
-      NEXT_PUBLIC_BACKEND_URL: "http://umbrel.local/api"
-      JWT_SECRET: "random string that is unique to every install - just type random characters here!"
+      MAIN_URL: "http://umbrel.local:5000"
+      FRONTEND_URL: "http://umbrel.local:3000"
+      NEXT_PUBLIC_BACKEND_URL: "http://umbrel.local:3000"
+      JWT_SECRET: "ccnefccojdicxidcniodcnfojncojsnconcosncoiwjcioccjoooekoekdacccpdrp"
  
       # These are totally fake values, you must change them with your own Cloudflare R2 settings.
       # Docs: https://docs.postiz.com/configuration/r2
@@ -23,7 +23,7 @@ services:
       # postiz-postgres or postiz-redis services below.
       DATABASE_URL: "postgresql://postiz-user:postiz-password@postiz-postgres:5432/postiz-db-local"
       REDIS_URL: "redis://postiz-redis:6379"
-      BACKEND_INTERNAL_URL: "http://localhost:3000"
+      BACKEND_INTERNAL_URL: "http://umbrel.local:3000"
       IS_GENERAL: "true" # Required for self-hosting.
  
       # Your email provider, optional
