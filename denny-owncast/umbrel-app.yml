@@ -28,7 +28,7 @@ description: >-
     Whether you’re a gamer, artist, educator, or content creator, Owncast provides the tools to build your unique streaming experience. Embrace the freedom of self-hosting and engage your audience like never before!
 
 
-    ⚠️ After starting the server, enter `umbrel.local:8050/admin` in your web browser to access the admin panel. The admin username is admin and the password is abc123.
+    ⚠️ After starting the server, enter `umbrel.local:8050/admin` in your web browser to access the admin panel. The admin username is 'admin' and the password is 'abc123'.
 
 developer: Gabe Kangas
 website: https://owncast.online
