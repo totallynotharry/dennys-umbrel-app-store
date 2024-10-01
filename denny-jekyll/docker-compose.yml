@@ -2,8 +2,8 @@ services:
   jekyll:
     image: jekyll/jekyll
     volumes:
-      - .:/srv/jekyll
-      - ./vendor/bundle/:/usr/gem/bundle  # Ändere das Zielverzeichnis für Gems
+      -  ${APP_DATA_DIR}/:/srv/jekyll
+      -  ${APP_DATA_DIR}/vendor/bundle/:/usr/gem/bundle  # Ändere das Zielverzeichnis für Gems
     ports:
       - "4050:4000"
     command: jekyll serve --force_polling --drafts
