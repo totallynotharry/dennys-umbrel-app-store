@@ -22,6 +22,7 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | [FileFlows](https://github.com/revenz/FileFlows)    | A file processing app that performs actions on files using a tree flow structure             |
 | [MicroBin](https://github.com/szabodanika/microbin)     | A tiny, self-contained, configurable paste bin and URL shortener            |
 | [Owncast](https://github.com/owncast/owncast)    | A free and open source live video and web chat server            |
+| [Baikal](https://github.com/sabre-io/Baikal)    | A lightweight CalDAV+CardDAV server         |
 
 🔄 All Apps are continually updated and new Apps are added over time.
 
