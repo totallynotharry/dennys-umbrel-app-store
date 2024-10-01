@@ -1,6 +1,6 @@
 manifestVersion: 1
 id: denny-jekyll
-name: excalidraw
+name: Jekyll
 tagline: Virtual whiteboard for sketching hand-drawn like diagrams
 icon: https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/logo.svg
 category: productivity
