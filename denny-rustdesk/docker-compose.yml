@@ -1,35 +1,17 @@
-version: '3'
-networks:
-  rustdesk-net:
-    external: false
-
+---
 services:
-  hbbs:
-    container_name: hbbs
-    ports:
-      - 21115:21115
-      - 21116:21116
-      - 21116:21116/udp
-      - 21118:21118
-    image: rustdesk/rustdesk-server:latest
-    command: hbbs -r umbrel.local:21117
+  rustdesk:
+    image: lscr.io/linuxserver/rustdesk:latest
+    container_name: rustdesk
+    security_opt:
+      - seccomp:unconfined
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Berlin
     volumes:
-      - ./hbbs:/root
-    networks:
-      - rustdesk-net
-    depends_on:
-      - hbbr
-    restart: unless-stopped
-
-  hbbr:
-    container_name: hbbr
+      - /path/to/config:/config
     ports:
-      - 21117:21117
-      - 21119:21119
-    image: rustdesk/rustdesk-server:latest
-    command: hbbr
-    volumes:
-      - ./hbbr:/root
-    networks:
-      - rustdesk-net
-    restart: unless-stopped
+      - 3044:3000
+      - 3045:3001
+    restart: on-failure
