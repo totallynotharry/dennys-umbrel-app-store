@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   nginx:
     image: nginx:alpine
@@ -8,13 +6,13 @@ services:
       - ./nginx-selfsigned.crt:/etc/nginx/nginx-selfsigned.crt
       - ./nginx-selfsigned.key:/etc/nginx/nginx-selfsigned.key
     ports:
-      - "443:443"
+      - "8525:8525"
     restart: always
+    networks:
+      - web
 
   enclosed:
     image: corentinth/enclosed
-    ports:
-      - 8525:8787
     volumes:
       - ${APP_DATA_DIR}/data/enclosed-data:/app/.data
     restart: on-failure
