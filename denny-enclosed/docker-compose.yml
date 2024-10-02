@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   enclosed:
-    image: stonith404/pingvin-share:v0.27.0@sha256:ebcd050ddcf0fc6e2f14944e66f478825697479cb79feaec7d989fa4a45a0635
+    image: corentinth/enclosed
     ports:
       - 8525:8787
     volumes:
