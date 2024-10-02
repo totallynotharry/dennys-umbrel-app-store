@@ -1,4 +1,4 @@
-name: my-site
+name: umbrel.local
 
 services:
   server:
