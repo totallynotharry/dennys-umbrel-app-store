@@ -13,7 +13,7 @@ services:
       database__connection__user: ghost
       database__connection__password: moneyprintergobrrr
       database__connection__database: ghost
-      url: http://umbrel.local:80
+      url: http://umbrel.local:2368
     volumes:
       - ${APP_DATA_DIR}/ghost:/var/lib/ghost/content
 
@@ -28,7 +28,7 @@ services:
       MYSQL_DATABASE: "ghost"
       MYSQL_USER: "ghost"
       MYSQL_PASSWORD: "moneyprintergobrrr"
-      MYSQL_ROOT_PASSWORD: "moneyprintergobrrr"
+      MYSQL_ROOT_PASSWORD: "YES"
 
 volumes:
   ghost:
