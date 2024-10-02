@@ -1,8 +1,8 @@
 manifestVersion: 1
 id: denny-enclosed
-name: enclosed
+name: Enclosed
 tagline: A minimalistic web application designed for sending private and secure notes
-icon: https://i.imgur.com/HOXlftB.png
+icon: https://i.imgur.com/1QUyNQk.png
 category: files
 version: "1.6.9"
 port: 8525
