@@ -5,7 +5,7 @@ services:
       - 8525:8787
     volumes:
       - ${APP_DATA_DIR}/data/enclosed-data:/app/.data
-    restart: unless-stopped
+    restart: on-failure
 
 volumes:
   enclosed-data:
