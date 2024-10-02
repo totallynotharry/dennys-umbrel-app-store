@@ -2,22 +2,29 @@ manifestVersion: 1
 id: denny-rustdesk
 name: Rustdesk
 category: network
-version: "0.0.6"
-tagline: Ghost is a free and open source blogging platform written in JavaScript
-icon: https://i.imgur.com/5RJJOqw.png
+version: "1.3.1"
+tagline: A full-featured remote control for self-hosting with minimal configuration
+icon: https://i.imgur.com/RMm8RVU.png
 description: >
-  Ghost is a powerful app for new-media creators to publish, share, and grow a business around their content. It comes with modern tools to build a website, publish content, send newsletters & offer paid subscriptions to members.
-developer: ghost
-website: https://github.com/TryGhost/Ghost
+  RustDesk is an open-source remote access and desktop solution that offers a compelling alternative to commercial applications like TeamViewer. One of RustDesk's standout features is the ability to fully self-host the software, giving users complete control over their data without relying on external servers. This is particularly advantageous for businesses and individuals who prioritize privacy and security.
+
+
+  RustDesk provides a wide range of useful features, including file transfer, session recording, and detailed access controls, allowing users to effectively monitor and manage usage. Its decentralized architecture enables users to leverage their own infrastructure, making the solution highly flexible. RustDesk is ideal for secure and efficient remote access, offering a high level of usability for those seeking a stable, private, and reliable remote desktop software.
+developer: Purslane Ltd.
+website: https://rustdesk.com/
 dependencies: []
-repo: https://github.com/TryGhost/Ghost
-support: https://github.com/TryGhost/Ghost/issues
-port: 21115
+repo: https://github.com/rustdesk/rustdesk
+support: https://github.com/rustdesk/rustdesk/issues
+port: 3044
 gallery:
-  - https://user-images.githubusercontent.com/353959/169805900-66be5b89-0859-4816-8da9-528ed7534704.png
+  - https://i.imgur.com/hVqXyUj.png
+  - https://i.imgur.com/hVqXyUj.png
+  - https://i.imgur.com/hVqXyUj.png
 path: ""
 defaultPassword: ""
 releaseNotes: >
+  The changelog highlights the addition of four advanced options, including one-way clipboard redirection and logon screen password allowance. The desktop file manager's UI has been optimized, and libappindicator has been replaced with libayatana-appindicator.
 
+  Key fixes include improvements to tab replacement, mouse functionality on macOS, LAN discovery on Android and iOS, and various memory leaks. Overall, these updates enhance usability, stability, and performance.
 submitter: dennysubke
 submission:
