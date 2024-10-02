@@ -6,7 +6,7 @@ services:
       - ./nginx-selfsigned.crt:/etc/nginx/nginx-selfsigned.crt
       - ./nginx-selfsigned.key:/etc/nginx/nginx-selfsigned.key
     ports:
-      - "8525:8525"
+      - "8525:8787"
     restart: always
     networks:
       - web
