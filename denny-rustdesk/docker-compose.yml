@@ -12,7 +12,7 @@ services:
       - 21119:21119
     image: rustdesk/rustdesk-server-s6:latest
     environment:
-      - "RELAY=umbrel.local
+      - "RELAY=umbrel.local"
       - "ENCRYPTED_ONLY=1"
     volumes:
       - ./data:/data
