@@ -13,5 +13,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
+    ports:
+      - 8525:8787
     volumes:
        - ${APP_DATA_DIR}/data:/app/.data
