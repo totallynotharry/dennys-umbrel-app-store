@@ -6,7 +6,7 @@ services:
     volumes:
       - ${APP_DATA_DIR}/enclosed-data:/app/.data
     restart: on-failure
-
-volumes:
-  enclosed-data:
-    driver: local
+    environment:
+      - APP_HOST=enclosed_web_1
+      - PUID=1000
+      - PGID=1000
