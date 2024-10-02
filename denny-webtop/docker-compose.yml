@@ -11,6 +11,6 @@ services:
       volumes:
          - ${APP_DATA_DIR}/webtop/config:/config
       ports:
-         - 3025:3000
+         - 3020:3000
       shm_size: "1gb"
       restart: unless-stopped
