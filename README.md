@@ -24,6 +24,7 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | [Owncast](https://github.com/owncast/owncast)    | A free and open source live video and web chat server            |
 | [Baikal](https://github.com/sabre-io/Baikal)    | A lightweight CalDAV+CardDAV server         |
 | [Rustdeck](https://github.com/rustdesk/rustdesk)    | A full-featured remote control for self-hosting with minimal configuration         |
+| [Enclosed](https://github.com/CorentinTh/enclosed))    |  A minimalistic web application designed for sending private and secure notes        |
 
 🔄 All Apps are continually updated and new Apps are added over time.
 
