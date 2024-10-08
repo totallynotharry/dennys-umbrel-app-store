@@ -8,10 +8,4 @@ services:
       - ${APP_DATA_DIR}/config:/config
     ports:
       - "1970:1970"
-    environment:
-      - INSTALL_FFMPEG=true
     restart: on-failure
-    entrypoint: >
-      /bin/sh -c "apt-get update &&
-                  apt-get install -y ffmpeg &&
-                  exec swingmusic"
