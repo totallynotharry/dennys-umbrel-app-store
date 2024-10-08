@@ -2,37 +2,61 @@ manifestVersion: 1
 id: denny-swingmusic
 name: Swing Music
 tagline: A beautiful, self-hosted music player for your local audio files
-icon: https://i.imgur.com/aY7xQod.png
+icon: https://i.imgur.com/B9R2I6L.png
 category: files
-version: "0.9.5"
+version: "1.4.8"
 port: 1970
 description: >-
-  🪆 Baikal Server is a lightweight CalDAV and CardDAV server designed for users who want to manage their calendar and contact information securely on their own server. This robust application offers an extensive web interface that simplifies the management of users, address books, and calendars, making it accessible for both beginners and experienced users.
+  Swing Music is a sleek, self-hosted music player built for your personal audio collection. Unlike streaming services like Spotify, you have complete control over your library—only the music you love makes the cut. Simply launch the app and access your entire collection right from your web browser. Enjoy seamless playback, advanced playlist features, and a user-friendly interface that feels like a custom-built music service. 
 
 
-  One of the key features of Baikal is its ease of installation and configuration. It requires only a basic PHP-capable server, which means you don’t need extensive technical knowledge to get started. The server supports both MySQL and SQLite databases for data storage, providing flexibility depending on your preferences and needs.
+  With Swing Music, you get the most out of your music without subscriptions or ads—just you and your favorite tunes.
 
 
-  Baikal allows users to seamlessly access their contacts and calendars from any device. It is compatible with a wide range of applications, including iOS, macOS, DAVx5 on Android, Mozilla Thunderbird, and many other CalDAV and CardDAV capable applications. This compatibility ensures that you can sync your data across multiple platforms without any hassle.
+  Here are some cool features offered by Swing Music:
+
+  
+  🎶 Infer album version info (deluxe, etc) from the album title and use it to group albums
 
 
-  In addition to its user-friendly features, Baikal emphasizes privacy and data security. By hosting your calendars and contacts yourself, you maintain full control over your personal information, protecting it from potential breaches and unauthorized access. This is particularly important in an era where data privacy is a growing concern.
+  🎧 Discover new music by exploring similar artists in the artist page
 
 
-  Whether you are an individual looking for a reliable personal organizer or a small team needing a collaborative solution, Baikal Server provides a practical and efficient way to manage your scheduling and contact needs while ensuring your data remains private and secure. With its fast performance and straightforward interface, Baikal is an excellent choice for anyone seeking a self-hosted calendar and contact management solution.
+  🆕 Discover new albums by exploring similar albums in the album page
 
-developer: fruux GmbH
-website: https://sabre.io/baikal/
+  
+  
+  ✅ Designed to be simple and beautiful. It is a pleasure to look at.
+
+
+  📚 Browse your library by folders. It's the most natural way to organize your music.
+
+
+  🖥️ No bundled GUI, no memory hogging Electron. Just load the UI in your favorite browser.
+
+
+  📝 You can't always get spelling right. It handles typos and misspellings like a champ.
+
+
+  📑 It can detect and hide duplicate tracks from your library. The track with the highest bitrate is preferred.
+
+
+  🚀 Swing Music is still a young project, and there's a lot of cool features to come in future releases. Stay tuned!
+
+developer: Mungai Njoroge
+website: https://swingmx.com/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/sabre-io/Baikal
-support: https://github.com/sabre-io/Baikal/issues
+repo: https://github.com/swingmx/swingmusic
+support: https://github.com/swingmx/swingmusic/issues
 gallery:
   - https://i.imgur.com/InOvJFa.png
   - https://i.imgur.com/hIQ1ZIv.png
   - https://i.imgur.com/nobRqdE.png
 releaseNotes: >-
-  The latest update includes dependency upgrades that enhance compatibility with PHP 8.2 and features the inclusion of sabre/dav version 4.6.0.
+  A new optional layout without a sidebar was added, along with a top bar search and centered content in the default layout. The app now uses a stronger WSGI server, supports ARM64, and has a proper timezone fix. Recent items display how long ago they were played/added, with no cutoff.
+
+  Bug fixes include improved queue management, playlist bounds, keyboard shortcuts, and lyrics plugin functionality.
 dependencies:
 path: ""
 defaultUsername: ""
