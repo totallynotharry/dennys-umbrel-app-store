@@ -49,9 +49,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/swingmx/swingmusic
 support: https://github.com/swingmx/swingmusic/issues
 gallery:
-  - https://i.imgur.com/InOvJFa.png
-  - https://i.imgur.com/hIQ1ZIv.png
-  - https://i.imgur.com/nobRqdE.png
+  - https://i.imgur.com/MAkGjbt.png
+  - https://i.imgur.com/MAkGjbt.png
+  - https://i.imgur.com/MAkGjbt.png
 releaseNotes: >-
   A new optional layout without a sidebar was added, along with a top bar search and centered content in the default layout. The app now uses a stronger WSGI server, supports ARM64, and has a proper timezone fix. Recent items display how long ago they were played/added, with no cutoff.
 
