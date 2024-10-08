@@ -4,7 +4,7 @@ services:
     image: ghcr.io/swingmx/swingmusic:latest
     container_name: swingmusic
     volumes:
-      - ${APP_DATA_DIR}/music:/music
+      - ${APP_DATA_DIR}/music:/music:rw
       - ${APP_DATA_DIR}/config:/config
     ports:
       - "1970:1970"
