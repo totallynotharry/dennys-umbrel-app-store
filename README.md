@@ -25,6 +25,7 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | [Baikal](https://github.com/sabre-io/Baikal)    | A lightweight CalDAV+CardDAV server         |
 | [Rustdeck](https://github.com/rustdesk/rustdesk)    | A full-featured remote control for self-hosting with minimal configuration         |
 | [Enclosed](https://github.com/CorentinTh/enclosed)    |  A minimalistic web application designed for sending private and secure notes        |
+| [Swing Music](https://github.com/swingmx/swingmusic)    |  A beautiful, self-hosted music player for your local audio files       |
 
 🔄 All Apps are continually updated and new Apps are added over time.
 
