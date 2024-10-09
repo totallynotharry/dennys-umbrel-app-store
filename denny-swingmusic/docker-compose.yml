@@ -1,8 +1,7 @@
-version: "3.9"
 services:
   app_proxy:
     environment:
-      APP_HOST: swingmusic_server_1
+      APP_HOST: denny-swingmusic_server_1
       APP_PORT: 1970
       PROXY_AUTH_ADD: "false"
 
