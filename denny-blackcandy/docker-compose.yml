@@ -8,14 +8,14 @@ services:
     volumes:
       - ./blackcandy.local:/etc/nginx/vhost.d/blackcandy.local:ro
       - /var/run/docker.sock:/tmp/docker.sock:ro
-      - /media_data:/media_data # Keep the path of media files in container the same as blackcandy container.
+      - ${APP_DATA_DIR}/media_data:/media_data # Pfad für Medien-Dateien
 
   app:
     image: ghcr.io/blackcandy-org/blackcandy:latest
     volumes:
-      - ./storage_data:/app/storage
-      - /media_data:/media_data
+      - ${APP_DATA_DIR}/storage_data:/app/storage # Persistente Daten
+      - ${APP_DATA_DIR}/media_data:/media_data
     environment:
       VIRTUAL_HOST: blackcandy.local
       MEDIA_PATH: /media_data
-      NGINX_SENDFILE: "true" # Don't forget to set `NGINX_SENDFILE` environment variable to true to enable nginx sendfile.
+      NGINX_SENDFILE: "true" # Aktiviert Nginx sendfile
