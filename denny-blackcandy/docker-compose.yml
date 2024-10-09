@@ -1,21 +1,21 @@
-version: '3'
-
+version: "3.9"
 services:
-  nginx-proxy:
-    image: nginxproxy/nginx-proxy
-    ports:
-      - "1480:80"
-    volumes:
-      - ./blackcandy.local:/etc/nginx/vhost.d/blackcandy.local:ro
-      - /var/run/docker.sock:/tmp/docker.sock:ro
-      - ${APP_DATA_DIR}/media_data:/media_data # Pfad für Medien-Dateien
+  app_proxy:
+    environment:
+      APP_HOST: denny-blackcandy_server_1
+      APP_PORT: 1480
+      PROXY_AUTH_ADD: "false"
 
-  app:
+  server:
     image: ghcr.io/blackcandy-org/blackcandy:latest
+    restart: on-failure
+    environment:
+      - PUID=1000
+      - PGID=1000
     volumes:
       - ${APP_DATA_DIR}/storage_data:/app/storage # Persistente Daten
-      - ${APP_DATA_DIR}/media_data:/media_data
+      - ${APP_DATA_DIR}/media_data:/media_data # Pfad für Medien-Dateien
     environment:
-      VIRTUAL_HOST: blackcandy.local
+      VIRTUAL_HOST: umbrel.local
       MEDIA_PATH: /media_data
-      NGINX_SENDFILE: "true" # Aktiviert Nginx sendfile
+      NGINX_SENDFILE: "false" # Aktiviert Nginx sendfile
