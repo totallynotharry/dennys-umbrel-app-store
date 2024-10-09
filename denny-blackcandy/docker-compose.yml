@@ -9,9 +9,6 @@ services:
   server:
     image: ghcr.io/blackcandy-org/blackcandy:latest
     restart: on-failure
-    environment:
-      - PUID=1000
-      - PGID=1000
     volumes:
       - ${APP_DATA_DIR}/storage_data:/app/storage # Persistente Daten
       - ${APP_DATA_DIR}/media_data:/media_data # Pfad für Medien-Dateien
