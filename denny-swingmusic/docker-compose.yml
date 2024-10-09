@@ -6,6 +6,7 @@ services:
     volumes:
       - ${APP_DATA_DIR}/music:/music
       - ${APP_DATA_DIR}/config:/config
+      - ./entrypoint.sh:/entrypoint.sh # Mount des Scripts in den Container
     ports:
       - "1970:1970"
     entrypoint: ["/bin/sh", "/entrypoint.sh"]
