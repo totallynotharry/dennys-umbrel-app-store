@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-UMBREL_STORAGE_DOWNLOADS_MUSIC_DIR="${UMBREL_ROOT}/data/storage/downloads/music"
+UMBREL_STORAGE_DOWNLOADS_MUSIC_DIR="${UMBREL_ROOT}/music"
 DESIRED_OWNER="1000:1000"
 
 if [[ ! -d "${UMBREL_STORAGE_DOWNLOADS_MUSIC_DIR}" ]]; then
 	mkdir -p "${UMBREL_STORAGE_DOWNLOADS_MUSIC_DIR}"
 fi
 
-navidrome_correct_permission() {
+swingmusic_correct_permission() {
 	local -r path="${1}"
 
 	if [[ -d "${path}" ]]; then
@@ -20,4 +20,4 @@ navidrome_correct_permission() {
 	fi
 }
 
-navidrome_correct_permission "${UMBREL_STORAGE_DOWNLOADS_MUSIC_DIR}"
+swingmusic_correct_permission "${UMBREL_STORAGE_DOWNLOADS_MUSIC_DIR}"
