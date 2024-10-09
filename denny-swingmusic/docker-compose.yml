@@ -1,11 +1,17 @@
 version: "3.9"
 services:
-  swingmusic:
+  app_proxy:
+    environment:
+      APP_HOST: swingmusic_server_1
+      APP_PORT: 1970
+      PROXY_AUTH_ADD: "false"
+
+  server:
     image: ghcr.io/swingmx/swingmusic:v1.4.8@sha256:e6ccef307ebeadac967de0565b75e4906615ecfaac2a8f6bb82be13f111439d5
-    container_name: swingmusic
-    volumes:
-      - ${APP_DATA_DIR}/music:/music
-      - ${APP_DATA_DIR}/config:/config
-    ports:
-      - "1970:1970"
     restart: on-failure
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - ${APP_DATA_DIR}/music:/data
+      - ${UMBREL_ROOT}/config:/config
