@@ -21,6 +21,9 @@ gallery:
   - https://i.imgur.com/quUya7B.png
   - https://i.imgur.com/quUya7B.png
   - https://i.imgur.com/quUya7B.png
+releaseNotes: >-
+  A new configuration option, DEFAULT_BOARD, has been added. This allows administrators to define a default board that will automatically load when users visit the site. This feature is designed to streamline collaboration by directing users to a pre-set board without requiring manual selection, ensuring a consistent entry point for group activities. This change improves user experience and simplifies navigation to frequently used boards.
+
 path: ""
 defaultUsername: ""
 defaultPassword: ""
