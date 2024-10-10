@@ -1,0 +1,28 @@
+manifestVersion: 1
+id: denny-wbo
+category: files
+name: Online Whiteboard
+icon: https://i.imgur.com/tcDytxZ.png
+version: "1.20.1"
+tagline: An online collaborative Whiteboard that is simple, free, easy to use and to deploy
+description: >-
+  WBO is a collaborative whiteboard platform that enables real-time interaction between multiple users, making it perfect for creative brainstorming, project planning, teaching, and teamwork. It is browser-based and open-source, requiring no installations or accounts.
+
+  WBO's interface offers tools for drawing, writing, and annotating, with immediate live updates across all connected devices. You can create custom private boards with shareable URLs or join public ones for open collaboration. Its simplicity and flexibility make it a highly accessible tool for both casual and professional use, across various industries.
+
+developer: lovasoa
+website: https://wbo.ophir.dev/
+dependencies: []
+repo: https://github.com/lovasoa/whitebophir
+support: https://github.com/lovasoa/whitebophir/issues
+port: 5111
+gallery:
+  - https://i.imgur.com/quUya7B.png
+  - https://i.imgur.com/quUya7B.png
+  - https://i.imgur.com/quUya7B.png
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+torOnly: false
+submitter: dennysubke
+submission:
