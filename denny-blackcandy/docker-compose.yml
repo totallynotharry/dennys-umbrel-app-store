@@ -18,5 +18,6 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      VIRTUAL_HOST: umbrel.local
       MEDIA_PATH: /media_data
       # NGINX_SENDFILE: "true" # Don't forget to set `NGINX_SENDFILE` environment variable to true to enable nginx sendfile.
