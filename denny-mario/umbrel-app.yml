@@ -14,7 +14,7 @@ website: https://github.com/IMPranshu
 dependencies: []
 repo: https://github.com/IMPranshu/mario-in-web/tree/main/webapp
 support: https://github.com/IMPranshu/mario-in-web/tree/main/webapp
-port: 8600
+port: 8541
 gallery:
   - 1.jpg
   - 2.jpg
