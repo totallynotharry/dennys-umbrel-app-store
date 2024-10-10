@@ -26,6 +26,8 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | [Rustdeck](https://github.com/rustdesk/rustdesk)    | A full-featured remote control for self-hosting with minimal configuration         |
 | [Enclosed](https://github.com/CorentinTh/enclosed)    |  A minimalistic web application designed for sending private and secure notes        |
 | [Swing Music](https://github.com/swingmx/swingmusic)    |  A beautiful, self-hosted music player for your local audio files       |
+| [Online Whiteboard](https://github.com/lovasoa/whitebophir)   | An online collaborative Whiteboard that is simple, free, easy to use and to deploy       |
+| [Black Candy](https://github.com/blackcandy-org/blackcandy)    |  A self hosted music streaming server      |
 
 🔄 All Apps are continually updated and new Apps are added over time.
 
