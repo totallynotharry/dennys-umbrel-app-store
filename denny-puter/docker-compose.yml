@@ -1,12 +1,5 @@
 version: "3.9"
 services:
-  init_config_permissions:
-    image: busybox
-    command: sh -c "chown -R 1000:1000 /config && chmod -R 775 /config"
-    volumes:
-      - ${APP_DATA_DIR}/config:/config
-    restart: "no"
-
   app_proxy:
     environment:
       APP_HOST: denny-puter_web_1
@@ -22,9 +15,7 @@ services:
       PGID: 1000
     volumes:
       - ${APP_DATA_DIR}/data:/data/.puter
-      - ${APP_DATA_DIR}/config:/config:rw
-    depends_on:
-      - init_config_permissions
+      - ${APP_DATA_DIR}/config:/config
     healthcheck:
       test: wget --no-verbose --tries=1 --spider http://umbrel.local:4100/test || exit 1
       interval: 30s
