@@ -1,5 +1,5 @@
 {
   "domain": "umbrel.local",
   "http_port": 4100,
-  "pub_port": 443
+  "pub_port": 4100
 }
