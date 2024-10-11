@@ -10,8 +10,8 @@ services:
     image: ghcr.io/heyputer/puter:release@sha256:ec0fb133779bcdb37987c7776cb7b698876ded3020970d981719b666aed6c094
     restart: on-failure
     environment:
-      #TZ: Europe/Berlin
-      #CONFIG_PATH: /volatile/config
+      TZ: Europe/Berlin
+      #CONFIG_PATH: /config
       PUID: 1000
       PGID: 1000
     volumes:
