@@ -18,8 +18,6 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data:/data/.puter
       - ${APP_DATA_DIR}/config:/config
-    ports:
-      - "4100:4100"  # Port Mapping für den Zugriff von außen
     healthcheck:
       test: wget --no-verbose --tries=1 --spider http://umbrel.local:4100/test || exit 1
       interval: 30s
