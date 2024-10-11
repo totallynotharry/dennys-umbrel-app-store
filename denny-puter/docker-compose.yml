@@ -5,7 +5,7 @@ services:
     environment:
       APP_HOST: denny-puter_web_1
       APP_PORT: 4100
-      PROXY_AUTH_ADD: "false"
+      PROXY_AUTH_WHITELIST: "/api/*"
 
   web:
     image: ghcr.io/heyputer/puter:latest
