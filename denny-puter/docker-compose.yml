@@ -1,5 +1,12 @@
 version: "3.9"
 services:
+  init_config_permissions:
+    image: busybox
+    command: sh -c "chown -R 1000:1000 /config && chmod -R 775 /config"
+    volumes:
+      - ${APP_DATA_DIR}/config:/config
+    restart: "no"
+
   app_proxy:
     environment:
       APP_HOST: denny-puter_web_1
@@ -7,16 +14,17 @@ services:
       PROXY_AUTH_ADD: "false"
 
   web:
-    image: ghcr.io/heyputer/puter:latest
+    image: ghcr.io/heyputer/puter:release@sha256:ec0fb133779bcdb37987c7776cb7b698876ded3020970d981719b666aed6c094
     restart: on-failure
     environment:
       TZ: Europe/Berlin
-      CONFIG_PATH: /config
       PUID: 1000
       PGID: 1000
     volumes:
       - ${APP_DATA_DIR}/data:/data/.puter
       - ${APP_DATA_DIR}/config:/config:rw
+    depends_on:
+      - init_config_permissions
     healthcheck:
       test: wget --no-verbose --tries=1 --spider http://umbrel.local:4100/test || exit 1
       interval: 30s
