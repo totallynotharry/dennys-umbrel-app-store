@@ -14,6 +14,7 @@ services:
       TZ: Europe/Berlin
       PUID: 1000
       PGID: 1000
+      HOST: 0.0.0.0
     volumes:
       - ${APP_DATA_DIR}/data:/data/.puter
       - ${APP_DATA_DIR}/config:/config
