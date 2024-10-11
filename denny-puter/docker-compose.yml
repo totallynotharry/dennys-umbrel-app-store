@@ -11,7 +11,7 @@ services:
     restart: on-failure
     environment:
       # TZ=Europe/Berlin
-      # CONFIG_PATH=/etc/puter
+      - CONFIG_PATH={APP_DATA_DIR}/config
       - PUID=1000
       - PGID=1000
     volumes:
