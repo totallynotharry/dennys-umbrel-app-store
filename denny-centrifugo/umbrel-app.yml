@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-centrifugo
 name: Centrifugo
 tagline: A highly scalable real-time messaging server platform
-icon: https://i.imgur.com/mZ1ji6u.png
+icon: https://i.imgur.com/QeNMPRd.png
 category: network
 version: "5.4.6"
 port: 8086
@@ -48,6 +48,7 @@ gallery:
   - https://i.imgur.com/7jEhbrY.jpg
 releaseNotes: >-
   This update introduces the ability to configure a custom token user ID claim, providing more flexibility in authentication scenarios, and improves logging by displaying connection durations in a more readable format. Several fixes address issues such as bad checksum errors during recovery, Redis publish errors, and proxy log redaction for enhanced security. 
+
 
   Additionally, the update includes Go 1.23.2, shares progress on the upcoming Centrifugo v6 release, and highlights a major update to the Laravel integration package.
 dependencies:
