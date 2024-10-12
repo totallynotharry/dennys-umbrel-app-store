@@ -1,12 +1,12 @@
 version: "3"
-services:
+services: 
   centrifugal:
     image: centrifugo/centrifugo
     command: centrifugo -c config.json --engine=redis --redis_host=redis --redis_port=6379
-    ports:
-    - "7300:8000"
-    volumes:
-    - "${APP_DATA_DIR}/config:/centrifugo"
+    ports: 
+    - "8000:8000"
+    volumes: 
+    - "./config:/centrifugo"
     ulimits:
       nproc: 65536
       nofile:
@@ -14,7 +14,7 @@ services:
         hard: 65536
   redis:
     image: redis
-    ports:
+    ports: 
     - "6379:6379"
   nodejs:
     build: ./
