@@ -28,6 +28,7 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | [Swing Music](https://github.com/swingmx/swingmusic)    |  A beautiful, self-hosted music player for your local audio files       |
 | [Online Whiteboard](https://github.com/lovasoa/whitebophir)   | An online collaborative Whiteboard that is simple, free, easy to use and to deploy       |
 | [Black Candy](https://github.com/blackcandy-org/blackcandy)    |  A self hosted music streaming server      |
+| [Centrifugo](https://github.com/centrifugal/centrifugo)    |  A highly scalable real-time messaging server platform     |
 
 🔄 All Apps are continually updated and new Apps are added over time.
 
