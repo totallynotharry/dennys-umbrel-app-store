@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   web:
-    image: noxcis/chitchatter:latest@sha256:bdb5d8bc7263cfff243708d45922b217d6ef810988c470f98526eaab68e115b8
+    image: noxcis/chitchatter:prion
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/:/data
