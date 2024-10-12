@@ -38,9 +38,9 @@ submission: https://github.com/dennysubke/dennys-umbrel-app-store
 repo: https://github.com/jhaals/yopass
 support: https://github.com/jhaals/yopass/issues
 gallery:
-  - https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/og-image.png
-  - https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/og-image-2.png
-  - https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/welcome-screen-overview.png
+  - https://i.imgur.com/XRiZZyc.png
+  - https://i.imgur.com/9TH7jww.png
+  - https://i.imgur.com/1uIXjBX.png
 releaseNotes: >-
   In the recent changes, several dependencies were updated, including @mui/material, i18next, and cypress. Additionally, bug fixes and optimizations were implemented for various packages, including improvements to the shutdown process. These updates aim to enhance the stability and performance of the application.
 dependencies:
