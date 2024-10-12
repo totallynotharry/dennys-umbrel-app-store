@@ -40,9 +40,9 @@ submission: https://github.com/dennysubke/dennys-umbrel-app-store
 repo: https://github.com/centrifugal/centrifugo
 support: https://github.com/centrifugal/centrifugo/issues
 gallery:
-  -https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/og-image.png
-  -https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/og-image-2.png
-  -https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/welcome-screen-overview.png
+  - https://i.imgur.com/UkpPZGS.jpg
+  - https://i.imgur.com/UkpPZGS.jpg
+  - https://i.imgur.com/UkpPZGS.jpg
 releaseNotes: >-
   This update introduces the ability to configure a custom token user ID claim, providing more flexibility in authentication scenarios, and improves logging by displaying connection durations in a more readable format. Several fixes address issues such as bad checksum errors during recovery, Redis publish errors, and proxy log redaction for enhanced security. 
 
