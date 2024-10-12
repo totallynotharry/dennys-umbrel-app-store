@@ -30,6 +30,7 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | [Black Candy](https://github.com/blackcandy-org/blackcandy)    |  A self hosted music streaming server      |
 | [Centrifugo](https://github.com/centrifugal/centrifugo)    |  A highly scalable real-time messaging server platform     |
 | [Kestra](https://github.com/kestra-io/kestra)    |  A platform to simplify the creation, management, and execution of complex workflows    |
+| [Yopass](https://github.com/jhaals/yopass)    |  A secure platform to share encrypted secrets    |
 
 🔄 All Apps are continually updated and new Apps are added over time.
 
