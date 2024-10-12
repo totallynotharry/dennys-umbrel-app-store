@@ -1,30 +1,43 @@
 manifestVersion: 1
 id: denny-traggo
 name: Traggo
-tagline: Virtual whiteboard for sketching hand-drawn like diagrams
-icon: https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/logo.svg
-category: productivity
-version: "1.0.0"
+tagline: An open-source time tracking tool designed for self-hosting
+icon: https://i.imgur.com/bXoSeti.png
+category: files
+version: "0.5.0"
 port: 3083
 description: >-
-  Excalidraw is a virtual collaborative whiteboard tool that
-  lets you easily sketch diagrams that feel hand-drawn, but
-  look professional.
+    Traggo is an open-source time tracking tool that offers a flexible and self-hosted solution for managing time across projects and tasks. It is designed to help individuals and teams efficiently monitor the hours they spend on various activities, making it ideal for freelancers, small businesses, or larger organizations looking for a customizable time tracking system.
 
-developer: Excalidraw Team
-website: https://excalidraw.com/
-submitter: Excalidraw Team
-submission: https://github.com/excalidraw/excalidraw
-repo: https://github.com/excalidraw/excalidraw
-support: https://github.com/excalidraw/excalidraw/issues
+
+    One of the standout features of this tool is its support for organizing tasks through projects and tags, allowing users to categorize their work in a structured way. In addition to its intuitive dashboard, Traggo makes it easy to view reports and analyze time data, providing valuable insights into productivity and resource allocation.
+
+
+    With multi-user support, several people can collaborate and track their time simultaneously, making it a great choice for teams. Being a self-hosted solution, it gives users full control over their data, ensuring privacy and security by running on their own servers.
+
+
+    Traggo offers a comprehensive yet user-friendly approach to time management, combining the power of open-source software with the flexibility to meet the needs of different work environments.
+
+
+    🔑 The default username is "admin" and the password is "umbrel".
+developer: Jannis Mattheis
+website: https://traggo.net/
+submitter: dennysubke
+submission: https://github.com/dennysubke/dennys-umbrel-app-store/
+repo: https://github.com/traggo/server
+support: https://github.com/traggo/server/issues
 gallery:
   -https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/og-image.png
   -https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/og-image-2.png
   -https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/welcome-screen-overview.png
 releaseNotes: >-
-  Initial release of Excalidraw with basic collaborative whiteboard
-  features.
+  Several improvements were made to the project, including enhancing the mobile design by moving the show/hide notes button into the triple-dot menu. 
+  A percentage display was added to the pie chart, along with a new work week (5-day week) calendar view. 
+  Issues with the escape key in the tag selector were fixed, as well as an exception on the list page. 
+  
+  
+  Additionally, the project's dependencies were updated. These changes bring significant enhancements to the overall functionality.
 dependencies:
 path: ""
-defaultUsername: ""
-defaultPassword: ""
+defaultUsername: "admin"
+defaultPassword: "umbrel"
