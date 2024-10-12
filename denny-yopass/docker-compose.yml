@@ -16,6 +16,4 @@ services:
   web:
     image: jhaals/yopass:11.17.0@sha256:26873480863b8435282eb136a11f7707763940945fb48506b7a96c35f758b471
     restart: on-failure
-    ports:
-      - "8193:80"
     command: "--memcached=memcached:11211 --port 8193"
