@@ -7,31 +7,31 @@ category: network
 version: "5.4.6"
 port: 8086
 description: >-
-Centrifugo is an open-source real-time messaging server that helps developers build scalable web applications with real-time updates. It is commonly used to send messages between a server and client in applications that require live updates, such as chat apps, collaborative editing tools, real-time dashboards, or live notifications.
+  Centrifugo is an open-source real-time messaging server that helps developers build scalable web applications with real-time updates. It is commonly used to send messages between a server and client in applications that require live updates, such as chat apps, collaborative editing tools, real-time dashboards, or live notifications.
 
 
-Some key features of Centrifugo:
+  Some key features of Centrifugo:
 
 
-Real-time communication: It allows the server to push data to clients instantly, avoiding the need for the client to constantly poll the server for updates.
+  Real-time communication: It allows the server to push data to clients instantly, avoiding the need for the client to constantly poll the server for updates.
 
 
-WebSocket support: It uses WebSockets for efficient, low-latency communication, but also supports fallback mechanisms like HTTP-streaming and long polling.
+  WebSocket support: It uses WebSockets for efficient, low-latency communication, but also supports fallback mechanisms like HTTP-streaming and long polling.
 
 
-Scalability: Centrifugo can handle many concurrent connections and supports horizontal scaling, which makes it suitable for high-traffic applications.
+  Scalability: Centrifugo can handle many concurrent connections and supports horizontal scaling, which makes it suitable for high-traffic applications.
 
 
-Channels and Pub/Sub: It uses the concept of channels to organize real-time messaging. Clients can subscribe to channels and receive real-time data when new messages are published.
+  Channels and Pub/Sub: It uses the concept of channels to organize real-time messaging. Clients can subscribe to channels and receive real-time data when new messages are published.
 
 
-Backend agnostic: While it can use Redis (as you are doing) for scaling and handling a large number of connections, it also supports other backends or can be run standalone without Redis.
+  Backend agnostic: While it can use Redis (as you are doing) for scaling and handling a large number of connections, it also supports other backends or can be run standalone without Redis.
 
 
-Authentication: Centrifugo supports token-based authentication, ensuring that only authorized clients can subscribe to specific channels.
+  Authentication: Centrifugo supports token-based authentication, ensuring that only authorized clients can subscribe to specific channels.
 
 
-For Umbrel users, Centrifugo, when integrated with Redis as a backend, efficiently handles real-time message flow across various services or applications, enabling seamless live updates and communication within the Umbrel server environment.
+  For Umbrel users, Centrifugo, when integrated with Redis as a backend, efficiently handles real-time message flow across various services or applications, enabling seamless live updates and communication within the Umbrel server environment.
 
 developer: Centrifugal Labs LTD
 website: https://centrifugal.dev/
