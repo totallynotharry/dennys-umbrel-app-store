@@ -1,29 +1,48 @@
 manifestVersion: 1
 id: denny-yopass
 name: Yopass
-tagline: Virtual whiteboard for sketching hand-drawn like diagrams
-icon: https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/logo.svg
-category: productivity
-version: "1.0.0"
+tagline: A secure platform to share encrypted secrets
+icon: https://i.imgur.com/kG4eVnV.png
+category: files
+version: "11.17.0"
 port: 8193
 description: >-
-  Excalidraw is a virtual collaborative whiteboard tool that
-  lets you easily sketch diagrams that feel hand-drawn, but
-  look professional.
+  Yopass is a secure tool designed to minimize clear text passwords in email or chat by encrypting sensitive information and generating a short-lived, single-use link. This enhances security by ensuring that shared secrets are only accessible once, reducing the chances of unauthorized access. 
 
-developer: Excalidraw Team
-website: https://excalidraw.com/
-submitter: Excalidraw Team
-submission: https://github.com/excalidraw/excalidraw
-repo: https://github.com/excalidraw/excalidraw
-support: https://github.com/excalidraw/excalidraw/issues
+
+  Key features are:
+  
+
+  🔒 End-to-End encryption using OpenPGP
+
+  
+  🔥 Secrets can only be viewed once
+
+    
+  🚫 No accounts or user management required
+
+    
+  💣 Secrets self destruct after X hours
+
+    
+  🔑 Custom password option
+
+    
+  📂 Limited file upload functionality
+    
+
+developer: Johan Haals
+website: https://yopass.se/
+submitter: dennysubke
+submission: https://github.com/dennysubke/dennys-umbrel-app-store
+repo: https://github.com/jhaals/yopass
+support: https://github.com/jhaals/yopass/issues
 gallery:
-  -https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/og-image.png
-  -https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/og-image-2.png
-  -https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/welcome-screen-overview.png
+  - https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/og-image.png
+  - https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/og-image-2.png
+  - https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/welcome-screen-overview.png
 releaseNotes: >-
-  Initial release of Excalidraw with basic collaborative whiteboard
-  features.
+  In the recent changes, several dependencies were updated, including @mui/material, i18next, and cypress. Additionally, bug fixes and optimizations were implemented for various packages, including improvements to the shutdown process. These updates aim to enhance the stability and performance of the application.
 dependencies:
 path: ""
 defaultUsername: ""
