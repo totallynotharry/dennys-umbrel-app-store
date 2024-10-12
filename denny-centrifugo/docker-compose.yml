@@ -1,0 +1,9 @@
+version: '3'
+services:
+  centrifugo:
+    image: centrifugo/centrifugo
+    command: centrifugo -c config.json --port=8086 --admin
+    ports:
+    - "8086:8086"
+    volumes:
+    - ${APP_DATA_DIR}/config.json:/centrifugo/config.json
