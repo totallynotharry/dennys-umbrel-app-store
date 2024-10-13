@@ -1,29 +1,46 @@
 manifestVersion: 1
 id: denny-octobot
 name: OctoBot
-tagline: Virtual whiteboard for sketching hand-drawn like diagrams
-icon: https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/logo.svg
-category: productivity
-version: "1.0.0"
+tagline: A powerful open-source cryptocurrency trading robot
+icon: https://i.imgur.com/vmcrNUh.png
+category: finance
+version: "2.0.6"
 port: 5001
 description: >-
-  Excalidraw is a virtual collaborative whiteboard tool that
-  lets you easily sketch diagrams that feel hand-drawn, but
-  look professional.
+  OctoBot is highly customizable using its configuration and tentacles system.
+  You can build your own bot using the infinite configuration possibilities such as technical analysis, social media processing or even external statistics management like google trends.
 
-developer: Excalidraw Team
-website: https://excalidraw.com/
-submitter: Excalidraw Team
-submission: https://github.com/excalidraw/excalidraw
-repo: https://github.com/excalidraw/excalidraw
-support: https://github.com/excalidraw/excalidraw/issues
+  Octobot's main feature is evolution, you can :
+
+  Create, backtest and optimize your unique trading strategy from scratch or using the existing strategy bases.
+  
+  Use Technical indicator (TA), artificial intelligence, ChatGPT predictions, TradingView automations or crypto baskets to automate your strategies.
+  
+  Trade any crypto on SPOT and Futures markets on more than 15 supported exchanges.
+  
+  Install, modify and even create new tentacles to build your ideal cryptocurrency trading robot.
+  
+  Contribute to improve OctoBot core repositories and tentacles.
+
+
+  OctoBot is AI ready: Python being the main language for OctoBot, it's easy to integrate machine-learning libraries such as Tensorflow or any other libraries and take advantage of all the available data and create a very powerful trading strategy.
+
+developer: Drakkar-Software
+website: https://www.octobot.cloud/
+submitter: dennysubke
+submission: https://github.com/dennysubke/dennys-umbrel-app-store
+repo: https://github.com/Drakkar-Software/OctoBot
+support: https://github.com/Drakkar-Software/OctoBot/issues
 gallery:
-  -https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/og-image.png
-  -https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/og-image-2.png
-  -https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/welcome-screen-overview.png
+  - https://i.imgur.com/YCcHMKU.png
+  - https://i.imgur.com/3IZRwi2.png
+  - https://i.imgur.com/k8RVxzA.png
+  - https://i.imgur.com/6EMUyXa.png
+  - https://i.imgur.com/xChpVPc.png
 releaseNotes: >-
-  Initial release of Excalidraw with basic collaborative whiteboard
-  features.
+  The latest Octobot update introduces support for receiving email alerts from TradingView, along with improvements to the webhook display and account management in the web interface. Enhancements were also made for global support with HollaEx. 
+  
+  Various bugs were fixed, including issues with order synchronization and storage, as well as performance improvements for exchange credentials and the web interface.
 dependencies:
 path: ""
 defaultUsername: ""
