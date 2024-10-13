@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-octobot
 name: OctoBot
 tagline: A powerful open-source cryptocurrency trading robot
-icon: https://i.imgur.com/LpJ9a2Eh.png
+icon: https://i.imgur.com/cyCXfmz.png
 category: finance
 version: "2.0.6"
 port: 5001
