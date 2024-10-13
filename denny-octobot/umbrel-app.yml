@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-octobot
 name: OctoBot
 tagline: A powerful open-source cryptocurrency trading robot
-icon: https://i.imgur.com/vmcrNUh.png
+icon: https://i.imgur.com/LpJ9a2Eh.png
 category: finance
 version: "2.0.6"
 port: 5001
@@ -10,15 +10,21 @@ description: >-
   OctoBot is highly customizable using its configuration and tentacles system.
   You can build your own bot using the infinite configuration possibilities such as technical analysis, social media processing or even external statistics management like google trends.
 
+
   Octobot's main feature is evolution, you can :
+  
 
   Create, backtest and optimize your unique trading strategy from scratch or using the existing strategy bases.
+
   
   Use Technical indicator (TA), artificial intelligence, ChatGPT predictions, TradingView automations or crypto baskets to automate your strategies.
+
   
   Trade any crypto on SPOT and Futures markets on more than 15 supported exchanges.
+
   
   Install, modify and even create new tentacles to build your ideal cryptocurrency trading robot.
+
   
   Contribute to improve OctoBot core repositories and tentacles.
 
