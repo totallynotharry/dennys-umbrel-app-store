@@ -31,6 +31,8 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | [Centrifugo](https://github.com/centrifugal/centrifugo)    |  A highly scalable real-time messaging server platform     |
 | [Kestra](https://github.com/kestra-io/kestra)    |  A platform to simplify the creation, management, and execution of complex workflows    |
 | [Yopass](https://github.com/jhaals/yopass)    |  A secure platform to share encrypted secrets    |
+| [Traggo](https://github.com/traggo/server)    |  An open-source time tracking tool designed for self-hosting   |
+| [OctoBot](https://github.com/Drakkar-Software/OctoBot)    |  A powerful open-source cryptocurrency trading robot    |
 
 🔄 All Apps are continually updated and new Apps are added over time.
 
