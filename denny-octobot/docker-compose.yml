@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  octobot:
+    image: drakkarsoftware/octobot:stable
+    volumes:
+       - ${APP_DATA_DIR}/logs:/octobot/logs
+       - ${APP_DATA_DIR}/backtesting:/octobot/backtesting
+       - ${APP_DATA_DIR}/tentacles:/octobot/tentacles
+       - ${APP_DATA_DIR}/user:/octobot/user
+    ports:
+       - ${PORT:-5001}:${PORT:-5001}
+    restart: always
+
+  watchtower:
+    image: containrrr/watchtower
+    restart: always
+    command: --cleanup --include-restarting
+    volumes:
+      - ${APP_DATA_DIR}/var/run/docker.sock:/var/run/docker.sock

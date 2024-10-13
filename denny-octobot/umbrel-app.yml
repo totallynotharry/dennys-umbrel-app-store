@@ -1,0 +1,30 @@
+manifestVersion: 1
+id: denny-octobot
+name: OctoBot
+tagline: Virtual whiteboard for sketching hand-drawn like diagrams
+icon: https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/logo.svg
+category: productivity
+version: "1.0.0"
+port: 5001
+description: >-
+  Excalidraw is a virtual collaborative whiteboard tool that
+  lets you easily sketch diagrams that feel hand-drawn, but
+  look professional.
+
+developer: Excalidraw Team
+website: https://excalidraw.com/
+submitter: Excalidraw Team
+submission: https://github.com/excalidraw/excalidraw
+repo: https://github.com/excalidraw/excalidraw
+support: https://github.com/excalidraw/excalidraw/issues
+gallery:
+  -https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/og-image.png
+  -https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/og-image-2.png
+  -https://github.com/excalidraw/excalidraw/blob/master/dev-docs/static/img/welcome-screen-overview.png
+releaseNotes: >-
+  Initial release of Excalidraw with basic collaborative whiteboard
+  features.
+dependencies:
+path: ""
+defaultUsername: ""
+defaultPassword: ""
