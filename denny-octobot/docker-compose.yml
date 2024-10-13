@@ -7,7 +7,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
 web:
-    image: drakkarsoftware/octobot:2.0.6@sha256:5c35d59d3cb687dd1147d9b1d2d926c15cfde2cc8b3ce58df20f2ca9e623318e
+  image: drakkarsoftware/octobot:2.0.6@sha256:5c35d59d3cb687dd1147d9b1d2d926c15cfde2cc8b3ce58df20f2ca9e623318e
     volumes:
        - ${APP_DATA_DIR}/logs:/octobot/logs
        - ${APP_DATA_DIR}/backtesting:/octobot/backtesting
