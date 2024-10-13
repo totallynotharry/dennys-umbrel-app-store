@@ -45,6 +45,7 @@ gallery:
   - https://i.imgur.com/xChpVPc.png
 releaseNotes: >-
   The latest Octobot update introduces support for receiving email alerts from TradingView, along with improvements to the webhook display and account management in the web interface. Enhancements were also made for global support with HollaEx. 
+
   
   Various bugs were fixed, including issues with order synchronization and storage, as well as performance improvements for exchange credentials and the web interface.
 dependencies:
