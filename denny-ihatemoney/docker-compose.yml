@@ -1,8 +1,14 @@
 version: "3.9"
-
 services:
-  ihatemoney:
-    image: ihatemoney/ihatemoney:latest
+  app_proxy:
+    environment:
+      APP_HOST: denny-ihatemoney_web_1
+      APP_PORT: 8976
+      PROXY_AUTH_ADD: "false"
+
+  web:
+    image: ihatemoney/ihatemoney:6.1.5@sha256:bb12f24959922072d570a67d6a8ed9e4a3fab0f4b10a86fef208eb9a52ae7111
+    restart: on-failure
     environment:
       - DEBUG=False
       - ACTIVATE_DEMO_PROJECT=True
@@ -31,5 +37,3 @@ services:
       - PGID=0
     volumes:
       - ${APP_DATA_DIR}/sqlite/db:/database
-    ports:
-      - "8976:8976" # Adjust internal port as well to avoid conflict
