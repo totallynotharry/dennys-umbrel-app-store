@@ -18,7 +18,7 @@ services:
       - '${APP_DATA_DIR}/privatebin-data:/srv/data' # data volume for pastes
       - '${APP_DATA_DIR}/conf.php:/srv/cfg/conf.php:ro' # second volume for custom configuration file
     expose:
-      - "8080"
+      - "3007"
 
   nginx:
     image: nginx:latest
