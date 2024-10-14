@@ -13,7 +13,7 @@ services:
       - DEBUG=False
       - ACTIVATE_DEMO_PROJECT=False
       - ACTIVATE_ADMIN_DASHBOARD=True
-      - ADMIN_PASSWORD=umbrelpass
+      - ADMIN_PASSWORD=
       - ALLOW_PUBLIC_PROJECT_CREATION=False
       - BABEL_DEFAULT_TIMEZONE=UTC
       - GREENLET_TEST_CPP=no
