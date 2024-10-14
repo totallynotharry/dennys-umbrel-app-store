@@ -32,4 +32,4 @@ services:
     volumes:
       - ${APP_DATA_DIR}/sqlite/db:/database
     ports:
-      - "8976:8000"
+      - "8976:8976" # Adjust internal port as well to avoid conflict
