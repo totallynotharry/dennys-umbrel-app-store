@@ -5,7 +5,7 @@ tagline: A secure platform to share encrypted secrets
 icon: https://i.imgur.com/dlnBH5l.png
 category: files
 version: "11.17.0"
-port: 9876
+port: 8976
 description: >-
   Yopass is a secure tool designed to minimize clear text passwords in email or chat by encrypting sensitive information and generating a short-lived, single-use link. This enhances security by ensuring that shared secrets are only accessible once, reducing the chances of unauthorized access.
 
