@@ -13,7 +13,9 @@ services:
       - DEBUG=False
       - ACTIVATE_DEMO_PROJECT=False
       - ACTIVATE_ADMIN_DASHBOARD=True
-      - ADMIN_PASSWORD=<hashed_password_string>
+      - ADMIN_PASSWORD=umbrelpass
+      - PASSWORD_HASH_METHOD=None
+      - PASSWORD_HASH_SALT_LENGTH=None
       - ALLOW_PUBLIC_PROJECT_CREATION=False
       - BABEL_DEFAULT_TIMEZONE=UTC
       - GREENLET_TEST_CPP=no
