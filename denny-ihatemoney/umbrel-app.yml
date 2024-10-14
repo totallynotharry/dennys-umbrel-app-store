@@ -1,44 +1,47 @@
 manifestVersion: 1
 id: denny-ihatemoney
 name: IHateMoney
-tagline: A secure platform to share encrypted secrets
-icon: https://i.imgur.com/dlnBH5l.png
-category: files
-version: "11.17.0"
+tagline: A simple shared budget manager web application 
+icon: https://i.imgur.com/ocwWxBf.png
+category: finance
+version: "6.1.5"
 port: 8976
 description: >-
-  Yopass is a secure tool designed to minimize clear text passwords in email or chat by encrypting sensitive information and generating a short-lived, single-use link. This enhances security by ensuring that shared secrets are only accessible once, reducing the chances of unauthorized access.
+  I Hate Money is an open-source web application designed to simplify the management of shared expenses. It is commonly used for group activities where multiple people are involved in the costs, such as trips, events, or communal living arrangements.
+  
+  
+  Key Features:
 
 
-  Key features are:
+  💰 Easy Expense Management: Users can add expenses and indicate who paid for them, helping to keep track of debts and credits.
 
 
-  🔒 End-to-End encryption using OpenPGP
-
-  🔥 Secrets can only be viewed once
-
-  🚫 No accounts or user management required
-
-  💣 Secrets self destruct after X hours
-
-  🔑 Custom password option
-
-  📂 Limited file upload functionality
+  👪 Group Management: The application allows users to create different groups to manage expenses for various occasions or projects.
 
 
-developer: Johan Haals
-website: https://yopass.se/
+  🧮 Debt Calculation: I Hate Money automatically calculates how much each participant owes to others, streamlining the settlement process.
+
+
+  ✨ User-Friendly Interface: The interface is designed to be intuitive, making it accessible even for those who are less tech-savvy.
+
+
+  🌐 Open Source: As an open-source application, developers can customize and extend its features to meet specific needs.
+
+
+    I Hate Money is ideal for users who want to manage shared costs without losing track of their financial interactions.
+
+developer: The Spiral Project
+website: https://ihatemoney.org/
 submitter: dennysubke
 submission: https://github.com/dennysubke/dennys-umbrel-app-store
-repo: https://github.com/jhaals/yopass
-support: https://github.com/jhaals/yopass/issues
+repo: https://github.com/spiral-project/ihatemoney
+support: https://github.com/spiral-project/ihatemoney/issues
 gallery:
   - https://i.imgur.com/XRiZZyc.png
   - https://i.imgur.com/9TH7jww.png
   - https://i.imgur.com/1uIXjBX.png
 releaseNotes: >-
-  In the recent changes, several dependencies were updated, including @mui/material, i18next, and cypress. Additionally, bug fixes and optimizations were implemented for various packages, including improvements to the shutdown process. These updates aim to enhance the stability and performance of the application.
-dependencies:
+  The update to Flask and Werkzeug 2.3 has been reverted due to a regression, and some performance improvements have been implemented.
 path: ""
 defaultUsername: ""
 defaultPassword: ""
