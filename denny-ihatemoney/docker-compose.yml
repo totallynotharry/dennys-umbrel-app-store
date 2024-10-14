@@ -11,9 +11,9 @@ services:
     restart: on-failure
     environment:
       - DEBUG=False
-      - ACTIVATE_DEMO_PROJECT=True
-      - ACTIVATE_ADMIN_DASHBOARD=False
-      - ADMIN_PASSWORD=
+      - ACTIVATE_DEMO_PROJECT=False
+      - ACTIVATE_ADMIN_DASHBOARD=True
+      - ADMIN_PASSWORD=umbrelpass
       - ALLOW_PUBLIC_PROJECT_CREATION=True
       - BABEL_DEFAULT_TIMEZONE=UTC
       - GREENLET_TEST_CPP=no
