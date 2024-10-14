@@ -1,44 +1,8 @@
 version: '3'
 
 services:
-  db:
-    image: "postgres"
-    restart: always
-    environment:
-      - POSTGRES_USER=kresus
-      - POSTGRES_PASSWORD=OeSoh9Dob6phahWa
-      - POSTGRES_DB=kresus
-    volumes:
-      - ${APP_DATA_DIR}/data:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"  # Exponiere Postgres, falls von außen benötigt
-
-  apprise:
-    image: "caronc/apprise"
-    restart: always
-    ports:
-      - "8559:8000"  # Exponiere Apprise auf einem anderen Port
-
   kresus:
     image: "bnjbvr/kresus"
     restart: on-failure
-    environment:
-      # Deine Umgebungsvariablen
-      - LOCAL_USER_ID=1000
-      - KRESUS_DB_TYPE=postgres
-      - KRESUS_DB_HOST=db
-      - KRESUS_DB_PORT=5432
-      - KRESUS_DB_USERNAME=kresus
-      - KRESUS_DB_PASSWORD=OeSoh9Dob6phahWa
-      - KRESUS_APPRISE_API_BASE_URL=http://apprise:8000  # Keine Änderung nötig, da Apprise intern immer noch auf Port 8000 läuft
-      - KRESUS_EMAIL_TRANSPORT=${EMAIL_TRANSPORT}
-      - KRESUS_EMAIL_FROM=${EMAIL_FROM}
-      - KRESUS_EMAIL_HOST=${EMAIL_HOST}
-      - KRESUS_EMAIL_PORT=${EMAIL_PORT}
-      - KRESUS_EMAIL_USER=${EMAIL_USER}
-      - KRESUS_EMAIL_PASSWORD=${EMAIL_PASSWORD}
     ports:
       - "9876:9876"  # Exponiere Kresus direkt
-
-volumes:
-  data: {}
