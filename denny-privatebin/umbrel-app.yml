@@ -27,7 +27,7 @@ description: >-
 
  🚫 No Metadata: Unlike some other pastebin services, PrivateBin doesn’t store IP addresses or any identifiable metadata about users or pastes.
 
-  It's popular in privacy-conscious communities for securely sharing snippets without leaving a trace.
+ It's popular in privacy-conscious communities for securely sharing snippets without leaving a trace.
 
  ⚠️ To use PrivateBin as intended you may need to expose it to the public internet. The easiest way to do this is to download the "Cloudflare Tunnel" app from the umbrel app store, and expose PrivateBin (running on port 3007) using your own domain.
 
