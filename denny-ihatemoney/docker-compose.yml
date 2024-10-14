@@ -14,7 +14,7 @@ services:
       - ACTIVATE_DEMO_PROJECT=False
       - ACTIVATE_ADMIN_DASHBOARD=True
       - ADMIN_PASSWORD=umbrelpass
-      - ALLOW_PUBLIC_PROJECT_CREATION=True
+      - ALLOW_PUBLIC_PROJECT_CREATION=False
       - BABEL_DEFAULT_TIMEZONE=UTC
       - GREENLET_TEST_CPP=no
       - MAIL_DEFAULT_SENDER=Budget manager <admin@example.com>
