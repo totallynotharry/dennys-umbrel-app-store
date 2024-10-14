@@ -21,12 +21,6 @@ description: >-
 
  🛡️ Password Protection: Users can add an extra layer of security by setting a password for the paste.
 
- 📜 Syntax Highlighting: PrivateBin supports syntax highlighting for programming languages, making it useful for sharing code snippets.
-
- 🏠 Self-Hosted: As a self-hosted solution, PrivateBin offers full control over where the data is stored and the ability to integrate it with various server environments.
-
- 🚫 No Metadata: Unlike some other pastebin services, PrivateBin doesn’t store IP addresses or any identifiable metadata about users or pastes.
-
 developer: PrivateBin Community
 website: https://privatebin.info/
 submitter: dennysubke
