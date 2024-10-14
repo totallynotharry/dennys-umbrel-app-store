@@ -46,9 +46,9 @@ submission: https://github.com/dennysubke/dennys-umbrel-app-store
 repo: https://github.com/PrivateBin/PrivateBin
 support: https://github.com/PrivateBin/PrivateBin/issues
 gallery:
-  - https://i.imgur.com/PE8JJR6.jpg
-  - https://i.imgur.com/PE8JJR6.jpg
-  - https://i.imgur.com/PE8JJR6.jpg
+  - https://i.imgur.com/PE8JJR6.png
+  - https://i.imgur.com/PE8JJR6.png
+  - https://i.imgur.com/PE8JJR6.png
 releaseNotes: >-
   In version 1.7.4 of PrivateBin, several changes and fixes were implemented. Key changes include the use of the .md extension for saved markdown pastes instead of .txt, and the enabling of strict type checking in PHP. There were also tweaks to the Bootstrap5 template based on community suggestions.
 
