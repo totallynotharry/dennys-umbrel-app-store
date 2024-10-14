@@ -15,9 +15,6 @@ description: >-
   Here are some key features of PrivateBin:
 
 
- 🔒 End-to-End Encryption: All data is encrypted in the browser before its sent to the server.
-
-
 developer: PrivateBin Community
 website: https://privatebin.info/
 submitter: dennysubke
