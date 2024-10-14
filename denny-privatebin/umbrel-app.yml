@@ -12,7 +12,7 @@ description: >-
   The server hosting PrivateBin cannot decrypt or access the data being shared, providing a high level of privacy.
 
 
- Here are some key features of PrivateBin:
+  Here are some key features of PrivateBin:
 
 
  🔒 End-to-End Encryption: All data is encrypted in the browser before its sent to the server. The server never sees the unencrypted content.
