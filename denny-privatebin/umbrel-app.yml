@@ -38,9 +38,6 @@ description: >-
 
   It's popular in privacy-conscious communities for securely sharing snippets without leaving a trace.
 
-
-  ⚠️ To use PrivateBin as intended you may need to expose it to the public internet. The easiest way to do this is to download the "Cloudflare Tunnel" app from the umbrel app store, and expose PrivateBin (running on port 3007) using your own domain.
-
 developer: PrivateBin Community
 website: https://privatebin.info/
 submitter: dennysubke
