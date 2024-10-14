@@ -1,56 +1,59 @@
 manifestVersion: 1
 id: denny-privatebin
 name: PrivateBin
-tagline: A highly scalable real-time messaging server platform
-icon: https://i.imgur.com/rgZwgin.png
-category: network
-version: "5.4.6"
+tagline: A minimalist, open source online pastebin
+icon: https://i.imgur.com/Jz4lSRj.png
+category: files
+version: "1.7.4"
 port: 3007
 description: >-
-  Centrifugo is an open-source real-time messaging server that helps developers build scalable web applications with real-time updates. It is commonly used to send messages between a server and client in applications that require live updates, such as chat apps, collaborative editing tools, real-time dashboards, or live notifications.
+  PrivateBin is an open-source, minimalist, and encrypted pastebin service. It allows users to share text or code snippets securely, with end-to-end encryption, ensuring that only the intended recipient can read the contents. The server hosting PrivateBin cannot decrypt or access the data being shared, providing a high level of privacy.
 
 
-  Some key features of Centrifugo:
+  Here are some key features of PrivateBin:
 
 
-  ⏱️ Real-time communication: It allows the server to push data to clients instantly, avoiding the need for the client to constantly poll the server for updates.
+ 🔒 End-to-End Encryption: All data is encrypted in the browser before it's sent to the server. The server never sees the unencrypted content.
 
 
-  🔗 WebSocket support: It uses WebSockets for efficient, low-latency communication, but also supports fallback mechanisms like HTTP-streaming and long polling.
+ 🔥 Expiration and Burn-After-Reading: Users can set expiration times for their pastes, or opt for a "burn-after-reading" option where the content self-destructs after a single viewing.
 
 
-  📈 Scalability: Centrifugo can handle many concurrent connections and supports horizontal scaling, which makes it suitable for high-traffic applications.
+ 👤 No User Accounts: PrivateBin doesn’t require user registration or authentication, making it ideal for anonymous sharing of sensitive information.
 
 
-  📬 Channels and Pub/Sub: It uses the concept of channels to organize real-time messaging. Clients can subscribe to channels and receive real-time data when new messages are published.
+ 🛡️ Password Protection: Users can add an extra layer of security by setting a password for the paste.
 
 
-  📦 Backend agnostic: While it can use Redis (as you are doing) for scaling and handling a large number of connections, it also supports other backends or can be run standalone without Redis.
+ 📜 Syntax Highlighting: PrivateBin supports syntax highlighting for programming languages, making it useful for sharing code snippets.
 
 
-  🛡️ Authentication: Centrifugo supports token-based authentication, ensuring that only authorized clients can subscribe to specific channels.
+ 🏠 Self-Hosted: As a self-hosted solution, PrivateBin offers full control over where the data is stored and the ability to integrate it with various server environments.
 
 
-  For Umbrel users, Centrifugo, when integrated with Redis as a backend, efficiently handles real-time message flow across various services or applications, enabling seamless live updates and communication within the Umbrel server environment.
+ 🚫 No Metadata: Unlike some other pastebin services, PrivateBin doesn’t store IP addresses or any identifiable metadata about users or pastes.
 
 
-  🔑 The initial password is "umbrel."
+ It's popular in privacy-conscious communities for securely sharing snippets without leaving a trace.
 
-developer: Centrifugal Labs LTD
-website: https://centrifugal.dev/
+
+ ⚠️To use PrivateBin as intended you may need to expose it to the public internet. The easiest way to do this is to download the 'Cloudflare Tunnel' app from the umbrel app store, and expose PrivateBin (running on port 3007) using your own domain.
+
+developer: PrivateBin Community
+website: https://privatebin.info/
 submitter: dennysubke
 submission: https://github.com/dennysubke/dennys-umbrel-app-store
-repo: https://github.com/centrifugal/centrifugo
-support: https://github.com/centrifugal/centrifugo/issues
+repo: https://github.com/PrivateBin/PrivateBin
+support: https://github.com/PrivateBin/PrivateBin/issues
 gallery:
-  - https://i.imgur.com/UkpPZGS.jpg
-  - https://i.imgur.com/LsvrkJg.jpg
-  - https://i.imgur.com/7jEhbrY.jpg
+  - https://i.imgur.com/PE8JJR6.jpg
+  - https://i.imgur.com/PE8JJR6.jpg
+  - https://i.imgur.com/PE8JJR6.jpg
 releaseNotes: >-
-  This update introduces the ability to configure a custom token user ID claim, providing more flexibility in authentication scenarios, and improves logging by displaying connection durations in a more readable format. Several fixes address issues such as bad checksum errors during recovery, Redis publish errors, and proxy log redaction for enhanced security.
+  In version 1.7.4 of PrivateBin, several changes and fixes were implemented. Key changes include the use of the .md extension for saved markdown pastes instead of .txt, and the enabling of strict type checking in PHP. There were also tweaks to the Bootstrap5 template based on community suggestions.
 
-  Additionally, the update includes Go 1.23.2, shares progress on the upcoming Centrifugo v6 release, and highlights a major update to the Laravel integration package.
-dependencies:
+
+  Fixes addressed include resetting the password field when creating new pastes, allowing database schema upgrades to be skipped, and resolving an issue with the dark mode toggle that occurred due to browser settings. Additionally, a security issue was fixed that allowed the YOURLS proxy to shorten URLs not associated with the configured PrivateBin instance. More details about this security issue can be found in the security advisory.
 path: ""
-defaultUsername: "umbrel"
-defaultPassword: "umbrel"
+defaultUsername: ""
+defaultPassword: ""
