@@ -13,24 +13,23 @@ description: >-
 
   Here are some key features of PrivateBin:
 
- 🔒 End-to-End Encryption: All data is encrypted in the browser before it's sent to the server. The server never sees the unencrypted content.
+ 🔒End-to-End Encryption: All data is encrypted in the browser before it's sent to the server. The server never sees the unencrypted content.
 
- 🔥 Expiration and Burn-After-Reading: Users can set expiration times for their pastes, or opt for a "burn-after-reading" option where the content self-destructs after a single viewing.
+ 🔥Expiration and Burn-After-Reading: Users can set expiration times for their pastes, or opt for a "burn-after-reading" option where the content self-destructs after a single viewing.
 
- 👤 No User Accounts: PrivateBin doesn’t require user registration or authentication, making it ideal for anonymous sharing of sensitive information.
+ 👤No User Accounts: PrivateBin doesn’t require user registration or authentication, making it ideal for anonymous sharing of sensitive information.
 
- 🛡️ Password Protection: Users can add an extra layer of security by setting a password for the paste.
+ 🛡️Password Protection: Users can add an extra layer of security by setting a password for the paste.
 
- 📜 Syntax Highlighting: PrivateBin supports syntax highlighting for programming languages, making it useful for sharing code snippets.
+ 📜Syntax Highlighting: PrivateBin supports syntax highlighting for programming languages, making it useful for sharing code snippets.
 
  🏠 Self-Hosted: As a self-hosted solution, PrivateBin offers full control over where the data is stored and the ability to integrate it with various server environments.
 
- 🚫 No Metadata: Unlike some other pastebin services, PrivateBin doesn’t store IP addresses or any identifiable metadata about users or pastes.
+ 🚫No Metadata: Unlike some other pastebin services, PrivateBin doesn’t store IP addresses or any identifiable metadata about users or pastes.
 
   It's popular in privacy-conscious communities for securely sharing snippets without leaving a trace.
 
- ⚠️ To use PrivateBin as intended you may need to expose it to the public internet. The easiest way to do this is to download the "Cloudflare Tunnel" app from the umbrel app store, and expose PrivateBin (running on port 3007) using your own domain.
-
+ ⚠️To use PrivateBin as intended you may need to expose it to the public internet. The easiest way to do this is to download the "Cloudflare Tunnel" app from the umbrel app store, and expose PrivateBin (running on port 3007) using your own domain.
 developer: PrivateBin Community
 website: https://privatebin.info/
 submitter: dennysubke
