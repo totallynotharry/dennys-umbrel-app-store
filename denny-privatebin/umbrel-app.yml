@@ -49,11 +49,7 @@ gallery:
   - https://i.imgur.com/PE8JJR6.png
   - https://i.imgur.com/PE8JJR6.png
 releaseNotes: >-
-  In version 1.7.4 of PrivateBin, several changes and fixes were implemented. Key changes include the use of the .md extension for saved markdown pastes instead of .txt, and the enabling of strict type checking in PHP. There were also tweaks to the Bootstrap5 template based on community suggestions.
 
-  Fixes addressed include resetting the password field when creating new pastes, allowing database schema upgrades to be skipped, and resolving an issue with the dark mode toggle that occurred due to browser settings.
-  Additionally, a security issue was fixed that allowed the YOURLS proxy to shorten URLs not associated with the configured PrivateBin instance.
-  More details about this security issue can be found in the security advisory.
 dependencies:
 path: ""
 defaultUsername: ""
