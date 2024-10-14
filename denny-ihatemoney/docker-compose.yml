@@ -27,8 +27,8 @@ services:
       - ENABLE_CAPTCHA=False
       - LEGAL_LINK=
       - PORT=8976
-      - PUID=1000
-      - PGID=1000
+      - PUID=0
+      - PGID=0
     volumes:
       - ${APP_DATA_DIR}/sqlite/db:/database
     ports:
