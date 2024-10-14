@@ -15,7 +15,7 @@ description: >-
  Here are some key features of PrivateBin:
 
 
- 🔒 End-to-End Encryption: All data is encrypted in the browser before it's sent to the server. The server never sees the unencrypted content.
+ 🔒 End-to-End Encryption: All data is encrypted in the browser before its sent to the server. The server never sees the unencrypted content.
 
 
 developer: PrivateBin Community
