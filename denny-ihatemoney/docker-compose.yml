@@ -25,7 +25,7 @@ services:
       - MAIL_USE_TLS=False
       - MAIL_USERNAME=
       - SECRET_KEY=umbrelpass
-      - CSRF_SECRET_KEY=pbkdf2:sha256:260000$XFhzVWVBYsUAXa4d$2d55d69cbce979ed6ff84cb4f7a34440c9ce87e1df7fd5d95a4330ff2767ef10
+      - CSRF_SECRET_KEY=
       - SESSION_COOKIE_SECURE=True
       - SHOW_ADMIN_EMAIL=True
       - SQLALCHEMY_DATABASE_URI=sqlite:////database/ihatemoney.db
