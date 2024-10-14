@@ -11,6 +11,13 @@ description: >-
   It allows users to share text or code snippets securely, with end-to-end encryption, ensuring that only the intended recipient can read the contents.
   The server hosting PrivateBin cannot decrypt or access the data being shared, providing a high level of privacy.
 
+
+Here are some key features of PrivateBin:
+
+
+🔒 End-to-End Encryption: All data is encrypted in the browser before it's sent to the server. The server never sees the unencrypted content.
+
+
 developer: PrivateBin Community
 website: https://privatebin.info/
 submitter: dennysubke
