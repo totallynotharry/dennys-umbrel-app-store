@@ -11,16 +11,6 @@ description: >-
   It allows users to share text or code snippets securely, with end-to-end encryption, ensuring that only the intended recipient can read the contents.
   The server hosting PrivateBin cannot decrypt or access the data being shared, providing a high level of privacy.
 
-  Here are some key features of PrivateBin:
-
- 🔒 End-to-End Encryption: All data is encrypted in the browser before it's sent to the server. The server never sees the unencrypted content.
-
- 🔥 Expiration and Burn-After-Reading: Users can set expiration times for their pastes, or opt for a "burn-after-reading" option where the content self-destructs after a single viewing.
-
- 👤 No User Accounts: PrivateBin doesn’t require user registration or authentication, making it ideal for anonymous sharing of sensitive information.
-
- 🛡️ Password Protection: Users can add an extra layer of security by setting a password for the paste.
-
 developer: PrivateBin Community
 website: https://privatebin.info/
 submitter: dennysubke
