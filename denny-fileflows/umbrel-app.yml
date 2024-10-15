@@ -3,7 +3,7 @@ id: denny-fileflows
 name: FileFlows
 tagline: A file processing app that performs actions on files using a tree flow structure
 icon: https://i.imgur.com/3S67EOB.png
-category: network
+category: networking
 version: "24.0.9"
 port: 19200
 description: >-
