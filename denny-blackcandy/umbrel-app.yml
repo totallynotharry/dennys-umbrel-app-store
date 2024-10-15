@@ -3,7 +3,7 @@ id: denny-blackcandy
 name: Black Candy
 tagline: A self hosted music streaming server
 icon: https://i.imgur.com/8LMQFbf.png
-category: Files & Productivity
+category: files & productivity
 version: "3.0.0"
 port: 1980
 description: >-
