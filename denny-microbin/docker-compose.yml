@@ -27,6 +27,7 @@ services:
       - MICROBIN_WIDE=true
       - MICROBIN_ENABLE_BURN_AFTER=true
       - MICROBIN_ETERNAL_PASTA=true
+      - MICROBIN_SHOW_READ_STATS:true
     volumes:
       - ${APP_DATA_DIR}/microbin:/my/microbin
       - ${APP_DATA_DIR}/microbin/data:/app/pasta_data
