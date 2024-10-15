@@ -1,5 +1,5 @@
 {
-  "remote_url": "https://puter.subke.cloud",
-  "proxy": false,
+  "remote_url": "http://umbrel.local:4100",
+  "proxy": true,
   "auth_whitelist": ["/api/*"]
 }
