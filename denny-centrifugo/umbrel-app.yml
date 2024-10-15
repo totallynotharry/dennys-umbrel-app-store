@@ -3,7 +3,7 @@ id: denny-centrifugo
 name: Centrifugo
 tagline: A highly scalable real-time messaging server platform
 icon: https://i.imgur.com/rgZwgin.png
-category: network
+category: networking
 version: "5.4.6"
 port: 8086
 description: >-
