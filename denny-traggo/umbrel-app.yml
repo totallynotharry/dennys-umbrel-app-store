@@ -3,7 +3,7 @@ id: denny-traggo
 name: Traggo
 tagline: An open-source time tracking tool designed for self-hosting
 icon: https://i.imgur.com/EKUBqtz.png
-category: files
+category: files & productivity
 version: "0.5.0"
 port: 3083
 description: >-
