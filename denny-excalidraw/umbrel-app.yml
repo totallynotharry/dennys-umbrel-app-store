@@ -3,7 +3,7 @@ id: denny-excalidraw
 name: Excalidraw
 tagline: An open source virtual hand-drawn style whiteboard
 icon: https://i.imgur.com/aFSx4XU.png
-category: files
+category: files & productivity
 version: "0.17.3"
 port: 5000
 description: >-
