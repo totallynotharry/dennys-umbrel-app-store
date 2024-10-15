@@ -3,7 +3,7 @@ id: denny-planka
 name: Planka
 tagline: A powerful and elegant open source tool for project tracking
 icon: https://i.imgur.com/HOzygeF.png
-category: files
+category: files & productivity
 version: "1.23.0"
 port: 1337
 description: >-
