@@ -33,6 +33,9 @@ description: >-
 
   Overall, Jenkins is a powerful tool for automating software development tasks, making it easier for teams to deliver high-quality software more quickly.
 
+
+  🔑 To ensure that Jenkins is initialized securely by an authorized administrator, a randomly generated password is written to the log and this file on the server: '/var/jenkins_home/secrets/initialAdminPassword'. To do this, right-click on the app icon and select troubleshoot to open the terminal.
+
 developer: Jenkins Foundation
 website: https://www.jenkins.io/
 submitter: dennysubke
