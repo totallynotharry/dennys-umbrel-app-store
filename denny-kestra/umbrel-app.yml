@@ -3,7 +3,7 @@ id: denny-kestra
 name: Kestra
 tagline: A platform to simplify the creation, management, and execution of complex workflows
 icon: https://i.imgur.com/Jxa9Pm7.png
-category: files
+category: files & productivity
 version: "0.19.2"
 port: 8082
 description: >-
