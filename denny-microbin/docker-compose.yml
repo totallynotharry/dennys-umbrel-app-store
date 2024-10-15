@@ -20,9 +20,12 @@ services:
       - MICROBIN_ENCRYPTION_CLIENT_SIDE=false
       - MICROBIN_ENCRYPTION_SERVER_SIDE=true
       - MICROBIN_TITLE=Microbin
-      - MICROBIN_QR=True
-      - MICROBIN_HIDE_FOOTER=True
+      - MICROBIN_QR=true
+      - MICROBIN_HIDE_HEADER=false
+      - MICROBIN_HIDE_LOGO=false
+      - MICROBIN_HIDE_FOOTER=false
       - MICROBIN_WIDE=true
+      - MICROBIN_ENABLE_BURN_AFTER=true
     volumes:
       - ${APP_DATA_DIR}/microbin:/my/microbin
       - ${APP_DATA_DIR}/microbin/data:/app/pasta_data
