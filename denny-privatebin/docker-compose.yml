@@ -16,3 +16,4 @@ services:
       - TZ=Europe/Berlin
     volumes:
       - ${APP_DATA_DIR}/privatebin-data:/srv/data
+      - ${APP_DATA_DIR}/conf.php:/srv/cfg/conf.php:rw
