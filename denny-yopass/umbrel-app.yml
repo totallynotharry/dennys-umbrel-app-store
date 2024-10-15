@@ -3,7 +3,7 @@ id: denny-yopass
 name: Yopass
 tagline: A secure platform to share encrypted secrets
 icon: https://i.imgur.com/dlnBH5l.png
-category: files
+category: files & productivity
 version: "11.17.0"
 port: 8193
 description: >-
