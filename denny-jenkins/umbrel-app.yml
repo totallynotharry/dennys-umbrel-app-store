@@ -3,7 +3,7 @@ id: denny-jenkins
 name: Jenkins
 tagline: An automation server which enables developers to reliably build, test, and deploy their software
 icon: https://i.imgur.com/HhGYbK1.png
-category: Developer Tools
+category: developer tools
 version: "2.480"
 port: 3212
 description: >-
