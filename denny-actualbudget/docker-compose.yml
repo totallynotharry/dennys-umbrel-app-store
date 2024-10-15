@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   server:
-    image: docker.io/actualbudget/actual-server:24.10.1@sha256:aefe3aa9d7c11a8dfe6d3a83d14ea611dd05a55eea1c22c857952655069e562f
+    image: actualbudget/actual-server:24.10.1@sha256:aefe3aa9d7c11a8dfe6d3a83d14ea611dd05a55eea1c22c857952655069e562f
     restart: on-failure
     environment:
           # - ACTUAL_HTTPS_KEY=/data/selfhost.key
@@ -19,4 +19,4 @@ services:
           # - ACTUAL_UPLOAD_FILE_SIZE_LIMIT_MB=20
           # See all options and more details at https://actualbudget.github.io/docs/Installing/Configuration
     volumes:
-      - "${APP_DATA_DIR}/actual-data:./actual-data
+      - ${APP_DATA_DIR}/actual-data:./actual-data
