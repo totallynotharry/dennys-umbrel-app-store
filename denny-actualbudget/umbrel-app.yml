@@ -3,7 +3,7 @@ id: denny-actualbudget
 name: Actual Budget
 tagline: A minimalist, open source online pastebin
 icon: https://i.imgur.com/Jz4lSRj.png
-category: files
+category: finance
 version: "1.7.4"
 port: 5006
 description: >-
