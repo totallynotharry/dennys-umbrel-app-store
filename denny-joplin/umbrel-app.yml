@@ -3,7 +3,7 @@ id: denny-joplin
 name: Joplin Sync Server
 tagline: An open-source synchronization server for Joplin
 icon: https://i.imgur.com/n4G5itW.png
-category: files
+category: files & productivity
 version: "3.0.1"
 port: 22300
 description: >-
