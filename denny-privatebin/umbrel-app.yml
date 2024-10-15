@@ -3,7 +3,7 @@ id: denny-privatebin
 name: PrivateBin
 tagline: A minimalist, open source online pastebin
 icon: https://i.imgur.com/Jz4lSRj.png
-category: files
+category: files & productivity
 version: "1.7.4"
 port: 3007
 description: >-
