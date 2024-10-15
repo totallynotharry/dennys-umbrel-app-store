@@ -23,9 +23,10 @@ services:
       - MICROBIN_QR=true
       - MICROBIN_HIDE_HEADER=false
       - MICROBIN_HIDE_LOGO=false
-      - MICROBIN_HIDE_FOOTER=false
+      - MICROBIN_HIDE_FOOTER=true
       - MICROBIN_WIDE=true
       - MICROBIN_ENABLE_BURN_AFTER=true
+      - MICROBIN_ETERNAL_PASTA=true
     volumes:
       - ${APP_DATA_DIR}/microbin:/my/microbin
       - ${APP_DATA_DIR}/microbin/data:/app/pasta_data
