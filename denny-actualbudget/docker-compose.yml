@@ -6,7 +6,6 @@ services:
       APP_HOST: denny-actualbudget_server_1
       APP_PORT: 5006
       PROXY_AUTH_ADD: "false"
-    network_mode: bridge
 
   server:
     image: actualbudget/actual-server:24.10.1@sha256:aefe3aa9d7c11a8dfe6d3a83d14ea611dd05a55eea1c22c857952655069e562f
@@ -21,4 +20,3 @@ services:
           # Siehe alle Optionen unter https://actualbudget.github.io/docs/Installing/Configuration
     volumes:
       - ${APP_DATA_DIR}/actual-data:/data
-    network_mode: bridge
