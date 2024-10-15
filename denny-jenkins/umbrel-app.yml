@@ -4,62 +4,47 @@ name: Jenkins
 tagline: An automation server which enables developers to reliably build, test, and deploy their software
 icon: https://i.imgur.com/HhGYbK1.png
 category: Developer Tools
-version: "2.7.4"
+version: "2.480"
 port: 3212
 description: >-
-  PrivateBin is an open-source, minimalist, and encrypted pastebin service.
-  It allows users to share text or code snippets securely, with end-to-end encryption, ensuring that only the intended recipient can read the contents.
-  The server hosting PrivateBin cannot decrypt or access the data being shared, providing a high level of privacy.
+  Jenkins is an open-source automation server that helps automate parts of software development related to building, testing, and deploying applications. It is widely used in Continuous Integration (CI) and Continuous Deployment (CD) processes. 
+  
+  
+  Here are some key features and concepts related to Jenkins:
 
 
-  Here are some key features of PrivateBin:
+  🤖 Continuous Integration/Continuous Deployment (CI/CD): Jenkins allows developers to automatically build and test code changes, ensuring that issues are detected early in the development process. It can also automate the deployment of applications to production environments.
 
+  🧩 Plugins: Jenkins has a rich ecosystem of plugins that extend its functionality. These plugins enable integration with various tools and services, such as version control systems (like Git), cloud platforms, testing frameworks, and more.
 
-  🔒 End-to-End Encryption: All data is encrypted in the browser before it's sent to the server. The server never sees the unencrypted content.
+  📜 Pipeline as Code: Jenkins supports the definition of build pipelines through a domain-specific language (DSL) called Jenkins Pipeline. This allows you to describe the entire build and deployment process in code, making it easy to version control and maintain.
 
+  🏗️ Distributed Builds: Jenkins can distribute the workload of building and testing across multiple machines, which can help speed up the development process.
 
-  🔥 Expiration and Burn-After-Reading: Users can set expiration times for their pastes, or opt for a "burn-after-reading" option where the content self-destructs after a single viewing.
+  🖥️ User Interface: Jenkins has a web-based interface where users can monitor jobs, view logs, and manage configurations.
 
+  🤝 Community Support: As a widely used tool, Jenkins has a large and active community, providing support, documentation, and a wealth of resources.
 
-  👤 No User Accounts: PrivateBin doesn’t require user registration or authentication, making it ideal for anonymous sharing of sensitive information.
+  Overall, Jenkins is a powerful tool for automating software development tasks, making it easier for teams to deliver high-quality software more quickly.
 
-
-  🛡️ Password Protection: Users can add an extra layer of security by setting a password for the paste.
-
-
-  📜 Syntax Highlighting: PrivateBin supports syntax highlighting for programming languages, making it useful for sharing code snippets.
-
-
-  🏠 Self-Hosted: As a self-hosted solution, PrivateBin offers full control over where the data is stored and the ability to integrate it with various server environments.
-
-
-  🚫 No Metadata: Unlike some other pastebin services, PrivateBin doesn’t store IP addresses or any identifiable metadata about users or pastes.
-
-
-  It's popular in privacy-conscious communities for securely sharing snippets without leaving a trace.
-
-
-  ⚠️ To use PrivateBin as intended you may need to expose it to the public internet. The easiest way to do this is to download the "Cloudflare Tunnel" app from the umbrel app store, and expose PrivateBin (running on port 3007) using your own domain.
-
-developer: PrivateBin Community
-website: https://privatebin.info/
+developer: Jenkins Foundation
+website: https://www.jenkins.io/
 submitter: dennysubke
 submission: https://github.com/dennysubke/dennys-umbrel-app-store
-repo: https://github.com/PrivateBin/PrivateBin
-support: https://github.com/PrivateBin/PrivateBin/issues
+repo: https://github.com/jenkinsci/jenkins
+support: https://community.jenkins.io/
 gallery:
-  - https://i.imgur.com/PE8JJR6.png
-  - https://i.imgur.com/PE8JJR6.png
-  - https://i.imgur.com/PE8JJR6.png
+  - https://i.imgur.com/KHdrQbz.png
+  - https://i.imgur.com/KHdrQbz.png
+  - https://i.imgur.com/KHdrQbz.png
 releaseNotes: >-
-  In version 1.7.4 of PrivateBin, several changes and fixes were implemented. Key changes include the use of the .md extension for saved markdown pastes instead of .txt, and the enabling of strict type checking in PHP. There were also tweaks to the Bootstrap5 template based on community suggestions.
+  Jenkins version 2.480 includes several enhancements and bug fixes.
 
 
-  Fixes addressed include resetting the password field when creating new pastes, allowing database schema upgrades to be skipped, and resolving an issue with the dark mode toggle that occurred due to browser settings.
-  Additionally, a security issue was fixed that allowed the YOURLS proxy to shorten URLs not associated with the configured PrivateBin instance.
+  Enhancements: The administrative monitors interface has been refined, and a new method, SaveableListener#onDeleted, has been added to notify plugins when a Saveable is deleted. Additionally, compatibility with Content Security Policies has been improved by removing an eval call from JavaScript and requiring a valid JSON response for specific configurations.
 
 
-  More details about this security issue can be found in the security advisory.
+  Bug Fixes: Compatibility with plugins calling Jenkins#doSafeRestart and those contributing custom XML views (like the Nested Views plugin) has been restored. It ensures that ongoing Pipeline builds are fully completed before allowing their parent job to be deleted. The update server has been migrated to HTTPS, long lines in build history are now wrapped, and an old version of ASM has been prevented from appearing as a managed dependency in plugin builds.
 dependencies:
 path: ""
 defaultUsername: ""
