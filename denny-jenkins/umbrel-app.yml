@@ -15,15 +15,21 @@ description: >-
 
   🤖 Continuous Integration/Continuous Deployment (CI/CD): Jenkins allows developers to automatically build and test code changes, ensuring that issues are detected early in the development process. It can also automate the deployment of applications to production environments.
 
+
   🧩 Plugins: Jenkins has a rich ecosystem of plugins that extend its functionality. These plugins enable integration with various tools and services, such as version control systems (like Git), cloud platforms, testing frameworks, and more.
+
 
   📜 Pipeline as Code: Jenkins supports the definition of build pipelines through a domain-specific language (DSL) called Jenkins Pipeline. This allows you to describe the entire build and deployment process in code, making it easy to version control and maintain.
 
+
   🏗️ Distributed Builds: Jenkins can distribute the workload of building and testing across multiple machines, which can help speed up the development process.
+
 
   🖥️ User Interface: Jenkins has a web-based interface where users can monitor jobs, view logs, and manage configurations.
 
+
   🤝 Community Support: As a widely used tool, Jenkins has a large and active community, providing support, documentation, and a wealth of resources.
+
 
   Overall, Jenkins is a powerful tool for automating software development tasks, making it easier for teams to deliver high-quality software more quickly.
 
