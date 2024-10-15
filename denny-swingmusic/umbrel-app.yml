@@ -3,7 +3,7 @@ id: denny-swingmusic
 name: Swing Music
 tagline: A beautiful, self-hosted music player for your local audio files
 icon: https://i.imgur.com/B9R2I6L.png
-category: files & productivity
+category: media
 version: "1.4.8"
 port: 1970
 description: >-
