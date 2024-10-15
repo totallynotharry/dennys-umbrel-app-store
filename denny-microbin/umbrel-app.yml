@@ -3,7 +3,7 @@ id: denny-microbin
 name: MicroBin
 tagline: A tiny, self-contained, configurable paste bin and URL shortener
 icon: https://i.imgur.com/WSAXhPB.png
-category: files
+category: files & productivity
 version: "2.0.4"
 port: 8065
 description: >-
