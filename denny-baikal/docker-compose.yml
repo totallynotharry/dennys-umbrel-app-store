@@ -10,7 +10,9 @@ services:
     image: ckulka/baikal:latest@sha256:0e00560a698456e3b07a2cf41e176b5f5a10d1831eb15044c799b3f0d77de62c
     restart: on-failure
     volumes:
-      - ${APP_DATA_DIR}/data/baikal:/var/www/html/Specific
+      #- ${APP_DATA_DIR}/data/baikal:/var/www/html/Specific
+      - ${APP_DATA_DIR}/config:/var/www/baikal/config:rw
+      - ${APP_DATA_DIR}/data:/var/www/baikal/Specific:rw
     environment:
       BAIKAL_DAV_REALM: "My Umbrel-BaikalServer"
 
