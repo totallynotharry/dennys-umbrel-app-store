@@ -1,5 +1,5 @@
 {
-  "domain": "umbrel.local",
-  "http_port": 4100,
-  "pub_port": 4100
+  "remote_url": "http://umbrel.local:4100",
+  "proxy": false,
+  "auth_whitelist": ["/api/*"]
 }
