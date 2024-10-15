@@ -11,29 +11,47 @@ description: >-
 
   Here are some key features of Actual Budget:
 
-  Everything in one place: Add all of your accounts and track everything in one place. Get valuable information like net worth from all your accounts together.
 
-  Payees: Manage payees quickly. Merge them, set up custom rules for how they are matched, and use default categories to automatically categorize transactions.
+  🗃️ Everything in one place: Add all of your accounts and track everything in one place. Get valuable information like net worth from all your accounts together.
 
-  Budgeting: Track your spending with budgets. You can only budget cash you have on hand, which means your budget stays realistic and you don't make numbers up.
 
-  Importing Transactions: Import transactions from the most popular financial files: QIF, OFX, QFX, and CSV.
+  💰 Payees: Manage payees quickly. Merge them, set up custom rules for how they are matched, and use default categories to automatically categorize transactions.
 
-  Migrate your data: Actual Budget provides a builtin YNAB4 importer that keeps all of your history.
 
-  Syncing across devices: Actual Budget offers a syncing service which uses sophisticated distributed systems technology to sync changes across any number of devices.
+  💵 Budgeting: Track your spending with budgets. You can only budget cash you have on hand, which means your budget stays realistic and you don't make numbers up.
 
-  Mobile app: A proper mobile app is critical to stay engaged with your finances.
 
-  Split transactions: Use split transactions to separate a single expense into multiple categories. An inline editor makes this seamless.
+  📥 Importing Transactions: Import transactions from the most popular financial files: QIF, OFX, QFX, and CSV.
 
-  Transfers: Manage transfers easily by creating transfer transactions. Actual will link the transactions on both sides and update them together.
 
-  Undo & redo: A robust undo system allows you to rollback any changes you make, and redo them if desired. Never worry about making mistakes.
+  📂 Migrate your data: Actual Budget provides a builtin YNAB4 importer that keeps all of your history.
 
-  API: Use the fully-featured API to write custom importers or build your own features. This API simply runs on your local data.
 
-  End-to-end encryption: Actaul Budget offers a syncing service which uses sophisticated distributed systems technology to sync changes across any number of devices.
+  🔄 Syncing across devices: Actual Budget offers a syncing service which uses sophisticated distributed systems technology to sync changes across any number of devices.
+
+
+  📱 Mobile app: A proper mobile app is critical to stay engaged with your finances.
+
+
+  ➗ Split transactions: Use split transactions to separate a single expense into multiple categories. An inline editor makes this seamless.
+
+
+  ➡️ Transfers: Manage transfers easily by creating transfer transactions. Actual will link the transactions on both sides and update them together.
+
+
+  🔁 Undo & redo: A robust undo system allows you to rollback any changes you make, and redo them if desired. Never worry about making mistakes.
+
+
+  🔌 API: Use the fully-featured API to write custom importers or build your own features. This API simply runs on your local data.
+
+
+  🛡️ End-to-end encryption: Actaul Budget offers a syncing service which uses sophisticated distributed systems technology to sync changes across any number of devices.
+
+   
+   
+  🔑 Initial Setup of Actual Budget:
+
+   During the initial setup of Actual Budget, you will need a password, which is set to "password." Please note that the HTTPS warning can be ignored.
 
 developer: Shift Reset LLC
 website: https://actualbudget.com/
