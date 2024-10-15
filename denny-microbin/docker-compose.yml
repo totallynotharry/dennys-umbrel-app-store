@@ -1,22 +1,28 @@
-version: '3.7'
-
+version: '3.8'
 services:
-  paste:
-    image: danielszabo99/microbin:latest@sha256:c5bd4643135540a68a2846950fe4f65f3bcc94b62ed7c7644e563dfde6f1732c
-    restart: always
+  app_proxy:
     environment:
-     - MICROBIN_QR=true
-     - MICROBIN_HIGHLIGHTSYNTAX=true
-     - MICROBIN_ADMIN_USERNAME=umbrel
-     - MICROBIN_ADMIN_PASSWORD=umbrelpass
-     - MICROBIN_ENCRYPTION_CLIENT_SIDE=false
-     - MICROBIN_ENCRYPTION_SERVER_SIDE=true
-     - MICROBIN_TITLE=Microbin
-     - MICROBIN_QR=True
-     - MICROBIN_HIDE_FOOTER=True
-     - MICROBIN_WIDE=true
-    ports:
-     - "8065:8080"
+      APP_HOST: denny-microbin_server_1
+      APP_PORT: 8080
+      PROXY_AUTH_ADD: "false"
+
+  server:
+    image: danielszabo99/microbin:latest@sha256:c5bd4643135540a68a2846950fe4f65f3bcc94b62ed7c7644e563dfde6f1732c
+    restart: on-failure
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Berlin
+      - MICROBIN_QR=true
+      - MICROBIN_HIGHLIGHTSYNTAX=true
+      - MICROBIN_ADMIN_USERNAME=umbrel
+      - MICROBIN_ADMIN_PASSWORD=umbrelpass
+      - MICROBIN_ENCRYPTION_CLIENT_SIDE=false
+      - MICROBIN_ENCRYPTION_SERVER_SIDE=true
+      - MICROBIN_TITLE=Microbin
+      - MICROBIN_QR=True
+      - MICROBIN_HIDE_FOOTER=True
+      - MICROBIN_WIDE=true
     volumes:
-     - ${APP_DATA_DIR}/microbin:/my/microbin
-     - ${APP_DATA_DIR}/microbin/data:/app/pasta_data
+      - ${APP_DATA_DIR}/microbin:/my/microbin
+      - ${APP_DATA_DIR}/microbin/data:/app/pasta_data
