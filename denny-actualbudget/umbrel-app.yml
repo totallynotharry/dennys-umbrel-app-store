@@ -1,8 +1,8 @@
 manifestVersion: 1
 id: denny-actualbudget
 name: Actual Budget
-tagline: A minimalist, open source online pastebin
-icon: https://i.imgur.com/Jz4lSRj.png
+tagline: A super fast privacy-focused app for managing your finances
+icon: https://i.imgur.com/19fnndW.png
 category: finance
 version: "1.7.4"
 port: 5006
