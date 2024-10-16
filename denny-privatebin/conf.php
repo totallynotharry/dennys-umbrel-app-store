@@ -14,9 +14,6 @@ discussion = true
 ; Preselect the discussion feature
 opendiscussion = true
 
-; Preselect the discussion feature
-opendiscussion = true
-
 ; Enable password protection for pastes
 password = true
 
@@ -30,7 +27,7 @@ burnafterreadingselected = true
 defaultformatter = "plaintext"
 
 ; Set the template (you can choose other templates like "bootstrap-dark" if preferred)
-template = "bootstrap5-compact"
+template = "bootstrap5"
 
 ; Set a size limit for pastes (here 10 MB)
 sizelimit = 52428800
@@ -39,14 +36,14 @@ sizelimit = 52428800
 languageselection = true
 
 ; Default language
-languagedefault = "de"
+languagedefault = "en"
 
 ; Enable QR code generation for sharing pastes
 qrcode = true
 
 ; Let users send an email sharing the paste URL with one click.
 ; It works both when a new paste is created and when you view a paste.
-email = true
+email = false
 
 [expire]
 ; Default expiration time for pastes (1 week)
