@@ -27,13 +27,13 @@ burnafterreadingselected = true
 defaultformatter = "plaintext"
 
 ; Set the template (you can choose other templates like "bootstrap-dark" if preferred)
-template = "bootstrap-compact-page"
+template = "bootstrap-page"
 
 ; Set a size limit for pastes (here 10 MB)
-sizelimit = 10485760
+sizelimit = 52428800
 
 ; Disable language selection (as it's a local instance)
-languageselection = false
+languageselection = true
 
 ; Default language
 languagedefault = "de"
