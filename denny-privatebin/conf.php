@@ -12,7 +12,7 @@ basepath = "http://umbrel.local/"
 discussion = true
 
 ; Preselect the discussion feature
-opendiscussion = false
+opendiscussion = true
 
 ; Enable password protection for pastes
 password = true
@@ -36,7 +36,7 @@ sizelimit = 10485760
 languageselection = false
 
 ; Default language
-languagedefault = "en"
+languagedefault = "de"
 
 ; Enable QR code generation for sharing pastes
 qrcode = true
