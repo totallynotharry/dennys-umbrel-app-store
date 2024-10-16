@@ -30,7 +30,7 @@ burnafterreadingselected = true
 defaultformatter = "plaintext"
 
 ; Set the template (you can choose other templates like "bootstrap-dark" if preferred)
-template = "bootstrap-page"
+template = "bootstrap5"
 
 ; Set a size limit for pastes (here 10 MB)
 sizelimit = 52428800
