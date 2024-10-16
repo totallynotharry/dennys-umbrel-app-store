@@ -80,3 +80,11 @@ dir = "data"
 
 ; Enable insecure HTTP warnings
 httpwarning = false
+
+; template to include, default is "bootstrap" (tpl/bootstrap.php), also
+; available are "page" (tpl/page.php), the classic ZeroBin style and several
+; bootstrap variants: "bootstrap-dark", "bootstrap-compact", "bootstrap-page",
+; which can be combined with "-dark" and "-compact" for "bootstrap-dark-page"
+; and finally "bootstrap-compact-page" - previews at:
+; https://privatebin.info/screenshots.html
+template = "bootstrap-dark"
