@@ -27,7 +27,7 @@ burnafterreadingselected = true
 defaultformatter = "plaintext"
 
 ; Set the template (you can choose other templates like "bootstrap-dark" if preferred)
-template = "bootstrap"
+template = "bootstrap-dark"
 
 ; Set a size limit for pastes (here 10 MB)
 sizelimit = 10485760
@@ -80,11 +80,3 @@ dir = "data"
 
 ; Enable insecure HTTP warnings
 httpwarning = false
-
-; template to include, default is "bootstrap" (tpl/bootstrap.php), also
-; available are "page" (tpl/page.php), the classic ZeroBin style and several
-; bootstrap variants: "bootstrap-dark", "bootstrap-compact", "bootstrap-page",
-; which can be combined with "-dark" and "-compact" for "bootstrap-dark-page"
-; and finally "bootstrap-compact-page" - previews at:
-; https://privatebin.info/screenshots.html
-template = "bootstrap-dark"
