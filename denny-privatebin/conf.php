@@ -14,6 +14,9 @@ discussion = true
 ; Preselect the discussion feature
 opendiscussion = true
 
+; Preselect the discussion feature
+opendiscussion = true
+
 ; Enable password protection for pastes
 password = true
 
@@ -40,6 +43,10 @@ languagedefault = "de"
 
 ; Enable QR code generation for sharing pastes
 qrcode = true
+
+; Let users send an email sharing the paste URL with one click.
+; It works both when a new paste is created and when you view a paste.
+email = true
 
 [expire]
 ; Default expiration time for pastes (1 week)
@@ -78,5 +85,22 @@ class = Filesystem
 [model_options]
 dir = "data"
 
+[HTTP warnings]
 ; Enable insecure HTTP warnings
 httpwarning = false
+
+[syntax highlighting theme]
+; Set a syntax highlighting theme, as found in css/prettify/
+syntaxhighlightingtheme = "sons-of-obsidian"
+
+[Info text to display]
+; use single, instead of double quotes for HTML attributes
+info = ""
+
+[Notice to display]
+; notice = "Note: This is a test service: Data may be deleted anytime. Kittens will die if you abuse this service."
+
+[URL shortener]
+; It is suggested to only use this with self-hosted shorteners as this will leak
+; the pastes encryption key.
+; urlshortener = "https://shortener.example.com/api?link="
