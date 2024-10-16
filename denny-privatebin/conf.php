@@ -3,7 +3,7 @@
 
 [main]
 ; Set a project name to be displayed on the website (optional)
-name = "PrivateBin"
+name = ""
 
 ; Set the basepath to the local domain
 basepath = "http://umbrel.local/"
@@ -98,7 +98,7 @@ httpwarning = true
 ; info = "More information on the <a href='https://privatebin.info/'>project page</a>."
 
 [Notice to display]
-; notice = "Note: This is a test service: Data may be deleted anytime. Kittens will die if you abuse this service."
+notice = ""
 
 [URL shortener]
 ; It is suggested to only use this with self-hosted shorteners as this will leak
