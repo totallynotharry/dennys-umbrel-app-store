@@ -18,7 +18,7 @@ opendiscussion = false
 password = true
 
 ; Disable file uploads (you can enable this if needed)
-fileupload = false
+fileupload = true
 
 ; Preselect burn-after-reading feature
 burnafterreadingselected = true
