@@ -19,8 +19,8 @@ services:
       - ${APP_DATA_DIR}/onlyoffice-conf:/cryptpad/onlyoffice-conf
 
     ports:
-      - "3010:3000"
-      - "3013:3003"
+      - "4030:3000"
+      - "4033:3003"
 
     ulimits:
       nofile:
