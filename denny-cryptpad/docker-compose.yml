@@ -6,7 +6,7 @@ services:
     environment:
       - CPAD_MAIN_DOMAIN=http://umbrel.local
       # CPAD_SANDBOX_DOMAIN=https://your-sandbox-domain.com
-      - CPAD_CONF=/config/config.js
+      - CPAD_CONF=/cryptpad/config/config.js
       - CPAD_INSTALL_ONLYOFFICE=yes
 
     volumes:
