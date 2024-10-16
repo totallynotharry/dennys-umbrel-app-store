@@ -3,7 +3,7 @@
 
 [main]
 ; Set a project name to be displayed on the website (optional)
-name = "PrivateBin - Umbrel"
+name = "PrivateBin"
 
 ; Set the basepath to the local domain
 basepath = "http://umbrel.local/"
