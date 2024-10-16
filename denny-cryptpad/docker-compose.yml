@@ -6,7 +6,7 @@ services:
     environment:
       - CPAD_MAIN_DOMAIN=http://umbrel.local
       # CPAD_SANDBOX_DOMAIN=https://your-sandbox-domain.com
-      - CPAD_CONF=/cryptpad/config/config.js
+      - CPAD_CONF=/config/config.js
       - CPAD_INSTALL_ONLYOFFICE=yes
 
     volumes:
@@ -26,3 +26,9 @@ services:
       nofile:
         soft: 1000000
         hard: 1000000
+
+    command: >
+      bash -c "chown -R www-data:www-data /cryptpad/onlyoffice-conf &&
+               chmod -R 777 /cryptpad/onlyoffice-conf &&
+               node server.js"
+
