@@ -9,10 +9,10 @@ name = "PrivateBin"
 basepath = "http://umbrel.local/"
 
 ; Enable discussion feature
-discussion = true
+discussion = false
 
 ; Preselect the discussion feature
-opendiscussion = true
+opendiscussion = false
 
 ; Enable password protection for pastes
 password = true
@@ -43,7 +43,7 @@ qrcode = true
 
 ; Let users send an email sharing the paste URL with one click.
 ; It works both when a new paste is created and when you view a paste.
-email = false
+email = true
 
 [expire]
 ; Default expiration time for pastes (1 week)
