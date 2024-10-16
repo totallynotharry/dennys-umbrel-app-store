@@ -87,15 +87,15 @@ dir = "data"
 
 [HTTP warnings]
 ; Enable insecure HTTP warnings
-httpwarning = false
+httpwarning = true
 
 [syntax highlighting theme]
 ; Set a syntax highlighting theme, as found in css/prettify/
-syntaxhighlightingtheme = "sons-of-obsidian"
+; syntaxhighlightingtheme = "sons-of-obsidian"
 
 [Info text to display]
 ; use single, instead of double quotes for HTML attributes
-info = ""
+; info = "More information on the <a href='https://privatebin.info/'>project page</a>."
 
 [Notice to display]
 ; notice = "Note: This is a test service: Data may be deleted anytime. Kittens will die if you abuse this service."
