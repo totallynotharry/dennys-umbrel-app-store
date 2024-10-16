@@ -98,7 +98,7 @@ httpwarning = true
 ; info = "More information on the <a href='https://privatebin.info/'>project page</a>."
 
 [Notice to display]
-notice = "blabla"
+; notice = ""
 
 [URL shortener]
 ; It is suggested to only use this with self-hosted shorteners as this will leak
