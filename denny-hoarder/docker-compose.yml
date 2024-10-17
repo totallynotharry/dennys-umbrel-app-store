@@ -6,7 +6,7 @@ services:
     volumes:
       - data:/data
     ports:
-      - 3729:3000
+      - 3666:3000
     env_file:
       - .env
     environment:
