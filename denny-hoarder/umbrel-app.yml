@@ -13,28 +13,28 @@ description: >-
   Key Features:
 
 
-  Easy List Creation: With Hoarder, users can effortlessly create various types of lists, such as to-do lists, shopping lists, or project outlines. The simple interface allows for quick additions and modifications, making list management a breeze.
+  📝 Easy List Creation: With Hoarder, users can effortlessly create various types of lists, such as to-do lists, shopping lists, or project outlines. The simple interface allows for quick additions and modifications, making list management a breeze.
 
 
-  Task Management: Keep track of tasks with the ability to set deadlines, priorities, and statuses. Users can easily mark tasks as complete or pending, ensuring that nothing falls through the cracks.
+  ✅ Task Management: Keep track of tasks with the ability to set deadlines, priorities, and statuses. Users can easily mark tasks as complete or pending, ensuring that nothing falls through the cracks.
 
 
-  Categorization and Tags: Organize lists and tasks using categories and tags for easy retrieval and filtering. This feature helps users keep their lists focused and manageable, tailored to specific projects or areas of life.
+  🏷️ Categorization and Tags: Organize lists and tasks using categories and tags for easy retrieval and filtering. This feature helps users keep their lists focused and manageable, tailored to specific projects or areas of life.
 
 
-  Collaboration Tools: Share lists and tasks with friends, family, or team members. Hoarder makes it easy to collaborate on projects, delegate tasks, and stay connected with others, fostering teamwork and communication.
+  👥 Collaboration Tools: Share lists and tasks with friends, family, or team members. Hoarder makes it easy to collaborate on projects, delegate tasks, and stay connected with others, fostering teamwork and communication.
 
 
-  User-Friendly Interface: The app boasts a clean and intuitive design, making it accessible for users of all ages and tech-savviness. Navigation is seamless, allowing users to focus on their tasks rather than getting lost in complicated menus.
+  ✨ User-Friendly Interface: The app boasts a clean and intuitive design, making it accessible for users of all ages and tech-savviness. Navigation is seamless, allowing users to focus on their tasks rather than getting lost in complicated menus.
 
 
-  Cross-Platform Synchronization: Access your lists and tasks from multiple devices. Hoarder syncs your data across platforms, ensuring that you always have your information at your fingertips, whether you're using a smartphone, tablet, or desktop.
+  📱 Cross-Platform Synchronization: Access your lists and tasks from multiple devices. Hoarder syncs your data across platforms, ensuring that you always have your information at your fingertips, whether you're using a smartphone, tablet, or desktop.
 
 
-  Customizable Themes: Personalize the app's appearance with customizable themes and layouts. Users can choose designs that resonate with their style, enhancing their overall experience.
+  🎨 Customizable Themes: Personalize the app's appearance with customizable themes and layouts. Users can choose designs that resonate with their style, enhancing their overall experience.
 
 
-  Reminders and Notifications: Stay on top of deadlines and important tasks with customizable reminders and notifications. This feature ensures that users never miss a crucial due date or appointment.
+  🔔 Reminders and Notifications: Stay on top of deadlines and important tasks with customizable reminders and notifications. This feature ensures that users never miss a crucial due date or appointment.
 
 
   Hoarder is an essential tool for anyone looking to improve their task management and organization skills. With its robust features and user-friendly design, it empowers users to take control of their lives, stay organized, and achieve their goals effectively.
@@ -46,10 +46,10 @@ submission: https://github.com/dennysubke/dennys-umbrel-app-store
 repo: https://github.com/hoarder-app/hoarder
 support: https://github.com/hoarder-app/hoarder/issues
 gallery:
-  - https://i.imgur.com/V1go5VU.png
-  - https://i.imgur.com/wFj2hWw.png
-  - https://i.imgur.com/3EzrHQy.png
-  - https://i.imgur.com/KJvykqI.png
+  - https://i.imgur.com/CUdwhv0.png
+  - https://i.imgur.com/CUdwhv0.png
+  - https://i.imgur.com/CUdwhv0.png
+  - https://i.imgur.com/CUdwhv0.png
 releaseNotes: >-
   The latest update introduces several exciting features, including customizable tagging rules that allow users to define their preferences in natural language, and the ability to selectively archive pages without enabling "Full page archives" by default. 
   
