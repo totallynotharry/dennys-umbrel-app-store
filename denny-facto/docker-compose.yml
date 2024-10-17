@@ -22,4 +22,4 @@ services:
       APPLICATION_SECRET: umbrelpass
       DATABASE_URL: jdbc:mysql://db:3306/facto?user=root&password=facto&disableMariaDbDriver
     volumes:
-    - ${APP_DATA_DIR}/facto/facto_data/conf:/app/conf
+    - ${APP_DATA_DIR}/facto/facto_data/conf:/conf
