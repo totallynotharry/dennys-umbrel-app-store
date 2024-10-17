@@ -53,9 +53,12 @@ gallery:
 releaseNotes: >-
   The latest update introduces several exciting features, including customizable tagging rules that allow users to define their preferences in natural language, and the ability to selectively archive pages without enabling "Full page archives" by default. 
   
+  
   Users can now export and import bookmarks across instances, customize the inference model's context length for improved tagging, and track asset management more effectively through a new admin panel feature. 
   
+  
   Additionally, users can attach custom image banners to notes and enjoy a refreshed user interface with improvements like sticky navigation, infinite scrolling, and better bulk actions. 
+  
   
   Notable fixes include performance enhancements for the All Tags page, improved OAuth integration, and the resolution of various bugs to streamline the overall user experience.
 dependencies: []
