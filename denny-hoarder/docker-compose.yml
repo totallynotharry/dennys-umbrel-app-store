@@ -4,14 +4,15 @@ services:
     image: ghcr.io/hoarder-app/hoarder:0.18.0@sha256:a49249cd3d4966f1c41a2eb6d9b30e5564d769ffe65ee804859efd696159930b
     restart: unless-stopped
     volumes:
-      - ${APP_DATA_DIR}/hoarder/data:/data
+      - data:/data
     ports:
-      - "3666:3000"
+      - 3666:3000
     env_file:
       - .env
     environment:
       MEILI_ADDR: http://meilisearch:7700
       BROWSER_WEB_URL: http://chrome:9222
+      # OPENAI_API_KEY: ...
       DATA_DIR: /data
   chrome:
     image: gcr.io/zenika-hub/alpine-chrome:123
@@ -31,8 +32,8 @@ services:
     environment:
       MEILI_NO_ANALYTICS: "true"
     volumes:
-      - ${APP_DATA_DIR}/meilisearch:/meili_data
+      - meilisearch:/meili_data
 
 volumes:
-  data:
   meilisearch:
+  data:
