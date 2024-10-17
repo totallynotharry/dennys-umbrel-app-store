@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   web:
-    image: ghcr.io/hoarder-app/hoarder:0.18.0@sha256:a49249cd3d4966f1c41a2eb6d9b30e5564d769ffe65ee804859efd696159930b
+    image: ghcr.io/hoarder-app/hoarder:${HOARDER_VERSION:-release}
     restart: unless-stopped
     volumes:
       - data:/data
