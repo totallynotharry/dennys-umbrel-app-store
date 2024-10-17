@@ -45,4 +45,4 @@ releaseNotes: >-
   The update to Flask and Werkzeug 2.3 has been reverted due to a regression, and some performance improvements have been implemented.
 path: ""
 defaultUsername: ""
-defaultPassword: ""
+defaultPassword: "umbrelpass"
