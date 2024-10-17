@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-facto_web_1
+      APP_PORT: 9000
+      PROXY_AUTH_ADD: "false"
+
+  web:
+    image: nymanjens/facto:latest
+    command: bin/server
+    restart: on-failure
+    environment:
+      APPLICATION_SECRET: umbrelpass
+      DATABASE_URL: jdbc:sqlite:/app/data/facto.db
+
+volumes:
+  web_data: {}
