@@ -7,7 +7,7 @@ category: files & productivity
 version: "1.0.0"
 port: 5231
 description: >-
-  Slash is an innovative open-source self-hosted URL shortener service developed using Go and SQLite.
+  Slash is an innovative open-source self-hosted URL shortener service developed using Go and SQLite. Slash serves as a reliable and flexible solution for anyone looking to shorten links for personal use, marketing campaigns, or social media sharing. It offers a powerful tool for enhancing online presence, making it an excellent choice for individuals and businesses alike.
 
 
   Key Features of Slash:
@@ -23,9 +23,7 @@ description: >-
 
 
   🌍 Lightweight and Open Source: Slash is designed to be lightweight and efficient, making it simple to deploy on any server. As an open-source project, it invites contributions from the community, allowing for ongoing development and customization to meet specific user needs.
-
-
-  Slash serves as a reliable and flexible solution for anyone looking to shorten links for personal use, marketing campaigns, or social media sharing. It offers a powerful tool for enhancing online presence, making it an excellent choice for individuals and businesses alike. 
+ 
 developer: yourselfhosted
 website: https://www.yourselfhosted.com/
 submitter: dennysubke
