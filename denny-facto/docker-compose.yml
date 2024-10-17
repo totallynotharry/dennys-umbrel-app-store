@@ -2,14 +2,17 @@ version: "3.9"
 
 services:
   db:
+    container_name: MariaDB
     image: mariadb:10.3
-    volumes: ["db_data:/var/lib/mysql"]
+    volumes:
+    - ${APP_DATA_DIR}/facto_data/db_data:/var/lib/mysql
     restart: on-failure
     environment:
       MYSQL_ROOT_PASSWORD: facto
       MYSQL_DATABASE: facto
 
   web:
+    container_name: Facto
     depends_on: [db]
     command: bin/server
     image: nymanjens/facto:latest
@@ -18,6 +21,5 @@ services:
     environment:
       APPLICATION_SECRET: umbrelpass
       DATABASE_URL: jdbc:mysql://db:3306/facto?user=root&password=facto&disableMariaDbDriver
-
-volumes:
-  db_data: {}
+    volumes:
+    - ${APP_DATA_DIR}/facto/facto_data/conf:/app/conf
