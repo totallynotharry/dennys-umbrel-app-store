@@ -12,6 +12,3 @@ version: '3.9'
       restart: on-failure
       volumes:
         - ${APP_DATA_DIR}/slash:/var/opt/slash
-
-volumes:
-  slash:
