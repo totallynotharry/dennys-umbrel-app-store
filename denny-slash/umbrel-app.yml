@@ -15,9 +15,10 @@ submission: https://github.com/dennysubke/dennys-umbrel-app-store
 repo: https://github.com/yourselfhosted/slash
 support: https://github.com/yourselfhosted/slash/issues
 gallery:
-  - https://i.imgur.com/Xc1hFfo.png
-  - https://i.imgur.com/Xc1hFfo.png
-  - https://i.imgur.com/Xc1hFfo.png
+  - https://i.imgur.com/uDmCODE.png
+  - https://i.imgur.com/ACJNwJo.png
+  - https://i.imgur.com/anh3Amu.png
+  - https://i.imgur.com/NyGD8t4.png
 releaseNotes: >-
   The update brings several improvements, including a fix for the issue where public shortcuts were not appearing in public collections.
 path: ""
