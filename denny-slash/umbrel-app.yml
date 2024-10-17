@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-slash
 name: Slash
 tagline: A link shortener that simplifies the managing and sharing of links
-icon: https://i.imgur.com/cb3FoAb.png
+icon: https://i.imgur.com/zlirDpm.png
 category: files & productivity
 version: "1.0.0"
 port: 5231
