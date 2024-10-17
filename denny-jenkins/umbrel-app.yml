@@ -43,9 +43,13 @@ submission: https://github.com/dennysubke/dennys-umbrel-app-store
 repo: https://github.com/jenkinsci/jenkins
 support: https://community.jenkins.io/
 gallery:
-  - https://i.imgur.com/KHdrQbz.png
-  - https://i.imgur.com/KHdrQbz.png
-  - https://i.imgur.com/KHdrQbz.png
+  - https://i.imgur.com/8lUVeTK.png
+  - https://i.imgur.com/TTfZ1DS.png
+  - https://i.imgur.com/6xeU33R.png
+  - https://i.imgur.com/TUduT7O.png
+  - https://i.imgur.com/OtgYtdZ.png
+  - https://i.imgur.com/B73MhZe.png
+  - https://i.imgur.com/NObYzc6.png
 releaseNotes: >-
   Jenkins version 2.480 includes several enhancements and bug fixes.
 
