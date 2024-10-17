@@ -37,9 +37,10 @@ submission: https://github.com/dennysubke/dennys-umbrel-app-store
 repo: https://github.com/spiral-project/ihatemoney
 support: https://github.com/spiral-project/ihatemoney/issues
 gallery:
-  - https://imgur.com/ATAw5UQ.png
-  - https://imgur.com/ATAw5UQ.png
-  - https://imgur.com/ATAw5UQ.png
+  - https://i.imgur.com/EMR5ECC.png
+  - https://i.imgur.com/SId2s8S.png
+  - https://i.imgur.com/TfiJkXD.png
+  - https://i.imgur.com/jHSXMi4.png
 releaseNotes: >-
   The update to Flask and Werkzeug 2.3 has been reverted due to a regression, and some performance improvements have been implemented.
 path: ""
