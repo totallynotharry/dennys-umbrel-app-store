@@ -8,7 +8,7 @@ services:
       - no-new-privileges:true
     healthcheck:
       test: ["CMD-SHELL", "redis-cli ping || exit 1"]
-    user: 1000:1000
+    user: 0:0
     environment:
       - TZ=Europe/Bucharest
     volumes:
