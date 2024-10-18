@@ -10,9 +10,5 @@ version: '3.9'
       web:
         image: linuxserver/spotube:version-v3.8.3@sha256:01ced8cebf91d2b87cd4468c76e5384bfea0c3a0bb6db7bc49a6d99bced55a7a
         restart: on-failure
-        environment:
-          - PUID=1000
-          - PGID=1000
-          - TZ=Europe/Berlin
         volumes:
           - ${APP_DATA_DIR}/spotube/config:/config
