@@ -32,7 +32,6 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | [Kestra](https://github.com/kestra-io/kestra)    |  A platform to simplify the creation, management, and execution of complex workflows    |
 | [Yopass](https://github.com/jhaals/yopass)    |  A secure platform to share encrypted secrets    |
 | [Traggo](https://github.com/traggo/server)    |  An open-source time tracking tool designed for self-hosting   |
-| [OctoBot](https://github.com/Drakkar-Software/OctoBot)    |  A powerful open-source cryptocurrency trading robot    |
 | [Actual Budget](https://github.com/actualbudget/actual)    |  A super fast privacy-focused app for managing your finances   |
 | [IHateMoney](https://github.com/spiral-project/ihatemoney)   |  A simple shared budget manager web application    |
 | [PrivateBin](https://github.com/PrivateBin/PrivateBin)   |  A minimalist, open source online pastebin   |
