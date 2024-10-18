@@ -5,7 +5,6 @@ services:
     restart: unless-stopped
     volumes:
       - ./data:/app/.data
-    command: start
     environment:
       - GENESIS_PORT=3000
       - GENESIS_DB_PATH=.data
