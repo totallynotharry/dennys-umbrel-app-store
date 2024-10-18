@@ -40,10 +40,13 @@ submission: https://github.com/dennysubke/dennys-umbrel-app-store
 repo: https://github.com/netdata/netdata
 support: https://github.com/netdata/netdata/issues
 gallery:
-  - https://i.imgur.com/V1go5VU.png
-  - https://i.imgur.com/wFj2hWw.png
-  - https://i.imgur.com/3EzrHQy.png
-  - https://i.imgur.com/KJvykqI.png
+  - https://imgur.com/3K4cxYY.png
+  - https://imgur.com/TCmYD1n.png
+  - https://imgur.com/A7W9m56.png
+  - https://imgur.com/8nHnxe4.png
+  - https://imgur.com/DECUadt.png
+  - https://imgur.com/sjMDAwZ.png
+  - https://imgur.com/2jqiFVe.png
 releaseNotes: >-
   This patch release addresses several issues discovered in previous versions. It resolves a problem with system-cat-native not sending messages to journald and updates the static installation packages with the latest versions of OpenSSL and cURL. 
 
