@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-ocular
 name: Ocular
 tagline: A simplistic, beautiful and straightforward budgeting app
-icon: https://i.imgur.com/kP0q3zZ.png
+icon: https://i.imgur.com/jH78kRR.png
 category: finance
 version: "1.5.0"
 port: 3955
