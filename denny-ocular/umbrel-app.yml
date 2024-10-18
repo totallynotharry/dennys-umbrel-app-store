@@ -40,10 +40,10 @@ submission: https://github.com/dennysubke/dennys-umbrel-app-store
 repo: https://github.com/Simonwep/ocular
 support: https://github.com/simonwep/ocular/issues
 gallery:
-  - https://i.imgur.com/V1go5VU.png
-  - https://i.imgur.com/wFj2hWw.png
-  - https://i.imgur.com/3EzrHQy.png
-  - https://i.imgur.com/KJvykqI.png
+  - https://i.imgur.com/VPz145K.png
+  - https://i.imgur.com/wNzbUlq.png
+  - https://i.imgur.com/vUIvau8.png
+  - https://i.imgur.com/FlzBdbh.png
 releaseNotes: >-
   The latest update introduces several new features, including support for Brazilian Portuguese and Turkish languages, an expanded list of currencies, and a fix to prevent dialogs from blocking password managers. Bug fixes include synchronizing the locale with the browser's locale, correcting the currency synchronization with internationalization (i18n), and ensuring the CellMenu functions properly on Safari and Firefox.
 
