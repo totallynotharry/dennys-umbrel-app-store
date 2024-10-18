@@ -1,9 +1,16 @@
+version: '3.8'
 services:
-  backend:
+  app_proxy:
+    environment:
+      APP_HOST: denny-octobot_server_1
+      APP_PORT: 80
+      PROXY_AUTH_ADD: "false"
+
+  server:
     image: ghcr.io/simonwep/genesis:v1.3
-    restart: unless-stopped
+    restart: on-failure
     volumes:
-      - ./data:/app/.data
+      - ${APP_DATA_DIR}/data:/app/.data
     command: start
     environment:
       - GENESIS_PORT
@@ -19,18 +26,11 @@ services:
       - GENESIS_KEYS_PER_USER
       - GENESIS_GIN_MODE
       - GENESIS_LOG_MODE
+    networks:
+      - services
 
   frontend:
     image: ghcr.io/simonwep/ocular:v1.5
     restart: unless-stopped
-
-  nginx:
-    image: nginx:1.24-alpine
-    restart: unless-stopped
-    ports:
-      - "5001:80"
-    volumes:
-      - ./config/nginx.conf:/etc/nginx/nginx.conf
-    depends_on:
-      - backend
-      - frontend
+    networks:
+      - services
