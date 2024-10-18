@@ -1,21 +1,5 @@
 version: '3.8'
 services:
-  backend:
-    image: ghcr.io/simonwep/genesis:v1.3
-    restart: unless-stopped
-    volumes:
-      - ./data:/app/.data
-    environment:
-      - GENESIS_PORT=3000
-      - GENESIS_DB_PATH=.data
-      - GENESIS_JWT_SECRET=E9FIvOigdB8wajJNcmECwajNOFSP1QEH
-      - GENESIS_JWT_COOKIE_ALLOW_HTTP=true
-      # weitere Umgebungsvariablen...
-    ports:
-      - "3956:3000"  # Backend auf Port 3956 verfügbar machen
-    networks:
-      - services
-
   frontend:
     image: ghcr.io/simonwep/ocular:v1.5
     restart: unless-stopped
@@ -23,3 +7,7 @@ services:
       - "3955:80"  # Ocular auf Port 3955 verfügbar machen
     networks:
       - services
+
+networks:
+  services:
+    driver: bridge
