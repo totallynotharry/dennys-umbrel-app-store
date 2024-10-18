@@ -1,72 +1,58 @@
 manifestVersion: 1
 id: denny-ocular
 name: Ocular
-tagline: A super fast privacy-focused app for managing your finances
-icon: https://i.imgur.com/19fnndW.png
+tagline: A simplistic, beautiful and straightforward budgeting app
+icon: https://i.imgur.com/kP0q3zZ.png
 category: finance
-version: "24.10.1"
+version: "1.5.0"
 port: 3955
 description: >-
-  Actual Budget is a privacy-first personal finance tool designed for users to self-host their data and manage their budgets with complete control. It offers real-time budgeting, detailed tracking of expenses, and advanced reporting, empowering users to make informed financial decisions. The app supports encrypted syncing across multiple devices and features mobile apps for both iOS and Android, making financial management accessible on the go. With its clean and intuitive interface, Actual Budget simplifies complex finances while ensuring data remains secure and private.
+  Ocular is a straightforward and visually appealing budgeting app designed to help you take control of your finances effortlessly. With a clean and intuitive user interface, Ocular makes budgeting accessible for everyone, whether you're a financial novice or an experienced planner.
+
+  
+  Key Features:
+  
+
+  🌟 Simplicity at Its Core: Ocular emphasizes a minimalist design, allowing users to focus on their budgeting goals without unnecessary distractions. The user-friendly layout ensures that you can navigate through the app with ease.
 
 
-  Here are some key features of Actual Budget:
+  🌸 Beautiful Aesthetics: With a modern and sleek design, Ocular transforms budgeting into a pleasant experience. The thoughtful use of color and typography enhances usability while keeping the interface visually appealing.
 
 
-  🗃️ Everything in one place: Add all of your accounts and track everything in one place. Get valuable information like net worth from all your accounts together.
+  🔧 Straightforward Functionality: Ocular offers essential budgeting features without overwhelming users. Quickly add, edit, or remove expenses and income entries, categorize them for better organization, and track your financial progress with just a few clicks.
 
 
-  💰 Payees: Manage payees quickly. Merge them, set up custom rules for how they are matched, and use default categories to automatically categorize transactions.
+  ⏱️ Real-Time Updates: Stay on top of your finances with real-time updates. Ocular ensures that your budget reflects any changes immediately, providing you with an accurate picture of your financial situation at all times.
 
 
-  💵 Budgeting: Track your spending with budgets. You can only budget cash you have on hand, which means your budget stays realistic and you don't make numbers up.
+  📊 Data Visualization: Visualize your budgeting data through informative charts and graphs. Ocular helps you understand your spending habits and identify areas for improvement, making financial planning more effective.
 
 
-  📥 Importing Transactions: Import transactions from the most popular financial files: QIF, OFX, QFX, and CSV.
+  🌐 Cross-Platform Compatibility: Access Ocular from any device. Whether you’re on your desktop, tablet, or smartphone, your budget is always at your fingertips, making it easy to manage your finances on the go.
 
 
-  📂 Migrate your data: Actual Budget provides a builtin YNAB4 importer that keeps all of your history.
+  Ocular is more than just a budgeting app; it’s a comprehensive financial management tool that prioritizes simplicity and beauty. Whether you're looking to save for a specific goal, pay off debt, or simply keep track of your spending, Ocular provides the tools you need to achieve your financial objectives. Experience the difference of budgeting made beautiful and straightforward with Ocular.
 
-
-  🔄 Syncing across devices: Actual Budget offers a syncing service which uses sophisticated distributed systems technology to sync changes across any number of devices.
-
-
-  📱 Mobile app: A proper mobile app is critical to stay engaged with your finances.
-
-
-  ➗ Split transactions: Use split transactions to separate a single expense into multiple categories. An inline editor makes this seamless.
-
-
-  ➡️ Transfers: Manage transfers easily by creating transfer transactions. Actual will link the transactions on both sides and update them together.
-
-
-  🔁 Undo & redo: A robust undo system allows you to rollback any changes you make, and redo them if desired. Never worry about making mistakes.
-
-
-  🔌 API: Use the fully-featured API to write custom importers or build your own features. This API simply runs on your local data.
-
-
-  🛡️ End-to-end encryption: Actaul Budget offers a syncing service which uses sophisticated distributed systems technology to sync changes across any number of devices.
-
-
-  🔑 Initial Setup of Actual Budget:
-
-   During the initial setup of Actual Budget, you will need a password, which is set to "password." Please note that the HTTPS warning can be ignored.
-
-developer: Shift Reset LLC
-website: https://actualbudget.com/
+developer: Simon Renisch
+website: https://ocular.reinisch.io/
 submitter: dennysubke
 submission: https://github.com/dennysubke/dennys-umbrel-app-store
-repo: https://github.com/actualbudget/actual-server
-support: https://github.com/actualbudget/actual-server/issues
+repo: https://github.com/Simonwep/ocular
+support: https://github.com/simonwep/ocular/issues
 gallery:
   - https://i.imgur.com/V1go5VU.png
   - https://i.imgur.com/wFj2hWw.png
   - https://i.imgur.com/3EzrHQy.png
   - https://i.imgur.com/KJvykqI.png
 releaseNotes: >-
-  The latest update for Actual Budget (version 24.10.0) includes enhancements like aligning the mobile budget table's column names and bug fixes that improve performance and user experience. Notable fixes address issues with syncing preferences, empty blocks in reports, and auto-selection of budget files on mobile.
-dependencies:
+  The latest update introduces several new features, including support for Brazilian Portuguese and Turkish languages, an expanded list of currencies, and a fix to prevent dialogs from blocking password managers. Bug fixes include synchronizing the locale with the browser's locale, correcting the currency synchronization with internationalization (i18n), and ensuring the CellMenu functions properly on Safari and Firefox.
+
+
+  In terms of refactoring, the click listener has been moved to the button in the ContextMenu, and number formats have been removed from the internationalization files. Additionally, various chores were addressed, such as updating the project to pnpm v9, adding a code owners file, freezing dependencies in CI, configuring the main workflow to run on pushes and pull requests, and adding issue and pull request templates. 
+  
+  
+  The project dependencies have been updated, and the .env.genesis variables have also been modified.
+dependencies: []
 path: ""
-defaultUsername: "none"
-defaultPassword: "password"
+defaultUsername: ""
+defaultPassword: ""
