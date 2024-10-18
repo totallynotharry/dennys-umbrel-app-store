@@ -38,6 +38,8 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | [Slash](https://github.com/yourselfhosted/slash)    | A link shortener that simplifies the managing and sharing of links  |
 | [Jenkins](https://github.com/jenkinsci/jenkins)    | An automation server which enables developers to reliably build, test, and deploy their software  |
 | [Hoarder](https://github.com/hoarder-app/hoarder)    | A self-hosted bookmark everything app  |
+| [Ocular](https://github.com/simonwep/ocular)    | A simplistic, beautiful and straightforward budgeting app  |
+| [Netdata](https://github.com/netdata/netdata)    | A super fast privacy-focused app for managing your finances  |
 
 🔄 All Apps are continually updated and new Apps are added over time.
 
