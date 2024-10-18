@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: denny-spotube
 name: Spotube
-tagline: A super fast privacy-focused app for managing your finances
+tagline: An Open Source Spotify Client for every platform
 icon: https://i.imgur.com/paB7GST.png
 category: media
 version: "3.8.3"
