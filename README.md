@@ -40,7 +40,7 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | [Hoarder](https://github.com/hoarder-app/hoarder)    | A self-hosted bookmark everything app  |
 | [Ocular](https://github.com/simonwep/ocular)    | A simplistic, beautiful and straightforward budgeting app  |
 | [Netdata](https://github.com/netdata/netdata)    | A super fast privacy-focused app for managing your finances  |
-
+| [Spotube](https://github.com/KRTirtho/spotube)    | An Open Source Spotify Client for every platform |
 🔄 All Apps are continually updated and new Apps are added over time.
 
 ##
