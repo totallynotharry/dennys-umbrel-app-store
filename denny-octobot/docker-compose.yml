@@ -1,20 +1,37 @@
 version: "3.9"
-
 services:
-  octobot:
-    image: drakkarsoftware/octobot:2.0.6@sha256:5c35d59d3cb687dd1147d9b1d2d926c15cfde2cc8b3ce58df20f2ca9e623318e
+  backend:
+    image: ghcr.io/simonwep/genesis:v1.3
+    restart: unless-stopped
     volumes:
-       - ${APP_DATA_DIR}/logs:/octobot/logs
-       - ${APP_DATA_DIR}/backtesting:/octobot/backtesting
-       - ${APP_DATA_DIR}/tentacles:/octobot/tentacles
-       - ${APP_DATA_DIR}/user:/octobot/user
-    ports:
-       - ${PORT:-5001}:${PORT:-5001}
-    restart: on-failure
+      - ${APP_DATA_DIR}/data:/app/.data
+    command: start
+    environment:
+      - GENESIS_PORT
+      - GENESIS_DB_PATH
+      - GENESIS_CREATE_USERS
+      - GENESIS_AUTHORIZED_URIS
+      - GENESIS_JWT_SECRET
+      - GENESIS_JWT_TOKEN_EXPIRATION
+      - GENESIS_JWT_COOKIE_ALLOW_HTTP
+      - GENESIS_USERNAME_PATTERN
+      - GENESIS_KEY_PATTERN
+      - GENESIS_DATA_MAX_SIZE
+      - GENESIS_KEYS_PER_USER
+      - GENESIS_GIN_MODE
+      - GENESIS_LOG_MODE
 
-  watchtower:
-    image: containrrr/watchtower
-    restart: on-failure
-    command: --cleanup --include-restarting
+  frontend:
+    image: ghcr.io/simonwep/ocular:v1.5
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:1.24-alpine
+    restart: unless-stopped
+    ports:
+      - "5001:80"
     volumes:
-      - ${APP_DATA_DIR}/var/run/docker.sock:/var/run/docker.sock
+      - ./config/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - backend
+      - frontend
