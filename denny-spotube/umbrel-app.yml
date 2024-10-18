@@ -46,10 +46,10 @@ submission: https://github.com/dennysubke/dennys-umbrel-app-store
 repo: https://github.com/KRTirtho/spotube
 support: https://github.com/KRTirtho/spotube/issues
 gallery:
-  - https://i.imgur.com/4JrS0Lg.png
-  - https://i.imgur.com/4JrS0Lg.png
-  - https://i.imgur.com/4JrS0Lg.png
-  - https://i.imgur.com/4JrS0Lg.png
+  - https://i.imgur.com/kXdhv9Q.png
+  - https://i.imgur.com/vfSphpH.png
+  - https://i.imgur.com/6xC07Gs.png
+  - https://i.imgur.com/W02gnTE.png
 releaseNotes: >-
   The recent update includes a bug fix where the youtube_explode_dart package was updated to version 2.2.3 to resolve a playback issue. 
   
