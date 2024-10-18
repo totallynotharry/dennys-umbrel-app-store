@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-hoarder
 name: Hoarder
 tagline: A self-hosted bookmark everything app
-icon: https://i.imgur.com/OJ79IqY.png
+icon: https://i.imgur.com/c9EfF3J.png
 category: files & productivity
 version: "0.18.0"
 port: 3888
