@@ -27,7 +27,7 @@ services:
       interval: 10s
       retries: 10
     env_file:
-      - stack.env
+      - .env
     environment:
       - TZ=Europe/Bucharest
     volumes:
@@ -43,7 +43,7 @@ services:
     healthcheck:
       test: stat /etc/passwd || exit 1
     env_file:
-      - stack.env
+      - .env
     volumes:
       - /volume1/docker/pixelfed/storage:/var/www/storage:rw
       - app-bootstrap:/var/www/bootstrap
@@ -68,7 +68,7 @@ services:
       timeout: 5s
       retries: 1
     env_file:
-      - stack.env
+      - .env
     volumes:
       - /volume1/docker/pixelfed/storage:/var/www/storage:rw
       - app-bootstrap:/var/www/bootstrap
