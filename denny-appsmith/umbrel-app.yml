@@ -36,7 +36,7 @@ website: https://www.appsmith.com/
 dependencies: []
 repo: https://github.com/appsmithorg/appsmith
 support: https://docs.appsmith.com/
-port: 1275
+port: 8267
 gallery:
   - 1.jpg
   - 2.jpg
