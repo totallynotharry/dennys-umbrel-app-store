@@ -10,4 +10,4 @@ services:
     restart: on-failure
     image: appsmith/appsmith-ee:v1.46.1@sha256:8dc9e5164ab32e296fd83e5c8c5471898a5efaf9658923eb2bd1a3d929485d06
     volumes:
-      - ${APP_DATA_DIR}/stacks:/appsmith-stacks
+      -${APP_DATA_DIR}/stacks:/appsmith-stacks
