@@ -50,6 +50,7 @@ description: >-
 
 
   ⚠️ During the installation, you need to select the "SQLite database". 
+
   
   Please make sure to specify the path "/data/answer.db" to store the data correctly and ensure the application runs smoothly.
 
