@@ -41,6 +41,8 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | [Ocular](https://github.com/simonwep/ocular)    | A simplistic, beautiful and straightforward budgeting app  |
 | [Netdata](https://github.com/netdata/netdata)    | A super fast privacy-focused app for managing your finances  |
 | [Spotube](https://github.com/KRTirtho/spotube)    | An Open Source Spotify Client for every platform |
+| [Answer](https://github.com/apache/incubator-answer)    | A Q&A platform software for teams at any scale |
+| [WebCheck](https://github.com/Lissy93/web-check)    | An all-in-one Open Source Intelligence tool for analyzing any website|
 🔄 All Apps are continually updated and new Apps are added over time.
 
 ##
