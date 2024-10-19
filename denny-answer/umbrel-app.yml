@@ -49,7 +49,9 @@ description: >-
   Apache Answer is a powerful tool for organizations looking to harness the potential of their data. Its user-friendly interface, robust querying capabilities, and comprehensive visualization options make it an invaluable asset in the quest for data-driven insights. As a product of the Apache Software Foundation, it continues to evolve, guided by the needs of its users and the ever-changing landscape of data analytics.
 
 
-  ⚠️ During the installation, you need to select the "SQLite database". Please make sure to specify the path "/data/answer.db" to store the data correctly and ensure the application runs smoothly.
+  ⚠️ During the installation, you need to select the "SQLite database". 
+  
+  Please make sure to specify the path "/data/answer.db" to store the data correctly and ensure the application runs smoothly.
 
 
 developer: Apache Software Foundation
