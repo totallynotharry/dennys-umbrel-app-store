@@ -25,7 +25,6 @@ description: >-
   📝 Monitoring and Reporting: Continuous tracking with custom reporting options.
 
   
-
   Web-Check is modular, allowing users to integrate additional plugins for extended functionality. It supports API integration, is cross-platform, and is easy to deploy via Docker, making it accessible on any server. Its open-source nature ensures transparency and full control over the conducted analyses, making it ideal for security-conscious users.
 
 
