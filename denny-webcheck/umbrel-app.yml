@@ -46,7 +46,7 @@ releaseNotes: >-
   
   This version is optimized for self-hosting.
 
-dependencies:[]
+dependencies:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
