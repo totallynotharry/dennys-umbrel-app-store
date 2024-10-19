@@ -4,7 +4,7 @@ services:
      image: index.docker.io/appsmith/appsmith-ee
      container_name: appsmith
      ports:
-         - "2175:80"
+         - "1275:80"
          - "443:443"
      volumes:
          - ${APP_DATA_DIR}/stacks:/appsmith-stacks
