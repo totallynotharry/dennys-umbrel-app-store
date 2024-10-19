@@ -1,14 +1,115 @@
-version: '3.9'
+version: "3.7"
+
+x-logging: &default-logging
+  driver: "json-file"
+  options:
+    max-size: "50m"
+    max-file: "4"
 
 services:
+  proxy:
+    container_name: proxy
+    image: docker.io/library/nginx
+    ports:
+      # actual and only port facing any connection from outside
+      # Note, change the left number if port 1236 is already in use on your system
+      # You could use port 80 if you won't use a reverse proxy
+      - "8536:8536"
+    volumes:
+      - ./nginx_internal.conf:/etc/nginx/nginx.conf:ro,Z
+      - ./proxy_params:/etc/nginx/proxy_params:ro,Z
+    restart: always
+    logging: *default-logging
+    depends_on:
+      - pictrs
+      - lemmy-ui
   lemmy-ui:
     container_name: lemmy-ui
-    image: dockurr/lemmy-ui
+    image: dessalines/lemmy-ui:${LEMMY_VERSION}
     environment:
-      - LEMMY_UI_HTTPS=true
       - LEMMY_UI_LEMMY_INTERNAL_HOST=lemmy:8536
-      - LEMMY_UI_LEMMY_EXTERNAL_HOST=domain.tld
+      - LEMMY_UI_LEMMY_EXTERNAL_HOST=${DOMAIN}
+      - LEMMY_UI_HTTPS=true
+    volumes:
+      - ./volumes/lemmy-ui/extra_themes:/app/extra_themes
+    depends_on:
+      - lemmy
+    restart: always
+    logging: *default-logging
+  lemmy:
+    container_name: lemmy
+    image: dessalines/lemmy:${LEMMY_VERSION}
+    hostname: lemmy
+    restart: always
+    logging: *default-logging
+    environment:
+      - RUST_LOG=warn
+    volumes:
+      - ./lemmy.hjson:/config/config.hjson:Z
+    depends_on:
+      - postgres
+      - pictrs
+  pictrs:
+    container_name: pictrs
+    image: docker.io/c:0.4.3
+    # This needs to match the pictrs url in lemmy.hjson
+    hostname: pictrs
+    environment:
+      - PICTRS__MEDIA__EXTERNAL_VALIDATION=http://pictrs-safety:14051/api/v1/scan/IPADDR
+      - PICTRS__MEDIA__VIDEO_CODEC=vp9
+      - PICTRS__MEDIA__GIF__MAX_WIDTH=256
+      - PICTRS__MEDIA__GIF__MAX_HEIGHT=256
+      - PICTRS__MEDIA__GIF__MAX_AREA=65536
+      - PICTRS__MEDIA__GIF__MAX_FRAME_COUNT=400
+      - PICTRS_OPENTELEMETRY_URL=http://otel:4137
+      - RUST_LOG=debug
+      - RUST_BACKTRACE=full
+      - PICTRS__API_KEY=${PICTRS_API_KEY}
+      - PICTRS__STORE__TYPE=${PICTRS_STORE_TYPE}
+      - PICTRS__STORE__ENDPOINT=${PICTRS_STORE_ENDPOINT}
+      - PICTRS__STORE__BUCKET_NAME=${PICTRS_STORE_BUCKET_NAME}
+      - PICTRS__STORE__REGION=${PICTRS_STORE_REGION}
+      - PICTRS__STORE__USE_PATH_STYLE=${PICTRS_STORE_USE_PATH_STYLE}
+      - PICTRS__STORE__ACCESS_KEY=${PICTRS_STORE_ACCESS_KEY}
+      - PICTRS__STORE__SECRET_KEY=${PICTRS_STORE_SECRET_KEY}
+    volumes:
+      - ./volumes/pictrs:/mnt:Z
+    user: 991:991
+    restart: always
+    logging: *default-logging
+    deploy:
+      resources:
+        limits:
+          memory: 690m
+  postgres:
+    container_name: postgres
+    image: docker.io/postgres:15-alpine
+    hostname: postgres
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    volumes:
+      - ./volumes/postgres:/var/lib/postgresql/data:Z
+      - ./customPostgresql.conf:/etc/postgresql.conf
+    restart: always
+    command: postgres -c config_file=/etc/postgresql.conf
+    logging: *default-logging
+  pictrs-safety:
+    image: ghcr.io/db0/pictrs-safety:v1.2.2
+    hostname: pictrs-safety
+    container_name: pictrs-safety
+    environment:
+    - FEDIVERSE_SAFETY_WORKER_AUTH="${PICTRS_SAFETY_WORKER_AUTH}"
+    - FEDIVERSE_SAFETY_IMGDIR="/tmp/images"
+    - USE_SQLITE=1
+    - secret_key="${PICTRS_SECRET_KEY}"
+    - SCAN_BYPASS_THRESHOLD=10
+    - MISSING_WORKER_THRESHOLD=5
     ports:
-      - 1234:1234
-    stop_grace_period: 1m
-    restart: unless-stopped
+      - "14051:14051"
+    user: 991:991
+    restart: always
+    logging: *default-logging
+    depends_on:
+      - pictrs
