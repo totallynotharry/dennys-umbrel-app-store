@@ -2,38 +2,51 @@ manifestVersion: 1
 id: denny-webcheck
 name: WebCheck
 tagline: A lightweight CalDAV+CardDAV server
-icon: https://i.imgur.com/h3B1DaG.png
+icon: https://i.imgur.com/GhoYf27.png
 category: networking
-version: "0.9.5"
+version: "1.0.0"
 port: 3093
 description: >-
-  🪆 Baikal Server is a lightweight CalDAV and CardDAV server designed for users who want to manage their calendar and contact information securely on their own server. This robust application offers an extensive web interface that simplifies the management of users, address books, and calendars, making it accessible for both beginners and experienced users.
+  Web-Check is a versatile OSINT (Open Source Intelligence) tool for analyzing and monitoring websites. It offers a comprehensive range of features to assist users in security audits and performance analysis of websites. Key functionalities include:
 
 
-  One of the key features of Baikal is its ease of installation and configuration. It requires only a basic PHP-capable server, which means you don’t need extensive technical knowledge to get started. The server supports both MySQL and SQLite databases for data storage, providing flexibility depending on your preferences and needs.
+  🔍 Website Scanning: Automated detection of vulnerabilities and security weaknesses.
+
+  
+  🚀 SEO and Performance Analysis: Metrics like load times, visibility, and optimization potential.
+
+  
+  📝 Content Analysis: Extraction of metadata, DNS info, and HTTP headers.
+
+  
+  📊 Visual Representation: Generation of screenshots to document site layouts.
+
+  
+  📝 Monitoring and Reporting: Continuous tracking with custom reporting options.
+
+  
+
+  Web-Check is modular, allowing users to integrate additional plugins for extended functionality. It supports API integration, is cross-platform, and is easy to deploy via Docker, making it accessible on any server. Its open-source nature ensures transparency and full control over the conducted analyses, making it ideal for security-conscious users.
 
 
-  Baikal allows users to seamlessly access their contacts and calendars from any device. It is compatible with a wide range of applications, including iOS, macOS, DAVx5 on Android, Mozilla Thunderbird, and many other CalDAV and CardDAV capable applications. This compatibility ensures that you can sync your data across multiple platforms without any hassle.
+  In addition to public website analysis, Web-Check can be used for internal network security and infrastructure checks within organizations. The customizable features and extensibility make it an essential tool for web analysts and IT security teams.
 
-
-  In addition to its user-friendly features, Baikal emphasizes privacy and data security. By hosting your calendars and contacts yourself, you maintain full control over your personal information, protecting it from potential breaches and unauthorized access. This is particularly important in an era where data privacy is a growing concern.
-
-
-  Whether you are an individual looking for a reliable personal organizer or a small team needing a collaborative solution, Baikal Server provides a practical and efficient way to manage your scheduling and contact needs while ensuring your data remains private and secure. With its fast performance and straightforward interface, Baikal is an excellent choice for anyone seeking a self-hosted calendar and contact management solution.
-
-developer: fruux GmbH
-website: https://sabre.io/baikal/
+developer: Alicia Sykes
+website: https://web-check.xyz/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/sabre-io/Baikal
-support: https://github.com/sabre-io/Baikal/issues
+repo: https://github.com/Lissy93/web-check
+support: https://github.com/Lissy93/web-check/issues
 gallery:
   - https://i.imgur.com/InOvJFa.png
   - https://i.imgur.com/hIQ1ZIv.png
   - https://i.imgur.com/nobRqdE.png
 releaseNotes: >-
-  The latest update includes dependency upgrades that enhance compatibility with PHP 8.2 and features the inclusion of sabre/dav version 4.6.0.
-dependencies:
+  This is the stable version of Web Check, developed as a React application. The backend consists of a series of lambda functions and can be deployed to Vercel, Netlify, or any Docker-compatible service. For self-hosting, the Docker container includes a Node server to expose all endpoints locally and to serve the frontend.
+  
+  This version is optimized for self-hosting.
+
+dependencies:[]
 path: ""
 defaultUsername: ""
 defaultPassword: ""
