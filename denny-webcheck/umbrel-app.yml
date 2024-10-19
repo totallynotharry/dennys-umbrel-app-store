@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: denny-webcheck
 name: WebCheck
-tagline: A lightweight CalDAV+CardDAV server
+tagline: An all-in-one OSINT tool for analyzing any website
 icon: https://i.imgur.com/GhoYf27.png
 category: networking
 version: "1.0.0"
