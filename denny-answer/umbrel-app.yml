@@ -2,8 +2,8 @@ manifestVersion: 1
 id: denny-answer
 name: Answer
 tagline: A lightweight CalDAV+CardDAV server
-icon: https://i.imgur.com/h3B1DaG.png
-category: networking
+icon: https://i.imgur.com/v5eG4SV.png
+category: social
 version: "0.9.5"
 port: 9084
 description: >-
