@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: #denny-atheos
+id: denny-atheos
 name: Atheos
 tagline: A lightweight CalDAV+CardDAV server
 icon: https://i.imgur.com/h3B1DaG.png
