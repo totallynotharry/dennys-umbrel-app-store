@@ -2,9 +2,9 @@ manifestVersion: 1
 id: denny-atheos
 name: Atheos
 tagline: A lightweight CalDAV+CardDAV server
-icon: https://i.imgur.com/h3B1DaG.png
+icon: https://i.imgur.com/MZnT2VS.png
 category: developer tools
-version: "0.9.5"
+version: "5.5.0"
 port: 8728
 description: >-
   🪆 Baikal Server is a lightweight CalDAV and CardDAV server designed for users who want to manage their calendar and contact information securely on their own server. This robust application offers an extensive web interface that simplifies the management of users, address books, and calendars, making it accessible for both beginners and experienced users.
