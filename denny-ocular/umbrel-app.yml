@@ -5,7 +5,7 @@ tagline: A simplistic, beautiful and straightforward budgeting app
 icon: https://i.imgur.com/jH78kRR.png
 category: finance
 version: "1.5.0"
-port: 3955
+port: 3957
 description: >-
   Ocular is a straightforward and visually appealing budgeting app designed to help you take control of your finances effortlessly. With a clean and intuitive user interface, Ocular makes budgeting accessible for everyone, whether you're a financial novice or an experienced planner.
 
