@@ -43,6 +43,8 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | [Spotube](https://github.com/KRTirtho/spotube)    | An Open Source Spotify Client for every platform |
 | [Answer](https://github.com/apache/incubator-answer)    | A Q&A platform software for teams at any scale |
 | [WebCheck](https://github.com/Lissy93/web-check)    | An all-in-one Open Source Intelligence tool for analyzing any website|
+| [Atheos](https://github.com/Atheos/Atheos)    | A web-based IDE framework with a small footprint and minimal requirements|
+| [OneDev](https://github.com/theonedev/onedev)    | A powerful Git server with CI/CD, kanban, and packages|
 🔄 All Apps are continually updated and new Apps are added over time.
 
 ##
