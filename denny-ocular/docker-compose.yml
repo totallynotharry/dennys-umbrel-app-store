@@ -10,9 +10,3 @@ services:
   server:
     image: ghcr.io/simonwep/ocular:v1.5@sha256:ee7a7a4272b37a1bc212a96c2057b3f5e66191f9c521296c8fd0a10373af77c6
     restart: on-failure
-    networks:
-      - services
-
-networks:
-  services:
-    driver: bridge
