@@ -6,5 +6,5 @@ services:
     ports:
       - 3783:3000
     volumes:
-      - $(pwd):/home/workspace:cached
+      - ./config/:/home/workspace:cached
     restart: unless-stopped
