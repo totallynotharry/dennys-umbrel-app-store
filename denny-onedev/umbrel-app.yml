@@ -1,32 +1,50 @@
 manifestVersion: 1
 id: denny-onedev
 name: Onedev
-tagline: A web-based IDE framework with a small footprint and minimal requirements
-icon: https://i.imgur.com/MZnT2VS.png
+tagline: A powerful Git server with CI/CD, kanban, and packages
+icon: https://i.imgur.com/rUBEaiJ.png
 category: developer tools
-version: "5.5.0"
+version: "11.3.2"
 port: 6610
 description: >-
-  Atheos is a lightweight, web-based integrated development environment (IDE) designed for developers seeking fast, streamlined coding directly in the browser. Its minimal setup requires only a web server (Apache) and PHP 7+ without a database, making it highly accessible and efficient. Atheos supports over 40 programming languages, including PHP, JavaScript, Python, and Ruby, and offers an intuitive interface with split panels, syntax highlighting, advanced search, and real-time collaboration. Ideal for multi-user environments, it emphasizes flexibility with customizable themes and layouts, providing developers with a smooth, responsive experience.
+  ⚠️ This app is RAM-intensive and can take 5 minutes to start after installation.
+  
+
+  OneDev is a self-hosted DevOps tool that serves as a comprehensive platform for software development and project management. It combines several functions into a single tool, including:
+
+  
+  🔍 Version control: It provides built-in Git support, allowing code management directly within the platform.
+
+  
+  📦 CI/CD (Continuous Integration / Continuous Delivery): OneDev enables you to create build and deployment pipelines for continuously testing and delivering code changes.
+
+  
+  🐞 Issue tracking: It offers a task management system to organize projects and track progress.
+
+  
+  👩‍💻 Code review: Developers can perform code reviews directly on the platform to ensure quality.
+
+  
+  📝 Kanban boards: OneDev includes flexible boards to help manage tasks and workflows.
+
+  
+  🔗 Third-party integration: It supports the integration of external services and tools.
 
 
-  Atheos enables real-time project sharing and multi-user collaboration, making it useful for development teams or remote programming. It features a built-in code explorer, search tools for quickly locating files or text, and syntax highlighting for easier readability of code across languages. Atheos also supports plugins for further customization, such as version control integration or additional language support.
-
-
-  By using Atheos, you can run a full IDE on your own server without heavy overhead. It's designed to be fast, responsive, and highly adaptable to a variety of workflows, while remaining secure and simple to install. The IDE is especially suited for collaborative coding, enabling multiple users to work on the same codebase simultaneously in real-time, which is useful for both small teams and large development groups. Its simplicity, coupled with its focus on performance, makes Atheos a powerful tool for developers looking to maximize productivity in a lightweight, flexible environment.
-
-developer: Liam Siira
-website: https://atheos.io/
+  The tool is especially appealing for teams that prefer a complete DevOps solution in a single, self-hosted system without relying on external cloud services.
+  
+developer: OneDev Pty
+website: https://onedev.io/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/Atheos/Atheos
-support: https://github.com/Atheos/Atheos/issues
+repo: https://github.com/theonedev/onedev
+support: https://code.onedev.io/onedev/server/~issues?query=%22State%22+is+%22Open%22
 gallery:
-  - https://i.imgur.com/7iRQ5po.png
-  - https://i.imgur.com/7iRQ5po.png
-  - https://i.imgur.com/7iRQ5po.png
+  - https://i.imgur.com/y7fglvF.png
+  - https://i.imgur.com/y7fglvF.png
+  - https://i.imgur.com/y7fglvF.png
 releaseNotes: >-
-  This release focuses on a wide range of bug fixes, improving the stability and reliability of the IDE. The codebase has been cleaned up, reducing redundancies and making future development smoother. Several quality-of-life improvements have been introduced, enhancing the overall user experience. These could include better performance, more intuitive interface adjustments, or helpful new features that streamline common workflows. This update emphasizes not just bug resolution but also a more refined, user-friendly interface for developers using Atheos.
+  The changelog includes the addition of functionality to reset a user's two-factor authentication (2FA) and improvements to the user experience during the 2FA reset process.
 dependencies:
 path: ""
 defaultUsername: ""
