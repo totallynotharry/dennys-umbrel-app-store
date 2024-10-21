@@ -6,6 +6,7 @@ services:
     ports:
       - "3761:3000"
     environment:
+      - WEBSOCKET_ALLOWED_ORIGINS=umbrel.local:3761
       - RAILS_ENV=development
       - GITHUB_CLIENT_ID=${GITHUB_CLIENT_ID}
       - GITHUB_CLIENT_SECRET=${GITHUB_CLIENT_SECRET}
