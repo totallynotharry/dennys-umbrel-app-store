@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-onedev
 name: Onedev
 tagline: A powerful Git server with CI/CD, kanban, and packages
-icon: https://i.imgur.com/9xwUavB.png
+icon: https://i.imgur.com/rUBEaiJ.png
 category: developer tools
 version: "11.3.2"
 port: 6610
