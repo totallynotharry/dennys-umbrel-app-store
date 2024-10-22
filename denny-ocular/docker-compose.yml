@@ -10,19 +10,19 @@ services:
     ports:
       - "3957:3957"  # Port für den Backend-Service
     environment:
-      - GENESIS_PORT=3957
-      - GENESIS_DB_PATH=/app/.data/db.sqlite
-      - GENESIS_CREATE_USERS=umbrel!:umbrelpass
-      - GENESIS_AUTHORIZED_URIS=http://umbrel.local:3957  
-      - GENESIS_JWT_SECRET=umbrelpass
-      - GENESIS_JWT_TOKEN_EXPIRATION=525600
-      - GENESIS_JWT_COOKIE_ALLOW_HTTP=true
-      - GENESIS_USERNAME_PATTERN=^[\w]{0,32}$
-      - GENESIS_KEY_PATTERN=^[\w]{0,32}$
-      - GENESIS_DATA_MAX_SIZE=512
-      - GENESIS_KEYS_PER_USER=5
-      - GENESIS_GIN_MODE=release
-      - GENESIS_LOG_MODE=production
+      - GENESIS_PORT
+      - GENESIS_DB_PATH
+      - GENESIS_CREATE_USERS
+      - GENESIS_AUTHORIZED_URIS
+      - GENESIS_JWT_SECRET
+      - GENESIS_JWT_TOKEN_EXPIRATION
+      - GENESIS_JWT_COOKIE_ALLOW_HTTP
+      - GENESIS_USERNAME_PATTERN
+      - GENESIS_KEY_PATTERN
+      - GENESIS_DATA_MAX_SIZE
+      - GENESIS_KEYS_PER_USER
+      - GENESIS_GIN_MODE
+      - GENESIS_LOG_MODE
 
   frontend:
     image: ghcr.io/simonwep/ocular:v1.5
