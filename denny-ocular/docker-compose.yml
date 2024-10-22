@@ -7,6 +7,7 @@ services:
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data:/app/.data:rw
+    command: start
     environment:
       - GENESIS_PORT=${GENESIS_PORT}
       - GENESIS_DB_PATH=${GENESIS_DB_PATH}
@@ -27,5 +28,5 @@ services:
     image: ghcr.io/simonwep/ocular:v1.5
     restart: on-failure
     ports:
-      - '3956:80'  # Frontend auf Port 3956
+      - '3957:80'  # Frontend auf Port 3957
     container_name: denny-ocular_frontend_1
