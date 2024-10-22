@@ -27,5 +27,5 @@ services:
     image: ghcr.io/simonwep/ocular:v1.5
     restart: on-failure
     ports:
-      - '3957:80'  # Frontend auf Port 3956
+      - '3956:80'  # Frontend auf Port 3956
     container_name: denny-ocular_frontend_1
