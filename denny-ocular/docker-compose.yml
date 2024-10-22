@@ -25,10 +25,10 @@ services:
     restart: on-failure
 
   nginx:
-    image: nginx:1.24-alpine
+    image: nginx:1.24-alpine@sha256:77e5d4a6ad906c5d3793764085706577fa705b1dc6f244ea0241c4b5e2155385
     restart: on-failure
     ports:
-      - "3030:80"
+      - "3957:80"
     volumes:
       - ${APP_DATA_DIR}/config/nginx.conf:/etc/nginx/nginx.conf
     depends_on:
