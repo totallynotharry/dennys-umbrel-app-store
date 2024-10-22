@@ -8,7 +8,7 @@ services:
       - ${APP_DATA_DIR}/data:/app/.data:rw
     command: start
     ports:
-      - "3957:3957"  # Port für den Backend-Service
+      - "3957:80"  # Port für den Backend-Service
     environment:
       - GENESIS_PORT
       - GENESIS_DB_PATH
