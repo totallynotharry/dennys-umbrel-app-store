@@ -12,7 +12,7 @@ services:
     environment:
       - GENESIS_PORT=3957
       - GENESIS_DB_PATH=/app/.data/db.sqlite
-      - GENESIS_CREATE_USERS="umbrel!:umbrelpass"
+      - GENESIS_CREATE_USERS=umbrel!:umbrelpass
       - GENESIS_AUTHORIZED_URIS=http://umbrel.local:3957  
       - GENESIS_JWT_SECRET=umbrelpass
       - GENESIS_JWT_TOKEN_EXPIRATION=525600
