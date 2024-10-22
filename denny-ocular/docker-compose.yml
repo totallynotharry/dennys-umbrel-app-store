@@ -1,9 +1,9 @@
 services:
   backend:
-    image: ghcr.io/simonwep/genesis:v1.3
-    restart: unless-stopped
+    image: ghcr.io/simonwep/genesis:v1.3.1@sha256:57d3df842f9f877f200b8fa28ba9cbf0b9b4a126ee917da3d34f2a3679459958
+    restart: on-failure
     volumes:
-      - ./data:/app/.data
+      - ${APP_DATA_DIR}/data:/app/.data:rw
     command: start
     environment:
       - GENESIS_PORT
@@ -21,16 +21,16 @@ services:
       - GENESIS_LOG_MODE
 
   frontend:
-    image: ghcr.io/simonwep/ocular:v1.5
-    restart: unless-stopped
+    image: ghcr.io/simonwep/ocular:v1.5@sha256:ee7a7a4272b37a1bc212a96c2057b3f5e66191f9c521296c8fd0a10373af77c6
+    restart: on-failure
 
   nginx:
     image: nginx:1.24-alpine
-    restart: unless-stopped
+    restart: on-failure
     ports:
       - "3030:80"
     volumes:
-      - ./config/nginx.conf:/etc/nginx/nginx.conf
+      - ${APP_DATA_DIR}/config/nginx.conf:/etc/nginx/nginx.conf
     depends_on:
       - backend
       - frontend
