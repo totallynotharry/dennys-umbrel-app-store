@@ -7,8 +7,6 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data:/app/.data:rw
     command: start
-    ports:
-      - "3957:80"  # Port für den Backend-Service
     environment:
       - GENESIS_PORT
       - GENESIS_DB_PATH
@@ -32,7 +30,7 @@ services:
     image: nginx:1.24-alpine
     restart: on-failure
     ports:
-      - "3958:80"  
+      - "3957:80"  
     volumes:
       - ${APP_DATA_DIR}/config/nginx.conf:/etc/nginx/nginx.conf
     depends_on:
