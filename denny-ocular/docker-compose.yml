@@ -34,3 +34,8 @@ services:
     container_name: denny-ocular_frontend_1
     networks:
       - services
+
+networks:
+  services:
+    name: services
+    external: true
