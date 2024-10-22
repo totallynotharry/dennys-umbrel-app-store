@@ -6,7 +6,7 @@ services:
     image: ghcr.io/simonwep/genesis:v1.3
     restart: on-failure
     volumes:
-      - ./data:/app/.data:rw
+      - ${APP_DATA_DIR}/data:/app/data:rw
     command: start
     environment:
       - GENESIS_PORT
