@@ -23,8 +23,6 @@ services:
       - GENESIS_GIN_MODE
       - GENESIS_LOG_MODE
     container_name: denny-ocular_backend_1
-    networks:
-      - services
 
   frontend:
     image: ghcr.io/simonwep/ocular:v1.5
@@ -32,10 +30,3 @@ services:
     ports:
       - '3957:80'  # Frontend auf Port 3957
     container_name: denny-ocular_frontend_1
-    networks:
-      - services
-
-networks:
-  services:
-    name: services
-    external: true
