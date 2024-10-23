@@ -2,7 +2,7 @@ services:
   searxng:
     image: docker.io/searxng/searxng:latest
     volumes:
-      - ${APP_DATA_DIR}/searxng:/etc/searxng:rw
+      - ./searxng:/etc/searxng:rw
     ports:
       - 4000:8080
     networks:
@@ -22,7 +22,7 @@ services:
       - 3001:3001
     volumes:
       - backend-dbstore:/home/perplexica/data
-      - ${APP_DATA_DIR}/config.toml:/home/perplexica/config.toml
+      - ./config.toml:/home/perplexica/config.toml
     extra_hosts:
       - 'host.docker.internal:host-gateway'
     networks:
