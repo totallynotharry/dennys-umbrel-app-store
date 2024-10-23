@@ -45,7 +45,7 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | [WebCheck](https://github.com/Lissy93/web-check)    | An all-in-one Open Source Intelligence tool for analyzing any website|
 | [Atheos](https://github.com/Atheos/Atheos)    | A web-based IDE framework with a small footprint and minimal requirements|
 | [OneDev](https://github.com/theonedev/onedev)    | A powerful Git server with CI/CD, kanban, and packages|
-| [Cheshire Cat AI ](https://github.com/theonedev/onedev](https://github.com/cheshire-cat-ai/core)   | A framework to build custom AIs on top of any language model|
+| [Cheshire Cat AI](https://github.com/cheshire-cat-ai/core)   | A framework to build custom AIs on top of any language model|
 🔄 All Apps are continually updated and new Apps are added over time.
 
 ##
