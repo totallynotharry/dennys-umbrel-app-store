@@ -46,6 +46,7 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | [Atheos](https://github.com/Atheos/Atheos)    | A web-based IDE framework with a small footprint and minimal requirements|
 | [OneDev](https://github.com/theonedev/onedev)    | A powerful Git server with CI/CD, kanban, and packages|
 | [Cheshire Cat AI](https://github.com/cheshire-cat-ai/core)   | A framework to build custom AIs on top of any language model|
+| [Anse](https://github.com/anse-app/anse)   | A fully optimized UI for AI Chats|
 🔄 All Apps are continually updated and new Apps are added over time.
 
 ##
