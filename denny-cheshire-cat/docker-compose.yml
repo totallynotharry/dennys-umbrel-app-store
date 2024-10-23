@@ -10,6 +10,6 @@ services:
     image: ghcr.io/cheshire-cat-ai/core:1.7.1@sha256:4c989430adcf8fa88a9947bf692e674d1a808196c51b973386ad9c1b616d5549
     restart: on-failure
     volumes:
-      - ${APP_DATA_DIR}/static:/app/cat/static
-      - ${APP_DATA_DIR}/plugins:/app/cat/plugins
-      - ${APP_DATA_DIR}/data:/app/cat/data
+      - ${APP_DATA_DIR}/static:/app/cat/static:rw
+      - ${APP_DATA_DIR}/plugins:/app/cat/plugins:rw
+      - ${APP_DATA_DIR}/data:/app/cat/data:rw
