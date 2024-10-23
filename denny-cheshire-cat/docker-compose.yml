@@ -13,5 +13,3 @@ services:
       - ${APP_DATA_DIR}/static:/app/cat/static:rw
       - ${APP_DATA_DIR}/plugins:/app/cat/plugins:rw
       - ${APP_DATA_DIR}/data:/app/cat/data:rw
-    ports:
-      - "1865:1865"
