@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-anse_web_1
+      APP_PORT: 3000
+      PROXY_AUTH_ADD: "false"
+  web:
+    image: ddiu8081/anse:latest
+    restart: on-failure
