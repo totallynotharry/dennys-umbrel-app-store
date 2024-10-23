@@ -1,14 +1,12 @@
 version: '3.9'
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: denny-cheshire-cat_server_1
-      APP_PORT: 80
-      PROXY_AUTH_ADD: "false"
-  server:
+
+  cheshire-cat-core:
     image: ghcr.io/cheshire-cat-ai/core:1.7.1@sha256:4c989430adcf8fa88a9947bf692e674d1a808196c51b973386ad9c1b616d5549
-    restart: on-failure
+    container_name: cheshire_cat_core
+    ports:
+      - 1865:80
     volumes:
       - ${APP_DATA_DIR}/static:/app/cat/static:rw
       - ${APP_DATA_DIR}/plugins:/app/cat/plugins:rw
