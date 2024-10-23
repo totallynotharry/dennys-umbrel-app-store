@@ -9,3 +9,5 @@ services:
   web:
     image: ddiu8081/anse:latest
     restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}:/app/data
