@@ -3,7 +3,7 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      APP_HOST: pingvin-share_web_1
+      APP_HOST: denny-pingvin-share_web_1
       APP_PORT: 3000
       PROXY_AUTH_ADD: "false"
   
