@@ -46,9 +46,11 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/cheshire-cat-ai/core
 support: https://github.com/cheshire-cat-ai/core/issues
 gallery:
-  - https://i.imgur.com/fInwqq1.png
-  - https://i.imgur.com/fInwqq1.png
-  - https://i.imgur.com/fInwqq1.png
+  - https://i.imgur.com/IRZrWLx.png
+  - https://i.imgur.com/pzShfKP.png
+  - https://i.imgur.com/GKzr98v.png
+  - https://i.imgur.com/LgU24HV.png
+  - https://i.imgur.com/Hboiq1y.png
 releaseNotes: >-
   Version 1.7.1 of Cheshire Cat AI introduces a user and permission system, JWT support for authentication, and custom authorization options. It also adds features like White Rabbit and the new StrayCat.classify function for enhanced AI capabilities.
 dependencies:
