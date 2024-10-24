@@ -8,14 +8,17 @@ services:
       PROXY_AUTH_ADD: "false"
       
   linkstack:
-    image: linkstackorg/linkstack:latest # This image has no version specific tags
+    hostname: 'linkstack'
+    image: 'linkstackorg/linkstack:latest@sha256:abd691b4293b020a317de8794737671e0315159efcb868e8a4124d6f0611f7ae' #This image has no version specific tags
     restart: on-failure
+    # This image doesn't support a custom user
+    # user: '1000:1000'
     environment:
-      SERVER_ADMIN: "" # Optional: Add your email or leave empty
-      HTTP_SERVER_NAME: umbrel.local
-      HTTPS_SERVER_NAME: "" # Optional: Add HTTPS server name or leave empty
+      SERVER_ADMIN: 
+      HTTP_SERVER_NAME: 'umbrel.local'
+      HTTPS_SERVER_NAME:
     volumes:
-      - ${APP_DATA_DIR}/data:/htdocs
-
+      - '${APP_DATA_DIR}/data:/htdocs'
+    
 volumes:
   linkstack_data:
