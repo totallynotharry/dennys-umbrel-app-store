@@ -22,6 +22,7 @@ services:
 volumes:
   linkstack_data:
 
+#PR -> https://github.com/getumbrel/umbrel-apps/pull/1537
 
 # apache2 config problem not solved (work in progress)
 
