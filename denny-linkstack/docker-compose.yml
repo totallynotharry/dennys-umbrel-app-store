@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_ADD: "false"
       
   linkstack:
-    image: linkstackorg/linkstack:latest@sha256:abd691b4293b020a317de8794737671e0315159efcb868e8a4124d6f0611f7ae # This image has no version specific tags
+    image: linkstackorg/linkstack:latest # This image has no version specific tags
     restart: on-failure
     environment:
       SERVER_ADMIN: "" # Optional: Add your email or leave empty
