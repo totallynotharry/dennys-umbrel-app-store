@@ -26,5 +26,4 @@ services:
 
 volumes:
   linkstack_data:
-  volumes:
-  - 'linkstack_data:/htdocs'
+  - linkstack_data:/htdocs
