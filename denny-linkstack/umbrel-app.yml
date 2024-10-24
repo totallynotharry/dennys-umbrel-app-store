@@ -5,7 +5,7 @@ tagline: A highly customizable link sharing platform with an intuitive, easy to 
 icon: https://i.imgur.com/1uzSQWG.png
 category: social
 version: "4.2.3"
-port: 8191
+port: 8190
 description: >-
   LinkStack is a unique platform that provides an efficient solution for managing and sharing links online. Our platform offers a website similar to Linktree, which allows users to overcome the limitation of only being able to add one link on social media platforms.
 
