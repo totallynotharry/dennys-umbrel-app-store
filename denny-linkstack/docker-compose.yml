@@ -10,14 +10,12 @@ services:
   linkstack:
     image: linkstackorg/linkstack:V4@sha256:5cc5b4806f57c153e924fbd0c49d4255dee4c66cd6621f0e457fd43e43e5c000
     restart: on-failure
-    # This image doesn't support a custom user
-    # user: '1000:1000'
     environment:
-      SERVER_ADMIN: 
+      SERVER_ADMIN: "" # Optional: Add your email or leave empty
       HTTP_SERVER_NAME: umbrel.local
-      HTTPS_SERVER_NAME:
+      HTTPS_SERVER_NAME: "" # Optional: Add HTTPS server name or leave empty
     volumes:
       - ${APP_DATA_DIR}/data:/htdocs
-    
+
 volumes:
   linkstack_data:
