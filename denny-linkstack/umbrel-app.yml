@@ -1,50 +1,49 @@
-manifestVersion: 1
-id: denny-linkstack
-name: LinkStack
-tagline: A highly customizable link sharing platform with an intuitive, easy to use user interface
-icon: https://i.imgur.com/1uzSQWG.png
-category: social
-version: "4.2.3"
-port: 8190
-description: >-
-  LinkStack is a unique platform that provides an efficient solution for managing and sharing links online. Our platform offers a website similar to Linktree, which allows users to overcome the limitation of only being able to add one link on social media platforms.
+version: "3.8"
+
+services:
+
+  linkstack:
+    hostname: 'linkstack'
+    image: 'linkstackorg/linkstack:latest'
+    environment:
+      TZ: 'Europe/Berlin'
+      SERVER_ADMIN: 
+      HTTP_SERVER_NAME: umbrel.local
+      HTTPS_SERVER_NAME:
+      LOG_LEVEL: 'info'
+      PHP_MEMORY_LIMIT: '256M'
+      UPLOAD_MAX_FILESIZE: '8M'
+    volumes:
+      - 'linkstack_data:/htdocs'
+    ports:
+      - '8190:80'
+    restart: on-failure
+
+volumes:
+  linkstack_data:
 
 
-  With LinkStack, users can easily link to their own custom page and provide their followers with access to all the links they need in one convenient location. What sets LinkStack apart from other link management platforms is its flexibility, which allows users to host their links on their own web server or web hosting provider. This provides users with complete control over their online presence and ensures that their links are easily accessible.
+# apache2 config problem not solved (work in progress)
 
+#version: "3.8"
 
-  Additionally, LinkStack allows other users to register and create their own links, making it an ideal solution for businesses and organizations looking to manage multiple links. With our user-friendly Admin Panel, managing and accessing other users links is easy.
+#services:
+#  app_proxy:
+#    environment:
+#      APP_HOST: denny-linkstack_web_1
+#      APP_PORT: 80
 
-
-  Why choose LinkStack?
-
-
-  💡 Feature rich: LinkStack offers more features than any other comparable solution out there.
-
-
-  ⚙️ Easy to set up: LinkStack is user-friendly and easier to set up compared to similar web applications.
-
-
-  👐 Open Source: LinkStack is free to use, distribute, and modify. The source code is available on GitHub (https://github.com/LinkStackOrg).
-
-
-
-  ☁️ It is recommended to use LinkStack together with the Cloudflare app from the Umbrel App Store, paired with your own custom domain.
-developer: Julian Prieber
-website: https://linkstack.org/
-submitter: dennysubke
-submission: https://github.com/getumbrel/umbrel-apps/pull/1537
-repo: https://github.com/LinkStackOrg/LinkStack
-support: https://github.com/LinkStackOrg/LinkStack/issues
-gallery:
-  - https://i.imgur.com/hgYPsEe.png
-  - https://i.imgur.com/xGtBotr.png
-  - https://i.imgur.com/gruMpsQ.png
-  - https://i.imgur.com/2ZENf0M.png
-  - https://i.imgur.com/ItJd5X6.png
-releaseNotes: >-
-  Critical security updates have been implemented, and an issue with cookie deletion in session management has been fixed. After installation, users are now automatically redirected to the dashboard. Unique avatar IDs are available for theme developers, and the info message for single-user mode during installation has been improved. New features include the ability to fetch favicons from CAPTCHA-protected pages and create custom buttons. Additionally, support for Chinese (zh-TW) and Galician (GL) languages has been added, along with a Simplex button.
-dependencies: []
-path: ""
-defaultUsername: ""
-defaultPassword: ""
+#  web:
+#    image: linkstackorg/linkstack:latest@sha256:6e7e8f44099f7c4f1340bb9ffda5411f97da766a06fd63cf1ff90c57ce22dd61
+#    restart: on-failure
+#    volumes:
+#      - ${APP_DATA_DIR}/linkstack:/htdocs
+#    environment:
+#      HOST: umbrel.local    
+#      TZ: Europe/Berlin
+#      PHP_MEMORY_LIMIT: 512M
+#      UPLOAD_MAX_FILESIZE: 8M
+#      SERVER_ADMIN:
+#      HTTP_SERVER_NAME:
+#      HTTPS_SERVER_NAME:
+#      LOG_LEVEL: 'info'
