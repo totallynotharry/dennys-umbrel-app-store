@@ -14,9 +14,16 @@ description: >-
 
 
   - Self-hosting of LLM models.
+  
+  
   - No reliance on cloud services.
+  
+  
   - Supports LLaMA models for natural conversation.
+  
+  
   - User-friendly web interface for easy access.
+  
 
 
   Serge is ideal for anyone seeking to deploy AI chatbots within a controlled environment, ensuring data privacy, particularly for organizations with strict security requirements. It can be tailored for customer service, internal support, research projects, or even personal use, allowing full control over conversations and data management.
