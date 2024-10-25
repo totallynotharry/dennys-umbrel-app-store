@@ -5,7 +5,7 @@ tagline: A fully optimized UI for AI Chats
 icon: https://i.imgur.com/yvMMBmw.png
 category: networking
 version: "1.1.11"
-port: 8040
+port: 8400
 description: >-
   Anse is a powerful application designed to enhance user experiences by providing streamlined access to various advanced AI models such as ChatGPT, DALL-E, and Stable Diffusion. The application aims to serve a wide range of use cases, from text and content generation to image synthesis, making it suitable for creative professionals, developers, and casual users alike.
   
