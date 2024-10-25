@@ -15,4 +15,3 @@ services:
     environment:
       FASTGEOIP: "false"
       ZEROTIER: "false"
-      PORT: "8040"
