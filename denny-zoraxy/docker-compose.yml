@@ -13,5 +13,6 @@ services:
       - ${APP_DATA_DIR}/var/run/docker.sock:/var/run/docker.sock
       - ${APP_DATA_DIR}/etc/localtime:/etc/localtime
     environment:
-      FASTGEOIP: "true"
-      ZEROTIER: "true"
+      FASTGEOIP: "false"
+      ZEROTIER: "false"
+      PORT: "8040"
