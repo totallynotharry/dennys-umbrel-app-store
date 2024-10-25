@@ -6,7 +6,7 @@ services:
     ports:
       - 80:80
       - 443:443
-      - 8000:8000
+      - 8040:8000
     volumes:
       - ${APP_DATA_DIR}/config/:/opt/zoraxy/config/
       - ${APP_DATA_DIR}/zerotier/config/:/var/lib/zerotier-one/
