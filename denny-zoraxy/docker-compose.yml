@@ -4,9 +4,9 @@ services:
     container_name: zoraxy
     restart: on-failure
     ports:
-      - 8042:80
-      - 4431:443
-      - 8042:8000
+      - 80:80
+      - 443:443
+      - 8000:8000
     volumes:
       - ${APP_DATA_DIR}/config/:/opt/zoraxy/config/
       - ${APP_DATA_DIR}/zerotier/config/:/var/lib/zerotier-one/
