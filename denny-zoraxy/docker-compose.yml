@@ -1,6 +1,6 @@
 services:
   zoraxy:
-    image: zoraxydocker/zoraxy:3.1.0@sha256:be470fec5fe8b3f023ad91627d595dd3260ddb9680fddbb9e512973313ae6db0
+    image: zoraxydocker/zoraxy:v3.1.1r3@sha256:fe0618d9fc83bddcead140784148a666d894c6ebc5b9c27bb34ba72157e2db19
     container_name: zoraxy
     restart: on-failure
     ports:
