@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: denny-zoraxy
 name: Zoraxy
-tagline: A fully optimized UI for AI Chats
+tagline: An efficient reverse proxy server with automated SSL management.
 icon: https://i.imgur.com/Hi7EYoI.png
 category: networking
 version: "3.1.1r3"
@@ -43,9 +43,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/tobychui/zoraxy
 support: https://github.com/tobychui/zoraxy/issues
 gallery:
-  - https://i.imgur.com/NREWYXH.png
-  - https://i.imgur.com/NREWYXH.png
-  - https://i.imgur.com/NREWYXH.png
+  - https://i.imgur.com/9FitCoU.png
+  - https://i.imgur.com/9FitCoU.png
+  - https://i.imgur.com/9FitCoU.png
 releaseNotes: >-
   The patch release for Zoraxy version 3.1.1 focuses on fixing the Docker image from the previous version, v3.1.1r2. The binaries remain unchanged, allowing users of the executable version to decide whether to update. The main highlight is the improved Docker image, which enhances performance and reliability for users operating in containerized environments.
 dependencies:
