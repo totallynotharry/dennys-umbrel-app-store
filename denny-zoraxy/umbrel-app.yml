@@ -43,9 +43,11 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/tobychui/zoraxy
 support: https://github.com/tobychui/zoraxy/issues
 gallery:
-  - https://i.imgur.com/9FitCoU.png
-  - https://i.imgur.com/9FitCoU.png
-  - https://i.imgur.com/9FitCoU.png
+  - https://i.imgur.com/Kqv1pyy.png
+  - https://i.imgur.com/q00uOw4.png
+  - https://i.imgur.com/bIKqsaQ.png
+  - https://i.imgur.com/wgjleUc.png
+  - https://i.imgur.com/BYHeqCt.png
 releaseNotes: >-
   The patch release for Zoraxy version 3.1.1 focuses on fixing the Docker image from the previous version, v3.1.1r2. The binaries remain unchanged, allowing users of the executable version to decide whether to update. The main highlight is the improved Docker image, which enhances performance and reliability for users operating in containerized environments.
 dependencies:
