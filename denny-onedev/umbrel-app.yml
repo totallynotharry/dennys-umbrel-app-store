@@ -40,9 +40,11 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/theonedev/onedev
 support: https://code.onedev.io/onedev/server/~issues?query=%22State%22+is+%22Open%22
 gallery:
-  - https://i.imgur.com/y7fglvF.png
-  - https://i.imgur.com/y7fglvF.png
-  - https://i.imgur.com/y7fglvF.png
+  - https://i.imgur.com/h0uGMcr.png
+  - https://i.imgur.com/0QY1giQ.png
+  - https://i.imgur.com/MFh16fP.png
+  - https://i.imgur.com/SPNKYGe.png
+  - https://i.imgur.com/TZ1JPvb.png
 releaseNotes: >-
   The changelog includes the addition of functionality to reset a user's two-factor authentication (2FA) and improvements to the user experience during the 2FA reset process.
 dependencies:
