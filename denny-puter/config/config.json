@@ -1,5 +1,5 @@
 {
-  "remote_url": "http://umbrel.local:4100",
+  "remote_url": "http://umbrel.local",
   "proxy": false,
   "auth_whitelist": ["/api/*"]
 }
