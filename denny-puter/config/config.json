@@ -1,6 +1,6 @@
 {
   "remote_url": "http://umbrel.local",
-  "port": 4100,
+  "http_port": 4100,
   "proxy": false,
   "auth_whitelist": ["/api/*"]
 }
