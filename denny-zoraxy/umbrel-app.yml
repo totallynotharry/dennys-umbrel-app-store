@@ -4,47 +4,50 @@ name: Zoraxy
 tagline: A fully optimized UI for AI Chats
 icon: https://i.imgur.com/Hi7EYoI.png
 category: networking
-version: "1.1.11"
+version: "3.1.1r3"
 port: 8400
 description: >-
-  Anse is a powerful application designed to enhance user experiences by providing streamlined access to various advanced AI models such as ChatGPT, DALL-E, and Stable Diffusion. The application aims to serve a wide range of use cases, from text and content generation to image synthesis, making it suitable for creative professionals, developers, and casual users alike.
-  
-  
+  Zoraxy is a powerful, user-friendly reverse proxy server and forwarding tool, designed to provide a straightforward, flexible, and secure method for managing web traffic within home labs and developer environments. Written in Go, Zoraxy caters to both novice and experienced users by simplifying the process of routing HTTP requests to backend servers, enabling efficient and reliable service management without relying on traditional, more complex servers like NGINX or Apache.
+
+
   Key Features:
-
   
-  ✨ Unified Interface: Anse combines multiple AI models into a single platform, allowing users to seamlessly switch between them for different tasks without the need for multiple applications.
 
- 
-  🎨 Creative Versatility: Users can generate high-quality text, create stunning visuals, and explore generative art, enabling diverse applications in fields like marketing, design, and storytelling.
-
-  
-  👤 User-Friendly Design: Anse prioritizes ease of use, featuring an intuitive interface that simplifies interactions with complex AI systems, making it accessible to those who may not have technical expertise.
-
- 
-  🔗 Integration Capabilities: The application is designed with developers in mind, offering integration features that allow for the incorporation of AI functionalities into existing workflows and applications.
-
-  
-  👥 Community-Driven Development: Anse is an open-source project, inviting contributions from developers and enthusiasts. This collaborative approach fosters rapid innovation and improvement, driven by community feedback and participation.
-
-  
-  💬 Documentation and Support: Comprehensive documentation and a supportive community help users maximize their experience, providing resources and guidance for troubleshooting and advanced usage.
+  🔀 Reverse Proxy & WebSocket Support: Zoraxy handles HTTP/2 connections and automatically supports WebSocket proxying, making it ideal for real-time applications that need a stable, low-latency connection, such as chat services or dashboards. It also enables reverse proxying across virtual directories and supports alias hostnames and custom headers for enhanced flexibility.
 
 
-  Anse stands out as a versatile tool that democratizes access to powerful AI capabilities. By merging various models into one cohesive application, it caters to a wide audience and encourages creative exploration. The commitment to user experience and community involvement makes Anse a valuable addition to the growing landscape of AI applications.
+  🤖 TLS/SSL with ACME Automation: Zoraxy simplifies the setup of HTTPS using ACME, which enables automatic renewal of SSL certificates through providers like Let's Encrypt. This feature supports both SNI (Server Name Indication) and SAN (Subject Alternative Name) certificates, helping users serve multiple domains securely with minimal manual intervention.
 
-developer: Diu
-website: https://anse.app/
+
+  📍 Geo-IP Blacklisting and Whitelisting: Security is enhanced by offering geo-IP and IP-based blacklisting and whitelisting, allowing users to restrict access based on location or specific IP addresses. This feature is especially useful for protecting applications and services from specific regions or untrusted IPs.
+
+
+  🌐 Global Area Network Controller & ZeroTier Integration: For distributed networks, Zoraxy provides a built-in controller interface for managing ZeroTier networks, facilitating secure and scalable connections across multiple nodes. This feature is particularly valuable for homelab enthusiasts and developers creating private network setups with limited external access​ Zoraxy DEV Community.
+
+
+  🛠️ Built-in Utilities: Zoraxy goes beyond traditional reverse proxy functionality, including utilities like CIDR IP conversion, an mDNS scanner for local network discovery, and tools for debugging proxy connections. A Web-SSH terminal allows remote management of connected devices within the network, and its Wake-on-LAN support further extends Zoraxy’s usability for network administrators.
+
+
+  📊 Stream Proxying & Monitoring: Beyond HTTP/HTTPS, Zoraxy supports TCP and UDP stream proxying, making it a versatile choice for handling various data streams. Integrated uptime monitoring and non-personalized traffic analytics provide insights into network activity without cookies, enhancing privacy and enabling users to track service performance directly within Zoraxy.
+
+
+  🖥️ Simple UI & Integration: The Zoraxy interface is designed to be intuitive, with in-depth setup instructions for less experienced users. Advanced configurations can disable authentication to integrate with existing infrastructures that use permission management. Additionally, a single-admin management mode makes it easy to operate within private networks, similar to managing a home router.
+
+
+  Zoraxy is particularly popular in the homelab and developer communities for its extensive feature set, reliability, and open-source nature. It can be run on low-power devices, making it suitable for a variety of hosting environments, from personal setups to larger, distributed network architectures. Its flexibility, combined with a robust feature set, makes it a compelling choice for anyone looking to streamline their network management setup or host web services securely and efficiently.
+
+developer: Toby Chui
+website: https://zoraxy.aroz.org/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/anse-app/anse
-support: https://github.com/anse-app/anse/issues
+repo: https://github.com/tobychui/zoraxy
+support: https://github.com/tobychui/zoraxy/issues
 gallery:
   - https://i.imgur.com/NREWYXH.png
   - https://i.imgur.com/NREWYXH.png
   - https://i.imgur.com/NREWYXH.png
 releaseNotes: >-
-  The latest updates to the application include the addition of chat type settings in the header and the introduction of the model gpt-3.5-turbo-16k-0613. The user interface was improved by removing the border between the button and textarea. Additionally, a bug fix was implemented to support Progressive Web App (PWA) functionality on Netlify. These enhancements collectively improve user experience and broaden model capabilities.
+  The patch release for Zoraxy version 3.1.1 focuses on fixing the Docker image from the previous version, v3.1.1r2. The binaries remain unchanged, allowing users of the executable version to decide whether to update. The main highlight is the improved Docker image, which enhances performance and reliability for users operating in containerized environments.
 dependencies:
 path: ""
 defaultUsername: ""
