@@ -4,8 +4,8 @@ services:
     container_name: zoraxy
     restart: on-failure
     ports:
-      - 80:80
-      - 443:443
+      - 8042:80
+      - 4431:443
       - 8040:8000
     volumes:
       - ${APP_DATA_DIR}/config/:/opt/zoraxy/config/
