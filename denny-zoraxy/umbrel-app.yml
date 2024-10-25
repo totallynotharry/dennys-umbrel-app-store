@@ -1,6 +1,6 @@
 manifestVersion: 1
 id: denny-zoraxy
-name: Zoraxy
+name: Zoraxy Proxy Server
 tagline: An efficient reverse proxy server with automated SSL management.
 icon: https://i.imgur.com/Hi7EYoI.png
 category: networking
