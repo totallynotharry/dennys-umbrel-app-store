@@ -6,7 +6,7 @@ services:
     ports:
       - 8042:80
       - 4431:443
-      - 8040:8000
+      - 8042:8000
     volumes:
       - ${APP_DATA_DIR}/config/:/opt/zoraxy/config/
       - ${APP_DATA_DIR}/zerotier/config/:/var/lib/zerotier-one/
@@ -15,4 +15,4 @@ services:
     environment:
       FASTGEOIP: "false"
       ZEROTIER: "false"
-      PORT: "8040"
+      PORT: "8042"
