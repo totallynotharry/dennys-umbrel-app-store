@@ -1,0 +1,17 @@
+services:
+  zoraxy:
+    image: zoraxydocker/zoraxy:3.1.0@sha256:be470fec5fe8b3f023ad91627d595dd3260ddb9680fddbb9e512973313ae6db0
+    container_name: zoraxy
+    restart: on-failure
+    ports:
+      - 80:80
+      - 443:443
+      - 8040:8000
+    volumes:
+      - ${APP_DATA_DIR}/config/:/opt/zoraxy/config/
+      - ${APP_DATA_DIR}/zerotier/config/:/var/lib/zerotier-one/
+      - ${APP_DATA_DIR}/var/run/docker.sock:/var/run/docker.sock
+      - ${APP_DATA_DIR}/etc/localtime:/etc/localtime
+    environment:
+      FASTGEOIP: "true"
+      ZEROTIER: "true"
