@@ -5,7 +5,7 @@ tagline: Test
 icon: https://i.imgur.com/Jz4lSRj.png
 category: files & productivity
 version: "1.7.4"
-port: 3333
+port: 8339
 description: >-
   PrivateBin is an open-source, minimalist, and encrypted pastebin service.
   It allows users to share text or code snippets securely, with end-to-end encryption, ensuring that only the intended recipient can read the contents.
