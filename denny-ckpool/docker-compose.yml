@@ -1,13 +1,34 @@
- version: "3.7"
+version: "3.7"
 
- services:
-   docker-ckpool:
-     image: pinkyswear/ckpool-bitcoind
-     ports:
-       - 3333:3333
-     extra_hosts:
-       - ckpool.local:host-gateway
-     volumes:
-       - ${PWD}/conf:/srv/ckpool/conf
-       - ${PWD}/logs:/srv/ckpool/logs
-     restart: unless-stopped
+services:
+  bitcoin:
+    container_name: bitcoind
+    user: 1000:1000
+    image: pinkyswear/ckpool-bitcoind
+    volumes:
+      - ./bitcoin:/data/.bitcoin
+    restart: on-failure
+    stop_grace_period: 15m30s
+    ports:
+      - "8333:8333"
+      - "8332:8332"
+      - "28332:28332"
+      - "28333:28333"
+      - "28888:28888"
+    networks:
+      - ckpool_network
+
+  docker-ckpool:
+    container_name: ckpool
+    image: pinkyswear/ckpool-solo
+    ports:
+      - 3333:3333
+    volumes:
+      - ./conf:/srv/ckpool/conf
+      - ./logs:/srv/ckpool/logs
+    restart: unless-stopped
+    networks:
+      - ckpool_network
+
+networks:
+  ckpool_network:
