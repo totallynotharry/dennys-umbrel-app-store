@@ -6,7 +6,7 @@ services:
     user: 1000:1000
     image: pinkyswear/ckpool-bitcoind
     volumes:
-      - ./bitcoin:/data/.bitcoin
+      - ${APP_DATA_DIR}/bitcoin:/data/.bitcoin
     restart: on-failure
     stop_grace_period: 15m30s
     ports:
@@ -24,7 +24,7 @@ services:
     ports:
       - 3333:3333
     volumes:
-      - ${APP_DATA_DIR}/conf:/srv/ckpool/conf:rw
+      - ${APP_DATA_DIR}/conf/ckpool.conf:/srv/ckpool/conf:rw
       - ${APP_DATA_DIR}/logs:/srv/ckpool/logs::rw
     restart: unless-stopped
     networks:
