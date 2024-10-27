@@ -9,5 +9,7 @@ services:
   web:
     image: davidjosearaujo/onionshare:0.0.1@sha256:49db7ad49e383590f83512b4607b135861ef9b74d4e2400ef53b9cd31f4d0d3b
     restart: on-failure
+    expose:
+      - "80"
     volumes:
       - ${APP_DATA_DIR}/onionshare-data:/onionshare
