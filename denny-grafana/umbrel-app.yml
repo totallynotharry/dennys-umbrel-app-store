@@ -48,7 +48,7 @@ gallery:
   - https://i.imgur.com/DFQ8LkW.png
   - https://i.imgur.com/DFQ8LkW.png
 releaseNotes: >-
-  The latest update includes dependency upgrades that enhance compatibility with PHP 8.2 and features the inclusion of sabre/dav version 4.6.0.
+  The latest update includes significant enhancements in alerting, such as improved permissions management, streamlined linking to silence forms, and better handling of query visibility in simplified mode. Additionally, updates to authentication and migration support for Library Elements are notable. Bug fixes address issues with TimeRangeInput, permissions on external rule groups, and dashboard usability across different environments.
 dependencies:
 path: ""
 defaultUsername: ""
