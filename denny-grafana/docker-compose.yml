@@ -7,8 +7,9 @@ services:
       APP_PORT: 3000
       PROXY_AUTH_ADD: "false"
   web:
-    image: grafana/grafana-enterprise
+    image: grafana/grafana-enterprise:11.3.0
     restart: on-failure
+    user: '0'
     volumes:
       - ${APP_DATA_DIR}/grafana-storage:/var/lib/grafana
 volumes:
