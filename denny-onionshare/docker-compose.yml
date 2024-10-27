@@ -1,30 +1,15 @@
 version: '3.9'
 
 services:
-  traefik:
-    image: traefik:v2.10
-    container_name: traefik
-    command:
-      - "--api.insecure=true"                          # Aktiviert das Traefik-Dashboard
-      - "--providers.docker=true"                      # Aktiviert Docker-Provider für automatische Erkennung
-      - "--entrypoints.web.address=:80"                # Definiert den HTTP-Einstiegspunkt auf Port 80
-    ports:
-      - "8437:80"                                        # Exponiert den HTTP-Port
-      - "8438:8080"                                    # Exponiert das Traefik-Dashboard
+  app_proxy:
+    environment:
+      APP_HOST: denny-onionshare_web_1
+      APP_PORT: 80
+      PROXY_AUTH_ADD: "false"
+  web:
+    image: davidjosearaujo/onionshare:0.0.1@sha256:49db7ad49e383590f83512b4607b135861ef9b74d4e2400ef53b9cd31f4d0d3b
+    restart: on-failure
+    expose:
+      - "80"
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro   # Zugriff auf den Docker-Socket für automatische Erkennung
-    networks:
-      - proxy_net
-
-  app:
-    image: davidjosearaujo/onionshare:0.0.1@sha256:49db7ad49e383590f83512b4607b135861ef9b74d4e2400ef53b9cd31f4d0d3b                            # Ersetze mit deinem tatsächlichen Image
-    labels:
-      - "traefik.enable=true"                          # Aktiviert die App für Traefik
-      - "traefik.http.routers.app.rule=Host(`localhost`)" # Definiert die Routing-Regel (z. B. Hostname)
-      - "traefik.http.services.app.loadbalancer.server.port=80" # Port, den die App intern nutzt
-    networks:
-      - proxy_net
-
-networks:
-  proxy_net:
-    driver: bridge
+      - ${APP_DATA_DIR}/onionshare-data:/onionshare
