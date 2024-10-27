@@ -1,32 +1,30 @@
 version: '3.9'
 
-networks:
-  onionshare_network:
-    driver: bridge
-
 services:
-  app_proxy:
-    image: httpd  # Ersetze dies ggf. mit dem tatsächlichen Proxy-Image
-    environment:
-      APP_HOST: web  # Referenziert den `web` Service hier korrekt
-      APP_PORT: 8437
-      PROXY_AUTH_ADD: "false"
-    networks:
-      - onionshare_network
-    depends_on:
-      - web
+  traefik:
+    image: traefik:v2.10
+    container_name: traefik
+    command:
+      - "--api.insecure=true"                          # Aktiviert das Traefik-Dashboard
+      - "--providers.docker=true"                      # Aktiviert Docker-Provider für automatische Erkennung
+      - "--entrypoints.web.address=:80"                # Definiert den HTTP-Einstiegspunkt auf Port 80
     ports:
-      - "8437:8437"
-
-  web:
-    image: davidjosearaujo/onionshare:0.0.1@sha256:49db7ad49e383590f83512b4607b135861ef9b74d4e2400ef53b9cd31f4d0d3b
-    restart: on-failure
-    networks:
-      - onionshare_network
-    ports:
-      - "8437:8437"
-    environment:
-      - PORT=8437
+      - "8437:80"                                        # Exponiert den HTTP-Port
+      - "8438:8080"                                    # Exponiert das Traefik-Dashboard
     volumes:
-      - ${APP_DATA_DIR}/onionshare-data:/onionshare
-    command: ["--port", "8437"]
+      - /var/run/docker.sock:/var/run/docker.sock:ro   # Zugriff auf den Docker-Socket für automatische Erkennung
+    networks:
+      - proxy_net
+
+  app:
+    image: davidjosearaujo/onionshare:0.0.1@sha256:49db7ad49e383590f83512b4607b135861ef9b74d4e2400ef53b9cd31f4d0d3b                            # Ersetze mit deinem tatsächlichen Image
+    labels:
+      - "traefik.enable=true"                          # Aktiviert die App für Traefik
+      - "traefik.http.routers.app.rule=Host(`localhost`)" # Definiert die Routing-Regel (z. B. Hostname)
+      - "traefik.http.services.app.loadbalancer.server.port=80" # Port, den die App intern nutzt
+    networks:
+      - proxy_net
+
+networks:
+  proxy_net:
+    driver: bridge
