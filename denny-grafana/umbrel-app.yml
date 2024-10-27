@@ -1,36 +1,52 @@
 manifestVersion: 1
 id: denny-grafana
 name: Grafana
-tagline: A lightweight CalDAV+CardDAV server
-icon: https://i.imgur.com/h3B1DaG.png
-category: AI
-version: "0.9.5"
+tagline: An advanced platform for logging, metrics, and application monitoring
+icon: https://i.imgur.com/Nd4aTOo.png
+category: networking
+version: "11.3.0"
 port: 3384
 description: >-
-  🪆 Baikal Server is a lightweight CalDAV and CardDAV server designed for users who want to manage their calendar and contact information securely on their own server. This robust application offers an extensive web interface that simplifies the management of users, address books, and calendars, making it accessible for both beginners and experienced users.
+  Grafana is an open-source analytics and monitoring platform designed for visualizing time-series data. It enables users to create dynamic and customizable dashboards that help track and analyze metrics from various data sources in real-time. With its intuitive user interface and powerful features, Grafana is widely used across industries for monitoring applications, infrastructure, and business metrics.
 
 
-  One of the key features of Baikal is its ease of installation and configuration. It requires only a basic PHP-capable server, which means you don’t need extensive technical knowledge to get started. The server supports both MySQL and SQLite databases for data storage, providing flexibility depending on your preferences and needs.
+  Data Source Integration: Grafana supports a wide range of data sources, including Prometheus, InfluxDB, Graphite, Elasticsearch, MySQL, PostgreSQL, and more. This flexibility allows users to pull data from multiple systems and consolidate it into a single dashboard.
+
+  Customizable Dashboards: Users can create visually appealing and interactive dashboards with various panel types, such as graphs, tables, heatmaps, and more. Each panel can be customized to display specific metrics, enabling users to tailor dashboards to their needs.
+
+  Alerting: Grafana provides robust alerting capabilities that notify users of potential issues in their data. Alerts can be configured based on specific conditions, and notifications can be sent via email, Slack, PagerDuty, and other channels.
+
+  Templating: Users can create reusable templates to filter and manipulate data dynamically. This feature is particularly useful for creating dashboards that need to display information for multiple entities or environments.
+
+  Annotations: Grafana allows users to add annotations to graphs, providing context for specific events or changes in data. This feature helps teams understand the impact of deployments, incidents, or other significant events.
+
+  User Management and Permissions: Grafana includes user authentication and authorization features, enabling organizations to manage access to dashboards and data sources effectively. Role-based access control ensures that users have the appropriate permissions based on their responsibilities.
+
+  Plugins and Extensions: Grafana has a rich ecosystem of plugins that extend its functionality. Users can find plugins for additional data sources, visualization types, and integrations with other tools.
+
+  Sharing and Collaboration: Dashboards can be easily shared with team members or stakeholders, either through direct links or embedded in other applications. Grafana also supports snapshots of dashboards for sharing static views.
+
+  Infrastructure Monitoring: Track the health and performance of servers, databases, and network devices.
+  
+  Application Performance Monitoring (APM): Visualize application metrics to identify bottlenecks and optimize performance.
+  
+  Business Metrics: Monitor key performance indicators (KPIs) and other business metrics to drive decision-making.
+  
+  IoT Data Visualization: Analyze and visualize data from IoT devices in real-time.
 
 
-  Baikal allows users to seamlessly access their contacts and calendars from any device. It is compatible with a wide range of applications, including iOS, macOS, DAVx5 on Android, Mozilla Thunderbird, and many other CalDAV and CardDAV capable applications. This compatibility ensures that you can sync your data across multiple platforms without any hassle.
+  Grafana is a powerful tool for anyone looking to gain insights into their data through visualization and monitoring. Its flexibility, ease of use, and extensive feature set make it a popular choice for organizations of all sizes. Whether you're monitoring infrastructure, applications, or business metrics, Grafana provides the tools you need to visualize and analyze your data effectively.
 
-
-  In addition to its user-friendly features, Baikal emphasizes privacy and data security. By hosting your calendars and contacts yourself, you maintain full control over your personal information, protecting it from potential breaches and unauthorized access. This is particularly important in an era where data privacy is a growing concern.
-
-
-  Whether you are an individual looking for a reliable personal organizer or a small team needing a collaborative solution, Baikal Server provides a practical and efficient way to manage your scheduling and contact needs while ensuring your data remains private and secure. With its fast performance and straightforward interface, Baikal is an excellent choice for anyone seeking a self-hosted calendar and contact management solution.
-
-developer: fruux GmbH
-website: https://sabre.io/baikal/
+developer: Grafana Labs
+website: https://grafana.com
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/sabre-io/Baikal
-support: https://github.com/sabre-io/Baikal/issues
+repo: https://github.com/grafana/grafana
+support: https://github.com/grafana/grafana/issues
 gallery:
-  - https://i.imgur.com/InOvJFa.png
-  - https://i.imgur.com/hIQ1ZIv.png
-  - https://i.imgur.com/nobRqdE.png
+  - https://i.imgur.com/DFQ8LkW.png
+  - https://i.imgur.com/DFQ8LkW.png
+  - https://i.imgur.com/DFQ8LkW.png
 releaseNotes: >-
   The latest update includes dependency upgrades that enhance compatibility with PHP 8.2 and features the inclusion of sabre/dav version 4.6.0.
 dependencies:
