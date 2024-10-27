@@ -25,9 +25,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/gchq/CyberChef
 support: https://github.com/gchq/CyberChef/issues
 gallery:
-  - https://i.imgur.com/DFQ8LkW.png
-  - https://i.imgur.com/DFQ8LkW.png
-  - https://i.imgur.com/DFQ8LkW.png
+  - https://i.imgur.com/dKVfnQL.png
+  - https://i.imgur.com/dKVfnQL.png
+  - https://i.imgur.com/dKVfnQL.png
 releaseNotes: >-
   Added support for ECDSA and DSA in the 'Parse CSR' feature, along with fixes for typos in SIGABA.mjs and other improvements.
 dependencies:
