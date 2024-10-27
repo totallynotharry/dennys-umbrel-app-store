@@ -1,19 +1,32 @@
 version: '3.9'
 
+networks:
+  onionshare_network:
+    driver: bridge
+
 services:
   app_proxy:
+    image: httpd  # Ersetze dies ggf. mit dem tatsächlichen Proxy-Image
     environment:
-      APP_HOST: denny-onionshare_web_1
-      APP_PORT: 8437  # Der feste Port, auf den zugegriffen werden soll
+      APP_HOST: web  # Referenziert den `web` Service hier korrekt
+      APP_PORT: 8437
       PROXY_AUTH_ADD: "false"
+    networks:
+      - onionshare_network
+    depends_on:
+      - web
+    ports:
+      - "8437:8437"
 
   web:
     image: davidjosearaujo/onionshare:0.0.1@sha256:49db7ad49e383590f83512b4607b135861ef9b74d4e2400ef53b9cd31f4d0d3b
     restart: on-failure
+    networks:
+      - onionshare_network
     ports:
-      - "8437:8437"  # Stellt sicher, dass der Port 8437 auf den Host abgebildet wird
+      - "8437:8437"
     environment:
-      - PORT=8437  # Fester Port für den OnionShare-Service
+      - PORT=8437
     volumes:
-      - ${APP_DATA_DIR}/onionshare-data:/onionshare  # Datenverzeichnis für persistente Daten
-    command: ["--port", "8437"]  # Startet den Dienst auf Port 8437
+      - ${APP_DATA_DIR}/onionshare-data:/onionshare
+    command: ["--port", "8437"]
