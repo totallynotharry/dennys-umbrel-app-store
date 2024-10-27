@@ -50,6 +50,7 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | [Serge](https://github.com/serge-chat/serge)   | An easy way to chat with Alpaca & other LLaMa based models|
 | [Zoraxy Proxy Server](https://github.com/tobychui/zoraxy)   | An efficient reverse proxy server with automated SSL management|
 | [CyberChef](https://github.com/gchq/CyberChef)   | An intuitive web app for exploring and decoding data effortlessly|
+| [Grafana](https://github.com/grafana/grafana)   | An advanced platform for logging, metrics, and application monitoring|
 
 🔄 All Apps are continually updated and new Apps are added over time.
 
