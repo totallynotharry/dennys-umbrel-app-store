@@ -1,38 +1,35 @@
 manifestVersion: 1
 id: denny-cyberchef
 name: CyberChef
-tagline: A lightweight CalDAV+CardDAV server
-icon: https://i.imgur.com/h3B1DaG.png
-category: AI
-version: "0.9.5"
+tagline: An intuitive web app for exploring and decoding data effortlessly
+icon: https://i.imgur.com/6bxC9hJ.png
+category: developer tools
+version: "10.19.4"
 port: 8817
 description: >-
-  🪆 Baikal Server is a lightweight CalDAV and CardDAV server designed for users who want to manage their calendar and contact information securely on their own server. This robust application offers an extensive web interface that simplifies the management of users, address books, and calendars, making it accessible for both beginners and experienced users.
+  CyberChef is a simple, intuitive web app designed for analyzing and decoding data without the complexity of traditional tools or programming languages. It encourages both technical and non-technical users to explore data formats, encryption, and compression.
+
+  In today’s digital landscape, data comes in various shapes, sizes, and formats, and CyberChef makes sense of it all on one easy-to-use platform. Its interface prioritizes simplicity, turning complex techniques into straightforward drag-and-drop actions. Users can combine simple functions to create "recipes," enabling intricate analyses that can be shared and enhanced through collaboration.
 
 
-  One of the key features of Baikal is its ease of installation and configuration. It requires only a basic PHP-capable server, which means you don’t need extensive technical knowledge to get started. The server supports both MySQL and SQLite databases for data storage, providing flexibility depending on your preferences and needs.
+  For those familiar with coding, CyberChef serves as a quick and efficient prototyping tool. Once a solution is validated, it can be easily scripted for broader application.
+
+  CyberChef is particularly valuable for cybersecurity and antivirus companies, as well as academics and professionals engaged in digital data analysis—whether they are software developers, analysts, mathematicians, or casual puzzle enthusiasts.
 
 
-  Baikal allows users to seamlessly access their contacts and calendars from any device. It is compatible with a wide range of applications, including iOS, macOS, DAVx5 on Android, Mozilla Thunderbird, and many other CalDAV and CardDAV capable applications. This compatibility ensures that you can sync your data across multiple platforms without any hassle.
-
-
-  In addition to its user-friendly features, Baikal emphasizes privacy and data security. By hosting your calendars and contacts yourself, you maintain full control over your personal information, protecting it from potential breaches and unauthorized access. This is particularly important in an era where data privacy is a growing concern.
-
-
-  Whether you are an individual looking for a reliable personal organizer or a small team needing a collaborative solution, Baikal Server provides a practical and efficient way to manage your scheduling and contact needs while ensuring your data remains private and secure. With its fast performance and straightforward interface, Baikal is an excellent choice for anyone seeking a self-hosted calendar and contact management solution.
-
-developer: fruux GmbH
-website: https://sabre.io/baikal/
+  By releasing CyberChef on GitHub, the aim is to foster community contributions that can be integrated into future versions of the tool. With 440 useful operations available, CyberChef acts as the Cyber Swiss Army Knife for anyone involved in Internet-related tasks, whether it’s converting timestamps, decompressing gzipped data, creating SHA3 hashes, or parsing X.509 certificates to identify issuers.
+developer: GCHQ
+website: https://gchq.github.io/CyberChef/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/sabre-io/Baikal
-support: https://github.com/sabre-io/Baikal/issues
+repo: https://github.com/gchq/CyberChef
+support: https://github.com/gchq/CyberChef/issues
 gallery:
-  - https://i.imgur.com/InOvJFa.png
-  - https://i.imgur.com/hIQ1ZIv.png
-  - https://i.imgur.com/nobRqdE.png
+  - https://i.imgur.com/DFQ8LkW.png
+  - https://i.imgur.com/DFQ8LkW.png
+  - https://i.imgur.com/DFQ8LkW.png
 releaseNotes: >-
-  The latest update includes dependency upgrades that enhance compatibility with PHP 8.2 and features the inclusion of sabre/dav version 4.6.0.
+  Added support for ECDSA and DSA in the 'Parse CSR' feature, along with fixes for typos in SIGABA.mjs and other improvements.
 dependencies:
 path: ""
 defaultUsername: ""
