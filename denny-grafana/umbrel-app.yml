@@ -51,6 +51,8 @@ description: >-
 
   Grafana is a powerful tool for anyone looking to gain insights into their data through visualization and monitoring. Its flexibility, ease of use, and extensive feature set make it a popular choice for organizations of all sizes. Whether you're monitoring infrastructure, applications, or business metrics, Grafana provides the tools you need to visualize and analyze your data effectively.
 
+
+  🗝️ Grafana's default login credentials are username: "admin" and password: "admin". Change the default password immediately after your first login to enhance security.
 developer: Grafana Labs
 website: https://grafana.com
 submitter: dennysubke
@@ -65,5 +67,5 @@ releaseNotes: >-
   The latest update includes significant enhancements in alerting, such as improved permissions management, streamlined linking to silence forms, and better handling of query visibility in simplified mode. Additionally, updates to authentication and migration support for Library Elements are notable. Bug fixes address issues with TimeRangeInput, permissions on external rule groups, and dashboard usability across different environments.
 dependencies:
 path: ""
-defaultUsername: ""
-defaultPassword: ""
+defaultUsername: "admin"
+defaultPassword: "admin"
