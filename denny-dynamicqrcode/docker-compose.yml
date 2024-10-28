@@ -20,8 +20,6 @@ services:
       DATABASE_PASSWORD: "sicheres_passwort"  # Passwort geändert
       DATABASE_PREFIX: ""
       DATABASE_CHARSET: "utf8"
-    ports:
-      - 8216:80
     depends_on:
       - php-dynamic-qrcode-db
     volumes:
