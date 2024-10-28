@@ -43,6 +43,7 @@ gallery:
 releaseNotes: >-
   NocoDB 0.257.2 is a bug fix release that addresses various issues, including encryption key configuration failures, conditional field alias display, and .doc format support. It introduces new features, like pinning datasheets as favorites and setting the default date to today. 
   
+  
   The release also includes updates for AWS IAM Role support, improved file size limits, and several GUI and API enhancements.
 dependencies:
 path: ""
