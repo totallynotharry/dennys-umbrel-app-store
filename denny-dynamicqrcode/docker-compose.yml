@@ -1,14 +1,7 @@
 version: "3.2"
-
 services:
-  app_proxy:
-    environment:
-      APP_HOST: denny-dynamicqrcode_web_1
-      APP_PORT: 80
-      PROXY_AUTH_ADD: "false"
-  web:
-    image:
-    image: "giandonatoinverso/php-dynamic-qr-code:latest@sha256:dcb15194a5ff1725913399c1196127a7aae2b8d0ce177b41f3503c8754601240"
+  php-dynamic-qrcode:
+    image: "giandonatoinverso/php-dynamic-qr-code:latest"
     restart: "unless-stopped"
     environment:
       TYPE: "docker"
@@ -20,6 +13,8 @@ services:
       DATABASE_PASSWORD: "sicheres_passwort"  # Passwort geändert
       DATABASE_PREFIX: ""
       DATABASE_CHARSET: "utf8"
+    ports:
+      - 8216:80
     depends_on:
       - php-dynamic-qrcode-db
     volumes:
