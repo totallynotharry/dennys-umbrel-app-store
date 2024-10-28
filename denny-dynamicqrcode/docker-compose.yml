@@ -1,7 +1,7 @@
 version: "3.2"
 services:
   php-dynamic-qrcode:
-    image: "giandonatoinverso/php-dynamic-qr-code:latest"
+    image: "giandonatoinverso/php-dynamic-qr-code:latest@sha256:dcb15194a5ff1725913399c1196127a7aae2b8d0ce177b41f3503c8754601240" #Kein Versions Tag
     restart: "unless-stopped"
     environment:
       TYPE: "docker"
