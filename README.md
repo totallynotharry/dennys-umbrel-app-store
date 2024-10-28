@@ -51,6 +51,10 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | [Zoraxy Proxy Server](https://github.com/tobychui/zoraxy)   | An efficient reverse proxy server with automated SSL management|
 | [CyberChef](https://github.com/gchq/CyberChef)   | An intuitive web app for exploring and decoding data effortlessly|
 | [Grafana](https://github.com/grafana/grafana)   | An advanced platform for logging, metrics, and application monitoring|
+| [NocoDB](https://github.com/nocodb/nocodb)   | A seamless no-code platform for database management|
+| [Wallos](https://github.com/ellite/Wallos)  | An empowering app to effortlessly manage your finances and track subscriptions and expenses|
+| [Dynamic QR Code](https://github.com/giandonatoinverso/PHP-Dynamic-Qr-code)   | An intuitive dashboard for seamless QR code creation|
+| [Flatnotes](https://github.com/dullage/flatnotes)  | A self-hosted note-taking app with flat Markdown file storage|
 
 🔄 All Apps are continually updated and new Apps are added over time.
 
