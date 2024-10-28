@@ -1,69 +1,85 @@
-version: '3'
-
+version: "3.9"
 services:
-  app:
-    image: pixelfed:20210125
-    restart: unless-stopped
+  pixelfed-redis:
+    image: redis
+    container_name: Pixelfed-REDIS
+    hostname: pixelfed-redis
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping || exit 1"]
+    user: 1026:100
+    environment:
+      - TZ=Europe/Bucharest
+    volumes:
+      - /volume1/docker/pixelfed/redis:/data:rw
+    restart: on-failure:5
+    
+  pixelfed-db:
+    image: postgres:16
+    container_name: Pixelfed-DB
+    hostname: pixelfed-db
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD", "pg_isready", "-q", "-d", "pixelfeddb", "-U", "pixelfeduser"]
+      timeout: 45s
+      interval: 10s
+      retries: 10
+    env_file:
+      - stack.env
+    environment:
+      - TZ=Europe/Bucharest
+    volumes:
+      - /volume1/docker/pixelfed/db:/var/lib/postgresql/data:rw
+    restart: on-failure:5
+
+  pixelfed-web:
+    image: quay.io/zknt/pixelfed:latest
+    container_name: Pixelfed-WEB
+    hostname: pixelfed-web
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: stat /etc/passwd || exit 1
+    env_file:
+      - stack.env
+    volumes:
+      - /volume1/docker/pixelfed/storage:/var/www/storage:rw
+      - app-bootstrap:/var/www/bootstrap
     ports:
-      - "8787:80"
-    environment:
-      - APP_NAME="PixelDroid testing instance"
-      - APP_ENV=production
-      - APP_KEY=base64:GENERIERTER_SCHLÜSSEL  # Ersetze durch generierten Schlüssel
-      - APP_DEBUG=false
-      - APP_URL=http://umbrel.local:8787
-      - APP_DOMAIN="umbrel.local"
-      - ADMIN_DOMAIN="umbrel.local"
-      - SESSION_DOMAIN="umbrel.local"
-      - TRUST_PROXIES="*"
-      - LOG_CHANNEL=stack
-      - DB_CONNECTION=sqlite
-      - CACHE_DRIVER=redis
-      - SESSION_DRIVER=redis
-      - QUEUE_DRIVER=redis
-      - REDIS_HOST=redis
-      - REDIS_PORT=6379
-      - MAIL_DRIVER=smtp
-      - MAIL_FROM_ADDRESS="pixelfed@example.com"
-      - MAIL_FROM_NAME="Pixelfed"
-      - OPEN_REGISTRATION=true
+      - 9750:80
+    restart: on-failure:5
+    depends_on:
+      pixelfed-db:
+        condition: service_started
+      pixelfed-redis:
+        condition: service_healthy
+
+  pixelfed-worker:
+    image: quay.io/zknt/pixelfed:latest
+    container_name: Pixelfed-WORKER
+    hostname: pixelfed-worker
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: php artisan horizon:status | grep running
+      interval: 60s
+      timeout: 5s
+      retries: 1
+    env_file:
+      - stack.env
     volumes:
-      - pixelfed-storage:/var/www/storage
+      - /volume1/docker/pixelfed/storage:/var/www/storage:rw
       - app-bootstrap:/var/www/bootstrap
-      - ./database.sqlite:/var/www/database/database.sqlite  # SQLite Datenbank
-    networks:
-      - web
-      - pixelfed
-
-  worker:
-    image: pixelfed:20210125
-    restart: unless-stopped
-    environment:
-      - APP_KEY=base64:GENERIERTER_SCHLÜSSEL  # Ersetze durch generierten Schlüssel
-      # Weitere Variablen wie oben
-    volumes:
-      - pixelfed-storage:/var/www/storage
-      - app-bootstrap:/var/www/bootstrap
-    networks:
-      - web
-      - pixelfed
-    command: gosu www-data php artisan horizon
-
-  redis:
-    image: redis:5-alpine
-    restart: unless-stopped
-    volumes:
-      - redis-data:/data
-    networks:
-      - pixelfed
-
+    restart: on-failure:5
+    entrypoint: /worker-entrypoint.sh
+    depends_on:
+      pixelfed-db:
+        condition: service_started
+      pixelfed-redis:
+        condition: service_healthy
+      pixelfed-web:
+        condition: service_healthy
 volumes:
-  redis-data:
   app-bootstrap:
-  pixelfed-storage:
-  
-networks:
-  pixelfed:
-    internal: true
-  web:
-    external: true
