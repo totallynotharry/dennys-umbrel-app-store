@@ -1,42 +1,153 @@
 version: '3'
+
 services:
-  pixelfed:
-    image: pixelfed/pixelfed:latest
+  app:
+    image: pixelfed:20210125 # Replace with your custom image tag if different
     restart: unless-stopped
+    ports:
+      - "8787:80" # Maps container's port 80 to host's port 8787
     environment:
+      - APP_NAME="PixelDroid testing instance"
       - APP_ENV=production
+      - APP_KEY=umbrelpass # Set APP_KEY to umbrelpass as requested
       - APP_DEBUG=false
-      - APP_KEY=your_random_generated_key_here
+      - APP_URL=http://umbrel.local:8787
+      - APP_DOMAIN="umbrel.local"
+      - ADMIN_DOMAIN="umbrel.local"
+      - SESSION_DOMAIN="umbrel.local"
+      - TRUST_PROXIES="*"
+      - LOG_CHANNEL=stack
       - DB_CONNECTION=mysql
-      - DB_HOST=db_host
+      - DB_HOST=db
       - DB_PORT=3306
       - DB_DATABASE=pixelfed
-      - DB_USERNAME=pixelfed_user
-      - DB_PASSWORD=pixelfed_password
-      - CACHE_DRIVER=file
-      - SESSION_DRIVER=file
-      - QUEUE_DRIVER=sync
-    ports:
-      - "9757:4000"
+      - DB_USERNAME=pixelfed
+      - DB_PASSWORD=umbrelpass
+      - BROADCAST_DRIVER=log
+      - CACHE_DRIVER=redis
+      - SESSION_DRIVER=redis
+      - QUEUE_DRIVER=redis
+      - REDIS_SCHEME=tcp
+      - REDIS_HOST=redis
+      - REDIS_PASSWORD=null
+      - REDIS_PORT=6379
+      - MAIL_DRIVER=smtp
+      - MAIL_HOST=smtp.mailtrap.io
+      - MAIL_PORT=2525
+      - MAIL_USERNAME=null
+      - MAIL_PASSWORD=null
+      - MAIL_ENCRYPTION=null
+      - MAIL_FROM_ADDRESS="pixelfed@example.com"
+      - MAIL_FROM_NAME="Pixelfed"
+      - OPEN_REGISTRATION=true
+      - ENFORCE_EMAIL_VERIFICATION=true
+      - PF_MAX_USERS=1000
+      - MAX_PHOTO_SIZE=64000
+      - MAX_CAPTION_LENGTH=150
+      - MAX_ALBUM_LENGTH=4
+      - MAX_ACCOUNT_SIZE=10000000
+      - IMAGE_QUALITY=100
+      - ACTIVITY_PUB=true
+      - AP_REMOTE_FOLLOW=true
+      - AP_INBOX=true
+      - PF_COSTAR_ENABLED=false
+      - HORIZON_EMBED=true
+      - OAUTH_ENABLED=true
     volumes:
-      - pixelfed_data:/var/www/html/storage
+      - pixelfed-storage:/var/www/storage
+      - app-bootstrap:/var/www/bootstrap
     networks:
-      - pixelfed_network
+      - web
+      - pixelfed
 
-  pixelfed_live:
-    image: pixelfed/pixelfed-live:latest
+  db:
+    image: mysql:8.0 # Alternatively, you could use mariadb
+    restart: unless-stopped
+    networks:
+      - pixelfed
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - db-data:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=pixelfed
+      - MYSQL_USER=pixelfed
+      - MYSQL_PASSWORD=umbrelpass
+      - MYSQL_RANDOM_ROOT_PASSWORD=true
+
+  worker:
+    image: pixelfed:20210125 # Replace with your custom image tag if different
     restart: unless-stopped
     environment:
-      - PIXELFED_URL=http://umbrel.local:9757
-      - PIXELFED_SECRET=your-pixelfed-secret
-    ports:
-      - "1935:1935"
+      - APP_NAME="PixelDroid testing instance"
+      - APP_ENV=production
+      - APP_KEY=umbrelpass
+      - APP_DEBUG=false
+      - APP_URL=http://umbrel.local:8787
+      - APP_DOMAIN="umbrel.local"
+      - ADMIN_DOMAIN="umbrel.local"
+      - SESSION_DOMAIN="umbrel.local"
+      - TRUST_PROXIES="*"
+      - LOG_CHANNEL=stack
+      - DB_CONNECTION=mysql
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_DATABASE=pixelfed
+      - DB_USERNAME=pixelfed
+      - DB_PASSWORD=umbrelpass
+      - BROADCAST_DRIVER=log
+      - CACHE_DRIVER=redis
+      - SESSION_DRIVER=redis
+      - QUEUE_DRIVER=redis
+      - REDIS_SCHEME=tcp
+      - REDIS_HOST=redis
+      - REDIS_PASSWORD=null
+      - REDIS_PORT=6379
+      - MAIL_DRIVER=smtp
+      - MAIL_HOST=smtp.mailtrap.io
+      - MAIL_PORT=2525
+      - MAIL_USERNAME=null
+      - MAIL_PASSWORD=null
+      - MAIL_ENCRYPTION=null
+      - MAIL_FROM_ADDRESS="pixelfed@example.com"
+      - MAIL_FROM_NAME="Pixelfed"
+      - OPEN_REGISTRATION=true
+      - ENFORCE_EMAIL_VERIFICATION=true
+      - PF_MAX_USERS=1000
+      - MAX_PHOTO_SIZE=64000
+      - MAX_CAPTION_LENGTH=150
+      - MAX_ALBUM_LENGTH=4
+      - MAX_ACCOUNT_SIZE=10000000
+      - IMAGE_QUALITY=100
+      - ACTIVITY_PUB=true
+      - AP_REMOTE_FOLLOW=true
+      - AP_INBOX=true
+      - PF_COSTAR_ENABLED=false
+      - HORIZON_EMBED=true
+      - OAUTH_ENABLED=true
+    volumes:
+      - pixelfed-storage:/var/www/storage
+      - app-bootstrap:/var/www/bootstrap
     networks:
-      - pixelfed_network
+      - web
+      - pixelfed
+    command: gosu www-data php artisan horizon
 
-networks:
-  pixelfed_network:
-    driver: bridge
+  redis:
+    image: redis:5-alpine
+    restart: unless-stopped
+    volumes:
+      - redis-data:/data
+    networks:
+      - pixelfed
 
 volumes:
-  pixelfed_data:
+  redis-data:
+  app-bootstrap:
+  pixelfed-storage:
+  db-data:
+
+networks:
+  pixelfed:
+    internal: true
+  web:
+    external: true
