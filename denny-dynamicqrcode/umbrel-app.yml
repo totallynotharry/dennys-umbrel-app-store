@@ -23,6 +23,9 @@ description: >-
   
 
   This script can be a great solution for any website requiring QR code generation with a structured, secure admin panel.
+
+
+  🗝️ The default username is "superadmin" and the password is "superadmin".
 developer: Giandonato Inverso
 website: https://github.com/giandonatoinverso/PHP-Dynamic-Qr-code
 submitter: dennysubke
@@ -43,5 +46,5 @@ releaseNotes: >-
   The initial version, version 1.0, was released in September 2020, marking the original launch of the project.
 dependencies:
 path: ""
-defaultUsername: ""
-defaultPassword: ""
+defaultUsername: "superadmin"
+defaultPassword: "superadmin"
