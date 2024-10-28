@@ -3,7 +3,7 @@ id: denny-dynamicqrcode
 name: Dynamic QR Code
 tagline: An intuitive dashboard for seamless QR code creation
 icon: https://i.imgur.com/5Jc1RPZ.png
-category: files
+category: files & productivity
 version: "2.2.7"
 port: 8216
 description: >-
