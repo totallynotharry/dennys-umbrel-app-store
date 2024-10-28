@@ -18,4 +18,4 @@ services:
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data:/data
-      - ${APP_DATA_DIR}/index:/data/.flatnotes
+      - ${APP_DATA_DIR}/index:/data/.flatnotes #Erlaubt das Speichern des Such Index
