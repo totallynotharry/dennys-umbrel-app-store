@@ -1,38 +1,42 @@
 manifestVersion: 1
 id: denny-dynamicqrcode
 name: Dynamic QR Code
-tagline: A lightweight CalDAV+CardDAV server
-icon: https://i.imgur.com/h3B1DaG.png
+tagline: An intuitive dashboard for seamless QR code creation
+icon: https://i.imgur.com/5Jc1RPZ.png
 category: files
-version: "0.9.5"
+version: "2.2.7"
 port: 8216
 description: >-
-  🪆 Baikal Server is a lightweight CalDAV and CardDAV server designed for users who want to manage their calendar and contact information securely on their own server. This robust application offers an extensive web interface that simplifies the management of users, address books, and calendars, making it accessible for both beginners and experienced users.
+  PHP Dynamic QR Code is a powerful script designed for generating and managing both dynamic and static QR codes. It features a sleek, responsive, and user-friendly interface, making it ideal for users who need accessible QR code management.
 
 
-  One of the key features of Baikal is its ease of installation and configuration. It requires only a basic PHP-capable server, which means you don’t need extensive technical knowledge to get started. The server supports both MySQL and SQLite databases for data storage, providing flexibility depending on your preferences and needs.
+  Built on the popular AdminLte template, this script leverages the strengths of the open-source AdminLte dashboard theme, which is known for its compatibility with Bootstrap and its extensive control panel features. The script uses Core PHP Admin Panel, which simplifies website management by providing essential functionalities like:
 
 
-  Baikal allows users to seamlessly access their contacts and calendars from any device. It is compatible with a wide range of applications, including iOS, macOS, DAVx5 on Android, Mozilla Thunderbird, and many other CalDAV and CardDAV capable applications. This compatibility ensures that you can sync your data across multiple platforms without any hassle.
+  Record Management (CRUD): Create, Read, Update, and Delete operations for easy data handling.
 
+  
+  Secure Authentication: Ensures only authorized users can access the admin panel.
 
-  In addition to its user-friendly features, Baikal emphasizes privacy and data security. By hosting your calendars and contacts yourself, you maintain full control over your personal information, protecting it from potential breaches and unauthorized access. This is particularly important in an era where data privacy is a growing concern.
+  
+  Pagination and Filters: Helps manage large sets of data with organized, searchable views.
+  
 
-
-  Whether you are an individual looking for a reliable personal organizer or a small team needing a collaborative solution, Baikal Server provides a practical and efficient way to manage your scheduling and contact needs while ensuring your data remains private and secure. With its fast performance and straightforward interface, Baikal is an excellent choice for anyone seeking a self-hosted calendar and contact management solution.
-
-developer: fruux GmbH
-website: https://sabre.io/baikal/
+This script can be a great solution for any website requiring QR code generation with a structured, secure admin panel.
+developer: Giandonato Inverso
+website: https://github.com/giandonatoinverso/PHP-Dynamic-Qr-code
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/sabre-io/Baikal
-support: https://github.com/sabre-io/Baikal/issues
+repo: https://github.com/giandonatoinverso/PHP-Dynamic-Qr-code
+support: https://github.com/giandonatoinverso/PHP-Dynamic-Qr-code/issues
 gallery:
-  - https://i.imgur.com/InOvJFa.png
-  - https://i.imgur.com/hIQ1ZIv.png
-  - https://i.imgur.com/nobRqdE.png
+  - 
 releaseNotes: >-
-  The latest update includes dependency upgrades that enhance compatibility with PHP 8.2 and features the inclusion of sabre/dav version 4.6.0.
+  The changelog covers several versions of the project. In version 2.2, released on October 16, 2023, the process for building Docker images was refactored, and support for Docker Compose was added. In the previous version 2.1, also released on October 16, 2023, database tables were refactored, a script for upgrading to versions 2.0 and above was introduced, and multi-user support for dynamic and static QR codes was implemented.
+
+  Version 2.0, released on October 15, 2023, included the elimination of unnecessary files, the relocation of the read.php file within the project, and the introduction of a Qrcode class abstraction. Additionally, bulk download functionality was improved, and general refactoring was performed.
+
+  The initial version, version 1.0, was released in September 2020, marking the original launch of the project.
 dependencies:
 path: ""
 defaultUsername: ""
