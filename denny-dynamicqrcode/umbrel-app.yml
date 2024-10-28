@@ -13,13 +13,13 @@ description: >-
   Built on the popular AdminLte template, this script leverages the strengths of the open-source AdminLte dashboard theme, which is known for its compatibility with Bootstrap and its extensive control panel features. The script uses Core PHP Admin Panel, which simplifies website management by providing essential functionalities like:
 
 
-  Record Management (CRUD): Create, Read, Update, and Delete operations for easy data handling.
+  🗂️ Record Management (CRUD): Create, Read, Update, and Delete operations for easy data handling.
 
   
-  Secure Authentication: Ensures only authorized users can access the admin panel.
+  🔒 Secure Authentication: Ensures only authorized users can access the admin panel.
 
   
-  Pagination and Filters: Helps manage large sets of data with organized, searchable views.
+  🔍 Pagination and Filters: Helps manage large sets of data with organized, searchable views.
   
 
   This script can be a great solution for any website requiring QR code generation with a structured, secure admin panel.
@@ -30,12 +30,16 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/giandonatoinverso/PHP-Dynamic-Qr-code
 support: https://github.com/giandonatoinverso/PHP-Dynamic-Qr-code/issues
 gallery:
-  - 
+  - https://i.imgur.com/5Jc1RPZ.png
+  - https://i.imgur.com/5Jc1RPZ.png
+  - https://i.imgur.com/5Jc1RPZ.png
 releaseNotes: >-
   The changelog covers several versions of the project. In version 2.2, released on October 16, 2023, the process for building Docker images was refactored, and support for Docker Compose was added. In the previous version 2.1, also released on October 16, 2023, database tables were refactored, a script for upgrading to versions 2.0 and above was introduced, and multi-user support for dynamic and static QR codes was implemented.
 
+  
   Version 2.0, released on October 15, 2023, included the elimination of unnecessary files, the relocation of the read.php file within the project, and the introduction of a Qrcode class abstraction. Additionally, bulk download functionality was improved, and general refactoring was performed.
 
+  
   The initial version, version 1.0, was released in September 2020, marking the original launch of the project.
 dependencies:
 path: ""
