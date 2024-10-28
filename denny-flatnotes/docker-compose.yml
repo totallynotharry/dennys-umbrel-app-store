@@ -7,7 +7,7 @@ services:
       APP_PORT: 8080
       PROXY_AUTH_ADD: "false"
   web:
-    image: dullage/flatnotes:latest
+    image: dullage/flatnotes:v5.3@sha256:2b16af29edb3b55c317b55ae60a860053a89db775fa23b9252945f14f345b7d5
     environment:
       PUID: 1000
       PGID: 1000
