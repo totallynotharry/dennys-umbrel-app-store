@@ -1,38 +1,37 @@
 manifestVersion: 1
 id: denny-wallos
 name: Wallos
-tagline: A lightweight CalDAV+CardDAV server
-icon: https://i.imgur.com/h3B1DaG.png
-category: networking
-version: "0.9.5"
-port: 85
+tagline: An empowering app to effortlessly manage your finances and track subscriptions and expenses
+icon: https://i.imgur.com/TCl5Oh7.png
+category: finance
+version: "2.32.0"
+port: 8282
 description: >-
-  🪆 Baikal Server is a lightweight CalDAV and CardDAV server designed for users who want to manage their calendar and contact information securely on their own server. This robust application offers an extensive web interface that simplifies the management of users, address books, and calendars, making it accessible for both beginners and experienced users.
+  Wallos is a dedicated software solution for managing subscriptions and tracking recurring expenses, offering a user-friendly web interface that allows users to view and organize all of their active subscriptions at a glance. Each subscription can include details like price, billing interval, and start date, making it easier for individuals and small businesses to keep track of their ongoing payments and make informed financial decisions.
 
+  Some key features of Wallos include:
 
-  One of the key features of Baikal is its ease of installation and configuration. It requires only a basic PHP-capable server, which means you don’t need extensive technical knowledge to get started. The server supports both MySQL and SQLite databases for data storage, providing flexibility depending on your preferences and needs.
+  📅 Comprehensive Subscription Management: Users can add multiple subscriptions and enter crucial details such as payment amount and currency for each. This enables quick comparison and monitoring of expenditures on services like streaming, software licenses, and other recurring payments.
 
+  ⏰ Notifications and Reminders: Wallos allows users to set reminders for upcoming subscription payments, ensuring they are notified in advance before any charges occur, thus avoiding unexpected account withdrawals.
 
-  Baikal allows users to seamlessly access their contacts and calendars from any device. It is compatible with a wide range of applications, including iOS, macOS, DAVx5 on Android, Mozilla Thunderbird, and many other CalDAV and CardDAV capable applications. This compatibility ensures that you can sync your data across multiple platforms without any hassle.
+  📊 Detailed Cost Statistics: The Wallos interface provides an overview of all subscriptions, including the total yearly and monthly costs. For international subscriptions, it also shows currency exchange rates, so users can track their expenses in their local currency.
 
+  🕵️‍♂️ Privacy and Data Security: Wallos can be run locally on the user’s server, keeping all data stored exclusively on their own device, an appealing feature for privacy-conscious users who wish to retain control over their information.
 
-  In addition to its user-friendly features, Baikal emphasizes privacy and data security. By hosting your calendars and contacts yourself, you maintain full control over your personal information, protecting it from potential breaches and unauthorized access. This is particularly important in an era where data privacy is a growing concern.
-
-
-  Whether you are an individual looking for a reliable personal organizer or a small team needing a collaborative solution, Baikal Server provides a practical and efficient way to manage your scheduling and contact needs while ensuring your data remains private and secure. With its fast performance and straightforward interface, Baikal is an excellent choice for anyone seeking a self-hosted calendar and contact management solution.
-
-developer: fruux GmbH
-website: https://sabre.io/baikal/
+  In summary, Wallos is a flexible, easy-to-use solution for efficiently managing subscriptions, keeping an eye on expenses, and optimizing financial planning.
+developer: Miguel Ribeiro
+website: https://wallosapp.com/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/sabre-io/Baikal
-support: https://github.com/sabre-io/Baikal/issues
+repo: https://github.com/ellite/Wallos
+support: https://github.com/ellite/Wallos/issues
 gallery:
-  - https://i.imgur.com/InOvJFa.png
-  - https://i.imgur.com/hIQ1ZIv.png
-  - https://i.imgur.com/nobRqdE.png
+  - https://i.imgur.com/tzhvmmN.png
+  - https://i.imgur.com/tzhvmmN.png
+  - https://i.imgur.com/tzhvmmN.png
 releaseNotes: >-
-  The latest update includes dependency upgrades that enhance compatibility with PHP 8.2 and features the inclusion of sabre/dav version 4.6.0.
+  Added a new setting that allows users to ignore SSL/TLS certificates for specific notification methods, enhancing flexibility in managing secure connections.
 dependencies:
 path: ""
 defaultUsername: ""
