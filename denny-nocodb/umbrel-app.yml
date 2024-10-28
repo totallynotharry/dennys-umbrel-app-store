@@ -1,38 +1,49 @@
 manifestVersion: 1
 id: denny-nocodb
 name: NocoDB
-tagline: A lightweight CalDAV+CardDAV server
-icon: https://i.imgur.com/h3B1DaG.png
+tagline: A seamless no-code platform for database management
+icon: https://i.imgur.com/4iBJN2p.png
 category: files & productivity
-version: "0.9.5"
+version: "0.257.2"
 port: 8096
 description: >-
-  🪆 Baikal Server is a lightweight CalDAV and CardDAV server designed for users who want to manage their calendar and contact information securely on their own server. This robust application offers an extensive web interface that simplifies the management of users, address books, and calendars, making it accessible for both beginners and experienced users.
+  NocoDB is an open-source platform that converts databases into smart, collaborative spreadsheets. It enables users to create no-code applications on top of databases like MySQL, PostgreSQL, SQLite, and even Airtable-like interfaces on existing data structures. 
+  
+  
+  Here are some key features and use cases of NocoDB:
 
 
-  One of the key features of Baikal is its ease of installation and configuration. It requires only a basic PHP-capable server, which means you don’t need extensive technical knowledge to get started. The server supports both MySQL and SQLite databases for data storage, providing flexibility depending on your preferences and needs.
+  📊 Spreadsheet Interface: Users interact with databases using a spreadsheet-like UI, making it accessible to non-technical users and allowing collaborative editing.
 
 
-  Baikal allows users to seamlessly access their contacts and calendars from any device. It is compatible with a wide range of applications, including iOS, macOS, DAVx5 on Android, Mozilla Thunderbird, and many other CalDAV and CardDAV capable applications. This compatibility ensures that you can sync your data across multiple platforms without any hassle.
+  🔄 REST API & Automation: It automatically generates REST APIs for each table, so users can integrate with other apps, create automations, or develop custom workflows.
 
 
-  In addition to its user-friendly features, Baikal emphasizes privacy and data security. By hosting your calendars and contacts yourself, you maintain full control over your personal information, protecting it from potential breaches and unauthorized access. This is particularly important in an era where data privacy is a growing concern.
+  🔐 Permissions & Roles: NocoDB supports user roles, access controls, and permissions, making it suitable for team use.
 
 
-  Whether you are an individual looking for a reliable personal organizer or a small team needing a collaborative solution, Baikal Server provides a practical and efficient way to manage your scheduling and contact needs while ensuring your data remains private and secure. With its fast performance and straightforward interface, Baikal is an excellent choice for anyone seeking a self-hosted calendar and contact management solution.
+  🎛️ Customizable Views: Users can create different views (grid, kanban, gallery) to visualize and manage data effectively.
 
-developer: fruux GmbH
-website: https://sabre.io/baikal/
+
+  Self-hostable & Scalable: As it is open source, NocoDB can be self-hosted, making it a good option for privacy-focused setups or those looking to avoid SaaS fees.
+
+
+  Overall, NocoDB is useful for project management, customer relationship management, data analytics, and custom business applications, especially where collaborative, database-backed applications are needed without writing much code.
+developer: NocoDB Inc.
+website: https://nocodb.com
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/sabre-io/Baikal
-support: https://github.com/sabre-io/Baikal/issues
+repo: https://github.com/nocodb
+support: https://github.com/nocodb/nocodb/issues
 gallery:
-  - https://i.imgur.com/InOvJFa.png
-  - https://i.imgur.com/hIQ1ZIv.png
-  - https://i.imgur.com/nobRqdE.png
+  - https://i.imgur.com/yMYMBU0.png
+  - https://i.imgur.com/CY4OfbC.png
+  - https://i.imgur.com/Ci2mPvl.png
+  - https://i.imgur.com/Xg0JgJD.png
 releaseNotes: >-
-  The latest update includes dependency upgrades that enhance compatibility with PHP 8.2 and features the inclusion of sabre/dav version 4.6.0.
+  NocoDB 0.257.2 is a bug fix release that addresses various issues, including encryption key configuration failures, conditional field alias display, and .doc format support. It introduces new features, like pinning datasheets as favorites and setting the default date to today. 
+  
+  The release also includes updates for AWS IAM Role support, improved file size limits, and several GUI and API enhancements.
 dependencies:
 path: ""
 defaultUsername: ""
