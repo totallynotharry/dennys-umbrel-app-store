@@ -6,10 +6,18 @@ services:
     environment:
       - APP_ENV=production
       - APP_DEBUG=false
-      - APP_KEY=umbrelpass
-      # Add other necessary environment variables here
+      - APP_KEY=your_random_generated_key_here
+      - DB_CONNECTION=mysql
+      - DB_HOST=db_host
+      - DB_PORT=3306
+      - DB_DATABASE=pixelfed
+      - DB_USERNAME=pixelfed_user
+      - DB_PASSWORD=pixelfed_password
+      - CACHE_DRIVER=file
+      - SESSION_DRIVER=file
+      - QUEUE_DRIVER=sync
     ports:
-      - "4444:4000"
+      - "9757:4000"
     volumes:
       - pixelfed_data:/var/www/html/storage
     networks:
@@ -19,9 +27,8 @@ services:
     image: pixelfed/pixelfed-live:latest
     restart: unless-stopped
     environment:
-      - PIXELFED_URL=http://umbrel.local:4444
+      - PIXELFED_URL=http://umbrel.local:9757
       - PIXELFED_SECRET=your-pixelfed-secret
-      # Add other necessary environment variables here
     ports:
       - "1935:1935"
     networks:
