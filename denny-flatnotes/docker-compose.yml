@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-flatnotes_web_1
+      APP_PORT: 8080
+      PROXY_AUTH_ADD: "false"
+  web:
+    image: dullage/flatnotes:latest
+    environment:
+      PUID: 1000
+      PGID: 1000
+      FLATNOTES_AUTH_TYPE: "password"
+      FLATNOTES_USERNAME: "admin"
+      FLATNOTES_PASSWORD: "umbrel"
+      FLATNOTES_SECRET_KEY: "zEjqehBof6Bb+zvR4venaQ=="
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+      - ${APP_DATA_DIR}/index:/data/.flatnotes
