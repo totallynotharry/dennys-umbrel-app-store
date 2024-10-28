@@ -7,32 +7,41 @@ category: files & productivity
 version: "5.3.0"
 port: 8061
 description: >-
-  🪆 Baikal Server is a lightweight CalDAV and CardDAV server designed for users who want to manage their calendar and contact information securely on their own server. This robust application offers an extensive web interface that simplifies the management of users, address books, and calendars, making it accessible for both beginners and experienced users.
+  Flatnotes is an open-source note-taking app designed with a focus on simplicity and user-friendliness. It allows users to create and manage their notes in a clear and structured format, making it easy to organize thoughts and ideas. 
+  
+  
+  Here are some of the key features that make Flatnotes stand out:
 
+  
+  ✍️ Markdown Support: Flatnotes supports the Markdown format, which means users can easily format and structure their text, allowing for more expressive and visually appealing notes.
+  
+  
+  ✨ Simple User Interface: The app boasts a minimalist user interface that ensures quick and intuitive navigation, enabling users to focus on their notes without unnecessary distractions.
+ 
+  
+  🔄 Synchronization: Flatnotes can synchronize with various cloud services, providing users with access to their notes across different devices and ensuring that their information is always up to date.
+  
+  
+  🌐 Open Source: As an open-source project, Flatnotes invites developers to customize and extend its functionalities, fostering a collaborative environment for innovation and improvement.
 
-  One of the key features of Baikal is its ease of installation and configuration. It requires only a basic PHP-capable server, which means you don’t need extensive technical knowledge to get started. The server supports both MySQL and SQLite databases for data storage, providing flexibility depending on your preferences and needs.
+  
+  In summary, Flatnotes is an excellent choice for users looking for an uncomplicated and efficient solution for their note-taking needs. With its emphasis on ease of use and flexibility, it caters to anyone from casual users to developers seeking a straightforward tool for managing their notes.
 
-
-  Baikal allows users to seamlessly access their contacts and calendars from any device. It is compatible with a wide range of applications, including iOS, macOS, DAVx5 on Android, Mozilla Thunderbird, and many other CalDAV and CardDAV capable applications. This compatibility ensures that you can sync your data across multiple platforms without any hassle.
-
-
-  In addition to its user-friendly features, Baikal emphasizes privacy and data security. By hosting your calendars and contacts yourself, you maintain full control over your personal information, protecting it from potential breaches and unauthorized access. This is particularly important in an era where data privacy is a growing concern.
-
-
-  Whether you are an individual looking for a reliable personal organizer or a small team needing a collaborative solution, Baikal Server provides a practical and efficient way to manage your scheduling and contact needs while ensuring your data remains private and secure. With its fast performance and straightforward interface, Baikal is an excellent choice for anyone seeking a self-hosted calendar and contact management solution.
-
-developer: fruux GmbH
-website: https://sabre.io/baikal/
+developer: Adam Dullage 
+website: https://demo.flatnotes.io/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/sabre-io/Baikal
-support: https://github.com/sabre-io/Baikal/issues
+repo: https://github.com/dullage/flatnotes
+support: https://github.com/dullage/flatnotes/issues
 gallery:
-  - https://i.imgur.com/InOvJFa.png
-  - https://i.imgur.com/hIQ1ZIv.png
-  - https://i.imgur.com/nobRqdE.png
+  - https://i.imgur.com/qN0KBZd.png
+  - https://i.imgur.com/qN0KBZd.png
+  - https://i.imgur.com/qN0KBZd.png
 releaseNotes: >-
-  The latest update includes dependency upgrades that enhance compatibility with PHP 8.2 and features the inclusion of sabre/dav version 4.6.0.
+  The new "Quick Access Notes" feature allows customization of the notes displayed on the home page, replacing the previous "RECENTLY MODIFIED" section. Users can now configure the search term, order, limit, and title of the notes shown, making it easier to pin or hide specific notes. Additionally, a button is available to view all "Quick Access Notes" if there are more than can be displayed. 
+  
+  
+  Please note that the config option FLATNOTES_HIDE_RECENTLY_MODIFIED has been deprecated in favor of FLATNOTES_QUICK_ACCESS_HIDE.
 dependencies:
 path: ""
 defaultUsername: ""
