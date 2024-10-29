@@ -7,7 +7,7 @@ category: files & productivity
 version: "2.0.0-rc.1"
 port: 92
 description: >-
-  ⚠️ This is an old version of Docusaurus provided for testing purposes only. The Docusaurus source files are located in </umbrel/app-data/denny-docusaurus/data/docusaurus/>. In the first run, it may take several minutes to download and prepare the entire source code from the Internet.
+  ⚠️ This is an old version of Docusaurus provided for testing purposes only. The Docusaurus source files are located in "/umbrel/app-data/denny-docusaurus/data/docusaurus/". In the first run, it may take several minutes to download and prepare the entire source code from the Internet.
   
   
   Docusaurus is an open-source framework designed specifically for building high-quality documentation websites. It’s built on top of React and uses modern JavaScript tools, making it a great choice for projects that need well-organized, user-friendly documentation without requiring a custom website build from scratch.
