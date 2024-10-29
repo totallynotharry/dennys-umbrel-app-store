@@ -11,3 +11,6 @@ services:
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/var/spacedrive:/var/spacedrive
+    environment:
+      - SD_AUTH=username:password # Setze hier deinen gewünschten Benutzername und Passwort
+      - TZ=UTC
