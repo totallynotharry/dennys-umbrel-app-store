@@ -55,6 +55,7 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | [Wallos](https://github.com/ellite/Wallos)  | An empowering app to effortlessly manage your finances and track subscriptions and expenses|
 | [Dynamic QR Code](https://github.com/giandonatoinverso/PHP-Dynamic-Qr-code)   | An intuitive dashboard for seamless QR code creation|
 | [Flatnotes](https://github.com/dullage/flatnotes)  | A self-hosted note-taking app with flat Markdown file storage|
+| [Spacedrive](https://github.com/spacedriveapp/spacedrive)  | A file manager from the future|
 
 🔄 All Apps are continually updated and new Apps are added over time.
 
