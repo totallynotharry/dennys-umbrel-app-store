@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-spacedrive_server_1
+      APP_PORT: 8080
+      PROXY_AUTH_ADD: "false"
+  server:
+    image: ghcr.io/spacedriveapp/spacedrive/server:0.4.2@sha256:fd3bc896f3a5b8e429e008cedde361d6b9468c48d8c81996fdb1d99e90e0837b
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/var/spacedrive:/var/spacedrive
+    environment:
+      SD_AUTH=disabled
+      #SD_AUTH=username:password
+      #SD_AUTH=username:password,username1:password1
