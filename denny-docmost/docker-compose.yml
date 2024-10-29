@@ -2,7 +2,7 @@ version: "3"
 
 services:
   docmost:
-    image: docmost/docmost:latest
+    image: docmost/docmost:0.4.1@sha256:d5ed81541e2b6de2b1c54ea5a06e1e9f198441da87074c6788ac1d77edad4bb5
     depends_on:
       - db
       - redis
