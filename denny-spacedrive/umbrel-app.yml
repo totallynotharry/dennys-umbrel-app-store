@@ -3,7 +3,7 @@ id: denny-spacedrive
 name: Spacedrive
 tagline: A file manager from the future
 icon: https://i.imgur.com/vQnXuIx.png
-category: in progress
+category: files & productivity
 version: "0.4.2"
 port: 8099
 description: >-
