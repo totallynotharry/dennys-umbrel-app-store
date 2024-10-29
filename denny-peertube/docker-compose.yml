@@ -5,7 +5,7 @@ services:
     image: chocobozzz/peertube:v6.3.2-bookworm@sha256:0aab2864739b3abbbcc32b58026432cafa2fba37954e36406134b1a6d721f236
     container_name: peertube_peertube
     ports:
-       - "9999:9000"
+       - "9944:9000"
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
       - ${APP_DATA_DIR}/data/videos:/data
