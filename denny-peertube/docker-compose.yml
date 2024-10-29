@@ -10,10 +10,10 @@ services:
       - ${APP_DATA_DIR}/data/config:/config
       - ${APP_DATA_DIR}/data/videos:/data
     environment:
-      - TZ="Europe/Berlin"
+      - TZ=Europe/Berlin
       - PT_INITIAL_ROOT_PASSWORD=password
-      - PEERTUBE_WEBSERVER_HOSTNAME=ip
-      - PEERTUBE_WEBSERVER_PORT=port
+      - PEERTUBE_WEBSERVER_HOSTNAME=umbrel.local
+      - PEERTUBE_WEBSERVER_PORT=9944
       - PEERTUBE_WEBSERVER_HTTPS=false
       - PEERTUBE_DB_USERNAME=peertube
       - PEERTUBE_DB_PASSWORD=peertube
@@ -55,4 +55,5 @@ services:
       - "6379"
 
 networks:
-  peertube
+  peertube:
+    driver: bridge
