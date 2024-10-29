@@ -4,7 +4,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: denny-spacedrive_server_1
-      APP_PORT: 8080
+      APP_PORT: 8080 # ->8099
       PROXY_AUTH_ADD: "false"
   server:
     image: ghcr.io/spacedriveapp/spacedrive/server:0.4.2@sha256:fd3bc896f3a5b8e429e008cedde361d6b9468c48d8c81996fdb1d99e90e0837b
@@ -12,5 +12,6 @@ services:
     volumes:
       - ${APP_DATA_DIR}/var/spacedrive:/var/spacedrive
     environment:
-      - SD_AUTH=username:password # Setze hier deinen gewünschten Benutzername und Passwort
-      - TZ=UTC
+      - SD_AUTH=admin:umbrel # Setze hier deinen gewünschten Benutzername und Passwort
+      - TZ=Europe/Berlin
+      #SD_AUTH=disabled - Deaktiviert die Authentifikation
