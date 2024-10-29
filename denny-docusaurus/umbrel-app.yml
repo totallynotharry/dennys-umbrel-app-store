@@ -1,38 +1,57 @@
 manifestVersion: 1
 id: denny-docusaurus
 name: Docusaurus
-tagline: A lightweight CalDAV+CardDAV server
-icon: https://i.imgur.com/h3B1DaG.png
+tagline: A streamlined way to build powerful documentation sites
+icon: https://i.imgur.com/CupytK6.png
 category: files & productivity
-version: "0.9.5"
+version: "2.0.0-rc.1"
 port: 92
 description: >-
-  🪆 Baikal Server is a lightweight CalDAV and CardDAV server designed for users who want to manage their calendar and contact information securely on their own server. This robust application offers an extensive web interface that simplifies the management of users, address books, and calendars, making it accessible for both beginners and experienced users.
+  ⚠️ This is an old version of Docusaurus provided for testing purposes only. The Docusaurus source files are located in </umbrel/app-data/denny-docusaurus/data/docusaurus/>. In the first run, it may take several minutes to download and prepare the entire source code from the Internet.
+  
+  
+  Docusaurus is an open-source framework designed specifically for building high-quality documentation websites. It’s built on top of React and uses modern JavaScript tools, making it a great choice for projects that need well-organized, user-friendly documentation without requiring a custom website build from scratch.
+
+  
+  Key features and benefits of Docusaurus:
 
 
-  One of the key features of Baikal is its ease of installation and configuration. It requires only a basic PHP-capable server, which means you don’t need extensive technical knowledge to get started. The server supports both MySQL and SQLite databases for data storage, providing flexibility depending on your preferences and needs.
+  🚀 Quick Setup: Docusaurus offers an easy setup process, allowing users to create a professional documentation site with minimal configuration. Its out-of-the-box templates and default theme provide a clean, structured look that is immediately usable.
 
 
-  Baikal allows users to seamlessly access their contacts and calendars from any device. It is compatible with a wide range of applications, including iOS, macOS, DAVx5 on Android, Mozilla Thunderbird, and many other CalDAV and CardDAV capable applications. This compatibility ensures that you can sync your data across multiple platforms without any hassle.
+  📜 Markdown Support: One of Docusaurus' biggest strengths is its support for Markdown, allowing users to write and manage content without needing HTML or complex styling. Markdown’s simplicity speeds up the documentation process, making it more accessible to contributors who may not be as familiar with coding.
 
 
-  In addition to its user-friendly features, Baikal emphasizes privacy and data security. By hosting your calendars and contacts yourself, you maintain full control over your personal information, protecting it from potential breaches and unauthorized access. This is particularly important in an era where data privacy is a growing concern.
+  🧩 Customization with Plugins and Themes: Docusaurus provides a flexible plugin architecture, making it easy to add features like search, analytics, localization, and more. Additionally, custom themes or color schemes can be applied to align with your project’s brand, while advanced users can further personalize the appearance by extending or overriding default React components.
 
 
-  Whether you are an individual looking for a reliable personal organizer or a small team needing a collaborative solution, Baikal Server provides a practical and efficient way to manage your scheduling and contact needs while ensuring your data remains private and secure. With its fast performance and straightforward interface, Baikal is an excellent choice for anyone seeking a self-hosted calendar and contact management solution.
+  📂 Content Versioning: Versioning in Docusaurus is a standout feature, particularly valuable for projects with ongoing development. With versioning, you can maintain separate versions of the documentation for different software releases. This is crucial for projects where users may be working with various releases, each potentially having different features or behaviors.
 
-developer: fruux GmbH
-website: https://sabre.io/baikal/
+
+  📱 SEO and Mobile Optimization: Docusaurus generates static websites, meaning they are SEO-friendly, fast, and can be easily indexed by search engines. Additionally, it ensures that websites are mobile-responsive, providing a seamless experience for users on any device.
+
+
+  📚 Built-in Blog Capability: Docusaurus allows users to add a blog section, making it easy to share project updates, community news, or technical articles directly on the documentation site. The blog feature uses Markdown as well, so posts can be created and edited in the same way as other documentation content.
+
+
+  👥 Community and Ecosystem: As Docusaurus is open-source, there is a large community that contributes plugins, themes, and various integrations. This allows for a robust ecosystem of add-ons and support resources, helping users to extend Docusaurus to fit their unique requirements.
+
+
+  Overall, Docusaurus is designed to streamline the documentation process, reducing time spent on setup and design so that teams can focus on creating high-quality content. Its combination of Markdown-based authoring, React customization, and version control make it an ideal tool for creating scalable and maintainable documentation for any project.
+
+
+developer: Meta Platforms Inc.
+website: https://docusaurus.io/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/sabre-io/Baikal
-support: https://github.com/sabre-io/Baikal/issues
+repo: https://github.com/facebook/docusaurus
+support: https://github.com/facebook/docusaurus/issues
 gallery:
-  - https://i.imgur.com/InOvJFa.png
-  - https://i.imgur.com/hIQ1ZIv.png
-  - https://i.imgur.com/nobRqdE.png
+  - https://i.imgur.com/5Wfw6WQ.png
+  - https://i.imgur.com/5Wfw6WQ.png
+  - https://i.imgur.com/5Wfw6WQ.png
 releaseNotes: >-
-  The latest update includes dependency upgrades that enhance compatibility with PHP 8.2 and features the inclusion of sabre/dav version 4.6.0.
+  The latest Docusaurus 2 beta comes with automatic updating and many improvements.
 dependencies:
 path: ""
 defaultUsername: ""
