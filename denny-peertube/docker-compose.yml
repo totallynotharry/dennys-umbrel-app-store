@@ -1,19 +1,17 @@
-version: "3.7"
-
 services:
   peertube:
     image: chocobozzz/peertube:v6.3.2-bookworm@sha256:0aab2864739b3abbbcc32b58026432cafa2fba37954e36406134b1a6d721f236
     container_name: peertube_peertube
     ports:
-       - "9944:9000"
+      - "9944:9000"
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
       - ${APP_DATA_DIR}/data/videos:/data
     environment:
-      - TZ=Europe/Berlin
+      - TZ="Europe/Berlin"
       - PT_INITIAL_ROOT_PASSWORD=password
-      - PEERTUBE_WEBSERVER_HOSTNAME=umbrel.local
-      - PEERTUBE_WEBSERVER_PORT=9944
+      - PEERTUBE_WEBSERVER_HOSTNAME=ip
+      - PEERTUBE_WEBSERVER_PORT=port
       - PEERTUBE_WEBSERVER_HTTPS=false
       - PEERTUBE_DB_USERNAME=peertube
       - PEERTUBE_DB_PASSWORD=peertube
@@ -23,37 +21,10 @@ services:
       - POSTGRES_PASSWORD=postgres
       - PEERTUBE_REDIS_HOSTNAME=redis
       - PEERTUBE_ADMIN_EMAIL=himself@christian-knedel.de
+      - PEERTUBE_SECRETS_PEERTUBE=3465e7113cae7fd08bd9d64b8f3c42a9
     depends_on:
       - postgres
       - redis
     restart: "on-failure"
     networks:
       - peertube
-
-  postgres:
-    restart: always
-    image: postgres:12
-    container_name: peertube_postgres
-    volumes:
-      - ${APP_DATA_DIR}/data/postgresql:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_USER=peertube
-      - POSTGRES_PASSWORD=peertube
-      - POSTGRES_DB=peertube
-    networks:
-      - peertube
-
-  redis:
-    image: redis:4-alpine
-    container_name: peertube_redis
-    volumes:
-      - ${APP_DATA_DIR}/data/redis:/data
-    restart: "on-failure"
-    networks:
-      - peertube
-    expose:
-      - "6379"
-
-networks:
-  peertube:
-    driver: bridge
