@@ -1,70 +1,32 @@
 manifestVersion: 1
 id: denny-spacedrive
 name: Spacedrive
-tagline: A Q&A platform software for teams at any scale
-icon: https://i.imgur.com/v5eG4SV.png
-category: social
-version: "1.4.0"
+tagline: A file manager from the future
+icon: https://i.imgur.com/vQnXuIx.png
+category: in progress
+version: "0.4.2"
 port: 8099
 description: >-
-  Apache Answer is an open-source business intelligence (BI) tool developed under the auspices of the Apache Software Foundation. It is designed to empower organizations to analyze and visualize their data effectively, facilitating better decision-making processes.
+  Spacedrive is an innovative file management solution designed to unify access to files from multiple devices, cloud services, and local storage into one seamless interface. It is tailored for users handling extensive media and data, offering a centralized approach to organizing, accessing, and searching content efficiently. As an open-source platform, Spacedrive prioritizes user control, privacy, and customization, allowing flexible use either locally or through self-hosted options. Its streamlined design, advanced search, and flexible deployment make it a powerful tool for professionals and digital creators alike.
 
   
-  Key Features:
-
-  
-  📊 Data Querying: Apache Answer provides robust querying capabilities, allowing users to interactively explore and manipulate data from various sources. Its query engine supports SQL-like syntax, making it accessible for users familiar with traditional database querying.
-
-  
-  🛠️ Dashboard Creation: Users can create custom dashboards that consolidate multiple data visualizations into a single interface. This feature enables stakeholders to monitor key performance indicators (KPIs) and other vital metrics at a glance.
-
-  
-  ✨ Data Visualization: Apache Answer offers a range of visualization options, including charts, graphs, tables, and more. Users can easily transform complex datasets into intuitive visual formats, making data insights more digestible.
-
-  
-  🔗 Integration with Data Sources: The tool is designed to integrate seamlessly with various data sources, including relational databases, cloud data warehouses, and flat files. This flexibility allows organizations to utilize existing data infrastructure without significant modifications.
-
-  
-  🖥️ User-Friendly Interface: One of Apache Answer's primary goals is to provide an intuitive user interface that minimizes the technical barrier for non-technical users. This accessibility ensures that employees across various departments can leverage data analytics without requiring extensive training.
-
-  
-  🤝 Collaboration and Sharing: Apache Answer supports collaboration among team members by allowing users to share dashboards and reports. This feature fosters a data-driven culture within organizations, where insights can be disseminated easily among stakeholders.
-
- 
-  🌐 Open-Source Community: Being an open-source project, Apache Answer benefits from contributions by a global community of developers and users. This collaborative approach ensures continuous improvement, feature enhancements, and security updates.
-
- 
-  Use Cases:
+  ⚠️ Spacedrive is currently in its Alpha phase, allowing early adopters to explore its features while the platform continues to evolve. For optimal performance with its Docker container, it’s recommended to run on Linux (linux/amd64), as the container is not yet optimized for other platforms. Spacedrive is designed for a unified and efficient file management experience, integrating diverse data sources into a single interface, particularly benefiting users with substantial data collections.
 
 
-  🔍 Performance Monitoring: Organizations can utilize Apache Answer to monitor business performance in real-time, helping them respond quickly to emerging trends or issues.
-  
-  
-  📈 Market Analysis: By integrating various data sources, businesses can analyze market conditions, customer behaviors, and competitor strategies, informing their strategic decisions.
-  
-  
-  ⚙️ Operational Efficiency: Apache Answer can identify inefficiencies in operations by analyzing workflow data, enabling businesses to streamline processes and reduce costs.
-
-
-  Apache Answer is a powerful tool for organizations looking to harness the potential of their data. Its user-friendly interface, robust querying capabilities, and comprehensive visualization options make it an invaluable asset in the quest for data-driven insights. As a product of the Apache Software Foundation, it continues to evolve, guided by the needs of its users and the ever-changing landscape of data analytics.
-
-
-  ⚠️ During the installation, you need to select the "SQLite database". Please make sure to specify the path "/data/answer.db" to store the data correctly and ensure the application runs smoothly.
-
-
-developer: Apache Software Foundation
-website: https://answer.apache.org/
+  🔑 The default login credentials for Spacedrive are set to username "admin" and password "umbrel".
+developer: Spacedrive Technology Inc.
+website: https://www.spacedrive.com
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/answerdev
-support: https://github.com/apache/incubator-answer/issues
+repo: https://github.com/spacedriveapp
+support: https://github.com/spacedriveapp/spacedrive/issues
 gallery:
-  - https://i.imgur.com/pTrvI3n.png
-  - https://i.imgur.com/p6xVq3X.png
-  - https://i.imgur.com/iyuFvOn.png
+  - https://i.imgur.com/7RVM9vS.png
+  - https://i.imgur.com/7RVM9vS.png
+  - https://i.imgur.com/7RVM9vS.png
 releaseNotes: >-
-  The latest update introduces several new features, including gamified badges for the Q&A platform, personalized question recommendations, a new search provider definition for browsers, support for Render type plugins, and a code highlighting plugin. Additionally, numerous bug fixes have been implemented, addressing issues such as incorrect mobile display reactions, extra characters in HTML source code, visibility of unanswered questions after an answer is deleted, and conflicts with embed plugin types.
+  The Spacedrive 0.4.2 release focuses on stability and user experience, featuring UI improvements, bug fixes, and platform updates, including Tauri v2 integration and improved file management. Added Chinese translations and updated dependencies enhance overall functionality. The next update will bring cloud sync, P2P features, and a mobile app preview.
 dependencies:
 path: ""
-defaultUsername: ""
-defaultPassword: ""
+defaultUsername: "admin"
+defaultPassword: "umbrel"
