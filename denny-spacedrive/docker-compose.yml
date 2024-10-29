@@ -11,7 +11,3 @@ services:
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/var/spacedrive:/var/spacedrive
-    environment:
-      SD_AUTH=disabled
-      #SD_AUTH=username:password
-      #SD_AUTH=username:password,username1:password1
