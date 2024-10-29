@@ -18,9 +18,3 @@ services:
       - ${APP_DATA_DIR}/data/etc/localtime:/etc/localtime:ro
     ports:
       - "92:80"
-    networks:
-        docker_network:
-          ipv4_address: 192.168.5.72
-networks:
-  docker_network:
-    external: true
