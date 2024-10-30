@@ -39,7 +39,9 @@ description: >-
 
   SolidInvoice is fully open-source and community-driven, with contributions encouraged via GitHub. This makes it an excellent choice for anyone seeking a free, robust, and customizable invoicing solution.
 
+
   ---
+
 
   ⚠️ To set up the SolidInvoice database, follow these instructions to configure the connection details:
 
@@ -56,7 +58,7 @@ description: >-
   User: Type in "solidinvoice" as the database username.
 
 
-  Password: The password is "umbrel"
+  Password: The password is "umbrel".
 
 
   Database: Enter "solidinvoice" as the database name.
