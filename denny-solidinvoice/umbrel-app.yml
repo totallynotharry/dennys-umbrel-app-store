@@ -7,9 +7,9 @@ category: queue
 version: "2.2.6"
 port: 5484
 description: >-
-  description
+  Description
 
-developer: developer
+developer: Pierre du Plessis
 website: https://solidinvoice.co/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
