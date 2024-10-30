@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   db:
-    image: mysql:9.1.0@sha256:fd8d1b4e287c49e1e35eb5a103f337111947662130eb8a3e6c3e823813f47f7d
+    image: mysql:5.7@sha256:4bc6bc963e6d8443453676cae56536f4b8156d78bae03c0145cbe47c2aad73bb
     volumes:
       - ${APP_DATA_DIR}/data/solidinvoicedb:/var/lib/mysql:rw
     security_opt:
