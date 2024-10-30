@@ -1,17 +1,16 @@
 version: '3.9'
 services:
   db:
-    image: mysql:9.1.0
+    image: postgres:13
     volumes:
-      - ${APP_DATA_DIR}/data/solidinvoicedb:/var/lib/mysql:rw
+      - ${APP_DATA_DIR}/data/solidinvoicedb:/var/lib/postgresql/data:rw
     security_opt:
       - no-new-privileges:true
     restart: on-failure
     environment:
-      MYSQL_DATABASE: solidinvoice
-      MYSQL_ROOT_PASSWORD: umbrel
-      MYSQL_USER: solidinvoice
-      MYSQL_PASSWORD: umbrel
+      POSTGRES_DB: solidinvoice
+      POSTGRES_USER: solidinvoice
+      POSTGRES_PASSWORD: umbrel
     container_name: denny-solidinvoice_db_1
   app:
     image: solidinvoice/solidinvoice:latest
@@ -20,4 +19,6 @@ services:
     ports:
       - '5484:80'
     restart: on-failure
+    environment:
+      DATABASE_URL: "pgsql://solidinvoice:umbrel@db:5432/solidinvoice"
     container_name: denny-solidinvoice_app_1
