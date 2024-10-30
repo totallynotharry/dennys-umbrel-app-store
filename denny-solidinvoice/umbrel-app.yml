@@ -3,7 +3,7 @@ id: denny-solidinvoice
 name: SolidInvoice
 tagline: A sophisticated open-source invoicing application
 icon: https://i.imgur.com/cZdeMmT.png
-category: queue
+category: finance
 version: "2.2.2"
 port: 5484
 description: >-
