@@ -14,7 +14,7 @@ services:
       MYSQL_PASSWORD: umbrelpass
     container_name: denny-solidinvoice_db_1
   app:
-    image: solidinvoice/solidinvoice:2.2.2
+    image: solidinvoice/solidinvoice:latest
     depends_on:
       - db
     ports:
