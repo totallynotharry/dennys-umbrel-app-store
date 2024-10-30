@@ -6,10 +6,12 @@ services:
       APP_HOST: denny-portkey_web_1
       APP_PORT: 3000
       PROXY_AUTH_ADD: "false"
+    ports:
+      - "3343:3343"
   web:
     image: codehat/portkey:v1.2@sha256:166d9375b32caaac27c2d20d057a951cef964587f0130705df97be5aff7ab553
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/config/config.yml:/opt/config.yml
     ports:
-      - "3343:3000"
+      - "3000:3000"
