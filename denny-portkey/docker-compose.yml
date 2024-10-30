@@ -4,7 +4,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: denny-portkey_web_1
-      APP_PORT: 3000
+      APP_PORT: 3343
       PROXY_AUTH_ADD: "false"
     ports:
       - "3343:3343"
