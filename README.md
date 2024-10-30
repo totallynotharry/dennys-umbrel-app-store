@@ -57,6 +57,7 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | [Flatnotes](https://github.com/dullage/flatnotes)  | A self-hosted note-taking app with flat Markdown file storage|
 | [Spacedrive](https://github.com/spacedriveapp/spacedrive)  | A file manager from the future|
 | [Docusaurus](https://github.com/facebook/docusaurus)  | A streamlined way to build powerful documentation sites|
+| [Mermaid Live Editor](https://github.com/mermaid-js/mermaid-live-editor)  | A live editor for instant Mermaid diagram visualization|
 
 🔄 All Apps are continually updated and new Apps are added over time.
 
