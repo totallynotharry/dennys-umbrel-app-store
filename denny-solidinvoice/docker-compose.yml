@@ -1,12 +1,23 @@
 version: '3.9'
 services:
+  db:
+    image: mysql:9.1.0@sha256:fd8d1b4e287c49e1e35eb5a103f337111947662130eb8a3e6c3e823813f47f7d
+    volumes:
+      - ${APP_DATA_DIR}/data/solidinvoicedb:/var/lib/mysql:rw
+    security_opt:
+      - no-new-privileges:true
+    restart: on-failure
+    environment:
+      MYSQL_DATABASE: solidinvoice
+      MYSQL_ROOT_PASSWORD: umbrel
+      MYSQL_USER: solidinvoice
+      MYSQL_PASSWORD: umbrel
+    container_name: denny-solidinvoice_db_1
   app:
-    image: solidinvoice/solidinvoice:latest
+    image: solidinvoice/solidinvoice:2.2.3@sha256:bf39b7c3423cb7cc69cb71b3c3ed5974f4e941fce38010f9606632ad18229ccd
+    depends_on:
+      - db
     ports:
       - '5484:80'
     restart: on-failure
-    environment:
-      DATABASE_URL: "sqlite:////app/data/solidinvoice.db"
-    volumes:
-      - ${APP_DATA_DIR}/data/solidinvoice:/app/data
     container_name: denny-solidinvoice_app_1
