@@ -2,7 +2,6 @@ version: '3.9'
 services:
   db:
     image: mysql:5.7
-    user: "0"
     volumes:
       - ${APP_DATA_DIR}/data/solidinvoicedb:/var/lib/mysql:rw
     security_opt:
@@ -10,14 +9,15 @@ services:
     restart: on-failure
     environment:
       MYSQL_DATABASE: solidinvoice
-      MYSQL_ROOT_PASSWORD: umbrelpass
+      MYSQL_ROOT_PASSWORD: umbrel
       MYSQL_USER: solidinvoice
       MYSQL_PASSWORD: umbrelpass
-    command: ["/bin/sh", "-c", "chmod -R 777 /var/lib/mysql && docker-entrypoint.sh mysqld"]
+    container_name: denny-solidinvoice_db_1
   app:
     image: solidinvoice/solidinvoice:2.2.2
     depends_on:
       - db
     ports:
-      - 5484:80
+      - '5484:80'
     restart: on-failure
+    container_name: denny-solidinvoice_app_1
