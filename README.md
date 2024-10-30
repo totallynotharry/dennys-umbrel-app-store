@@ -58,6 +58,7 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | [Spacedrive](https://github.com/spacedriveapp/spacedrive)  | A file manager from the future|
 | [Docusaurus](https://github.com/facebook/docusaurus)  | A streamlined way to build powerful documentation sites|
 | [Mermaid Live Editor](https://github.com/mermaid-js/mermaid-live-editor)  | A live editor for instant Mermaid diagram visualization|
+| [portkey](https://github.com/kodehat/portkey)  | An engaging startup hub for favorite links and custom pages|
 
 🔄 All Apps are continually updated and new Apps are added over time.
 
