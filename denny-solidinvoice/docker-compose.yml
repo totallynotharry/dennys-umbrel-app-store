@@ -15,7 +15,7 @@ services:
       MYSQL_PASSWORD: umbrelpass
     command: ["/bin/sh", "-c", "chmod -R 777 /var/lib/mysql && docker-entrypoint.sh mysqld"]
   app:
-    image: solidinvoice/solidinvoice:2.2.6@sha256:e7f16147dff124f023eed3e833e8b52da82b786e6fe5bd8ddd40e5bf885dafa0
+    image: solidinvoice/solidinvoice:2.2.2
     depends_on:
       - db
     ports:
