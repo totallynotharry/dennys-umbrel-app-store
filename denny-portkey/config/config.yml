@@ -1,5 +1,5 @@
-host: localhost
-port: 3000
+host: umbrel.local
+port: 3343
 contextPath: ""
 enableMetrics: true
 metricsHost: localhost
@@ -52,6 +52,7 @@ portals:
   emoji: 🔢
   link: /version
   external: false
+  keywords: []
 pages:
 - heading: "About"
   path: /about
