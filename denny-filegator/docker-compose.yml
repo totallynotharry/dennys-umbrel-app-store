@@ -10,5 +10,5 @@ services:
     image: 'filegator/filegator:latest'
     restart: on-failure
     volumes:
-      - ${APP_DATA_DIR}/data/images:/var/www/filegator/repository
+      - ${APP_DATA_DIR}/data/images:/var/www/filegator/repository:rw
       - ${APP_DATA_DIR}/data/conf/configuration.php:/var/www/filegator/configuration.php
