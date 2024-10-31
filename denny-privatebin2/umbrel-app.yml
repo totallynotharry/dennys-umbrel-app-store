@@ -4,7 +4,7 @@ name: PrivateBin2
 tagline: A minimalist, open source online pastebin
 category: files
 version: "1.7.4"
-port: 3070
+port: 3071
 description: >-
   PrivateBin is an open-source, minimalist, and encrypted pastebin service.
   It allows users to share text or code snippets securely, with end-to-end encryption, ensuring that only the intended recipient can read the contents.
