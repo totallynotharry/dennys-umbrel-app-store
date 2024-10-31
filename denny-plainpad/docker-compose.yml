@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-plainpad_web_1
+      APP_PORT: 3000
+      PROXY_AUTH_ADD: "false"
+  web:
+    image: dujunio/plainpad:latest
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}:/app/data
