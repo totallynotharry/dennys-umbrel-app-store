@@ -4,7 +4,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: denny-scrypted_server_1
-      APP_PORT: 8080
+      APP_PORT: 11080
       PROXY_AUTH_ADD: "false"
 
   server:
@@ -21,3 +21,4 @@ services:
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/scrypted:/server/volume:rw
+    network_mode: host
