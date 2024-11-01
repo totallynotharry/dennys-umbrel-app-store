@@ -62,7 +62,7 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | [SolidInvoice](https://github.com/SolidInvoice/SolidInvoice)  | A sophisticated open-source invoicing application|
 | [Mafl](https://github.com/hywax/mafl)  | An intuitive service for organizing your homepage|
 | [Grist](https://github.com/gristlabs/grist-core)  | A modern, open source spreadsheet that goes beyond the grid|
-| [Scrypted](https://github.com/koush/scrypted))  | A high performance home video integration platform|
+| [Scrypted](https://github.com/koush/scrypted)  | A high performance home video integration platform|
 
 🔄 All Apps are continually updated and new Apps are added over time.
 
