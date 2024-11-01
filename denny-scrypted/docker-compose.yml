@@ -12,9 +12,9 @@ services:
     healthcheck:
       test: ["CMD", "curl", "-f", "http://umbrel.local:11080/"]
       interval: 1m30s
-      timeout: 10s
+      timeout: 30s
       retries: 3
-    mem_limit: 8g
+    mem_limit: 4g
     cpu_shares: 768
     security_opt:
       - no-new-privileges:true
