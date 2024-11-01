@@ -29,6 +29,12 @@ description: >-
 
 
   Portkey is perfect for anyone who wants to optimize their web browsing experience, whether for personal use, educational purposes, or team collaboration. It can serve as a centralized hub for resources, making it especially beneficial for professionals who rely on multiple online tools and platforms.
+
+
+  ⚠️In Portkey, configuration settings for services, icons, languages, and other options are centralized in a single "config.yml" file. Users need to transfer this file to the App Folder within their Umbrel setup using the terminal, which is best suited for power users who are comfortable with command-line operations.
+
+
+   The "config.yml" file allows users to customize various aspects of Portkey, including adding services, selecting icons, and adjusting language preferences. For detailed instructions and examples on how to configure this file effectively, you can refer to the official Portkey documentation.
 developer: Marc-Niclas Harm
 website: https://demo.portkey.page/
 submitter: dennysubke
