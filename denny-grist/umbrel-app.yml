@@ -1,38 +1,52 @@
 manifestVersion: 1
 id: denny-grist
 name: Grist
-tagline: A lightweight CalDAV+CardDAV server
-icon: https://i.imgur.com/h3B1DaG.png
+tagline: A modern, open source spreadsheet that goes beyond the grid
+icon: https://i.imgur.com/6yHfkEx.png
 category: files & productivity
-version: "0.9.5"
+version: "1.2.1"
 port: 8484
 description: >-
-  🪆 Baikal Server is a lightweight CalDAV and CardDAV server designed for users who want to manage their calendar and contact information securely on their own server. This robust application offers an extensive web interface that simplifies the management of users, address books, and calendars, making it accessible for both beginners and experienced users.
+  Grist is a flexible, database-driven application that allows users to manage and analyze their data in a structured format. It combines the functionalities of a spreadsheet with those of a database, enabling users to create complex data models, establish relationships between data, and generate data visualizations.
 
 
-  One of the key features of Baikal is its ease of installation and configuration. It requires only a basic PHP-capable server, which means you don’t need extensive technical knowledge to get started. The server supports both MySQL and SQLite databases for data storage, providing flexibility depending on your preferences and needs.
+  Key Features of Grist:
 
 
-  Baikal allows users to seamlessly access their contacts and calendars from any device. It is compatible with a wide range of applications, including iOS, macOS, DAVx5 on Android, Mozilla Thunderbird, and many other CalDAV and CardDAV capable applications. This compatibility ensures that you can sync your data across multiple platforms without any hassle.
+  📊 Flexible Tables: Grist enables users to create tables with various data types, including text, numbers, dates, and more.
 
 
-  In addition to its user-friendly features, Baikal emphasizes privacy and data security. By hosting your calendars and contacts yourself, you maintain full control over your personal information, protecting it from potential breaches and unauthorized access. This is particularly important in an era where data privacy is a growing concern.
+  📋 Formulas and Calculations: Similar to spreadsheet software, users can use formulas to perform calculations and dynamically link data.
 
 
-  Whether you are an individual looking for a reliable personal organizer or a small team needing a collaborative solution, Baikal Server provides a practical and efficient way to manage your scheduling and contact needs while ensuring your data remains private and secure. With its fast performance and straightforward interface, Baikal is an excellent choice for anyone seeking a self-hosted calendar and contact management solution.
+  🔗 Data Relationships: Grist allows for the establishment of relationships between different tables, facilitating more complex data analysis.
 
-developer: fruux GmbH
-website: https://sabre.io/baikal/
+
+  📈 Visualizations: The application provides functions for creating charts and reports to present data visually.
+
+
+  👥 Collaboration: Grist supports real-time collaboration, allowing multiple users to work on the same data simultaneously.
+
+
+  Grist is suitable for various applications, including project management, CRM, inventory management, and much more. It is often used by businesses and teams seeking a user-friendly, customizable solution for data management.
+developer: Grist Labs
+website: https://www.getgrist.com/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/sabre-io/Baikal
-support: https://github.com/sabre-io/Baikal/issues
+repo: https://github.com/gristlabs/grist-core
+support: https://github.com/gristlabs/grist-core/issues
 gallery:
-  - https://i.imgur.com/InOvJFa.png
-  - https://i.imgur.com/hIQ1ZIv.png
-  - https://i.imgur.com/nobRqdE.png
+  - https://i.imgur.com/ovw4R2k.png
+  - https://i.imgur.com/ovw4R2k.png
+  - https://i.imgur.com/ovw4R2k.png
 releaseNotes: >-
-  The latest update includes dependency upgrades that enhance compatibility with PHP 8.2 and features the inclusion of sabre/dav version 4.6.0.
+  For multi-organization setups, a new site switcher feature has been introduced, allowing for the selection of logos specific to each organization. Additionally, new API endpoints have been added for managing installation and site configuration.
+
+
+  Docker images are now built using Debian Bookworm and Node.js version 22. Furthermore, the maximum size of a document's history can now be configured through environment variables.
+
+
+  This update also includes new translations and various bug fixes.
 dependencies:
 path: ""
 defaultUsername: ""
