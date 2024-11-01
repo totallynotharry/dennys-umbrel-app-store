@@ -33,8 +33,7 @@ description: >-
 
   ⚠️In Portkey, configuration settings for services, icons, languages, and other options are centralized in a single "config.yml" file. Users need to transfer this file to the App Folder within their Umbrel setup using the terminal, which is best suited for power users who are comfortable with command-line operations.
 
-
-   The "config.yml" file allows users to customize various aspects of Portkey, including adding services, selecting icons, and adjusting language preferences. For detailed instructions and examples on how to configure this file effectively, you can refer to the official Portkey documentation.
+   The "config.yml" file allows users to customize various aspects of Portkey, including adding services, selecting icons, and adjusting language preferences. For detailed instructions and examples on how to configure this file effectively, you can refer to the official Portkey documentation: https://github.com/kodehat/portkey.
 developer: Marc-Niclas Harm
 website: https://demo.portkey.page/
 submitter: dennysubke
