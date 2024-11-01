@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-grist_server_1
+      APP_PORT: 8484
+      PROXY_AUTH_ADD: "false"
+  server:
+    image: gristlabs/grist:latest
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data:/persist
