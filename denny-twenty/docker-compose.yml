@@ -19,13 +19,13 @@ services:
       - server-local-data:/app/packages/twenty-server/${STORAGE_LOCAL_PATH:-.local-storage}
       - docker-data:/app/docker-data
     ports:
-      - "3000:3000"
+      - "2020:3000"  # Map external port 2020 to internal port 3000
     environment:
-      PORT: 3000
+      PORT: 3000  # Internal port the app listens to
       PG_DATABASE_URL: postgres://twenty:twenty@${PG_DATABASE_HOST}/default
-      SERVER_URL: ${SERVER_URL}
-      FRONT_BASE_URL: ${FRONT_BASE_URL:-$SERVER_URL}
-      REDIS_URL: ${REDIS_URL:-redis://localhost:6379}
+      SERVER_URL: http://umbrel.local:2020  # Server URL with port 2020
+      FRONT_BASE_URL: http://umbrel.local:2020  # Base URL for the front-end
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379}  # Redis connection updated for Docker network
 
       ENABLE_DB_MIGRATIONS: "true"
 
@@ -53,9 +53,9 @@ services:
     command: ["yarn", "worker:prod"]
     environment:
       PG_DATABASE_URL: postgres://twenty:twenty@${PG_DATABASE_HOST}/default
-      SERVER_URL: ${SERVER_URL}
-      FRONT_BASE_URL: ${FRONT_BASE_URL:-$SERVER_URL}
-      REDIS_URL: ${REDIS_URL:-redis://localhost:6379}
+      SERVER_URL: http://umbrel.local:2020
+      FRONT_BASE_URL: http://umbrel.local:2020
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379}
 
       ENABLE_DB_MIGRATIONS: "false" # it already runs on the server
 
@@ -78,6 +78,8 @@ services:
       - db-data:/bitnami/postgresql
     environment:
       POSTGRES_PASSWORD: ${POSTGRES_ADMIN_PASSWORD}
+      POSTGRES_USER: twenty
+      POSTGRES_DB: default
     healthcheck:
       test: pg_isready -U twenty -d default
       interval: 5s
@@ -87,8 +89,6 @@ services:
 
   redis:
     image: redis
-    ports:
-      - "6379:6379"
     restart: always
 
 volumes:
