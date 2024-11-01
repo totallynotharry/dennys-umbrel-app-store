@@ -21,7 +21,6 @@ services:
     ports:
       - "2020:3000"  # Port 2020 für Zugriff über umbrel.local
     environment:
-      PORT: 3000
       PG_DATABASE_URL: postgres://twenty:twenty@db:5432/default  # Nutzung des `db`-Service als Host
       SERVER_URL: http://umbrel.local:2020
       FRONT_BASE_URL: http://umbrel.local:2020
@@ -74,7 +73,7 @@ services:
       - db-data:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: twenty
-      POSTGRES_PASSWORD: ${POSTGRES_ADMIN_PASSWORD:-"twentypassword"}  # Standardpasswort für den Fall, dass keines definiert ist
+      POSTGRES_PASSWORD: ${POSTGRES_ADMIN_PASSWORD:-"umbrelpass"}  # Standardpasswort für den Fall, dass keines definiert ist
       POSTGRES_DB: default
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U twenty -d default"]
