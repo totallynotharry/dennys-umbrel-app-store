@@ -1,0 +1,73 @@
+
+background: '#2E2E2E'  # Anthracite color
+
+services:
+  - title: Facebook
+    description: Social networking site
+    link: https://www.facebook.com
+    icon:
+      name: simple-icons:facebook
+      color: '#4267B2'
+
+  - title: Twitter
+    description: Microblogging platform
+    link: https://www.twitter.com
+    icon:
+      name: simple-icons:twitter
+      color: '#1DA1F2'
+
+  - title: Instagram
+    description: Photo and video sharing
+    link: https://www.instagram.com
+    icon:
+      name: simple-icons:instagram
+      color: '#C13584'
+
+  - title: TikTok
+    description: Short video platform
+    link: https://www.tiktok.com
+    icon:
+      name: simple-icons:tiktok
+      color: '#000000'
+
+  - title: LinkedIn
+    description: Professional networking
+    link: https://www.linkedin.com
+    icon:
+      name: simple-icons:linkedin
+      color: '#0A66C2'
+
+  - title: Snapchat
+    description: Multimedia messaging
+    link: https://www.snapchat.com
+    icon:
+      name: simple-icons:snapchat
+      color: '#FFFC00'
+
+  - title: Reddit
+    description: Community discussion forum
+    link: https://www.reddit.com
+    icon:
+      name: simple-icons:reddit
+      color: '#FF4500'
+
+  - title: Pinterest
+    description: Image sharing and inspiration
+    link: https://www.pinterest.com
+    icon:
+      name: simple-icons:pinterest
+      color: '#E60023'
+
+  - title: YouTube
+    description: Video sharing platform
+    link: https://www.youtube.com
+    icon:
+      name: simple-icons:youtube
+      color: '#FF0000'
+
+  - title: WhatsApp
+    description: Messaging and voice call
+    link: https://www.whatsapp.com
+    icon:
+      name: simple-icons:whatsapp
+      color: '#25D366'
