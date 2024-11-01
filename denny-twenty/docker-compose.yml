@@ -1,64 +1,37 @@
 version: "3.9"
-name: twenty
 
 services:
-  change-vol-ownership:
-    image: ubuntu
-    user: root
-    volumes:
-      - server-local-data:/tmp/server-local-data
-      - docker-data:/tmp/docker-data
-    command: >
-      bash -c "
-      chown -R 1000:1000 /tmp/server-local-data
-      && chown -R 1000:1000 /tmp/docker-data"
-
   server:
-    image: twentycrm/twenty:${TAG:-latest}  # Fallback auf 'latest', falls ${TAG} nicht definiert
+    image: twentycrm/twenty:${TAG:-latest}
     volumes:
-      - server-local-data:/app/packages/twenty-server/${STORAGE_LOCAL_PATH:-.local-storage}
+      - server-local-data:/app/packages/twenty-server/.local-storage
       - docker-data:/app/docker-data
     ports:
       - "2020:3000"  # Port 2020 für Zugriff über umbrel.local
     environment:
-      PG_DATABASE_URL: postgres://twenty:twenty@db:5432/default  # Nutzung des `db`-Service als Host
+      PORT: 3000
+      PG_DATABASE_URL: postgres://twenty:twenty@db:5432/default
       SERVER_URL: http://umbrel.local:2020
       FRONT_BASE_URL: http://umbrel.local:2020
-      REDIS_URL: redis://redis:6379  # Nutzung des `redis`-Service als Host
-
+      REDIS_URL: redis://redis:6379
       ENABLE_DB_MIGRATIONS: "true"
-      SIGN_IN_PREFILLED: ${SIGN_IN_PREFILLED:-"false"}  # Standardwert, falls nicht definiert
-      STORAGE_TYPE: ${STORAGE_TYPE:-"local"}
-      STORAGE_S3_REGION: ${STORAGE_S3_REGION:-""}
-      STORAGE_S3_NAME: ${STORAGE_S3_NAME:-""}
-      STORAGE_S3_ENDPOINT: ${STORAGE_S3_ENDPOINT:-""}
+      STORAGE_TYPE: "local"
       APP_SECRET: ${APP_SECRET:-"mysecret"}  # Standardwert, falls APP_SECRET fehlt
     depends_on:
-      change-vol-ownership:
-        condition: service_completed_successfully
       db:
         condition: service_healthy
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:3000/healthz"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
     restart: always
 
   worker:
-    image: twentycrm/twenty
+    image: twentycrm/twenty:${TAG:-latest}
     command: ["yarn", "worker:prod"]
     environment:
       PG_DATABASE_URL: postgres://twenty:twenty@db:5432/default
       SERVER_URL: http://umbrel.local:2020
       FRONT_BASE_URL: http://umbrel.local:2020
       REDIS_URL: redis://redis:6379
-
       ENABLE_DB_MIGRATIONS: "false"
-      STORAGE_TYPE: ${STORAGE_TYPE:-"local"}
-      STORAGE_S3_REGION: ${STORAGE_S3_REGION:-""}
-      STORAGE_S3_NAME: ${STORAGE_S3_NAME:-""}
-      STORAGE_S3_ENDPOINT: ${STORAGE_S3_ENDPOINT:-""}
+      STORAGE_TYPE: "local"
       APP_SECRET: ${APP_SECRET:-"mysecret"}
     depends_on:
       db:
@@ -68,12 +41,12 @@ services:
     restart: always
 
   db:
-    image: postgres:13  # Verwendung eines standardmäßigen PostgreSQL-Images, falls `twentycrm/twenty-postgres` nicht verfügbar
+    image: postgres:13
     volumes:
       - db-data:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: twenty
-      POSTGRES_PASSWORD: ${POSTGRES_ADMIN_PASSWORD:-"umbrelpass"}  # Standardpasswort für den Fall, dass keines definiert ist
+      POSTGRES_PASSWORD: ${POSTGRES_ADMIN_PASSWORD:-"umbrelpass"}  # Standardpasswort
       POSTGRES_DB: default
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U twenty -d default"]
@@ -83,7 +56,7 @@ services:
     restart: always
 
   redis:
-    image: redis:6  # Standard Redis Version
+    image: redis:6
     restart: always
 
 volumes:
