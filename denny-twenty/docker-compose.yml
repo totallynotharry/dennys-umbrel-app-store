@@ -22,7 +22,7 @@ services:
     restart: always
 
   worker:
-    image: twentycrm/twenty:${TAG:-latest}
+    image: twentycrm/twenty
     command: ["yarn", "worker:prod"]
     environment:
       PG_DATABASE_URL: postgres://twenty:twenty@db:5432/default
