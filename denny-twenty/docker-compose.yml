@@ -9,7 +9,6 @@ services:
     ports:
       - "2020:3000"  # Port 2020 für Zugriff über umbrel.local
     environment:
-      PORT: 3000
       PG_DATABASE_URL: postgres://twenty:twenty@db:5432/default
       SERVER_URL: http://umbrel.local:2020
       FRONT_BASE_URL: http://umbrel.local:2020
