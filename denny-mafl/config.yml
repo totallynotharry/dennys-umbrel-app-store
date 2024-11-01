@@ -1,6 +1,6 @@
-title: My Umbrel Example Page
+title: My Home Page
 services:
-  Umbrel Apps:
+  Umbrel Apps - Services, icons, language and other settings are set in a single config.yml file. It must be transferred to the docker container, as described here:https://mafl.hywax.space/reference/configuration.html :
     - title: ThunderHub
       description: Bitcoin Lightning Network Manager
       link: 'http://umbrel.local:3010'
@@ -92,13 +92,13 @@ services:
         name: simple-icons:wireguard
         wrap: true
         color: '#88171A'
-    - title: Calibre
-      description: E-book management system
+    - title: Mempool
+      description: Bitcoin transaction explorer and fee estimator
       link: 'http://umbrel.local:3420'
       icon:
-        name: simple-icons:calibre
+        name: simple-icons:bitcoin
         wrap: true
-        color: '#333333'
+        color: '#F7931A'
     - title: Mastodon
       description: Decentralized social media platform
       link: 'http://umbrel.local:3430'
