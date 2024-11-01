@@ -33,6 +33,7 @@ description: >-
 
   ⚠️ In Mafl, the configuration settings for services, icons, languages, and more are centralized in a single "config.yml" file. Users must transfer this file to the App Folder in their Umbrel setup using the terminal, making it an operation suited for power users who are familiar with command-line interfaces.
 
+  
   The configuration options in the "config.yml" file allow users to customize various aspects of Mafl, including the addition of services, the selection of icons, and language preferences. Detailed instructions and examples for configuring this file can be found on the official Mafl documentation page: https://mafl.hywax.space/reference/configuration.html.
 
 developer: Alexandr Pushkarev
