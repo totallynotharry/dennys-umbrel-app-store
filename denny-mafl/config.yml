@@ -1,6 +1,6 @@
-title: Umbrel - Example Page
+title: Umbrel Page (example)
 services:
-  Services, icons, language and other settings are set in a single <config.yml> file. It must be transferred to the docker container, as described here: 'https://mafl.hywax.space/reference/configuration.html' :
+  Services, icons, language and other settings are set in a single <config.yml> file. It must be transferred to the docker container! :
     - title: ThunderHub
       description: Bitcoin Lightning Network Manager
       link: 'http://umbrel.local:3010'
