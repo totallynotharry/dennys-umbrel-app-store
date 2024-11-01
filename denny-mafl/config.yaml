@@ -1,4 +1,3 @@
-
 background: '#2E2E2E'  # Anthracite color
 
 services:
@@ -8,6 +7,12 @@ services:
     icon:
       name: simple-icons:facebook
       color: '#4267B2'
+    tags:
+      - name: Social
+        color: blue
+    status:
+      enabled: true
+      interval: 60
 
   - title: Twitter
     description: Microblogging platform
@@ -15,6 +20,12 @@ services:
     icon:
       name: simple-icons:twitter
       color: '#1DA1F2'
+    tags:
+      - name: Social
+        color: blue
+    status:
+      enabled: true
+      interval: 60
 
   - title: Instagram
     description: Photo and video sharing
@@ -22,6 +33,12 @@ services:
     icon:
       name: simple-icons:instagram
       color: '#C13584'
+    tags:
+      - name: Social
+        color: purple
+    status:
+      enabled: true
+      interval: 60
 
   - title: TikTok
     description: Short video platform
@@ -29,6 +46,12 @@ services:
     icon:
       name: simple-icons:tiktok
       color: '#000000'
+    tags:
+      - name: Social
+        color: black
+    status:
+      enabled: true
+      interval: 60
 
   - title: LinkedIn
     description: Professional networking
@@ -36,6 +59,12 @@ services:
     icon:
       name: simple-icons:linkedin
       color: '#0A66C2'
+    tags:
+      - name: Professional
+        color: blue
+    status:
+      enabled: true
+      interval: 60
 
   - title: Snapchat
     description: Multimedia messaging
@@ -43,6 +72,12 @@ services:
     icon:
       name: simple-icons:snapchat
       color: '#FFFC00'
+    tags:
+      - name: Messaging
+        color: yellow
+    status:
+      enabled: true
+      interval: 60
 
   - title: Reddit
     description: Community discussion forum
@@ -50,6 +85,12 @@ services:
     icon:
       name: simple-icons:reddit
       color: '#FF4500'
+    tags:
+      - name: Forum
+        color: red
+    status:
+      enabled: true
+      interval: 60
 
   - title: Pinterest
     description: Image sharing and inspiration
@@ -57,6 +98,12 @@ services:
     icon:
       name: simple-icons:pinterest
       color: '#E60023'
+    tags:
+      - name: Inspiration
+        color: red
+    status:
+      enabled: true
+      interval: 60
 
   - title: YouTube
     description: Video sharing platform
@@ -64,6 +111,12 @@ services:
     icon:
       name: simple-icons:youtube
       color: '#FF0000'
+    tags:
+      - name: Video
+        color: red
+    status:
+      enabled: true
+      interval: 60
 
   - title: WhatsApp
     description: Messaging and voice call
@@ -71,3 +124,9 @@ services:
     icon:
       name: simple-icons:whatsapp
       color: '#25D366'
+    tags:
+      - name: Messaging
+        color: green
+    status:
+      enabled: true
+      interval: 60
