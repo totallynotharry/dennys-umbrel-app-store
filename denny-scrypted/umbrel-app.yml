@@ -7,7 +7,7 @@ category: Home & Automation
 version: "0.122.0"
 port: 11080
 description: >-
-  Scrypted is an open-source platform designed for home automation, providing users with the tools to integrate, manage, and automate various smart home devices seamlessly. Its primary focus is on camera management and video surveillance, making it an ideal solution for users looking to enhance their home security while also controlling a wide range of smart devices.
+  🎥 Scrypted is an open-source platform designed for home automation, providing users with the tools to integrate, manage, and automate various smart home devices seamlessly. Its primary focus is on camera management and video surveillance, making it an ideal solution for users looking to enhance their home security while also controlling a wide range of smart devices.
 
 
   Scrypted supports a diverse array of smart home devices from different manufacturers, enabling users to create a cohesive ecosystem regardless of brand or technology. This flexibility allows for the integration of devices that use protocols such as Zigbee, Z-Wave, and Wi-Fi. One of Scrypted’s standout features is its robust support for IP cameras and video streams. Users can easily integrate their existing security cameras to view live video feeds, record and store footage based on motion detection or scheduled intervals, and receive instant notifications for motion events or other triggers, thereby enhancing home security.
