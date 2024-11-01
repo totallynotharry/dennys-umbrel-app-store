@@ -1,6 +1,6 @@
 title: Umbrel Page (example)
 services:
-  Services, icons, language and other settings are set in a single config.yml file. It must be transferred to /umbrel/app-data/denny-mafl/! :
+  Services, icons, language and other settings are set in a single config.yml file. It must be transferred to /umbrel/app-data/denny-mafl/ :
     - title: ThunderHub
       description: Bitcoin Lightning Network Manager
       link: 'http://umbrel.local:3010'
