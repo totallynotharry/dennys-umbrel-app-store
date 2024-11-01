@@ -11,5 +11,5 @@ services:
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/config.yml:/app/data/config.yml      # Directory for config
-      - ${APP_DATA_DIR}/app/public/icons/:/app/public/icons  # Directory for icons
-      - ${APP_DATA_DIR}/app/public/favicons/:/app/public/favicons  # Directory for favicons
+      - ${APP_DATA_DIR}/app/icons/:/app/public/icons  # Directory for icons
+      - ${APP_DATA_DIR}/app/favicons/:/app/public/favicons  # Directory for favicons
