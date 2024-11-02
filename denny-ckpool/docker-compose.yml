@@ -6,6 +6,5 @@
      ports:
        - 3333:3333
      volumes:
-       - ${PWD}/conf:/srv/ckpool/conf
-       - ${PWD}/logs:/srv/ckpool/logs
+       - /tmp/Arkinapool/:/tmp/Arkinapool/:rw
      restart: unless-stopped
