@@ -1,0 +1,11 @@
+ version: "3.7"
+
+ services:
+   docker-ckpool:
+     image: toconspiracy/docker-ckpool
+     ports:
+       - 3333:3333
+     volumes:
+       - ${PWD}/conf:/srv/ckpool/conf
+       - ${PWD}/logs:/srv/ckpool/logs
+     restart: unless-stopped
