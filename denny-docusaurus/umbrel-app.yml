@@ -50,9 +50,10 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/facebook/docusaurus
 support: https://github.com/facebook/docusaurus/issues
 gallery:
-  - https://i.imgur.com/5Wfw6WQ.png
-  - https://i.imgur.com/5Wfw6WQ.png
-  - https://i.imgur.com/5Wfw6WQ.png
+  - https://i.imgur.com/Hsh22o3.png
+  - https://i.imgur.com/G2arcqJ.png
+  - https://i.imgur.com/zUwHEOF.png
+  - https://i.imgur.com/1kGXkb6.png
 releaseNotes: >-
   The latest Docusaurus 2 beta comes with automatic updating and many improvements.
 dependencies:
