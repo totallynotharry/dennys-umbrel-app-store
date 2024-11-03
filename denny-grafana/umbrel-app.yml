@@ -60,9 +60,10 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/grafana/grafana
 support: https://github.com/grafana/grafana/issues
 gallery:
-  - https://i.imgur.com/f6WnDbd.png
-  - https://i.imgur.com/f6WnDbd.png
-  - https://i.imgur.com/f6WnDbd.png
+  - https://i.imgur.com/hzgJqDF.png
+  - https://i.imgur.com/Rkbrx1F.png
+  - https://i.imgur.com/hfjiUYB.png
+  - https://i.imgur.com/r0cPWuA.png
 releaseNotes: >-
   The latest update includes significant enhancements in alerting, such as improved permissions management, streamlined linking to silence forms, and better handling of query visibility in simplified mode. Additionally, updates to authentication and migration support for Library Elements are notable. Bug fixes address issues with TimeRangeInput, permissions on external rule groups, and dashboard usability across different environments.
 dependencies:
