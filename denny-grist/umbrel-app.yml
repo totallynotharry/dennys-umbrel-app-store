@@ -36,9 +36,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/gristlabs/grist-core
 support: https://github.com/gristlabs/grist-core/issues
 gallery:
-  - https://i.imgur.com/ovw4R2k.png
-  - https://i.imgur.com/ovw4R2k.png
-  - https://i.imgur.com/ovw4R2k.png
+  - https://i.imgur.com/BnqDK5P.png
+  - https://i.imgur.com/jhK5lrv.png
+  - https://i.imgur.com/cEpSO82.png
 releaseNotes: >-
   For multi-organization setups, a new site switcher feature has been introduced, allowing for the selection of logos specific to each organization. Additionally, new API endpoints have been added for managing installation and site configuration.
 
