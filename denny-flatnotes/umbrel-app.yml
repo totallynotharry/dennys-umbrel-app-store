@@ -37,9 +37,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/dullage/flatnotes
 support: https://github.com/dullage/flatnotes/issues
 gallery:
-  - https://i.imgur.com/qN0KBZd.png
-  - https://i.imgur.com/qN0KBZd.png
-  - https://i.imgur.com/qN0KBZd.png
+  - https://i.imgur.com/IeA4bXe.png
+  - https://i.imgur.com/m6sEtOW.png
+  - https://i.imgur.com/P3aTlnp.png
 releaseNotes: >-
   The new "Quick Access Notes" feature allows customization of the notes displayed on the home page, replacing the previous "RECENTLY MODIFIED" section. Users can now configure the search term, order, limit, and title of the notes shown, making it easier to pin or hide specific notes. Additionally, a button is available to view all "Quick Access Notes" if there are more than can be displayed. 
   
