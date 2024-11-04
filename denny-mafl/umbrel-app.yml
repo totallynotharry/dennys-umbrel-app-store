@@ -43,9 +43,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/hywax/mafl
 support: https://github.com/hywax/mafl/issues
 gallery:
-  - https://i.imgur.com/5kjdSYt.png
-  - https://i.imgur.com/5kjdSYt.png
-  - https://i.imgur.com/5kjdSYt.png
+  - https://i.imgur.com/1qb7IF8.png
+  - https://i.imgur.com/RCHeP6N.png
+  - https://i.imgur.com/RCHeP6N.png
 releaseNotes: >-
   Recent updates to Mafl include enhancements to localization, adding support for Greek (Gr-GR) and German (De-DE) languages. Documentation improvements showcase app features, highlighting contributions from the community. The CONTRIBUTORS file has been updated to recognize key contributors like Hywax, Gehno, and Stratos.
 dependencies:
