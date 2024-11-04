@@ -25,7 +25,7 @@ I am open to app suggestions and will do my best to implement them. Additionally
 | 8   | [Cheshire Cat AI](https://github.com/cheshire-cat-ai/core) | A framework to build custom AIs on top of any language model               | 1865   |
 | 9   | [ConvertX](https://github.com/C4illin/ConvertX)      | A self-hosted online file converter that converts tons of file types      | 13000  |
 | 10  | [CyberChef](https://github.com/gchq/CyberChef)       | An intuitive web app for exploring and decoding data effortlessly         | 8817   |
-| 11  | [Docusaurus](https://github.com/facebook/docusaurus) | A streamlined way to build powerful documentation sites                   | 92     |
+| 11  | [Docusaurus](https://github.com/facebook/docusaurus) | A streamlined way to build powerful documentation sites                   | 95     |
 | 12  | [Dynamic QR Code](https://github.com/giandonatoinverso/PHP-Dynamic-Qr-code) | An intuitive dashboard for seamless QR code creation          | 8216   |
 | 13  | [Enclosed](https://github.com/CorentinTh/enclosed)   | A minimalistic web application designed for sending private and secure notes | 8525   |
 | 14  | [Excalidraw](https://github.com/excalidraw/excalidraw) | An open-source virtual hand-drawn style whiteboard                        | 5000   |
