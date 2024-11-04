@@ -13,7 +13,7 @@ I am open to app suggestions and will do my best to implement them. Additionally
 
 ### Currently available apps
 
-| Nr. | App-Name              | Description | Port   |
+| **Nr.** | **App-Name**              | **Description** | **Port**   |
 |-----|------------------------|-------------|--------|
 | 1   | Actual Budget         | A super fast privacy-focused app for managing your finances | 5006   |
 | 2   | Anse                  | A fully optimized UI for AI Chats | 3339   |
