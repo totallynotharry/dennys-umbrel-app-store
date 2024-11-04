@@ -5,7 +5,7 @@ tagline: A high performance home video integration platform
 icon: https://i.imgur.com/lvqh9u4.png
 category: Home & Automation
 version: "0.122.0"
-port: 9212
+port: 92
 description: >-
   🎥 Scrypted is an open-source platform designed for home automation, providing users with the tools to integrate, manage, and automate various smart home devices seamlessly. Its primary focus is on camera management and video surveillance, making it an ideal solution for users looking to enhance their home security while also controlling a wide range of smart devices.
 
