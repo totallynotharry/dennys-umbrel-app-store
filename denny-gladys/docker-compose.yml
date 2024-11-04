@@ -1,11 +1,23 @@
 version: '3.9'
 services:
-  gladys:
+  app_proxy:
+    environment:
+      APP_HOST: denny-gladys_server_1
+      APP_PORT: 912
+      PROXY_AUTH_ADD: "false"
+
+  server:
     image: gladysassistant/gladys:v4
-    container_name: Gladys
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://umbrel.local:9212/"] || exit 1
+      interval: 1m30s
+      timeout: 30s
+      retries: 3
+    mem_limit: 4g
+    cpu_shares: 768
+    security_opt:
+      - no-new-privileges:true
     restart: on-failure
-    privileged: true
-    network_mode: host
     logging:
       driver: "json-file"
       options:
