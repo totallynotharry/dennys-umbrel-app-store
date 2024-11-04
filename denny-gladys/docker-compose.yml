@@ -1,40 +1,31 @@
-version: '3.9'
+version: '3'
+ 
 services:
-  app_proxy:
-    image: nginx:alpine  # Beispiel für einen einfachen Proxy
-    environment:
-      APP_HOST: denny-gladys_server_1
-      APP_PORT: 8080
-      PROXY_AUTH_ADD: "false"
-    ports:
-      - "8080:8080"  # Port-Mapping für den Proxy
-
-  server:
+  gladys:
     image: gladysassistant/gladys:v4
-    mem_limit: 4g
-    cpu_shares: 768
-    security_opt:
-      - no-new-privileges:true
-    restart: unless-stopped  # Verwendung von 'unless-stopped' für eine bessere Verfügbarkeit
+    container_name: gladys
+    restart: always
+    privileged: true
+    network_mode: host
+    cgroup: host
     logging:
       driver: "json-file"
       options:
         max-size: 10m
-        max-file: "3"  # Behalte bis zu 3 Logdateien
     environment:
       NODE_ENV: production
       SQLITE_FILE_PATH: /var/lib/gladysassistant/gladys-production.db
-      SERVER_PORT: 9212
-      TZ: Europe/Berlin
+      SERVER_PORT: 80
+      TZ: Europe/Paris
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /volume1/docker/gladys:/var/lib/gladysassistant:rw
-      - /etc/TZ:/etc/timezone:ro
-      - /etc/localtime:/etc/localtime:ro
+      - /var/lib/gladysassistant:/var/lib/gladysassistant
       - /dev:/dev
-    ports:
-      - "9212:9212"  # Port-Mapping für den Gladys-Server
-
-networks:
-  default:
-    driver: bridge  # Verwendung eines Standardnetzwerks
+      - /run/udev:/run/udev:ro
+  watchtower:
+    image: containrrr/watchtower
+    restart: always
+    container_name: watchtower
+    command: --cleanup --include-restarting
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
