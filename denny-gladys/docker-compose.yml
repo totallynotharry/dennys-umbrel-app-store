@@ -3,21 +3,21 @@ services:
   gladys:
     image: gladysassistant/gladys:v4
     container_name: Gladys
-    restart: on-failure
+    restart: on-failure:5
     privileged: true
     network_mode: host
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://umbrel.local:9212/"] || exit 1
+     test: curl -f http://localhost:9212/ || exit 1
+    cgroup: host
     logging:
       driver: "json-file"
       options:
         max-size: 10m
-        max-file: "3"  # Keep up to 3 log files
     environment:
       NODE_ENV: production
       SQLITE_FILE_PATH: /var/lib/gladysassistant/gladys-production.db
       SERVER_PORT: 9212
-      TZ: Europe/Berlin
+      TZ: Europe/Bucharest
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /volume1/docker/gladys:/var/lib/gladysassistant:rw
