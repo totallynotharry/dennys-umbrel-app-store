@@ -18,14 +18,14 @@ services:
       SERVER_PORT: 92
       TZ: Europe/Paris
     volumes:
-      - ${APP_DATA_DIR}/data/var/run/docker.sock:/var/run/docker.sock
-      - ${APP_DATA_DIR}/data/var/lib/gladysassistant:/var/lib/gladysassistant
-      - ${APP_DATA_DIR}/data/dev:/dev
-      - ${APP_DATA_DIR}/data/run/udev:/run/udev:ro
+      - ${APP_DATA_DIR}/data/var/run/docker.sock:/var/run/docker.sock:rw
+      - ${APP_DATA_DIR}/data/var/lib/gladysassistant:/var/lib/gladysassistant:rw
+      - ${APP_DATA_DIR}/data/dev:/dev:rw
+      - ${APP_DATA_DIR}/data/run/udev:/run/udev:rw
   watchtower:
     image: containrrr/watchtower
     restart: always
     container_name: watchtower
     command: --cleanup --include-restarting
     volumes:
-      - ${APP_DATA_DIR}/data/var/run/docker.sock:/var/run/docker.sock
+      - ${APP_DATA_DIR}/data/var/run/docker.sock:/var/run/docker.sock:rw
