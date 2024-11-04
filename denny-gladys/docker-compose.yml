@@ -7,12 +7,12 @@ services:
     privileged: true
     network_mode: host
     healthcheck:
-     test: curl -f http://umbrel.local:9212/ || exit 1
-    cgroup: host
+      test: ["CMD", "curl", "-f", "http://umbrel.local:9212/"] || exit 1
     logging:
       driver: "json-file"
       options:
         max-size: 10m
+        max-file: "3"  # Keep up to 3 log files
     environment:
       NODE_ENV: production
       SQLITE_FILE_PATH: /var/lib/gladysassistant/gladys-production.db
