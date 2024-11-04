@@ -14,7 +14,7 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 |-----|------------------------|-------------|--------|
 | 1   | Actual Budget         | A super fast privacy-focused app for managing your finances | 5006   |
 | 2   | Anse                  | A fully optimized UI for AI Chats | 3339   |
-| 3   | Answer                | A Q&A platform software for teams at any scale | 9084   |
+| 3   | Answer                | A Q&A platform software for teams at any scale | 9082   |
 | 4   | Atheos                | A web-based IDE framework with a small footprint and minimal requirements | 8728   |
 | 5   | Baikal                | A lightweight CalDAV+CardDAV server | 85     |
 | 6   | Black Candy           | A self hosted music streaming server | 1980   |
