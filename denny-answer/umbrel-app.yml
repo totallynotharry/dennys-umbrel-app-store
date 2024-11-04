@@ -5,7 +5,7 @@ tagline: A Q&A platform software for teams at any scale
 icon: https://i.imgur.com/v5eG4SV.png
 category: social
 version: "1.4.0"
-port: 9084
+port: 9082
 description: >-
   Apache Answer is an open-source business intelligence (BI) tool developed under the auspices of the Apache Software Foundation. It is designed to empower organizations to analyze and visualize their data effectively, facilitating better decision-making processes.
 
