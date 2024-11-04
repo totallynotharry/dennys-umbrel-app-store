@@ -17,7 +17,7 @@ I am open to app suggestions and will do my best to implement them. Additionally
 |-----|------------------------------------------------------|-------------------------------------------------------------------------|--------|
 | 1   | [Actual Budget](https://github.com/actualbudget/actual) | A super fast privacy-focused app for managing your finances               | 5006   |
 | 2   | [Anse](https://github.com/anse-app/anse)             | A fully optimized UI for AI Chats                                        | 3339   |
-| 3   | [Answer](https://github.com/apache/incubator-answer) | A Q&A platform software for teams at any scale                           | 9084   |
+| 3   | [Answer](https://github.com/apache/incubator-answer) | A Q&A platform software for teams at any scale                           | 9082   |
 | 4   | [Atheos](https://github.com/Atheos/Atheos)           | A web-based IDE framework with a small footprint and minimal requirements | 8728   |
 | 5   | [Baikal](https://github.com/sabre-io/Baikal)         | A lightweight CalDAV+CardDAV server                                      | 85     |
 | 6   | [Black Candy](https://github.com/blackcandy-org/blackcandy) | A self-hosted music streaming server                                      | 1980   |
