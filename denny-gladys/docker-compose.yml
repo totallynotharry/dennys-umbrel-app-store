@@ -2,9 +2,9 @@ version: '3'
  
 services:
   gladys:
-    image: gladysassistant/gladys:v4
+    image: gladysassistant/gladys:v4@sha256:536b970e67911effbc6f8ce7596c6b044630f24cc79706e05aa1b89f0ae665dd
     container_name: gladys
-    restart: always
+    restart: on-failure
     privileged: true
     network_mode: host
     cgroup: host
@@ -24,7 +24,7 @@ services:
       - /run/udev:/run/udev:ro
   watchtower:
     image: containrrr/watchtower
-    restart: always
+    restart: on-failure
     container_name: watchtower
     command: --cleanup --include-restarting
     volumes:
