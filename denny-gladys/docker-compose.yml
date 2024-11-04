@@ -1,10 +1,13 @@
 version: '3.9'
 services:
   app_proxy:
+    image: nginx:alpine  # Beispiel für einen einfachen Proxy
     environment:
       APP_HOST: denny-gladys_server_1
-      APP_PORT: 9212
+      APP_PORT: 8080
       PROXY_AUTH_ADD: "false"
+    ports:
+      - "8080:8080"  # Port-Mapping für den Proxy
 
   server:
     image: gladysassistant/gladys:v4
@@ -12,7 +15,7 @@ services:
     cpu_shares: 768
     security_opt:
       - no-new-privileges:true
-    restart: on-failure
+    restart: unless-stopped  # Verwendung von 'unless-stopped' für eine bessere Verfügbarkeit
     logging:
       driver: "json-file"
       options:
@@ -29,3 +32,9 @@ services:
       - /etc/TZ:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
       - /dev:/dev
+    ports:
+      - "9212:9212"  # Port-Mapping für den Gladys-Server
+
+networks:
+  default:
+    driver: bridge  # Verwendung eines Standardnetzwerks
