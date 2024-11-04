@@ -63,6 +63,7 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | [Mafl](https://github.com/hywax/mafl)  | An intuitive service for organizing your homepage|
 | [Grist](https://github.com/gristlabs/grist-core)  | A modern, open source spreadsheet that goes beyond the grid|
 | [Scrypted](https://github.com/koush/scrypted)  | A high performance home video integration platform|
+| [Gladys Assistant](https://github.com/GladysAssistant/Gladys)  | An intelligent, privacy-first solution for seamless smart home automation|
 
 🔄 All Apps are continually updated and new Apps are added over time.
 
