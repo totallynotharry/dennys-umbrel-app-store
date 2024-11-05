@@ -1,15 +1,14 @@
 services:
-  zoraxy:
+  app_proxy:
+    environment:
+      APP_HOST: denny-zoraxy_server_1
+      APP_PORT: 8000
+      PROXY_AUTH_ADD: "false"
+  server:
     image: zoraxydocker/zoraxy:v3.1.1r3@sha256:fe0618d9fc83bddcead140784148a666d894c6ebc5b9c27bb34ba72157e2db19
-    container_name: zoraxy
     restart: on-failure
-    ports:
-      - 8480:80
-      - 8443:443
-      - 8400:8000
     volumes:
       - ${APP_DATA_DIR}/config/:/opt/zoraxy/config/
-      - ${APP_DATA_DIR}/zerotier/config/:/var/lib/zerotier-one/
       - /var/run/docker.sock:/var/run/docker.sock
       - /etc/localtime:/etc/localtime:ro
     environment:
