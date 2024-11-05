@@ -5,7 +5,7 @@ services:
       APP_PORT: 8000
       PROXY_AUTH_ADD: "false"
   server:
-    image: zoraxydocker/zoraxy:v3.1.1r3@sha256:fe0618d9fc83bddcead140784148a666d894c6ebc5b9c27bb34ba72157e2db19
+    image: zoraxydocker/zoraxy:v3.1.2@sha256:38f23c5a507542bbd6eac0492bf6456be2004015594ca270a1a5998c8a377b74
     restart: on-failure
    #ports: -> The proxy service is listening on port 8400
       # 8480:80
