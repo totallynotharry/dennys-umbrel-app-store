@@ -4,7 +4,7 @@ name: Zoraxy Proxy Server
 tagline: An efficient reverse proxy server with automated SSL management
 icon: https://i.imgur.com/Hi7EYoI.png
 category: networking
-version: "3.1.1r3"
+version: "3.1.2"
 port: 8400
 description: >-
   Zoraxy is a powerful, user-friendly reverse proxy server and forwarding tool, designed to provide a straightforward, flexible, and secure method for managing web traffic within home labs and developer environments. Written in Go, Zoraxy caters to both novice and experienced users by simplifying the process of routing HTTP requests to backend servers, enabling efficient and reliable service management without relying on traditional, more complex servers like NGINX or Apache.
