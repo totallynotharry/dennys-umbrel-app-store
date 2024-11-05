@@ -7,10 +7,17 @@ services:
   server:
     image: zoraxydocker/zoraxy:v3.1.1r3@sha256:fe0618d9fc83bddcead140784148a666d894c6ebc5b9c27bb34ba72157e2db19
     restart: on-failure
+   #ports: -> The proxy service is listening on port 8400
+      # 8480:80
+      # 8443:443
+      # 8400:8000
     volumes:
       - ${APP_DATA_DIR}/config/:/opt/zoraxy/config/
+      # ${APP_DATA_DIR}/zerotier/config/:/var/lib/zerotier-one/ -> If you are not using ZeroTier, this directory is irrelevant.
       - /var/run/docker.sock:/var/run/docker.sock
       - /etc/localtime:/etc/localtime:ro
     environment:
       FASTGEOIP: "false"
       ZEROTIER: "false"
+
+      #⚠️ Zoraxy setup is working fine, but without HTTPS and ZeroTier support.
