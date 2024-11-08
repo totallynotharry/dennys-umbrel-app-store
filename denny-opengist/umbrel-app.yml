@@ -1,9 +1,9 @@
 manifestVersion: 1
 id: denny-opengist
 name: OpenGist
-tagline: A lightweight CalDAV+CardDAV server
-icon: https://i.imgur.com/h3B1DaG.png
-category: AI
+tagline: A self-hosted Pastebin powered by Git
+icon: https://i.imgur.com/vTWXKti.png
+category: In Progress
 version: "0.9.5"
 port: 6157
 description: >-
