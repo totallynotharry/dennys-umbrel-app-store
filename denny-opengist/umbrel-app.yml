@@ -27,7 +27,7 @@ gallery:
   - https://i.imgur.com/3WzNzO8.png
   - https://i.imgur.com/s4F9clu.png
 releaseNotes: >-
-  In the latest OpenGist update, the passkey login option is now hidden if the login form is disabled. Additionally, fixes were applied to the Markdown preview display and the behavior of confirm() popup messages.
+  In the latest Opengist update, the passkey login option is now hidden if the login form is disabled. Additionally, fixes were applied to the Markdown preview display and the behavior of confirm popup messages.
 dependencies:
 path: ""
 defaultUsername: ""
