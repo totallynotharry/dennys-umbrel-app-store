@@ -3,7 +3,7 @@ id: denny-opengist
 name: Opengist
 tagline: A self-hosted Pastebin powered by Git
 icon: https://i.imgur.com/vTWXKti.png
-category: In Progress
+category: developer tools
 version: "1.8.1"
 port: 6157
 description: >-
