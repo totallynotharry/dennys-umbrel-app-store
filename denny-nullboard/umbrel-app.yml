@@ -1,38 +1,47 @@
 manifestVersion: 1
 id: denny-nullboard
 name: Nullboard
-tagline: A lightweight CalDAV+CardDAV server
-icon: https://i.imgur.com/h3B1DaG.png
-category: AI
-version: "0.9.5"
+tagline: A minimalist take on a kanban board and task list manager
+icon: https://imgur.com/ZdSkQV4.png
+category: In progress
+version: "2023.11.05"
 port: 1001
 description: >-
-  🪆 Baikal Server is a lightweight CalDAV and CardDAV server designed for users who want to manage their calendar and contact information securely on their own server. This robust application offers an extensive web interface that simplifies the management of users, address books, and calendars, making it accessible for both beginners and experienced users.
+  Nullboard is a lightweight and minimalistic Kanban-style project management tool designed to help you organize tasks and projects simply and efficiently. Inspired by traditional Kanban boards like Trello, Nullboard focuses on providing essential task management functionality while minimizing complexity, making it ideal for users who prioritize simplicity and control over their data.
+  
+  
+  Key Features:
 
 
-  One of the key features of Baikal is its ease of installation and configuration. It requires only a basic PHP-capable server, which means you don’t need extensive technical knowledge to get started. The server supports both MySQL and SQLite databases for data storage, providing flexibility depending on your preferences and needs.
+  - Minimalist Design: Nullboard offers a straightforward, distraction-free interface. There are no unnecessary elements, keeping the focus on tasks and projects without overwhelming users with options and features. This simplicity makes Nullboard particularly appealing for those who want a streamlined solution for task organization.
 
 
-  Baikal allows users to seamlessly access their contacts and calendars from any device. It is compatible with a wide range of applications, including iOS, macOS, DAVx5 on Android, Mozilla Thunderbird, and many other CalDAV and CardDAV capable applications. This compatibility ensures that you can sync your data across multiple platforms without any hassle.
+  - Self-Hosted and Privacy-Focused: Nullboard is fully self-hosted, which means you have complete control over your data and environment. It can run on a local machine or server, eliminating the need for third-party cloud services. This aspect is especially beneficial for users who prioritize data privacy and want to keep their information off the internet.
 
 
-  In addition to its user-friendly features, Baikal emphasizes privacy and data security. By hosting your calendars and contacts yourself, you maintain full control over your personal information, protecting it from potential breaches and unauthorized access. This is particularly important in an era where data privacy is a growing concern.
+  - No Database Required: Nullboard doesn’t require a complex backend setup; it saves all data in a single JSON file. This file-based approach makes setup and maintenance easier compared to more robust Kanban tools, which often require a database to store information. The JSON file can be backed up, moved, and restored without hassle, adding to the tool’s portability.
 
 
-  Whether you are an individual looking for a reliable personal organizer or a small team needing a collaborative solution, Baikal Server provides a practical and efficient way to manage your scheduling and contact needs while ensuring your data remains private and secure. With its fast performance and straightforward interface, Baikal is an excellent choice for anyone seeking a self-hosted calendar and contact management solution.
+  - Offline Capabilities: Since Nullboard is a self-hosted solution, it can operate offline, allowing you to access and update your tasks even when you’re not connected to the internet. This makes it a versatile choice for users who need a reliable task management tool in offline settings.
 
-developer: fruux GmbH
-website: https://sabre.io/baikal/
+
+  - Basic Kanban Functionality: Nullboard provides essential Kanban functionality such as creating boards, adding lists, and organizing tasks. Tasks can be moved between lists to track progress. However, it lacks some advanced features found in larger platforms like Trello or Jira, such as collaboration tools, automated workflows, and integrations with other software.
+
+
+  Nullboard is an excellent option for anyone looking for a no-frills Kanban board with an emphasis on simplicity, privacy, and ease of use. While it may not have the extensive features of mainstream Kanban tools, it serves as a practical solution for those who prefer an uncluttered, self-contained task management tool.
+
+developer: Alex Pankratov
+website: https://nullboard.io/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/sabre-io/Baikal
-support: https://github.com/sabre-io/Baikal/issues
+repo: https://github.com/apankrat/nullboard
+support: https://github.com/apankrat/nullboard/issues
 gallery:
-  - https://i.imgur.com/InOvJFa.png
-  - https://i.imgur.com/hIQ1ZIv.png
-  - https://i.imgur.com/nobRqdE.png
+  - https://i.imgur.com/pItg4JG.png
+  - https://i.imgur.com/pItg4JG.png
+  - https://i.imgur.com/pItg4JG.png
 releaseNotes: >-
-  The latest update includes dependency upgrades that enhance compatibility with PHP 8.2 and features the inclusion of sabre/dav version 4.6.0.
+  The latest update improves mobile device scaling and includes minor code cleanup. Additionally, it simplifies the process for integrating external backup authentication tokens.
 dependencies:
 path: ""
 defaultUsername: ""
