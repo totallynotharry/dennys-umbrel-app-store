@@ -12,3 +12,5 @@ services:
     environment:
       - username=admin
       - password=umbrel
+      - domain=umbrel.local:9980
+      - extra_params=--o:ssl.enable=false --o:ssl.termination=true"  # Deaktiviert SSL
