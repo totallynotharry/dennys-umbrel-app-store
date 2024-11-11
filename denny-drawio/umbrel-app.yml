@@ -2,37 +2,36 @@ manifestVersion: 1
 id: denny-drawio
 name: Draw.io
 tagline: A configurable diagramming and whiteboarding visualization application
-icon: https://i.imgur.com/eKSy5uM.png
+icon: https://i.imgur.com/d2YHIP1.png
 category: In Progress
-version: "0.9.5"
+version: "24.7.17"
 port: 5022
 description: >-
-  🪆 Baikal Server is a lightweight CalDAV and CardDAV server designed for users who want to manage their calendar and contact information securely on their own server. This robust application offers an extensive web interface that simplifies the management of users, address books, and calendars, making it accessible for both beginners and experienced users.
+  🖌️Draw.io is a versatile, open-source diagramming tool widely used for creating flowcharts, network diagrams, organizational charts, process flows, and mind maps. Known for its intuitive design and flexibility, Draw.io allows users to visualize and structure complex information seamlessly.
 
 
-  One of the key features of Baikal is its ease of installation and configuration. It requires only a basic PHP-capable server, which means you don’t need extensive technical knowledge to get started. The server supports both MySQL and SQLite databases for data storage, providing flexibility depending on your preferences and needs.
+  A major advantage of Draw.io is its accessibility: as a web-based application, it runs directly in the browser without requiring software installation. Users can go to the website and immediately start building diagrams without needing an account or plugins. For offline work, a desktop version is available for Windows, macOS, and Linux, offering the same range of features.
 
 
-  Baikal allows users to seamlessly access their contacts and calendars from any device. It is compatible with a wide range of applications, including iOS, macOS, DAVx5 on Android, Mozilla Thunderbird, and many other CalDAV and CardDAV capable applications. This compatibility ensures that you can sync your data across multiple platforms without any hassle.
+  Draw.io includes an extensive library of shapes, icons, and templates for different types of diagrams, from technical layouts to organizational structures. Its drag-and-drop functionality makes diagram creation straightforward, while features like grid snapping, layer management, and dynamic connector lines help maintain precision and clarity.
 
 
-  In addition to its user-friendly features, Baikal emphasizes privacy and data security. By hosting your calendars and contacts yourself, you maintain full control over your personal information, protecting it from potential breaches and unauthorized access. This is particularly important in an era where data privacy is a growing concern.
+  Diagrams can be saved locally in various formats, such as PNG, JPEG, PDF, and SVG, providing flexibility in how users share and utilize their work. Draw.io also prioritizes data security; it does not retain user files on its servers, giving users complete control over their diagrams.
 
 
-  Whether you are an individual looking for a reliable personal organizer or a small team needing a collaborative solution, Baikal Server provides a practical and efficient way to manage your scheduling and contact needs while ensuring your data remains private and secure. With its fast performance and straightforward interface, Baikal is an excellent choice for anyone seeking a self-hosted calendar and contact management solution.
-
-developer: fruux GmbH
-website: https://sabre.io/baikal/
+  Draw.io has gained popularity among software developers, engineers, project managers, and educators due to its ease of use, extensive features, and adaptability, making it a go-to choice for anyone needing to create high-quality, professional diagrams.
+developer: JGraph Ltd.
+website: https://www.drawio.com/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/sabre-io/Baikal
-support: https://github.com/sabre-io/Baikal/issues
+repo: https://github.com/jgraph/drawio
+support: https://github.com/jgraph/drawio/issues
 gallery:
   - https://i.imgur.com/8emw3H1.png
   - https://i.imgur.com/8emw3H1.png
   - https://i.imgur.com/8emw3H1.png
 releaseNotes: >-
-  The latest update includes dependency upgrades that enhance compatibility with PHP 8.2 and features the inclusion of sabre/dav version 4.6.0.
+  These updates for the cloud module in Draw.io address two key improvements: they fix an issue with viewing older diagram versions in page history and introduce the ability to edit or add libraries directly from within the editor. These changes enhance version tracking and customization in the editor environment.
 dependencies:
 path: ""
 defaultUsername: ""
