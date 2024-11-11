@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-collabora_server_1
+      APP_PORT: 9980
+      PROXY_AUTH_ADD: "false"
+  server:
+    image: collabora/code
+    restart: on-failure
+    environment:
+      - username=admin
+      - password=umbrel
