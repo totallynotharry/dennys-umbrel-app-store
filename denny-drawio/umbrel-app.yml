@@ -1,9 +1,9 @@
 manifestVersion: 1
 id: denny-drawio
 name: Draw.io
-tagline: A lightweight CalDAV+CardDAV server
-icon: https://i.imgur.com/h3B1DaG.png
-category: AI
+tagline: A configurable diagramming and whiteboarding visualization application
+icon: https://i.imgur.com/eKSy5uM.png
+category: In Progress
 version: "0.9.5"
 port: 5022
 description: >-
