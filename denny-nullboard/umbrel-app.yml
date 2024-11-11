@@ -37,9 +37,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/apankrat/nullboard
 support: https://github.com/apankrat/nullboard/issues
 gallery:
-  - https://i.imgur.com/pItg4JG.png
-  - https://i.imgur.com/pItg4JG.png
-  - https://i.imgur.com/pItg4JG.png
+  - https://i.imgur.com/8cZnYOo.png
+  - https://i.imgur.com/oGPIZNo.png
+  - https://i.imgur.com/9qUDKwg.png
 releaseNotes: >-
   The latest update improves mobile device scaling and includes minor code cleanup. Additionally, it simplifies the process for integrating external backup authentication tokens.
 dependencies:
