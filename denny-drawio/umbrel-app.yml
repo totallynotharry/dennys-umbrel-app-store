@@ -1,6 +1,6 @@
 manifestVersion: 1
 id: denny-drawio
-name: Draw.io
+name: draw.io
 tagline: A configurable diagramming and whiteboarding visualization application
 icon: https://i.imgur.com/d2YHIP1.png
 category: In Progress
@@ -27,9 +27,10 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/jgraph/drawio
 support: https://github.com/jgraph/drawio/issues
 gallery:
-  - https://i.imgur.com/8emw3H1.png
-  - https://i.imgur.com/8emw3H1.png
-  - https://i.imgur.com/8emw3H1.png
+  - https://i.imgur.com/8aFnF35.png
+  - https://i.imgur.com/oqBpkOd.png
+  - https://i.imgur.com/LjlOMPx.png
+  - https://i.imgur.com/nQeOOHx.png
 releaseNotes: >-
   These updates for the cloud module in Draw.io address two key improvements: they fix an issue with viewing older diagram versions in page history and introduce the ability to edit or add libraries directly from within the editor. These changes enhance version tracking and customization in the editor environment.
 dependencies:
