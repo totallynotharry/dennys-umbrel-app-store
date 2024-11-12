@@ -1,0 +1,20 @@
+version: '3.2'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-collabora_server_1
+      APP_PORT: 9980
+      PROXY_AUTH_ADD: "false"
+  server:
+    image: collabora/code
+    restart: on-failure
+    cap_add:
+      - MKNOD
+    environment:
+      - VIRTUAL_HOST=umbrel.local
+      - VIRTUAL_PORT=9980
+      - username=admin
+      - password=umbrel
+      - domain=umbrel.local:9980
+      - extra_params=--o:ssl.enable=false --o:ssl.termination=true  # Deaktiviert SSL
