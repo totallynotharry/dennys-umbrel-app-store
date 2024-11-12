@@ -5,7 +5,7 @@ tagline: An adaptable proxy solution for secure, rule-based web filtering
 icon: https://i.imgur.com/paW7xGf.png
 category: In Progress
 version: "0.0.21"
-port: 8055
+port: 8050
 description: >-
   🪜 Ladder is a versatile and secure proxy server that offers precise, rule-based filtering for web traffic, enabling administrators to manage access to web resources with exceptional control. Built to meet the needs of environments where controlled access to information is critical, especially within self-hosted setups, Ladder allows domain filtering, custom headers, and user authentication, providing security while preserving accessibility to essential information. By supporting fine-tuned access rules and logging, Ladder ensures that sensitive applications remain protected, but accessible to those who need them.
 
