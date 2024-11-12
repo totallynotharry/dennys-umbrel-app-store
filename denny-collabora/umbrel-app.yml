@@ -34,6 +34,6 @@ gallery:
 releaseNotes: >-
   The latest update includes dependency upgrades that enhance compatibility with PHP 8.2 and features the inclusion of sabre/dav version 4.6.0.
 dependencies:
-path: ""
+path: "umbrel.local:9980/browser/dist/admin/admin.html"
 defaultUsername: ""
 defaultPassword: ""
