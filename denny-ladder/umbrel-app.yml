@@ -13,7 +13,7 @@ description: >-
   As access to information becomes increasingly restricted by paywalls and access policies, tools like Ladder help maintain a balance, enabling controlled access without entirely blocking information flow. Ladder’s ability to authenticate, filter, and monitor traffic supports a model where knowledge can be managed responsibly, aligning with the vision of information as a shared resource rather than a commodity. By supporting both privacy and accessibility, Ladder empowers administrators to create secure, open environments for informed use.
 
 
-  Ruleset: 
+  ⚙️ Ruleset: 
   
 
   A ruleset allows you to apply custom rules to modify the response or requested URL. This can be used to remove unwanted elements or adjust specific parts of a page. The ruleset can be a YAML file, a directory containing YAML files, or a URL pointing to a YAML file. Each file lists rules for specific domains, and these are loaded at startup.
@@ -22,10 +22,10 @@ description: >-
   A basic ruleset is available here: https://raw.githubusercontent.com/everywall/ladder-rules/main/ruleset.yaml. If you prefer a local file, you can use ${APP_DATA_DIR}/data/ladder/ruleset.yaml instead. Alternatively, you can add your own file by specifying the path to your file.
 
 
-  Limitations:
+  ⚠️ Limitations:
   
 
-  ⚠️ Some sites restrict access to their content for search engines, which may prevent this proxy from retrieving the content.
+  Some sites restrict access to their content for search engines, which may prevent this proxy from retrieving the content.
 
   
   Please note that certain sites may display missing images or formatting issues when accessed through this proxy. This is often due to the site's reliance on JavaScript or CSS for loading images and other resources, which may not be fully supported in the proxy environment.
