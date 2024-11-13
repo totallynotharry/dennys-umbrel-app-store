@@ -11,6 +11,11 @@ description: >-
 
 
   As access to information becomes increasingly restricted by paywalls and access policies, tools like Ladder help maintain a balance, enabling controlled access without entirely blocking information flow. Ladder’s ability to authenticate, filter, and monitor traffic supports a model where knowledge can be managed responsibly, aligning with the vision of information as a shared resource rather than a commodity. By supporting both privacy and accessibility, Ladder empowers administrators to create secure, open environments for informed use.
+
+
+  ⚠️ Some sites restrict access to their content for search engines, which may prevent this proxy from retrieving the content.
+
+  Please note that certain sites may display missing images or formatting issues when accessed through this proxy. This is often due to the site's reliance on JavaScript or CSS for loading images and other resources, which may not be fully supported in the proxy environment.
 developer: everywall 
 website: https://github.com/everywall/ladder
 submitter: dennysubke
