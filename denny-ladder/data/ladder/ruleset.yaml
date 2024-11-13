@@ -1,0 +1,82 @@
+
+# Ruleset for AMP versions of major German newspapers
+rules:
+  - domain: bild.de
+    headers:
+      user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36
+    urlMods:
+      query:
+        - key: amp
+          value: 1
+
+  - domain: sueddeutsche.de
+    headers:
+      user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36
+    urlMods:
+      query:
+        - key: amp
+          value: 1
+
+  - domain: faz.net
+    headers:
+      user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36
+    urlMods:
+      query:
+        - key: amp
+          value: 1
+
+  - domain: welt.de
+    headers:
+      user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36
+    urlMods:
+      query:
+        - key: amp
+          value: 1
+
+  - domain: handelsblatt.com
+    headers:
+      user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36
+    urlMods:
+      query:
+        - key: amp
+          value: 1
+
+  - domain: zeit.de
+    headers:
+      user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36
+    urlMods:
+      query:
+        - key: amp
+          value: 1
+
+  - domain: tagesspiegel.de
+    headers:
+      user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36
+    urlMods:
+      query:
+        - key: amp
+          value: 1
+
+  - domain: morgenpost.de
+    headers:
+      user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36
+    urlMods:
+      query:
+        - key: amp
+          value: 1
+
+  - domain: rp-online.de
+    headers:
+      user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36
+    urlMods:
+      query:
+        - key: amp
+          value: 1
+
+  - domain: augsburger-allgemeine.de
+    headers:
+      user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36
+    urlMods:
+      query:
+        - key: amp
+          value: 1
