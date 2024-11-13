@@ -13,6 +13,7 @@ description: >-
   As access to information becomes increasingly restricted by paywalls and access policies, tools like Ladder help maintain a balance, enabling controlled access without entirely blocking information flow. Ladder’s ability to authenticate, filter, and monitor traffic supports a model where knowledge can be managed responsibly, aligning with the vision of information as a shared resource rather than a commodity. By supporting both privacy and accessibility, Ladder empowers administrators to create secure, open environments for informed use.
 
 
+
   ⚙️ Ruleset: 
   
 
@@ -23,6 +24,7 @@ description: >-
 
   
   Some example rulesets are also available here: https://github.com/everywall/ladder-rules/tree/main/rulesets.
+
 
 
   ⚠️ Limitations:
