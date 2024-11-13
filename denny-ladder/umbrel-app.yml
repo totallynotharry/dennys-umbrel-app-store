@@ -19,7 +19,7 @@ description: >-
   A ruleset allows you to apply custom rules to modify the response or requested URL. This can be used to remove unwanted elements or adjust specific parts of a page. The ruleset can be a YAML file, a directory containing YAML files, or a URL pointing to a YAML file. Each file lists rules for specific domains, and these are loaded at startup.
 
   
-  A basic ruleset is available here: https://raw.githubusercontent.com/everywall/ladder-rules/main/ruleset.yaml. If you prefer a local file, you can use ${APP_DATA_DIR}/data/ladder/ruleset.yaml instead. Alternatively, you can add your own file by specifying the path to your file.
+  A basic ruleset is available here: https://raw.githubusercontent.com/everywall/ladder-rules/main/ruleset.yaml. If you prefer a local file, you can use ${APP_DATA_DIR}/data/ladder/ruleset.yaml instead. Alternatively, you can add your own file by specifying the path to your file. You can check the ruleset at http://umbrel.local:8050/ruleset.
 
 
   ⚠️ Limitations:
