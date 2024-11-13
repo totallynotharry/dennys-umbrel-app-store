@@ -23,5 +23,5 @@ services:
       - GODEBUG=netdns=go                        # DNS-Debug-Option
     restart: on-failure
     volumes:
-      - ${APP_DATA_DIR}/data/ruleset:/app/ruleset.yaml
+      - ${APP_DATA_DIR}/data/ruleset/ruleset.yaml:/app/ruleset.yaml
       - ${APP_DATA_DIR}/data/form/form.html:/app/form.html
