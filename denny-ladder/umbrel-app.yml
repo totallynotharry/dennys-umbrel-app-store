@@ -28,7 +28,10 @@ description: >-
   🎨 Customizing:
 
 
-  With Ladder, custom forms can be applied to handle requests more flexibly. This requires modifying the "form.html" file, located at "${APP_DATA_DIR}/data/form/". In this HTML file, you can define fields, layouts, and scripts to meet specific input requirements. Once customized, the form is automatically integrated into Ladder and made available to users.
+  With Ladder, custom forms can be applied to handle requests more flexibly. This requires modifying the "form.html" file, located at "${APP_DATA_DIR}/data/form/". 
+  
+  
+  In this HTML file, you can define fields, layouts, and scripts to meet specific input requirements. Once customized, the form is automatically integrated into Ladder and made available to users.
 
 
   ⚠️ Limitations:
