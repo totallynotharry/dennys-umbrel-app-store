@@ -14,8 +14,8 @@ services:
       # ALLOWED_DOMAINS_RULESET=false            # Aktiviert/Deaktiviert ALLOWED_DOMAINS-Regeln
       - EXPOSE_RULESET=true                      # Regeln freigeben
       - PREFORK=false                            # Prefork fuer bessere Leistung
-      # DISABLE_FORM=false                       # Formular deaktivieren
-      # FORM_PATH=/app/form.html                 # Pfad zum Formular
+      - DISABLE_FORM=false                       # Formular deaktivieren
+      - FORM_PATH=/data/ladder/form.html         # Pfad zum Formular
       - X_FORWARDED_FOR=66.249.66.1              # X-Forwarded-For Header setzen
       - USER_AGENT=Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)  # User-Agent setzen
       # USERPASS=``                              # Benutzername und Passwort setzen (foo:bar)
