@@ -9,6 +9,7 @@ port: 8050
 description: >-
   🪜 Ladder is a versatile and secure proxy server designed for precise, rule-based filtering of web traffic, giving administrators exceptional control over access to web resources. Built for environments where managing information access is critical, especially in self-hosted setups, Ladder supports domain filtering, custom headers, and user authentication, ensuring sensitive applications are secure yet accessible to those authorized. As a self-hosted alternative to services like 12ft.io, Ladder enables users to bypass certain paywalls and restricted content within the bounds of their own server setup, maintaining accessibility without relying on third-party solutions.
 
+
   As access to information becomes increasingly restricted by paywalls and access policies, tools like Ladder help maintain a balance, enabling controlled access without entirely blocking information flow. Ladder’s ability to authenticate, filter, and monitor traffic supports a model where knowledge can be managed responsibly, aligning with the vision of information as a shared resource rather than a commodity. By supporting both privacy and accessibility, Ladder empowers administrators to create secure, open environments for informed use.
 developer: everywall 
 website: https://github.com/everywall/ladder
