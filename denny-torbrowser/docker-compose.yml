@@ -8,9 +8,10 @@ services:
       PROXY_AUTH_ADD: "false"
   web:
     image: domistyle/tor-browser:12.0.4@sha256:3bd6f9df5086b7c7efa60e9575ab430d3aa8937192262552a15cf036eab78f10
-    restart: on-failure
+    restart: always
     environment:
       - TZ=Europe/Berlin
       - DARK_MODE=1
+      - WEB_AUDIO=1
     volumes:
       - ${APP_DATA_DIR}/config:/config
