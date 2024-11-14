@@ -3,7 +3,7 @@ id: denny-ladder
 name: Ladder
 tagline: An adaptable proxy solution for secure, rule-based web filtering
 icon: https://i.imgur.com/paW7xGf.png
-category: In Progress
+category: networking
 version: "0.0.21"
 port: 8050
 description: >-
