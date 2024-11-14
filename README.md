@@ -61,7 +61,7 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | 44  | [Serge](https://github.com/serge-chat/serge)         | An easy way to chat with Alpaca & other LLaMa based models                | 8803   |
 | 45  | [Slash](https://github.com/yourselfhosted/slash)     | A link shortener that simplifies the managing and sharing of links        | 5231   |
 | 46  | [SolidInvoice](https://github.com/SolidInvoice/SolidInvoice) | A sophisticated open-source invoicing application                       | 5484   |
-| 47  | [Spacedrive](https://github.com/spacedriveapp/spacedrive) | A file manager from the future                                        | 8099   |
+| 47  | [Spacedrive](https://github.com/spacedriveapp/spacedrive) | A file manager from the future                                        | 8199   |
 | 48  | [Spotube](https://github.com/KRTirtho/spotube)       | An open-source Spotify client for every platform                          | 30123  |
 | 49  | [Swing Music](https://github.com/swingmx/swingmusic) | A beautiful, self-hosted music player for your local audio files           | 1970   |
 | 50  | [Traggo](https://github.com/traggo/server)           | An open-source time tracking tool designed for self-hosting               | 3083   |
