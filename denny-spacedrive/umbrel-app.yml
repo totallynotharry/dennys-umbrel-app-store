@@ -11,9 +11,6 @@ description: >-
 
   
   ⚠️ Spacedrive is currently in its Alpha phase, allowing early adopters to explore its features while the platform continues to evolve. For optimal performance with its Docker container, it’s recommended to run on Linux (linux/amd64), as the container is not yet optimized for other platforms. Spacedrive is designed for a unified and efficient file management experience, integrating diverse data sources into a single interface, particularly benefiting users with substantial data collections.
-
-
-  🔑 The default login credentials for Spacedrive are set to username "admin" and password "umbrel".
 developer: Spacedrive Technology Inc.
 website: https://www.spacedrive.com
 submitter: dennysubke
@@ -32,5 +29,5 @@ releaseNotes: >-
   The Spacedrive 0.4.2 release focuses on stability and user experience, featuring UI improvements, bug fixes, and platform updates, including Tauri v2 integration and improved file management. Added Chinese translations and updated dependencies enhance overall functionality. The next update will bring cloud sync, P2P features, and a mobile app preview.
 dependencies:
 path: ""
-defaultUsername: "admin"
-defaultPassword: "umbrel"
+defaultUsername: ""
+defaultPassword: ""
