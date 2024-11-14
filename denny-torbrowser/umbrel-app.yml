@@ -21,9 +21,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/torproject/tor
 support: https://support.torproject.org/
 gallery:
-  - https://i.imgur.com/mBj0mX9.png
-  - https://i.imgur.com/mBj0mX9.png
-  - https://i.imgur.com/mBj0mX9.png
+  - https://i.imgur.com/s1dU4T2.png
+  - https://i.imgur.com/Fv4Rb4H.png
+  - https://i.imgur.com/D1vY27w.png
 releaseNotes: >-
   The latest version of Tor Browser includes an update to Firefox, bringing bug fixes, stability improvements, and important security updates. It also backports Android-specific security updates from a newer Firefox version and updates the NoScript extension to enhance security and performance.
 dependencies:
