@@ -7,10 +7,10 @@ category: files & productivity
 version: "0.4.2"
 port: 8199
 description: >-
-  Spacedrive is an innovative file management solution designed to unify access to files from multiple devices, cloud services, and local storage into one seamless interface. It is tailored for users handling extensive media and data, offering a centralized approach to organizing, accessing, and searching content efficiently. As an open-source platform, Spacedrive prioritizes user control, privacy, and customization, allowing flexible use either locally or through self-hosted options. Its streamlined design, advanced search, and flexible deployment make it a powerful tool for professionals and digital creators alike.
+  Spacedrive is an innovative file management solution that unifies access to files across devices, cloud services, and local storage in one seamless interface. Ideal for users managing extensive media and data collections, Spacedrive provides a centralized platform for organizing, accessing, and efficiently searching content. As an open-source tool, it prioritizes user control, privacy, and customization, with flexible deployment options for local or self-hosted use. Its streamlined design, powerful search capabilities, and adaptable setup make it a valuable resource for professionals and digital creators seeking a cohesive and efficient approach to file management across diverse data sources.
 
   
-  ⚠️ Spacedrive is currently in its Alpha phase, allowing early adopters to explore its features while the platform continues to evolve. For optimal performance with its Docker container, it’s recommended to run on Linux (linux/amd64), as the container is not yet optimized for other platforms. Spacedrive is designed for a unified and efficient file management experience, integrating diverse data sources into a single interface, particularly benefiting users with substantial data collections.
+  ⚠️ Spacedrive is currently in its Alpha phase, allowing early adopters to explore its features while the platform continues to evolve. For optimal performance with its Docker container, it’s best to run on Linux (linux/amd64), as the container is not yet optimized for other platforms. Additionally, Spacedrive does not currently run on Raspberry Pi (ARM) due to compatibility limitations. For the best experience, using Spacedrive on an Umbrel Home setup or a virtual machine (VM) is highly suggested.
 developer: Spacedrive Technology Inc.
 website: https://www.spacedrive.com
 submitter: dennysubke
