@@ -5,7 +5,7 @@ tagline: A file manager from the future
 icon: https://i.imgur.com/vQnXuIx.png
 category: files & productivity
 version: "0.4.2"
-port: 8099
+port: 8199
 description: >-
   Spacedrive is an innovative file management solution designed to unify access to files from multiple devices, cloud services, and local storage into one seamless interface. It is tailored for users handling extensive media and data, offering a centralized approach to organizing, accessing, and searching content efficiently. As an open-source platform, Spacedrive prioritizes user control, privacy, and customization, allowing flexible use either locally or through self-hosted options. Its streamlined design, advanced search, and flexible deployment make it a powerful tool for professionals and digital creators alike.
 
