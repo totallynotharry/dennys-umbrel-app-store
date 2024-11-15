@@ -7,7 +7,7 @@ category: In Progress
 version: "0.1.0"
 port: 3038
 description: >-
-  Rustpad is an open-source, real-time collaborative writing platform designed for simplicity and performance. Built with the efficiency of Rust, it enables seamless, fast, and resource-light collaboration on documents. Whether you're working with a team, collaborating with classmates, or just sharing ideas with a group, Rustpad allows multiple users to edit a document simultaneously, with changes reflected instantly.
+  📝 Rustpad is an open-source, real-time collaborative writing platform designed for simplicity and performance. Built with the efficiency of Rust, it enables seamless, fast, and resource-light collaboration on documents. Whether you're working with a team, collaborating with classmates, or just sharing ideas with a group, Rustpad allows multiple users to edit a document simultaneously, with changes reflected instantly.
 
 
   What sets Rustpad apart is its ease of use—there’s no need for sign-ups, downloads, or complex setups. Simply create a document, share the link, and start working together. It’s perfect for brainstorming sessions, team projects, writing workshops, or casual collaboration. The platform provides a clutter-free interface, making it easy to focus on what matters most: the content.
