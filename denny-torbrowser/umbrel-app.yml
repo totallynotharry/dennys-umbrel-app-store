@@ -3,7 +3,7 @@ id: denny-torbrowser
 name: Tor Browser
 tagline: An invisible shield for your browsing experience
 icon: https://i.imgur.com/AWM7YM0.png
-category: In Progress
+category: networking
 version: "12.0.4"
 port: 5832
 description: >-
