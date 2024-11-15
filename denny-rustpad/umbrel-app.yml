@@ -22,9 +22,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/ekzhang/rustpad
 support: https://github.com/ekzhang/rustpad/issues
 gallery:
-  - https://i.imgur.com/9OZC5SL.png
-  - https://i.imgur.com/9OZC5SL.png
-  - https://i.imgur.com/9OZC5SL.png
+  - https://i.imgur.com/aFdfZud.png
+  - https://i.imgur.com/aFdfZud.png
+  - https://i.imgur.com/aFdfZud.png
 releaseNotes: >-
   Updated dependency to the latest stable version, improving performance and security. Cleaned up versioning and removed legacy code, resulting in a more efficient and streamlined user experience.
 dependencies:
