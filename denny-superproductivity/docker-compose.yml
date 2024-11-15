@@ -4,5 +4,4 @@ services:
     ports:
       - 8020:80
     volumes:
-      - ${APP_DATA_DIR}/webdav.yaml:/config.yml:ro
       - ${APP_DATA_DIR}/data:/data
