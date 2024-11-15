@@ -8,7 +8,7 @@ services:
       - "5223:5223"
       - "443:443"
     environment:
-      - ADDR=0.0.0.0
+      - ADDR=http://umbrel-2.local
     volumes:
       - $HOME/simplex/smp/config:/etc/opt/simplex:z
       - $HOME/simplex/smp/logs:/var/opt/simplex:z
