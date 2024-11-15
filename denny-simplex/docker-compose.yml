@@ -1,16 +1,13 @@
-version: '3.7'
+version: '3.9'
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: denny-simplex_server_1
-      APP_PORT: 5223
-      PROXY_AUTH_ADD: "false"
-  server:
+  simplex:
     image: simplexchat/smp-server:latest
-    restart: on-failure
-    environment:
-      - ADDR=umbrel-2.local
+    container_name: simplex_server
+    ports:
+      - "5223:5223"
+      - "443:443"
     volumes:
-      - ${APP_DATA_DIR}/smp/config:/etc/opt/simplex
-      - ${APP_DATA_DIR}/smp/logs:/var/opt/simplex
+      - $HOME/simplex/smp/config:/etc/opt/simplex:z
+      - $HOME/simplex/smp/logs:/var/opt/simplex:z
+    restart: unless-stopped
