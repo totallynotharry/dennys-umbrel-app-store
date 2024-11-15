@@ -1,6 +1,6 @@
 services:
   sp:
-    image: johannesjo/super-productivity:latest
+    image: johannesjo/super-productivity:v10.1.1@sha256:85abc19361a41122865981613d640ebb57ed8692f8e15e43882820f2bd1ec925
     ports:
       - 8020:80
     volumes:
