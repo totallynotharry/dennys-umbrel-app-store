@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-simplex_server_1
+      APP_PORT: 5223
+      PROXY_AUTH_ADD: "false"
+  server:
+    image: simplexchat/smp-server:latest
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/smp/config:/etc/opt/simplex
+      - ${APP_DATA_DIR}/smp/logs:/var/opt/simplex
