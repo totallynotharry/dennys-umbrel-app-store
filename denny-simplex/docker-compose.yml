@@ -10,7 +10,7 @@ services:
     image: simplexchat/smp-server:latest
     restart: on-failure
     environment:
-      - ADDR=0.0.0.0
+      - ADDR=umbrel-2.local
     volumes:
       - ${APP_DATA_DIR}/smp/config:/etc/opt/simplex
       - ${APP_DATA_DIR}/smp/logs:/var/opt/simplex
