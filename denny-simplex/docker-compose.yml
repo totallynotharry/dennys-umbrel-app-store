@@ -37,7 +37,8 @@ services:
       - ${APP_DATA_DIR}/simplex/xftp/logs:/var/opt/simplex-xftp:Z
       - ${APP_DATA_DIR}/simplex/xftp/files:/srv/xftp:X
     environment:
-      - ADDR=${XFTP_ADDR}
+      - SIMPLEX_ADDR=0.0.0.0
+      - XFTP_ADDR=0.0.0.0
       - QUOTA=150gb # Anpassen, falls nötig
     networks:
       - simplex
@@ -51,8 +52,8 @@ services:
     image: osminogin/tor-simple
     container_name: tor
     volumes:
-      - ${APP_DATA_DIR}/tor-data:/var/lib/tor
-      - ${APP_DATA_DIR}/tor-data/torrc:/etc/tor
+      - ${APP_DATA_DIR}/tor-data:/var/lib/tor:rw
+      - ${APP_DATA_DIR}/tor-data/torrc:/etc/tor:rw
     networks:
       - tor
 
@@ -60,5 +61,5 @@ services:
     image: containrrr/watchtower
     container_name: watchtower
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock:rw
     command: --interval 14400
