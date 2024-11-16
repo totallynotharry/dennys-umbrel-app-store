@@ -1,0 +1,64 @@
+version: "3.9" # Aktualisierte Version
+
+networks:
+  tor:
+  simplex:
+
+services:
+  simplex-smp-server:
+    image: simplexchat/smp-server:latest
+    container_name: simplex-smp
+    restart: unless-stopped
+    user: "1000:1000" # Anpassen, falls nötig
+    ports:
+      - "5223:5223" # Port für SMP-Server
+    volumes:
+      - ${APP_DATA_DIR}/simplex/smp/config:/etc/opt/simplex:Z
+      - ${APP_DATA_DIR}/simplex/smp/logs:/var/opt/simplex:Z
+    environment:
+      - ADDR=${SIMPLEX_ADDR}
+    networks:
+      - simplex
+      - tor
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+
+  simplex-xftp-server:
+    image: simplexchat/xftp-server:latest
+    container_name: simplex-xftp
+    user: "1000:1000"
+    ports:
+      - "5233:443" # Port für XFTP-Server
+    restart: unless-stopped
+    volumes:
+      - ${APP_DATA_DIR}/simplex/xftp/config:/etc/opt/simplex-xftp:Z
+      - ${APP_DATA_DIR}/simplex/xftp/logs:/var/opt/simplex-xftp:Z
+      - ${APP_DATA_DIR}/simplex/xftp/files:/srv/xftp:X
+    environment:
+      - ADDR=${XFTP_ADDR}
+      - QUOTA=150gb # Anpassen, falls nötig
+    networks:
+      - simplex
+      - tor
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+
+  tor:
+    image: osminogin/tor-simple
+    container_name: tor
+    volumes:
+      - ${APP_DATA_DIR}/tor-data:/var/lib/tor
+      - ${APP_DATA_DIR}/tor-data/torrc:/etc/tor
+    networks:
+      - tor
+
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 14400
