@@ -16,7 +16,7 @@ services:
       - ${APP_DATA_DIR}/simplex/smp/config:/etc/opt/simplex:Z
       - ${APP_DATA_DIR}/simplex/smp/logs:/var/opt/simplex:Z
     environment:
-      - ADDR=${SIMPLEX_ADDR}
+      - SIMPLEX_ADDR=0.0.0.0
     networks:
       - simplex
       - tor
@@ -37,7 +37,6 @@ services:
       - ${APP_DATA_DIR}/simplex/xftp/logs:/var/opt/simplex-xftp:Z
       - ${APP_DATA_DIR}/simplex/xftp/files:/srv/xftp:X
     environment:
-      - SIMPLEX_ADDR=0.0.0.0
       - XFTP_ADDR=0.0.0.0
       - QUOTA=150gb # Anpassen, falls nötig
     networks:
