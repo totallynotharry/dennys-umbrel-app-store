@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-putty_web_1
+      APP_PORT: 5800
+  web:
+    image: jlesage/putty:v24.09.1@sha256:557265726081cde1c5f6322bea7a43b3424154f696526ee3deaf0a1972f40c56
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/config:/config:rw
