@@ -16,7 +16,7 @@ services:
       - ${APP_DATA_DIR}/simplex/smp/config:/etc/opt/simplex:Z
       - ${APP_DATA_DIR}/simplex/smp/logs:/var/opt/simplex:Z
     environment:
-      - SIMPLEX_ADDR=0.0.0.0
+      - ADDR=0.0.0.0
     networks:
       - simplex
       - tor
