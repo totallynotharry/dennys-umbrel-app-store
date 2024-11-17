@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   openhab:
-    image: "openhab/openhab:4.2.2"
+    image: "openhab/openhab:4.2.2@sha256:8ddbadca555dbc49ff9166d4ccca1e0f146bd2a1bcb8c3fac43df40b2df78568"
     restart: always
     network_mode: host
     volumes:
