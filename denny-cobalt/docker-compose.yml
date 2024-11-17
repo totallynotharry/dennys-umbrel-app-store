@@ -1,14 +1,25 @@
 version: '3.7'
 
+networks:
+  app_network:
+
 services:
   app_proxy:
+    image: ghcr.io/some/proxy:latest
     environment:
       APP_HOST: denny-cobalt_web_1
       APP_PORT: 9000
-      PROXY_AUTH_ADD: "false"
+      PROXY_AUTH_ADD: "${PROXY_AUTH_ADD:-false}"
+    networks:
+      - app_network
+
   web:
     image: ghcr.io/imputnet/cobalt:10
     restart: on-failure
     environment:
-        API_URL: "umbrel-2.local"
-        API_PORT: "9000"
+      API_URL: "http://denny-cobalt_web_1"
+      API_PORT: "9000"
+    ports:
+      - "9000:9000"
+    networks:
+      - app_network
