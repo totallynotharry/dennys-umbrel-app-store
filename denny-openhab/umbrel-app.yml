@@ -2,49 +2,37 @@ manifestVersion: 1
 id: denny-openhab
 name: openHAB
 tagline: A fully optimized UI for AI Chats
-icon: https://i.imgur.com/yvMMBmw.png
-category: AI
-version: "1.1.11"
+icon: https://i.imgur.com/kh30x2c.png
+category: In Progress
+version: "4.2.2"
 port: 8780
 description: >-
-  Anse is a powerful application designed to enhance user experiences by providing streamlined access to various advanced AI models such as ChatGPT, DALL-E, and Stable Diffusion. The application aims to serve a wide range of use cases, from text and content generation to image synthesis, making it suitable for creative professionals, developers, and casual users alike.
-  
-  
-  Key Features:
-
-  
-  ✨ Unified Interface: Anse combines multiple AI models into a single platform, allowing users to seamlessly switch between them for different tasks without the need for multiple applications.
-
- 
-  🎨 Creative Versatility: Users can generate high-quality text, create stunning visuals, and explore generative art, enabling diverse applications in fields like marketing, design, and storytelling.
-
-  
-  👤 User-Friendly Design: Anse prioritizes ease of use, featuring an intuitive interface that simplifies interactions with complex AI systems, making it accessible to those who may not have technical expertise.
-
- 
-  🔗 Integration Capabilities: The application is designed with developers in mind, offering integration features that allow for the incorporation of AI functionalities into existing workflows and applications.
-
-  
-  👥 Community-Driven Development: Anse is an open-source project, inviting contributions from developers and enthusiasts. This collaborative approach fosters rapid innovation and improvement, driven by community feedback and participation.
-
-  
-  💬 Documentation and Support: Comprehensive documentation and a supportive community help users maximize their experience, providing resources and guidance for troubleshooting and advanced usage.
+  OpenHAB, which stands for Open Home Automation Bus, is a powerful and versatile open-source platform specifically designed to manage and automate smart home environments. It serves as a centralized hub that brings together a vast array of devices and technologies under one unified system, offering seamless interoperability regardless of brand or communication protocol. OpenHAB's modular and extensible architecture allows users to integrate a wide range of technologies, including ZigBee, Z-Wave, MQTT, KNX, Modbus, Wi-Fi, and more, making it compatible with everything from smart lights and thermostats to security cameras, sensors, and voice assistants.
 
 
-  Anse stands out as a versatile tool that democratizes access to powerful AI capabilities. By merging various models into one cohesive application, it caters to a wide audience and encourages creative exploration. The commitment to user experience and community involvement makes Anse a valuable addition to the growing landscape of AI applications.
+  One of the standout features of OpenHAB is its robust rule-based automation engine, which enables users to create sophisticated scenarios that enhance convenience, efficiency, and comfort in their homes. For instance, users can program their home to dim the lights and close the blinds at sunset, adjust the heating system based on weather forecasts, or trigger security systems when motion is detected during specific hours. These automations can be tailored to meet the unique needs of each household, providing a truly personalized smart home experience.
 
-developer: Diu
-website: https://anse.app/
+
+  OpenHAB provides a user-friendly, web-based interface for local control, as well as mobile apps for iOS and Android, allowing users to monitor and manage their smart home systems from anywhere in the world. Furthermore, the system can function entirely offline, ensuring that users retain complete control over their data without relying on third-party cloud services—a key advantage for privacy-conscious individuals.
+
+
+  OpenHAB is supported by an active and vibrant community of developers and enthusiasts who contribute to its continual growth and improvement. Its rich library of add-ons enables users to expand its functionality by integrating new devices, protocols, and services as needed. Comprehensive documentation, tutorials, and community forums make it easy for newcomers to get started while also offering advanced customization options for more experienced users.
+
+
+  By combining flexibility, security, and compatibility, OpenHAB empowers users to create a fully integrated and highly customizable smart home ecosystem that can adapt to evolving technologies and individual preferences. Whether you're looking to optimize energy usage, enhance security, or simply add convenience to daily life, OpenHAB provides the tools and flexibility to transform your living space into a truly smart home.
+
+developer: openHAB
+website: https://www.openhab.org/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/anse-app/anse
-support: https://github.com/anse-app/anse/issues
+repo: https://github.com/openhab
+support: https://community.openhab.org/
 gallery:
-  - https://i.imgur.com/0WNBklK.png
-  - https://i.imgur.com/uR8Itss.png
-  - https://i.imgur.com/hNaAoi6.png
+  - https://i.imgur.com/UjP0tzI.png
+  - https://i.imgur.com/UjP0tzI.png
+  - https://i.imgur.com/UjP0tzI.png
 releaseNotes: >-
-  The latest updates to the application include the addition of chat type settings in the header and the introduction of the model gpt-3.5-turbo-16k-0613. The user interface was improved by removing the border between the button and textarea. Additionally, a bug fix was implemented to support Progressive Web App (PWA) functionality on Netlify. These enhancements collectively improve user experience and broaden model capabilities.
+  The openHAB 4.2 release introduces significant improvements, focusing on enhancing the user experience and expanding device compatibility. Notable updates include a more intuitive user interface, faster automation rule execution, and new add-ons that broaden support for various smart home devices. These changes make it easier to set up, control, and automate home environments.
 dependencies:
 path: ""
 defaultUsername: ""
