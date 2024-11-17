@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-shlink_web_1
+      APP_PORT: 8080
+  web:
+    image: shlinkio/shlink:stable
+    environment:
+      - DEFAULT_DOMAIN=umbrel-2.local
+      - IS_HTTPS_ENABLED=false
+      - GEOLITE_LICENSE_KEY=kjh23ljkbndskj345
+    restart: on-failure
