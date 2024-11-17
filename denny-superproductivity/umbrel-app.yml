@@ -43,9 +43,10 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/johannesjo/super-productivity
 support: https://github.com/johannesjo/super-productivity/issues
 gallery:
-  - https://i.imgur.com/jtGTRTy.png
-  - https://i.imgur.com/jtGTRTy.png
-  - https://i.imgur.com/jtGTRTy.png
+  - https://i.imgur.com/YCzDnUV.png
+  - https://i.imgur.com/xExHNAc.png
+  - https://i.imgur.com/ip2EbIg.png
+  - https://i.imgur.com/X2Jzxbh.png
 releaseNotes: >-
   Version 10.1.1 (2024-11-06) brings improvements to error handling for Android users and prepares the app for automatic builds. Additionally, the typing experience has been refined with changed separators, and synchronization was enhanced with a revised check system.
 dependencies:
