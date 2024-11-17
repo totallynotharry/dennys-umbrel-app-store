@@ -10,4 +10,5 @@ services:
     image: ghcr.io/imputnet/cobalt:10
     restart: on-failure
     environment:
-        API_URL: "http://umbrel-2.local:9000"
+        API_URL: "umbrel-2.local"
+        API_PORT: "9000"
