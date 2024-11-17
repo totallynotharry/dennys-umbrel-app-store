@@ -32,7 +32,7 @@ gallery:
   - https://i.imgur.com/UjP0tzI.png
   - https://i.imgur.com/UjP0tzI.png
 releaseNotes: >-
-  The openHAB 4.2 release introduces significant improvements, focusing on enhancing the user experience and expanding device compatibility. Notable updates include a more intuitive user interface, faster automation rule execution, and new add-ons that broaden support for various smart home devices. These changes make it easier to set up, control, and automate home environments.
+  The OpenHAB 4.2 release introduces significant improvements, focusing on enhancing the user experience and expanding device compatibility. Notable updates include a more intuitive user interface, faster automation rule execution, and new add-ons that broaden support for various smart home devices. These changes make it easier to set up, control, and automate home environments.
 dependencies:
 path: ""
 defaultUsername: ""
