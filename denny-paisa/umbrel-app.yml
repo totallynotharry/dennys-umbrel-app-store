@@ -3,7 +3,7 @@ id: denny-paisa
 name: Paisa
 tagline: An all-in-one finance tracker designed for simplicity
 icon: https://i.imgur.com/cFLQH3N.png
-category: In Progress
+category: finance
 version: "0.7.1"
 port: 7500
 description: >-
