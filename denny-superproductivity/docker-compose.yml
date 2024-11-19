@@ -7,7 +7,7 @@ services:
       APP_PORT: 80 #8020
       PROXY_AUTH_ADD: "false"
   web:
-    image: johannesjo/super-productivity:v10.1.1@sha256:85abc19361a41122865981613d640ebb57ed8692f8e15e43882820f2bd1ec925
+    image: cristianlupascu/super-productivity:multiarch-docker-build@sha256:db077a2c01b006ba66d1a62fe77c1a6cb3b097dafd828bda65aa17fa86a0ae56 #johannesjo/super-productivity:v10.1.1@sha256:85abc19361a41122865981613d640ebb57ed8692f8e15e43882820f2bd1ec925
     restart: on-failure
     environment:
       - WEBDAV_BACKEND=http://webdav # Optional
