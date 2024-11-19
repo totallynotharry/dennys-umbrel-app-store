@@ -8,8 +8,6 @@ services:
   server:
     image: ghcr.io/twin/gatus:v5.13.1@sha256:24842a8adebd3dd4bd04a4038ffa27cb2fe72bb50631415e0fb2915063fc1993
     restart: on-failure
-    ports:
-      - "8444:8080"
     volumes:
       - ${APP_DATA_DIR}/config:/config
       - ${APP_DATA_DIR}/data:/data/
