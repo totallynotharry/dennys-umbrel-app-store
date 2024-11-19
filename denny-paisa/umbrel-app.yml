@@ -22,9 +22,11 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/ananthakumaran/paisa
 support: https://github.com/ananthakumaran/paisa/issues
 gallery:
-  - https://i.imgur.com/2zAbbUP.png
-  - https://i.imgur.com/2zAbbUP.png
-  - https://i.imgur.com/2zAbbUP.png
+  - https://i.imgur.com/EvKdmCV.png
+  - https://i.imgur.com/oDK25fy.png
+  - https://i.imgur.com/zQBiLPM.png
+  - https://i.imgur.com/hlbWsBb.png
+  - https://i.imgur.com/9BK8kL7.png
 releaseNotes: >-
   The 0.7.1 update resolves a critical remote code execution vulnerability, enhancing the security of the platform. This fix improves overall system safety, protecting users from potential exploits.
 dependencies:
