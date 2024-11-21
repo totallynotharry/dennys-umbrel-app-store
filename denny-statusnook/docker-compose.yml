@@ -1,7 +1,7 @@
 services:
   statusnook:
     ports:
-      - 0.0.0.0:8444:8000
+      - 8444:8000
     volumes:
       - ${APP_DATA_DIR}/statusnook-data:/app/statusnook-data
     restart: always
