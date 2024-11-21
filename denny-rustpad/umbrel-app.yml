@@ -3,7 +3,7 @@ id: denny-rustpad
 name: Rustpad
 tagline: An easy solution for real-time collaborative writing
 icon: https://i.imgur.com/AkjjsFc.png
-category: In Progress
+category: files & productivity
 version: "0.1.0"
 port: 3038
 description: >-
