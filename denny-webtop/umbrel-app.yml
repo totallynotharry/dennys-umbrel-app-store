@@ -1,38 +1,32 @@
 manifestVersion: 1
 id: denny-webtop
 name: Ubuntu Mate
-tagline: A lightweight CalDAV+CardDAV server
-icon: https://i.imgur.com/h3B1DaG.png
+tagline: An easy-to-use desktop that brings the power of Ubuntu to your fingertips
+icon: https://i.imgur.com/cmQPlmH.png
 category: In Progress
-version: "0.9.5"
+version: "04d8319c"
 port: 3399
 description: >-
-  🪆 Baikal Server is a lightweight CalDAV and CardDAV server designed for users who want to manage their calendar and contact information securely on their own server. This robust application offers an extensive web interface that simplifies the management of users, address books, and calendars, making it accessible for both beginners and experienced users.
+  💻 Webtop is an innovative open-source platform that enables users to access a fully functional Linux desktop environment directly through a web browser, eliminating the need for additional remote desktop tools like VNC or RDP. It is particularly well-suited for remote work, server management, and development tasks, offering a seamless and intuitive desktop experience from anywhere. For Umbrel users, this distribution is built around Ubuntu Mate, a robust and lightweight desktop environment known for its simplicity, speed, and user-friendly design.
 
 
-  One of the key features of Baikal is its ease of installation and configuration. It requires only a basic PHP-capable server, which means you don’t need extensive technical knowledge to get started. The server supports both MySQL and SQLite databases for data storage, providing flexibility depending on your preferences and needs.
+  Ubuntu Mate brings a perfect balance of modern functionality and efficient resource usage, making it an excellent choice for server environments where performance and reliability are critical. Its clean interface and extensive customization options allow users to tailor the experience to their needs, while its compatibility with a vast array of Linux applications ensures versatility. By integrating Ubuntu Mate into Webtop, this distribution for Umbrel delivers a smooth, responsive, and visually appealing desktop experience, accessible with nothing more than a web browser.
 
 
-  Baikal allows users to seamlessly access their contacts and calendars from any device. It is compatible with a wide range of applications, including iOS, macOS, DAVx5 on Android, Mozilla Thunderbird, and many other CalDAV and CardDAV capable applications. This compatibility ensures that you can sync your data across multiple platforms without any hassle.
+  Whether you’re coding, managing servers, testing applications, or simply looking for a cloud-based Linux desktop, Webtop with Ubuntu Mate provides an all-in-one solution that is powerful, lightweight, and easy to use.
 
-
-  In addition to its user-friendly features, Baikal emphasizes privacy and data security. By hosting your calendars and contacts yourself, you maintain full control over your personal information, protecting it from potential breaches and unauthorized access. This is particularly important in an era where data privacy is a growing concern.
-
-
-  Whether you are an individual looking for a reliable personal organizer or a small team needing a collaborative solution, Baikal Server provides a practical and efficient way to manage your scheduling and contact needs while ensuring your data remains private and secure. With its fast performance and straightforward interface, Baikal is an excellent choice for anyone seeking a self-hosted calendar and contact management solution.
-
-developer: fruux GmbH
-website: https://sabre.io/baikal/
+developer: LinuxServer.io
+website: https://www.linuxserver.io/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/sabre-io/Baikal
-support: https://github.com/sabre-io/Baikal/issues
+repo: https://github.com/linuxserver/docker-webtop
+support: https://github.com/linuxserver/docker-webtop/issues
 gallery:
-  - https://i.imgur.com/InOvJFa.png
-  - https://i.imgur.com/hIQ1ZIv.png
-  - https://i.imgur.com/nobRqdE.png
+  - https://i.imgur.com/vID6yRB.png
+  - https://i.imgur.com/vID6yRB.png
+  - https://i.imgur.com/vID6yRB.png
 releaseNotes: >-
-  The latest update includes dependency upgrades that enhance compatibility with PHP 8.2 and features the inclusion of sabre/dav version 4.6.0.
+  Updating base packages to Version 04d8319c. 
 dependencies:
 path: ""
 defaultUsername: ""
