@@ -15,6 +15,11 @@ description: >-
 
   Whether you’re coding, managing servers, testing applications, or simply looking for a cloud-based Linux desktop, Webtop with Ubuntu Mate provides an all-in-one solution that is powerful, lightweight, and easy to use.
 
+
+  ⚠️ Please note that the installation process may take some time depending on the specifications and performance of your device, as the image file is over 1GB in size. Due to the large size, the system may require additional time to download, extract, and set up. Additionally, a 4GB shared memory (SHM) size has been configured to ensure optimal performance during installation and operation. It is recommended to be patient and allow the installation to complete fully. 
+  
+  
+  ☂️ For the best performance, an Umbrel Home is recommended for running this application.
 developer: LinuxServer.io
 website: https://www.linuxserver.io/
 submitter: dennysubke
