@@ -30,10 +30,10 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/TwiN/gatus
 support: https://github.com/TwiN/gatus/issues
 gallery:
-  - https://i.imgur.com/WYFm0uG.png
-  - https://i.imgur.com/HTphisJ.png
-  - https://i.imgur.com/GYiN2tV.png
-  - https://i.imgur.com/KvGfRvY.png
+  - https://i.imgur.com/j8GDvxu.png
+  - https://i.imgur.com/uOfQXkn.png
+  - https://i.imgur.com/V02PkKe.png
+  - https://i.imgur.com/xyN9GSo.png
 releaseNotes: >-
   Version 5.13.1 of Gatus fixes an issue with missing support for default-alert in teams workflows, and updates dependencies like go-oidc and gofiber. Additionally, a typo in the README was corrected.
 dependencies:
