@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-grav
 name: Grav
 tagline: A Fast, Simple, and Flexible, file-based Web-platform
-icon: https://i.imgur.com/mGcoOzi.png
+icon: https://i.imgur.com/FKuQEfZ.png
 category: files & productivity
 version: "1.7.48"
 port: 8763
