@@ -3,7 +3,7 @@ id: denny-statusnook
 name: Statusnook
 tagline: An effortless solution for setting up a status page and tracking system health
 icon: https://i.imgur.com/eeUWCTk.png
-category: In Progress
+category: networking
 version: "0.3.0"
 port: 8444
 description: >-
