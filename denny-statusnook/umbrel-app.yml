@@ -19,9 +19,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/goksan/statusnook
 support: https://github.com/goksan/statusnook/issues
 gallery:
-  - https://i.imgur.com/qVQZcqQ.png
-  - https://i.imgur.com/qVQZcqQ.png
-  - https://i.imgur.com/qVQZcqQ.png
+  - https://i.imgur.com/rvmBEXO.png
+  - https://i.imgur.com/9JpctBp.png
+  - https://i.imgur.com/O3S9cv7.png
 releaseNotes: >-
   The latest update introduces a text-based configuration option (YAML), which can be accessed through the settings page or pushed via GitHub. This allows for easier customization and management of settings.
 dependencies:
