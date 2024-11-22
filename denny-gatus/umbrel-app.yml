@@ -3,7 +3,7 @@ id: denny-gatus
 name: Gatus
 tagline: An uptime guardian for critical endpoints
 icon: https://i.imgur.com/OqqoY3A.png
-category: In Progress
+category: networking
 version: "5.13.1"
 port: 8444
 description: >-
@@ -15,6 +15,14 @@ description: >-
 
   Whether you're managing APIs, websites, or backend services, Gatus is a versatile tool designed to enhance reliability and minimize downtime, providing peace of mind in maintaining mission-critical systems.
 
+
+  ⚠️ Custom Configuration Path Setup: 
+  
+  
+  By default, the configuration file is expected to be located at config/config.yaml in the Umbrel App Folder. To specify a custom path, set the GATUS_CONFIG_PATH environment variable. If GATUS_CONFIG_PATH points to a directory, all *.yaml and *.yml files inside that directory and its subdirectories will be merged. All maps and objects will be deep merged, meaning you can define alerting.slack in one file and alerting.pagerduty in another. Slices and arrays are appended, allowing you to define multiple endpoints across different files, with each endpoint being added to the final list. Parameters with primitive values (e.g., metrics, alerting.slack.webhook-url) can only be defined once to prevent ambiguity. For example, you cannot define alerting.slack.webhook-url in two files with different values. All files are merged into one before processing, and this behavior is by design.
+
+
+  🌐 For a full configuration guide, visit: https://github.com/TwiN/gatus.
 developer: TwiN
 website: https://gatus.io/
 submitter: dennysubke
@@ -22,9 +30,10 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/TwiN/gatus
 support: https://github.com/TwiN/gatus/issues
 gallery:
-  - https://i.imgur.com/CCPECFY.png
-  - https://i.imgur.com/CCPECFY.png
-  - https://i.imgur.com/CCPECFY.png
+  - https://i.imgur.com/WYFm0uG.png
+  - https://i.imgur.com/HTphisJ.png
+  - https://i.imgur.com/GYiN2tV.png
+  - https://i.imgur.com/KvGfRvY.png
 releaseNotes: >-
   Version 5.13.1 of Gatus fixes an issue with missing support for default-alert in teams workflows, and updates dependencies like go-oidc and gofiber. Additionally, a typo in the README was corrected.
 dependencies:
