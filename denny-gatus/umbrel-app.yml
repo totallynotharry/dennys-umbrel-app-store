@@ -5,7 +5,7 @@ tagline: An uptime guardian for critical endpoints
 icon: https://i.imgur.com/OqqoY3A.png
 category: networking
 version: "5.13.1"
-port: 8444
+port: 8443
 description: >-
   ⚙️ Gatus is an open-source monitoring solution that provides an intuitive, reliable, and efficient way to ensure the uptime and performance of critical services, APIs, and infrastructure. Designed for simplicity, it uses a YAML-based configuration to define endpoints, intervals, and conditions, making it accessible for both small teams and large-scale operations. With support for various protocols such as HTTP, TCP, and DNS, Gatus adapts seamlessly to diverse monitoring needs.
 
