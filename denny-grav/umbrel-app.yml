@@ -50,6 +50,10 @@ description: >-
 
 
   🌌 Grav is ideal for users who value simplicity, speed, and flexibility. Its flat-file approach appeals to developers and power users who want full control, while the optional admin panel makes it accessible to beginners. Whether you need a fast website, a lightweight solution, or a customizable platform, Grav combines modern technology with ease of use to deliver an exceptional CMS experience.
+
+
+  ⚠️ After installation, it may take a little while for Grav to start for the first time. The Admin Panel will be accessible after the user setup at: http://umbrel.local:8888/admin.
+
 developer: Andy Miller
 website: https://getgrav.org/
 submitter: dennysubke
