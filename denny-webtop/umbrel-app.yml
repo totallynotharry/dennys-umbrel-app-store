@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-webtop
 name: Ubuntu Mate
 tagline: An easy-to-use desktop that brings the power of Ubuntu to your fingertips
-icon: https://i.imgur.com/OspDvGc
+icon: https://i.imgur.com/OspDvGc.png
 category: In Progress
 version: "04d8319c"
 port: 3399
