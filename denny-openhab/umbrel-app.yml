@@ -3,7 +3,7 @@ id: denny-openhab
 name: openHAB
 tagline: An open platform for seamless integration and automation in smart homes
 icon: https://i.imgur.com/kh30x2c.png
-category: In Progress
+category: Home & Automation
 version: "4.2.2"
 port: 8780
 description: >-
