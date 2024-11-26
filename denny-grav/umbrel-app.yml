@@ -7,7 +7,7 @@ category: developer tools
 version: "1.7.48"
 port: 8888
 description: >-
-  👨‍🚀Grav is a modern, open-source, flat-file Content Management System (CMS) that prioritizes speed, simplicity, and flexibility. Unlike traditional CMS platforms like WordPress or Joomla, Grav does not rely on a database to store content. Instead, it uses a flat-file architecture, where content is stored in Markdown files and configurations are handled with YAML, making it lightweight and highly portable.
+  👨‍🚀 Grav is a modern, open-source, flat-file Content Management System (CMS) that prioritizes speed, simplicity, and flexibility. Unlike traditional CMS platforms like WordPress or Joomla, Grav does not rely on a database to store content. Instead, it uses a flat-file architecture, where content is stored in Markdown files and configurations are handled with YAML, making it lightweight and highly portable.
 
 
   What Makes Grav Unique?
