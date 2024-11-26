@@ -1,38 +1,34 @@
 manifestVersion: 1
 id: denny-myip
 name: MyIP
-tagline: A lightweight CalDAV+CardDAV server
-icon: https://i.imgur.com/h3B1DaG.png
+tagline: A Better IP Toolbox
+icon: https://i.imgur.com/4zqbBFI.png
 category: In Progress
-version: "0.9.5"
+version: "4.3.2"
 port: 18966
 description: >-
-  🪆 Baikal Server is a lightweight CalDAV and CardDAV server designed for users who want to manage their calendar and contact information securely on their own server. This robust application offers an extensive web interface that simplifies the management of users, address books, and calendars, making it accessible for both beginners and experienced users.
+  🔍 MyIP is a highly efficient and user-friendly tool developed to simplify the process of discovering your public IP address. In today’s interconnected world, understanding your network’s external-facing IP address is essential for a variety of tasks, ranging from configuring network services and remote access to troubleshooting connectivity issues and managing security. MyIP addresses this need by providing a straightforward, lightweight solution that is both reliable and easy to set up.
 
+  The tool is designed to be versatile, catering to a wide range of users and use cases. It can be run locally on a personal device for quick access or deployed as a containerized service in a more complex environment. For developers, system administrators, and hobbyists, MyIP offers an excellent way to integrate public IP detection into broader workflows or applications. The tool operates by fetching and displaying the public-facing IP address of the network where it is running, allowing users to immediately identify their current external identity on the internet.
 
-  One of the key features of Baikal is its ease of installation and configuration. It requires only a basic PHP-capable server, which means you don’t need extensive technical knowledge to get started. The server supports both MySQL and SQLite databases for data storage, providing flexibility depending on your preferences and needs.
+  One of MyIP's key strengths is its simplicity. It is lightweight and requires minimal system resources, making it an ideal choice for users who need a dependable solution without the overhead of more complex software. The straightforward design ensures that anyone, regardless of their technical background, can quickly deploy and use the tool with ease. At the same time, its adaptability makes it suitable for advanced scenarios, such as containerized environments or integration into larger software systems.
 
+  In addition to its practical functionality, MyIP is an open-source project, inviting collaboration and improvement from the community. This not only ensures transparency but also allows for continuous development and feature enhancement to meet evolving user needs.
 
-  Baikal allows users to seamlessly access their contacts and calendars from any device. It is compatible with a wide range of applications, including iOS, macOS, DAVx5 on Android, Mozilla Thunderbird, and many other CalDAV and CardDAV capable applications. This compatibility ensures that you can sync your data across multiple platforms without any hassle.
+  Whether you are a casual user needing a quick check of your network's public IP, a developer incorporating IP detection into an application, or a network administrator managing complex systems, MyIP serves as a powerful yet accessible tool for external IP address discovery. Its simplicity, reliability, and versatility make it an essential utility in any technical toolkit.
 
-
-  In addition to its user-friendly features, Baikal emphasizes privacy and data security. By hosting your calendars and contacts yourself, you maintain full control over your personal information, protecting it from potential breaches and unauthorized access. This is particularly important in an era where data privacy is a growing concern.
-
-
-  Whether you are an individual looking for a reliable personal organizer or a small team needing a collaborative solution, Baikal Server provides a practical and efficient way to manage your scheduling and contact needs while ensuring your data remains private and secure. With its fast performance and straightforward interface, Baikal is an excellent choice for anyone seeking a self-hosted calendar and contact management solution.
-
-developer: fruux GmbH
-website: https://sabre.io/baikal/
+developer: Jason Ng
+website: https://ipcheck.ing/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/sabre-io/Baikal
-support: https://github.com/sabre-io/Baikal/issues
+repo: https://github.com/jason5ng32/MyIP
+support: https://github.com/jason5ng32/MyIP/issues
 gallery:
-  - https://i.imgur.com/InOvJFa.png
-  - https://i.imgur.com/hIQ1ZIv.png
-  - https://i.imgur.com/nobRqdE.png
+  - https://i.imgur.com/dkL0yFa.png
+  - https://i.imgur.com/dkL0yFa.png
+  - https://i.imgur.com/dkL0yFa.png
 releaseNotes: >-
-  The latest update includes dependency upgrades that enhance compatibility with PHP 8.2 and features the inclusion of sabre/dav version 4.6.0.
+  Version 4.3.2 introduces minor improvements and optimizations.
 dependencies:
 path: ""
 defaultUsername: ""
