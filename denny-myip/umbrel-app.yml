@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: denny-myip
 name: MyIP
-tagline: A Better IP Toolbox
+tagline: A better IP-Toolbox
 icon: https://i.imgur.com/4zqbBFI.png
 category: In Progress
 version: "4.3.2"
