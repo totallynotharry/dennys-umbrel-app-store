@@ -4,7 +4,7 @@ name: Super Productivity
 tagline: An efficient way to manage tasks, time, and projects all in one place
 icon: https://i.imgur.com/bNDXJHt.png
 category: files & productivity
-version: "10.1.1"
+version: "10.2.3"
 port: 8020
 description: >-
   Super Productivity is a comprehensive, open-source productivity app tailored to help individuals and teams organize their work with ease. Ideal for developers, project managers, freelancers, and anyone seeking a streamlined approach to task and time management, this tool combines essential features in one intuitive platform.
@@ -48,7 +48,7 @@ gallery:
   - https://i.imgur.com/ip2EbIg.png
   - https://i.imgur.com/X2Jzxbh.png
 releaseNotes: >-
-  Version 10.1.1 (2024-11-06) brings improvements to error handling for Android users and prepares the app for automatic builds. Additionally, the typing experience has been refined with changed separators, and synchronization was enhanced with a revised check system.
+  The commit "Revert build try different workaround for npm install issue" undoes a change testing an alternative fix for an npm install issue. Multiarch support for Docker was added to enable containers to run on different CPU architectures like ARM and x86.
 dependencies:
 path: ""
 defaultUsername: ""
