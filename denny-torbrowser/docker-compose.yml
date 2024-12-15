@@ -7,7 +7,7 @@ services:
       APP_PORT: 5800
       PROXY_AUTH_ADD: "false"
   web:
-    image: ghcr.io/domistyle/docker-tor-browser:12.0.4@sha256:3bd6f9df5086b7c7efa60e9575ab430d3aa8937192262552a15cf036eab78f10
+    image: ghcr.io/lkshrk/docker-tor-browser:14.0.3@sha256:9d854697d4afa21a6e6e8fb98d0cf2a82776330c95d9b5bb03f3665096b3f1da
     restart: always
     environment:
       - TZ=Europe/Berlin
