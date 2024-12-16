@@ -17,6 +17,11 @@ description: >-
 
 
   Kiwix has become an invaluable tool for humanitarian organizations, educational initiatives, and travelers who need reliable access to information without incurring data costs or facing connectivity challenges. By democratizing access to knowledge, Kiwix empowers individuals and communities to learn, grow, and thrive, no matter their circumstances. It is more than just a tool—it’s a catalyst for change, ensuring that the power of the internet reaches everyone, everywhere.
+
+
+  ⚙️ To set up ZIM files for the Kiwix app on your Umbrel server, you first need to download one or more suitable files from the Kiwix Library at https://library.kiwix.org. Choose the files you want, such as different versions of Wikipedia. After downloading, move the files into the /data/zim/ folder, which is located in the directory of your Kiwix app on your Umbrel server. 
+  
+  In the docker-compose.yml, you can specify multiple ZIM files by listing their names in the appropriate configuration line. To apply the changes, it is important to restart the Kiwix app. Make sure all filenames specified in the configuration file match the actual names of the ZIM files in the folder. This allows you to easily access multiple offline databases and use them within Kiwix.
 developer: Emmanuel Engelhart
 website: https://kiwix.org/
 submitter: dennysubke
@@ -24,9 +29,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/kiwix
 support: https://kiwix.org/en/frequently-asked-questions/
 gallery:
-  - https://i.imgur.com/aURex56.png
-  - https://i.imgur.com/aURex56.png
-  - https://i.imgur.com/aURex56.png
+  - https://i.imgur.com/1JWhljT.png
+  - https://i.imgur.com/f7r8xVd.png
+  - https://i.imgur.com/DEdJ5qf.png
 releaseNotes: >-
   The update addresses various improvements, including clarifying documentation around ZIM and book name distinctions and ensuring correct versioning for compilation dependencies. Additionally, a new --skipInvalid command-line option has been introduced for Kiwix Server, enhancing its functionality.
 dependencies:
