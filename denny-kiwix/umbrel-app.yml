@@ -3,7 +3,7 @@ id: denny-kiwix
 name: Kiwix
 tagline: An ocean of knowledge, ready to dive into offline
 icon: https://i.imgur.com/eFGQ84F.png
-category: In Progress
+category: files & productivity
 version: "3.7.0"
 port: 8889
 description: >-
