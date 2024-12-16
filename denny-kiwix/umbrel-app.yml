@@ -21,7 +21,10 @@ description: >-
 
   ⚙️ To set up ZIM files for the Kiwix app on your Umbrel server, you first need to download one or more suitable files from the Kiwix Library at https://library.kiwix.org. Choose the files you want, such as different versions of Wikipedia. After downloading, move the files into the /data/zim/ folder, which is located in the directory of your Kiwix app on your Umbrel server. 
   
-  In the docker-compose.yml, you can specify multiple ZIM files by listing their names in the appropriate configuration line. To apply the changes, it is important to restart the Kiwix app. Make sure all filenames specified in the configuration file match the actual names of the ZIM files in the folder. This allows you to easily access multiple offline databases and use them within Kiwix.
+  In the docker-compose.yml, you can specify multiple ZIM files by listing their names in the appropriate configuration line. 
+  
+  
+  To apply the changes, it is important to restart the Kiwix app. Make sure all filenames specified in the configuration file match the actual names of the ZIM files in the folder. This allows you to easily access multiple offline databases and use them within Kiwix.
 developer: Emmanuel Engelhart
 website: https://kiwix.org/
 submitter: dennysubke
