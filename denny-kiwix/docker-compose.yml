@@ -8,14 +8,6 @@ services:
   web:
     image: ghcr.io/kiwix/kiwix-serve:3.7.0@sha256:ebf9b935eb1301661289ff0dc7a17c6406b0ef0602ff7ca1c9d9187dbae81abe
     restart: on-failure
-    environment:
-      - 'DOWNLOAD=https://download.kiwix.org/zim/wikipedia_bm_all.zim'
+    command: 'wikipedia_en_all_novid_2018-10.zim' #OPTIONAL
     volumes:
       - "${APP_DATA_DIR}/data/zim:/data:rw"
-
-# OPTIONAL
-# uncomment next 4 lines to use it with local zim file
-# volumes:
-#   - ${APP_DATA_DIR}/data/tmp/zim:/data
-# command:
-#   - '*.zim'
