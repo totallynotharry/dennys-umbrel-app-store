@@ -16,6 +16,9 @@ services:
       
   webdav:
     image: hacdias/webdav:v5.4@sha256:afa0a5a0e7dbe3d6040786777e837beb836d1919cdfe0099e640fce86c2fa3df
+    environment:
+    - WEBDAV_AUTH_USER=umbrel
+    - WEBDAV_AUTH_PASSWORD=umbrel
     volumes:
       - ${APP_DATA_DIR}/data/webdav/webdav.yaml:/config.yml:ro
       - ${APP_DATA_DIR}/data/storage:/data
