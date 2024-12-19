@@ -24,9 +24,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/johna23-lab/jdownloader2
 support: https://github.com/johna23-lab/jdownloader2/issues
 gallery:
-  - https://i.imgur.com/hVs5ky0.png
-  - https://i.imgur.com/hVs5ky0.png
-  - https://i.imgur.com/hVs5ky0.png
+  - https://i.imgur.com/rxXtgv3.png
+  - https://i.imgur.com/ICXxKVz.png
+  - https://i.imgur.com/uvALTrn.png
 releaseNotes: >-
   Version 24.11.1 includes improvements to reduce the risk of installation corruption during an update. This update enhances the stability and reliability of the software.
 dependencies:
