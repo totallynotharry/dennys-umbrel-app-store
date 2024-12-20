@@ -3,7 +3,7 @@ id: denny-doom
 name: Doom
 tagline: A one-way ticket to Hell, and you’re driving the bus
 icon: https://i.imgur.com/ICwB6tZ.png
-category: AI
+category: In Progress
 version: "0.1.11"
 port: 4113
 description: >-
