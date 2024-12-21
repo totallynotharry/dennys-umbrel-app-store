@@ -7,7 +7,7 @@ services:
       APP_PORT: 80
 
   web:
-    image: ghcr.io/nextcloud-releases/whiteboard:v1.0.4 #excalidraw/excalidraw@sha256:fae667864717a415e7474b5f757ffb50e63a81cfc1a2fbcf905ecbd137d0dbba
+    image: excalidraw/excalidraw@sha256:fae667864717a415e7474b5f757ffb50e63a81cfc1a2fbcf905ecbd137d0dbba
     restart: on-failure
     stop_grace_period: 1m
     volumes:
