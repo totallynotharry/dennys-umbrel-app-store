@@ -3,7 +3,7 @@ version: '3.7'
 services:
   app_proxy:
     environment:
-      APP_HOST: denny-excalidraw
+      APP_HOST: denny-excalidraw_web_1
       APP_PORT: 80
 
   web:
