@@ -50,7 +50,7 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | 33  | [Mafl](https://github.com/hywax/mafl)                | An intuitive service for organizing your homepage                         | 3069   |
 | 34  | [Mermaid Live Editor](https://github.com/mermaid-js/mermaid-live-editor) | A live editor for instant Mermaid diagram visualization       | 9084   |
 | 35  | [MicroBin](https://github.com/szabodanika/microbin)  | A tiny, self-contained, configurable paste bin and URL shortener          | 8065   |
-| 36  | [MyIP](https://github.com/jason5ng32/MyIP))  | A better IP-Toolbox                                                               | 18966  |
+| 36  | [MyIP](https://github.com/jason5ng32/MyIP)   | A better IP-Toolbox                                                               | 18966  |
 | 37  | [Netdata](https://github.com/netdata/netdata)        | A high-performance tool for monitoring systems in real time               | 19999  |
 | 38  | [NocoDB](https://github.com/nocodb/nocodb)           | A seamless no-code platform for database management                       | 8096   |
 | 39  | [Nullboard](https://github.com/apankrat/nullboard)   | A minimalist take on a kanban board and task list manager                 | 1001   |
