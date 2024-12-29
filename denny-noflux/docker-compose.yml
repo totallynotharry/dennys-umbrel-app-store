@@ -4,10 +4,8 @@ services:
   app_proxy:
     environment:
       APP_HOST: denny-noflux_web_1
-      APP_PORT: 8064
+      APP_PORT: 80
 
   web:
     image: fiatjaf/noflux:0.1.0@sha256:13bdc84ee27d28fb456d2de52a9a398e6567fefbe2dc63aadc5c9ced35b2a665
     restart: on-failure
-    environment:
-      LISTEN_ADDR: "umbrel-2.local:8064"
