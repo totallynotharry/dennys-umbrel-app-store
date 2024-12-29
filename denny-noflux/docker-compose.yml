@@ -1,6 +1,6 @@
 services:
   noflux:
-    image: noflux/noflux:latest
+    image: fiatjaf/noflux:latest
     ports:
       - "8064:8080"
     depends_on:
