@@ -2,9 +2,18 @@ version: '3.7'
 
 services:
   app_proxy:
+    image: nginx:alpine
     environment:
       APP_HOST: denny-noflux_web_1
       APP_PORT: 8080
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
+    networks:
+      - app_network
+    depends_on:
+      - web
 
   web:
     image: fiatjaf/noflux:0.1.0@sha256:13bdc84ee27d28fb456d2de52a9a398e6567fefbe2dc63aadc5c9ced35b2a665
@@ -18,6 +27,9 @@ services:
       - CREATE_ADMIN=1
       - ADMIN_USERNAME=admin
       - ADMIN_PASSWORD=test123
+    networks:
+      - app_network
+
   db:
     image: postgres:17-alpine
     environment:
@@ -30,5 +42,12 @@ services:
       test: ["CMD", "pg_isready", "-U", "noflux"]
       interval: 10s
       start_period: 30s
+    networks:
+      - app_network
+
 volumes:
   noflux-db:
+
+networks:
+  app_network:
+    driver: bridge
