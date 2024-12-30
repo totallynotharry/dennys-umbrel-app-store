@@ -8,26 +8,26 @@ services:
 
   web:
     image: fiatjaf/noflux:0.1.0@sha256:13bdc84ee27d28fb456d2de52a9a398e6567fefbe2dc63aadc5c9ced35b2a665
-    restart: on-failure
-    stop_grace_period: 1m
-    environment:
-      DATABASE_URL=postgres://noflux:secret@db/noflux?sslmode=disable
-      RUN_MIGRATIONS=1
-      CREATE_ADMIN=1
-      ADMIN_USERNAME=admin
-      ADMIN_PASSWORD=test123
     depends_on:
       db:
         condition: service_healthy
-
-  db:
-    image: postgres:16@sha256:1bf73ccae25238fa555100080042f0b2f9be08eb757e200fe6afc1fc413a1b3c
-    restart: on-failure
-    stop_grace_period: 1m
-    volumes:
-      - ${APP_DATA_DIR}/data/postgres:/var/lib/postgresql/data
     environment:
-      POSTGRES_DB: noflux
-      POSTGRES_USER: noflux
-      POSTGRES_PASSWORD: secret
-      PGDATA: /var/lib/postgresql/data/pgdata
+      - DATABASE_URL=postgres://noflux:secret@db/noflux?sslmode=disable
+      - RUN_MIGRATIONS=1
+      - CREATE_ADMIN=1
+      - ADMIN_USERNAME=admin
+      - ADMIN_PASSWORD=test123
+  db:
+    image: postgres:17-alpine
+    environment:
+      - POSTGRES_USER=noflux
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_DB=noflux
+    volumes:
+      - noflux-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "noflux"]
+      interval: 10s
+      start_period: 30s
+volumes:
+  noflux-db:
