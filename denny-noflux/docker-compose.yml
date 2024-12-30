@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  noflux:
+    image: fiatjaf/noflux:latest-distroless
+    container_name: noflux
+    environment:
+      - LOG_LEVEL=info
+      - LISTEN_ADDR=0.0.0.0:8064
+    volumes:
+      - ./data:/data
+    entrypoint: ["/usr/bin/noflux"]
+    ports:
+      - "8064:8064"
+    restart: unless-stopped
