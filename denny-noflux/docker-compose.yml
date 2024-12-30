@@ -29,5 +29,5 @@ services:
     environment:
       POSTGRES_DB: noflux
       POSTGRES_USER: noflux
-      POSTGRES_PASSWORD: maybe
+      POSTGRES_PASSWORD: secret
       PGDATA: /var/lib/postgresql/data/pgdata
