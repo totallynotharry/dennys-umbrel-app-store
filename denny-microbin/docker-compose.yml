@@ -29,5 +29,5 @@ services:
       - MICROBIN_ETERNAL_PASTA=true
       - MICROBIN_SHOW_READ_STATS:true
     volumes:
-      - ${APP_DATA_DIR}/microbin:/my/microbin
-      - ${APP_DATA_DIR}/microbin/data:/app/pasta_data
+      - ${APP_DATA_DIR}/data/microbin:/my/microbin
+      - ${APP_DATA_DIR}/data/pasta-data:/app/pasta_data
