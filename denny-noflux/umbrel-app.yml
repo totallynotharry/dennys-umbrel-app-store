@@ -15,6 +15,8 @@ description: >-
 
   In essence, Noflux is a modern feed reader that combines the functionality of traditional RSS with the power of decentralization, offering a censorship-resistant, user-controlled experience for consuming and sharing content.
 
+
+  🔑 By default, the username is "admin" and the password is "umbrel".
 developer: fiatjaf
 website: https://noflux.nostr.technology/
 submitter: dennysubke
