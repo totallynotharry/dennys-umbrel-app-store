@@ -7,9 +7,24 @@ services:
     environment:
       - LOG_LEVEL=info
       - LISTEN_ADDR=0.0.0.0:8064
+      - DATABASE_URL=postgresql://noflux:nofluxpassword@postgres:5432/nofluxdb
     volumes:
       - ./data:/data
     entrypoint: ["/usr/bin/noflux"]
     ports:
       - "8064:8064"
     restart: unless-stopped
+
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    environment:
+      POSTGRES_USER: noflux
+      POSTGRES_PASSWORD: nofluxpassword
+      POSTGRES_DB: nofluxdb
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
