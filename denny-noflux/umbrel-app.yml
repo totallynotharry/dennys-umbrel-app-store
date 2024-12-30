@@ -24,9 +24,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/fiatjaf/noflux
 support: https://github.com/fiatjaf/noflux/issues
 gallery:
-  - https://i.imgur.com/fJGtVBy.png
-  - https://i.imgur.com/fJGtVBy.png
-  - https://i.imgur.com/fJGtVBy.png
+  - https://i.imgur.com/nNGtyE6.png
+  - https://i.imgur.com/nNGtyE6.png
+  - https://i.imgur.com/nNGtyE6.png
 releaseNotes: >-
   This is the initial release (v0.1.0) of Noflux. There are no prior release notes as this marks the first version of the project.
 dependencies:
