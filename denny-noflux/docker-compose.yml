@@ -1,20 +1,6 @@
-version: '3.7'
+version: '3.9'
 
 services:
-  noflux:
-    image: fiatjaf/noflux:latest-distroless
-    container_name: noflux
-    environment:
-      - LOG_LEVEL=info
-      - LISTEN_ADDR=0.0.0.0:8064
-      - DATABASE_URL=postgresql://noflux:nofluxpassword@postgres:5432/nofluxdb
-    volumes:
-      - ./data:/data
-    entrypoint: ["/usr/bin/noflux"]
-    ports:
-      - "8064:8064"
-    restart: unless-stopped
-
   postgres:
     image: postgres:15
     container_name: postgres
@@ -23,8 +9,29 @@ services:
       POSTGRES_PASSWORD: nofluxpassword
       POSTGRES_DB: nofluxdb
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - ./postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U noflux"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
-volumes:
-  postgres_data:
+  noflux:
+    image: fiatjaf/noflux:latest-distroless
+    container_name: noflux
+    environment:
+      - LOG_LEVEL=info
+      - LISTEN_ADDR=0.0.0.0:8064
+      - DATABASE_URL=postgres://noflux:nofluxpassword@postgres:5432/nofluxdb?sslmode=disable
+    volumes:
+      - ./data:/data
+    entrypoint: ["/usr/bin/noflux"]
+    ports:
+      - "8064:8064"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
