@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-noflux
 name: Noflux
 tagline: A simple decentralized feed reader powered by Nostr
-icon: https://i.imgur.com/OJOiqVw.png
+icon: https://i.imgur.com/jPdZrxU.png
 category: In Progress
 version: "0.1.0"
 port: 8064
