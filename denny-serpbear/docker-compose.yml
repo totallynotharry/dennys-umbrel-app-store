@@ -9,6 +9,7 @@ services:
   app:
     image: towfiqi/serpbear:2.0.6@sha256:08a04778462e2dc88de2d9e4713f4a2b0eac8fee78a32e746126383a85ae9e13
     restart: on-failure
+    user: "1000:1000"
     environment:
       - USER=admin
       - PASSWORD=umbrel
