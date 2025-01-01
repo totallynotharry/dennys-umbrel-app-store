@@ -14,6 +14,9 @@ description: >-
 
 
   As an open-source solution, SerpBear is free to use and can be self-hosted, offering full control over your data and configurations. This makes it not only cost-effective but also a secure and flexible choice for SEO monitoring. Whether you’re looking to track a handful of keywords or manage rankings for multiple domains, SerpBear provides the tools, insights, and flexibility needed to achieve your goals and maintain a strong online presence.
+
+
+  🔑 By default, the username is "admin" and the password is "umbrel".
 developer: towfiqi
 website: https://docs.serpbear.com/
 submitter: dennysubke
