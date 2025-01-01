@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-quakeiii_web_1
+      APP_PORT: 80
+
+  web:
+    image: treyyoder/quakejs:v1.0@sha256:e78fffd905af10cdc1519848789fa22e5a3b399dd859d14a5f0bd23757827437
+    restart: on-failure
+    environment:
+      - HTTP_PORT=8787
