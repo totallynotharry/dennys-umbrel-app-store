@@ -3,7 +3,7 @@ id: denny-wakapi
 name: Wakapi
 tagline: A minimalist, self-hosted WakaTime-compatible backend for coding statistics
 icon: https://i.imgur.com/sSTSIWz.png
-category: In Progress
+category: developer tools
 version: "2.12.2"
 port: 3366
 description: >-
