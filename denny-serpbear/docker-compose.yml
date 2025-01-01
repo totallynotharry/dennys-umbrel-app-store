@@ -17,4 +17,4 @@ services:
       - APIKEY=5saedXklbslhnapihe2pihp3pih4fdnakhjwq5
       - NEXT_PUBLIC_APP_URL=http://umbrel.local:3232
     volumes:
-      - ${APP_DATA_DIR}/data:/app/data
+      - ${APP_DATA_DIR}/data:/app/data:rw
