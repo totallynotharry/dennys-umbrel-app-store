@@ -11,3 +11,6 @@ services:
     restart: on-failure
     environment:
       - HTTP_PORT=8787
+    ports:
+        - '8787:80'
+        - '27960:27960'
