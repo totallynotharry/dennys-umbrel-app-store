@@ -66,28 +66,29 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | 49  | [portkey](https://github.com/kodehat/portkey)        | An engaging startup hub for favorite links and custom pages               | 3343   |
 | 50  | [PrivateBin](https://github.com/PrivateBin/PrivateBin) | A minimalist, open-source online pastebin                               | 3070   |
 | 51  | [Puter](https://github.com/puterOS/puterOS)          | An advanced, open-source internet operating system                        | 4100   |
-| 52  | [Rustdesk](https://github.com/rustdesk/rustdesk)     | A full-featured remote control for self-hosting with minimal configuration | 3044   |
-| 53  | [Rustpad](https://github.com/ekzhang/rustpad)        | An easy solution for real-time collaborative writing                      | 3038   |
-| 54  | [Scrypted](https://github.com/koush/scrypted)        | A high-performance home video integration platform                        | 11080  |
-| 55  | [Serge](https://github.com/serge-chat/serge)         | An easy way to chat with Alpaca & other LLaMa based models                | 8803   |
-| 56  | [SerpBear](https://github.com/towfiqi/serpbear)      | An SEO tool designed for accuracy and simplicity                          | 3232   |
-| 57  | [Slash](https://github.com/yourselfhosted/slash)     | A link shortener that simplifies the managing and sharing of links        | 5231   |
-| 58  | [SolidInvoice](https://github.com/SolidInvoice/SolidInvoice) | A sophisticated open-source invoicing application                 | 5484   |
-| 59  | [Spacedrive](https://github.com/spacedriveapp/spacedrive) | A file manager from the future                                       | 8199   |
-| 60  | [Spotube](https://github.com/KRTirtho/spotube)       | An open-source Spotify client for every platform                          | 30123  |
-| 61  | [Statusnook](https://github.com/goksan/statusnook)       | An effortless solution for setting up a status page and monitoring endpoints in minutes | 8444  |
-| 62  | [Super Productivity](https://github.com/johannesjo/super-productivity) | An efficient way to manage tasks, time, and projects all in one place  | 8020   |
-| 63  | [Swing Music](https://github.com/swingmx/swingmusic) | A beautiful, self-hosted music player for your local audio files          | 1970   |
-| 64  | [Textpod](https://github.com/freetonik/textpod)      | An extremely simple note-taking app                                       | 8099   |
-| 65  | [Tor Browser](https://github.com/thetorproject)           | An invisible shield for your browsing experience                     | 5832   |
-| 66  | [Traggo](https://github.com/traggo/server)           | An open-source time tracking tool designed for self-hosting               | 3083   |
-| 67  | [Wallos](https://github.com/ellite/Wallos)           | An empowering app to manage finances and track subscriptions and expenses | 8282   |
-| 68  | [Online Whiteboard](https://github.com/lovasoa/whitebophir) | An online collaborative whiteboard that's simple, free, and easy to use  | 5111   |
-| 69  | [Wakapi](https://github.com/muety/wakapi)            | A minimalist, self-hosted WakaTime-compatible backend for coding statistics     | 3366   |
-| 70  | [WebCheck](https://github.com/Lissy93/web-check)     | An all-in-one open-source intelligence tool for analyzing any website     | 3093   |
-| 71  | [Webtop](https://github.com/linuxserver/docker-webtop) | An easy-to-use desktop that brings the power of Ubuntu to your fingertips | 3399   |
-| 72  | [Yopass](https://github.com/jhaals/yopass)           | A secure, open-source sharing platform for encrypted secret transfers     | 3006   |
-| 73  | [Zoraxy Proxy Server](https://github.com/tobychui/zoraxy) | An efficient reverse proxy server with automated SSL management      | 8400   |
+| 52  | [Quake III Arena](https://github.com/id-Software/Quake-III-Arena) | An explosive journey into the heart of '90s gaming madness   | 8787   |
+| 53  | [Rustdesk](https://github.com/rustdesk/rustdesk)     | A full-featured remote control for self-hosting with minimal configuration | 3044   |
+| 54  | [Rustpad](https://github.com/ekzhang/rustpad)        | An easy solution for real-time collaborative writing                      | 3038   |
+| 55  | [Scrypted](https://github.com/koush/scrypted)        | A high-performance home video integration platform                        | 11080  |
+| 56  | [Serge](https://github.com/serge-chat/serge)         | An easy way to chat with Alpaca & other LLaMa based models                | 8803   |
+| 57  | [SerpBear](https://github.com/towfiqi/serpbear)      | An SEO tool designed for accuracy and simplicity                          | 3232   |
+| 58  | [Slash](https://github.com/yourselfhosted/slash)     | A link shortener that simplifies the managing and sharing of links        | 5231   |
+| 59  | [SolidInvoice](https://github.com/SolidInvoice/SolidInvoice) | A sophisticated open-source invoicing application                 | 5484   |
+| 60  | [Spacedrive](https://github.com/spacedriveapp/spacedrive) | A file manager from the future                                       | 8199   |
+| 61  | [Spotube](https://github.com/KRTirtho/spotube)       | An open-source Spotify client for every platform                          | 30123  |
+| 62  | [Statusnook](https://github.com/goksan/statusnook)       | An effortless solution for setting up a status page and monitoring endpoints in minutes | 8444  |
+| 63  | [Super Productivity](https://github.com/johannesjo/super-productivity) | An efficient way to manage tasks, time, and projects all in one place  | 8020   |
+| 64  | [Swing Music](https://github.com/swingmx/swingmusic) | A beautiful, self-hosted music player for your local audio files          | 1970   |
+| 65  | [Textpod](https://github.com/freetonik/textpod)      | An extremely simple note-taking app                                       | 8099   |
+| 66  | [Tor Browser](https://github.com/thetorproject)           | An invisible shield for your browsing experience                     | 5832   |
+| 67  | [Traggo](https://github.com/traggo/server)           | An open-source time tracking tool designed for self-hosting               | 3083   |
+| 68  | [Wallos](https://github.com/ellite/Wallos)           | An empowering app to manage finances and track subscriptions and expenses | 8282   |
+| 69  | [Online Whiteboard](https://github.com/lovasoa/whitebophir) | An online collaborative whiteboard that's simple, free, and easy to use  | 5111   |
+| 70  | [Wakapi](https://github.com/muety/wakapi)            | A minimalist, self-hosted WakaTime-compatible backend for coding statistics     | 3366   |
+| 71  | [WebCheck](https://github.com/Lissy93/web-check)     | An all-in-one open-source intelligence tool for analyzing any website     | 3093   |
+| 72  | [Webtop](https://github.com/linuxserver/docker-webtop) | An easy-to-use desktop that brings the power of Ubuntu to your fingertips | 3399   |
+| 73  | [Yopass](https://github.com/jhaals/yopass)           | A secure, open-source sharing platform for encrypted secret transfers     | 3006   |
+| 74  | [Zoraxy Proxy Server](https://github.com/tobychui/zoraxy) | An efficient reverse proxy server with automated SSL management      | 8400   |
 
 🔄 All Apps are continually updated and new Apps are added over time.
 
