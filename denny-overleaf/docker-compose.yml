@@ -8,20 +8,24 @@ services:
 
   web:
     image: sharelatex/sharelatex
-    healthcheck:
-    test: curl -f http://localhost:80/ || exit 1
     container_name: Overleaf
+    restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:80/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
     depends_on:
-       mongo:
-         condition: service_healthy
-       redis:
-         condition: service_healthy
-     ports:
-         - 7643:80
-     stop_grace_period: 60s
-     volumes:
-         - ${APP_DATA_DIR}/volume1/docker/overleaf:/var/lib/sharelatex
-     environment:
+      mongo:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    ports:
+      - "7643:80"
+    stop_grace_period: 60s
+    volumes:
+      - ${APP_DATA_DIR}/volume1/docker/overleaf:/var/lib/sharelatex
+    environment:
       OVERLEAF_APP_NAME: Overleaf Community Edition
       OVERLEAF_MONGO_URL: mongodb://mongo/sharelatex
       OVERLEAF_REDIS_HOST: redis
@@ -29,34 +33,38 @@ services:
       ENABLE_CONVERSIONS: 'true'
       EMAIL_CONFIRMATION_DISABLED: 'true'
 
-    mongo:
-     restart: on-failure:5
-     image: mongo:4.4
-     container_name: Overleaf-DB
-     expose:
-            - 27017
-     volumes:
-        - ${APP_DATA_DIR}/volume1/docker/overleaf/db:/data/db
-        - ${APP_DATA_DIR}/volume1/docker/overleaf/configdb:/data/configdb
-     healthcheck:
-       test: echo 'db.stats().ok' | mongo localhost:27017/test --quiet
-       interval: 10s
-       timeout: 10s
-       retries: 5
-    redis:
-      restart: on-failure:5
-      image: redis
-      mem_limit: 256m
-      mem_reservation: 50m
-      cpu_shares: 768
-      security_opt:
-       - no-new-privileges:true
-      healthcheck:
-       test: ["CMD-SHELL", "redis-cli ping || exit 1"]
-      container_name: Overleaf-REDIS
-      expose:
-       - 6379
-      volumes:
-       - ${APP_DATA_DIR}/volume1/docker/overleaf/redis:/data
-      environment:
-       TZ: Europe/Berlin
+  mongo:
+    image: mongo:4.4
+    container_name: Overleaf-DB
+    restart: on-failure
+    expose:
+      - "27017"
+    volumes:
+      - ${APP_DATA_DIR}/volume1/docker/overleaf/db:/data/db
+      - ${APP_DATA_DIR}/volume1/docker/overleaf/configdb:/data/configdb
+    healthcheck:
+      test: ["CMD-SHELL", "echo 'db.stats().ok' | mongo localhost:27017/test --quiet"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+
+  redis:
+    image: redis:latest
+    container_name: Overleaf-REDIS
+    restart: on-failure
+    mem_limit: 256m
+    mem_reservation: 50m
+    cpu_shares: 768
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    expose:
+      - "6379"
+    volumes:
+      - ${APP_DATA_DIR}/volume1/docker/overleaf/redis:/data
+    environment:
+      TZ: Europe/Berlin
