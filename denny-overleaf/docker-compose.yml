@@ -5,7 +5,7 @@ services:
     image: overleaf/overleaf:latest
     container_name: overleaf
     ports:
-      - "80:80" # Externer Port 80 für den Zugriff auf Overleaf
+      - "8063:80" # Externer Port 80 für den Zugriff auf Overleaf
     environment:
       - OVERLEAF_ADMIN_PASSWORD=your_password_here  # Admin-Passwort für Overleaf
       - OVERLEAF_GIT_AUTH_METHOD=ssh  # Authentifizierungsmethode für Git (optional)
