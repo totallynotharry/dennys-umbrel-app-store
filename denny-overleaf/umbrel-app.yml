@@ -1,34 +1,37 @@
 manifestVersion: 1
 id: denny-overleaf
 name: Overleaf
-tagline: A simple decentralized feed reader powered by Nostr
+tagline: An efficient solution for writing, formatting, and collaborating on LaTeX documents
 icon: https://i.imgur.com/v84UgrO.png
-category: in progress
-version: "0.1.0"
+category: In Progress
+version: "5.3.0"
 port: 8063
 description: >-
-  📡 Noflux is a decentralized feed reader built on the Nostr protocol. It allows users to subscribe to and follow feeds, similar to traditional RSS readers, but with the added benefits of decentralization and censorship resistance. Noflux leverages the Nostr protocol to distribute and receive content, ensuring that the platform remains independent of centralized servers.
+  Overleaf is a web-based platform that provides a user-friendly environment for creating and editing LaTeX documents. LaTeX is a widely used typesetting system, particularly in academia and technical fields, for creating well-formatted, professional documents such as research papers, dissertations, technical reports, and academic articles.
 
 
-  By using Nostr, Noflux provides a way for users to consume and share news, posts, and articles while maintaining full control over their data. This decentralized approach ensures that content cannot be easily censored or manipulated, giving users a more secure and private way to interact with feeds across the web.
+  The platform allows users to write and edit LaTeX documents directly in their browser without the need to install LaTeX locally. Overleaf handles the compilation of LaTeX code on its own servers, reducing the workload for users and providing quick results. This is especially beneficial for beginners, as they don’t have to deal with the often complex setup and configuration of LaTeX on their personal machines.
 
 
-  In essence, Noflux is a modern feed reader that combines the functionality of traditional RSS with the power of decentralization, offering a censorship-resistant, user-controlled experience for consuming and sharing content.
+  One standout feature of Overleaf is its real-time collaboration functionality. Teams, research groups, or classes can work on a document simultaneously, with all changes displayed instantly. This feature is particularly useful for academic projects that involve multiple people contributing to a single document. Overleaf also offers complete version control, allowing users to access earlier versions of a document and track changes made by collaborators.
 
 
-  🔑 By default, the username is "admin" and the password is "umbrel".
-developer: fiatjaf
-website: https://noflux.nostr.technology/
+  Overleaf also supports integration with external platforms like GitHub, Dropbox, and Zotero, making it easier to manage references and collaborate. It provides templates for various document types, from research articles to presentations and resumes, making it easy for users to get started with specific formats. The platform also offers a wide range of LaTeX packages and features, allowing users to incorporate mathematical formulas, complex tables, and figures with ease.
+
+
+  Additionally, users can export their documents in different formats, including PDF, HTML, and Word. Overleaf includes extensive documentation and tutorials to help both beginners and advanced users fully utilize LaTeX's capabilities. With its combination of ease of use, collaboration features, and powerful functionality, Overleaf has become one of the most popular platforms for LaTeX users worldwide.
+developer: Overleaf Ltd.
+website: https://overleaf.com/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/fiatjaf/noflux
-support: https://github.com/fiatjaf/noflux/issues
+repo: https://github.com/overleaf/overleaf
+support: https://github.com/overleaf/overleaf/issues
 gallery:
   - https://i.imgur.com/banvznE.png
   - https://i.imgur.com/banvznE.png
   - https://i.imgur.com/banvznE.png
 releaseNotes: >-
-  This is the initial release (v0.1.0) of Noflux. There are no prior release notes as this marks the first version of the project.
+  The major release includes an upgrade to Node.js 18.20.1 and a required database migration from Mongo 4 to Mongo 5. Additionally, the environment variables have been rebranded from SHARELATEX_* to OVERLEAF_*.
 dependencies:
 path: ""
 defaultUsername: ""
