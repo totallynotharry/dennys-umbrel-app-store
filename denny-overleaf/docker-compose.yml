@@ -25,8 +25,6 @@ services:
       SANDBOXED_COMPILES: 'true'
       SANDBOXED_COMPILES_SIBLING_CONTAINERS: 'true'
       SANDBOXED_COMPILES_HOST_DIR: '/home/user/sharelatex_data/data/compiles'
-    ports:
-      - "8063:80"
 
   mongo:
     image: mongo:6.0
