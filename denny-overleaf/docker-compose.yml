@@ -8,45 +8,55 @@ services:
 
   web:
     image: sharelatex/sharelatex
-    restart: on-failure
+    healthcheck:
+    test: curl -f http://localhost:80/ || exit 1
+    container_name: Overleaf
     depends_on:
-      - mongo
-      - redis
-    stop_grace_period: 60s
-    volumes:
-      - ${APP_DATA_DIR}/data/sharelatex_data:/var/lib/overleaf
-    environment:
+       mongo:
+         condition: service_healthy
+       redis:
+         condition: service_healthy
+     ports:
+         - 7643:80
+     stop_grace_period: 60s
+     volumes:
+         - ${APP_DATA_DIR}/volume1/docker/overleaf:/var/lib/sharelatex
+     environment:
       OVERLEAF_APP_NAME: Overleaf Community Edition
       OVERLEAF_MONGO_URL: mongodb://mongo/sharelatex
       OVERLEAF_REDIS_HOST: redis
       ENABLED_LINKED_FILE_TYPES: 'project_file,project_output_file'
       ENABLE_CONVERSIONS: 'true'
       EMAIL_CONFIRMATION_DISABLED: 'true'
-      SANDBOXED_COMPILES: 'true'
-      SANDBOXED_COMPILES_SIBLING_CONTAINERS: 'true'
-      SANDBOXED_COMPILES_HOST_DIR: '/home/user/sharelatex_data/data/compiles'
 
-  mongo:
-    image: mongo:4.4
-    container_name: mongo
-    restart: always
-    command: '--replSet overleaf'
-    volumes:
-      - ${APP_DATA_DIR}/mongo_data:/data/db
-      - ./server-ce/mongodb-init-replica-set.js:/docker-entrypoint-initdb.d/mongodb-init-replica-set.js
-    environment:
-      MONGO_INITDB_DATABASE: sharelatex
-    extra_hosts:
-      - mongo:127.0.0.1
-    healthcheck:
-      test: echo 'db.stats().ok' | mongo localhost:27017/test --quiet
-      interval: 10s
-      timeout: 10s
-      retries: 5
-
-  redis:
-    image: redis:6.2
-    container_name: redis
-    restart: on-failure
-    volumes:
-      - ${APP_DATA_DIR}/redis_data:/data
+    mongo:
+     restart: on-failure:5
+     image: mongo:4.4
+     container_name: Overleaf-DB
+     expose:
+            - 27017
+     volumes:
+        - ${APP_DATA_DIR}/volume1/docker/overleaf/db:/data/db
+        - ${APP_DATA_DIR}/volume1/docker/overleaf/configdb:/data/configdb
+     healthcheck:
+       test: echo 'db.stats().ok' | mongo localhost:27017/test --quiet
+       interval: 10s
+       timeout: 10s
+       retries: 5
+    redis:
+      restart: on-failure:5
+      image: redis
+      mem_limit: 256m
+      mem_reservation: 50m
+      cpu_shares: 768
+      security_opt:
+       - no-new-privileges:true
+      healthcheck:
+       test: ["CMD-SHELL", "redis-cli ping || exit 1"]
+      container_name: Overleaf-REDIS
+      expose:
+       - 6379
+      volumes:
+       - ${APP_DATA_DIR}/volume1/docker/overleaf/redis:/data
+      environment:
+       TZ: Europe/Berlin
