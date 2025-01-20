@@ -12,7 +12,7 @@ services:
             redis:
                 condition: service_started
         ports:
-            - 80:80
+            - 8063:80
         links:
             - mongo
             - redis
