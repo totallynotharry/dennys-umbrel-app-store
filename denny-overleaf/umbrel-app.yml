@@ -5,7 +5,7 @@ tagline: A simple decentralized feed reader powered by Nostr
 icon: https://i.imgur.com/v84UgrO.png
 category: files & productivity
 version: "0.1.0"
-port: 8963
+port: 8063
 description: >-
   📡 Noflux is a decentralized feed reader built on the Nostr protocol. It allows users to subscribe to and follow feeds, similar to traditional RSS readers, but with the added benefits of decentralization and censorship resistance. Noflux leverages the Nostr protocol to distribute and receive content, ensuring that the platform remains independent of centralized servers.
 
