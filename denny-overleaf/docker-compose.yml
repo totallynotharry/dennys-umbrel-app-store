@@ -27,7 +27,7 @@ services:
       SANDBOXED_COMPILES_HOST_DIR: '/home/user/sharelatex_data/data/compiles'
 
   mongo:
-    image: mongo:6.0
+    image: mongo:4.4
     container_name: mongo
     restart: always
     command: '--replSet overleaf'
