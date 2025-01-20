@@ -28,8 +28,6 @@ services:
       SANDBOXED_COMPILES: 'true'
       SANDBOXED_COMPILES_SIBLING_CONTAINERS: 'true'
       SANDBOXED_COMPILES_HOST_DIR: '/home/user/sharelatex_data/data/compiles'
-    ports:
-      - "8963:80" # Verknüpft den Host-Port 8963 mit dem Container-Port 80
 
   mongo:
     restart: always
