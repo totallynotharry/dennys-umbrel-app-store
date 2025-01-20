@@ -7,7 +7,7 @@ services:
       APP_PORT: 80
 
   web:
-    image: sharelatex/sharelatex:3.2
+    image: sharelatex/sharelatex:5.3.0@sha256:126606213d8be24ad38b658ea95358e2584b17675ffcb8ec7e99625e9dd42e90
     restart: on-failure
     depends_on:
       - mongo
@@ -25,7 +25,7 @@ services:
       SANDBOXED_COMPILES: 'false'
 
   mongo:
-    image: mongo:4.0
+    image: mongo:6.0@sha256:594e2842e1bb62dcf35f892739192f897cf730ae5211e20b11693c18fb6a7e38
     container_name: mongo
     restart: on-failure
     command: '--replSet overleaf'
