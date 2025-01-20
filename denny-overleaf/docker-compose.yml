@@ -3,15 +3,17 @@ version: '3.7'
 services:
   app_proxy:
     environment:
-      APP_HOST: web
-      APP_PORT: 80 # Dieser Port bleibt unverändert und verweist intern auf den Webservice
+      APP_HOST: denny-overleaf_web_1
+      APP_PORT: 80
 
   web:
     image: sharelatex/sharelatex
     restart: on-failure
     depends_on:
-      - mongo
-      - redis
+      mongo:
+        condition: service_healthy
+      redis:
+        condition: service_started
     stop_grace_period: 60s
     volumes:
       - ${APP_DATA_DIR}/data/sharelatex_data:/var/lib/overleaf
@@ -19,6 +21,7 @@ services:
       OVERLEAF_APP_NAME: Overleaf Community Edition
       OVERLEAF_MONGO_URL: mongodb://mongo/sharelatex
       OVERLEAF_REDIS_HOST: redis
+      REDIS_HOST: redis
       ENABLED_LINKED_FILE_TYPES: 'project_file,project_output_file'
       ENABLE_CONVERSIONS: 'true'
       EMAIL_CONFIRMATION_DISABLED: 'true'
@@ -26,12 +29,12 @@ services:
       SANDBOXED_COMPILES_SIBLING_CONTAINERS: 'true'
       SANDBOXED_COMPILES_HOST_DIR: '/home/user/sharelatex_data/data/compiles'
     ports:
-      - "8963:80" # Portfreigabe angepasst
+      - "8963:80" # Verknüpft den Host-Port 8963 mit dem Container-Port 80
 
   mongo:
+    restart: always
     image: mongo:6.0
     container_name: mongo
-    restart: always
     command: '--replSet overleaf'
     volumes:
       - ${APP_DATA_DIR}/mongo_data:/data/db
@@ -47,8 +50,8 @@ services:
       retries: 5
 
   redis:
+    restart: on-failure
     image: redis:6.2
     container_name: redis
-    restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/redis_data:/data
