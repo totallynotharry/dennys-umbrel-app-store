@@ -3,7 +3,7 @@ id: denny-overleaf
 name: Overleaf
 tagline: A simple decentralized feed reader powered by Nostr
 icon: https://i.imgur.com/v84UgrO.png
-category: files & productivity
+category: in progress
 version: "0.1.0"
 port: 8063
 description: >-
