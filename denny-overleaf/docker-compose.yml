@@ -1,8 +1,8 @@
-version: "3.9"
+version: "3.7"
 
 services:
   overleaf:
-    image: overleaf/overleaf:latest
+    image: sharelatex/sharelatex
     container_name: overleaf
     ports:
       - "8063:80" # Externer Port 80 für den Zugriff auf Overleaf
