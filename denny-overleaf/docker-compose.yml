@@ -5,17 +5,13 @@ services:
     environment:
       APP_HOST: denny-overleaf_web_1
       APP_PORT: 80
-    networks:
-      - overleaf_net
 
   web:
     image: sharelatex/sharelatex
     restart: on-failure
     depends_on:
-      mongo:
-        condition: service_healthy
-      redis:
-        condition: service_started
+      - mongo
+      - redis
     stop_grace_period: 60s
     volumes:
       - ${APP_DATA_DIR}/data/sharelatex_data:/var/lib/overleaf
@@ -23,42 +19,25 @@ services:
       OVERLEAF_APP_NAME: Overleaf Community Edition
       OVERLEAF_MONGO_URL: mongodb://mongo/sharelatex
       OVERLEAF_REDIS_HOST: redis
-      REDIS_HOST: redis
       ENABLED_LINKED_FILE_TYPES: 'project_file,project_output_file'
       ENABLE_CONVERSIONS: 'true'
       EMAIL_CONFIRMATION_DISABLED: 'true'
-    networks:
-      - overleaf_net
+      SANDBOXED_COMPILES: 'false'
 
   mongo:
-    restart: always
     image: mongo:6.0
     container_name: mongo
+    restart: always
     command: '--replSet overleaf'
     volumes:
       - ${APP_DATA_DIR}/mongo_data:/data/db
       - ./server-ce/mongodb-init-replica-set.js:/docker-entrypoint-initdb.d/mongodb-init-replica-set.js
     environment:
       MONGO_INITDB_DATABASE: sharelatex
-    extra_hosts:
-      - mongo:127.0.0.1
-    healthcheck:
-      test: echo 'db.stats().ok' | mongo localhost:27017/test --quiet
-      interval: 10s
-      timeout: 10s
-      retries: 5
-    networks:
-      - overleaf_net
 
   redis:
-    restart: on-failure
     image: redis:6.2
     container_name: redis
+    restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/redis_data:/data
-    networks:
-      - overleaf_net
-
-networks:
-  overleaf_net:
-    driver: bridge
