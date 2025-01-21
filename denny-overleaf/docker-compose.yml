@@ -25,8 +25,8 @@ services:
       SANDBOXED_COMPILES: 'false'
 
   mongo:
-    image: nertworkweb/mongodb-no-avx:latest@sha256:35f6463c359dbfbada9a53104b64547d6cba514fae3b380ff9d9bff1a2195a09 #mongo:6.0@sha256:594e2842e1bb62dcf35f892739192f897cf730ae5211e20b11693c18fb6a7e38
-    container_name: mongodb-no-avx
+    image: mongo:6.0@sha256:594e2842e1bb62dcf35f892739192f897cf730ae5211e20b11693c18fb6a7e38
+    container_name: mongo
     restart: on-failure
     command: '--replSet overleaf'
     volumes:
