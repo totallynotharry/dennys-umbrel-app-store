@@ -1,37 +1,34 @@
 manifestVersion: 1
 id: denny-haven
 name: Haven
-tagline: An efficient solution for writing, formatting, and collaborating on LaTeX documents
-icon: https://i.imgur.com/v84UgrO.png
+tagline: An easy way to create your own private blog
+icon: https://i.imgur.com/tLGbPgK.png
 category: In Progress
-version: "5.3.0"
+version: "ed8777c"
 port: 3339
 description: >-
-  Overleaf is a web-based platform that provides a user-friendly environment for creating and editing LaTeX documents. LaTeX is a widely used typesetting system, particularly in academia and technical fields, for creating well-formatted, professional documents such as research papers, dissertations, technical reports, and academic articles.
+  Haven is an open-source platform that allows you to host your own private blog on a personal server. It enables users to create posts, add images, and control who has access to their content, all without relying on large corporations. Haven prioritizes privacy and security by avoiding ads and tracking.
 
 
-  The platform allows users to write and edit LaTeX documents directly in their browser without the need to install LaTeX locally. Overleaf handles the compilation of LaTeX code on its own servers, reducing the workload for users and providing quick results. This is especially beneficial for beginners, as they don’t have to deal with the often complex setup and configuration of LaTeX on their personal machines.
+  Haven uses Markdown for writing posts and provides a live preview, allowing you to see how your posts will look in real time. Uploaded images are automatically compressed for faster load times, while the original files are preserved for high-quality viewing.
 
 
-  One standout feature of Overleaf is its real-time collaboration functionality. Teams, research groups, or classes can work on a document simultaneously, with all changes displayed instantly. This feature is particularly useful for academic projects that involve multiple people contributing to a single document. Overleaf also offers complete version control, allowing users to access earlier versions of a document and track changes made by collaborators.
+  One standout feature is the integrated feed reader, which lets users create private feeds from websites and other Havens, consolidating all favorite content in one place.
 
 
-  Overleaf also supports integration with external platforms like GitHub, Dropbox, and Zotero, making it easier to manage references and collaborate. It provides templates for various document types, from research articles to presentations and resumes, making it easy for users to get started with specific formats. The platform also offers a wide range of LaTeX packages and features, allowing users to incorporate mathematical formulas, complex tables, and figures with ease.
-
-
-  Additionally, users can export their documents in different formats, including PDF, HTML, and Word. Overleaf includes extensive documentation and tutorials to help both beginners and advanced users fully utilize LaTeX's capabilities. With its combination of ease of use, collaboration features, and powerful functionality, Overleaf has become one of the most popular platforms for LaTeX users worldwide.
-developer: Overleaf Ltd.
-website: https://overleaf.com/
+  Haven is ideal for users seeking a private platform to share content with friends and family, rather than using public blogs or social media.
+developer: havenweb
+website: https://havenweb.org/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/overleaf/overleaf
-support: https://github.com/overleaf/overleaf/issues
+repo: https://github.com/havenweb/haven
+support: https://github.com/havenweb/haven/issues
 gallery:
-  - https://i.imgur.com/banvznE.png
-  - https://i.imgur.com/banvznE.png
-  - https://i.imgur.com/banvznE.png
+  - https://i.imgur.com/f84e7mv.png
+  - https://i.imgur.com/f84e7mv.png
+  - https://i.imgur.com/f84e7mv.png
 releaseNotes: >-
-  The major release includes an upgrade to Node.js 18.20.1 and a required database migration from Mongo 4 to Mongo 5. Additionally, the environment variables have been rebranded from SHARELATEX_* to OVERLEAF_*.
+  Currently, no specific release notes are available for Haven. However, more information on changes and updates can be found directly in the project's GitHub repository.
 dependencies:
 path: ""
 defaultUsername: ""
