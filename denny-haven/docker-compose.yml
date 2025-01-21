@@ -18,9 +18,9 @@ services:
       - HAVEN_DB_HOST=postgresql
       - HAVEN_DB_NAME=haven
       - HAVEN_DB_ROLE=haven
-      - HAVEN_DB_PASSWORD=supersecretrandomstring
-      - HAVEN_USER_EMAIL=changeme@havenweb.org
-      - HAVEN_USER_PASS=ChangeMeN0W
+      - HAVEN_DB_PASSWORD=nn8=J!Q&>H-02{eF
+      - HAVEN_USER_EMAIL=haven@umbrel.blog
+      - HAVEN_USER_PASS=umbrel
 
   postgresql:
     image: postgres:13.2-alpine
