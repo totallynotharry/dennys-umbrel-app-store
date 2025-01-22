@@ -23,8 +23,6 @@ services:
       - QUEUE_CONNECTION= # Optional, leave empty or remove if you don't need it
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
-    ports:
-      - 6875:80
     restart: unless-stopped
 
   bookstack_db:
