@@ -3,10 +3,10 @@ version: '3.7'
 services:
   app_proxy:
     environment:
-      APP_HOST: denny-bookstack_app_1
+      APP_HOST: denny-bookstack_web_1
       APP_PORT: 80
 
-  app:
+  web:
     image: linuxserver/bookstack:24.12.1@sha256:6736133cee386851f3e3579b73bf42897da2e055ce2578ec6649179f29569857
     restart: on-failure
     environment:
