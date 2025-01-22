@@ -7,7 +7,7 @@ services:
     command: headscale serve
     restart: unless-stopped
     ports:
-        - 8288:8080
+        - 6845:8080
         - 9299:9090
     volumes:
       - ${APP_DATA_DIR}/config:/etc/headscale/
