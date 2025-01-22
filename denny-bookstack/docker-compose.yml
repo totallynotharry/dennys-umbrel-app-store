@@ -17,7 +17,22 @@ services:
       - DB_DATABASE=bookstackapp
       - QUEUE_CONNECTION= # Optional, leave empty or remove if you don't need it
     volumes:
-      - ${APP_DATA_DIR}/data/config:/config
+      - /path/to/bookstack/config:/config
     ports:
       - 6875:80
-    restart: on-failure
+    restart: unless-stopped
+
+  bookstack_db:
+    image: linuxserver/mariadb:latest
+    container_name: bookstack_db
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - MYSQL_ROOT_PASSWORD=umbrelpass
+      - MYSQL_DATABASE=bookstackapp
+      - MYSQL_USER=bookstack
+      - MYSQL_PASSWORD=umbrelpass
+      - TZ=Etc/UTC
+    volumes:
+      - /path/to/bookstack/db:/config
+    restart: unless-stopped
