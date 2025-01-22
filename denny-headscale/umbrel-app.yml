@@ -27,9 +27,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/juanfont/headscale
 support: https://github.com/juanfont/headscale/issues
 gallery:
-  - https://i.imgur.com/I1shai8.png
-  - https://i.imgur.com/I1shai8.png
-  - https://i.imgur.com/I1shai8.png
+  - https://i.imgur.com/hS4hFp8.png
+  - https://i.imgur.com/hS4hFp8.png
+  - https://i.imgur.com/hS4hFp8.png
 releaseNotes: >-
   The recent updates include improvements in compatibility, such as enhanced WebSocket support for the built-in DERP server and SSH agent forwarding for nodes. Several bug fixes were made, including adjustments to hostname and field processing in requests, and more flexible server URL and domain checks. New features include CLI support for managing users with an identifier, an added configuration option for extra DNS records, and support for PKCE verification in OIDC.
 dependencies:
