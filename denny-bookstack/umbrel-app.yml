@@ -16,7 +16,7 @@ description: >-
   BookStack also includes flexible user access control features, allowing administrators to set specific permissions for users or groups. This makes it an ideal solution for collaborative environments, as teams can work together while maintaining control over who can view, edit, or manage different parts of the documentation.
 
 
-  As a self-hosted solution, BookStack gives users complete control over their data and content management. It can be easily hosted on Umbrel, offering a streamlined experience for deploying and managing the application while maintaining full control and privacy. Whether used for personal knowledge management or team-based documentation, BookStack provides a reliable, user-friendly, and customizable platform to organize and share information effectively.
+  As a self-hosted solution on Umbrel, BookStack gives users complete control over their data and content management. Whether used for personal knowledge management or team-based documentation, BookStack provides a reliable, user-friendly, and customizable platform to organize and share information effectively.
 developer: Dan Brown
 website: https://www.bookstackapp.com/
 submitter: dennysubke
