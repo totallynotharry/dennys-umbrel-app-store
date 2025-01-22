@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-headscale_web_1
+      APP_PORT: 8080
+
+  web:
+    image: headscale/headscale:v0.24.0@sha256:2a2dcc9fef8f6e520a096743b668e3fd5df06ae422298c808c4e934a78764860
+    volumes:
+      - ${APP_DATA_DIR}/config:/etc/headscale/
+      - ${APP_DATA_DIR}/data:/var/lib/headscale
+    command: headscale serve
+    restart: on-failure
+
+
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
