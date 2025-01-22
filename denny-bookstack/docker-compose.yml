@@ -22,7 +22,7 @@ services:
       - DB_DATABASE=bookstackapp
       - QUEUE_CONNECTION= # Optional, leave empty or remove if you don't need it
     volumes:
-      - /path/to/bookstack/config:/config
+      - ${APP_DATA_DIR}/data/config:/config
     ports:
       - 6875:80
     restart: unless-stopped
@@ -39,5 +39,5 @@ services:
       - MYSQL_PASSWORD=umbrelpass
       - TZ=Etc/UTC
     volumes:
-      - /path/to/bookstack/db:/config
+      - ${APP_DATA_DIR}/data/db:/config
     restart: unless-stopped
