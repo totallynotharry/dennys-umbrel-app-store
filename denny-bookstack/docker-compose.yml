@@ -21,18 +21,3 @@ services:
     ports:
       - 6875:80
     restart: on-failure
-
-  bookstack_db:
-    image: linuxserver/mariadb:latest
-    container_name: bookstack_db
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - MYSQL_ROOT_PASSWORD=umbrelpass
-      - MYSQL_DATABASE=bookstackapp
-      - MYSQL_USER=bookstack
-      - MYSQL_PASSWORD=umbrelpass
-      - TZ=Etc/UTC
-    volumes:
-      - ${APP_DATA_DIR}/data/db:/config
-    restart: on-failure
