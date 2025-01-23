@@ -11,7 +11,6 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - APP_URL=http://umbrel-2.local:8875
     volumes:
       - ${APP_DATA_DIR}/data/bookstack_app_data:/config
     restart: on-failure
