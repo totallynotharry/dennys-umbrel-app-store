@@ -40,7 +40,3 @@ services:
       volumes:
         - ${APP_DATA_DIR}/data/bookstack_db_data:/config
       restart: on-failure
-
-  volumes:
-    app:
-    db:
