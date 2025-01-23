@@ -17,6 +17,9 @@ description: >-
 
 
   Haven is ideal for users seeking a private platform to share content with friends and family, rather than using public blogs or social media.
+
+
+  🔑 By default, the username is "haven@umbrel.blog" and the password is "umbrel".
 developer: havenweb
 website: https://havenweb.org/
 submitter: dennysubke
@@ -31,5 +34,5 @@ releaseNotes: >-
   Currently, no specific release notes are available for Haven. However, more information on changes and updates can be found directly in the project's GitHub repository.
 dependencies:
 path: ""
-defaultUsername: ""
-defaultPassword: ""
+defaultUsername: "haven@umbrel.blog"
+defaultPassword: "umbrel"
