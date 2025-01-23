@@ -35,8 +35,6 @@ services:
         - MYSQL_DATABASE=bookstackapp
         - MYSQL_USER=bookstack
         - MYSQL_PASSWORD=umbrelpass
-      ports:
-        - 3136:3306
       volumes:
         - ${APP_DATA_DIR}/data/bookstack_db_data:/config
       restart: on-failure
