@@ -7,7 +7,7 @@ volumes:
 
 services:
   app:
-    image: lscr.io/linuxserver/bookstack
+    image: ghcr.io/linuxserver/bookstack:latest
     environment:
       - PUID=1000
       - PGID=1000
