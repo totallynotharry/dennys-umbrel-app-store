@@ -1,52 +1,49 @@
-version: "3.7"
-
-volumes:
-  app:
-  db:
-
-services:
-  app:
-    image: ghcr.io/linuxserver/bookstack:latest
+---
+  version: "2"
+  
+  volumes:
+    app:
+    db:
+  
+  services:
+    app_proxy:
     environment:
-      - PUID=1000
-      - PGID=1000
-      - APP_URL=http://umbrel-2.local:8875
-      - DB_HOST=db
-      - DB_PORT=3306
-      - DB_USERNAME=bookstack
-      - DB_PASSWORD=umbrelpass
-      - DB_DATABASE=bookstackapp
-      - APP_KEY=base64:agtE4ABZvOG9P7U7wM0Jzks+rTemAqlND6XUsyG/bHA=
-    volumes:
-      - ${APP_DATA_DIR}/data/bookstack_app_data:/config
-    ports:
-      - 8875:80
-    restart: on-failure
-    depends_on:
-      - db
-      - app_proxy  # Hier wird die Abhängigkeit von app_proxy eingefügt
-
-  db:
-    image: lscr.io/linuxserver/mariadb
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - MYSQL_ROOT_PASSWORD=[root password]
-      - TZ=America/Chicago
-      - MYSQL_DATABASE=bookstackapp
-      - MYSQL_USER=bookstack
-      - MYSQL_PASSWORD=umbrelpass
-    ports:
-      - 3136:3306
-    volumes:
-      - ${APP_DATA_DIR}/data/bookstack_db_data:/config
-    restart: on-failure
-
-  app_proxy:  # Dein neuer Proxy-Dienst
-    environment:
-      - APP_HOST=denny-bookstack_app_1  # Ziel der Weiterleitung
-      - APP_PORT=80                      # Port, auf dem die App läuft
-    # Weitere Konfigurationen wie image, ports etc. können hier hinzugefügt werden
-    restart: on-failure
-    depends_on:
-      - app  # app_proxy hängt von app ab, damit es nur gestartet wird, wenn die App bereit ist
+        APP_HOST: denny-bookstack_app_1
+        APP_PORT: 80
+        PROXY_AUTH_ADD: "false"
+  
+    app:
+      image: ghcr.io/linuxserver/bookstack:latest
+      environment:
+        - PUID=1000
+        - PGID=1000
+        - APP_URL=http://umbrel-2.local:8875
+        - DB_HOST=db
+        - DB_PORT=3306
+        - DB_USERNAME=bookstack
+        - DB_PASSWORD=umbrelpass
+        - DB_DATABASE=bookstackapp
+        - APP_KEY=base64:agtE4ABZvOG9P7U7wM0Jzks+rTemAqlND6XUsyG/bHA=
+      volumes:
+        - ${APP_DATA_DIR}/data/bookstack_app_data:/config
+      ports:
+        - 8875:80
+      restart: on-failure
+      depends_on:
+        - db
+  
+    db:
+      image: lscr.io/linuxserver/mariadb
+      environment:
+        - PUID=1000
+        - PGID=1000
+        - MYSQL_ROOT_PASSWORD=[root password]
+        - TZ=America/Chicago
+        - MYSQL_DATABASE=bookstackapp
+        - MYSQL_USER=bookstack
+        - MYSQL_PASSWORD=umbrelpass
+      ports:
+        - 3136:3306
+      volumes:
+        - ${APP_DATA_DIR}/data/bookstack_db_data:/config
+      restart: on-failure
