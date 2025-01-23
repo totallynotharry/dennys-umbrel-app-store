@@ -14,8 +14,7 @@ services:
     volumes:
       - nextcloud_aio_mastercontainer:/mnt/docker-aio-config 
       - /var/run/docker.sock:/var/run/docker.sock:ro 
-    network_mode: bridge 
-
+    network_mode: host
 volumes: 
   nextcloud_aio_mastercontainer:
     name: nextcloud_aio_mastercontainer 
