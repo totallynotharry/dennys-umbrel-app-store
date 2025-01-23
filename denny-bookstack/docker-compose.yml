@@ -20,7 +20,7 @@ services:
     volumes:
       - app:/config
     ports:
-      - 6875:80
+      - 8875:80
     restart: unless-stopped
     depends_on:
       - db
