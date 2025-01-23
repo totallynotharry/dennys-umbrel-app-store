@@ -25,8 +25,6 @@
         - APP_KEY=base64:agtE4ABZvOG9P7U7wM0Jzks+rTemAqlND6XUsyG/bHA=
       volumes:
         - ${APP_DATA_DIR}/data/bookstack_app_data:/config
-      ports:
-        - 8875:80
       restart: on-failure
       depends_on:
         - db
