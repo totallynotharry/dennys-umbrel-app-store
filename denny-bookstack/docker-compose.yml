@@ -14,12 +14,12 @@ services:
       - APP_URL=https://wiki.[hostname].local
       - DB_HOST=db
       - DB_PORT=3306
-      - DB_USER=bookstack
-      - DB_PASSWORD=[password]
+      - DB_USERNAME=bookstack
+      - DB_PASSWORD=umbrelpass
       - DB_DATABASE=bookstackapp
       - APP_KEY=base64:agtE4ABZvOG9P7U7wM0Jzks+rTemAqlND6XUsyG/bHA=
     volumes:
-      - app:/config
+      - ${APP_DATA_DIR}/data/config:/config
     ports:
       - 8875:80
     restart: unless-stopped
@@ -35,9 +35,9 @@ services:
       - TZ=America/Chicago
       - MYSQL_DATABASE=bookstackapp
       - MYSQL_USER=bookstack
-      - MYSQL_PASSWORD=[password]
+      - MYSQL_PASSWORD=umbrelpass
     ports:
       - 3136:3306
     volumes:
-      - db:/config
+      - ${APP_DATA_DIR}/data/db:/config
     restart: unless-stopped
