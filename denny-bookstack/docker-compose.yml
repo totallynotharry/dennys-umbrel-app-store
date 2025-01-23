@@ -8,10 +8,6 @@ services:
       
   web:
     image: ghcr.io/linuxserver/bookstack:24.12.1@sha256:6736133cee386851f3e3579b73bf42897da2e055ce2578ec6649179f29569857
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - APP_KEY=base64:pJyUrEBuwRVu2tFEgqKJ+R5NzPRdYKqnewDwNVXP4Gc=
     volumes:
       - ${APP_DATA_DIR}/data/bookstack_app_data:/config
     restart: on-failure
