@@ -9,7 +9,7 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
       - APP_URL=
-      - APP_KEY=
+      - APP_KEY=base64:xJdRXipeJEJVOpr4B04uH5xCsNiHupngOh68P3MtOXo=
       - DB_HOST=
       - DB_PORT=3306
       - DB_USERNAME=
