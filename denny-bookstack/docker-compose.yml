@@ -24,6 +24,7 @@ services:
       - DB_USER=bookstack
       - DB_PASS=umbrelpass  
       - DB_DATABASE=bookstackapp
+      - APP_KEY=base64:VfcjXRa3DbJj9etJDunr+m0Zapn5YQDj143fue6o33M=
     volumes:
       - ${APP_DATA_DIR}/data/bookstack_app_data:/config
     restart: on-failure
