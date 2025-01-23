@@ -26,7 +26,7 @@ services:
       - PGID=1000
       - APP_URL=http://umbrel-2.local:8875
       - DB_HOST=bookstack_db
-      - DB_PORT=3306
+      - DB_PORT=3307
       - DB_USER=bookstack
       - DB_PASS=umbrelpass  
       - DB_DATABASE=bookstackapp
