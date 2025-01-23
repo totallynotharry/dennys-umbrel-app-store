@@ -1,23 +1,11 @@
 version: '3.7'
 
-networks:
-  bookstack_network:
-    driver: bridge
-
 services:
   app_proxy:
     environment:
-      APP_HOST: denny-bookstack_web_1 # Belasse den ursprünglichen Hostnamen
+      APP_HOST: denny-bookstack_web_1 
       APP_PORT: 80
-      healthcheck:
-      test: ["CMD", "curl", "-f", "http://denny-bookstack_web_1:80"]
-      interval: 10s
-      retries: 5
-      start_period: 5s
-      timeout: 5s
-    networks:
-      - bookstack_network
-
+      
   web:
     image: ghcr.io/linuxserver/bookstack:24.12.1@sha256:6736133cee386851f3e3579b73bf42897da2e055ce2578ec6649179f29569857
     container_name: denny-bookstack_web_1 # Container-Name entspricht dem Hostnamen
@@ -25,32 +13,7 @@ services:
       - PUID=1000
       - PGID=1000
       - APP_URL=http://umbrel-2.local:8875
-      - DB_HOST=bookstack_db
-      - DB_PORT=3307
-      - DB_USER=bookstack
-      - DB_PASS=umbrelpass  
-      - DB_DATABASE=bookstackapp
       - APP_KEY=base64:VfcjXRa3DbJj9etJDunr+m0Zapn5YQDj143fue6o33M=
     volumes:
       - ${APP_DATA_DIR}/data/bookstack_app_data:/config
     restart: on-failure
-    depends_on:
-      - bookstack_db
-    networks:
-      - bookstack_network
-
-  bookstack_db:
-    image: mariadb:11.6.2@sha256:a9547599cd87d7242435aea6fda22a9d83e2c06d16c658ef70d2868b3d3f6a80
-    container_name: bookstack_db
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - MYSQL_ROOT_PASSWORD=umbrelpass
-      - MYSQL_DATABASE=bookstackapp
-      - MYSQL_USER=bookstack
-      - MYSQL_PASSWORD=umbrelpass
-    volumes:
-      - ${APP_DATA_DIR}/data/bookstack_db_data:/var/lib/mysql
-    restart: on-failure
-    networks:
-      - bookstack_network
