@@ -1,12 +1,16 @@
-version: '2'
-
-services:
-  app_proxy:
-    environment:
-        APP_HOST: denny-bookstack_app_1
+---
+  version: "2"
+  
+  volumes:
+    app:
+    db:
+  
+  services:
+    app_proxy:
+      environment:
+        APP_HOST: denny-baikal_web_1
         APP_PORT: 80
         PROXY_AUTH_ADD: "false"
-  
     app:
       image: ghcr.io/linuxserver/bookstack:latest
       environment:
@@ -21,6 +25,8 @@ services:
         - APP_KEY=base64:agtE4ABZvOG9P7U7wM0Jzks+rTemAqlND6XUsyG/bHA=
       volumes:
         - ${APP_DATA_DIR}/data/bookstack_app_data:/config
+      ports:
+        - 8875:80
       restart: on-failure
       depends_on:
         - db
@@ -35,6 +41,8 @@ services:
         - MYSQL_DATABASE=bookstackapp
         - MYSQL_USER=bookstack
         - MYSQL_PASSWORD=umbrelpass
+      ports:
+        - 3136:3306
       volumes:
         - ${APP_DATA_DIR}/data/bookstack_db_data:/config
       restart: on-failure
