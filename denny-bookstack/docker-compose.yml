@@ -19,10 +19,10 @@ services:
       - DB_DATABASE=bookstackapp
       - APP_KEY=base64:agtE4ABZvOG9P7U7wM0Jzks+rTemAqlND6XUsyG/bHA=
     volumes:
-      - ${APP_DATA_DIR}/data/config:/config
+      - ${APP_DATA_DIR}/data/bookstack_app_data:/config
     ports:
       - 8875:80
-    restart: unless-stopped
+    restart: on-failure
     depends_on:
       - db
 
@@ -39,5 +39,5 @@ services:
     ports:
       - 3136:3306
     volumes:
-      - ${APP_DATA_DIR}/data/db:/config
-    restart: unless-stopped
+      - ${APP_DATA_DIR}/data/bookstack_db_data:/config
+    restart: on-failure
