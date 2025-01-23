@@ -15,8 +15,9 @@ services:
       - DB_HOST=db
       - DB_PORT=3306
       - DB_USER=bookstack
-      - DB_PASS=[password]
+      - DB_PASSWORD=[password]
       - DB_DATABASE=bookstackapp
+      - APP_KEY=base64:agtE4ABZvOG9P7U7wM0Jzks+rTemAqlND6XUsyG/bHA=
     volumes:
       - app:/config
     ports:
