@@ -1,12 +1,7 @@
----
-  version: "2"
-  
-  volumes:
-    app:
-    db:
-  
-  services:
-    app_proxy:
+version: '3.7'
+
+services:
+  app_proxy:
     environment:
         APP_HOST: denny-bookstack_app_1
         APP_PORT: 80
@@ -47,3 +42,7 @@
       volumes:
         - ${APP_DATA_DIR}/data/bookstack_db_data:/config
       restart: on-failure
+
+  volumes:
+    app:
+    db:
