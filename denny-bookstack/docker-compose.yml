@@ -8,12 +8,10 @@ services:
       
   web:
     image: ghcr.io/linuxserver/bookstack:24.12.1@sha256:6736133cee386851f3e3579b73bf42897da2e055ce2578ec6649179f29569857
-    container_name: denny-bookstack_web_1 # Container-Name entspricht dem Hostnamen
     environment:
       - PUID=1000
       - PGID=1000
       - APP_URL=http://umbrel-2.local:8875
-      - APP_KEY=base64:VfcjXRa3DbJj9etJDunr+m0Zapn5YQDj143fue6o33M=
     volumes:
       - ${APP_DATA_DIR}/data/bookstack_app_data:/config
     restart: on-failure
