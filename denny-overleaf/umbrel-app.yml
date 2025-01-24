@@ -23,6 +23,9 @@ description: >-
 
  
   🔑 Once the Overleaf instance is running, visit  "umbrel.local:8063/launchpad" to set up your first admin user.
+
+
+  ⚠️ Overleaf versions higher than 4.X require MongoDB 5.0+ and a CPU with AVX support. Servers lacking AVX won't be compatible with these newer versions. If you're using such servers, it's recommended to stick with Overleaf 4.3.2 or set up MongoDB 4.4 for compatibility. For more details, refer to the discussion on this issue: https://github.com/overleaf/toolkit/issues/216
 developer: Overleaf Ltd.
 website: https://overleaf.com/
 submitter: dennysubke
