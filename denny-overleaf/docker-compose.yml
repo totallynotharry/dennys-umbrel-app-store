@@ -14,8 +14,6 @@ services:
         condition: service_healthy
       redis:
         condition: service_started
-    ports:
-      - 8063:80
     links:
       - mongo
       - redis
