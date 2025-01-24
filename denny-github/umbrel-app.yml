@@ -5,7 +5,7 @@ tagline: An efficient way to manage your code
 icon: https://i.imgur.com/5GuVdXJ.png
 category: In Progress
 version: "3.4.8"
-port: 3301
+port: 3303
 description: >-
   GitHub Desktop is a user-friendly application designed to make working with GitHub repositories much easier, especially for those who prefer not to use the command line. It provides a graphical interface that allows users to interact with their Git repositories, manage their projects, and make changes in a way that's intuitive and accessible. With GitHub Desktop, you can clone repositories, create new branches, commit your changes, and push them to GitHub—all through a point-and-click interface.
 
