@@ -11,8 +11,8 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Etc/UTC
-    shm_size: "1gb"
+      - TZ=Europe/Berlin
+    shm_size: "2gb"
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
