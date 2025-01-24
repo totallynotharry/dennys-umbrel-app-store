@@ -8,11 +8,8 @@ services:
       PROXY_AUTH_ADD: "false"
   web:
     image: ghcr.io/linuxserver/github-desktop:3.4.8@sha256:fe52b910dace417af492654f81aa7b2c808563e014c6c59fc1fd15b62df34b32
-    container_name: github-desktop
     cap_add:
       - IPC_LOCK
-    security_opt:
-      - seccomp:unconfined
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
@@ -20,7 +17,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Berlin
-    shm_size: "1gb"
+    shm_size: "2gb"
 
     #ports:
       # 3000 (HTTP)
