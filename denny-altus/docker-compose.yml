@@ -8,9 +8,6 @@ services:
 
   web:
     image: ghcr.io/linuxserver/altus:5.4.0@sha256:65387a1324bd2037c41fe270d5781000852b917f3e184739f46ed146d3178480
-    container_name: altus
-    security_opt:
-      - seccomp:unconfined
     environment:
       - PUID=1000
       - PGID=1000
