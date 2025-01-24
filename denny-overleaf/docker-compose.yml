@@ -64,3 +64,8 @@ services:
       until mongo --host mongo --eval 'print(\"waiting for mongo\")'; do sleep 2; done;
       mongo --host mongo --eval 'rs.initiate({_id: \"overleaf\", members: [{_id: 0, host: \"mongo:27017\"}]})'"
     restart: "on-failure"
+
+# Overleaf in a version higher than 4.X requires MongoDB 5.0+, which necessitates a CPU with AVX support. 
+# This means that older servers, like those with CPUs lacking AVX, will not work with Overleaf higher versions than 4.X. 
+# If you're using an older server, it's recommended to stick with Overleaf version 4.3.2 or to set up MongoDB with an older version (like 4.4) for compatibility. 
+# For more details on this issue, you can refer to the full discussion: https://github.com/overleaf/toolkit/issues/216
