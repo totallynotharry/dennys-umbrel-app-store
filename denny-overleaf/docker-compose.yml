@@ -1,12 +1,7 @@
 version: '3.8'
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: denny-overleaf_web_1
-      APP_PORT: 80
-
-  web:
+  sharelatex:
     image: sharelatex/sharelatex:4.2.3
     container_name: leaf-sharelatex
     depends_on:
@@ -14,6 +9,8 @@ services:
         condition: service_healthy
       redis:
         condition: service_started
+    ports:
+      - 8063:80
     links:
       - mongo
       - redis
