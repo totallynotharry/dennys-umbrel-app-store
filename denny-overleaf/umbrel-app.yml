@@ -20,6 +20,9 @@ description: >-
 
 
   Additionally, users can export their documents in different formats, including PDF, HTML, and Word. Overleaf includes extensive documentation and tutorials to help both beginners and advanced users fully utilize LaTeX's capabilities. With its combination of ease of use, collaboration features, and powerful functionality, Overleaf has become one of the most popular platforms for LaTeX users worldwide.
+
+ 
+  🔑 Once the Overleaf instance is running, visit  "umbrel.local:8063/launchpad" to set up your first admin user.
 developer: Overleaf Ltd.
 website: https://overleaf.com/
 submitter: dennysubke
