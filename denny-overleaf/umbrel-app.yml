@@ -4,7 +4,7 @@ name: Overleaf
 tagline: An efficient solution for writing, formatting, and collaborating on LaTeX documents
 icon: https://i.imgur.com/v84UgrO.png
 category: In Progress
-version: "5.3.0"
+version: "4.2.3"
 port: 8063
 description: >-
   Overleaf is a web-based platform that provides a user-friendly environment for creating and editing LaTeX documents. LaTeX is a widely used typesetting system, particularly in academia and technical fields, for creating well-formatted, professional documents such as research papers, dissertations, technical reports, and academic articles.
@@ -31,7 +31,7 @@ gallery:
   - https://i.imgur.com/banvznE.png
   - https://i.imgur.com/banvznE.png
 releaseNotes: >-
-  The major release includes an upgrade to Node.js 18.20.1 and a required database migration from Mongo 4 to Mongo 5. Additionally, the environment variables have been rebranded from SHARELATEX_* to OVERLEAF_*.
+  Version 4.2.3 is a security release that upgrades the Node.js runtime to version 18.19.1, addressing CVE-2024-22019, a Denial of Service vulnerability. This update primarily impacts Server Pro instances with publicly accessible access points, such as login pages or redirects.
 dependencies:
 path: ""
 defaultUsername: ""
