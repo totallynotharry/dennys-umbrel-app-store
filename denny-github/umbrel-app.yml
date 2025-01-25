@@ -3,7 +3,7 @@ id: denny-github
 name: Github Desktop
 tagline: An efficient way to manage your code
 icon: https://i.imgur.com/5GuVdXJ.png
-category: In Progress
+category: developer tools
 version: "3.4.8"
 port: 3303
 description: >-
