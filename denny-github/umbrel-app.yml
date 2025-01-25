@@ -21,9 +21,11 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/desktop
 support: https://github.com/desktop/desktop/issues
 gallery:
-  - https://i.imgur.com/IAxjlcj.png
-  - https://i.imgur.com/IAxjlcj.png
-  - https://i.imgur.com/IAxjlcj.png
+  - https://i.imgur.com/93FFsNF.png
+  - https://i.imgur.com/qjTaSn6.png
+  - https://i.imgur.com/bA8Dajd.png
+  - https://i.imgur.com/0ZgtUx8.png
+  - https://i.imgur.com/J5puo4W.png
 releaseNotes: >-
   App no longer crash for first time users going through the welcome flow and attempting to sign in more than once.
 dependencies:
