@@ -7,7 +7,7 @@ category: In Progress
 version: "2024.12.0"
 port: 3712
 description: >-
-  CryptPad is an innovative, privacy-first collaboration platform designed to provide secure, encrypted tools for individuals and teams to work together without compromising their data. Unlike traditional cloud-based services, CryptPad employs end-to-end encryption, meaning that all your data is encrypted locally in your browser before being uploaded to the server. This ensures that no one, not even the platform's operators, can access your files or see your activities. Your data is truly your own.
+  🛡️ CryptPad is an innovative, privacy-first collaboration platform designed to provide secure, encrypted tools for individuals and teams to work together without compromising their data. Unlike traditional cloud-based services, CryptPad employs end-to-end encryption, meaning that all your data is encrypted locally in your browser before being uploaded to the server. This ensures that no one, not even the platform's operators, can access your files or see your activities. Your data is truly your own.
 
 
   CryptPad offers a wide range of features to support both personal and professional workflows. Its suite of tools includes collaborative text editors, spreadsheets, presentations, Kanban boards, polls, code editors, and more. All of these tools operate in real-time, allowing users to collaborate seamlessly while maintaining full control over their privacy. Whether you're brainstorming ideas, managing a project, or organizing sensitive data, CryptPad provides a safe, efficient, and user-friendly environment.
@@ -20,7 +20,7 @@ description: >-
 
 
   CryptPad is more than just a tool; it's a commitment to redefining how we work together in a world where privacy matters. With its robust features and security guarantees, it empowers users to focus on their work without worrying about their data being exploited.
-developer: .
+developer: XWiki SAS
 website: https://cryptpad.fr/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
