@@ -13,12 +13,13 @@ services:
       - CPAD_USE_REVERSE_PROXY=false
       - CPAD_INSTALL_ONLYOFFICE=true
     volumes:
-      - ${APP_DATA_DIR}/data/blob:/cryptpad/blob
-      - ${APP_DATA_DIR}/data/block:/cryptpad/block
-      - ${APP_DATA_DIR}/data/data:/cryptpad/data
-      - ${APP_DATA_DIR}/data/files:/cryptpad/datastore
-      - ${APP_DATA_DIR}/data/customize:/cryptpad/customize
-      - ${APP_DATA_DIR}/data/onlyoffice-dist:/cryptpad/www/common/onlyoffice/dist
-      - ${APP_DATA_DIR}/data/onlyoffice-conf:/cryptpad/onlyoffice-conf
-      - ${APP_DATA_DIR}/config/config.js:/cryptpad/config/config.js
+      - ${APP_DATA_DIR}/data/blob:/cryptpad/blob:rw
+      - ${APP_DATA_DIR}/data/block:/cryptpad/block:rw
+      - ${APP_DATA_DIR}/data/data:/cryptpad/data:rw
+      - ${APP_DATA_DIR}/data/files:/cryptpad/datastore:rw
+      - ${APP_DATA_DIR}/data/customize:/cryptpad/customize:rw
+      - ${APP_DATA_DIR}/data/onlyoffice-dist:/cryptpad/www/common/onlyoffice/dist:rw
+      - ${APP_DATA_DIR}/data/onlyoffice-conf:/cryptpad/onlyoffice-conf:rw
+      - ${APP_DATA_DIR}/config/config.js:/cryptpad/config/config.js:rw
+    user: "1000:1000"
     restart: on-failure
