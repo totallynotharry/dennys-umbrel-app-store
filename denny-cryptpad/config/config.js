@@ -17,5 +17,5 @@ module.exports = {
     logFeedback: false,
     verbose: false,
     installMethod: 'docker',
-    adminKeys: [3b18f68523c6496fa54b39055cefbd3f2fd234584c0b2ba9abfd50b5b68cdc57],
+    adminKeys: [],
 };
