@@ -23,7 +23,3 @@ services:
       - ${APP_DATA_DIR}/config/config.js:/cryptpad/config/config.js:rw
     user: "1000:1000"
     restart: on-failure
-    ulimits:
-      nofile:
-        soft: 1000000
-        hard: 1000000
