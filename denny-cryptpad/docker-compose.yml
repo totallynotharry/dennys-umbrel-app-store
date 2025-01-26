@@ -13,7 +13,7 @@ services:
       # CPAD_SANDBOX_DOMAIN=http://umbrel.local:3793
       - CPAD_CONF=/cryptpad/config/config.js
       - CPAD_USE_REVERSE_PROXY=false
-      # CPAD_INSTALL_ONLYOFFICE=true
+      - CPAD_INSTALL_ONLYOFFICE=true
     volumes:
       - ${APP_DATA_DIR}/data/blob:/cryptpad/blob:rw
       - ${APP_DATA_DIR}/data/block:/cryptpad/block:rw
