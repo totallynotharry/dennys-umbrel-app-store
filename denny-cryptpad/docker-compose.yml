@@ -7,8 +7,8 @@ services:
       - "3712:3000"
       - "3713:3001"  # Sandbox-Port
     environment:
-      - CPAD_MAIN_DOMAIN=http://umbrel.local:3712
-      - CPAD_SANDBOX_DOMAIN=http://umbrel.local:3713
+      - CPAD_MAIN_DOMAIN=http://umbrel-2.local:3712
+      - CPAD_SANDBOX_DOMAIN=http://umbrel-2.local:3713
       - CPAD_USE_REVERSE_PROXY=false
       - CPAD_INSTALL_ONLYOFFICE=true
     volumes:
