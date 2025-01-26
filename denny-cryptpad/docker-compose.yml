@@ -21,4 +21,4 @@ services:
       - ${APP_DATA_DIR}/data/onlyoffice-dist:/cryptpad/www/common/onlyoffice/dist
       - ${APP_DATA_DIR}/data/onlyoffice-conf:/cryptpad/onlyoffice-conf
       - ${APP_DATA_DIR}/config/config.js:/cryptpad/config/config.js
-    restart: always
+    restart: on-failure
