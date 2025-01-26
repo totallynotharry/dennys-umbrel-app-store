@@ -9,6 +9,7 @@ services:
     environment:
       - CPAD_MAIN_DOMAIN=http://umbrel-2.local:3712
       - CPAD_SANDBOX_DOMAIN=http://umbrel-2.local:3713
+      - CPAD_CONF=/cryptpad/config/config.js
       - CPAD_USE_REVERSE_PROXY=false
       - CPAD_INSTALL_ONLYOFFICE=true
     volumes:
