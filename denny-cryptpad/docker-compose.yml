@@ -2,13 +2,13 @@ version: '3.8'
 
 services:
   cryptpad:
-    image: cryptpad/cryptpad:latest
+    image: cryptpad/cryptpad:version-2024.12.0@sha256:a8f075b1a5f9ebb3f28944fa474028c43b8ac2c2513f898c8c78c58f25be8df7
     ports:
       - "3712:3000"
       - "3713:3001"  # Sandbox-Port
     environment:
-      - CPAD_MAIN_DOMAIN=umbrel.local:3712
-      - CPAD_SANDBOX_DOMAIN=umbrel.local:3713
+      - CPAD_MAIN_DOMAIN=http://umbrel.local:3712
+      - CPAD_SANDBOX_DOMAIN=http://umbrel.local:3713
       - CPAD_USE_REVERSE_PROXY=false
       - CPAD_INSTALL_ONLYOFFICE=true
     volumes:
