@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-cryptpad
 name: CryptPad
 tagline: An all-in-one encrypted workspace for your team.
-icon: https://i.imgur.com/WvSZAbx.png
+icon: https://i.imgur.com/9WwY4HQ.png
 category: In Progress
 version: "2024.12.0"
 port: 3712
