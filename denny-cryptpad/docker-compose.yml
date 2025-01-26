@@ -23,7 +23,7 @@ services:
       - ${APP_DATA_DIR}/data/onlyoffice-dist:/cryptpad/www/common/onlyoffice/dist:rw
       - ${APP_DATA_DIR}/data/onlyoffice-conf:/cryptpad/onlyoffice-conf:rw
       - ${APP_DATA_DIR}/config/config.js:/cryptpad/config/config.js:rw
-    user: "4001:4001"
+    user: "1000:4001"
     restart: on-failure
     ulimits:
       nofile:
