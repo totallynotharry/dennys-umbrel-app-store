@@ -1,9 +1,7 @@
 module.exports = {
     httpUnsafeOrigin: 'http://umbrel-2.local:3792',
-    httpSafeOrigin: 'http://umbrel-2.local:3793',
     httpAddress: '0.0.0.0',
     httpPort: 3792,
-    httpSafePort: 3793,
     filePath: './datastore/',
     archivePath: './data/archive',
     pinPath: './data/pins',
@@ -19,5 +17,5 @@ module.exports = {
     logFeedback: false,
     verbose: false,
     installMethod: 'docker',
-    adminKeys: [],
+    adminKeys: [3b18f68523c6496fa54b39055cefbd3f2fd234584c0b2ba9abfd50b5b68cdc57],
 };
