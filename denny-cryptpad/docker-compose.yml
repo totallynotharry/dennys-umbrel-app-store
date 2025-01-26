@@ -1,0 +1,24 @@
+        version: '3.8'
+
+        services:
+          cryptpad:
+            image: cryptpad/cryptpad:latest
+            container_name: cryptpad
+            ports:
+              - "3712:3000"
+              - "3713:3001"  # Sandbox-Port
+            environment:
+              - CPAD_MAIN_DOMAIN=umbrel.local:3712
+              - CPAD_SANDBOX_DOMAIN=umbrel.local:3713
+              - CPAD_USE_REVERSE_PROXY=false
+              - CPAD_INSTALL_ONLYOFFICE=true
+            volumes:
+              - ${APP_DATA_DIR}/data/data/blob:/cryptpad/blob
+              - ${APP_DATA_DIR}/data/data/block:/cryptpad/block
+              - ${APP_DATA_DIR}/data/data/data:/cryptpad/data
+              - ${APP_DATA_DIR}/data/data/files:/cryptpad/datastore
+              - ${APP_DATA_DIR}/data/customize:/cryptpad/customize
+              - ${APP_DATA_DIR}/data/onlyoffice-dist:/cryptpad/www/common/onlyoffice/dist
+              - ${APP_DATA_DIR}/data/onlyoffice-conf:/cryptpad/onlyoffice-conf
+              - ${APP_DATA_DIR}/data/config/config.js:/cryptpad/config/config.js
+            restart: on-failure
