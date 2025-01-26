@@ -9,8 +9,8 @@ services:
   web:
     image: cryptpad/cryptpad:version-2024.12.0@sha256:a8f075b1a5f9ebb3f28944fa474028c43b8ac2c2513f898c8c78c58f25be8df7
     environment:
-      - CPAD_MAIN_DOMAIN=umbrel-2.local:3792
-      - CPAD_SANDBOX_DOMAIN=umbrel-2.local:3793
+      - CPAD_MAIN_DOMAIN=https://my-main-domain.com
+      - CPAD_SANDBOX_DOMAIN=https://my-sandbox-domain.com
       - CPAD_CONF=/cryptpad/config/config.js
       - CPAD_USE_REVERSE_PROXY=false
       - CPAD_INSTALL_ONLYOFFICE=true
@@ -25,3 +25,7 @@ services:
       - ${APP_DATA_DIR}/config/config.js:/cryptpad/config/config.js:rw
     user: "1000:1000"
     restart: on-failure
+    ulimits:
+      nofile:
+        soft: 1000000
+        hard: 1000000
