@@ -1,7 +1,9 @@
 module.exports = {
     httpUnsafeOrigin: 'http://umbrel-2.local:3792',
-    httpAddress: '0.0.0.0',
+    httpSafeOrigin: 'http://umbrel-2.local:3793',
+    httpAddress: 'localhost',
     httpPort: 3792,
+    httpSafePort: 3793,
     filePath: './datastore/',
     archivePath: './data/archive',
     pinPath: './data/pins',
