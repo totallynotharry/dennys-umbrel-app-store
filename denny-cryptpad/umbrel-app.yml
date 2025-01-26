@@ -1,38 +1,37 @@
 manifestVersion: 1
 id: denny-cryptpad
 name: Cryptpad
-tagline: A lightweight CalDAV+CardDAV server
-icon: https://i.imgur.com/h3B1DaG.png
-category: test
-version: "0.9.5"
+tagline: An all-in-one encrypted workspace for your team.
+icon: https://i.imgur.com/WvSZAbx.png
+category: In Progress
+version: "2024.12.0"
 port: 3712
 description: >-
-  🪆 Baikal Server is a lightweight CalDAV and CardDAV server designed for users who want to manage their calendar and contact information securely on their own server. This robust application offers an extensive web interface that simplifies the management of users, address books, and calendars, making it accessible for both beginners and experienced users.
+  CryptPad is an innovative, privacy-first collaboration platform designed to provide secure, encrypted tools for individuals and teams to work together without compromising their data. Unlike traditional cloud-based services, CryptPad employs end-to-end encryption, meaning that all your data is encrypted locally in your browser before being uploaded to the server. This ensures that no one, not even the platform's operators, can access your files or see your activities. Your data is truly your own.
 
 
-  One of the key features of Baikal is its ease of installation and configuration. It requires only a basic PHP-capable server, which means you don’t need extensive technical knowledge to get started. The server supports both MySQL and SQLite databases for data storage, providing flexibility depending on your preferences and needs.
+  CryptPad offers a wide range of features to support both personal and professional workflows. Its suite of tools includes collaborative text editors, spreadsheets, presentations, Kanban boards, polls, code editors, and more. All of these tools operate in real-time, allowing users to collaborate seamlessly while maintaining full control over their privacy. Whether you're brainstorming ideas, managing a project, or organizing sensitive data, CryptPad provides a safe, efficient, and user-friendly environment.
 
 
-  Baikal allows users to seamlessly access their contacts and calendars from any device. It is compatible with a wide range of applications, including iOS, macOS, DAVx5 on Android, Mozilla Thunderbird, and many other CalDAV and CardDAV capable applications. This compatibility ensures that you can sync your data across multiple platforms without any hassle.
+  One of CryptPad's key strengths is its focus on anonymity and accessibility. The platform can be used without creating an account, enabling instant access to its tools without the need to share personal information. For users who need to save and organize their work over multiple sessions, accounts with secure login options are available. Paid plans are also offered for those requiring additional storage or advanced features.
 
 
-  In addition to its user-friendly features, Baikal emphasizes privacy and data security. By hosting your calendars and contacts yourself, you maintain full control over your personal information, protecting it from potential breaches and unauthorized access. This is particularly important in an era where data privacy is a growing concern.
+  As an open-source platform, CryptPad is transparent and community-driven. It complies with strict privacy regulations, including the GDPR, and avoids the use of trackers, ads, or intrusive data collection practices. CryptPad is ideal for anyone who values privacy, whether you're a journalist handling sensitive information, a team working on confidential projects, an educator collaborating with students, or an individual seeking a secure workspace.
 
 
-  Whether you are an individual looking for a reliable personal organizer or a small team needing a collaborative solution, Baikal Server provides a practical and efficient way to manage your scheduling and contact needs while ensuring your data remains private and secure. With its fast performance and straightforward interface, Baikal is an excellent choice for anyone seeking a self-hosted calendar and contact management solution.
-
-developer: fruux GmbH
-website: https://sabre.io/baikal/
+  CryptPad is more than just a tool; it's a commitment to redefining how we work together in a world where privacy matters. With its robust features and security guarantees, it empowers users to focus on their work without worrying about their data being exploited.
+developer: .
+website: https://cryptpad.fr/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/sabre-io/Baikal
-support: https://github.com/sabre-io/Baikal/issues
+repo: https://github.com/cryptpad/cryptpad
+support: https://github.com/cryptpad/cryptpad/issues
 gallery:
-  - https://i.imgur.com/InOvJFa.png
-  - https://i.imgur.com/hIQ1ZIv.png
-  - https://i.imgur.com/nobRqdE.png
+  - https://i.imgur.com/WZqCoiO.png
+  - https://i.imgur.com/WZqCoiO.png
+  - https://i.imgur.com/WZqCoiO.png
 releaseNotes: >-
-  The latest update includes dependency upgrades that enhance compatibility with PHP 8.2 and features the inclusion of sabre/dav version 4.6.0.
+  This version delivers fixes and improvements across CryptPad. We are particularly happy to release a fix of our OnlyOffice integration that could address long-standing issues with documents becoming corrupted. If confirmed at scale, this fix could dramatically improve the use of OnlyOffice apps in CryptPad.
 dependencies:
 path: ""
 defaultUsername: ""
