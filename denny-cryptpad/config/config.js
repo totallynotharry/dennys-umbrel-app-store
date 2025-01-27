@@ -1,9 +1,8 @@
 module.exports = {
-    httpUnsafeOrigin: 'https://cryptpad.subke.cloud',
-    httpSafeOrigin: 'https://sandbox.subke.cloud',
+    httpUnsafeOrigin: 'http://localhost:3792',
+    httpSafeOrigin: 'https://cryptpad.subke.cloud',
     httpAddress: '0.0.0.0',
-    httpPort: 3792,
-    httpSafePort: 3793,
+    websocketPort: 3793,
     filePath: './datastore/',
     archivePath: './data/archive',
     pinPath: './data/pins',
