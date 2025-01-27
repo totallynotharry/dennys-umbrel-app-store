@@ -9,8 +9,8 @@ services:
   web:
     image: cryptpad/cryptpad:version-2024.12.0@sha256:a8f075b1a5f9ebb3f28944fa474028c43b8ac2c2513f898c8c78c58f25be8df7
     environment:
-      - CPAD_MAIN_DOMAIN=https://my-main-domain.com
-      - CPAD_SANDBOX_DOMAIN=https://my-sandbox-domain.com
+      - CPAD_MAIN_DOMAIN=https://cryptpad.subke.cloud
+      - CPAD_SANDBOX_DOMAIN=https://sandbox.subke.cloud
       - CPAD_CONF=/cryptpad/config/config.js
       - CPAD_USE_REVERSE_PROXY=false
       - CPAD_INSTALL_ONLYOFFICE=true
