@@ -1,5 +1,5 @@
 module.exports = {
-    httpUnsafeOrigin: 'http://umbrel-2.local:3792',
+    httpUnsafeOrigin: 'https://sandbox.subke.cloud',
     httpSafeOrigin: 'https://cryptpad.subke.cloud',
     httpAddress: '0.0.0.0',
     websocketPort: 3793,
