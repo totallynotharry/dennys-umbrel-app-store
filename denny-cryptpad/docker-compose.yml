@@ -13,7 +13,7 @@ services:
       - CPAD_SANDBOX_DOMAIN=https://sandbox.subke.cloud
       - CPAD_CONF=/cryptpad/config/config.js
       - CPAD_USE_REVERSE_PROXY=false
-      - CPAD_INSTALL_ONLYOFFICE=true
+      - CPAD_INSTALL_ONLYOFFICE=false
     volumes:
       - ${APP_DATA_DIR}/data/blob:/cryptpad/blob:rw
       - ${APP_DATA_DIR}/data/block:/cryptpad/block:rw
@@ -24,7 +24,6 @@ services:
       - ${APP_DATA_DIR}/data/onlyoffice-conf:/cryptpad/onlyoffice-conf:rw
       - ${APP_DATA_DIR}/config/config.js:/cryptpad/config/config.js:rw
     ports:
-      - "3792:3002"
       - "3793:3003"
     user: "1000:1000"
     restart: on-failure
