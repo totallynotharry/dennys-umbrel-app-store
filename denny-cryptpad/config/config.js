@@ -1,7 +1,7 @@
 module.exports = {
     httpUnsafeOrigin: 'https://cryptpad.subke.cloud',
     httpSafeOrigin: 'https://sandbox.subke.cloud',
-    httpAddress: 'denny-cryptpad_web_1',
+    httpAddress: 'cryptpad',
     filePath: './datastore/',
     archivePath: './data/archive',
     pinPath: './data/pins',
