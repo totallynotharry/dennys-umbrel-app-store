@@ -5,7 +5,7 @@ tagline: An all-in-one encrypted workspace for your team.
 icon: https://i.imgur.com/9WwY4HQ.png
 category: In Progress
 version: "2024.12.0"
-port: 3792
+port: 3791
 description: >-
   🛡️ CryptPad is an innovative, privacy-first collaboration platform designed to provide secure, encrypted tools for individuals and teams to work together without compromising their data. Unlike traditional cloud-based services, CryptPad employs end-to-end encryption, meaning that all your data is encrypted locally in your browser before being uploaded to the server. This ensures that no one, not even the platform's operators, can access your files or see your activities. Your data is truly your own.
 
