@@ -1,5 +1,5 @@
 module.exports = {
-    httpUnsafeOrigin: 'http://umbrel-2.local:3790',
+    httpUnsafeOrigin: 'https://cryptpad.subke.cloud',
     httpSafeOrigin: 'https://sandbox.subke.cloud',
     filePath: './datastore/',
     archivePath: './data/archive',
