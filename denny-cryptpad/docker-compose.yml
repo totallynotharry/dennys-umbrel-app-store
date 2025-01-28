@@ -8,7 +8,6 @@ services:
       PROXY_AUTH_ADD: "false"
   web:
     image: cryptpad/cryptpad:version-2024.12.0@sha256:a8f075b1a5f9ebb3f28944fa474028c43b8ac2c2513f898c8c78c58f25be8df7
-    hostname: cryptpad
     environment:
       - CPAD_MAIN_DOMAIN=https://cryptpad.subke.cloud
       - CPAD_SANDBOX_DOMAIN=https://sandbox.subke.cloud
