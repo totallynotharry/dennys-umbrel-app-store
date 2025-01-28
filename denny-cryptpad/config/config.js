@@ -17,5 +17,4 @@ module.exports = {
     logFeedback: false, // Feedback-Logs deaktiviert
     verbose: false, // Verbose-Logs deaktiviert
     installMethod: 'docker', // Installationsmethode Docker
-    adminKeys: [], // Admin-Keys können hier hinzugefügt werden
 };
