@@ -24,7 +24,6 @@ services:
       - ${APP_DATA_DIR}/data/onlyoffice-conf:/cryptpad/onlyoffice-conf:rw
       - ${APP_DATA_DIR}/config/config.js:/cryptpad/config/config.js:rw
     ports:
-      - "3790:3000"
       - "3793:3003"
     user: "1000:1000"
     restart: on-failure
