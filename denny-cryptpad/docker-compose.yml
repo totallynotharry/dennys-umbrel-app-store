@@ -20,8 +20,8 @@ services:
     user: "1000:1000"
     restart: on-failure
     ports:
-      - "3000:3000"
-      - "3003:3003"
+      - "3790:3000"
+      - "3793:3003"
     ulimits:
       nofile:
         soft: 1000000
