@@ -1,7 +1,7 @@
 module.exports = {
     httpUnsafeOrigin: 'http://cryptpad.subke.cloud:3790', // Public HTTP-Domain mit Port
     httpSafeOrigin: 'https://sandbox.subke.cloud:3793', // Public HTTPS-Domain mit Port
-    httpAddress: 'cryptpad', // Hostname, wie in der Compose-Datei angegeben
+    httpAddress: '0.0.0.0', // Hostname, wie in der Compose-Datei angegeben
     filePath: './datastore/', // Datastore-Pfad, wie in den Volumes gemountet
     archivePath: './data/archive', // Datenarchiv
     pinPath: './data/pins', // Pins
