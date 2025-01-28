@@ -7,7 +7,7 @@ category: In Progress
 version: "2.2.7"
 port: 9001
 description: >-
-   📝 Etherpad is an open-source, web-based collaborative real-time editor that enables multiple users to simultaneously edit a document from different locations. It’s particularly valuable for teamwork, group projects, or situations where many people need to contribute to the same document at once. One of Etherpad’s standout features is its live collaboration functionality — as users make changes, those changes appear in real-time for all participants, with each user's contributions color-coded to distinguish them.
+  📝 Etherpad is an open-source, web-based collaborative real-time editor that enables multiple users to simultaneously edit a document from different locations. It’s particularly valuable for teamwork, group projects, or situations where many people need to contribute to the same document at once. One of Etherpad’s standout features is its live collaboration functionality — as users make changes, those changes appear in real-time for all participants, with each user's contributions color-coded to distinguish them.
 
 
   The platform is designed to be simple and intuitive, with a clean and straightforward interface that emphasizes writing and editing. Etherpad doesn’t require users to sign up or install any software, making it easy for anyone to start collaborating quickly.
