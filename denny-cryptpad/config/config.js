@@ -1,7 +1,7 @@
 module.exports = {
     httpUnsafeOrigin: 'http://umbrel-2.local:3790',
     httpSafeOrigin: 'https://cryptpad.subke.cloud',
-    httpAddress: 'cryptpad',
+    httpAddress: '0.0.0.0',
     filePath: './datastore/',
     archivePath: './data/archive',
     pinPath: './data/pins',
