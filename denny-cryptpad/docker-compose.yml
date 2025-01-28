@@ -1,19 +1,17 @@
-version: '3.7'
-
+---
 services:
-  app_proxy:
-    environment:
-      APP_HOST: denny-cryptpad_web_1
-      APP_PORT: 3000
-      PROXY_AUTH_ADD: "false"
-  web:
-    image: cryptpad/cryptpad:version-2024.12.0@sha256:a8f075b1a5f9ebb3f28944fa474028c43b8ac2c2513f898c8c78c58f25be8df7
+  cryptpad:
+    image: "cryptpad/cryptpad:version-2024.12.0@sha256:a8f075b1a5f9ebb3f28944fa474028c43b8ac2c2513f898c8c78c58f25be8df7"
+    hostname: cryptpad
+
     environment:
       - CPAD_MAIN_DOMAIN=https://cryptpad.subke.cloud
       - CPAD_SANDBOX_DOMAIN=https://sandbox.subke.cloud
       - CPAD_CONF=/cryptpad/config/config.js
-      - CPAD_USE_REVERSE_PROXY=false
-      - CPAD_INSTALL_ONLYOFFICE=false
+
+      # Read and accept the license before uncommenting the following line:
+      # https://github.com/ONLYOFFICE/web-apps/blob/master/LICENSE.txt
+      - CPAD_INSTALL_ONLYOFFICE=no
     volumes:
       - ${APP_DATA_DIR}/data/blob:/cryptpad/blob:rw
       - ${APP_DATA_DIR}/data/block:/cryptpad/block:rw
