@@ -1,36 +1,21 @@
 module.exports = {
-  // Hauptdomain
-  httpUnsafeOrigin: 'https://cryptpad.subke.cloud',
-  httpAddress: '0.0.0.0',
-  httpPort: 3003,
-
-  // Sandbox-Domain
-  sandboxDomain: 'https://sandbox.subke.cloud',
-
-  // WebSocket-Konfiguration
-  websocket: {
-    enabled: true,
-    address: '0.0.0.0',
-    port: 3000, // Intern genutzt
-  },
-
-  // Speicherpfade
-  storage: {
-    data: '/cryptpad/data',
-    files: '/cryptpad/datastore',
-    temp: '/cryptpad/temp',
-    backup: '/cryptpad/backup',
-    blobs: '/cryptpad/blob',
-    pins: '/cryptpad/block',
-  },
-
-  // Administrator-Konto
-  admin: {
-    accountCreationDisabled: false,
-  },
-
-  // Sicherheits- und Performance-Einstellungen
-  limits: {
-    fileSize: 50000000, // Maximal 50 MB pro Datei
-  },
+    httpUnsafeOrigin: 'http://cryptpad.subke.cloud:3790', // Public HTTP-Domain mit Port
+    httpSafeOrigin: 'https://sandbox.subke.cloud:3793', // Public HTTPS-Domain mit Port
+    httpAddress: 'cryptpad', // Hostname, wie in der Compose-Datei angegeben
+    filePath: './datastore/', // Datastore-Pfad, wie in den Volumes gemountet
+    archivePath: './data/archive', // Datenarchiv
+    pinPath: './data/pins', // Pins
+    taskPath: './data/tasks', // Tasks
+    blockPath: './block', // Block-Daten
+    blobPath: './blob', // Blob-Daten
+    blobStagingPath: './data/blobstage', // Blob-Staging
+    decreePath: './data/decrees', // Dekrete
+    logPath: './data/logs', // Logs
+    maxUploadSize: 20 * 1024 * 1024, // 20 MB Upload-Limit
+    logToStdout: false, // Logging in Konsole deaktiviert
+    logLevel: 'info', // Standard-Log-Level
+    logFeedback: false, // Feedback-Logs deaktiviert
+    verbose: false, // Verbose-Logs deaktiviert
+    installMethod: 'docker', // Installationsmethode Docker
+    adminKeys: [], // Admin-Keys können hier hinzugefügt werden
 };
