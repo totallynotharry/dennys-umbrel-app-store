@@ -5,7 +5,7 @@ tagline: A secure, flexible, and efficient email client
 icon: https://i.imgur.com/2DjFPcH.png
 category: In Progress
 version: "24.12.1"
-port: 5810
+port: 5858
 description: >-
  ✉️ Thunderbird is a free and open-source email client developed by the Mozilla Foundation, designed to give users a feature-rich, customizable, and secure platform for managing emails, calendars, contacts, and tasks. It supports multiple email accounts, allowing users to manage various email addresses (via IMAP, POP, and SMTP) from a single interface.
 
