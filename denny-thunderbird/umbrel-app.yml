@@ -3,7 +3,7 @@ id: denny-thunderbird
 name: Thunderbird
 tagline: A secure, flexible, and efficient email client
 icon: https://i.imgur.com/2DjFPcH.png
-category: In Progress
+category: networking
 version: "24.12.1"
 port: 5858
 description: >-
