@@ -1,0 +1,35 @@
+manifestVersion: 1
+id: denny-kodi
+name: Kodi
+tagline: An all-in-one entertainment center
+icon: https://i.imgur.com/hE9NlWE.png
+category: In Progress
+version: "21.1"
+port: 8585
+description: >-
+  Kodi is a powerful, free, and open-source software for streaming and managing media content. Originally developed as Xbox Media Center (XBMC), Kodi has become one of the most popular platforms for media playback on various devices. With Kodi on Umbrel, you can play movies, TV shows, music, photos, and other media directly from your Umbrel server.
+
+
+  Kodi offers a user-friendly interface that is suitable for both beginners and advanced users. The software supports a wide range of file formats and offers many customization options. Additionally, you can access various streaming services through third-party add-ons, stream content from the internet, or use local media sources. Kodi on Umbrel also allows you to manage content from network drives or external storage devices such as hard drives or USB sticks.
+
+
+  Another highlight is the ability to customize Kodi through numerous add-ons and skins. This allows you to integrate additional features like live TV, weather updates, music services, and more.
+
+
+  Whether as a media server or a simple playback solution, Kodi on Umbrel offers a flexible and customizable option for anyone looking to organize and enjoy their media on a central device.
+developer: Kodi Foundation
+website: https://kodi.tv/
+submitter: dennysubke
+submission: https://github.com/getumbrel/umbrel-apps/pull/
+repo: https://github.com/matthuisman/docker-kodi-headless
+support: https://github.com/matthuisman/docker-kodi-headless/issues
+gallery:
+  - https://i.imgur.com/zpdyTU1.png
+  - https://i.imgur.com/zpdyTU1.png
+  - https://i.imgur.com/zpdyTU1.png
+releaseNotes: >-
+  The recent updates for Kodi include numerous bug fixes, performance improvements, and feature enhancements. Key changes include fixes for heap-user-after-free issues, improved playback performance, enhanced support for various video formats, and several bug fixes related to PVR, video player, and subtitle handling. Additionally, multiple platform-specific issues were addressed, such as improvements for Android, MacOS, Linux, and Xbox, along with updates to the web interface and several backported features for better compatibility and stability.
+dependencies:
+path: ""
+defaultUsername: ""
+defaultPassword: ""
