@@ -1,0 +1,98 @@
+version: "3.9"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-twenty_web_1
+      APP_PORT: 3000
+
+  web:
+  change-vol-ownership:
+    image: ubuntu:25.04@sha256:008b026f11c0b5653d564d0c9877a116770f06dfbdb36ca75c46fd593d863cbc
+    user: root
+    volumes:
+      - ${APP_DATA_DIR}/data/server-local-data:/tmp/server-local-data
+      - ${APP_DATA_DIR}/data/docker-data:/tmp/docker-data
+    command: >
+      bash -c "
+      chown -R 1000:1000 /tmp/data/server-local-data
+      && chown -R 1000:1000 /tmp/data/docker-data"
+
+  server:
+    image: twentycrm/twenty:v0.40.7@sha256:ddce03ce25af75b12dd86641799bbe555d21f553f4eea3e481b474ab77efd585
+    volumes:
+      - ${APP_DATA_DIR}/data/server-local-data:/app/packages/twenty-server/${STORAGE_LOCAL_PATH:-.local-storage}
+      - ${APP_DATA_DIR}/data/docker-data:/app/docker-data
+    ports:
+      - "3308:3000"
+    environment:
+      PORT: 3000
+      PG_DATABASE_URL: postgres://${PGUSER_SUPERUSER:-postgres}:${PGPASSWORD_SUPERUSER:-postgres}@${PG_DATABASE_HOST:-db:5432}/default
+      SERVER_URL: ${SERVER_URL}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379}
+
+      SIGN_IN_PREFILLED: ${SIGN_IN_PREFILLED}
+      STORAGE_TYPE: ${STORAGE_TYPE}
+      STORAGE_S3_REGION: ${STORAGE_S3_REGION}
+      STORAGE_S3_NAME: ${STORAGE_S3_NAME}
+      STORAGE_S3_ENDPOINT: ${STORAGE_S3_ENDPOINT}
+
+      APP_SECRET: ${APP_SECRET}
+    depends_on:
+      change-vol-ownership:
+        condition: service_completed_successfully
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: curl --fail http://localhost:3000/healthz
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: always
+
+  worker:
+    image: twentycrm/twenty:v0.40.7@sha256:ddce03ce25af75b12dd86641799bbe555d21f553f4eea3e481b474ab77efd585
+    command: ["yarn", "worker:prod"]
+    environment:
+      PG_DATABASE_URL: postgres://${PGUSER_SUPERUSER:-postgres}:${PGPASSWORD_SUPERUSER:-postgres}@${PG_DATABASE_HOST:-db:5432}/default
+      SERVER_URL: ${SERVER_URL}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379}
+      DISABLE_DB_MIGRATIONS: "true" # it already runs on the server
+
+      STORAGE_TYPE: ${STORAGE_TYPE}
+      STORAGE_S3_REGION: ${STORAGE_S3_REGION}
+      STORAGE_S3_NAME: ${STORAGE_S3_NAME}
+      STORAGE_S3_ENDPOINT: ${STORAGE_S3_ENDPOINT}
+
+      APP_SECRET: ${APP_SECRET}
+    depends_on:
+      db:
+        condition: service_healthy
+      server:
+        condition: service_healthy
+    restart: always
+
+  db:
+    image: twentycrm/twenty-postgres-spilo:v0.40@sha256:15a581628d1da4811a0fd8d01e8d72b3a975e33768612a5f77d036ab3be2587e
+    volumes:
+      - ${APP_DATA_DIR}/data/datadb-data:/home/postgres/pgdata
+    environment:
+      PGUSER_SUPERUSER: ${PGUSER_SUPERUSER:-postgres}
+      PGPASSWORD_SUPERUSER: ${PGPASSWORD_SUPERUSER:-postgres}
+      ALLOW_NOSSL: "true"
+      SPILO_PROVIDER: "local"
+    healthcheck:
+      test: pg_isready -U ${PGUSER_SUPERUSER:-postgres} -h localhost -d postgres
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: always
+
+  redis:
+    image: redis:7.4.2@sha256:ca65ea36ae16e709b0f1c7534bc7e5b5ac2e5bb3c97236e4fec00e3625eb678d
+    restart: always
+
+volumes:
+  docker-data:
+  db-data:
+  server-local-data:
