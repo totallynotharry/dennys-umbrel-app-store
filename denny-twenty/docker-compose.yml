@@ -24,9 +24,9 @@ services:
       - ${APP_DATA_DIR}/data/server-local-data:/app/packages/twenty-server/${STORAGE_LOCAL_PATH:-.local-storage}
       - ${APP_DATA_DIR}/data/docker-data:/app/docker-data
     ports:
-      - "3308:3000"
+      - "2020:3000"
     environment:
-      PORT: 3000
+      PORT: 2020
       PG_DATABASE_URL: postgres://${PGUSER_SUPERUSER:-postgres}:${PGPASSWORD_SUPERUSER:-postgres}@${PG_DATABASE_HOST:-db:5432}/default
       SERVER_URL: ${SERVER_URL}
       REDIS_URL: ${REDIS_URL:-redis://redis:6379}
