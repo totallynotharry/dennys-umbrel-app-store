@@ -22,7 +22,7 @@
         - KODI_DELAY=10
         - TZ=Europe/Berlin
       volumes:
-        - ${APP_DATA_DIR}/data:/config/.kodi
+        - ${APP_DATA_DIR}/data/config:/config/.kodi
       restart: on-failure
       depends_on:
         - db
