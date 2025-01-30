@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: denny-kodi
 name: Kodi Headless
-tagline: An all-in-one entertainment center
+tagline: A simple way to sync and stream with Kodi
 icon: https://i.imgur.com/hE9NlWE.png
 category: In Progress
 version: "21.1"
