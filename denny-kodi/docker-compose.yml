@@ -1,44 +1,50 @@
----
-  version: "3.7"
+version: "3.7"
+
+volumes:
+  app:
+  db:
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-kodi_app_1
+      APP_PORT: 8080
+      PROXY_AUTH_ADD: "false"
   
-  volumes:
-    app:
-    db:
+  app:
+    image: matthuisman/kodi-headless:Omega@sha256:4a9e870a81626e50f30fa486fb05c5561b81bd916382adf0723eb481479dcc67 #no version tag
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - MYSQL_HOST=db
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=kodi
+      - KODI_DELAY=10
+      - TZ=Europe/Berlin
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config/.kodi
+    ports:
+      - 9090:9090
+      - 9777:9777/udp
+    restart: on-failure
+    depends_on:
+      db:
+        condition: service_healthy
   
-  services:
-    app_proxy:
-      environment:
-        APP_HOST: denny-kodi_app_1
-        APP_PORT: 8080
-        PROXY_AUTH_ADD: "false"
-    app:
-      image: matthuisman/kodi-headless:Omega@sha256:4a9e870a81626e50f30fa486fb05c5561b81bd916382adf0723eb481479dcc67 #no version tag
-      environment:
-        - PUID=1000
-        - PGID=1000
-        - MYSQL_HOST=db
-        - MYSQL_USER=root
-        - MYSQL_PASSWORD=kodi
-        - KODI_DELAY=10
-        - TZ=Europe/Berlin
-      volumes:
-        - ${APP_DATA_DIR}/data/config:/config/.kodi
-      ports:
-        - 9090:9090
-        - 9777:9777/udp
-      restart: on-failure
-      depends_on:
-        - db
-  
-    db:
-      image: linuxserver/mariadb:11.4.4@sha256:fdf30e6b302688c290cef10ca24b80e6e25e93955bc6b64636777f06676a6c52
-      environment:
-        - PUID=1000
-        - PGID=1000
-        - MYSQL_ROOT_PASSWORD=kodi
-        - TZ=Europe/Berlin
-      ports:
-        - 3236:3306
-      volumes:
-        - ${APP_DATA_DIR}/data/db:/config
-      restart: on-failure
+  db:
+    image: linuxserver/mariadb:11.4.4@sha256:fdf30e6b302688c290cef10ca24b80e6e25e93955bc6b64636777f06676a6c52
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - MYSQL_ROOT_PASSWORD=kodi
+      - TZ=Europe/Berlin
+    ports:
+      - 3236:3306
+    volumes:
+      - ${APP_DATA_DIR}/data/db:/config
+    restart: on-failure
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
