@@ -1,23 +1,18 @@
-version: '2.4'
+version: "2.4"
+
+volumes:
+  app:
+  db:
 
 services:
-  kodi-mariadb:
-    image: linuxserver/mariadb
-    container_name: kodi-mariadb
+  app_proxy:
     environment:
-      - PUID=1000
-      - PGID=1000
-      - MYSQL_ROOT_PASSWORD=kodi
-      - TZ=Pacific/Auckland
-    volumes:
-      - ./mariadb:/config
-    ports:
-      - 3306:3306
-    restart: unless-stopped
-
-  kodi-headless:
-    image: matthuisman/kodi-headless:Omega
-    container_name: kodi-headless
+      APP_HOST: denny-kodi_app_1
+      APP_PORT: 8080
+      PROXY_AUTH_ADD: "false"
+  
+  app:
+    image: matthuisman/kodi-headless:Omega@sha256:4a9e870a81626e50f30fa486fb05c5561b81bd916382adf0723eb481479dcc67 #no version tag
     environment:
       - PUID=1000
       - PGID=1000
@@ -25,13 +20,32 @@ services:
       - MYSQL_USER=root
       - MYSQL_PASSWORD=kodi
       - KODI_DELAY=10
-      - TZ=Pacific/Auckland
+      - TZ=Europe/Berlin
     volumes:
-      - ./kodi/:/config/.kodi
+      - ${APP_DATA_DIR}/data/config:/config/.kodi
     ports:
       - 8585:8080
       - 9090:9090
       - 9777:9777/udp
+    restart: on-failure
     depends_on:
-      - kodi-mariadb
-    restart: unless-stopped
+      - kodi-mariadb:
+        condition: service_healthy
+  
+  db:
+    image: linuxserver/mariadb:11.4.4@sha256:fdf30e6b302688c290cef10ca24b80e6e25e93955bc6b64636777f06676a6c52
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - MYSQL_ROOT_PASSWORD=kodi
+      - TZ=Europe/Berlin
+    ports:
+      - 3236:3306
+    volumes:
+      - ${APP_DATA_DIR}/data/db:/config
+    restart: on-failure
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
