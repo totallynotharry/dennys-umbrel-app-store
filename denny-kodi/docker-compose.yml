@@ -23,6 +23,9 @@
         - TZ=Europe/Berlin
       volumes:
         - ${APP_DATA_DIR}/data/config:/config/.kodi
+      ports:
+        - 9999:9090
+        - 9777:9777/udp
       restart: on-failure
       depends_on:
         - db
