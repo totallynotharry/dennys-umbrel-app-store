@@ -2,14 +2,13 @@ version: "2.4"
 
 volumes:
   app:
-  db:
+  kodi-mariadb:
 
 services:
   app_proxy:
     environment:
       APP_HOST: denny-kodi_app_1
       APP_PORT: 8080
-      PROXY_AUTH_ADD: "false"
   
   app:
     image: matthuisman/kodi-headless:Omega@sha256:4a9e870a81626e50f30fa486fb05c5561b81bd916382adf0723eb481479dcc67 #no version tag
