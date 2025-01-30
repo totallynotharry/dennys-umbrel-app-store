@@ -1,4 +1,4 @@
-version: '3.9'
+version: '3.7'
 
 services:
   app_proxy:
@@ -29,6 +29,9 @@ services:
       DISABLE_IP_LOGGING: ${DOCKER_COMPOSE_APP_DISABLE_IP_LOGGING:-false}
       SOFFICE: ${DOCKER_COMPOSE_APP_SOFFICE:-null}
       TRUST_PROXY: ${DOCKER_COMPOSE_APP_TRUST_PROXY:-true}
+      SKIN_NAME: ${DOCKER_COMPOSE_APP_SKIN_NAME:-colibris} #either no-skin, colibris or an existing directory under src/static/skins
+      #SKIN_VARIANTS: ${DOCKER_COMPOSE_APP_SKIN_VARIANTS:-} #multiple skin variants separated by spaces: super-light-toolbar super-light-editor light-background
+      SHOW_SETTINGS_IN_ADMIN_PAGE: ${DOCKER_COMPOSE_APP_SHOW_SETTINGS_IN_ADMIN_PAGE:-true}
     restart: on-failure
     user: "1000:1000"
     # ports:
