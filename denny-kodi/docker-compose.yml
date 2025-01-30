@@ -24,7 +24,7 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/config:/config/.kodi
     ports:
-      - 9090:9090
+      - 8586:9090
       - 9777:9777/udp
     restart: on-failure
     depends_on:
