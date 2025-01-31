@@ -23,9 +23,9 @@ services:
       DB_PASS: ${DOCKER_COMPOSE_POSTGRES_PASSWORD:-admin}
       DB_PORT: ${DOCKER_COMPOSE_POSTGRES_PORT:-5432}
       DB_TYPE: "postgres"
-      DB_USER: ${DOCKER_COMPOSE_POSTGRES_USER:-admin}
-      # For now, the env var DEFAULT_PAD_TEXT cannot be unset or empty; it seems to be mandatory in the latest version of etherpad
+      DB_USER: ${DOCKER_COMPOSE_POSTGRES_USER:-admin}  
       DEFAULT_PAD_TEXT: ${DOCKER_COMPOSE_APP_DEFAULT_PAD_TEXT:- }
+      # The env var DEFAULT_PAD_TEXT cannot be unset or empty
       DISABLE_IP_LOGGING: ${DOCKER_COMPOSE_APP_DISABLE_IP_LOGGING:-false}
       SOFFICE: ${DOCKER_COMPOSE_APP_SOFFICE:-null}
       ALLOW_UNKNOWN_FILE_ENDS: ${DOCKER_COMPOSE_APP_ALLOW_UNKNOWN_FILE_ENDS:-true}
