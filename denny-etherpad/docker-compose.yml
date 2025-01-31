@@ -31,7 +31,7 @@ services:
       ALLOW_UNKNOWN_FILE_ENDS: ${DOCKER_COMPOSE_APP_ALLOW_UNKNOWN_FILE_ENDS:-true}
       TRUST_PROXY: ${DOCKER_COMPOSE_APP_TRUST_PROXY:-true}
       SKIN_NAME: ${DOCKER_COMPOSE_APP_SKIN_NAME:-colibris} #either no-skin, colibris or an existing directory under src/static/skins
-      #SKIN_VARIANTS: ${DOCKER_COMPOSE_APP_SKIN_VARIANTS:-} #multiple skin variants separated by spaces: super-light-toolbar super-light-editor light-background
+      SKIN_VARIANTS: ${DOCKER_COMPOSE_APP_SKIN_VARIANTS:-super-light-toolbar super-light-editor super-light-background light-toolbar light-editor light-background dark-toolbar dark-editor dark-background super-dark-toolbar super-dark-editor super-dark-background full-width-editor} #super-light-toolbar super-light-editor super-light-background light-toolbar light-editor light-background dark-toolbar dark-editor dark-background super-dark-toolbar super-dark-editor super-dark-background full-width-editor
       SHOW_SETTINGS_IN_ADMIN_PAGE: ${DOCKER_COMPOSE_APP_SHOW_SETTINGS_IN_ADMIN_PAGE:-true}
     restart: on-failure
     user: "1000:1000"
