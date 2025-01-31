@@ -40,7 +40,6 @@ services:
       # You can also make the editor full-width by adding the "full-width-editor" variant.
       SHOW_SETTINGS_IN_ADMIN_PAGE: ${DOCKER_COMPOSE_APP_SHOW_SETTINGS_IN_ADMIN_PAGE:-true}
       SUPPRESS_ERRORS_IN_PAD_TEXT: ${DOCKER_COMPOSE_APP_SUPPRESS_ERRORS_IN_PAD_TEXT:-false}
-      PAD_OPTIONS_USE_MONOSPACE_FONT: ${DOCKER_COMPOSE_PAD_OPTIONS_USE_MONOSPACE_FONT:-true}
       
     restart: on-failure
     user: "1000:1000"
