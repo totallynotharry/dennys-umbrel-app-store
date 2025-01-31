@@ -3,7 +3,7 @@ id: denny-kodi
 name: Kodi Headless
 tagline: A simple way to sync and stream with Kodi
 icon: https://i.imgur.com/hE9NlWE.png
-category: In Progress
+category: media
 version: "21.1"
 port: 8585
 description: >-
