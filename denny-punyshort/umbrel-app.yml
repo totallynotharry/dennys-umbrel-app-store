@@ -3,7 +3,7 @@ id: denny-punyshort
 name: Punyshort
 tagline: An open source URL shortening service
 icon: https://i.imgur.com/8icLRU3.png
-category: In Progress.
+category: In Progress
 version: "1.0.8"
 port: 9998
 description: >-
