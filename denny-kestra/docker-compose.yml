@@ -8,7 +8,7 @@ services:
   postgres:
     image: postgres
     volumes:
-      - ${APP_DATA_DIR}/postgres-data:/var/lib/postgresql/data
+      - ${APP_DATA_DIR}/data/postgres-data:/var/lib/postgresql/data
     environment:
       POSTGRES_DB: kestra
       POSTGRES_USER: kestra
@@ -28,9 +28,9 @@ services:
     user: "root"
     command: server standalone
     volumes:
-      - ${APP_DATA_DIR}/kestra-data:/app/storage
-      - ${APP_DATA_DIR}/var/run/docker.sock:/var/run/docker.sock
-      - ${APP_DATA_DIR}/tmp/kestra-wd:/tmp/kestra-wd
+      - ${APP_DATA_DIR}/data/kestra-data:/app/storage
+      - ${APP_DATA_DIR}/data/tmp:/tmp/kestra-wd
+      - /var/run/docker.sock:/var/run/docker.sock
     environment:
       KESTRA_CONFIGURATION: |
         datasources:
