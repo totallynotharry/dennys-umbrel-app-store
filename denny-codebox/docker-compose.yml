@@ -1,0 +1,42 @@
+version: '3.7'
+
+services:
+   db:
+     image: linuxserver/mariadb:11.4.4@sha256:fdf30e6b302688c290cef10ca24b80e6e25e93955bc6b64636777f06676a6c52
+     volumes:
+       - ${APP_DATA_DIR}/data/dbvol:/var/lib/mysql
+
+     environment:
+       MYSQL_ROOT_PASSWORD: codebox
+       MYSQL_DATABASE: codebox
+       MYSQL_USER: codebox
+       MYSQL_PASSWORD: codebox
+
+   codebox:
+     depends_on:
+       - db
+     image: iinteraapps/pastefy-codebox:1.0.12-alpha@sha256:def5627a8320fe69b754f4e288202229cd57299997ac17d7bc4e4f0e607eb7ec
+     ports:
+       - "9996:80"
+       
+     environment:
+       HTTP_SERVER_PORT: 9996
+       HTTP_SERVER_CORS: "*"
+       DATABASE_DRIVER: mysql
+       DATABASE_NAME: codebox
+       DATABASE_USER: codebox
+       DATABASE_PASSWORD: codebox
+       DATABASE_HOST: db
+       DATABASE_PORT: 3346
+       SERVER_NAME: "http://umbrel.local:9996"
+       IA_OAUTH2_CLIENT_ID:
+       IA_OAUTH2_CLIENT_SECRET:
+ 
+       FTP_URL:
+       FTP_HOST:
+       FTP_USER:
+       FTP_PASSWORD:
+       FTP_BASE_DIR:
+
+volumes:
+  dbvol:
