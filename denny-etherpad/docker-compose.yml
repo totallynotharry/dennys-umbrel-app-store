@@ -24,19 +24,30 @@ services:
       DB_PORT: ${DOCKER_COMPOSE_POSTGRES_PORT:-5432}
       DB_TYPE: "postgres"
       DB_USER: ${DOCKER_COMPOSE_POSTGRES_USER:-admin}
-      # For now, the env var DEFAULT_PAD_TEXT cannot be unset or empty; it seems to be mandatory in the latest version of etherpad
-      DEFAULT_PAD_TEXT: ${DOCKER_COMPOSE_APP_DEFAULT_PAD_TEXT:- }
-      DISABLE_IP_LOGGING: ${DOCKER_COMPOSE_APP_DISABLE_IP_LOGGING:-false}
-      SOFFICE: ${DOCKER_COMPOSE_APP_SOFFICE:-null}
+      DEFAULT_PAD_TEXT: ${DOCKER_COMPOSE_APP_DEFAULT_PAD_TEXT:-Welcome to Etherpad!}
+      DISABLE_IP_LOGGING: ${DOCKER_COMPOSE_APP_DISABLE_IP_LOGGING:-true}
+      SOFFICE: ${DOCKER_COMPOSE_APP_SOFFICE:-/usr/bin/soffice}
       ALLOW_UNKNOWN_FILE_ENDS: ${DOCKER_COMPOSE_APP_ALLOW_UNKNOWN_FILE_ENDS:-true}
       TRUST_PROXY: ${DOCKER_COMPOSE_APP_TRUST_PROXY:-true}
-      SKIN_NAME: ${DOCKER_COMPOSE_APP_SKIN_NAME:-colibris} #either no-skin, colibris or an existing directory under src/static/skins
-      SKIN_VARIANTS: ${DOCKER_COMPOSE_APP_SKIN_VARIANTS:-super-light-toolbar super-light-editor super-light-background light-toolbar light-editor light-background dark-toolbar dark-editor dark-background super-dark-toolbar super-dark-editor super-dark-background full-width-editor} #super-light-toolbar super-light-editor super-light-background light-toolbar light-editor light-background dark-toolbar dark-editor dark-background super-dark-toolbar super-dark-editor super-dark-background full-width-editor
+      SKIN_NAME: ${DOCKER_COMPOSE_APP_SKIN_NAME:-colibris}
+      SKIN_VARIANTS: ${DOCKER_COMPOSE_APP_SKIN_VARIANTS:-super-light-toolbar super-light-editor super-light-background light-toolbar light-editor light-background dark-toolbar dark-editor dark-background super-dark-toolbar super-dark-editor super-dark-background full-width-editor}
       SHOW_SETTINGS_IN_ADMIN_PAGE: ${DOCKER_COMPOSE_APP_SHOW_SETTINGS_IN_ADMIN_PAGE:-true}
+      TITLE: ${DOCKER_COMPOSE_APP_TITLE:-Etherpad Custom}
+      FAVICON: ${DOCKER_COMPOSE_APP_FAVICON:-https://example.com/favicon.ico}
+      LOGLEVEL: ${DOCKER_COMPOSE_APP_LOGLEVEL:-DEBUG}
+      PAD_OPTIONS_NO_COLORS: ${DOCKER_COMPOSE_PAD_OPTIONS_NO_COLORS:-true}
+      PAD_OPTIONS_SHOW_CONTROLS: ${DOCKER_COMPOSE_PAD_OPTIONS_SHOW_CONTROLS:-true}
+      PAD_OPTIONS_SHOW_CHAT: ${DOCKER_COMPOSE_PAD_OPTIONS_SHOW_CHAT:-true}
+      PAD_OPTIONS_SHOW_LINE_NUMBERS: ${DOCKER_COMPOSE_PAD_OPTIONS_SHOW_LINE_NUMBERS:-true}
+      PAD_OPTIONS_USE_MONOSPACE_FONT: ${DOCKER_COMPOSE_PAD_OPTIONS_USE_MONOSPACE_FONT:-true}
+      PAD_OPTIONS_USER_NAME: ${DOCKER_COMPOSE_PAD_OPTIONS_USER_NAME:-Guest}
+      PAD_OPTIONS_USER_COLOR: ${DOCKER_COMPOSE_PAD_OPTIONS_USER_COLOR:-#0000FF}
+      PAD_OPTIONS_RTL: ${DOCKER_COMPOSE_PAD_OPTIONS_RTL:-true}
+      PAD_OPTIONS_ALWAYS_SHOW_CHAT: ${DOCKER_COMPOSE_PAD_OPTIONS_ALWAYS_SHOW_CHAT:-true}
+      PAD_OPTIONS_CHAT_AND_USERS: ${DOCKER_COMPOSE_PAD_OPTIONS_CHAT_AND_USERS:-true}
+      PAD_OPTIONS_LANG: ${DOCKER_COMPOSE_PAD_OPTIONS_LANG:-en}
     restart: on-failure
     user: "1000:1000"
-    # ports:
-      #  "${DOCKER_COMPOSE_APP_PORT_PUBLISHED:-9001}:${DOCKER_COMPOSE_APP_PORT_TARGET:-9001}"
 
   postgres:
     image: postgres:15-alpine@sha256:93a6166360be8f1d116b7ea97ebb8dea9e2c9c746349e952738bbba72a961d7c
@@ -47,10 +58,6 @@ services:
       POSTGRES_USER: ${DOCKER_COMPOSE_POSTGRES_USER:-admin}
       PGDATA: /var/lib/postgresql/data/pgdata
     restart: on-failure
-    # Exposing the port is not needed unless you want to access this database instance from the host.
-    # Be careful when other postgres docker container are running on the same port
-    # ports:
-    #   - "5432:5432"
     volumes:
       - ${APP_DATA_DIR}/data/postgres_data:/var/lib/postgresql/data/pgdata
 
@@ -58,5 +65,3 @@ volumes:
   postgres_data:
   plugins:
   etherpad-var:
-
-# https://docs.etherpad.org/docker.html
