@@ -54,7 +54,6 @@ services:
       PAD_OPTIONS_ALWAYS_SHOW_CHAT: ${DOCKER_COMPOSE_PAD_OPTIONS_ALWAYS_SHOW_CHAT:-false}
       PAD_OPTIONS_CHAT_AND_USERS: ${DOCKER_COMPOSE_PAD_OPTIONS_CHAT_AND_USERS:-false}
       PAD_OPTIONS_LANG: ${DOCKER_COMPOSE_PAD_OPTIONS_LANG:-null}
-      SHORTCUTS: {"saveRevision":"ctrl+s","toggleLineNumbers":"ctrl+l","toggleComments":"ctrl+shift+c","toggleChat":"ctrl+shift+h","toggleInlineTools":"ctrl+shift+i","toggleFullScreen":"ctrl+shift+f","toggleDistractionFree":"ctrl+shift+d","toggleTheme":"ctrl+shift+t","toggleRtl":"ctrl+shift+r","toggleMonospaceFont":"ctrl+shift+m"}
     restart: on-failure
     user: "1000:1000"
     
