@@ -27,9 +27,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/ether/etherpad-lite
 support: https://github.com/ether/etherpad-lite/issues
 gallery:
-  - https://i.imgur.com/5IhR3Ts.png
-  - https://i.imgur.com/6Hm0754.png
-  - https://i.imgur.com/2r6boeY.png
+  - https://i.imgur.com/QOcbNKU.png
+  - https://i.imgur.com/Kw2z85y.png
+  - https://i.imgur.com/7YkFqkC.png
 releaseNotes: >-
   The latest update includes notable enhancements and fixes, such as the migration of all important pages to React 19 and React Router v7, with only dependency updates beyond that.
 dependencies:
