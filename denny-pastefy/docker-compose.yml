@@ -17,12 +17,13 @@ services:
       DATABASE_PASSWORD: pastefy
       DATABASE_HOST: db
       DATABASE_PORT: 3306  # FIXED: Intern läuft MariaDB auf 3306
-      SERVER_NAME: "http://umbrel-2.local:9999"
+      SERVER_NAME: "http://umbrel-local:9999"
       OAUTH2_PROVIDER_CLIENT_ID: 
       OAUTH2_PROVIDER_CLIENT_SECRET: 
     restart: on-failure
     depends_on:
-      - db
+      db:
+        condition: service_healthy
 
   db:
     image: linuxserver/mariadb:11.4.4@sha256:fdf30e6b302688c290cef10ca24b80e6e25e93955bc6b64636777f06676a6c52
@@ -36,6 +37,11 @@ services:
     volumes:
       - dbvol:/var/lib/mysql  # FIXED: Direkte Nutzung von `dbvol`
     restart: on-failure
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      retries: 5
+      timeout: 5s
 
 volumes:
   dbvol:
