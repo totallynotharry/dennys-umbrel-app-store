@@ -5,7 +5,6 @@ services:
     image: linuxserver/mariadb:11.4.4@sha256:fdf30e6b302688c290cef10ca24b80e6e25e93955bc6b64636777f06676a6c52
     volumes:
       - ${APP_DATA_DIR}/data/dbvol:/var/lib/mysql
-
     environment:
       MYSQL_ROOT_PASSWORD: punyshort
       MYSQL_DATABASE: punyshort
@@ -17,8 +16,7 @@ services:
       - db
     image: interaapps/punyshort-backend:beta-1.0.9@sha256:b727e80a65f10aa6fb2fabac7965de6e6f452488b2f46ceec24ccc374bca2024
     ports:
-      - "9581:80"
-      
+      - "9997:80"  # Backend läuft auf Port 9997
     environment:
       HTTP_SERVER_PORT: 80
       HTTP_SERVER_CORS: "*"
@@ -28,7 +26,7 @@ services:
       DATABASE_PASSWORD: punyshort
       DATABASE_HOST: db
       DATABASE_PORT: 3306
-      SERVER_NAME: "https://{SERVER}:81"
+      SERVER_NAME: "http://umbrel.local:9997"
       OAUTH2_PROVIDER_CLIENT_ID: {CLIENT_ID}
       OAUTH2_PROVIDER_CLIENT_SECRET:
       PUNYSHORT_DEFAULT_REDIRECT_PROXY:
@@ -39,10 +37,9 @@ services:
       - backend
     image: interaapps/punyshort-frontend:beta-1.0.8@sha256:35e941895820b891a53220c6b791d510d0801792755e523a041ea27b056f7b77
     ports:
-      - "9580:80"
-      
+      - "9998:80"  # Frontend unter umbrel.local:9998
     environment:
-      PUNYSHORT_FRONTEND_API: https://{SERVER}:81
+      PUNYSHORT_FRONTEND_API: "http://umbrel.local:9997"
       PUNYSHORT_FRONTEND_CLIENT_ID: CLIENT_ID
 
   redirect_proxy:
@@ -50,14 +47,12 @@ services:
       - backend
     image: interaapps/punyshort-redirect-proxy:beta-1.0.0@sha256:cf3179857327a3610e59351fa66fa61fadcf47569da2aa2b82d198122af9ea77
     ports:
-      - "9583:80"
-      
+      - "9996:80"  # Falls Redirect-Proxy benötigt wird
     environment:
-      PUNYSHORT_BASE_URL: http://db:81
+      PUNYSHORT_BASE_URL: http://umbrel.local:9997
       PUNYSHORT_KEY: API_KEY
-      PUNYSHORT_ERROR_URL: https://{SERVER}:81/error-page
+      PUNYSHORT_ERROR_URL: http://umbrel.local:9997/error-page
       PUNYSHORT_IP_FORWARDING: true
-  
 
 volumes:
   dbvol:
