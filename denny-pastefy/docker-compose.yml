@@ -16,7 +16,7 @@ services:
       DATABASE_USER: pastefy
       DATABASE_PASSWORD: pastefy
       DATABASE_HOST: db
-      DATABASE_PORT: 3336
+      DATABASE_PORT: 3306  # FIXED: Intern läuft MariaDB auf 3306
       SERVER_NAME: "http://umbrel-local:9999"
       OAUTH2_PROVIDER_CLIENT_ID: 
       OAUTH2_PROVIDER_CLIENT_SECRET: 
@@ -34,7 +34,7 @@ services:
     ports:
       - 3336:3306
     volumes:
-      - ${APP_DATA_DIR}/data/dbvol:/var/lib/mysql
+      - dbvol:/var/lib/mysql  # FIXED: Direkte Nutzung von `dbvol`
     restart: on-failure
 
 volumes:
