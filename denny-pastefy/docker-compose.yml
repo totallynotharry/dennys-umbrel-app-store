@@ -23,7 +23,6 @@ services:
     restart: on-failure
     depends_on:
       db:
-        condition: service_healthy
 
   db:
     image: linuxserver/mariadb:11.4.4@sha256:fdf30e6b302688c290cef10ca24b80e6e25e93955bc6b64636777f06676a6c52
@@ -37,11 +36,6 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/db:/var/lib/mysql
     restart: on-failure
-    healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
-      interval: 10s
-      retries: 5
-      timeout: 5s
 
 volumes:
-  dbvol:
+  db:
