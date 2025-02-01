@@ -5,6 +5,7 @@ services:
     environment:
       APP_HOST: denny-etherpad_app_1
       APP_PORT: 9001
+      
   app:
     image: etherpad/etherpad:2.2.7@sha256:980f227a17569901aaa8f98d8bb6eff51e15c04ad3e2ea0a1692662adbcc2090
     tty: true
@@ -16,42 +17,41 @@ services:
       - postgres
     environment:
       NODE_ENV: production
-      ADMIN_PASSWORD: ${DOCKER_COMPOSE_APP_ADMIN_PASSWORD:-umbrel}
-      DB_CHARSET: ${DOCKER_COMPOSE_APP_DB_CHARSET:-utf8mb4}
+      ADMIN_PASSWORD: umbrel
+      DB_CHARSET: utf8mb4
       DB_HOST: postgres
-      DB_NAME: ${DOCKER_COMPOSE_POSTGRES_DATABASE:-etherpad}
-      DB_PASS: ${DOCKER_COMPOSE_POSTGRES_PASSWORD:-admin}
-      DB_PORT: ${DOCKER_COMPOSE_POSTGRES_PORT:-5432}
+      DB_NAME: etherpad
+      DB_PASS: admin
+      DB_PORT: 5432
       DB_TYPE: "postgres"
-      DB_USER: ${DOCKER_COMPOSE_POSTGRES_USER:-admin}  
-      DEFAULT_PAD_TEXT: ${DOCKER_COMPOSE_APP_DEFAULT_PAD_TEXT:- }
+      DB_USER: admin
+      DEFAULT_PAD_TEXT: 
       # The env var DEFAULT_PAD_TEXT cannot be unset or empty
-      DISABLE_IP_LOGGING: ${DOCKER_COMPOSE_APP_DISABLE_IP_LOGGING:-false}
-      LOGLEVEL: ${DOCKER_COMPOSE_APP_LOGLEVEL:-DEBUG}
-      SOFFICE: ${DOCKER_COMPOSE_APP_SOFFICE:-null}
-      ALLOW_UNKNOWN_FILE_ENDS: ${DOCKER_COMPOSE_APP_ALLOW_UNKNOWN_FILE_ENDS:-true}
-      TRUST_PROXY: ${DOCKER_COMPOSE_APP_TRUST_PROXY:-true}
-      SKIN_NAME: ${DOCKER_COMPOSE_APP_SKIN_NAME:-colibris} 
+      DISABLE_IP_LOGGING: false
+      LOGLEVEL: DEBUG
+      SOFFICE: null
+      ALLOW_UNKNOWN_FILE_ENDS: true
+      TRUST_PROXY: true
+      SKIN_NAME: colibris
       # Either no-skin, colibris or an existing directory under src/static/skins
-      SKIN_VARIANTS: ${DOCKER_COMPOSE_APP_SKIN_VARIANTS:-super-light-toolbar super-light-editor light-background}    
+      SKIN_VARIANTS: super-light-toolbar super-light-editor light-background   
       # The Colibris skin allows you to customize the appearance of three containers: toolbar, editor, and background. 
       # You can choose from four color combinations (super-light, light, dark, super-dark) for each container. 
       # For example, using "dark-toolbar" sets the toolbar to dark. 
       # Multiple variants can be applied, and by default, the skin variant is "super-light-toolbar super-light-editor light-background." 
       # You can also make the editor full-width by adding the "full-width-editor" variant.
-      SHOW_SETTINGS_IN_ADMIN_PAGE: ${DOCKER_COMPOSE_APP_SHOW_SETTINGS_IN_ADMIN_PAGE:-true}
-      SUPPRESS_ERRORS_IN_PAD_TEXT: ${DOCKER_COMPOSE_APP_SUPPRESS_ERRORS_IN_PAD_TEXT:-false}
-      
+      SHOW_SETTINGS_IN_ADMIN_PAGE: true
+      SUPPRESS_ERRORS_IN_PAD_TEXT: false   
     restart: on-failure
     user: "1000:1000"
 
   postgres:
     image: postgres:15-alpine@sha256:93a6166360be8f1d116b7ea97ebb8dea9e2c9c746349e952738bbba72a961d7c
     environment:
-      POSTGRES_DB: ${DOCKER_COMPOSE_POSTGRES_DATABASE:-etherpad}
-      POSTGRES_PASSWORD: ${DOCKER_COMPOSE_POSTGRES_PASSWORD:-admin}
-      POSTGRES_PORT: ${DOCKER_COMPOSE_POSTGRES_PORT:-5432}
-      POSTGRES_USER: ${DOCKER_COMPOSE_POSTGRES_USER:-admin}
+      POSTGRES_DB: etherpad
+      POSTGRES_PASSWORD: admin
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: admin
       PGDATA: /var/lib/postgresql/data/pgdata
     restart: on-failure
     # Exposing the port is not needed unless you want to access this database instance from the host.
