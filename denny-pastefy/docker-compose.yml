@@ -1,6 +1,11 @@
 version: "3.7"
 
 services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-pastefy_app_1
+      APP_PORT: 80
+
    db:
     image: mariadb:11.4-noble #LTS Long Time Support Until May 29, 2029.
     container_name: Pastefy-DB
@@ -37,7 +42,7 @@ services:
        DATABASE_PASSWORD: pastefypass
        DATABASE_HOST: db
        DATABASE_PORT: 3306
-       SERVER_NAME: http://umbrel-2.local
+       SERVER_NAME: http://umbrel-2.local:9999
        # There is INTERAAPPS, GOOGLE, GITHUB, DISCORD, TWITCH
        #OAUTH2_PROVIDER_CLIENT_ID:
        #OAUTH2_PROVIDER_CLIENT_SECRET:
