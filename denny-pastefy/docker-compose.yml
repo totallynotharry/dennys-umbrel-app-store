@@ -27,8 +27,6 @@ services:
       SERVER_NAME: http://umbrel-2.local:9999
     networks:
       - app-network
-    ports:
-      - 9999:80
     volumes:
       - pastefy-data:/var/lib/mysql
 
