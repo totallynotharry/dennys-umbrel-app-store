@@ -3,7 +3,7 @@ version: '3.7'
 services:
   app_proxy:
     environment:
-      APP_HOST: denny-pastefy_app_1
+      APP_HOST: app  # Change this to the service name 'app', not the container name
       APP_PORT: 80
       PROXY_AUTH_ADD: "false"
 
@@ -19,6 +19,8 @@ services:
       DATABASE_HOST: db
       DATABASE_PORT: 3306
       SERVER_NAME: http://umbrel-2.local:9999
+    networks:
+      - pastefy_network
 
   db:
     image: mariadb:11.6.2@sha256:a9547599cd87d7242435aea6fda22a9d83e2c06d16c658ef70d2868b3d3f6a80
@@ -29,3 +31,9 @@ services:
       MYSQL_DATABASE: pastefy
       MYSQL_USER: pastefy
       MYSQL_PASSWORD: tyooe
+    networks:
+      - pastefy_network
+
+networks:
+  pastefy_network:
+    driver: bridge
