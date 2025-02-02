@@ -16,7 +16,7 @@ services:
       DATABASE_USER: pastefy
       DATABASE_PASSWORD: pastefy
       DATABASE_HOST: db
-      DATABASE_PORT: 3306
+      DATABASE_PORT: 3336
       SERVER_NAME: "http://umbrel-local:9999"
       OAUTH2_PROVIDER_CLIENT_ID: 
       OAUTH2_PROVIDER_CLIENT_SECRET: 
