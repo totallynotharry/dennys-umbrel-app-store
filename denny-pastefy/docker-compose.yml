@@ -44,4 +44,4 @@ services:
       timeout: 5s
 
 volumes:
-  db:
+  dbvol:
