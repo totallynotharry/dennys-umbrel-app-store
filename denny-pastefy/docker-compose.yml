@@ -29,7 +29,7 @@ services:
       DATABASE_PASSWORD: "tyooe"
       DATABASE_HOST: "db"
       DATABASE_PORT: "3306"
-      SERVER_NAME: "http://umbrel-local:9999"
+      SERVER_NAME: "http://umbrel-local:9900"
       # OAUTH2_PROVIDER_CLIENT_ID: 
       # OAUTH2_PROVIDER_CLIENT_SECRET: 
     restart: on-failure
