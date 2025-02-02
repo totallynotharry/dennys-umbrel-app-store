@@ -18,11 +18,6 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/db:/var/lib/mysql:rw
     restart: on-failure
-    healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
-      interval: 10s
-      retries: 5
-      timeout: 5s
 
   app:
     image: interaapps/pastefy:6.7.5@sha256:cfa582e598cf00034de9431ce80cba75595d5a7016973e49f8108a90fe8bee76
@@ -39,5 +34,4 @@ services:
       # OAUTH2_PROVIDER_CLIENT_SECRET: 
     restart: on-failure
     depends_on:
-      db:
-        condition: service_healthy
+      - db
