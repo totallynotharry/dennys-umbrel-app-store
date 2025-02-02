@@ -2,10 +2,14 @@ version: '3.7'
 
 services:
   app_proxy:
+    depends_on:
+      - app  # Sicherstellen, dass der 'app'-Service zuerst startet
     environment:
-      APP_HOST: app  # Change this to the service name 'app', not the container name
+      APP_HOST: app  # 'app' ist der Service-Name, nicht der Container-Name
       APP_PORT: 80
       PROXY_AUTH_ADD: "false"
+    networks:
+      - pastefy_network
 
   app: 
     image: interaapps/pastefy:6.7.5@sha256:cfa582e598cf00034de9431ce80cba75595d5a7016973e49f8108a90fe8bee76
@@ -16,11 +20,19 @@ services:
       DATABASE_NAME: pastefy
       DATABASE_USER: pastefy
       DATABASE_PASSWORD: tyooe
-      DATABASE_HOST: db
+      DATABASE_HOST: db  # 'db' ist der Service-Name
       DATABASE_PORT: 3306
       SERVER_NAME: http://umbrel-2.local:9999
     networks:
       - pastefy_network
+    depends_on:
+      - db  # Sicherstellen, dass der 'db'-Service gestartet ist, bevor der 'app'-Service startet
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "db"]
+      interval: 30s
+      retries: 5
+      start_period: 10s
+      timeout: 10s
 
   db:
     image: mariadb:11.6.2@sha256:a9547599cd87d7242435aea6fda22a9d83e2c06d16c658ef70d2868b3d3f6a80
@@ -33,6 +45,12 @@ services:
       MYSQL_PASSWORD: tyooe
     networks:
       - pastefy_network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 30s
+      retries: 5
+      start_period: 10s
+      timeout: 10s
 
 networks:
   pastefy_network:
