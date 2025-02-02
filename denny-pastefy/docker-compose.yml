@@ -5,6 +5,9 @@ services:
     environment:
       APP_HOST: denny-pastefy_app_1
       APP_PORT: 8080
+    depends_on:
+      app:
+        condition: service_healthy
 
   app:
     image: interaapps/pastefy:6.7.3@sha256:a711eebb7bab0df9e941b941f9e0684c18c098d1f5e3e7f420dd094124ac57ec
@@ -24,6 +27,11 @@ services:
     depends_on:
       db:
         condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080"]
+      interval: 10s
+      retries: 5
+      timeout: 5s
 
   db:
     image: mariadb:10.11
