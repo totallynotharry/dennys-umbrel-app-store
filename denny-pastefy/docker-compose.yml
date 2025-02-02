@@ -1,9 +1,9 @@
 version: "3.3"
 services:
   db:
-    image: mariadb:10.11
+    image: mariadb:11.6.2@sha256:a9547599cd87d7242435aea6fda22a9d83e2c06d16c658ef70d2868b3d3f6a80
     volumes:
-      - ./db:/var/lib/mysql
+      - ${APP_DATA_DIR}/data/db:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: tyooe
       MYSQL_DATABASE: pastefy
@@ -13,7 +13,7 @@ services:
   pastefy:
     depends_on:
       - db
-    image: interaapps/pastefy:latest
+    image: interaapps/pastefy:6.7.3@sha256:a711eebb7bab0df9e941b941f9e0684c18c098d1f5e3e7f420dd094124ac57ec
     ports:
       - 9999:80
     environment:
