@@ -5,7 +5,7 @@ tagline: An easy paste for seamless sharing
 icon: https://i.imgur.com/VaYHV5g.png
 category: In Progress
 version: "6.7.5"
-port: 9999
+port: 9900
 description: >-
   Pastefy is a user-friendly online platform that allows you to quickly and securely store and share text, code, or other notes. Perfect for developers, creatives, or anyone who needs to exchange ideas in real time, Pastefy offers a simple way to save and share content without the hassle of sending files back and forth.
 
