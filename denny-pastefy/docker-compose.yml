@@ -16,8 +16,8 @@ services:
       DATABASE_USER: pastefy
       DATABASE_PASSWORD: pastefy
       DATABASE_HOST: db
-      DATABASE_PORT: 3336
-      SERVER_NAME: "http://umbrel-2.local:9999"
+      DATABASE_PORT: 3306
+      SERVER_NAME: "http://umbrel-local:9999"
       OAUTH2_PROVIDER_CLIENT_ID: 
       OAUTH2_PROVIDER_CLIENT_SECRET: 
     restart: on-failure
@@ -26,7 +26,7 @@ services:
         condition: service_healthy
 
   db:
-    image: mariadb:11.6.2@sha256:a9547599cd87d7242435aea6fda22a9d83e2c06d16c658ef70d2868b3d3f6a80
+    image: linuxserver/mariadb:11.4.4@sha256:fdf30e6b302688c290cef10ca24b80e6e25e93955bc6b64636777f06676a6c52
     environment:
       MYSQL_ROOT_PASSWORD: pastefy
       MYSQL_DATABASE: pastefy
