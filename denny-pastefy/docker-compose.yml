@@ -8,7 +8,6 @@ services:
 
   db:
     image: mariadb:11.6.2@sha256:a9547599cd87d7242435aea6fda22a9d83e2c06d16c658ef70d2868b3d3f6a80
-    user: "1000:1000"
     volumes:
       - ${APP_DATA_DIR}/data/db:/var/lib/mysql:rw
     environment:
@@ -29,5 +28,7 @@ services:
       - DATABASE_HOST=db
       - DATABASE_PORT=3306
       - SERVER_NAME=http://umbrel-2.local:9999
+    ports:
+      - "9998:80"
     depends_on:
       - db
