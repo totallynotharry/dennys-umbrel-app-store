@@ -26,7 +26,7 @@ services:
         condition: service_healthy
 
   db:
-    image: linuxserver/mariadb:11.4.4@sha256:fdf30e6b302688c290cef10ca24b80e6e25e93955bc6b64636777f06676a6c52
+    image: mariadb:11.6.2@sha256:a9547599cd87d7242435aea6fda22a9d83e2c06d16c658ef70d2868b3d3f6a80
     environment:
       MYSQL_ROOT_PASSWORD: pastefy
       MYSQL_DATABASE: pastefy
