@@ -31,3 +31,6 @@ services:
       - SERVER_NAME: http://umbrel-2.local:9999
     depends_on:
       - db
+
+volumes:
+  dbvol:
