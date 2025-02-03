@@ -2,13 +2,16 @@ version: '3.7'
 
 services:
   headscale:
-    image: headscale/headscale:v0.24@sha256:2a2dcc9fef8f6e520a096743b668e3fd5df06ae422298c808c4e934a78764860
+    image: headscale/headscale:v0.24@sha256:18bdeee44a44102c167592a09aecd12e06c13f4be517f2491cb69e75540d0828
     container_name: headscale
     volumes:
       - ${APP_DATA_DIR}/config:/etc/headscale
       - ${APP_DATA_DIR}/data:/var/lib/headscale
     ports:
       - "27896:8080"
+    environment:
+      - HEADSCALE_LISTEN_ADDR=0.0.0.0:8080
+      - HEADSCALE_URL=http://umbrel-2.local:27896
     command: serve
     restart: on-failure
 
@@ -17,5 +20,7 @@ services:
     container_name: headscale-ui
     ports:
       - "8543:8443"  
-      - "8383:8080" 
+      - "8383:8080"
+    environment:
+      - HEADSCALE_URL=http://umbrel-2.local:27896
     restart: on-failure
