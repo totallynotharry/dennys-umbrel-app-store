@@ -21,10 +21,10 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/bitaxeorg/bitaxe-web-flasher
 support: https://github.com/bitaxeorg/bitaxe-web-flasher/issues
 gallery:
-  - https://i.imgur.com/aNroVOq.png
-  - https://i.imgur.com/aNroVOq.png
-  - https://i.imgur.com/aNroVOq.png
-  - https://i.imgur.com/aNroVOq.png
+  - https://i.imgur.com/dSCiDFr.png
+  - https://i.imgur.com/6CeIdPk.png
+  - https://i.imgur.com/up5MZLL.png
+  - https://i.imgur.com/AwBHqFx.png
 releaseNotes: >-
   This release features new Languages as well as a new feature that allows to keep the current configuration.
 dependencies:
