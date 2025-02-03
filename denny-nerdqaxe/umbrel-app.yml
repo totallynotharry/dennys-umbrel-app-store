@@ -4,7 +4,7 @@ name: Nerd*axe Webflasher
 tagline: An easy tool for flashing Nerd*axe devices
 icon: https://i.imgur.com/oT3nXS2.png
 category: bitcoin
-version: "0.0.1"
+version: "1.0.1"
 port: 3639
 description: >-
   The Nerd*axe Web Flasher is a tool designed for flashing firmware onto Nerdaxe devices. It's a fork of the Bitaxe Web Flasher.
@@ -26,7 +26,7 @@ gallery:
   - https://i.imgur.com/zRM4kmY.png
   - https://i.imgur.com/mdwoUIC.png
 releaseNotes: >-
-  There are no changelogs available for this tool as it is the first version.
+  This release features new Languages as well as a new feature that allows to keep the current configuration.
 dependencies:
 path: ""
 defaultUsername: ""
