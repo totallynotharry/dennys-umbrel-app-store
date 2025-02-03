@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   web:
-    image: ghcr.io/heyputer/puter:latest #ghcr.io/heyputer/puter:sha-ec31007@sha256:ec0fb133779bcdb37987c7776cb7b698876ded3020970d981719b666aed6c094
+    image: ghcr.io/heyputer/puter:sha-ec31007@sha256:ec0fb133779bcdb37987c7776cb7b698876ded3020970d981719b666aed6c094
     restart: on-failure
     environment:
       TZ: "Europe/Berlin"
@@ -19,7 +19,7 @@ services:
       - ${APP_DATA_DIR}/data:/data/.puter:rw
       - ${APP_DATA_DIR}/config:/config:rw
     healthcheck:
-      test: wget --no-verbose --tries=1 --spider http://umbrel-2.local:4100/test || exit 1
+      test: wget --no-verbose --tries=1 --spider http://umbrel.local:4100/test || exit 1
       interval: 30s
       timeout: 3s
       retries: 3
