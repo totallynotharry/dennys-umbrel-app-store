@@ -2,25 +2,31 @@ version: '3.7'
 
 services:
   headscale:
-    image: headscale/headscale:v0.24@sha256:18bdeee44a44102c167592a09aecd12e06c13f4be517f2491cb69e75540d0828
+    image: headscale/headscale:v0.24
     container_name: headscale
     volumes:
       - ${APP_DATA_DIR}/config:/etc/headscale
       - ${APP_DATA_DIR}/data:/var/lib/headscale
     ports:
-      - "27896:8080"
+      - "27896:8080"  # Externer Port 27896 für Headscale-API
     environment:
-      - HEADSCALE_LISTEN_ADDR=0.0.0.0:8080
-      - HEADSCALE_URL=http://umbrel-2.local:27896
+      - HEADSCALE_LISTEN_ADDR=0.0.0.0:8080  # Headscale lauscht auf Port 8080
     command: serve
     restart: on-failure
+    networks:
+      - headscale-net
 
   headscale-ui:
-    image: ghcr.io/gurucomputing/headscale-ui:2025.01.20@sha256:dda8534d5bde03b35b5bd11def3409938ec265d08c431c43294632573a2f3ae3
+    image: ghcr.io/gurucomputing/headscale-ui:2025.01.20
     container_name: headscale-ui
     ports:
-      - "8543:8443"  
-      - "8383:8080"
+      - "8383:8080"  # Externer Port 8383 für das UI
     environment:
-      - HEADSCALE_URL=http://umbrel-2.local:27896
+      - HEADSCALE_URL=http://headscale:8080  # Verwenden der internen Headscale-URL
     restart: on-failure
+    networks:
+      - headscale-net
+
+networks:
+  headscale-net:
+    driver: bridge
