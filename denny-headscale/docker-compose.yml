@@ -8,7 +8,9 @@ services:
       - ${APP_DATA_DIR}/config:/etc/headscale
       - ${APP_DATA_DIR}/data:/var/lib/headscale
     ports:
-      - "27896:8080"  # Headscale über umbrel-2.local:27896 erreichbar
+      - "27896:8080"
+    environment:
+      - HEADSCALE_LISTEN_ADDR=0.0.0.0:8080  
     command: serve
     restart: on-failure
     networks:
@@ -18,9 +20,9 @@ services:
     image: ghcr.io/gurucomputing/headscale-ui:2025.01.20@sha256:dda8534d5bde03b35b5bd11def3409938ec265d08c431c43294632573a2f3ae3
     container_name: headscale-ui
     ports:
-      - "8383:8080"  # Headscale-UI über umbrel-2.local:8383 erreichbar
+      - "8383:8080"  
     environment:
-      - HEADSCALE_URL=http://headscale:8080  # Kommunikation über internes Docker-Netzwerk
+      - HEADSCALE_URL=http://headscale:8080  
     restart: on-failure
     networks:
       - headscale-net
