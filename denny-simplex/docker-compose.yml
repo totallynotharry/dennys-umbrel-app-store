@@ -1,12 +1,14 @@
-version: '3.7'
+version: '3.8'
 
 services:
   simplex-smp-server:
     image: simplexchat/smp-server:latest
     container_name: simplex-smp-server
     environment:
+      - WEB_MANUAL=${WEB_MANUAL:-1}
       - ADDR=0.0.0.0
       - PASS=your_password  # Optional: Passwort setzen
+      - DISABLE_TLS=true    # TLS deaktivieren für lokalen Betrieb
     ports:
       - "5223:5223"
     volumes:
