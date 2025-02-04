@@ -21,9 +21,11 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/interaapps/pastefy
 support: https://github.com/interaapps/pastefy/issues
 gallery:
-  - https://i.imgur.com/FupCDsR.png
-  - https://i.imgur.com/FupCDsR.png
-  - https://i.imgur.com/FupCDsR.png
+  - https://i.imgur.com/rNPpwOC.png
+  - https://i.imgur.com/uneh5jR.png
+  - https://i.imgur.com/nOrv7fH.png
+  - https://i.imgur.com/13TEYpa.png
+  - https://i.imgur.com/HRFVY4G.png
 releaseNotes: >-
   This version merges the 'jws-upgrade' branch into the main branch.
 dependencies:
