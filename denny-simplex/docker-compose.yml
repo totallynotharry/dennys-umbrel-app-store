@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  simplex-smp-server:
+    image: simplexchat/smp-server:latest
+    container_name: simplex-smp-server
+    environment:
+      - ADDR=0.0.0.0
+      - PASS=your_password  # Optional: Passwort setzen
+    ports:
+      - "5223:5223"
+    volumes:
+      - ./config:/etc/opt/simplex:z
+      - ./logs:/var/opt/simplex:z
+    restart: unless-stopped
