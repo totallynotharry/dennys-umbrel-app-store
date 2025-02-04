@@ -1,24 +1,26 @@
-version: '3.7'
+version: "3.7"
 
 services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-codebox_app_1
+      APP_PORT: 8000
+      
    db:
-     image: linuxserver/mariadb:11.4.4@sha256:fdf30e6b302688c290cef10ca24b80e6e25e93955bc6b64636777f06676a6c52
-     volumes:
-       - ${APP_DATA_DIR}/data/dbvol:/var/lib/mysql
-
+     image: mariadb:10.11@sha256:79cf033abf9089f27dd4c3e831cbef83048a52d6f52783930b647c56224d95c3
      environment:
-       MYSQL_ROOT_PASSWORD: codebox
-       MYSQL_DATABASE: codebox
-       MYSQL_USER: codebox
-       MYSQL_PASSWORD: codebox
-
-   codebox:
-     depends_on:
-       - db
-     image: iinteraapps/pastefy-codebox:1.0.12-alpha@sha256:def5627a8320fe69b754f4e288202229cd57299997ac17d7bc4e4f0e607eb7ec
+       MYSQL_ROOT_PASSWORD: "codebox"
+       MYSQL_DATABASE: "codebox"
+       MYSQL_USER: "codebox"
+       MYSQL_PASSWORD: "codebox"
      ports:
-       - "9996:80"
-       
+       - 3436:3306
+     volumes:
+       - ${APP_DATA_DIR}/data/db:/var/lib/mysql:rw
+     restart: on-failure
+
+   app:
+     image: iinteraapps/pastefy-codebox:1.0.12-alpha@sha256:def5627a8320fe69b754f4e288202229cd57299997ac17d7bc4e4f0e607eb7ec
      environment:
        HTTP_SERVER_PORT: 9996
        HTTP_SERVER_CORS: "*"
@@ -27,16 +29,11 @@ services:
        DATABASE_USER: codebox
        DATABASE_PASSWORD: codebox
        DATABASE_HOST: db
-       DATABASE_PORT: 3346
+       DATABASE_PORT: 3306
        SERVER_NAME: "http://umbrel.local:9996"
-       IA_OAUTH2_CLIENT_ID:
-       IA_OAUTH2_CLIENT_SECRET:
+       # IA_OAUTH2_CLIENT_ID:
+       # IA_OAUTH2_CLIENT_SECRET:
+     restart: on-failure
+     depends_on:
+       - db
  
-       FTP_URL:
-       FTP_HOST:
-       FTP_USER:
-       FTP_PASSWORD:
-       FTP_BASE_DIR:
-
-volumes:
-  dbvol:
