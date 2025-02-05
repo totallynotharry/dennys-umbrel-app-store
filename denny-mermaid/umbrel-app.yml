@@ -3,7 +3,7 @@ id: denny-mermaid
 name: Mermaid Live Editor
 tagline: A live editor for instant Mermaid diagram visualization
 icon: https://i.imgur.com/JSZZQ90.png
-category: files & productivity
+category: developer tools
 version: "11.2.1"
 port: 9084
 description: >-
