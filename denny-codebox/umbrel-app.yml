@@ -3,7 +3,7 @@ id: denny-codebox
 name: Pastefy CodeBox
 tagline: An efficient tool for sharing and storing code
 icon: https://i.imgur.com/KHymTHc.png
-category: In Progress
+category: developer tools
 version: "1.0.12"
 port: 9996
 description: >-
@@ -27,9 +27,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/interaapps/pastefy-codebox
 support: https://github.com/interaapps/pastefy-codebox/issues
 gallery:
-  - https://i.imgur.com/wh3oiUe.png
-  - https://i.imgur.com/ViEU66U.png
-  - https://i.imgur.com/vSG87ZO.png
+  - https://i.imgur.com/rRQ2z9z.png
+  - https://i.imgur.com/E0AZAji.png
+  - https://i.imgur.com/7P6YiDJ.png
 releaseNotes: >-
   Version 1.0.12-alpha includes a fix for mobile bugs.
 dependencies:
