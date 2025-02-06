@@ -12,8 +12,7 @@ services:
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/cookies/cookies.json:/cookies.json
-    #ports:
-    #  - 9990:9000/tcp 
+      - 0.0.0.0:9000:9000
     environment:
       API_URL: "http://umbrel-2.local:9990/" 
       API_LISTEN_ADDRESS: "0.0.0.0"
