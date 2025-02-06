@@ -10,18 +10,10 @@ services:
     init: true
     read_only: true
     restart: on-failure
-    #container_name: cobalt-api
+    volumes:
+      - ${APP_DATA_DIR}/data/cookies/cookies.json:/cookies.json
     #ports:
     #  - 9990:9000/tcp 
     environment:
       API_URL: "http://umbrel.local:9990/" 
       API_LISTEN_ADDRESS: "0.0.0.0"
-      # Optional: Weitere Umgebungsvariablen wie COOKIE_PATH oder Bot-Schutz
-      # COOKIE_PATH: "/cookies.json"
-    # Das Label für Watchtower ist nicht mehr nötig
-    # labels:
-    #   - com.centurylinklabs.watchtower.scope=cobalt
-
-    # Optional: Füge Volumes hinzu, wenn du Cookies verwenden möchtest
-    # volumes:
-    #   - ./cookies.json:/cookies.json
