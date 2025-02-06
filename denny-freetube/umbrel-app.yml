@@ -3,7 +3,7 @@ id: denny-freetube
 name: FreeTube
 tagline: An Open Source YouTube app for privacy
 icon: https://i.imgur.com/MIleQjB.png
-category: In Progress
+category: media
 version: "v0.23.1-beta"
 port: 3422
 description: >-
