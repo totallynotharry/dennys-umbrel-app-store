@@ -21,9 +21,11 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/FreeTubeApp/FreeTube
 support: https://github.com/FreeTubeApp/FreeTube/issues
 gallery:
-  - https://i.imgur.com/ZbIg4k5.png
-  - https://i.imgur.com/ZbIg4k5.png
-  - https://i.imgur.com/ZbIg4k5.png
+  - https://i.imgur.com/3LwcZHj.png
+  - https://i.imgur.com/oPHOtHA.png
+  - https://i.imgur.com/fRmJbyW.png
+  - https://i.imgur.com/LcZglQp.png
+  - https://i.imgur.com/jC2tnvV.png
 releaseNotes: >-
   The latest version comes with general improvements and is the initial release.
 dependencies:
