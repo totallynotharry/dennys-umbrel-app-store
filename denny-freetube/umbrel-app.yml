@@ -14,6 +14,9 @@ description: >-
 
 
   The interface of FreeTube is designed to resemble the familiar YouTube experience while remaining lightweight and customizable. Users can organize their subscriptions, browse trending videos, and explore content just as they would on the official platform. For those who prioritize online privacy but still want access to YouTube's vast content library, FreeTube serves as an excellent alternative by offering a seamless, non-intrusive, and ad-free viewing experience.
+
+
+  🔑 By default, the username is "admin" and the password is "umbrel".
 developer: FreeTubeApp
 website: https://freetubeapp.io/
 submitter: dennysubke
@@ -30,5 +33,5 @@ releaseNotes: >-
   The latest version comes with general improvements and is the initial release.
 dependencies:
 path: ""
-defaultUsername: ""
-defaultPassword: ""
+defaultUsername: "admin"
+defaultPassword: "umbrel"
