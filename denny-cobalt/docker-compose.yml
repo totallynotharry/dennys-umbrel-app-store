@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-cobalt_web_1
+      APP_PORT: 9000
+  web:
+    image: ghcr.io/imputnet/cobalt:10.6@sha256:a2d11299d02bd8d2c5acc0a8e796f200037ea45e107607c4f477af09c34f3d2f
+    init: true
+    read_only: true
+    restart: on-failure
+    #container_name: cobalt-api
+    #ports:
+    #  - 9990:9000/tcp 
+    environment:
+      API_URL: "http://umbrel.local:9990/" 
+      API_LISTEN_ADDRESS: "0.0.0.0"
+      # Optional: Weitere Umgebungsvariablen wie COOKIE_PATH oder Bot-Schutz
+      # COOKIE_PATH: "/cookies.json"
+    # Das Label für Watchtower ist nicht mehr nötig
+    # labels:
+    #   - com.centurylinklabs.watchtower.scope=cobalt
+
+    # Optional: Füge Volumes hinzu, wenn du Cookies verwenden möchtest
+    # volumes:
+    #   - ./cookies.json:/cookies.json

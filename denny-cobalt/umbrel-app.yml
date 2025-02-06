@@ -1,0 +1,32 @@
+manifestVersion: 1
+id: denny-cobalt
+name: Cobalt
+tagline: A media downloader that doesn't piss you off
+icon: https://i.imgur.com/jzNsNYz.png
+category: In Progress
+version: "10.6"
+port: 9990
+description: >-
+  Cobalt is a powerful and intuitive media downloader built to simplify the process of saving your favorite content from the web. Designed for users who want to enjoy their media without the interruptions of ads, trackers, or paywalls, Cobalt offers a streamlined experience. Whether you're downloading videos, music, images, or other types of media, Cobalt acts as a proxy that fetches content directly from its source, ensuring a fast and seamless process.
+
+
+  What sets Cobalt apart is its commitment to user privacy and freedom. The tool doesn’t cache content, so you’re always downloading directly from the original source. It also avoids unnecessary distractions, like ads or third-party interference, letting you enjoy a cleaner, faster, and more reliable media retrieval process.
+
+
+  Cobalt is ideal for anyone who values simplicity and control over their media downloads. With its easy-to-use interface and efficient functionality, you can quickly retrieve and store content without the usual hassle. Whether you’re an enthusiast collecting media or someone simply trying to access content without restrictions, Cobalt makes it easy to download what you love, whenever you want.
+developer: imputnet
+website: https://cobalt.tools/
+submitter: dennysubke
+submission: https://github.com/getumbrel/umbrel-apps/pull/
+repo: https://github.com/imputnet/cobalt
+support: https://github.com/imputnet/cobalt/issues
+gallery:
+  - https://i.imgur.com/ysWp7VZ.png
+  - https://i.imgur.com/ysWp7VZ.png
+  - https://i.imgur.com/ysWp7VZ.png
+releaseNotes: >-
+  Cobalt 10.5 introduces performance improvements, better YouTube support with codec fallback and video quality selection, and expanded support for services like Loom, Facebook, and Instagram. The web app also gets a redesign, improved error messages, and better accessibility, alongside performance optimizations for stability.
+dependencies:
+path: ""
+defaultUsername: ""
+defaultPassword: ""
