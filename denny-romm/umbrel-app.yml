@@ -24,7 +24,10 @@ gallery:
   - https://i.imgur.com/cPbHfHC.png
   - https://i.imgur.com/cPbHfHC.png
 releaseNotes: >-
-  Version 3.7.3 of RomM introduces new features and bug fixes. Highlights include the display of game summaries with Markdown editor support, the use of spiciness ratings for difficulty, and the ability to remember search queries when returning to a page. Bug fixes address issues with the PSX Mednafen core, game playability checks, and improved support for older PostgreSQL versions. Additional improvements include performance optimizations and updates to dependencies.
+  Version 3.7.3 of RomM introduces new features and bug fixes. Highlights include the display of game summaries with Markdown editor support, the use of spiciness ratings for difficulty, and the ability to remember search queries when returning to a page. 
+  
+  
+  Bug fixes address issues with the PSX Mednafen core, game playability checks, and improved support for older PostgreSQL versions. Additional improvements include performance optimizations and updates to dependencies.
 dependencies:
 path: ""
 defaultUsername: ""
