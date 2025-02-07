@@ -11,8 +11,8 @@ services:
     read_only: true
     restart: on-failure
     ports:
-      - 0.0.0.0:9989:9000 # api
-      - 0.0.0.0:9990:9001 # web
+      # 0.0.0.0:9989:9000 # api
+      # 0.0.0.0:9990:9001 # web
     volumes:
       - ${APP_DATA_DIR}/data/cookies/cookies.json:/cookies.json
     environment:
