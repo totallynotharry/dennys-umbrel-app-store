@@ -5,7 +5,7 @@ tagline: A media downloader that doesn't piss you off
 icon: https://i.imgur.com/jzNsNYz.png
 category: In Progress
 version: "10.6"
-port: 9990
+port: 9001
 description: >-
   Cobalt is a powerful and intuitive media downloader built to simplify the process of saving your favorite content from the web. Designed for users who want to enjoy their media without the interruptions of ads, trackers, or paywalls, Cobalt offers a streamlined experience. Whether you're downloading videos, music, images, or other types of media, Cobalt acts as a proxy that fetches content directly from its source, ensuring a fast and seamless process.
 
