@@ -3,7 +3,7 @@ id: denny-romm
 name: RomM
 tagline: An elegant, powerful, and self-hosted ROM manager for seamless gaming
 icon: https://i.imgur.com/nVH14hi.png
-category: In Progress
+category: gaming
 version: "3.7.3"
 port: 9221
 description: >-
@@ -11,6 +11,9 @@ description: >-
 
 
   Built with privacy and security in mind, RomM allows you to maintain full control over your data while eliminating the need for third-party services. As an open-source and community-driven project, RomM is constantly evolving, with regular updates and new features driven by the feedback of passionate users. Future plans include features like device synchronization, enabling you to access and play your games across multiple devices effortlessly. Whether you're a casual gamer or a retro enthusiast, RomM provides the ultimate tool for managing your ROM collection while ensuring a streamlined, personalized, and secure experience.
+
+
+  ⚠️ To enable RomM to fetch game data, covers, and metadata from external sources, you need to manually add API keys to the 'docker-compose.yml file'. Generate the required keys from IGDB, MobyGames, and SteamGridDB, then insert them as environment variables under the RomM service. After saving the file, restart the app to apply the changes.
 developer: The RomM Project
 website: https://romm.app/
 submitter: dennysubke
@@ -18,11 +21,13 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/rommapp/romm
 support: https://github.com/rommapp/romm/issues
 gallery:
-  - https://i.imgur.com/cPbHfHC.png
-  - https://i.imgur.com/cPbHfHC.png
-  - https://i.imgur.com/cPbHfHC.png
-  - https://i.imgur.com/cPbHfHC.png
-  - https://i.imgur.com/cPbHfHC.png
+  - https://i.imgur.com/9zKoi5d.png
+  - https://i.imgur.com/pQfNtWL.png
+  - https://i.imgur.com/uXXkFWk.png
+  - https://i.imgur.com/knpABPc.png
+  - https://i.imgur.com/jl1HREJ.png
+  - https://i.imgur.com/S3SbBF3.png
+  - https://i.imgur.com/L9KRKRE.png
 releaseNotes: >-
   Version 3.7.3 of RomM introduces new features and bug fixes. Highlights include the display of game summaries with Markdown editor support, the use of spiciness ratings for difficulty, and the ability to remember search queries when returning to a page. 
   
