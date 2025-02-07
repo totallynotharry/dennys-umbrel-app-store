@@ -5,11 +5,11 @@ services:
     read_only: true
     restart: unless-stopped
     ports:
-      - 127.0.0.1:8000:9000 # API bleibt lokal erreichbar
-      - 9001:9001 # Web-UI öffentlich erreichbar auf umbrel-2.local:9001
+      - 0.0.0.0:9000:9000 
+      - 9001:9001
     environment:
       WEB_HOST: "http://umbrel-2.local:9001/"
       WEB_DEFAULT_API: "http://umbrel-2.local:9000/"
       API_URL: "http://umbrel-2.local:9000/"
       API_AUTH_REQUIRED: 0
-      DURATION_LIMIT: 86400 # 24 Stunden
+      DURATION_LIMIT: 86400
