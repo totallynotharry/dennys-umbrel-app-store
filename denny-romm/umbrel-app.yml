@@ -16,9 +16,7 @@ description: >-
   ⚠️ To enable RomM to fetch game data, covers, and metadata from external sources, you need to manually add API keys to the 'docker-compose.yml' file. Generate the required keys from IGDB, MobyGames, and SteamGridDB, then insert them as environment variables under the RomM service. After saving the file, restart the app to apply the changes.
 
 
-  🔧 For more configuration details, visit the official RomM GitHub repository: 
-  
-  https://github.com/rommapp/romm
+  🔧 For more configuration details, visit the official RomM GitHub repository: https://github.com/rommapp/romm
 developer: The RomM Project
 website: https://romm.app/
 submitter: dennysubke
