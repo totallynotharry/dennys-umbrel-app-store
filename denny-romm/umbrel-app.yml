@@ -13,7 +13,7 @@ description: >-
   Built with privacy and security in mind, RomM allows you to maintain full control over your data while eliminating the need for third-party services. As an open-source and community-driven project, RomM is constantly evolving, with regular updates and new features driven by the feedback of passionate users. Future plans include features like device synchronization, enabling you to access and play your games across multiple devices effortlessly. Whether you're a casual gamer or a retro enthusiast, RomM provides the ultimate tool for managing your ROM collection while ensuring a streamlined, personalized, and secure experience.
 
 
-  ⚠️ To enable RomM to fetch game data, covers, and metadata from external sources, you need to manually add API keys to the 'docker-compose.yml file'. Generate the required keys from IGDB, MobyGames, and SteamGridDB, then insert them as environment variables under the RomM service. After saving the file, restart the app to apply the changes.
+  ⚠️ To enable RomM to fetch game data, covers, and metadata from external sources, you need to manually add API keys to the 'docker-compose.yml' file. Generate the required keys from IGDB, MobyGames, and SteamGridDB, then insert them as environment variables under the RomM service. After saving the file, restart the app to apply the changes.
 developer: The RomM Project
 website: https://romm.app/
 submitter: dennysubke
