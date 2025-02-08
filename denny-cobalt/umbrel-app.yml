@@ -3,7 +3,7 @@ id: denny-cobalt
 name: Cobalt
 tagline: A media downloader that doesn't piss you off
 icon: https://i.imgur.com/jzNsNYz.png
-category: In Progress
+category: media
 version: "10.6"
 port: 9001
 description: >-
