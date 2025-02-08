@@ -31,7 +31,7 @@ services:
       DATABASE_USER: quotysco
       DATABASE_PASSWORD: quotysco
       DATABASE_HOST: db
-      DATABASE_PORT: 3346
+      DATABASE_PORT: 3306
       SERVER_NAME: "http://umbrel-2.local:9997"
       #IA_OAUTH2_CLIENT_ID: 
       #IA_OAUTH2_CLIENT_SECRET: 
