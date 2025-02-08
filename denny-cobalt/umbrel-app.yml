@@ -16,7 +16,7 @@ description: >-
   Cobalt is ideal for anyone who values simplicity and control over their media downloads. With its easy-to-use interface and efficient functionality, you can quickly retrieve and store content without the usual hassle. Whether you’re an enthusiast collecting media or someone simply trying to access content without restrictions, Cobalt makes it easy to download what you love, whenever you want.
 
 
-  ⚠️ To ensure proper functionality, go to /settings/instances and set the processing server to http://umbrel-2.local:9000.
+  ⚠️ To ensure proper functionality, go to /settings/instances and set the processing server to http://umbrel.local:9000.
 developer: imputnet
 website: https://cobalt.tools/
 submitter: dennysubke
