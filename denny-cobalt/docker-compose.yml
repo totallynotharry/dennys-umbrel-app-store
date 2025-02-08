@@ -13,7 +13,6 @@ services:
     restart: on-failure
     ports:
       - 0.0.0.0:9000:9000
-      # 0.0.0.0:9001:9001
     environment:
       WEB_HOST: "http://umbrel-2.local:9001/"
       WEB_DEFAULT_API: "http://umbrel-2.local:9000/"
