@@ -21,4 +21,4 @@ services:
       API_AUTH_REQUIRED: 0
       DURATION_LIMIT: 86400
     volumes:
-      - ${APP_DATA_DIR}/data/cookies.json:/cookies.json
+      - ${APP_DATA_DIR}/data/cookies/cookies.json:/cookies.json
