@@ -14,6 +14,9 @@ description: >-
 
 
   Cobalt is ideal for anyone who values simplicity and control over their media downloads. With its easy-to-use interface and efficient functionality, you can quickly retrieve and store content without the usual hassle. Whether you’re an enthusiast collecting media or someone simply trying to access content without restrictions, Cobalt makes it easy to download what you love, whenever you want.
+
+
+  ⚠️ To ensure proper functionality, go to /settings/instances and set the processing server to http://umbrel-2.local:9000.
 developer: imputnet
 website: https://cobalt.tools/
 submitter: dennysubke
@@ -21,11 +24,13 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/imputnet/cobalt
 support: https://github.com/imputnet/cobalt/issues
 gallery:
-  - https://i.imgur.com/ysWp7VZ.png
-  - https://i.imgur.com/ysWp7VZ.png
-  - https://i.imgur.com/ysWp7VZ.png
+  - https://i.imgur.com/k5fynzE.png
+  - https://i.imgur.com/EGfQ122.png
+  - https://i.imgur.com/d0EoEcj.png
+  - https://i.imgur.com/t6Zqege.png
+  - https://i.imgur.com/xIerJrO.png
 releaseNotes: >-
-  Cobalt 10.5 introduces performance improvements, better YouTube support with codec fallback and video quality selection, and expanded support for services like Loom, Facebook, and Instagram. The web app also gets a redesign, improved error messages, and better accessibility, alongside performance optimizations for stability.
+  Cobalt 10.6 introduces performance improvements, better YouTube support with codec fallback and video quality selection, and expanded support for services like Loom, Facebook, and Instagram. The web app also gets a redesign, improved error messages, and better accessibility, alongside performance optimizations for stability.
 dependencies:
 path: ""
 defaultUsername: ""
