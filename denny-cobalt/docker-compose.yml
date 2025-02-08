@@ -1,15 +1,16 @@
 services:
   cobalt:
     image: dennysubke/cobalt:10.6.1@sha256:d2973997e427f75aae5e567f94301c8797ae8d8e26b79f007aa7e5e7863a1ef2
+    args:
+      WEB_HOST: "http://umbrel-2.local:9001/"
+      WEB_DEFAULT_API: "http://umbrel-2.local:9000/"
     init: true
     read_only: true
     restart: unless-stopped
     ports:
       - 0.0.0.0:9000:9000 
-      - 9001:9001
+      - 0.0.0.0:9001:9001
     environment:
-      #WEB_HOST: "http://umbrel-2.local:9001/"
-      #WEB_DEFAULT_API: "http://umbrel-2.local:9000/"
       API_URL: "http://umbrel-2.local:9000/"
-      #API_AUTH_REQUIRED: 0
-      #DURATION_LIMIT: 86400
+      API_AUTH_REQUIRED: 0
+      DURATION_LIMIT: 86400
