@@ -5,6 +5,7 @@ services:
     environment:
       APP_HOST: denny-cobalt_web_1
       APP_PORT: 9001
+      PROXY_AUTH_ADD: "false"
   web:
     image: dennysubke/cobalt:10.6.1@sha256:d2973997e427f75aae5e567f94301c8797ae8d8e26b79f007aa7e5e7863a1ef2
     init: true
@@ -13,10 +14,10 @@ services:
     ports:
       - 0.0.0.0:9000:9000
     environment:
-      # WEB_HOST: "http://umbrel-2.local:9001/"
-      # WEB_DEFAULT_API: "http://umbrel-2.local:9000/"
-      - API_URL: "http://umbrel-2.local:9000/"
-      # API_AUTH_REQUIRED: 0
-      # DURATION_LIMIT: 86400
+      WEB_HOST: "http://umbrel-2.local:9001/"
+      WEB_DEFAULT_API: "http://umbrel-2.local:9000/"
+      API_URL: "http://umbrel-2.local:9000/"
+      API_AUTH_REQUIRED: 0
+      DURATION_LIMIT: 86400
     volumes:
       - ${APP_DATA_DIR}/data/cookies/cookies.json:/cookies.json
