@@ -41,7 +41,7 @@ services:
       PUNYSHORT_DEFAULT_REDIRECT_PROXY:
       PUNYSHORT_DEFAULT_CNAME:
 
-  frontend:
+  app:
     depends_on:
       - backend
     image: interaapps/punyshort-frontend:beta-1.0.8@sha256:35e941895820b891a53220c6b791d510d0801792755e523a041ea27b056f7b77
