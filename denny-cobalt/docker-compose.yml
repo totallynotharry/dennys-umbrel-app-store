@@ -14,7 +14,7 @@ services:
     ports:
       - 0.0.0.0:9000:9000
     environment:
-      API_URL: "http://umbrel-2.local:9000/"
+      API_URL: "http://umbrel.local:9000/"
       API_AUTH_REQUIRED: 0
       DURATION_LIMIT: 86400
     volumes:
