@@ -20,5 +20,5 @@ services:
       - DB_USER=hedgedoc
       - DB_PASS=hedgedoc
       - DB_NAME=hedgedoc
-      - CMD_DOMAIN=umbrel.local
-      - CMD_PORT=3000
+      - CMD_DOMAIN=umbrel-2.local
+      - CMD_PORT=3456
