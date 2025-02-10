@@ -12,6 +12,8 @@ services:
     user: "1000:1000"
     environment:
       MYSQL_ROOT_PASSWORD: umbrel
+    ports:
+      - 3367:3306
     volumes:
       - ${APP_DATA_DIR}/data/db:/var/lib/mysql:rw
 
@@ -28,3 +30,5 @@ services:
       database__connection__password: umbrel
       database__connection__database: ghost
       url: http://umbrel-2.local:3368
+    depends_on:
+      - db
