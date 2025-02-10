@@ -25,6 +25,6 @@ services:
       database__connection__user: root
       database__connection__password: ghost
       database__connection__database: ghost
-      url: http://umbrel.local:2368
+      url: http://umbrel-2.local
     depends_on:
       - db
