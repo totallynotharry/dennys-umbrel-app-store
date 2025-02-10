@@ -3,7 +3,7 @@ id: denny-ghost
 name: Ghost
 tagline: An platform for creators to publish, grow, and monetize their content
 icon: https://i.imgur.com/o9Gfb7X.png
-category: In Progress
+category: files & productivity
 version: "5.109.2"
 port: 3368
 description: >-
@@ -27,9 +27,13 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/TryGhost/Ghost
 support: https://github.com/TryGhost/Ghost/issues
 gallery:
-  - https://i.imgur.com/YrXRW04.png
-  - https://i.imgur.com/YrXRW04.png
-  - https://i.imgur.com/YrXRW04.png
+  - https://i.imgur.com/5fpLOyM.png
+  - https://i.imgur.com/SDBH0cT.png
+  - https://i.imgur.com/ecEtQWm.png
+  - https://i.imgur.com/0DOgr75.png
+  - https://i.imgur.com/VH2iqGq.png
+  - https://i.imgur.com/AqM9dhv.png
+  - https://i.imgur.com/Vebm7p3.png
 releaseNotes: >-
   This release contains fixes for minor bugs and issues reported by Ghost users.
 dependencies:
