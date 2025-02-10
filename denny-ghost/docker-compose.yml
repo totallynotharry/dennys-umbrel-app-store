@@ -30,5 +30,3 @@ services:
       database__connection__password: umbrel
       database__connection__database: ghost
       url: http://umbrel-2.local:3368
-    depends_on:
-      - db
