@@ -35,7 +35,7 @@ services:
       - CMD_DOMAIN=http://umbrel-2.local
       - CMD_URL_ADDPORT=false
       - CMD_PROTOCOL_USESSL=false
-      - CMD_PORT=3456
+      - CMD_PORT=3000
       - CMD_ALLOW_ORIGIN=*
     depends_on:
       - db
