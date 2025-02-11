@@ -7,7 +7,7 @@ category: In Progress
 version: "1.10.1"
 port: 3456
 description: >-
-  HedgeDoc is an open-source, collaborative markdown editor designed to facilitate real-time collaboration and efficient document creation. It allows multiple users to simultaneously edit a document, with all changes reflected in real time. The platform uses markdown, a lightweight markup language, for text formatting, which makes it easy to structure content without the complexity of traditional word processing software.
+  🦔 HedgeDoc is an open-source, collaborative markdown editor designed to facilitate real-time collaboration and efficient document creation. It allows multiple users to simultaneously edit a document, with all changes reflected in real time. The platform uses markdown, a lightweight markup language, for text formatting, which makes it easy to structure content without the complexity of traditional word processing software.
 
 
   HedgeDoc is particularly useful for teams, groups, or individuals working on shared projects, brainstorming sessions, documentation, meeting notes, or even writing code, as markdown is ideal for such tasks. The interface is clean, intuitive, and user-friendly, enabling users to focus on their content without distraction. It also includes a variety of features that enhance collaborative workflows, such as support for tables, mathematical formulas, embedded images, and task lists.
