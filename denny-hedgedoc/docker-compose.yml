@@ -39,5 +39,3 @@ services:
       - CMD_PROTOCOL_USESSL=false
       - CMD_PORT=3000
       - CMD_ALLOW_ORIGIN=["localhost"]
-    depends_on:
-      - db
