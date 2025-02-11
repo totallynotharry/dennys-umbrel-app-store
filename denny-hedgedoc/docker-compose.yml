@@ -16,6 +16,7 @@ services:
       - CMD_DB_URL=postgres://hedgedoc:password@database:5432/hedgedoc
       - CMD_DOMAIN=umbrel-2.local
       - CMD_URL_ADDPORT=true
+      - CMD_PORT=3456
     volumes:
       - uploads:/hedgedoc/public/uploads
     ports:
