@@ -7,9 +7,8 @@ services:
       APP_PORT: 3000
 
   db:
-    image: mariadb:10.11@sha256:79cf033abf9089f27dd4c3e831cbef83048a52d6f52783930b647c56224d95c3
+    image: mariadb:11.4-noble
     restart: on-failure
-    user: "1000:1000"
     environment:
       - MYSQL_ROOT_PASSWORD=umbrel
       - MYSQL_DATABASE=hedgedoc
