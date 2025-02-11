@@ -1,29 +1,41 @@
-version: '3'
+version: '3.7'
+
 services:
-  database:
-    image: postgres:13.4-alpine
+  app_proxy:
     environment:
-      - POSTGRES_USER=hedgedoc
-      - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=hedgedoc
+      APP_HOST: denny-hedgedoc_web_1
+      APP_PORT: 3000
+
+  db:
+    image: mariadb:10.11@sha256:79cf033abf9089f27dd4c3e831cbef83048a52d6f52783930b647c56224d95c3
+    restart: on-failure
+    environment:
+      - MYSQL_ROOT_PASSWORD=umbrel
+      - MYSQL_DATABASE=hedgedoc
+      - MYSQL_USER=hedgedocuser
+      - MYSQL_PASSWORD=hedgedocpass
     volumes:
-      - database:/var/lib/postgresql/data
-    restart: always
-  app:
-    # Make sure to use the latest release from https://hedgedoc.org/latest-release
-    image: quay.io/hedgedoc/hedgedoc:1.10.1
+      - ${APP_DATA_DIR}/data/db:/var/lib/mysql:rw
+
+  web:
+    image: linuxserver/hedgedoc:1.10.1@sha256:16d21ebfd4b7867cb0e712027c31df6316cc276ae3b11afb538f494e1487e082
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config
     environment:
-      - CMD_DB_URL=postgres://hedgedoc:password@database:5432/hedgedoc
-      - CMD_DOMAIN=umbrel-2.local
+      - TZ=Europe/Berlin
+      - NODE_ENV=production
+      - PUID=1000
+      - PGID=1000
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_USER=hedgedocuser
+      - DB_PASS=hedgedocpass
+      - DB_NAME=hedgedoc
+      - CMD_DOMAIN=umbrel-2.local:3456
       - CMD_URL_ADDPORT=true
-      - CMD_PORT=3456
-    volumes:
-      - uploads:/hedgedoc/public/uploads
-    ports:
-      - "3456:3000"
-    restart: always
+      - CMD_PROTOCOL_USESSL=false
+      - CMD_PORT=3000
+      - CMD_ALLOW_ORIGIN=['umbrel-2.local']
     depends_on:
-      - database
-volumes:
-  database:
-  uploads:
+      - db
