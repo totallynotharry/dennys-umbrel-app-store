@@ -24,9 +24,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/hedgedoc/hedgedoc
 support: https://github.com/hedgedoc/hedgedoc/issues
 gallery:
-  - https://i.imgur.com/vDnwKfs.png
-  - https://i.imgur.com/vDnwKfs.png
-  - https://i.imgur.com/vDnwKfs.png
+  - https://i.imgur.com/M3lwwQ7.png
+  - https://i.imgur.com/M3lwwQ7.png
+  - https://i.imgur.com/M3lwwQ7.png
 releaseNotes: >-
   HedgeDoc 1.10.1 addresses a security vulnerability related to brute-forcing local email/passwords due to missing rate-limits, recommending an upgrade for users with local logins. 
   
