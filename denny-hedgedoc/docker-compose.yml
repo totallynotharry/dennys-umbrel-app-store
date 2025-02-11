@@ -38,4 +38,4 @@ services:
       - CMD_URL_ADDPORT=true
       - CMD_PROTOCOL_USESSL=false
       - CMD_PORT=3000
-      - CMD_ALLOW_ORIGIN=["localhost"]
+      - CMD_ALLOW_ORIGIN=["umbrel-2.local"]
