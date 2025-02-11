@@ -3,7 +3,7 @@ version: '3.7'
 services:
   app_proxy:
     environment:
-      APP_HOST: web
+      APP_HOST: denny-hedgedoc_web_1
       APP_PORT: 3000
 
   db:
@@ -16,10 +16,6 @@ services:
       - MYSQL_PASSWORD=hedgedocpass
     volumes:
       - ${APP_DATA_DIR}/data/db:/var/lib/mysql:rw
-    healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "hedgedocuser", "-phedgedocpass"]
-      interval: 10s
-      retries: 5
 
   web:
     image: linuxserver/hedgedoc:1.10.1@sha256:16d21ebfd4b7867cb0e712027c31df6316cc276ae3b11afb538f494e1487e082
@@ -42,5 +38,4 @@ services:
       - CMD_PORT=3000
       - CMD_ALLOW_ORIGIN=umbrel-2.local
     depends_on:
-      db:
-        condition: service_healthy
+      - db
