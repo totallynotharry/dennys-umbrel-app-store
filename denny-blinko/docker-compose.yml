@@ -27,7 +27,7 @@ services:
       POSTGRES_DB: blinko
       POSTGRES_USER: blinkouser
       POSTGRES_PASSWORD: blinkopass
-    restart: on-failure:5
+    restart: on-failure
     networks:
       - blinko-network
 
@@ -41,8 +41,8 @@ services:
       start_period: 30s
     environment:
       NODE_ENV: production
-      NEXTAUTH_URL: http://umbrel-2.local:1111
-      NEXT_PUBLIC_BASE_URL: http://umbrel-2.local:1111
+      NEXTAUTH_URL: http://umbrel.local:1111
+      NEXT_PUBLIC_BASE_URL: http://umbrel.local:1111
       NEXTAUTH_SECRET: 3VZEVZ8vC8gjvRChDW8QRtQysSErPwqkR7vyMjIt3PiE3Xhf4Z5rTruf9YU6HxAf
       DATABASE_URL: postgresql://blinkouser:blinkopass@blinko-db:5432/blinko
     volumes:
@@ -54,7 +54,7 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    restart: on-failure:5
+    restart: on-failure
     networks:
       - blinko-network
 
