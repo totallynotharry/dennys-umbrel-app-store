@@ -32,7 +32,7 @@ services:
       - DB_USER=hedgedocuser
       - DB_PASS=hedgedocpass
       - DB_NAME=hedgedoc
-      - CMD_DOMAIN=umbrel-2.local:3456
+      - CMD_DOMAIN=192.168.178.85
       - CMD_URL_ADDPORT=true
       - CMD_PROTOCOL_USESSL=false
       - CMD_PORT=3000
