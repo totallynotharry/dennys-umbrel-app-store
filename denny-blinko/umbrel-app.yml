@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-blinko
 name: Blinko
 tagline: An AI-powered hub for your ideas and notes
-icon: https://i.imgur.com/PfFdi8N.png
+icon: https://i.imgur.com/gh1ZWpH.png
 category: files & productivity
 version: "0.38.5"
 port: 1111
