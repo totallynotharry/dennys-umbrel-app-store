@@ -1,16 +1,51 @@
 version: '3.7'
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: denny-bisq_app_1
-      APP_PORT: 3389
-
-  app:
-    image: fflo/bisq-on-docker:1.9.16@sha256:05f4ac773f8718515639f0f11e79dfa59124ac3e67f0b9964881337e74e8773d
-    restart: on-failure
+  bisq:
+    image: fflo/bisq-on-docker:1.3.7
+    container_name: bisq
+    ports:
+      - "3389:3389"  # RDP-Zugang
     volumes:
-      - ${APP_DATA_DIR}/data:/bisq
+      - bisq_data:/root/.local/share/Bisq
     environment:
-      - BISQ_USER=umbreluser
-      - BISQ_PASSWORD=umbrel
+      - TZ=Europe/Berlin
+    restart: unless-stopped
+
+  guacd:
+    image: guacamole/guacd
+    container_name: guacd
+    restart: unless-stopped
+    ports:
+      - "4822:4822"  # Guacd-Port
+
+  guacamole:
+    image: guacamole/guacamole
+    container_name: guacamole
+    depends_on:
+      - guacd
+    restart: unless-stopped
+    environment:
+      - GUACD_HOSTNAME=guacd
+      - MYSQL_HOSTNAME=mysql
+      - MYSQL_DATABASE=guacamole_db
+      - MYSQL_USER=guacamole_user
+      - MYSQL_PASSWORD=guacamole_pass
+    ports:
+      - "8080:8080"  # Webinterface-Zugang
+
+  mysql:
+    image: mysql:5.7
+    container_name: guac_db
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpass
+      - MYSQL_DATABASE=guacamole_db
+      - MYSQL_USER=guacamole_user
+      - MYSQL_PASSWORD=guacamole_pass
+    volumes:
+      - guac_db:/var/lib/mysql
+
+volumes:
+  bisq_data:
+  guac_db:
