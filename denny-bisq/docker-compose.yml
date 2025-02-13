@@ -1,13 +1,16 @@
-version: '3.7'
+version: '3.8'
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: denny-bisq_app_1
-      APP_PORT: 3389
-
-  app:
-    image: fflo/bisq-on-docker:latest
-    restart: on-failure
+  bisq:
+    image: fflo/bisq-on-docker:1.3.7
+    container_name: bisq
+    ports:
+      - "3389:3389" # Remote Desktop Protocol (RDP) Port
     volumes:
-      - ${APP_DATA_DIR}/data:/bisq
+      - bisq_data:/root/.local/share/Bisq
+    environment:
+      - TZ=Europe/Berlin # Setzen Sie die Zeitzone entsprechend Ihrer Region
+    restart: unless-stopped
+
+volumes:
+  bisq_data:
