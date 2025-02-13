@@ -17,7 +17,7 @@ services:
     container_name: guacd
     restart: unless-stopped
     ports:
-      - "4822:4822"  # Guacd-Port
+      - "4862:4822"  # Guacd-Port
 
   guacamole:
     image: guacamole/guacamole
@@ -32,7 +32,7 @@ services:
       - MYSQL_USER=guacamole_user
       - MYSQL_PASSWORD=guacamole_pass
     ports:
-      - "8080:8080"  # Webinterface-Zugang
+      - "8373:8080"  # Webinterface-Zugang
 
   mysql:
     image: mysql:5.7
