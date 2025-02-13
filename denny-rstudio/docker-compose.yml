@@ -16,3 +16,4 @@ services:
       USERID: "1000"
       GROUPID: "1000"
       UMASK: "022"
+    entrypoint: ["/bin/bash", "-c", "chown -R rstudio:rstudio /home/rstudio && exec /init"]
