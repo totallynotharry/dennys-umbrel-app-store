@@ -5,12 +5,14 @@ services:
     environment:
       APP_HOST: denny-rstudio_web_1
       APP_PORT: 8787
+    depends_on:
+      - web  # Proxy wartet, bis Web-Container gestartet ist
 
   web:
     image: ghcr.io/rocker-org/rstudio:4.2.0@sha256:7b18f2d979c0dcffe27fe6bb9cd4330faffeace737984cfce4f0705ebe24a9ed
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data:/home/rstudio:rw
-    entrypoint: /bin/bash -c "chown -R rstudio:rstudio /home/rstudio && /usr/lib/rstudio-server/bin/rserver"  # Berechtigungen setzen und RStudio starten
+    entrypoint: /bin/bash -c "chown -R rstudio:rstudio /home/rstudio && sleep 10 && /usr/lib/rstudio-server/bin/rserver"  # Verzögerung von 10 Sekunden, um den Web-Container zu starten
     environment:
       PASSWORD: "umbrel"
