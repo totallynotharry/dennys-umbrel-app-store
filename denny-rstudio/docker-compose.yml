@@ -7,7 +7,7 @@ services:
       APP_PORT: 8787
 
   web:
-    image: ghcr.io/rocker-org/rstudio:4.3.0@sha256:9b45914ee71c1f938d52011b00d6ed883a2ad9265543fb65372cf2647daebf98
+    image: ghcr.io/rocker-org/rstudio:4.2.0@sha256:7b18f2d979c0dcffe27fe6bb9cd4330faffeace737984cfce4f0705ebe24a9ed
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data:/home/rstudio
