@@ -5,8 +5,6 @@ services:
     environment:
       APP_HOST: denny-rstudio_web_1
       APP_PORT: 8787
-    depends_on:
-      - web
 
   web:
     image: ghcr.io/rocker-org/rstudio:4.2.0@sha256:7b18f2d979c0dcffe27fe6bb9cd4330faffeace737984cfce4f0705ebe24a9ed
