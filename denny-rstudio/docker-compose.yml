@@ -20,6 +20,8 @@ services:
     image: certbot/certbot
     container_name: certbot
     restart: on-failure
+    networks:
+      - net
     volumes:
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
@@ -47,12 +49,11 @@ services:
       - net
     environment:
       - PASSWORD=rstudio1
-    expose:
-      - 8787
+    ports:
+      - "8787:8787"  # Port öffentlich machen
 
 networks:
-  tki-net:
-    name: net
+  net:
 
 volumes:
   r_libs:
