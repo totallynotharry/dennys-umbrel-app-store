@@ -12,5 +12,5 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data:/home/rstudio:rw
     environment:
-      PASSWORD: "umbrel"
+      PASSWORD: "foobar"
       ROOT: "true"
