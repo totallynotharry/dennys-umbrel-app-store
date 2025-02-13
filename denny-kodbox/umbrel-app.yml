@@ -1,32 +1,28 @@
 manifestVersion: 1
 id: denny-kodbox
 name: KodBox
-tagline: A simple decentralized feed reader powered by Nostr
-icon: https://i.imgur.com/OJOiqVw.png
-category: Test
-version: "0.1.0"
-port: 8394
+tagline: A seamless web-based file manager for effortless cloud storage
+icon: https://i.imgur.com/rTsmgiN.png
+category: In Progress
+version: "4.52"
+port: 8383
 description: >-
-  📡 Noflux is a decentralized feed reader built on the Nostr protocol. It allows users to subscribe to and follow feeds, similar to traditional RSS readers, but with the added benefits of decentralization and censorship resistance. Noflux leverages the Nostr protocol to distribute and receive content, ensuring that the platform remains independent of centralized servers.
+  KodCloud is an advanced, web-based file management platform that brings efficiency and ease to cloud storage and file organization. It offers users a highly intuitive and user-friendly interface, making it simple to manage, store, and share files across devices. Whether you're handling documents, images, or other types of content, KodCloud provides a seamless experience for accessing and organizing your files.
 
 
-  By using Nostr, Noflux provides a way for users to consume and share news, posts, and articles while maintaining full control over their data. This decentralized approach ensures that content cannot be easily censored or manipulated, giving users a more secure and private way to interact with feeds across the web.
-
-
-  In essence, Noflux is a modern feed reader that combines the functionality of traditional RSS with the power of decentralization, offering a censorship-resistant, user-controlled experience for consuming and sharing content.
-
-developer: fiatjaf
-website: https://noflux.nostr.technology/
+  The platform is designed with collaboration in mind, enabling users to easily share files and folders with others while maintaining control over permissions and access. Additionally, KodCloud can be integrated with other cloud services, enhancing its flexibility and usability for both personal and professional use. With its powerful tools and customizable features, KodCloud is an excellent choice for anyone looking for a robust and efficient way to manage their cloud-based files.
+developer: Kodcloud Network Co., Ltd.
+website: https://kodcloud.com/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/fiatjaf/noflux
-support: https://github.com/fiatjaf/noflux/issues
+repo: https://github.com/kalcaddle/kodbox
+support: https://github.com/kalcaddle/kodbox/issues
 gallery:
-  - https://i.imgur.com/fJGtVBy.png
-  - https://i.imgur.com/fJGtVBy.png
-  - https://i.imgur.com/fJGtVBy.png
+  - https://i.imgur.com/SiyKARP.png
+  - https://i.imgur.com/SiyKARP.png
+  - https://i.imgur.com/SiyKARP.png
 releaseNotes: >-
-  This is the initial release (v0.1.0) of Noflux. There are no prior release notes as this marks the first version of the project.
+  Version 4.52 introduces a fix for a security issue, enhancing the overall safety and stability of the platform.
 dependencies:
 path: ""
 defaultUsername: ""
