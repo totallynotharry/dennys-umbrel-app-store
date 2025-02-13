@@ -1,10 +1,10 @@
 manifestVersion: 1
 id: denny-kodbox
-name: KodBox
+name: kodbox
 tagline: A seamless web-based file manager for effortless cloud storage
 icon: https://i.imgur.com/rTsmgiN.png
 category: In Progress
-version: "4.52"
+version: "1.56"
 port: 8383
 description: >-
   KodCloud is an advanced, web-based file management platform that brings efficiency and ease to cloud storage and file organization. It offers users a highly intuitive and user-friendly interface, making it simple to manage, store, and share files across devices. Whether you're handling documents, images, or other types of content, KodCloud provides a seamless experience for accessing and organizing your files.
@@ -22,7 +22,7 @@ gallery:
   - https://i.imgur.com/SiyKARP.png
   - https://i.imgur.com/SiyKARP.png
 releaseNotes: >-
-  Version 4.52 introduces a fix for a security issue, enhancing the overall safety and stability of the platform.
+  Version 1.56 introduces a fix for a security issue, enhancing the overall safety and stability of the platform.
 dependencies:
 path: ""
 defaultUsername: ""
