@@ -17,6 +17,9 @@ description: >-
 
 
   Overall, RStudio is a powerful, user-friendly IDE that facilitates efficient data analysis, project management, and reproducible research. It's available for Windows, macOS, and Linux, and also offers a server version for remote access. As an open-source tool, RStudio benefits from active community support, making it a popular choice among data scientists, statisticians, and researchers.
+
+
+  🔑 By default, the username is "rstudio" and the password is "umbrel".
 developer: Posit PBC
 website: https://posit.co/
 submitter: dennysubke
@@ -36,5 +39,5 @@ releaseNotes: >-
   The release also includes minor version updates and general maintenance improvements.
 dependencies:
 path: ""
-defaultUsername: ""
-defaultPassword: ""
+defaultUsername: "rstudio"
+defaultPassword: "umbrel"
