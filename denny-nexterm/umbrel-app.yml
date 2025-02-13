@@ -2,10 +2,10 @@ manifestVersion: 1
 id: denny-nexterm
 name: Nexterm
 tagline: A simple decentralized feed reader powered by Nostr
-icon: https://i.imgur.com/OJOiqVw.png
+icon: https://i.imgur.com/t2OvDqy.png
 category: In Progress
 version: "0.1.0"
-port: 8064
+port: 6989
 description: >-
   📡 Noflux is a decentralized feed reader built on the Nostr protocol. It allows users to subscribe to and follow feeds, similar to traditional RSS readers, but with the added benefits of decentralization and censorship resistance. Noflux leverages the Nostr protocol to distribute and receive content, ensuring that the platform remains independent of centralized servers.
 
@@ -22,9 +22,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/fiatjaf/noflux
 support: https://github.com/fiatjaf/noflux/issues
 gallery:
-  - https://i.imgur.com/fJGtVBy.png
-  - https://i.imgur.com/fJGtVBy.png
-  - https://i.imgur.com/fJGtVBy.png
+  - https://i.imgur.com/3UevT6N.png
+  - https://i.imgur.com/3UevT6N.png
+  - https://i.imgur.com/3UevT6N.png
 releaseNotes: >-
   This is the initial release (v0.1.0) of Noflux. There are no prior release notes as this marks the first version of the project.
 dependencies:
