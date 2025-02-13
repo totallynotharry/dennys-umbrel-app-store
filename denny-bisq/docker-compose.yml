@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   bisq:
-    image: fflo/bisq-on-docker:1.3.7
+    image: fflo/bisq-on-docker:1.9.16@sha256:05f4ac773f8718515639f0f11e79dfa59124ac3e67f0b9964881337e74e8773d
     container_name: bisq
     ports:
       - "3389:3389"  # RDP-Zugang
