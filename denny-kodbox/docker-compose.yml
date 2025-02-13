@@ -37,4 +37,7 @@ services:
 
   redis:
     image: redis:alpine
-    restart: always
+    restart: on-failure
+    sysctls:
+      - net.core.somaxconn=1024
+      - vm.overcommit_memory=1
