@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-bisq_app_1
+      APP_PORT: 3389
+
+  app:
+    image: fflo/bisq-on-docker:1.9.16@sha256:05f4ac773f8718515639f0f11e79dfa59124ac3e67f0b9964881337e74e8773d
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data:/bisq
+    environment:
+      - BISQ_USER=umbreluser
+      - BISQ_PASSWORD=umbrel
