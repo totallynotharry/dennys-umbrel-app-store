@@ -7,10 +7,10 @@ services:
       APP_PORT: 8787
 
   web:
-    image: ghcr.io/rocker-org/rstudio:4.4.2@sha256:050e232046d8a8681d84444498a48afadfa7900fa783be5ec3ed9f4eb9f3ceb0
+    image: ghcr.io/rocker-org/rstudio:4.2.0@sha256:7b18f2d979c0dcffe27fe6bb9cd4330faffeace737984cfce4f0705ebe24a9ed
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data:/home/rstudio:rw
-    command: /bin/bash -c "chown -R rstudio:rstudio /home/rstudio && /init.sh && /usr/lib/rstudio-server/bin/rserver"
+    entrypoint: /bin/bash -c "chown -R rstudio:rstudio /home/rstudio && /usr/lib/rstudio-server/bin/rserver"  # Berechtigungen setzen und RStudio starten
     environment:
       PASSWORD: "umbrel"
