@@ -11,6 +11,5 @@ services:
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data:/home/rstudio
-    command: /bin/bash -c "sudo chown -R rstudio:rstudio /home/rstudio && /init.sh && /usr/lib/rstudio-server/bin/rserver"
     environment:
       PASSWORD: "umbrel"
