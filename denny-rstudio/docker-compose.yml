@@ -13,5 +13,3 @@ services:
       - ${APP_DATA_DIR}/data:/home/rstudio:rw
     environment:
       PASSWORD: "umbrel"
-      PUID: 1000
-      PGID: 1000
