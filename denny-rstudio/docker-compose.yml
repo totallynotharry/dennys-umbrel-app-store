@@ -1,16 +1,34 @@
-version: '3.7'
+version: "3.6"
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: denny-rstudio_web_1
-      APP_PORT: 8787
-
-  web:
-    image: ghcr.io/rocker-org/rstudio:4.4.2@sha256:050e232046d8a8681d84444498a48afadfa7900fa783be5ec3ed9f4eb9f3ceb0
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
     restart: on-failure
-    environment:
-      - PASSWORD: umbrel
+    networks:
+      - net
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
+    ports:
+      - 80:80
+      - 443:443
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    restart: on-failure
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+
+  rstudio:
+    image: rocker/rstudio:4.0.3
+    container_name: rstudio
+    restart: on-failure
     volumes:
       - type: volume
         source: rstudio
@@ -25,3 +43,17 @@ services:
         target: /usr/local/lib/R
         volume:
           no-copy: true
+    networks:
+      - net
+    environment:
+      - PASSWORD=rstudio1
+    expose:
+      - 8787
+
+networks:
+  tki-net:
+    name: net
+
+volumes:
+  r_libs:
+  rstudio:
