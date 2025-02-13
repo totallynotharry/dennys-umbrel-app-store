@@ -11,13 +11,3 @@ services:
     restart: on-failure
     environment:
       - PASSWORD: umbrel
-    volumes:
-      - type: "bind"
-        source: "."
-        target: "/home/rstudio"
-      - type: "bind"
-        source: "~/.config/rstudio"
-        target: "/home/rstudio/.config/rstudio"
-      - type: "bind"
-        source: "~/.Renviron"
-        target: "/home/rstudio/.Renviron"
