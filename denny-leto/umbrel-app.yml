@@ -7,7 +7,7 @@ category: files & productivity
 version: "3"
 port: 5001
 description: >-
-  LetoReader is an open-source speed-reading tool designed to improve reading efficiency through the Rapid Serial Visual Presentation (RSVP) technique. This method displays words or word groups sequentially in a fixed position, eliminating unnecessary eye movement and allowing users to read faster while maintaining comprehension. Unlike traditional reading, where the eyes constantly move across the page, RSVP helps the brain process text more smoothly and efficiently.
+  📖⚡LetoReader is an open-source speed-reading tool designed to improve reading efficiency through the Rapid Serial Visual Presentation (RSVP) technique. This method displays words or word groups sequentially in a fixed position, eliminating unnecessary eye movement and allowing users to read faster while maintaining comprehension. Unlike traditional reading, where the eyes constantly move across the page, RSVP helps the brain process text more smoothly and efficiently.
 
 
   LetoReader is highly customizable, enabling users to adjust the reading speed, chunk size, and text highlighting to match their individual preferences. It supports various text formats, including direct URL imports, PDFs, Markdown, plain text, HTML, and EPUB files, making it a versatile tool for different reading needs.
