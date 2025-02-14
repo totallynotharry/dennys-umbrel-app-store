@@ -7,7 +7,7 @@ category: In Progress
 version: "2.0.0"
 port: 1337
 description: >-
-  Quotysco is a powerful open-source blogging platform designed for writers, creators, and thought leaders to share their ideas, insights, and work with a broad audience.
+  📝Quotysco is a powerful open-source blogging platform designed for writers, creators, and thought leaders to share their ideas, insights, and work with a broad audience.
 
 
   With a modern, user-friendly, and intuitive interface, Quotysco makes it especially easy to create, publish, and manage high-quality blog posts. The platform offers numerous features that provide an optimal experience for both beginners and experienced bloggers.
@@ -24,9 +24,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/interaapps/quotysco
 support: https://github.com/interaapps/quotysco/issues
 gallery:
-  - https://i.imgur.com/lLXIrKH.png
-  - https://i.imgur.com/lLXIrKH.png
-  - https://i.imgur.com/lLXIrKH.png
+  - https://i.imgur.com/vKroTh1.png
+  - https://i.imgur.com/OEOmJPl.png
+  - https://i.imgur.com/G0uOSE8.png
 releaseNotes: >-
   Version 2.0.0 introduces several improvements, including the addition of docker-hub.yml.
 dependencies:
