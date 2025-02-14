@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-leto
 name: LetoReader
 tagline: An open-source speed reader for faster, focused reading
-icon: https://i.imgur.com/3KUECWC.png
+icon: https://i.imgur.com/WGLtjMD.png
 category: files & productivity
 version: "3"
 port: 5001
