@@ -3,7 +3,7 @@ id: denny-quotysco
 name: Quotysco
 tagline: A creative hub for bloggers, writers, and visionaries
 icon: https://i.imgur.com/znbDKFP.png
-category: In Progress
+category: social
 version: "2.0.0"
 port: 1337
 description: >-
