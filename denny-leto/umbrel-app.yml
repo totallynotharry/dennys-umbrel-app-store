@@ -24,9 +24,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/Axym-Labs/LetoReader
 support: https://github.com/Axym-Labs/LetoReader/issues
 gallery:
-  - https://i.imgur.com/L7CJYoM.png
-  - https://i.imgur.com/L7CJYoM.png
-  - https://i.imgur.com/L7CJYoM.png
+  - https://i.imgur.com/hW1wQ9q.png
+  - https://i.imgur.com/i3V1K9g.png
+  - https://i.imgur.com/y4VM2TV.png
 releaseNotes: >-
   Version 3 of LetoReader optimizes state management, significantly reducing RAM usage by keeping only one text in memory at a time. 
   
