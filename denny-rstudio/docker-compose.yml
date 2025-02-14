@@ -17,10 +17,9 @@ services:
       USERID: "1000"
       GROUPID: "1000"
       UMASK: "022"
-    entrypoint: >
+    command: >
       /bin/bash -c "
       if [ -f /umbrel/secrets/umbrel-password ]; then
         export PASSWORD=$(cat /umbrel/secrets/umbrel-password);
       fi;
-      chown -R rstudio:rstudio /home/rstudio;
       exec /init"
