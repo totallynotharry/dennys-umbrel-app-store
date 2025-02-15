@@ -29,7 +29,6 @@ services:
       DATABASE_USER: punyshort
       DATABASE_PASSWORD: punyshort
       DATABASE_HOST: db
-      DATABASE_PORT: 3306
       SERVER_NAME: "https://{SERVER}:9998"
       OAUTH2_PROVIDER_CLIENT_ID: {CLIENT_ID}
       OAUTH2_PROVIDER_CLIENT_SECRET:
