@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-localai_web_1
+      APP_PORT: 8080
+      PROXY_AUTH_ADD: "false"
+
+  web:
+    image: localai/localai:v2.26.0-ffmpeg-core
+    environment:
+      - MODELS_PATH=/models
+      # DEBUG=true
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/models:/models:cached   
+      - ${APP_DATA_DIR}/data/images/:/tmp/generated/images/
+      # command:
+      # Here we can specify a list of models to run (see quickstart https://localai.io/basics/getting_started/#running-models )
+      # or an URL pointing to a YAML configuration file, for example:
+      # - https://gist.githubusercontent.com/mudler/ad601a0488b497b69ec549150d9edd18/raw/a8a8869ef1bb7e3830bf5c0bae29a0cce991ff8d/phi-2.yaml
+      # phi-2
