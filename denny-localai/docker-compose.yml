@@ -5,13 +5,12 @@ services:
     environment:
       APP_HOST: denny-localai_web_1
       APP_PORT: 8080
-      PROXY_AUTH_ADD: "false"
 
   web:
-    image: localai/localai:v2.26.0-ffmpeg-core
+    image: localai/localai:latest-aio-cpu
     environment:
-      - MODELS_PATH=/models
-      # DEBUG=true
+      # MODELS_PATH=/models
+      - DEBUG=true
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/models:/models:cached   
