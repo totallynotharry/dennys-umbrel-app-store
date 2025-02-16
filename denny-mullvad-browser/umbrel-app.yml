@@ -24,9 +24,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/linuxserver/docker-mullvad-browser
 support: https://github.com/linuxserver/docker-mullvad-browser/issues
 gallery:
-  - https://i.imgur.com/ZW7pzVo.png
-  - https://i.imgur.com/ZW7pzVo.png
-  - https://i.imgur.com/ZW7pzVo.png
+  - https://imgur.com/BS2UAax.png
+  - https://imgur.com/gk0v270.png
+  - https://imgur.com/dtpw26f.png
 releaseNotes: >-
   The release 14.0.5 of Mullvad Browser includes a rebase to noble.
 dependencies:
