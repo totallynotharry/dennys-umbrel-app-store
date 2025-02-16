@@ -14,6 +14,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Berlin
+      - NO_DECOR=true
     volumes:
       - ${APP_DATA_DIR}/data/config:/config:rw
     ports:
