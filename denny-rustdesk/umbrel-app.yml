@@ -23,8 +23,6 @@ gallery:
 path: ""
 defaultPassword: ""
 releaseNotes: >
-  The changelog highlights the addition of four advanced options, including one-way clipboard redirection and logon screen password allowance. The desktop file manager's UI has been optimized, and libappindicator has been replaced with libayatana-appindicator.
-
-  Key fixes include improvements to tab replacement, mouse functionality on macOS, LAN discovery on Android and iOS, and various memory leaks. Overall, these updates enhance usability, stability, and performance.
+  The update introduces a new QoS feature and fixes a macOS issue by creating a separate executable for --service. Additionally, it resolves several bugs, including an unclickable update button on Android, image blurring when changing quality, and a zoom lock issue on Android.
 submitter: dennysubke
 submission:
