@@ -3,7 +3,7 @@ id: denny-mullvad-browser
 name: Mullvad Browser
 tagline: A privacy-focused browser designed to minimize tracking and fingerprinting
 icon: https://i.imgur.com/OUKKvQM.png
-category: In Progress
+category: networking
 version: "14.0.5"
 port: 5880
 description: >-
