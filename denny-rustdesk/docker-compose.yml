@@ -16,7 +16,8 @@ services:
       - TZ=Europe/Berlin
     volumes:
       - ${APP_DATA_DIR}/data/config:/config:rw
-      - ${APP_DATA_DIR}/data/tmp/.X11-unix:/tmp/.X11-unix
     ports:
       - 3045:3001
     restart: on-failure
+    entrypoint: >
+      sh -c "chmod 1777 /tmp/.X11-unix && exec /init"
