@@ -33,9 +33,11 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/gdy666/lucky
 support: https://lucky666.cn/docs/problemset
 gallery:
-  - https://i.imgur.com/cQRyO6s.png
-  - https://i.imgur.com/cQRyO6s.png
-  - https://i.imgur.com/cQRyO6s.png
+  - https://i.imgur.com/9YUdogr.png
+  - https://i.imgur.com/sywFlrc.png
+  - https://i.imgur.com/hxjkzCh.png
+  - https://i.imgur.com/JsY8mrW.png
+  - https://i.imgur.com/XhWYGtI.png
 releaseNotes: >-
   The v2.15.7 update improves port forwarding by preventing circular redirects, enhances DDNS functionality with fixes for Cloudflare and domain checks, and updates the default STUN server list. 
   
