@@ -3,7 +3,7 @@ id: denny-lucky
 name: Lucky
 tagline: An intuitive network management solution with powerful features
 icon: https://i.imgur.com/5aa7Swx.png
-category: In Progress
+category: networking
 version: "2.15.7"
 port: 16601
 description: >-
