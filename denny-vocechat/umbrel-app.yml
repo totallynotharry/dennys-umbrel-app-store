@@ -7,7 +7,7 @@ category: social
 version: "0.4.0"
 port: 3197
 description: >-
-  VoceChat is an open-source, self-hosted chat platform designed to offer a lightweight and efficient solution for real-time messaging. It aims to provide an easy-to-use alternative for individuals, small teams, and communities who want a private and secure communication space. Unlike mainstream messaging services, VoceChat allows users to host their own server, ensuring full control over their data and communications.
+  💬VoceChat is an open-source, self-hosted chat platform designed to offer a lightweight and efficient solution for real-time messaging. It aims to provide an easy-to-use alternative for individuals, small teams, and communities who want a private and secure communication space. Unlike mainstream messaging services, VoceChat allows users to host their own server, ensuring full control over their data and communications.
 
 
   The platform supports essential messaging features such as direct messaging, group chats, and channels, all built with security and privacy in mind. VoceChat focuses on delivering a seamless user experience without compromising on performance, making it ideal for those who prefer decentralized services over centralized platforms.
@@ -24,9 +24,11 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/Privoce/vocechat-server-rust
 support: https://github.com/Privoce/vocechat-server-rust/issues
 gallery:
-  - https://i.imgur.com/aLYryN8.png
-  - https://i.imgur.com/aLYryN8.png
-  - https://i.imgur.com/aLYryN8.png
+  - https://i.imgur.com/MSKieHj.png
+  - https://i.imgur.com/iYhTWyj.png
+  - https://i.imgur.com/uqo427J.png
+  - https://i.imgur.com/6BiQk5B.png
+  - https://i.imgur.com/doHuXLG.png
 releaseNotes: >-
   Enhanced performance for faster message delivery, reducing latency during peak usage.
 dependencies:
