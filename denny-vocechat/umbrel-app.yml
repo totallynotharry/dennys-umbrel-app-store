@@ -1,38 +1,31 @@
 manifestVersion: 1
 id: denny-vocechat
 name: VoceChat
-tagline: A lightweight CalDAV+CardDAV server
-icon: https://i.imgur.com/h3B1DaG.png
-category: test
+tagline: A secure chat solution for privacy-focused communication
+icon: https://i.imgur.com/PpSXQ5j.png
+category: social
 version: "0.4.0"
 port: 3197
 description: >-
-  🪆 Baikal Server is a lightweight CalDAV and CardDAV server designed for users who want to manage their calendar and contact information securely on their own server. This robust application offers an extensive web interface that simplifies the management of users, address books, and calendars, making it accessible for both beginners and experienced users.
+  VoceChat is an open-source, self-hosted chat platform designed to offer a lightweight and efficient solution for real-time messaging. It aims to provide an easy-to-use alternative for individuals, small teams, and communities who want a private and secure communication space. Unlike mainstream messaging services, VoceChat allows users to host their own server, ensuring full control over their data and communications.
 
 
-  One of the key features of Baikal is its ease of installation and configuration. It requires only a basic PHP-capable server, which means you don’t need extensive technical knowledge to get started. The server supports both MySQL and SQLite databases for data storage, providing flexibility depending on your preferences and needs.
+  The platform supports essential messaging features such as direct messaging, group chats, and channels, all built with security and privacy in mind. VoceChat focuses on delivering a seamless user experience without compromising on performance, making it ideal for those who prefer decentralized services over centralized platforms.
 
 
-  Baikal allows users to seamlessly access their contacts and calendars from any device. It is compatible with a wide range of applications, including iOS, macOS, DAVx5 on Android, Mozilla Thunderbird, and many other CalDAV and CardDAV capable applications. This compatibility ensures that you can sync your data across multiple platforms without any hassle.
-
-
-  In addition to its user-friendly features, Baikal emphasizes privacy and data security. By hosting your calendars and contacts yourself, you maintain full control over your personal information, protecting it from potential breaches and unauthorized access. This is particularly important in an era where data privacy is a growing concern.
-
-
-  Whether you are an individual looking for a reliable personal organizer or a small team needing a collaborative solution, Baikal Server provides a practical and efficient way to manage your scheduling and contact needs while ensuring your data remains private and secure. With its fast performance and straightforward interface, Baikal is an excellent choice for anyone seeking a self-hosted calendar and contact management solution.
-
-developer: fruux GmbH
-website: https://sabre.io/baikal/
+  With VoceChat, users can easily manage their own chat infrastructure, without relying on third-party servers or services. The official documentation provides comprehensive instructions on how to install, configure, and use the platform, making it accessible to both beginners and advanced users. Whether you're looking to build a private chat room for your team, or a secure space for a larger community, VoceChat is a flexible and customizable option.
+developer: The Privoce Project
+website: https://voce.chat/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/sabre-io/Baikal
-support: https://github.com/sabre-io/Baikal/issues
+repo: https://github.com/Privoce/vocechat-server-rust
+support: https://github.com/Privoce/vocechat-server-rust/issues
 gallery:
-  - https://i.imgur.com/InOvJFa.png
-  - https://i.imgur.com/hIQ1ZIv.png
-  - https://i.imgur.com/nobRqdE.png
+  - https://i.imgur.com/aLYryN8.png
+  - https://i.imgur.com/aLYryN8.png
+  - https://i.imgur.com/aLYryN8.png
 releaseNotes: >-
-  The latest update includes dependency upgrades that enhance compatibility with PHP 8.2 and features the inclusion of sabre/dav version 4.6.0.
+  Enhanced performance for faster message delivery, reducing latency during peak usage.
 dependencies:
 path: ""
 defaultUsername: ""
