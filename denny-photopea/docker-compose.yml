@@ -7,7 +7,7 @@ services:
       APP_PORT: 8887
 
   web:
-    image: shtse8/photopea:1.0@sha256:3043ea517157579cd984ee1ee5548e39ad3dcfeea38aeb4490ca36d1670d88f5
+    image: kovaszab/photopea:latest@sha256:1dc52013b772f468d21b003790a9763933b5f3308eef4907b0e39280118b90e7
     restart: on-failure
     environment:
       PUID: 1000
