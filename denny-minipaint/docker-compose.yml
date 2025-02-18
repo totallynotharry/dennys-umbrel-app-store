@@ -10,4 +10,4 @@ services:
     image: madeliney/minipaint:latest
     restart: on-failure
     environment:
-      - ALLOWED_HOSTS=*
+      - HOST=0.0.0.0
