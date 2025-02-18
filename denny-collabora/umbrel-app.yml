@@ -4,7 +4,7 @@ name: Collabora Office
 tagline: An integrated solution to handling documents in Nextcloud
 icon: https://i.imgur.com/Zlj21xw.png
 category: In Progress
-version: "24.04.9.2.1"
+version: "24.04.12.3.1"
 port: 9980
 description: >-
   📑 Collabora Office for Nextcloud is a comprehensive online office suite designed to bring the full power of document editing, collaboration, and management directly into your Nextcloud environment. Built on LibreOffice technology, it supports a wide range of file formats, including Microsoft Office (DOCX, XLSX, PPTX) and OpenDocument (ODT, ODS, ODP), ensuring compatibility and ease of use. With its real-time collaboration features, multiple users can work on the same documents, spreadsheets, or presentations simultaneously, making it an ideal solution for teams and organizations.
