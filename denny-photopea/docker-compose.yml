@@ -4,18 +4,12 @@ services:
   app_proxy:
     environment:
       APP_HOST: denny-photopea_web_1
-      APP_PORT: 8887
+      APP_PORT: 8080
 
   web:
-    image: kovaszab/photopea:latest@sha256:1dc52013b772f468d21b003790a9763933b5f3308eef4907b0e39280118b90e7
+    image: dennysubke/photopea:latest@sha256:56a1b0d64c6bd659e8254ae5dce6229bb28a7c055a0cb0d55efd01e1d30fb497
     restart: on-failure
     environment:
       PUID: 1000
       PGID: 1000
       TZ: Europe/Berlin
-    healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 8887 || exit 1"]
-      interval: 10s
-      timeout: 5s
-      retries: 3
-      start_period: 90s
