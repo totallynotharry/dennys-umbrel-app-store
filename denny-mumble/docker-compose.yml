@@ -11,5 +11,6 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/mumble:/data
     restart: on-failure
+    user: "1000:1000"
     #       expose:
     #           - 6502
