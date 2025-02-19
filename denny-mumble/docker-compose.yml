@@ -11,6 +11,8 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/mumble:/data:rw
     restart: on-failure
+    ports:
+        - 64738:64738/udp
     user: "1000:1000"
     environment:
       - MUMBLE_CHOWN_DATA=false
