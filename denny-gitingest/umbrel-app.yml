@@ -1,31 +1,31 @@
 manifestVersion: 1
 id: denny-gitingest
-name: gitingest
-tagline: A minimalistic AI-powered search engine
-icon: https://i.imgur.com/wfT4QX3.png
-category: test
-version: "0.1.0"
+name: Gitingest
+tagline: An effortless way to make Git repositories LLM-friendly
+icon: https://i.imgur.com/klXVPov.png
+category: developer tools
+version: "0.1.3"
 port: 8095
 description: >-
-  📱 Altus is a powerful Electron-based WhatsApp client that enhances the desktop WhatsApp experience by adding a variety of extra features. Using the GitHub-developed Electron framework, Altus integrates WhatsApp Web while adding functionality that goes beyond what the standard WhatsApp Web offers. One of the standout features of Altus is its support for multiple WhatsApp accounts, allowing users to manage and switch between different accounts simultaneously.
+  Gitingest is an open-source tool that converts Git repositories into structured, LLM-friendly text summaries, making it easier to analyze and process code with AI models like ChatGPT and Claude. By simply replacing "github.com" with "gitingest.com" in any repository URL, users can instantly generate an AI-optimized digest of the codebase. Additionally, a one-click button provides seamless integration with GitHub, ensuring a smooth workflow for developers.
 
 
-  The app also provides native notification support, so users are instantly notified when new messages arrive. Clicking on a notification opens the corresponding chat directly. A useful online indicator shows in the bottom-left corner of each chat whether the contact is currently online, making communication easier. For a more comfortable experience in low light or during the evening, Altus offers a Dark Mode that reduces eye strain and adapts the app's design to the lighting conditions.
+  The tool offers smart formatting to present repository content in a structured way that enhances prompt effectiveness for LLMs. Users can either rely on the default GitIngest service or configure their own setup for added flexibility. With a strong emphasis on privacy, Gitingest collects no data and works entirely offline, making it a secure choice for developers and organizations alike.
 
 
-  Additionally, Altus allows users to fully customize their WhatsApp interface. They can create custom themes either by writing their own CSS or using the built-in theme customizer, which allows for easy color selection to personalize the app's appearance. This flexibility in interface customization ensures a more tailored and comfortable user experience. Altus thus provides not only a practical but also a highly customizable solution for WhatsApp on the desktop.
-developer: Aman Harwara
-website: https://github.com/amanharwara/altus
+  Gitingest is particularly useful for AI developers crafting precise prompts, teams working with AI-assisted development, and anyone who needs quick insights into a codebase. As part of the GitIngest ecosystem, it also provides CLI tools and Python packages for more advanced usage. Whether you're looking to streamline your AI-powered development workflow or improve your understanding of complex repositories, Gitingest offers a simple yet powerful solution.
+developer: Romain Courtois
+website: https://gitingest.com/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/amanharwara/altus
-support: https://github.com/amanharwara/altus/issues
+repo: https://github.com/cyclotruc/gitingest
+support: https://github.com/cyclotruc/gitingest/issues
 gallery:
-  - https://i.imgur.com/rn7Zivn.png
-  - https://i.imgur.com/bDy2X8i.png
-  - https://i.imgur.com/ERsYpg3.png
+  - https://i.imgur.com/XDnMRVm.png
+  - https://i.imgur.com/jpoRiVD.png
+  - https://i.imgur.com/NlddoBz.png
 releaseNotes: >-
-  The per-tab microphone and camera permission option is enabled by default, allowing users to manage permissions on a tab-by-tab basis for enhanced privacy and security. In addition, various other improvements have been implemented, such as performance optimizations, bug fixes, and a more streamlined user interface for better overall experience.
+  Gitingest now supports Windows and has changed from gitingest import ingest to synchronous execution, while async usage is still available via from gitingest import ingest_async. Additionally, it improves frontend include/exclude behavior, enhances URL parsing, supports more Git providers, and has switched from Apianalytics to PostHog after reaching 1.5M requests, along with various quality-of-life improvements and bug fixes.
 dependencies:
 path: ""
 defaultUsername: ""
