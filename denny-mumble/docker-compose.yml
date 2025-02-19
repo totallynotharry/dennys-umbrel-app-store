@@ -12,5 +12,10 @@ services:
       - ${APP_DATA_DIR}/data/mumble:/data:rw
     restart: on-failure
     user: "1000:1000"
+    environment:
+      - MUMBLE_CHOWN_DATA=false
+      - MUMBLE_ACCEPT_UNKNOWN_SETTINGS=true
+
+    
     #       expose:
     #           - 6502
