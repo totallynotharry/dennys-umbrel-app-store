@@ -12,10 +12,11 @@ services:
         - ${APP_DATA_DIR}/data/mumble:/data:rw
     restart: on-failure
     ports:
-        - 64738:64738/udp
+        - 64738:64738/udp  # UDP für Mumble-Standardport
     expose:
-        - 6502
+        - 6502  # TCP für Interprozesskommunikation
     user: "1000:1000"
     environment:
         - MUMBLE_CHOWN_DATA=true
         - MUMBLE_ACCEPT_UNKNOWN_SETTINGS=true
+        - MUMBLE_SERVER_CONFIG=/data/mumble_server_config.ini  # Stelle sicher, dass der Pfad zur Konfiguration korrekt ist
