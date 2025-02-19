@@ -13,11 +13,9 @@ services:
     restart: on-failure
     ports:
         - 64738:64738/udp
+    expose:
+        - 6502
     user: "1000:1000"
     environment:
-      - MUMBLE_CHOWN_DATA=false
+      - MUMBLE_CHOWN_DATA=true
       - MUMBLE_ACCEPT_UNKNOWN_SETTINGS=true
-
-    
-    #       expose:
-    #           - 6502
