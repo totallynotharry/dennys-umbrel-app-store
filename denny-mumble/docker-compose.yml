@@ -9,7 +9,7 @@ services:
   server:
     image: mumblevoip/mumble-server:v1.5.634@sha256:11169b76bc418b414a3cb170694a4245ed51025fa0cba765886b28a8dff0dd97
     volumes:
-      - ${APP_DATA_DIR}/data/mumble:/data:rw
+        - ${APP_DATA_DIR}/data/mumble:/data:rw
     restart: on-failure
     ports:
         - 64738:64738/udp
@@ -17,5 +17,5 @@ services:
         - 6502
     user: "1000:1000"
     environment:
-      - MUMBLE_CHOWN_DATA=true
-      - MUMBLE_ACCEPT_UNKNOWN_SETTINGS=true
+        - MUMBLE_CHOWN_DATA=true
+        - MUMBLE_ACCEPT_UNKNOWN_SETTINGS=true
