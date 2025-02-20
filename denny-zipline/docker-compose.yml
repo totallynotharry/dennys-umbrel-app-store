@@ -7,7 +7,7 @@ services:
       APP_PORT: 3000
       PROXY_AUTH_ADD: "false"
     networks:
-      - zipline-network
+      - zipline_network
 
   db:
     image: postgres:17.2@sha256:3267c505060a0052e5aa6e5175a7b41ab6b04da2f8c4540fc6e98a37210aa2d3
@@ -28,7 +28,7 @@ services:
       - db
     environment:
       CORE_SECRET: 3b449077187f1150082fb348796e97be22b57fefdbd4a7b18f575b51f65519b7
-      DATABASE_URL: "postgres://zipline:SuperGeheimesPasswort123!@postgresql:5432/zipline"
+      DATABASE_URL: "postgres://zipline:SuperGeheimesPasswort123!@db:5432/zipline"
       PORT: 3472
       HOST: "0.0.0.0"
       ALLOWED_DOMAINS: "*"
