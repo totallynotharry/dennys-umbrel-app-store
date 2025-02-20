@@ -8,5 +8,5 @@ services:
 
   web:
     image: threema/threema-web:v2.6.1@sha256:ef1b55f9ef227e504d679a0d23c2f2ddf0e556c847b0a4b55ab526c61a617b34
-    user: "1000:1000"
+    # user: "1000:1000"
     restart: on-failure
