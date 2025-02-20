@@ -23,13 +23,13 @@ services:
     environment:
       CORE_SECRET: 3b449077187f1150082fb348796e97be22b57fefdbd4a7b18f575b51f65519b7
       DATABASE_URL: "postgres://zipline:SuperGeheimesPasswort123!@postgresql:5432/zipline"
-      PORT: 3000
+      PORT: 3472
       HOST: "0.0.0.0"
       ALLOWED_DOMAINS: "*"
       USER_DEFAULT_EMAIL: "admin@example.com"
       USER_DEFAULT_PASSWORD: "NochEinSicheresPasswort!"
     ports:
-      - "3000:3000"
+      - "3472:3000"
     networks:
       - zipline_network
 
