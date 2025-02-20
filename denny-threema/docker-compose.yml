@@ -7,6 +7,6 @@ services:
       APP_PORT: 80
 
   web:
-    image: dennysubke/threema-web:v2.6.1@sha256:0287fd06d833a2e061631df065c5473c405439eca918354fc2f93eede5836599
+    image: threema/threema-web:v2.6.1@sha256:ef1b55f9ef227e504d679a0d23c2f2ddf0e556c847b0a4b55ab526c61a617b34
     user: "1000:1000"
     restart: on-failure
