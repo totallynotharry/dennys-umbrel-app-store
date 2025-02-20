@@ -1,38 +1,40 @@
-version: '3.7'
+version: "3.8"
 
 services:
   postgresql:
     image: postgres:16
+    container_name: denny-zipline_postgresql
     restart: unless-stopped
     environment:
       POSTGRES_USER: zipline
       POSTGRES_PASSWORD: SuperGeheimesPasswort123!
       POSTGRES_DB: zipline
     volumes:
-      - pgdata:/var/lib/postgresql/data
-    healthcheck:
-      test: ['CMD', 'pg_isready', '-U', 'zipline']
-      interval: 10s
-      timeout: 5s
-      retries: 5
+      - zipline_pg_data:/var/lib/postgresql/data
+    networks:
+      - zipline_network
 
   zipline:
-    image: ghcr.io/diced/zipline:v4
+    image: ghcr.io/diced/zipline:latest
+    container_name: denny-zipline_zipline
     restart: unless-stopped
-    ports:
-      - '3472:3000'
-    environment:
-      - DATABASE_URL=postgres://zipline:SuperGeheimesPasswort123!@postgresql:5432/zipline
     depends_on:
-      postgresql:
-        condition: service_healthy
-    volumes:
-      - uploads:/zipline/uploads
-      - public:/zipline/public
-      - themes:/zipline/themes
+      - postgresql
+    environment:
+      CORE_SECRET: 3b449077187f1150082fb348796e97be22b57fefdbd4a7b18f575b51f65519b7
+      DATABASE_URL: "postgres://zipline:SuperGeheimesPasswort123!@postgresql:5432/zipline"
+      PORT: 3000
+      HOST: "0.0.0.0"
+      ALLOWED_DOMAINS: "*"
+      USER_DEFAULT_EMAIL: "admin@example.com"
+      USER_DEFAULT_PASSWORD: "NochEinSicheresPasswort!"
+    ports:
+      - "3000:3000"
+    networks:
+      - zipline_network
 
 volumes:
-  pgdata:
-  uploads:
-  public:
-  themes:
+  zipline_pg_data:
+
+networks:
+  zipline_network:
