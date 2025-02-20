@@ -6,41 +6,27 @@ services:
       APP_HOST: denny-zipline_web_1
       APP_PORT: 3000
       PROXY_AUTH_ADD: "false"
-    networks:
-      - zipline_network
 
   db:
     image: postgres:17.2@sha256:3267c505060a0052e5aa6e5175a7b41ab6b04da2f8c4540fc6e98a37210aa2d3
-    restart: unless-stopped
+    restart: on-failure
     environment:
       POSTGRES_USER: zipline
       POSTGRES_PASSWORD: SuperGeheimesPasswort123!
       POSTGRES_DB: zipline
     volumes:
       - zipline_pg_data:/var/lib/postgresql/data
-    networks:
-      - zipline_network
 
   web:
     image: ghcr.io/diced/zipline:4.0.0@sha256:73351d7b653b2362895004398609adcfc60b2b7c9ad50b7cb488c8f4c36d4b3a
-    restart: unless-stopped
+    restart: on-failure
     depends_on:
       - db
     environment:
-      CORE_SECRET: 3b449077187f1150082fb348796e97be22b57fefdbd4a7b18f575b51f65519b7
+      CORE_SECRET: 3b449077187f1150082fb348796e97be22b57fefdbd4a7b18f575b51f65519b8
       DATABASE_URL: "postgres://zipline:SuperGeheimesPasswort123!@db:5432/zipline"
       PORT: 3472
       HOST: "0.0.0.0"
       ALLOWED_DOMAINS: "*"
       USER_DEFAULT_EMAIL: "admin@example.com"
       USER_DEFAULT_PASSWORD: "NochEinSicheresPasswort!"
-    #ports:
-      # "3472:3000"
-    networks:
-      - zipline_network
-
-volumes:
-  zipline_pg_data:
-
-networks:
-  zipline_network:
