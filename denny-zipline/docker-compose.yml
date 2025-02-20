@@ -11,7 +11,6 @@ services:
 
   db:
     image: postgres:17.2@sha256:3267c505060a0052e5aa6e5175a7b41ab6b04da2f8c4540fc6e98a37210aa2d3
-    container_name: denny-zipline_postgresql
     restart: unless-stopped
     environment:
       POSTGRES_USER: zipline
@@ -24,7 +23,6 @@ services:
 
   web:
     image: ghcr.io/diced/zipline:4.0.0@sha256:73351d7b653b2362895004398609adcfc60b2b7c9ad50b7cb488c8f4c36d4b3a
-    container_name: denny-zipline_zipline
     restart: unless-stopped
     depends_on:
       - db
