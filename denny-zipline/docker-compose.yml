@@ -3,7 +3,7 @@ version: '3.7'
 services:
   app_proxy:
     environment:
-      APP_HOST: denny-blinko_app_1
+      APP_HOST: denny-zipline_web_1
       APP_PORT: 3000
       PROXY_AUTH_ADD: "false"
     networks:
@@ -22,7 +22,7 @@ services:
     networks:
       - zipline_network
 
-  zipline:
+  web:
     image: ghcr.io/diced/zipline:4.0.0@sha256:73351d7b653b2362895004398609adcfc60b2b7c9ad50b7cb488c8f4c36d4b3a
     container_name: denny-zipline_zipline
     restart: unless-stopped
