@@ -20,7 +20,7 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | 3   | [Anse](https://github.com/anse-app/anse)             | A fully optimized UI for AI Chats                                        | 3339   |
 | 4   | [Answer](https://github.com/apache/incubator-answer) | A Q&A platform software for teams at any scale                           | 9082   |
 | 5   | [Atheos](https://github.com/Atheos/Atheos)           | A web-based IDE framework with a small footprint and minimal requirements | 8728   |
-| 6   | [Baikal](https://github.com/sabre-io/Baikal)         | A lightweight CalDAV+CardDAV server                                      | 85     |
+| 6   | [Baikal](https://github.com/sabre-io/Baikal)         | A lightweight CalDAV+CardDAV server                                      | 8547   |
 | 7   | [Bitaxe Webflasher](https://github.com/bitaxeorg/bitaxe-web-flasher) | An easy tool for flashing Bitaxe devices                 | 3640   |
 | 8   | [Black Candy](https://github.com/blackcandy-org/blackcandy) | A self-hosted music streaming server                              | 1980   |
 | 9   | [Blinko](https://github.com/blinko-space/blinko) | An AI-powered hub for your ideas and notes                                   | 1111   |
