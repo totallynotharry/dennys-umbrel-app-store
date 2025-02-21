@@ -21,9 +21,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://gitlab.gnome.org/GNOME/gimp
 support: https://gitlab.gnome.org/GNOME/gimp/-/issues
 gallery:
-  - https://i.imgur.com/H72CEOo.png
-  - https://i.imgur.com/H72CEOo.png
-  - https://i.imgur.com/H72CEOo.png
+  - https://i.imgur.com/HEWWBUp.png
+  - https://i.imgur.com/TJvIfUb.png
+  - https://i.imgur.com/dpqymyD.png
 releaseNotes: >-
   GIMP 2.10.38 introduces support for Windows Ink, resolving issues with drawing tablets such as unresponsive buttons, incorrect pressure sensitivity, and lagging brush movement. Additionally, several bugs have been fixed, including crashes on exit, issues with very small selections, and improvements in transparent PNG exports and filter controls.
 dependencies:
