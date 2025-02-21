@@ -12,6 +12,6 @@ services:
       - CONSOLE_LOG_LEVEL=info
       - VISUALIZE_STATE=true
     volumes:
-      - ${APP_DATA_DIR}/data/config/userconfig.overrides.js:/usr/share/nginx/html/userconfig.overrides.js:rw
+      - ${APP_DATA_DIR}/data/config/userconfig.overrides.js:/usr/share/nginx/html/userconfig.overrides.js:ro
     #user: "1000:1000"
     restart: on-failure
