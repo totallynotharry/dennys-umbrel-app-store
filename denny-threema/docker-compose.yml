@@ -8,7 +8,7 @@ services:
 
   init:
     image: busybox
-    command: chown 1000:1000 /src/userconfig.overrides.js
+    command: chown 1000:1000 /usr/share/nginx/html /usr/local/bin/entrypoint.sh
     user: "0:0" 
     depends_on:
       - web
