@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-gimp
 name: Gimp
 tagline: An open-source powerhouse for image editing
-icon: https://i.imgur.com/Z87zrNR.png
+icon: https://i.imgur.com/2LNNifO.png
 category: files & productivity
 version: "2.10.38"
 port: 3388
