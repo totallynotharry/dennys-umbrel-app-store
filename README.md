@@ -45,7 +45,7 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | 28  | [Ghost](https://github.com/TryGhost/Ghost)          | A platform for creators to publish, grow, and monetize their content       | 3368   |
 | 29  | [Github Desktop](https://github.com/desktop/desktop) | An efficient way to manage your code                                      | 3303   |
 | 30  | [Gitingest](https://github.com/cyclotruc/gitingest)  | An effortless way to make Git repositories LLM-friendly                   | 8895   |
-| 31  | [Gladys Assistant](https://github.com/GladysAssistant/Gladys) | An intelligent, privacy-first solution for seamless smart home automation | 92     |
+| 31  | [Gladys Assistant](https://github.com/GladysAssistant/Gladys) | An intelligent, privacy-first solution for seamless smart home automation | 9212   |
 | 32  | [Grafana](https://github.com/grafana/grafana)        | An advanced platform for logging, metrics, and application monitoring     | 3384   |
 | 33  | [Grav](https://github.com/getgrav/grav)              | A Fast, Simple, and Flexible, file-based Web-platform                     | 8888   |
 | 34  | [Grist](https://github.com/gristlabs/grist-core)     | A modern, open-source spreadsheet that goes beyond the grid               | 8484   |
