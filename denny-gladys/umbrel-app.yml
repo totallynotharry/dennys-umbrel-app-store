@@ -5,7 +5,7 @@ tagline: An intelligent, privacy-first solution for seamless smart home automati
 icon: https://i.imgur.com/FvjOcWX.png
 category: Home & Automation
 version: "4.48.0"
-port: 92
+port: 9212
 description: >-
   🏠 Gladys Assistant is a feature-rich, open-source home automation platform designed to make managing and controlling smart home devices simple, secure, and highly customizable. Whether you're new to home automation or an advanced user, Gladys offers a comprehensive solution that centralizes the control of various IoT devices, allowing you to create a fully automated and personalized smart home experience.
 
