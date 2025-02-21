@@ -6,17 +6,7 @@ services:
       APP_HOST: denny-threema_web_1
       APP_PORT: 80
 
-  init:
-    image: busybox
-    command: chown 1000:1000 /usr/share/nginx/html /usr/local/bin/entrypoint.sh
-    user: "0:0" 
-    depends_on:
-      - web
-    restart: "no"
-
   web:
     image: dennysubke/threema-web:v2.6.1@sha256:d83e5dcc1a2cbc49b5f84c422073d7d57a36fed89d60b47f9f11dad841d68dad
-    user: "1000:1000"
+    #user: "1000:1000"
     restart: on-failure
-    depends_on:
-      - init
