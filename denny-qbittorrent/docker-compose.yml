@@ -7,7 +7,7 @@ services:
       APP_PORT: 8880
 
   app:
-    image: ghcr.io/hotio/qbittorrent
+    image: ghcr.io/hotio/qbittorrent:release-5.0.4@sha256:d97080a8a978d7705297dc44bcd6c599b3b47631fec8dcfc0cb7039279d05b02
     environment:
       - PUID=1000
       - PGID=1000
