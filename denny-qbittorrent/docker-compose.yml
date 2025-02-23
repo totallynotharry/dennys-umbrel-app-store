@@ -13,8 +13,8 @@ services:
       - PGID=1000
       - UMASK=002
       - TZ=Europe/Athens
-      - WEBUI_PORTS=8080/tcp,8080/udp
-      - VPN_ENABLED=true #
+      - WEBUI_PORTS=8880/tcp,8880/udp
+      - VPN_ENABLED=false #
       - VPN_CONF=wg0 # READ THIS
       - VPN_PROVIDER=generic #
       - VPN_LAN_NETWORK=192.168.1.0/24 #
