@@ -4,7 +4,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: denny-qbittorrent_app_1
-      APP_PORT: 8080
+      APP_PORT: 8880
 
   app:
     image: ghcr.io/hotio/qbittorrent
