@@ -55,6 +55,8 @@ services:
       - ${APP_DATA_DIR}/data/config:/config
       - ${APP_DATA_DIR}/data/public:/live/public/system
     restart: on-failure
+    ports:
+      - 443:443
     depends_on:
       - db
       - redis
