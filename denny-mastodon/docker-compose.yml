@@ -29,7 +29,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Berlin
-      - LOCAL_DOMAIN=example.com
+      - LOCAL_DOMAIN=umbrel-2.local
       - REDIS_HOST=redis
       - REDIS_PORT=6379
       - DB_HOST=db
