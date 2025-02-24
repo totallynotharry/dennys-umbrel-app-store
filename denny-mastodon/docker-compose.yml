@@ -6,6 +6,27 @@ services:
       APP_HOST: denny-mastodon_web_1
       APP_PORT: 80
 
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: mastodon
+      POSTGRES_PASSWORD: mastodon
+      POSTGRES_DB: mastodon
+    volumes:
+      - ${APP_DATA_DIR}/data/postgres:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - umbrel
+
+  redis:
+    image: redis:7
+    command: redis-server --save 60 1 --loglevel warning
+    volumes:
+      - ${APP_DATA_DIR}/data/redis:/data
+    restart: unless-stopped
+    networks:
+      - umbrel
+
   web:
     image: linuxserver/mastodon:4.3.3@sha256:bc2c0b7ef6e769943ab97d57a9a0cb40f4811134cc0bd8286a32d3db3c337b95
     environment:
@@ -34,21 +55,16 @@ services:
       - SMTP_PASSWORD=
       - SMTP_FROM_ADDRESS=notifications@example.com
       - S3_ENABLED=false
-      # WEB_DOMAIN=mastodon.example.com #optional
-      # ES_HOST=es #optional
-      # ES_PORT=9200 #optional
-      # ES_USER=elastic #optional
-      # ES_PASS=elastic #optional
-      # S3_BUCKET= #optional
-      # AWS_ACCESS_KEY_ID= #optional
-      # AWS_SECRET_ACCESS_KEY= #optional
-      # S3_ALIAS_HOST= #optional
-      # SIDEKIQ_ONLY=false #optional
-      # SIDEKIQ_QUEUE= #optional
-      # SIDEKIQ_DEFAULT=false #optional
-      # SIDEKIQ_THREADS=5 #optional
-      # DB_POOL=5 #optional
-      # NO_CHOWN= #optional
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
+      - ${APP_DATA_DIR}/data/public:/live/public/system
     restart: on-failure
+    depends_on:
+      - db
+      - redis
+    networks:
+      - umbrel
+
+networks:
+  umbrel:
+    external: true
