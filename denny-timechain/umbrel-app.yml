@@ -1,28 +1,31 @@
 manifestVersion: 1
 id: denny-timechain
-name: Timechain
-tagline: An intuitive way to create and manage invoices
-icon: https://i.imgur.com/bPCBhLj.png
-category: test
-version: "0.0.1"
+name: Timechain Calendar
+tagline: An engaging journey through Bitcoin's history
+icon: https://i.imgur.com/gSnM7WO.png
+category: bitcoin
+version: "0.5.47"
 port: 8953
 description: >-
-  Invoify is a modern web-based solution for creating and managing invoices, designed especially for freelancers, self-employed individuals, and small businesses. Built with cutting-edge technologies like Next.js 13, TypeScript, and React, it offers an intuitive user interface that makes invoice creation quick and hassle-free.
+  ⚠️ This app does not have publicly available source code and is not a standalone application. It simply serves as a reference (link) to the official Timechain Calendar website.
+
+  
+  Timechain Calendar is a web platform that visualizes the development of the Bitcoin blockchain in the form of a calendar. It provides a chronological overview of important events in the Bitcoin ecosystem, such as halving events, technical milestones, and other significant changes on the blockchain. Users can track key developments in Bitcoin technology and economics over time.
 
 
-  Users can enter all relevant details directly in the browser, including sender and recipient information, invoice numbers, items or services, and payment details. A live preview updates in real-time, allowing users to see the final invoice before downloading it as a PDF. With its minimalist and modern design, the platform is easy to use, even for those without prior experience.
-developer: Ali Abbasov
-website: https://invoify.vercel.app/
+  The platform allows users to explore both historical and upcoming events related to the blockchain, offering a clear representation of block heights, consensus mechanisms, and protocol changes. With Timechain Calendar, users have a user-friendly way to understand the progress of the Bitcoin blockchain and observe relevant events within the Bitcoin network.
+developer: TC
+website: https://timechaincalendar.com/en
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/al1abb/invoify
-support: https://github.com/al1abb/invoify/issues
+repo: https://github.com/timechainb
+support: https://github.com/timechainb/timechain-calendar-translations/issues
 gallery:
-  - https://i.imgur.com/Fe8CEaJ.png
-  - https://i.imgur.com/Fe8CEaJ.png
-  - https://i.imgur.com/Fe8CEaJ.png
+  - https://i.imgur.com/3XQLpWP.png
+  - https://i.imgur.com/ehGv1zK.png
+  - https://i.imgur.com/q7Bh6JG.png
 releaseNotes: >-
-  This is the first release of Invoify. There are no changelogs yet.
+  Version 0.5.47 of Timechain Calendar was released on June 26, 2024, but the specific changes and updates for this version are not publicly documented.
 dependencies:
 path: ""
 defaultUsername: ""
