@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: denny-timechain
 name: Timechain Calendar
-tagline: An engaging journey through Bitcoin's history
+tagline: A journey through Bitcoin’s timechain
 icon: https://i.imgur.com/gSnM7WO.png
 category: bitcoin
 version: "0.5.47"
