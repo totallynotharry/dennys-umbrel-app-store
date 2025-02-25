@@ -7,5 +7,5 @@ services:
       APP_PORT: 80
 
   web:
-    image: dennysubke/timechain:0.5.47
+    image: dennysubke/timechain:0.5.47@sha256:05cee5962f0ac3a9e43bf6390e45f93343bd88ea710e1f6995048bf0bed3ee02
     restart: on-failure
