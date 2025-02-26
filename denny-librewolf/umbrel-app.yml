@@ -3,7 +3,7 @@ id: denny-librewolf
 name: Librewolf
 tagline: A custom version of Firefox, focused on privacy, security and freedom.
 icon: https://imgs.search.brave.com/zdgO2DWpS74EBTGGmEl7a53ZJFw2vRmeQwR7BQGJRfo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi9kL2QwL0xp/YnJlV29sZl9pY29u/LnN2Zy8yMjBweC1M/aWJyZVdvbGZfaWNv/bi5zdmcucG5n
-category: networking
+category: test
 version: "135.0.1"
 port: 6916
 description: >-
