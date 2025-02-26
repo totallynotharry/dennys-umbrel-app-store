@@ -1,0 +1,24 @@
+manifestVersion: 1
+id: denny-librewolf
+name: Librewolf
+tagline: A custom version of Firefox, focused on privacy, security and freedom.
+icon: https://imgs.search.brave.com/zdgO2DWpS74EBTGGmEl7a53ZJFw2vRmeQwR7BQGJRfo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi9kL2QwL0xp/YnJlV29sZl9pY29u/LnN2Zy8yMjBweC1M/aWJyZVdvbGZfaWNv/bi5zdmcucG5n
+category: networking
+version: "135.0.1"
+port: 6916
+description: >-
+  This project is a custom and independent version of Firefox, with the primary goals of privacy, security and user freedom.
+developer: linuxserver
+website: https://librewolf.net/
+submitter: Copy2018
+submission: https://github.com/getumbrel/umbrel-hello-world-app
+repo: https://github.com/linuxserver/docker-librewolf
+support: https://discourse.linuxserver.io/
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+releaseNotes: >-
+  Glorious release.
+dependencies: []
+path: ""
