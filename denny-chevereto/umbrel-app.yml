@@ -3,7 +3,7 @@ id: denny-chevereto
 name: Chevereto
 tagline: A fast, reliable way to store and share your images
 icon: https://i.imgur.com/nLJLkbd.png
-category: In Progress
+category: files & productivity
 version: "4.2.4"
 port: 8048
 description: >-
@@ -23,6 +23,9 @@ description: >-
 
 
   With Chevereto, you get complete ownership of your image hosting service without the limitations imposed by third-party services, making it an excellent option for those seeking privacy, control, and customization.
+
+
+  ⚠️ During installation, use the following database connection details: Host: "chevereto-db", Port: "3306", Database Name: "chevereto", User: "chevereto", Password: "umbrelpass". The table prefix can be left empty or set to "chv_".
 developer: Rodolfo Berrios
 website: https://chevereto.com/
 submitter: dennysubke
