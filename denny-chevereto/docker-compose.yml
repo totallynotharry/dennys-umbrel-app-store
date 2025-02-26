@@ -8,7 +8,6 @@ services:
       PROXY_AUTH_ADD: "false"
   web:
     image: chevereto/chevereto:4.2.4@sha256:d583410da7a8ef7104e1c9c33f2b1f61c36e6e7fb5d8479d306bb469c1cbf6ee
-    container_name: chevereto
     environment:
       - PUID=1000
       - PGID=1000
@@ -22,12 +21,11 @@ services:
       
   chevereto-db:
     image: linuxserver/mariadb:11.4.4@sha256:fdf30e6b302688c290cef10ca24b80e6e25e93955bc6b64636777f06676a6c52
-    container_name: chevereto-db
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Berlin
-      - MYSQL_ROOT_PASSWORD=umbelpass
+      - MYSQL_ROOT_PASSWORD=umbrelpass
       - MYSQL_DATABASE=chevereto
       - MYSQL_USER=chevereto
       - MYSQL_PASSWORD=umbrelpass
