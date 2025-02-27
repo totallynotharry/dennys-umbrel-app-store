@@ -3,7 +3,7 @@ id: denny-kodbox
 name: kodbox
 tagline: A seamless web-based file manager for effortless cloud storage
 icon: https://i.imgur.com/rTsmgiN.png
-category: In Progress
+category: files & productivity
 version: "1.56"
 port: 8383
 description: >-
