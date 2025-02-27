@@ -27,9 +27,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/librewolf-community
 support: https://codeberg.org/librewolf/issues/issues
 gallery:
-  - https://i.imgur.com/QMVunfR.png
-  - https://i.imgur.com/QMVunfR.png
-  - https://i.imgur.com/QMVunfR.png
+  - https://i.imgur.com/BQwQvJR.png
+  - https://i.imgur.com/vbjsFfL.png
+  - https://i.imgur.com/BBK8ok6.png
 releaseNotes: >-
   The update addresses issues with unusable drop-down menus on certain sites, incorrect scrolling behavior with anchor tags, and problems restoring closed windows or tabs when upgrading from older Firefox versions. Additionally, it fixes a broken search functionality when using a custom search engine with a large icon after updating to Firefox 135.
 dependencies: []
