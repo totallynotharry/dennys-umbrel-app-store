@@ -18,9 +18,11 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/kalcaddle/kodbox
 support: https://github.com/kalcaddle/kodbox/issues
 gallery:
-  - https://i.imgur.com/SiyKARP.png
-  - https://i.imgur.com/SiyKARP.png
-  - https://i.imgur.com/SiyKARP.png
+  - https://i.imgur.com/FXwhZ05.png
+  - https://i.imgur.com/jvCRwZB.png
+  - https://i.imgur.com/zd97KjY.png
+  - https://i.imgur.com/jPC9qdj.png
+  - https://i.imgur.com/3QwxB8t.png
 releaseNotes: >-
   Version 1.56 introduces a fix for a security issue, enhancing the overall safety and stability of the platform.
 dependencies:
