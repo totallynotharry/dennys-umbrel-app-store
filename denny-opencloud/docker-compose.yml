@@ -16,3 +16,4 @@ services:
       - OC_INSECURE=true
       - PROXY_HTTP_ADDR=0.0.0.0:9200
       - OC_URL=http://umbrel-2.local:9292
+      - JWT_SECRET=8C1F54F950D5E3D126B9EF1081D48243
