@@ -11,7 +11,7 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/opencloud-config:/etc/opencloud
       - ${APP_DATA_DIR}/data/opencloud-data:/var/lib/opencloud
-    restart: on-failure
+    restart: no
     environment:
       - OC_INSECURE=true
       - PROXY_HTTP_ADDR=0.0.0.0:9200
