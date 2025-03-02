@@ -7,7 +7,7 @@ services:
       APP_PORT: 9200
   
   web:
-    image: ghcr.io/opencloud-eu/ci-docker-desktop/appimage:latest
+    image: opencloudeu/opencloud-rolling:v1.0@sha256:16c3813567a0885170c3d44a2ddf26b567a856c8c8fa3f807f43619008bc07b5
     volumes:
       - ${APP_DATA_DIR}/data/opencloud-config:/etc/opencloud
       - ${APP_DATA_DIR}/data/opencloud-data:/var/lib/opencloud
