@@ -3,7 +3,7 @@ id: denny-restreamer
 name: Restreamer
 tagline: An easy to use open source video server
 icon: https://i.imgur.com/xpoaC35.png
-category: media
+category: files & productivity
 version: "2.12.0"
 port: 8135
 description: >-
