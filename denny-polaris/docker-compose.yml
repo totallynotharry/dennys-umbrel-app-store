@@ -11,6 +11,9 @@ services:
     restart: on-failure
     user: "1000:1000"  # Setzt den Benutzer und die Gruppe des Containers
     volumes:
-      - ${APP_DATA_DIR}/data/my/music/directory:/music
-      - ${APP_DATA_DIR}/data/my/polaris/cache:/var/cache/polaris
-      - ${APP_DATA_DIR}/data/my/polaris/data:/var/lib/polaris
+      - ${APP_DATA_DIR}/data/my/music/directory:/music:rw
+      - ${APP_DATA_DIR}/data/my/polaris/cache:/var/cache/polaris:rw
+      - ${APP_DATA_DIR}/data/my/polaris/cache/peaks:/var/cache/polaris/peaks:rw
+      - ${APP_DATA_DIR}/data/my/polaris/data:/var/lib/polaris:rw
+    entrypoint: >
+      sh -c "mkdir -p /var/cache/polaris/peaks && chmod -R 777 /var/cache/polaris && exec /polaris"
