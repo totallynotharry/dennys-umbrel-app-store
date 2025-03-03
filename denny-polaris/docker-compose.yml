@@ -7,13 +7,10 @@ services:
       APP_PORT: 5050
 
   web:
-    image: quay.io/connectical/polaris
+    image: registry.gitlab.com/connectical/container/polaris:0.15.0-alpine3.21.3
     restart: on-failure
-    user: "1000:1000"  
-    container_name: denny-polaris_web_1  # Fester Name für den Container
+    user: "100:100"  
     volumes:
       - ${APP_DATA_DIR}/data/my/music/directory:/music
       - ${APP_DATA_DIR}/data/my/polaris/cache:/var/cache/polaris
       - ${APP_DATA_DIR}/data/my/polaris/data:/var/lib/polaris
-    entrypoint: >
-      sh -c "mkdir -p /var/cache/polaris/peaks && chmod -R 777 /var/cache/polaris || true && exec /polaris"
