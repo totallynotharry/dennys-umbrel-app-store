@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-android
 name: Docker Android
 tagline: An efficient way to run Android emulators
-icon: https://i.imgur.com/m1WcXLH.png
+icon: https://i.imgur.com/4etZuzf.png
 category: In Progress
 version: "2.16.2"
 port: 6080
