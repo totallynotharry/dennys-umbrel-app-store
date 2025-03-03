@@ -9,8 +9,13 @@ services:
   web:
     image: registry.gitlab.com/connectical/container/polaris:0.15.0-alpine3.21.3@sha256:d57beebcdca0c12bdd1785c879433efa247199bd3aeb59dea948258bed742b27
     restart: on-failure
-    user: "1000:1000"
+    user: "1000:1000"  # Setzt den Benutzer und die Gruppe des Containers
     volumes:
       - ${APP_DATA_DIR}/data/my/music/directory:/music
       - ${APP_DATA_DIR}/data/my/polaris/cache:/var/cache/polaris
       - ${APP_DATA_DIR}/data/my/polaris/data:/var/lib/polaris
+    environment:
+      POLARIS_CACHE_DIR: /var/cache/polaris
+      POLARIS_DATA_DIR: /var/lib/polaris
+    command: >
+      /bin/sh -c "chmod -R 777 /var/cache/polaris && exec /app/polaris"
