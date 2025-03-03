@@ -24,9 +24,11 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/datarhei/restreamer
 support: https://github.com/datarhei/restreamer/issues
 gallery:
-  - https://i.imgur.com/M0fbcCR.png
-  - https://i.imgur.com/M0fbcCR.png
-  - https://i.imgur.com/M0fbcCR.png
+  - https://i.imgur.com/yYfkCD5.png
+  - https://i.imgur.com/37xXnJs.png
+  - https://i.imgur.com/HV51JK3.png
+  - https://i.imgur.com/yXpFmva.png
+  - https://i.imgur.com/UspOtCD.png
 releaseNotes: >-
   Restreamer 2.12.0 introduces the integration of the wetter.com service and a new option to select which channels are displayed on the player site. Additionally, it includes various bug fixes, such as incorrect filter settings, duplicated filter parameters in the encoder, and address encoding issues, along with an update to public Video.js version 8.
 dependencies:
