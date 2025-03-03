@@ -1,23 +1,18 @@
-version: '3.7'
+version: "3.9"
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: denny-polaris_web_1
-      APP_PORT: 5050
-    depends_on:
-      - web
-
-  web:
-    image: registry.gitlab.com/connectical/container/polaris:0.15.0-alpine3.21.3@sha256:d57beebcdca0c12bdd1785c879433efa247199bd3aeb59dea948258bed742b27
-    restart: on-failure
-    user: "1000:1000"  # Setzt den Benutzer und die Gruppe des Containers
+  polaris:
+    image: quay.io/agersant/polaris
+    container_name: denny-polaris_web_1
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
     volumes:
-      - ${APP_DATA_DIR}/data/my/music/directory:/music
-      - ${APP_DATA_DIR}/data/my/polaris/cache:/var/cache/polaris
-      - ${APP_DATA_DIR}/data/my/polaris/data:/var/lib/polaris
+      - ./polaris_cache:/var/cache/polaris
+      - ./polaris_data:/var/lib/polaris
     environment:
-      POLARIS_CACHE_DIR: /var/cache/polaris
-      POLARIS_DATA_DIR: /var/lib/polaris
-    command: >
-      /bin/sh -c "chmod -R 777 /var/cache/polaris /var/lib/polaris && exec /app/polaris"
+      - POLARIS__LISTEN_ADDR=0.0.0.0
+      - POLARIS__PORT=5000
+    user: "1000:1000"
+    entrypoint: >
+      sh -c "mkdir -p /var/cache/polaris/peaks && chmod -R 777 /var/cache/polaris && exec /polaris"
