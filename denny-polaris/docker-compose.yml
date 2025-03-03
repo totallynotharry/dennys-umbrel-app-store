@@ -9,7 +9,7 @@ services:
   web:
     image: registry.gitlab.com/connectical/container/polaris
     restart: on-failure
-    user: "100:100"  # UID/GID auf 100:100 setzen, wie in der Doku empfohlen
+    user: "100:100"
     volumes:
       - ${APP_DATA_DIR}/data/my/music/directory:/music
       - ${APP_DATA_DIR}/data/my/polaris/cache:/var/cache/polaris
@@ -17,6 +17,7 @@ services:
     environment:
       POLARIS_PORT: 5050
     command: >
-      /bin/sh -c "mkdir -p /var/cache/polaris /var/lib/polaris &&
+      /bin/sh -c "mkdir -p /var/cache/polaris/peaks /var/lib/polaris &&
                   chown -R 100:100 /var/cache/polaris /var/lib/polaris &&
+                  chmod -R 777 /var/cache/polaris &&
                   exec run-polaris"
