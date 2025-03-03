@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-polaris_web_1
+      APP_PORT: 5050
+
+  web:
+    image: registry.gitlab.com/connectical/container/polaris:0.15.0-alpine3.21.3@sha256:d57beebcdca0c12bdd1785c879433efa247199bd3aeb59dea948258bed742b27
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/my/music/directory:/music
+      - ${APP_DATA_DIR}/data/my/polaris/cache:/var/cache/polaris
+      - ${APP_DATA_DIR}/data/my/polaris/data:/var/lib/polaris
