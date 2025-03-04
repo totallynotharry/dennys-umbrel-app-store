@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: denny-picprose  
 name: PicProse
-tagline: An innovative way to design captivating images
+tagline: An article cover image generator tool for stunning visuals
 icon: https://i.imgur.com/jEPMk4U.png
 category: In Progress
 version: "0.1.1"
