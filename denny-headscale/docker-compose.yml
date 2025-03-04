@@ -17,7 +17,7 @@ services:
       - HEADSCALE_UNIX_SOCKET=/etc/headscale/headscale.sock
       - HEADSCALE_DATABASE_TYPE=sqlite3
       - HEADSCALE_DATABASE_SQLITE_PATH=/etc/headscale/db.sqlite
-    command: headscale serve
+    command: serve
     restart: on-failure
 
   headscale-ui:
