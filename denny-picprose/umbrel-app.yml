@@ -3,7 +3,7 @@ id: denny-picprose
 name: PicProse
 tagline: An article cover image generator tool for stunning visuals
 icon: https://i.imgur.com/jEPMk4U.png
-category: In Progress
+category: files & productivity
 version: "0.1.1"
 port: 3345
 description: >-
