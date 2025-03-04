@@ -2,54 +2,20 @@ version: '3.7'
 
 services:
   headscale:
-    image: headscale/headscale:latest
+    image: headscale/headscale:v0.24@sha256:2a2dcc9fef8f6e520a096743b668e3fd5df06ae422298c808c4e934a78764860
     container_name: headscale
-    restart: unless-stopped
-    command: headscale serve --config /etc/headscale/config.yaml
     volumes:
-      - ${APP_DATA_DIR}/headscale/config:/etc/headscale
-      - ${APP_DATA_DIR}/headscale/data:/var/lib/headscale
-    labels:
-      - traefik.enable=true
-      - traefik.http.routers.headscale-rtr.rule=PathPrefix(`/`)
-      - traefik.http.services.headscale-svc.loadbalancer.server.port=8080
-    expose:
-      - "8080" # Port, auf dem Headscale intern läuft
+      - ${APP_DATA_DIR}/config:/etc/headscale
+      - ${APP_DATA_DIR}/data:/var/lib/headscale
+    ports:
+      - "27896:8080"
+    command: serve
+    restart: on-failure
 
   headscale-ui:
-    image: ghcr.io/gurucomputing/headscale-ui:latest
+    image: ghcr.io/gurucomputing/headscale-ui:2025.01.20@sha256:dda8534d5bde03b35b5bd11def3409938ec265d08c431c43294632573a2f3ae3
     container_name: headscale-ui
-    restart: unless-stopped
-    volumes:
-      - ${APP_DATA_DIR}/headscale-ui/config:/data
-    labels:
-      - traefik.enable=true
-      - traefik.http.routers.headscale-ui-rtr.rule=PathPrefix(`/web`)
-      - traefik.http.services.headscale-ui-svc.loadbalancer.server.port=8383
-    expose:
-      - "8383" # Port, auf dem die UI läuft (intern)
-
-  traefik:
-    image: traefik:latest
-    container_name: traefik
-    restart: unless-stopped
-    command:
-      - --api.insecure=true  # Entfernen in der Produktion!
-      - --providers.docker
-      - --entrypoints.web.address=:8081
-      - --entrypoints.websecure.address=:8443
-      - --global.sendAnonymousUsage=false
     ports:
-      - "8081:8081"  # Webport für Traefik
-      - "8443:8443"  # HTTPS-Port für Traefik
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-      - ${APP_DATA_DIR}/traefik/certificates:/certificates
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.traefik-api.rule=PathPrefix(`/traefik`)"
-      - "traefik.http.services.traefik-api.loadbalancer.server.port=8080"
-      - "traefik.http.routers.headscale-ui-rtr.entrypoints=websecure"
-      - "traefik.http.routers.headscale-ui-rtr.tls=true"
-
-  # Optional: Weitere Services für andere Anwendungen können hier hinzugefügt werden.
+      - "8543:8443"  
+      - "8383:8080" 
+    restart: on-failure
