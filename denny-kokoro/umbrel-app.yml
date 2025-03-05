@@ -11,6 +11,9 @@ description: >-
 
 
   Its lightweight architecture ensures that Kokoro can be deployed even on less powerful devices, making it easier to integrate into various applications. Developers can use Kokoro in a wide range of projects, whether for virtual assistants, interactive systems, or enhancing accessibility. The model not only provides accurate and intelligible speech, but also introduces emotional nuances that enhance the user experience. With its flexibility and ability to be applied across diverse scenarios, Kokoro is a valuable resource for anyone seeking an efficient, lightweight, and powerful speech synthesis solution in their projects.
+
+
+  ⚠️ This app only works in Chromium-based browsers (e.g., Chrome, Edge, Brave) and is available at "umbrel.local:8877/web/".
 developer: Hexgrad
 website: https://kokorotts.net/
 submitter: dennysubke
