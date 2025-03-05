@@ -3,7 +3,7 @@ id: denny-kokoro
 name: Kokoro
 tagline: An intelligent, high-quality TTS solution
 icon: https://i.imgur.com/hJ89ggh.png
-category: ai
+category: AI
 version: "0.2.2"
 port: 8877
 description: >-
