@@ -24,6 +24,6 @@ gallery:
 releaseNotes: >-
   The v0.2.2 release includes several fixes, such as improving the reliability of the "speak" feature on the CPU image and enhancing audio quality by adjusting compression settings. It also adds advanced normalization settings, a Helm chart, and introduces an override for the default language code, along with various bug fixes and documentation updates.
 dependencies:
-path: ""
+path: "/"
 defaultUsername: ""
 defaultPassword: ""
