@@ -13,7 +13,7 @@ description: >-
   Its lightweight architecture ensures that Kokoro can be deployed even on less powerful devices, making it easier to integrate into various applications. Developers can use Kokoro in a wide range of projects, whether for virtual assistants, interactive systems, or enhancing accessibility. The model not only provides accurate and intelligible speech, but also introduces emotional nuances that enhance the user experience. With its flexibility and ability to be applied across diverse scenarios, Kokoro is a valuable resource for anyone seeking an efficient, lightweight, and powerful speech synthesis solution in their projects.
 
 
-  ⚠️ This app only works in Chromium-based browsers (e.g., Chrome, Edge, Brave) and is available at "umbrel.local:8877/web/".
+  ⚠️ This app only works in Chromium-based browsers (e.g., Chrome, Edge, Brave) and is available at "umbrel.local:8877/web/". Please note that the app is approximately 4GB in size, so the loading process may take a few moments.
 developer: Hexgrad
 website: https://kokorotts.net/
 submitter: dennysubke
@@ -21,9 +21,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/remsky/Kokoro-FastAPI
 support: https://github.com/remsky/Kokoro-FastAPI/issues
 gallery:
-  - https://i.imgur.com/FvREfrU.png
-  - https://i.imgur.com/FvREfrU.png
-  - https://i.imgur.com/FvREfrU.png
+  - https://i.imgur.com/zTDkp3U.png
+  - https://i.imgur.com/qwZdDZx.png
+  - https://i.imgur.com/SEJG3PJ.png
 releaseNotes: >-
   The v0.2.2 release includes several fixes, such as improving the reliability of the "speak" feature on the CPU image and enhancing audio quality by adjusting compression settings. It also adds advanced normalization settings, a Helm chart, and introduces an override for the default language code, along with various bug fixes and documentation updates.
 dependencies:
