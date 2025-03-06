@@ -14,6 +14,7 @@ description: >-
 
 
   PicProse was initially created as a learning project focused on React and has since evolved into a practical solution for visual content creation. While the codebase remains unstructured in some areas, it is open to contributions from the community. Available on GitHub under the MIT license, the project encourages developers and designers to collaborate, improve its features, and expand its capabilities over time.
+developer: jaaronkot
 website: https://picprose.net/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
