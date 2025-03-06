@@ -39,6 +39,7 @@ services:
       - "DB_PASSWORD=addy_password123"
       - "REDIS_HOST=redis"
       - "APP_KEY=base64:RZJNTNcNY56yzhc3y6ChHR8DJfIhIFsWUgxxxqwYOMA="
+      - "ANONADDY_SECRET=umbrelpass"
       - "APP_DEBUG=false"
       - "APP_URL=http://umbrel-2.local:8727"
       - "ANONADDY_DOMAIN=umbrel-2.local:8727"
