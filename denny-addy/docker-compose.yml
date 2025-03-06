@@ -32,8 +32,6 @@ services:
       - redis
     volumes:
       - "${APP_DATA_DIR}/data:/data"
-    env_file:
-      - "${APP_DATA_DIR}/addy.env"
     environment:
       - "DB_HOST=db"
       - "DB_DATABASE=addy_db"
