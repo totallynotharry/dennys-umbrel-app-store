@@ -29,7 +29,7 @@ server:
   rate_period: 60s
   rate_limit: 300
   cors_allow_origins:
-    - "http://umbrel-2.local:2021"
+    - "http://umbrel.local:2021"
     - "http://localhost:5173"
     - "http://localhost:7926"
     - "https://localhost"
@@ -46,7 +46,7 @@ email:
   port: 587
   key: "geheimer-api-key"
   email: "noreply@example.com"
-  appHost: "http://umbrel-2.local:2021"
+  appHost: "http://umbrel.local:2021"
 
 oauth2:
   client_id: "dein-client-id"
