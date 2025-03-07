@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-pdfding
 name: PDFDing
 tagline: An accessible tool for flawless PDF editing
-icon: https://i.imgur.com/A1hIA4v.png
+icon: https://i.imgur.com/kWdkjcf.png
 category: In Progress
 version: "1.1.0"
 port: 8866
