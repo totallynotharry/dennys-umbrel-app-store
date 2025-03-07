@@ -18,6 +18,7 @@ description: >-
 
   ⚠️ Note: It is recommended to set up a custom domain for sending emails. Additionally, SPF and DKIM TXT records must be properly configured in the DNS settings. Without these adjustments, email delivery issues may occur, especially with Gmail.
 
+  
   📖 For more details on configuration, see: 'https://github.com/anonaddy/docker'
 developer: addy.io
 website: https://addy.io/
