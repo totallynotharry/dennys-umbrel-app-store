@@ -54,5 +54,5 @@ oauth2:
   auth_url: "https://auth.example.com/oauth/authorize"
   token_url: "https://auth.example.com/oauth/token"
   user_info_url: "https://auth.example.com/userinfo"
-  redirect_url: "http://umbrel-2.local:2021/oauth/callback"
+  redirect_url: "http://umbrel.local:2021/oauth/callback"
   name: "ExampleOAuth"
