@@ -18,7 +18,7 @@ database:
   name: "selfhosted_db"
 
 jwt:
-  secret: "password123"
+  secret: "supergeheimesjwtsecret"
   session_time: 168h
   max_refresh: 168h
 
