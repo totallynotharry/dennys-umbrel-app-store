@@ -1,6 +1,6 @@
 manifestVersion: 1
 id: denny-pdfding
-name: PDFDing
+name: PdfDing
 tagline: An accessible tool for flawless PDF editing
 icon: https://i.imgur.com/kWdkjcf.png
 category: In Progress
@@ -21,9 +21,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/mrmn2/PdfDing
 support: https://github.com/mrmn2/PdfDing/issues
 gallery:
-  - https://i.imgur.com/f9YeSyk.png
-  - https://i.imgur.com/f9YeSyk.png
-  - https://i.imgur.com/f9YeSyk.png
+  - https://i.imgur.com/ms5haXI.png
+  - https://i.imgur.com/ms5haXI.png
+  - https://i.imgur.com/ms5haXI.png
 releaseNotes: >-
   Version 1.1.0 introduces new list and grid layouts for PDF overviews, revamped settings, and minor UI adjustments to the detail pages. These updates enhance the overall user experience and navigation.
 dependencies:
