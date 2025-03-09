@@ -1,12 +1,15 @@
 version: '3.7'
 
 services:
-  crafty:
-    container_name: crafty_container
+  app_proxy:
+    environment:
+      APP_HOST: denny-crafty_web_1
+      APP_PORT: 8123
+
+  web:
     image: registry.gitlab.com/crafty-controller/crafty-4:4.4.7@sha256:a2a083675b1e6442599e31dba230f2242c9f9c713e360a507ee7df205ab4689f
     ports:
-      - "8123:8000"
-      - "18443:8443" 
+      - "8123:8443" 
       - "18123:8123" 
       - "19132:19132/udp" 
       - "25500-25600:25500-25600" 
