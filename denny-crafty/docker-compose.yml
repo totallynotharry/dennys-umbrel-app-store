@@ -5,11 +5,11 @@ services:
     container_name: crafty_container
     image: registry.gitlab.com/crafty-controller/crafty-4:4.4.7@sha256:a2a083675b1e6442599e31dba230f2242c9f9c713e360a507ee7df205ab4689f
     ports:
-      - "8511:8000"
-      - "18443:8443" 
-      - "18123:8123" 
-      - "19132:19132/udp" 
-      - "25500-25600:25500-25600" 
+      - "8511:8000"    # Web Interface
+      - "18443:8443"   # HTTPS
+      - "18123:8123"   # Dynmap
+      - "19132:19132/udp"  # Bedrock
+      - "25500-25600:25500-25600"  # MC Server Port Range
     environment:
       - PUID=1000
       - PGID=1000
