@@ -23,6 +23,9 @@ description: >-
 
 
   ℹ️ Crafty Controller uses a self-signed certificate, which may trigger a browser warning like "Your connection is not private." You can safely proceed by clicking "Advanced" and then "Proceed to umbrel.local (unsafe)" or a similar option, depending on your browser.
+
+
+  🔑 The default username for Crafty Controller is admin, and the password is randomly generated. You can find the password in the file located at: /umbrel/app-data/denny-crafty/data/config/default-creds.txt. It is highly recommended to change the password immediately after logging in for security purposes.
 developer: Arcadia Technology
 website: https://craftycontrol.com/
 submitter: dennysubke
@@ -37,5 +40,5 @@ releaseNotes: >-
   The update 4.4.7 includes bug fixes and resolves the issue by replacing the "ubuntu" user with the "crafty" user in the Docker repair process.
 dependencies:
 path: ""
-defaultUsername: ""
+defaultUsername: "admin"
 defaultPassword: ""
