@@ -1,3 +1,5 @@
+version: '3.7'
+
 services:
   app:
     image: wger/server:latest
@@ -109,4 +111,5 @@ volumes:
 
 networks:
   default:
+    external: true
     name: wger_network
