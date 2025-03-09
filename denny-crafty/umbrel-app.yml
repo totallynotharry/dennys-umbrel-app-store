@@ -43,4 +43,4 @@ releaseNotes: >-
 dependencies:
 path: "https://umbrel.local:18443"
 defaultUsername: "admin"
-defaultPassword: "randomly generated - see description"
+defaultPassword: ""
