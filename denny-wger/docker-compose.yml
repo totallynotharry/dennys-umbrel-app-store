@@ -1,10 +1,10 @@
-version: '3.7'
-
 services:
   app_proxy:
     environment:
-      APP_HOST: denny-wger_web_1
+      APP_HOST: web
       APP_PORT: 8000
+    networks:
+      - wger_network
 
   web:
     image: wger/server:2.3-dev@sha256:5a8c6c93fb60eb974761c5701b574ba1ea7c5a8a4604de72d1f4dd5fbc7badab
@@ -19,12 +19,16 @@ services:
       - ${APP_DATA_DIR}/data/static:/home/wger/static
       - ${APP_DATA_DIR}/data/media:/home/wger/media
     healthcheck:
-      test: wget --no-verbose --tries=1 --spider http://umbrel-2.local:8955
+      test: wget --no-verbose --tries=1 --spider http://localhost:8000 || exit 1
       interval: 10s
       timeout: 5s
       start_period: 300s
       retries: 5
     restart: on-failure
+    networks:
+      - wger_network
+    ports:
+      - "8955:8000"
 
   nginx:
     image: nginx:stable@sha256:be4f49e87cc022c1332bd4a9d84fb66bd76c72b6399b57193adec00ec9a616d2
@@ -35,14 +39,16 @@ services:
       - ${APP_DATA_DIR}/data/static:/wger/static:ro
       - ${APP_DATA_DIR}/data/media:/wger/media:ro
     ports:
-      - "80:80"
+      - "8955:80"
     healthcheck:
-      test: service nginx status
+      test: service nginx status || exit 1
       interval: 10s
       timeout: 5s
       retries: 5
       start_period: 30s
     restart: on-failure
+    networks:
+      - wger_network
 
   db:
     image: postgres:15-alpine@sha256:ef9d1517df69c4d27dbb9ddcec14f431a2442628603f4e9daa429b92ae6c3cd1
@@ -56,12 +62,14 @@ services:
     expose:
       - 5432
     healthcheck:
-      test: pg_isready -U wger
+      test: pg_isready -U wger || exit 1
       interval: 10s
       timeout: 5s
       retries: 5
       start_period: 30s
     restart: on-failure
+    networks:
+      - wger_network
 
   cache:
     image: redis:7.4.2@sha256:6aafb7f25fc93c4ff74e99cff8e85899f03901bc96e61ba12cd3c39e95503c73
@@ -70,12 +78,14 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/redis-data:/data
     healthcheck:
-      test: redis-cli ping
+      test: redis-cli ping || exit 1
       interval: 10s
       timeout: 5s
       retries: 5
       start_period: 30s
     restart: on-failure
+    networks:
+      - wger_network
 
   celery_worker:
     image: wger/server:2.3-dev@sha256:5a8c6c93fb60eb974761c5701b574ba1ea7c5a8a4604de72d1f4dd5fbc7badab
@@ -88,11 +98,13 @@ services:
       web:
         condition: service_healthy
     healthcheck:
-      test: celery -A wger inspect ping
+      test: celery -A wger inspect ping || exit 1
       interval: 10s
       timeout: 5s
       retries: 5
       start_period: 30s
+    networks:
+      - wger_network
 
   celery_beat:
     image: wger/server:2.3-dev@sha256:5a8c6c93fb60eb974761c5701b574ba1ea7c5a8a4604de72d1f4dd5fbc7badab
@@ -104,15 +116,15 @@ services:
     depends_on:
       celery_worker:
         condition: service_healthy
+    networks:
+      - wger_network
 
 volumes:
   postgres-data:
   celery-beat:
   redis-data:
-
   media:
   static:
 
 networks:
-  default:
-    name: wger_network
+  wger_network:
