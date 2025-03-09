@@ -1,7 +1,11 @@
 version: '3.7'
 
 services:
-  app:
+  app_proxy:
+    environment:
+      APP_HOST: denny-wger_web_1
+      APP_PORT: 8811
+  web:
     image: wger/server:latest
     volumes:
       - ${APP_DATA_DIR}/static:/home/wger/static
@@ -21,7 +25,7 @@ services:
       timeout: 5s
       start_period: 300s
       retries: 5
-    restart: unless-stopped
+    restart: on-failure
 
   nginx:
     image: nginx:stable
@@ -37,7 +41,7 @@ services:
       timeout: 5s
       retries: 5
       start_period: 30s
-    restart: unless-stopped
+    restart: on-failure
 
   db:
     image: postgres:15-alpine
@@ -56,7 +60,7 @@ services:
       timeout: 5s
       retries: 5
       start_period: 30s
-    restart: unless-stopped
+    restart: on-failure
 
   cache:
     image: redis
@@ -70,7 +74,7 @@ services:
       timeout: 5s
       retries: 5
       start_period: 30s
-    restart: unless-stopped
+    restart: on-failure
 
   celery_worker:
     image: wger/server:latest
@@ -88,7 +92,7 @@ services:
       timeout: 5s
       retries: 5
       start_period: 30s
-    restart: unless-stopped
+    restart: on-failure
 
   celery_beat:
     image: wger/server:latest
@@ -100,16 +104,4 @@ services:
     depends_on:
       celery_worker:
         condition: service_healthy
-    restart: unless-stopped
-
-volumes:
-  postgres-data:
-  celery-beat:
-  redis-data:
-  media:
-  static:
-
-networks:
-  default:
-    external: true
-    name: wger_network
+    restart: on-failure
