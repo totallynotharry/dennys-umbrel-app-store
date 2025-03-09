@@ -30,9 +30,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/nicolargo/glances
 support: https://github.com/nicolargo/glances/issues
 gallery:
-  - https://i.imgur.com/3UevX1j.png
-  - https://i.imgur.com/3UevX1j.png
-  - https://i.imgur.com/3UevX1j.png
+  - https://i.imgur.com/7hQrGLo.png
+  - https://i.imgur.com/M6tjOio.png
+  - https://i.imgur.com/j9gLdMz.png
 releaseNotes: >-
   The WebUI display has been improved for low screen resolutions, the IP plugin issue with Netifaces2 has been fixed, and a message has been added to verify Netifaces2.
 dependencies:
