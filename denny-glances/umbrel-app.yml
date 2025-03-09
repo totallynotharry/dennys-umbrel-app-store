@@ -3,7 +3,7 @@ id: denny-glances
 name: Glances
 tagline: An eye on your system
 icon: https://i.imgur.com/4T0Ff9S.png
-category: In Progress
+category: networking
 version: "4.3.0.8"
 port: 61208
 description: >-
