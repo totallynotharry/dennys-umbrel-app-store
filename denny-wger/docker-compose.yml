@@ -23,14 +23,10 @@ services:
       - TZ=Europe/Berlin
     volumes:
       - ${APP_DATA_DIR}/data/postgres-data:/var/lib/postgresql/data/
-    expose:
-      - 5432
     restart: on-failure
 
   cache:
     image: redis:7.4.2@sha256:6aafb7f25fc93c4ff74e99cff8e85899f03901bc96e61ba12cd3c39e95503c73
-    expose:
-      - 6379
     volumes:
       - ${APP_DATA_DIR}/data/redis-data:/data
     restart: on-failure
