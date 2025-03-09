@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.7"
 services:
   web:
     image: wger-image:latest  # Ersetze dies mit dem gewünschten Image
@@ -7,12 +7,14 @@ services:
       - ${APP_DATA_DIR}/config/dev.env
     volumes:
       - type: bind
-        source: ${APP_DATA_DIR}/wger-code  # Hier den Pfad zur Codebasis unter APP_DATA_DIR setzen
+        source: ${APP_DATA_DIR}/wger-code  # Sicherstellen, dass der Pfad existiert
         target: /home/wger/src
-      - ${APP_DATA_DIR}/wger-data:/var/lib/wger-data
+      - ${APP_DATA_DIR}/wger-data:/var/lib/wger-data  # Sicherstellen, dass der Ordner existiert
     ports:
-      - "8811:8000"
+      - "881:8000"  # Mappt den Port 8000 des Containers auf den Port 881 des Hosts
     command: tail -f /dev/null
+    networks:
+      - umbrel_network
 
   cache:
     image: redis
@@ -27,6 +29,8 @@ services:
     restart: unless-stopped
     volumes:
       - ${APP_DATA_DIR}/redis-data:/data
+    networks:
+      - umbrel_network
 
   db:
     image: postgres:15-alpine
@@ -45,4 +49,17 @@ services:
       retries: 5
       start_period: 30s
     restart: unless-stopped
+    networks:
+      - umbrel_network
 
+volumes:
+  postgres-data:
+    external: true
+  redis-data:
+    external: true
+  wger-data:
+    external: true
+
+networks:
+  umbrel_network:
+    driver: bridge
