@@ -6,13 +6,13 @@ services:
       APP_HOST: denny-ytptube_app_1
       APP_PORT: 8081
 
-        app:
-          image: ghcr.io/arabcoders/ytptube:master-20250308-7a2dc8a@sha256:2048941d8a4eafeb8606aa7b341084a13644f36bcde88ab0956e98be19d240aa
-          restart: on-failure
-          environment:
-            YTP_AUTH_USERNAME: admin
-            YTP_AUTH_PASSWORD: umbrel
-          volumes:
-            - ${APP_DATA_DIR}/data/config:/config:rw
-            - ${APP_DATA_DIR}/data/downloads:/downloads:rw
-            - ${APP_DATA_DIR}/data/downloads:/tmp:rw
+  app:
+    image: ghcr.io/arabcoders/ytptube:master-20250308-7a2dc8a@sha256:2048941d8a4eafeb8606aa7b341084a13644f36bcde88ab0956e98be19d240aa
+    restart: on-failure
+    environment:
+      YTP_AUTH_USERNAME: admin
+      YTP_AUTH_PASSWORD: umbrel
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config:rw
+      - ${APP_DATA_DIR}/data/downloads:/downloads:rw
+      - ${APP_DATA_DIR}/data/downloads:/tmp:rw
