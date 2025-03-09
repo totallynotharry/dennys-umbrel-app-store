@@ -2,12 +2,12 @@ services:
   web:
     image: wger/server:latest
     env_file:
-      - ./config/prod.env
+      - ${APP_DATA_DIR}/config/prod.env
     volumes:
       - static:/home/wger/static
       - media:/home/wger/media
     ports:
-      - "8000:8000"
+      - "8811:8000"
     restart: unless-stopped
 
   db:
