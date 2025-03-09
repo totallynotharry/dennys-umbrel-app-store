@@ -5,6 +5,7 @@ services:
     environment:
       APP_HOST: denny-crafty_web_1
       APP_PORT: 8000
+      PROXY_SSL_VERIFY: "false"
 
   web:
     image: registry.gitlab.com/crafty-controller/crafty-4:4.4.7@sha256:a2a083675b1e6442599e31dba230f2242c9f9c713e360a507ee7df205ab4689f
