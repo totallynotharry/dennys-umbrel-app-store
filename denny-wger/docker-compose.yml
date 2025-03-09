@@ -1,22 +1,35 @@
+version: '3.8' # Veraltete Version entfernt und auf eine unterstützte Version gesetzt
+
 services:
   web:
-    image: wger/server:latest
-    env_file:
-      - ${APP_DATA_DIR}/config/prod.env
+    image: denny-wger_image
+    container_name: denny-wger-web
+    networks:
+      - default
     volumes:
-      - static:/home/wger/static
-      - media:/home/wger/media
+      - static:/path/to/static/directory # Definiert das static-Volume
     ports:
-      - "8811:8000"
-    restart: unless-stopped
+      - "8080:8080"
+    environment:
+      - ENV_VAR=value
 
   db:
-    image: postgres:15-alpine
-    environment:
-      - POSTGRES_USER=wger
-      - POSTGRES_PASSWORD=wger
-      - POSTGRES_DB=wger
-      - TZ=Europe/Berlin
+    image: postgres:latest
+    container_name: denny-wger-db
+    networks:
+      - default
     volumes:
-      - postgres-data:/var/lib/postgresql/data/
-    restart: unless-stopped
+      - postgres-data:/var/lib/postgresql/data # Definiert das postgres-data-Volume
+    environment:
+      - POSTGRES_USER=example_user
+      - POSTGRES_PASSWORD=example_password
+      - POSTGRES_DB=denny_wger_db
+
+networks:
+  default:
+    external: true
+    name: custom_network_name # Ersetze durch den tatsächlichen Netzwerkname
+
+volumes:
+  static: {} # Definition des static-Volumes
+  postgres-data: {} # Definition des postgres-data-Volumes
