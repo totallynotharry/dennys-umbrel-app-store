@@ -14,8 +14,8 @@ services:
       - "19132:19132/udp" 
       - "25500-25600:25500-25600" 
     environment:
-      - PUID=1000
-      - PGID=1000
+      # PUID=1000
+      # PGID=1000
       - TZ=Europe/Berlin
     volumes:
       - ${APP_DATA_DIR}/data/backups:/crafty/backups
