@@ -33,12 +33,14 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://gitlab.com/crafty-controller
 support: https://gitlab.com/groups/crafty-controller/-/issues
 gallery:
-  - https://i.imgur.com/ZsTBmS4.png
-  - https://i.imgur.com/ZsTBmS4.png
-  - https://i.imgur.com/ZsTBmS4.png
+  - https://i.imgur.com/vSbZ6cA.png
+  - https://i.imgur.com/K5RoLTs.png
+  - https://i.imgur.com/3VeLF4I.png
+  - https://i.imgur.com/8cTkoj9.png
+  - https://i.imgur.com/DnwgLOR.png
 releaseNotes: >-
   The update 4.4.7 includes bug fixes and resolves the issue by replacing the "ubuntu" user with the "crafty" user in the Docker repair process.
 dependencies:
 path: "https://umbrel.local:18443"
 defaultUsername: "admin"
-defaultPassword: ""
+defaultPassword: "randomly generated - see description"
