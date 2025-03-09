@@ -19,11 +19,4 @@ services:
       - TZ=Europe/Berlin
     volumes:
       - postgres-data:/var/lib/postgresql/data/
-    expose:
-      - 5432
     restart: unless-stopped
-
-volumes:
-  postgres-data:
-  media:
-  static:
