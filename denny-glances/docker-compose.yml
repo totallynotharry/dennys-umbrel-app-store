@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-glances_web_1
+      APP_PORT: 61208
+
+  web:
+    image: nicolargo/glances:latest-full
+    network_mode: host
+    pid: host
+    privileged: true  
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Berlin
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock:ro
+    restart: on-failure
+    environment:
+      GLANCES_OPT: -w
