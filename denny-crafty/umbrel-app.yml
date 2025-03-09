@@ -17,6 +17,12 @@ description: >-
 
 
   Ultimately, Crafty Controller is a powerful tool for automating and managing Minecraft servers, providing a central hub that simplifies bot management and enables more efficient administration of server tasks.
+
+
+  ⚠️ Crafty Controller uses HTTPS to protect your personal data. When accessing Crafty Controller, you must explicitly type "https" in the address, for example, https://umbrel.local:18443.
+
+
+  ℹ️ Crafty Controller uses a self-signed certificate, which may trigger a browser warning like "Your connection is not private." You can safely proceed by clicking "Advanced" and then "Proceed to umbrel.local (unsafe)" or a similar option, depending on your browser.
 developer: Arcadia Technology
 website: https://craftycontrol.com/
 submitter: dennysubke
