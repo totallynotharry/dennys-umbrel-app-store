@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-glances
 name: Glances
 tagline: An eye on your system
-icon: https://i.imgur.com/7eqKgri.png
+icon: https://i.imgur.com/4T0Ff9S.png
 category: In Progress
 version: "4.3.0.8"
 port: 61208
