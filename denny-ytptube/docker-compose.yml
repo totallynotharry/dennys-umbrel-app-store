@@ -9,6 +9,7 @@ services:
   app:
     image: ghcr.io/arabcoders/ytptube:master-20250308-7a2dc8a@sha256:2048941d8a4eafeb8606aa7b341084a13644f36bcde88ab0956e98be19d240aa
     restart: on-failure
+    user: "0:0"
     environment:
       YTP_AUTH_USERNAME: admin
       YTP_AUTH_PASSWORD: umbrel
