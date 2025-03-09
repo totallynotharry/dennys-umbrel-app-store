@@ -5,7 +5,7 @@ tagline: An intuitive way to automate and manage your Minecraft server with ease
 icon: https://i.imgur.com/S9pJOPi.png
 category: gaming
 version: "4.4.7"
-port: 61208
+port: 61209
 description: >-
   Crafty Controller is an open-source, web-based interface designed to manage and control Crafty Bots, which are used for automating and managing Minecraft servers. Crafty itself is a bot framework that allows administrators to automate various tasks on Minecraft servers, from running tests to managing in-game events, controlling server settings, and much more. Crafty Controller provides a centralized platform where administrators can monitor and control these bots from one place.
 
