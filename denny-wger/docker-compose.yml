@@ -19,7 +19,7 @@ services:
       - ${APP_DATA_DIR}/data/static:/home/wger/static
       - ${APP_DATA_DIR}/data/media:/home/wger/media
     healthcheck:
-      test: wget --no-verbose --tries=1 --spider http://umbrel-2.local:8844
+      test: wget --no-verbose --tries=1 --spider http://umbrel-2.local:8955
       interval: 10s
       timeout: 5s
       start_period: 300s
