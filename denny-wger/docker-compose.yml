@@ -13,8 +13,6 @@ services:
     ports:
       - "8811:8000"
     command: tail -f /dev/null
-    networks:
-      - umbrel_network
 
   cache:
     image: redis
@@ -29,8 +27,6 @@ services:
     restart: unless-stopped
     volumes:
       - ${APP_DATA_DIR}/redis-data:/data
-    networks:
-      - umbrel_network
 
   db:
     image: postgres:15-alpine
@@ -49,17 +45,4 @@ services:
       retries: 5
       start_period: 30s
     restart: unless-stopped
-    networks:
-      - umbrel_network
 
-volumes:
-  postgres-data:
-    external: true
-  redis-data:
-    external: true
-  wger-data:
-    external: true
-
-networks:
-  umbrel_network:
-    driver: bridge
