@@ -1,65 +1,10 @@
-version: "3.7"
+version: '3.7'
+
 services:
-  web:
-    image: wger-image:latest  # Ersetze dies mit dem gewünschten Image
-    env_file:
-      - ${APP_DATA_DIR}/config/prod.env
-      - ${APP_DATA_DIR}/config/dev.env
-    volumes:
-      - type: bind
-        source: ${APP_DATA_DIR}/wger-code  # Sicherstellen, dass der Pfad existiert
-        target: /home/wger/src
-      - ${APP_DATA_DIR}/wger-data:/var/lib/wger-data  # Sicherstellen, dass der Ordner existiert
-    ports:
-      - "881:8000"  # Mappt den Port 8000 des Containers auf den Port 881 des Hosts
-    command: tail -f /dev/null
-    networks:
-      - umbrel_network
-
-  cache:
-    image: redis
-    expose:
-      - 6379
-    healthcheck:
-      test: redis-cli ping
-      interval: 10s
-      timeout: 5s
-      retries: 5
-      start_period: 30s
-    restart: unless-stopped
-    volumes:
-      - ${APP_DATA_DIR}/redis-data:/data
-    networks:
-      - umbrel_network
-
-  db:
-    image: postgres:15-alpine
+  app_proxy:
     environment:
-      - POSTGRES_USER=wger
-      - POSTGRES_PASSWORD=wger
-      - POSTGRES_DB=wger
-    volumes:
-      - ${APP_DATA_DIR}/postgres-data:/var/lib/postgresql/data/
-    expose:
-      - 5432
-    healthcheck:
-      test: pg_isready -U wger
-      interval: 10s
-      timeout: 5s
-      retries: 5
-      start_period: 30s
-    restart: unless-stopped
-    networks:
-      - umbrel_network
-
-volumes:
-  postgres-data:
-    external: true
-  redis-data:
-    external: true
-  wger-data:
-    external: true
-
-networks:
-  umbrel_network:
-    driver: bridge
+      APP_HOST: denny-wger_web_1
+      APP_PORT: 80
+  web:
+    image: wger/demo:2.3-dev@sha256:280fa2239da27dcb0c4e0d13ebe929a059b2c5f5ef707dc625931ed870d10ae4
+    restart: on-failure
