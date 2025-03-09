@@ -1,35 +1,65 @@
-version: '3.8' # Veraltete Version entfernt und auf eine unterstützte Version gesetzt
-
+version: "3.8"
 services:
   web:
-    image: denny-wger_image
-    container_name: denny-wger-web
-    networks:
-      - default
+    image: wger-image:latest  # Ersetze dies mit dem gewünschten Image
+    env_file:
+      - ${APP_DATA_DIR}/config/prod.env
+      - ${APP_DATA_DIR}/config/dev.env
     volumes:
-      - static:/path/to/static/directory # Definiert das static-Volume
+      - type: bind
+        source: ${APP_DATA_DIR}/wger-code  # Hier den Pfad zur Codebasis unter APP_DATA_DIR setzen
+        target: /home/wger/src
+      - ${APP_DATA_DIR}/wger-data:/var/lib/wger-data
     ports:
-      - "8080:8080"
-    environment:
-      - ENV_VAR=value
+      - "8811:8000"
+    command: tail -f /dev/null
+    networks:
+      - umbrel_network
+
+  cache:
+    image: redis
+    expose:
+      - 6379
+    healthcheck:
+      test: redis-cli ping
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+    volumes:
+      - ${APP_DATA_DIR}/redis-data:/data
+    networks:
+      - umbrel_network
 
   db:
-    image: postgres:latest
-    container_name: denny-wger-db
-    networks:
-      - default
-    volumes:
-      - postgres-data:/var/lib/postgresql/data # Definiert das postgres-data-Volume
+    image: postgres:15-alpine
     environment:
-      - POSTGRES_USER=example_user
-      - POSTGRES_PASSWORD=example_password
-      - POSTGRES_DB=denny_wger_db
-
-networks:
-  default:
-    external: true
-    name: custom_network_name # Ersetze durch den tatsächlichen Netzwerkname
+      - POSTGRES_USER=wger
+      - POSTGRES_PASSWORD=wger
+      - POSTGRES_DB=wger
+    volumes:
+      - ${APP_DATA_DIR}/postgres-data:/var/lib/postgresql/data/
+    expose:
+      - 5432
+    healthcheck:
+      test: pg_isready -U wger
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+    networks:
+      - umbrel_network
 
 volumes:
-  static: {} # Definition des static-Volumes
-  postgres-data: {} # Definition des postgres-data-Volumes
+  postgres-data:
+    external: true
+  redis-data:
+    external: true
+  wger-data:
+    external: true
+
+networks:
+  umbrel_network:
+    driver: bridge
