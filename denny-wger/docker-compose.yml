@@ -34,8 +34,6 @@ services:
   celery_worker:
     image: wger/server:2.3-dev@sha256:5a8c6c93fb60eb974761c5701b574ba1ea7c5a8a4604de72d1f4dd5fbc7badab
     command: /start-worker
-    env_file:
-      - ${APP_DATA_DIR}/data/config/prod.env
     volumes:
       - ${APP_DATA_DIR}/data/media:/home/wger/media
     depends_on:
@@ -47,8 +45,6 @@ services:
     command: /start-beat
     volumes:
       - ${APP_DATA_DIR}/data/celery-beat:/home/wger/beat/
-    env_file:
-      - ${APP_DATA_DIR}/data/config/prod.env
     depends_on:
       - celery_worker
     restart: on-failure
