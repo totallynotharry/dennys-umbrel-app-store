@@ -1,42 +1,43 @@
-version: "3"
+version: '3.7'
+
 services:
-  server:
+  app_proxy:
+    environment:
+      APP_HOST: denny-habitica_web_1
+      APP_PORT: 3000
+      PROXY_AUTH_ADD: "false"
+      
+  web:
     image: awinterstein/habitica-server:5.34.0@sha256:ebc2299b324cc8496bfdd4d7d2b5b5bbc555c21068751dc1bfe734deb4b0fbbf
-    restart: on-failure
     depends_on:
       - mongo
     environment:
-      - NODE_DB_URI=mongodb://mongo/habitica # this only needs to be adapted if using a separate database
-      - BASE_URL=http://umbrel-2.local:3944 # change this to the URL under which your instance will be reachable
-      - INVITE_ONLY=false # change to `true` after registration of initial users, to restrict further registrations
+      - NODE_DB_URI=mongodb://mongo/habitica
+      - BASE_URL=http://umbrel-2.local:3944
+      - INVITE_ONLY=true
       - EMAIL_SERVER_URL=mail.example.com
       - EMAIL_SERVER_PORT=587
       - EMAIL_SERVER_AUTH_USER=mail_user
       - EMAIL_SERVER_AUTH_PASSWORD=mail_password
-      - ADMIN_EMAIL=mail@example.com # the sender address to send out emails
-    ports:
-      - "3944:3000"
-    networks:
-      - habitica
-  mongo:
-    image: mongo:5@sha256:54bcd8da3ea5eec561b68c605046c55c6b304387dc4c2bf5b3a5f5064fbb7495
+      - ADMIN_EMAIL=mail@example.com
     restart: on-failure
-    hostname: mongo
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      interval: 10s
+      retries: 3
+      start_period: 30s
+      timeout: 10s
+
+  mongo:
+    image: mongo:5.0.23
+    restart: unless-stopped
     command: ["--replSet", "rs", "--bind_ip_all", "--port", "27017"]
     healthcheck:
-      test: echo "try { rs.status() } catch (err) { rs.initiate() }" | mongosh --port 27017 --quiet
+      test: ["CMD", "mongosh", "--eval", "rs.status() || rs.initiate()", "--host", "localhost"]
       interval: 10s
-      timeout: 30s
-      start_period: 0s
-      start_interval: 1s
       retries: 30
+      start_period: 5s
+      timeout: 10s
     volumes:
-      ${APP_DATA_DIR}/data/db:/data/db:rw
-      ${APP_DATA_DIR}/data/dbconf:/data/configdb
-    networks:
-      habitica:
-        aliases:
-          - mongo
-networks:
-  habitica:
-    driver: bridge
+      - ${APP_DATA_DIR}/mongo/db:/data/db:rw
+      - ${APP_DATA_DIR}/mongo/dbconf:/data/configdb
