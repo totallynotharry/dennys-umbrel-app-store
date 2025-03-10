@@ -1,3 +1,8 @@
+# ⚠️
+# Note: The Umbrel App Proxy currently does not work with this app. 
+# There are several open issues on the GitHub repository addressing this problem. 
+# You can find more information and potential solutions there.
+
 version: "3"
 services:
   server:
