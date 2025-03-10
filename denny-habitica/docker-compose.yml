@@ -23,7 +23,7 @@ services:
     networks:
       - habitica
   mongo:
-    image: mongo:8.0.5@sha256:f6164e498dbaee3966031c1ced1bfa0fd1c4961151b38a770fa6994f4b0dcae7
+    image: docker.io/mongo:5.0
     restart: on-failure
     command: ["--replSet", "rs", "--bind_ip_all", "--port", "27017"]
     healthcheck:
