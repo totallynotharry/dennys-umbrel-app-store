@@ -10,11 +10,11 @@ services:
   web:
     image: awinterstein/habitica-server:5.34.0@sha256:ebc2299b324cc8496bfdd4d7d2b5b5bbc555c21068751dc1bfe734deb4b0fbbf
     depends_on:
-      - mongo  # Mongo wird als Abhängigkeit angegeben
+      - mongo
     environment:
       - NODE_DB_URI=mongodb://mongo/habitica
       - BASE_URL=http://umbrel-2.local:3944
-      - INVITE_ONLY=false
+      - INVITE_ONLY=true
     restart: on-failure
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
