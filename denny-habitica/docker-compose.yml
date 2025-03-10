@@ -31,8 +31,8 @@ services:
       start_interval: 1s
       retries: 30
     volumes:
-      - ./db:/data/db:rw
-      - ./dbconf:/data/configdb
+      ${APP_DATA_DIR}/data/db:/data/db:rw
+      ${APP_DATA_DIR}/data/dbconf:/data/configdb
     networks:
       habitica:
         aliases:
