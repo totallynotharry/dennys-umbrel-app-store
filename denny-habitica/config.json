@@ -8,7 +8,7 @@
   "AMAZON_PAYMENTS_SELLER_ID": "SELLER_ID",
   "AMPLITUDE_KEY": "AMPLITUDE_KEY",
   "AMPLITUDE_SECRET": "AMPLITUDE_SECRET",
-  "BASE_URL": "http://localhost:3000",
+  "BASE_URL": "http://umbrel-2.local:3944",
   "CRON_SAFE_MODE": "false",
   "CRON_SEMI_SAFE_MODE": "false",
   "DISABLE_REQUEST_LOGGING": "true",
