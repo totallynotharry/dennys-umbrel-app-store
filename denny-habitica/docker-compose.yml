@@ -9,7 +9,7 @@ services:
   web:
     image: awinterstein/habitica-server:5.34.0@sha256:ebc2299b324cc8496bfdd4d7d2b5b5bbc555c21068751dc1bfe734deb4b0fbbf
     environment:
-      - NODE_DB_URI=mongodb://mongo:27017/habitica
+      - NODE_DB_URI=mongodb://mongo/habitica
       - BASE_URL=http://umbrel-2.local:3944 # change this to the URL under which your instance will be reachable
       - INVITE_ONLY=false # change to `true` after registration of initial users, to restrict further registrations
       # EMAIL_SERVER_URL=mail.example.com
