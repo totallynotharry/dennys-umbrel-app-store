@@ -11,7 +11,7 @@ services:
     depends_on:
       - mongo
     environment:
-      - NODE_DB_URI=mongodb://mongo/habitica
+      - NODE_DB_URI=mongodb://localhost:27017/habitica-dev?replicaSet=rs
       - BASE_URL=http://umbrel-2.local:3944
       - INVITE_ONLY=true
       - EMAIL_SERVER_URL=mail.example.com
