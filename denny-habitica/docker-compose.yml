@@ -6,7 +6,7 @@ services:
       APP_HOST: denny-habitica_web_1
       APP_PORT: 3000
       PROXY_AUTH_ADD: "false"
-      
+  
   web:
     image: awinterstein/habitica-server:5.34.0@sha256:ebc2299b324cc8496bfdd4d7d2b5b5bbc555c21068751dc1bfe734deb4b0fbbf
     depends_on:
