@@ -1,12 +1,11 @@
-version: '3.7'
+version: '3'
 
 services:
   app_proxy:
     environment:
       APP_HOST: denny-habitica_web_1
       APP_PORT: 3000
-      PROXY_AUTH_ADD: "false"
-      
+  
   web:
     image: awinterstein/habitica-server:5.34.0@sha256:ebc2299b324cc8496bfdd4d7d2b5b5bbc555c21068751dc1bfe734deb4b0fbbf
     depends_on:
@@ -29,15 +28,15 @@ services:
       timeout: 10s
 
   mongo:
-    image: mongo:5.0.23
-    restart: unless-stopped
+    image: mongo:5.0@sha256:54bcd8da3ea5eec561b68c605046c55c6b304387dc4c2bf5b3a5f5064fbb7495
+    restart: on-failure
     command: ["--replSet", "rs", "--bind_ip_all", "--port", "27017"]
     healthcheck:
-      test: ["CMD", "mongosh", "--eval", "rs.status() || rs.initiate()", "--host", "localhost"]
+      test: ["CMD", "mongosh", "--eval", "db.runCommand('ping')", "--host", "localhost"]
       interval: 10s
-      retries: 30
-      start_period: 5s
+      retries: 3
+      start_period: 30s
       timeout: 10s
     volumes:
       - ${APP_DATA_DIR}/mongo/db:/data/db:rw
-      - ${APP_DATA_DIR}/mongo/dbconf:/data/configdb
+      - ${APP_DATA_DIR}/mongo/dbconf:/data/configdb:rw
