@@ -55,7 +55,7 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | 38  | [Grafana](https://github.com/grafana/grafana)        | An advanced platform for logging, metrics, and application monitoring     | 3384   |
 | 39  | [Grav](https://github.com/getgrav/grav)              | A Fast, Simple, and Flexible, file-based Web-platform                     | 8888   |
 | 40  | [Grist](https://github.com/gristlabs/grist-core)     | A modern, open-source spreadsheet that goes beyond the grid               | 8484   |
-| 41  | [Habitica](https://github.com/HabitRPG/habitica))     | An RPG for your life                                                     | 3944   |
+| 41  | [Habitica](https://github.com/HabitRPG/habitica)     | An RPG for your life                                                      | 3944   |
 | 42  | [Haven](https://github.com/havenweb/haven)           | An easy way to create your own private blog                               | 3338   |
 | 43  | [Hoarder](https://github.com/hoarder-app/hoarder)    | A self-hosted bookmark everything app                                     | 3888   |
 | 44  | [IHateMoney](https://github.com/spiral-project/ihatemoney) | A simple shared budget manager web application                      | 8976   |
