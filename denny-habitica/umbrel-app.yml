@@ -21,9 +21,12 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/HabitRPG/habitica
 support: https://github.com/HabitRPG/habitica/issues
 gallery:
-  - https://i.imgur.com/GBXSUSc.png
-  - https://i.imgur.com/GBXSUSc.png
-  - https://i.imgur.com/GBXSUSc.png
+  - https://i.imgur.com/ZIZSLYz.png
+  - https://i.imgur.com/yb7U9Yt.png
+  - https://i.imgur.com/24iNekZ.png
+  - https://i.imgur.com/wg5BcLp.png
+  - https://i.imgur.com/OJBhBsV.png
+  - https://i.imgur.com/WN0QPzJ.png
 releaseNotes: >-
   Version v5.34.0, released in 2025, includes new content like mystery items, quests, and pets. Additionally, locale files have been updated.
 dependencies:
