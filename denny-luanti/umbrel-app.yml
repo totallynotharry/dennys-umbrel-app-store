@@ -5,7 +5,7 @@ tagline: A limitless playground for builders, adventurers, and creators
 icon: https://i.imgur.com/IAUaNZn.png
 category: In Progress
 version: "5.11.0"
-port: 3777
+port: 30000
 description: >-
   🌍 Luanti is an open-source voxel game engine that offers a vast, immersive world filled with endless possibilities. Whether you want to explore, build, survive, or create, Luanti gives you the freedom to play your way. With massive maps stretching 62,000 blocks in every direction, the world feels truly limitless, inviting you to dig deep into the earth or build sky-high structures without running out of space. The engine supports both single-player adventures and multiplayer experiences, allowing you to play locally with friends or join online servers filled with other players.
 
