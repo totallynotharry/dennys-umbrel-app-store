@@ -34,7 +34,3 @@ services:
       - "30002:8080"  # Web-Interface über Port 30002 erreichbar
     depends_on:
       - web
-
-networks:
-  default:
-    driver: bridge
