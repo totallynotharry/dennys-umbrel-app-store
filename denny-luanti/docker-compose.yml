@@ -16,19 +16,13 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/minetest_conf:/config/.minetest
     ports:
-      - "30000:30000/udp"
       - "30001:30001/tcp"  # Web-UI-Port
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:30000"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-
+      
   webui:
     image: ghcr.io/minetest-tools/minetest-webui:latest
     restart: unless-stopped
     environment:
-      - MINETEST_HOST=web
+      - MINETEST_HOST=denny-luanti_web_1
       - MINETEST_PORT=30000
     ports:
       - "30002:8080"  # Web-Interface über Port 30002 erreichbar
