@@ -1,15 +1,28 @@
-version: '3.7'
-
+version: "3.2"
 services:
-  web:
-    image: linuxserver/luanti:5.11.0@sha256:007733ec735adc95e6da263c6165a52d29eee35cf6865433f91a105bd3b3d064
-    restart: on-failure
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/Berlin
-      - "CLI_ARGS=--port 30000 --gameid devtest"
-    volumes:
-      - ${APP_DATA_DIR}/data/minetest_conf:/config/.minetest
+  minetest_server:
+    image: miney/mineysocket
     ports:
+      - "29999:29999/tcp"
       - "30000:30000/udp"
+    environment:
+      MT_MAX_USERS: 200
+      MT_MG_NAME: flat
+      MT_MG_FLAGS: nocaves,nodungeons,light,nodecorations,biomes
+      MT_MGFLAT_GROUND_LEVEL: -1
+      MT_WATER_LEVEL: -2
+      MT_CREATIVE_MODE: "true"
+      MT_STATIC_SPAWNPOINT: (0,0,0)
+
+  minetest_client:
+    image: miney/minetest-client
+    depends_on:
+      - "minetest_server"
+    environment:
+      SERVER: minetest_server
+      PORT: 30000
+      PLAYERNAME: RANDOM
+      RANDOM_INPUT: 1
+##      VNC: 1
+#    ports:
+#      - "5901:5901/tcp"
