@@ -1,11 +1,6 @@
 version: '3.7'
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: denny-luanti_web_1
-      APP_PORT: 30000
-
   web:
     image: linuxserver/luanti:5.11.0@sha256:007733ec735adc95e6da263c6165a52d29eee35cf6865433f91a105bd3b3d064
     restart: on-failure
@@ -13,5 +8,8 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Berlin
+      - "CLI_ARGS=--port 30000 --gameid devtest"
     volumes:
       - ${APP_DATA_DIR}/data/minetest_conf:/config/.minetest
+    ports:
+      - "30000:30000/udp"
