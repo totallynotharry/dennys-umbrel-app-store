@@ -8,23 +8,10 @@ services:
 
   web:
     image: linuxserver/luanti:5.11.0@sha256:007733ec735adc95e6da263c6165a52d29eee35cf6865433f91a105bd3b3d064
-    restart: unless-stopped
+    restart: on-failure
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Berlin
     volumes:
       - ${APP_DATA_DIR}/data/minetest_conf:/config/.minetest
-    ports:
-      - "30001:30001/tcp"  # Web-UI-Port
-      
-  webui:
-    image: ghcr.io/minetest-tools/minetest-webui:latest
-    restart: unless-stopped
-    environment:
-      - MINETEST_HOST=denny-luanti_web_1
-      - MINETEST_PORT=30000
-    ports:
-      - "30002:8080"  # Web-Interface über Port 30002 erreichbar
-    depends_on:
-      - web
