@@ -1,28 +1,11 @@
-version: "3.2"
-services:
-  minetest_server:
-    image: miney/mineysocket
-    ports:
-      - "29999:29999/tcp"
-      - "30000:30000/udp"
-    environment:
-      MT_MAX_USERS: 200
-      MT_MG_NAME: flat
-      MT_MG_FLAGS: nocaves,nodungeons,light,nodecorations,biomes
-      MT_MGFLAT_GROUND_LEVEL: -1
-      MT_WATER_LEVEL: -2
-      MT_CREATIVE_MODE: "true"
-      MT_STATIC_SPAWNPOINT: (0,0,0)
+version: '3.7'
 
-  minetest_client:
-    image: miney/minetest-client
-    depends_on:
-      - "minetest_server"
-    environment:
-      SERVER: minetest_server
-      PORT: 30000
-      PLAYERNAME: RANDOM
-      RANDOM_INPUT: 1
-##      VNC: 1
-#    ports:
-#      - "5901:5901/tcp"
+services:
+  web:
+    image: ghcr.io/luanti-org/luanti:5.11.0@sha256:8c3aead3aeb9254edad54ec620af26b600c48792fe5f76543f83d7a8b909bc30
+    restart: on-failure
+    user: "1000:1000"
+    volumes:
+      - ${APP_DATA_DIR}/data/minetest_conf:/etc/minetest:rw
+    ports:
+      - "30000:30000/udp"
