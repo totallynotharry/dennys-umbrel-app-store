@@ -12,3 +12,5 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/minetest_data:/var/lib/minetest/:rw
       - ${APP_DATA_DIR}/data/minetest_conf:/etc/minetest/:rw
+    ports:
+      - "30000:30000/udp"
