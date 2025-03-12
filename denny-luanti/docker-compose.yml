@@ -10,5 +10,5 @@ services:
     image: ghcr.io/luanti-org/luanti:5.11.0@sha256:8c3aead3aeb9254edad54ec620af26b600c48792fe5f76543f83d7a8b909bc30
     restart: on-failure
     volumes:
-      - ${APP_DATA_DIR}/data/minetest_data:/var/lib/minetest/
-      - ${APP_DATA_DIR}/data/minetest_conf:/etc/minetest/
+      - ${APP_DATA_DIR}/data/minetest_data:/var/lib/minetest/:rw
+      - ${APP_DATA_DIR}/data/minetest_conf:/etc/minetest/:rw
