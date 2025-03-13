@@ -23,6 +23,9 @@ description: >-
 
 
   Overall, YTPTube serves as a comprehensive and feature-rich tool for managing video downloads efficiently. With its advanced options and user-friendly design, it provides an all-in-one solution for anyone looking to download and organize online video content with ease.
+
+
+  🔑 The username is 'admin' and the password is 'umbrel'.
 developer: Abdulmohsen
 website: https://github.com/arabcoders/ytptube
 submitter: dennysubke
@@ -30,9 +33,11 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/arabcoders/ytptube
 support: https://github.com/arabcoders/ytptube/issues
 gallery:
-  - https://i.imgur.com/YYIJcGA.png
-  - https://i.imgur.com/YYIJcGA.png
-  - https://i.imgur.com/YYIJcGA.png
+  - https://i.imgur.com/U6AH98V.png
+  - https://i.imgur.com/twefPP4.png
+  - https://i.imgur.com/8XHUxEV.png
+  - https://i.imgur.com/5ldxSa4.png
+  - https://i.imgur.com/Q49sWfK.png
 releaseNotes: >-
   The latest update introduces the ability to embed content while it is still being downloaded and allows specifying a preset when adding entries via the API. Additionally, yt-dlp console access has been disabled by default for security reasons, though it can be re-enabled via a new configuration variable. 
   
@@ -40,5 +45,5 @@ releaseNotes: >-
   Other changes include improved error handling, priority adjustments for URL options over presets, and general code cleanup.
 dependencies:
 path: ""
-defaultUsername: ""
-defaultPassword: ""
+defaultUsername: "admin"
+defaultPassword: "umbrel"
