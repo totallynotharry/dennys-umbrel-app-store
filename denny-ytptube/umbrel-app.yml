@@ -3,7 +3,7 @@ id: denny-ytptube
 name: YTPTube
 tagline: A WebGUI for yt-dlp with concurrent downloads support
 icon: https://i.imgur.com/MplCCIc.png
-category: In Progress
+category: media
 version: "2025.03.08"
 port: 8562
 description: >-
