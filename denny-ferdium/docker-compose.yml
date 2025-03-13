@@ -28,7 +28,7 @@ services:
       - IS_CREATION_ENABLED=true
       - IS_DASHBOARD_ENABLED=true
       - IS_REGISTRATION_ENABLED=true
-      - CONNECT_WITH_FRANZ=false
+      - CONNECT_WITH_FRANZ=true
       - DATA_DIR=/data
       - JWT_USE_PEM=true
     restart: on-failure
