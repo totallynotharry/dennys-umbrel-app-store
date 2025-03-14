@@ -5,7 +5,7 @@ tagline: A self-hosted container management system with AI-powered automation
 icon: https://i.imgur.com/q320SZ4.png
 category: In Progress
 version: "2.0.0"
-port: 5174
+port: 8555
 description: >-
   🤖 Wagmios is a self-hosted container management system designed with AI-powered automation to streamline container management. At its core is W.I.L.L.O.W (Workflow Intelligent Localized Learning & Optimized Worker), an AI-driven assistant that guides users through the setup and management of containers while helping to optimize workflows.
 
