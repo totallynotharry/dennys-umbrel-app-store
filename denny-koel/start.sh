@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# Warte darauf, dass die Datenbankverbindung verfügbar ist
+# Warten, bis die Datenbank bereit ist
 until pg_isready -h database -p 5432 -U koel; do
-  echo "Warte auf Datenbankverbindung..."
+  echo "Warte auf die Datenbank..."
   sleep 2
 done
 
-# Führe die Laravel-Initialisierungen aus
+# Laravel koeln:init und key:generate
 php artisan koel:init
 php artisan key:generate
 
-# Starte den PHP-FPM Webserver
+# Starte den Webserver
 php-fpm
