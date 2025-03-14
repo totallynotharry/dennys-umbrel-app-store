@@ -30,3 +30,21 @@ services:
       - POSTGRES_DB=koel
       - POSTGRES_USER=koel
       - POSTGRES_PASSWORD=admin
+
+  # Helper service to initialize and migrate the database
+  koel_init:
+    image: phanan/koel:7.2.1@sha256:f3be4da3fde5e5b46d8a215860e11db8eb38e0320633abc3b8e6235bd4322a2d
+    depends_on:
+      - server
+    entrypoint: ["php", "artisan", "koel:init"]
+    environment:
+      - DB_CONNECTION=pgsql
+      - DB_HOST=database
+      - DB_PORT=5432
+      - DB_USERNAME=koel
+      - DB_PASSWORD=admin
+      - DB_DATABASE=koel
+    volumes:
+      - ${APP_DATA_DIR}/data/music:/music:rw
+      - ${APP_DATA_DIR}/data/covers:/var/www/html/public/img/covers:rw
+      - ${APP_DATA_DIR}/data/search_index:/var/www/html/storage/search-indexes:rw
