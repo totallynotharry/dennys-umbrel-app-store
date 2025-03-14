@@ -8,7 +8,6 @@ services:
 
   web:
     image: itzmizzle/wagmi:frontend-latest
-    container_name: wagmios-frontend
     depends_on:
       - backend
     environment:
@@ -21,7 +20,6 @@ services:
 
   backend:
     image: itzmizzle/wagmi:backend-latest
-    container_name: wagmios-backend
     ports:
       - "8080:8080"
     volumes:
@@ -35,7 +33,6 @@ services:
 
   willow:
     image: n8nio/n8n
-    container_name: willow
     restart: on-failure
     ports:
       - "5678:5678"
@@ -57,7 +54,6 @@ services:
 
   postgres:
     image: postgres:latest
-    container_name: postgres
     restart: on-failure
     ports:
       - "5443:5432"
