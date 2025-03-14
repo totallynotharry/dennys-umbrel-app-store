@@ -6,7 +6,7 @@ services:
     depends_on:
       - database
     ports:
-      - 80:80
+      - 8333:80
     environment:
       - DB_CONNECTION=mysql
       - DB_HOST=database
