@@ -12,7 +12,7 @@ services:
     depends_on:
       - backend
     environment:
-      - VITE_API_URL=http://umbrel-2.local:8080
+      - VITE_API_URL=http://umbrel-2.local:5174
     networks:
       - wagmios-network
     restart: on-failure
