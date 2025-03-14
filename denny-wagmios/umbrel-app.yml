@@ -1,0 +1,38 @@
+manifestVersion: 1
+id: denny-wagmios
+name: Wagmios
+tagline: A self-hosted container management system with AI-powered automation
+icon: https://i.imgur.com/2t4Qswg.png
+category: In Progress
+version: "2.0.0"
+port: 8555
+description: >-
+  🤖 Wagmios is a self-hosted container management system designed with AI-powered automation to streamline container management. At its core is W.I.L.L.O.W (Workflow Intelligent Localized Learning & Optimized Worker), an AI-driven assistant that guides users through the setup and management of containers while helping to optimize workflows.
+
+
+  The system allows you to host everything on your own infrastructure, providing full control and security over your data. Wagmios features a customizable interface, enabling users to bookmark their favorite websites and applications for quick access.
+
+
+  Wagmios includes a Docker marketplace UI, where users can browse, install, and manage containers with ease. This simple interface simplifies handling Docker containers and allows for quick deployment of various applications or services. The integration of W.I.L.L.O.W further enhances this process by offering suggestions to improve container configurations, recommending automation, and even suggesting new containers based on the user’s needs.
+
+
+  Another key feature of Wagmios is support for popular integrations like Home Assistant and Jenkins, allowing it to be used for both home automation and CI/CD pipelines. These integrations make Wagmios a more versatile platform that continuously evolves to add new features and enhance the user experience.
+
+
+  Overall, Wagmios combines the benefits of self-hosted infrastructure with the power of AI to not only simplify but also automate and optimize container management. W.I.L.L.O.W plays a central role as a personal assistant, learning over time and constantly working to improve the user's workflows.
+developer: itzmizzle
+website: https://os.wagmilabs.fun/
+submitter: dennysubke
+submission: https://github.com/getumbrel/umbrel-apps/pull/
+repo: https://github.com/mentholmike/wagmios
+support: https://github.com/mentholmike/wagmios/issues
+gallery:
+  - https://i.imgur.com/aYbaR2g.png
+  - https://i.imgur.com/aYbaR2g.png
+  - https://i.imgur.com/aYbaR2g.pngg
+releaseNotes: >-
+  Wagmios v2.0.0 is the latest stable version, now fully containerized. There’s no need for backend installations - just Docker. The update includes a light mode, added ports to the container view, styling improvements for better visibility in light mode, and a smaller footprint. The older version is still available for use if preferred.
+dependencies:
+path: ""
+defaultUsername: ""
+defaultPassword: ""
