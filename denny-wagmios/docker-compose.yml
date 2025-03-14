@@ -1,7 +1,12 @@
 version: '3.7'
 
 services:
-  frontend:
+  app_proxy:
+    environment:
+      APP_HOST: denny-wagmi_web_1
+      APP_PORT: 5174
+
+  web:
     image: itzmizzle/wagmi:frontend-latest
     container_name: wagmios-frontend
     ports:
