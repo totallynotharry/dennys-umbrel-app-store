@@ -21,6 +21,7 @@ services:
       - ${APP_DATA_DIR}/data/music:/music:rw
       - ${APP_DATA_DIR}/data/covers:/var/www/html/public/img/covers:rw
       - ${APP_DATA_DIR}/data/search_index:/var/www/html/storage/search-indexes:rw
+    command: bash -c "php artisan koel:init && php artisan key:generate && php-fpm"
 
   database:
     image: postgres:13@sha256:a4c9ad5add8a2e4c86e123bfdaf940d120c0541b782f317ab4e630ab3d391650
