@@ -23,7 +23,7 @@ services:
       - "8080:8080"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - "${APP_DATA_DIR}/data/backend_data:/app/data"
+      - ${APP_DATA_DIR}/data/backend_data:/app/data
     environment:
       - PORT=8080
       - WILLOW_URL=http://willow:5678
@@ -46,7 +46,7 @@ services:
       - DB_POSTGRESDB_USER=willow
       - DB_POSTGRESDB_PASSWORD=wagmios
     volumes:
-      - "${APP_DATA_DIR}/data/willow_data:/home/node/.n8n"
+      - willow_data:/home/node/.n8n
     depends_on:
       - postgres
     networks:
@@ -63,7 +63,7 @@ services:
       - POSTGRES_PASSWORD=wagmios
       - POSTGRES_DB=willow_memories
     volumes:
-      - "${APP_DATA_DIR}/data/postgres_data:/var/lib/postgresql/data"
+      - ${APP_DATA_DIR}/data/postgres_data:/var/lib/postgresql/data
     networks:
       - wagmios-network
 
