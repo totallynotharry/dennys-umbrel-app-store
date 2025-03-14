@@ -22,6 +22,7 @@ services:
       - ${APP_DATA_DIR}/data/music:/music:rw
       - ${APP_DATA_DIR}/data/covers:/var/www/html/public/img/covers:rw
       - ${APP_DATA_DIR}/data/search_index:/var/www/html/storage/search-indexes:rw
+    entrypoint: /bin/sh -c "php artisan koel:init && apache2-foreground"  # Datenbankinitialisierung und Start von Apache
 
   database:
     image: mariadb:10.11@sha256:3958f2df725a9ebdabd0ae6a0c0a841da8e45194b36a33d8bd83abb7dd6c034a
