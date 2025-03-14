@@ -17,6 +17,11 @@ services:
       - DB_USERNAME=koel
       - DB_PASSWORD=admin
       - DB_DATABASE=koel
+      - MEDIA_PATH=/music
+      - APP_ENV=production
+      - ADMIN_EMAIL=admin@example.com
+      - ADMIN_NAME=Admin
+      - ADMIN_PASSWORD=admin123
     volumes:
       - ${APP_DATA_DIR}/data/music:/music:rw
       - ${APP_DATA_DIR}/data/covers:/var/www/html/public/img/covers:rw
@@ -31,12 +36,12 @@ services:
       - POSTGRES_USER=koel
       - POSTGRES_PASSWORD=admin
 
-  # Helper service to initialize and migrate the database
   koel_init:
     image: phanan/koel:7.2.1@sha256:f3be4da3fde5e5b46d8a215860e11db8eb38e0320633abc3b8e6235bd4322a2d
     depends_on:
       - server
-    entrypoint: ["php", "artisan", "koel:init"]
+    entrypoint: >
+      sh -c "php artisan koel:init --no-interaction && exit 0"
     environment:
       - DB_CONNECTION=pgsql
       - DB_HOST=database
@@ -44,6 +49,11 @@ services:
       - DB_USERNAME=koel
       - DB_PASSWORD=admin
       - DB_DATABASE=koel
+      - MEDIA_PATH=/music
+      - APP_ENV=production
+      - ADMIN_EMAIL=admin@example.com
+      - ADMIN_NAME=Admin
+      - ADMIN_PASSWORD=admin123
     volumes:
       - ${APP_DATA_DIR}/data/music:/music:rw
       - ${APP_DATA_DIR}/data/covers:/var/www/html/public/img/covers:rw
