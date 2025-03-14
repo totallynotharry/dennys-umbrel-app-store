@@ -3,7 +3,7 @@ version: '3.7'
 services:
   app_proxy:
     environment:
-      APP_HOST: denny-wagmi_web_1
+      APP_HOST: denny-wagmios_web_1
       APP_PORT: 5174
 
   web:
