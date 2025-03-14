@@ -46,7 +46,7 @@ services:
       - DB_POSTGRESDB_USER=willow
       - DB_POSTGRESDB_PASSWORD=wagmios
     volumes:
-      - ${APP_DATA_DIR}/willow_data:/home/node/.n8n
+      - willow_data:/home/node/.n8n
     depends_on:
       - postgres
     networks:
