@@ -9,8 +9,6 @@ services:
   web:
     image: itzmizzle/wagmi:frontend-latest
     container_name: wagmios-frontend
-    ports:
-      - "5174:5174"
     depends_on:
       - backend
     environment:
