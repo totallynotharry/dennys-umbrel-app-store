@@ -12,7 +12,7 @@ services:
       - VITE_API_URL=http://umbrel-2.local:8080
     networks:
       - wagmios-network
-    restart: unless-stopped
+    restart: on-failure
     volumes:
       - frontend_data:/app/data
 
@@ -23,7 +23,7 @@ services:
       - "8080:8080"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - backend_data:/app/data
+      - "${APP_DATA_DIR}/data/backend_data:/app/data
     environment:
       - PORT=8080
       - WILLOW_URL=http://willow:5678
@@ -33,7 +33,7 @@ services:
   willow:
     image: n8nio/n8n
     container_name: willow
-    restart: always
+    restart: on-failure
     ports:
       - "5678:5678"
     environment:
@@ -46,7 +46,7 @@ services:
       - DB_POSTGRESDB_USER=willow
       - DB_POSTGRESDB_PASSWORD=wagmios
     volumes:
-      - willow_data:/home/node/.n8n
+      - "${APP_DATA_DIR}/data/willow_data:/home/node/.n8n
     depends_on:
       - postgres
     networks:
@@ -55,7 +55,7 @@ services:
   postgres:
     image: postgres:latest
     container_name: postgres
-    restart: always
+    restart: on-failure
     ports:
       - "5443:5432"
     environment:
@@ -63,7 +63,7 @@ services:
       - POSTGRES_PASSWORD=wagmios
       - POSTGRES_DB=willow_memories
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - "${APP_DATA_DIR}/data/postgres_data:/var/lib/postgresql/data
     networks:
       - wagmios-network
 
