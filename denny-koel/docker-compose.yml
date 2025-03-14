@@ -2,7 +2,7 @@ version: '3'
 
 services:
   koel:
-    image: phanan/koel:7.2.1@sha256:f3be4da3fde5e5b46d8a215860e11db8eb38e0320633abc3b8e6235bd4322a2d
+    image: phanan/koel:7.2.0@sha256:f9e23069a4f90b2ac2dfde2ce05e788a1c362d08b0494bc7eaead377572b209f
     depends_on:
       - database
     ports:
