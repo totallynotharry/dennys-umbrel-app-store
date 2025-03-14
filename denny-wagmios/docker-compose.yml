@@ -19,7 +19,7 @@ services:
   backend:
     image: itzmizzle/wagmi:backend-latest@sha256:f043af172e87ab8ee8cc2c33dd72b5300b7342120cf90b3985becea0e92530ab #only latest tag
     ports:
-      - "8556:8080"
+      - "8080:8080"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ${APP_DATA_DIR}/backend_data:/app/data
