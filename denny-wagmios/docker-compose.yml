@@ -19,13 +19,13 @@ services:
   backend:
     image: itzmizzle/wagmi:backend-latest@sha256:f043af172e87ab8ee8cc2c33dd72b5300b7342120cf90b3985becea0e92530ab #only latest tag
     ports:
-      - "8080:8080"
+      - "8556:8080"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ${APP_DATA_DIR}/backend_data:/app/data
     environment:
       - PORT=8080
-      - WILLOW_URL=http://willow:5678
+      - WILLOW_URL=http://umbrel-2.local:5678
 
   willow:
     image: n8nio/n8n:1.82.3@sha256:311aa42efcf79d204475fed75b98a8b82a231901729fc38b4fce51f3159031e8
@@ -48,7 +48,6 @@ services:
 
   postgres:
     image: postgres:14.17@sha256:c0e14efd7eaf4d83e443b6e7047ddde6465edbbbcc28ae770d9f5398abba1969
-    container_name: postgres
     restart: always
     ports:
       - "5443:5432"
