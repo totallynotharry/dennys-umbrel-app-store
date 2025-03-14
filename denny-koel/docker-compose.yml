@@ -1,12 +1,7 @@
-version: '3.7'
+version: '3'
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: denny-koel_server_1
-      APP_PORT: 80
-
-  server:
+  koel:
     image: phanan/koel:7.2.1@sha256:f3be4da3fde5e5b46d8a215860e11db8eb38e0320633abc3b8e6235bd4322a2d
     depends_on:
       - database
@@ -32,3 +27,13 @@ services:
       - MYSQL_DATABASE=koel
       - MYSQL_USER=koel
       - MYSQL_PASSWORD=umbrel
+
+volumes:
+  db:
+    driver: local
+  music:
+    driver: local
+  covers:
+    driver: local
+  search_index:
+    driver: local
