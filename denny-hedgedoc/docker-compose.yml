@@ -15,4 +15,4 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
-      - CMD_DOMAIN=umbrel-2.local
+      - CMD_DOMAIN=umbrel-2.local:3456
