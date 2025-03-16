@@ -12,11 +12,16 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
     environment:
+      - TZ=Europe/Berlin
       - NODE_ENV=production
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
       - CMD_DOMAIN=umbrel-2.local:3456
+      - CMD_URL_ADDPORT=false
+      - CMD_PROTOCOL_USESSL=false
+      - CMD_PORT=3000
+      - CMD_ALLOW_ORIGIN=*
       - DB_HOST=db
       - DB_PORT=3306
       - DB_USER=hedgedocuser
@@ -28,7 +33,7 @@ services:
   db:
     image: mariadb:11.4-noble
     environment:
-      - TZ=Europe/Bucharest
+      - TZ=Europe/Berlin
       - MYSQL_ROOT_PASSWORD=rootpass
       - MYSQL_DATABASE=hedgedoc
       - MYSQL_USER=hedgedocuser
