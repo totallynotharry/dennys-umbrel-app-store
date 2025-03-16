@@ -28,7 +28,8 @@ services:
       - DB_PASS=hedgedocpass
       - DB_NAME=hedgedoc
     depends_on:
-      - db
+      db:
+        condition: service_started
 
   db:
     image: mariadb:11.4-noble
