@@ -26,9 +26,9 @@ services:
       - CMD_SESSION_SECRET=uQK8isBS24wvfaATVj2FBA==
       - DB_HOST=denny-hedgedoc_db_1
       - DB_PORT=3306
-      - DB_USER=hedgedocuser
-      - DB_PASS=hedgedocpass
-      - DB_NAME=hedgedoc
+      - DB_USER=admin
+      - DB_PASS=umbrel
+      - DB_NAME=umbrel_hedgedoc
     depends_on:
       db:
         condition: service_started
@@ -38,9 +38,9 @@ services:
     environment:
       - TZ=Europe/Berlin
       - MYSQL_ROOT_PASSWORD=rootpass
-      - MYSQL_DATABASE=hedgedoc
-      - MYSQL_USER=hedgedocuser
-      - MYSQL_PASSWORD=hedgedocpass
+      - MYSQL_DATABASE=umbrel_hedgedoc
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=umbrel
     volumes:
       - ${APP_DATA_DIR}/data/db:/var/lib/mysql:rw
     restart: on-failure
