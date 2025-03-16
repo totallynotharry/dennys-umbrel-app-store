@@ -21,7 +21,7 @@ services:
       - CMD_PROTOCOL_USESSL=false
       - CMD_PORT=3000
       - CMD_ALLOW_ORIGIN=['localhost']
-      # CMD_SESSION_SECRET=uQK8isBS24wvfaATVj2FBA==  # Session Secret hier definiert
+      - CMD_SESSION_SECRET=uQK8isBS24wvfaATVj2FBA==
       - DB_HOST=db
       - DB_PORT=3306
       - DB_USER=hedgedocuser
@@ -29,7 +29,7 @@ services:
       - DB_NAME=hedgedoc
     depends_on:
       db:
-        condition: service_healthy  # Warten bis die DB gesund ist
+        condition: service_started
 
   db:
     image: mariadb:11.4-noble@sha256:5dfb3093333fa0ea53194ddef0a2bfa21d3b1e1353bd228b22610cd6fc0c04da
@@ -42,7 +42,3 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/db:/var/lib/mysql:rw
     restart: on-failure
-    healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-prootpass"]
-      interval: 10s
-      retries: 5
