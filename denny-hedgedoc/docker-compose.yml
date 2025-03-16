@@ -21,7 +21,7 @@ services:
       - CMD_PROTOCOL_USESSL=false
       - CMD_PORT=3000
       - CMD_ALLOW_ORIGIN=['localhost']
-      - CMD_SESSION_SECRET=uQK8isBS24wvfaATVj2FBA==  # Session Secret hier definiert
+      # CMD_SESSION_SECRET=uQK8isBS24wvfaATVj2FBA==  # Session Secret hier definiert
       - DB_HOST=db
       - DB_PORT=3306
       - DB_USER=hedgedocuser
