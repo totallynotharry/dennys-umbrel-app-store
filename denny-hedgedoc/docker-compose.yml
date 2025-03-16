@@ -18,7 +18,7 @@ services:
       - NODE_ENV=production
       - PUID=1000
       - PGID=1000
-      - CMD_DOMAIN=localhost
+      - CMD_DOMAIN=umbrel-2.local
       - CMD_URL_ADDPORT=false
       - CMD_PROTOCOL_USESSL=false
       - CMD_PORT=3000
