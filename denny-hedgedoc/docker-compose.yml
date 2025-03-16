@@ -6,36 +6,13 @@ services:
       APP_HOST: denny-hedgedoc_web_1
       APP_PORT: 3000
 
-  db:
-    image: mariadb:10.11@sha256:79cf033abf9089f27dd4c3e831cbef83048a52d6f52783930b647c56224d95c3
-    restart: on-failure
-    environment:
-      - MYSQL_ROOT_PASSWORD=umbrel
-      - MYSQL_DATABASE=hedgedoc
-      - MYSQL_USER=hedgedocuser
-      - MYSQL_PASSWORD=hedgedocpass
-    volumes:
-      - ${APP_DATA_DIR}/data/db:/var/lib/mysql:rw
-
   web:
     image: linuxserver/hedgedoc:1.10.1@sha256:16d21ebfd4b7867cb0e712027c31df6316cc276ae3b11afb538f494e1487e082
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
     environment:
-      - TZ=Europe/Berlin
-      - NODE_ENV=production
       - PUID=1000
       - PGID=1000
-      - DB_HOST=db
-      - DB_PORT=3306
-      - DB_USER=hedgedocuser
-      - DB_PASS=hedgedocpass
-      - DB_NAME=hedgedoc
+      - TZ=Etc/UTC
       - CMD_DOMAIN=umbrel-2.local
-      - CMD_URL_ADDPORT=true
-      - CMD_PROTOCOL_USESSL=true
-      - CMD_PORT=3456
-      - CMD_ALLOW_ORIGIN=*
-    depends_on:
-      - db
