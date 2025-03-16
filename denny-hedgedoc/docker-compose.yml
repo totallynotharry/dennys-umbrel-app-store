@@ -26,7 +26,7 @@ services:
       - CMD_CONFIG_FILE=${APP_DATA_DIR}/data/config/config.json
       - CMD_DB_URL=mysql://${DB_USER}:${DB_PASS}@${DB_HOST}:${DB_PORT}/${DB_NAME}
       - CMD_SESSION_SECRET=uQK8isBS24wvfaATVj2FBA==
-      - DB_HOST=db
+      - DB_HOST=denny-hedgedoc_db_1
       - DB_PORT=3306
       - DB_USER=hedgedocuser
       - DB_PASS=hedgedocpass
