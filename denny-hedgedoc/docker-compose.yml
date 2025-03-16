@@ -16,3 +16,22 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
       - CMD_DOMAIN=umbrel-2.local:3456
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_USER=hedgedocuser
+      - DB_PASS=hedgedocpass
+      - DB_NAME=hedgedoc
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:11.4-noble
+    environment:
+      - TZ=Europe/Bucharest
+      - MYSQL_ROOT_PASSWORD=rootpass
+      - MYSQL_DATABASE=hedgedoc
+      - MYSQL_USER=hedgedocuser
+      - MYSQL_PASSWORD=hedgedocpass
+    volumes:
+      - ${APP_DATA_DIR}/data/db:/var/lib/mysql:rw
+    restart: on-failure
