@@ -7,7 +7,7 @@
   },
   "db": {
     "dialect": "mysql",
-    "host": "denny-hedgedoc_db_1",
+    "host": "db",
     "port": 3306,
     "database": "hedgedoc",
     "username": "hedgedocuser",
