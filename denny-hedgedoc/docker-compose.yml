@@ -32,12 +32,10 @@ services:
       - CMD_DB_URL=mysql://admin:umbrel@db:3306/umbrel_hedgedoc
     depends_on:
       db:
-        condition: service_started
+        condition: service_healthy
 
   db:
     image: mariadb:11.8-noble-rc@sha256:ce3ce0a61f9cec258cc95f3dcebd0eaebe012712aa3d546f374159dfc799bbc8
-    ports:
-      - "3396:3306"
     environment:
       - TZ=Europe/Berlin
       - MYSQL_ROOT_PASSWORD=rootpass
@@ -47,3 +45,7 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/db:/var/lib/mysql:rw
     restart: on-failure
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "--host=localhost", "--user=admin", "--password=umbrel"]
+      interval: 10s
+      retries: 5
