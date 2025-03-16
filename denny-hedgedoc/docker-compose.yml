@@ -23,7 +23,8 @@ services:
       - CMD_SESSION_SECRET=XjL+Z6Jq8nBQXvFrOb1SajCcKcmqH6PWaaEbkO3HB/3iRueYs0qqEiJQ4C/TEsmE
       - UPLOADS_MODE=0755
     depends_on:
-      - database
+      db:
+        condition: service_started
 
   database:
     image: mariadb:11.8-noble-rc@sha256:ce3ce0a61f9cec258cc95f3dcebd0eaebe012712aa3d546f374159dfc799bbc8
