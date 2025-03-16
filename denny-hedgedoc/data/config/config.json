@@ -10,7 +10,7 @@
     "host": "denny-hedgedoc_db_1",
     "port": 3306,
     "database": "hedgedoc",
-    "username": "user",
-    "password": "password"
+    "username": "hedgedocuser",
+    "password": "hedgedocpass"
   }
 }
