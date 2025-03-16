@@ -12,6 +12,7 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
     environment:
+      - NODE_ENV=production
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
