@@ -10,7 +10,7 @@ services:
     image: quay.io/hedgedoc/hedgedoc:1.10.2@sha256:248d964e9a3c32ebf531847063112c51324474e7cb2393bbf615d82341b64e69
     restart: on-failure
     volumes:
-      - ${APP_DATA_DIR}/data/config:/config:rw
+      - ${APP_DATA_DIR}/data/uploads:/hedgedoc/public/uploads
     healthcheck:
       test:  test: wget --no-verbose --tries=1 --spider http://localhost:3000 || exit 1
     environment:
