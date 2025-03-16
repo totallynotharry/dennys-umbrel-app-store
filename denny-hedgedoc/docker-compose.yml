@@ -24,8 +24,8 @@ services:
       - CMD_PORT=3000
       - CMD_ALLOW_ORIGIN=['localhost']
       - CMD_SESSION_SECRET=uQK8isBS24wvfaATVj2FBA==
-      - DB_HOST=db  # Verwendung des Service-Namens "db"
-      - DB_PORT=3306
+      - DB_HOST=db
+      - DB_PORT=5432  # Standard-PostgreSQL-Port
       - DB_USER=admin
       - DB_PASS=umbrel
       - DB_NAME=umbrel_hedgedoc
@@ -34,13 +34,12 @@ services:
         condition: service_started
 
   db:
-    image: mariadb:11.4-noble@sha256:5dfb3093333fa0ea53194ddef0a2bfa21d3b1e1353bd228b22610cd6fc0c04da
+    image: postgres:13  # PostgreSQL-Image
     environment:
       - TZ=Europe/Berlin
-      - MYSQL_ROOT_PASSWORD=rootpass
-      - MYSQL_DATABASE=umbrel_hedgedoc
-      - MYSQL_USER=admin
-      - MYSQL_PASSWORD=umbrel
+      - POSTGRES_USER=admin  # PostgreSQL Benutzername
+      - POSTGRES_PASSWORD=umbrel  # PostgreSQL Passwort
+      - POSTGRES_DB=umbrel_hedgedoc  # Datenbankname
     volumes:
-      - ${APP_DATA_DIR}/data/db:/var/lib/mysql:rw
+      - ${APP_DATA_DIR}/data/db:/var/lib/postgresql/data:rw  # Datenbank-Daten in ein Volume speichern
     restart: on-failure
