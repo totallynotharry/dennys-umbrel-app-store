@@ -1,6 +1,6 @@
 {
     "production": {
-        "domain": "umbrel-2.local",
+        "domain": "umbrel-2.local:3456",
         "loglevel": "info",
         "hsts": {
             "enable": true,
