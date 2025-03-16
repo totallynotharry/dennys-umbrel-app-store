@@ -35,7 +35,7 @@ services:
         condition: service_started
 
   db:
-    image: mariadb:11.8.1-noble-rc
+    image: mariadb:11.2
     environment:
       - TZ=Europe/Berlin
       - MYSQL_ROOT_PASSWORD=rootpass
