@@ -11,17 +11,14 @@ services:
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/uploads:/hedgedoc/public/uploads
-    healthcheck:
-      test:  test: wget --no-verbose --tries=1 --spider http://localhost:3000 || exit 1
     environment:
       - CMD_DOMAIN=umbrel-2.local:3456
       - CMD_URL_ADDPORT=false
-      - CMD_DB_URL=mysql://admin:umbrel@db:3306/umbrel_hedgedoc
+      - CMD_DB_URL=mysql://admin:umbrel@database:3306/umbrel_hedgedoc
     depends_on:
-      db:
-        condition: service_started
+      - database
 
-  db:
+  database:
     image: mariadb:11.8-noble-rc@sha256:ce3ce0a61f9cec258cc95f3dcebd0eaebe012712aa3d546f374159dfc799bbc8
     environment:
       - TZ=Europe/Berlin
