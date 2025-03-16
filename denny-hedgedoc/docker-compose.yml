@@ -29,6 +29,7 @@ services:
       - DB_USER=admin
       - DB_PASS=umbrel
       - DB_NAME=umbrel_hedgedoc
+      - CMD_DB_URL=mysql://admin:umbrel@db:3306/umbrel_hedgedoc
     depends_on:
       db:
         condition: service_started
