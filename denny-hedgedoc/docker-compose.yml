@@ -8,12 +8,11 @@ services:
 
   web:
     image: quay.io/hedgedoc/hedgedoc:1.10.2@sha256:248d964e9a3c32ebf531847063112c51324474e7cb2393bbf615d82341b64e69
-    restart: on-failure
+    restart: always
     volumes:
       - ${APP_DATA_DIR}/data/uploads:/hedgedoc/public/uploads
     environment:
-      - CMD_DOMAIN=umbrel-2.local:3456
-      - CMD_URL_ADDPORT=false
+      - CMD_DOMAIN=umbrel-2.local
       - CMD_DB_URL=mysql://admin:umbrel@database:3306/umbrel_hedgedoc
       - CMD_HOST=umbrel-2.local
       - CMD_PORT=3456
@@ -35,4 +34,4 @@ services:
       - MYSQL_PASSWORD=umbrel
     volumes:
       - ${APP_DATA_DIR}/data/db:/var/lib/mysql:rw
-    restart: on-failure
+    restart: always
