@@ -25,21 +25,34 @@ services:
       - CMD_ALLOW_ORIGIN=['localhost']
       - CMD_SESSION_SECRET=uQK8isBS24wvfaATVj2FBA==
       - DB_HOST=db
-      - DB_PORT=5432  # Standard-PostgreSQL-Port
+      - DB_PORT=5432
       - DB_USER=admin
       - DB_PASS=umbrel
       - DB_NAME=umbrel_hedgedoc
     depends_on:
       db:
-        condition: service_started
+        condition: service_healthy
+    command: >
+      /bin/sh -c "
+        until wget --spider http://db:5432; do
+          echo 'Waiting for PostgreSQL...';
+          sleep 2;
+        done;
+        node ./bin/www
+      "
 
   db:
-    image: postgres:13  # PostgreSQL-Image
+    image: postgres:13.20
     environment:
       - TZ=Europe/Berlin
-      - POSTGRES_USER=admin  # PostgreSQL Benutzername
-      - POSTGRES_PASSWORD=umbrel  # PostgreSQL Passwort
-      - POSTGRES_DB=umbrel_hedgedoc  # Datenbankname
+      - POSTGRES_PASSWORD=rootpass
+      - POSTGRES_DB=umbrel_hedgedoc
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=umbrel
     volumes:
-      - ${APP_DATA_DIR}/data/db:/var/lib/postgresql/data:rw  # Datenbank-Daten in ein Volume speichern
+      - ${APP_DATA_DIR}/data/db:/var/lib/postgresql/data:rw
     restart: on-failure
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "admin"]
+      interval: 5s
+      retries: 5
