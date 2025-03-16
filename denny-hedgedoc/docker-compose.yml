@@ -18,41 +18,29 @@ services:
       - NODE_ENV=production
       - PUID=1000
       - PGID=1000
-      - CMD_DOMAIN=umbrel-2.local:3456
+      - CMD_DOMAIN=0.0.0.0:3456
       - CMD_URL_ADDPORT=false
-      - CMD_PROTOCOL_USESSL=false
+      - CMD_PROTOCOL_USESSL=true
       - CMD_PORT=3000
       - CMD_ALLOW_ORIGIN=['localhost']
       - CMD_SESSION_SECRET=uQK8isBS24wvfaATVj2FBA==
       - DB_HOST=db
-      - DB_PORT=5432
+      - DB_PORT=3306
       - DB_USER=admin
       - DB_PASS=umbrel
-      - DB_NAME=umbrel_hedgedoc  # Überprüfe den Namen hier!
+      - DB_NAME=umbrel_hedgedoc
     depends_on:
       db:
-        condition: service_healthy
-    command: >
-      /bin/sh -c "
-        until wget --spider http://db:5432; do
-          echo 'Waiting for PostgreSQL...';
-          sleep 2;
-        done;
-        node ./bin/www
-      "
+        condition: service_started
 
   db:
-    image: postgres:13.20
+    image: mariadb:11.4-noble@sha256:5dfb3093333fa0ea53194ddef0a2bfa21d3b1e1353bd228b22610cd6fc0c04da
     environment:
       - TZ=Europe/Berlin
-      - POSTGRES_PASSWORD=rootpass
-      - POSTGRES_DB=umbrel_hedgedoc  # Überprüfe auch den Namen hier!
-      - POSTGRES_USER=admin
-      - POSTGRES_PASSWORD=umbrel
+      - MYSQL_ROOT_PASSWORD=rootpass
+      - MYSQL_DATABASE=umbrel_hedgedoc
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=umbrel
     volumes:
-      - ${APP_DATA_DIR}/data/db:/var/lib/postgresql/data:rw
+      - ${APP_DATA_DIR}/data/db:/var/lib/mysql:rw
     restart: on-failure
-    healthcheck:
-      test: ["CMD", "pg_isready", "-U", "admin"]
-      interval: 5s
-      retries: 5
