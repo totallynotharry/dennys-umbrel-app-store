@@ -14,21 +14,8 @@ services:
     healthcheck:
       test:  test: wget --no-verbose --tries=1 --spider http://localhost:3000 || exit 1
     environment:
-      - TZ=Europe/Berlin
-      - NODE_ENV=production
-      - PUID=1000
-      - PGID=1000
       - CMD_DOMAIN=umbrel-2.local:3456
       - CMD_URL_ADDPORT=false
-      - CMD_PROTOCOL_USESSL=false
-      - CMD_PORT=3000
-      - CMD_ALLOW_ORIGIN=['localhost']
-      - CMD_SESSION_SECRET=uQK8isBS24wvfaATVj2FBA==
-      - DB_HOST=db
-      - DB_PORT=3306
-      - DB_USER=admin
-      - DB_PASS=umbrel
-      - DB_NAME=umbrel_hedgedoc
       - CMD_DB_URL=mysql://admin:umbrel@db:3306/umbrel_hedgedoc
     depends_on:
       db:
