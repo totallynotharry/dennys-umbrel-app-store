@@ -32,7 +32,7 @@ services:
         condition: service_started
 
   db:
-    image: mariadb:11.4-noble
+    image: mariadb:11.4-noble@sha256:5dfb3093333fa0ea53194ddef0a2bfa21d3b1e1353bd228b22610cd6fc0c04da
     environment:
       - TZ=Europe/Berlin
       - MYSQL_ROOT_PASSWORD=rootpass
