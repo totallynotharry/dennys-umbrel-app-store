@@ -15,6 +15,7 @@ services:
       - CMD_DOMAIN=umbrel-2.local:3456
       - CMD_URL_ADDPORT=false
       - CMD_DB_URL=mysql://admin:umbrel@database:3306/umbrel_hedgedoc
+      - UPLOADS_MODE=0755
     depends_on:
       - database
 
