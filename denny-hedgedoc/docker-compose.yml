@@ -28,7 +28,7 @@ services:
       - DB_PORT=5432
       - DB_USER=admin
       - DB_PASS=umbrel
-      - DB_NAME=umbrel_hedgedoc
+      - DB_NAME=umbrel_hedgedoc  # Überprüfe den Namen hier!
     depends_on:
       db:
         condition: service_healthy
@@ -46,7 +46,7 @@ services:
     environment:
       - TZ=Europe/Berlin
       - POSTGRES_PASSWORD=rootpass
-      - POSTGRES_DB=umbrel_hedgedoc
+      - POSTGRES_DB=umbrel_hedgedoc  # Überprüfe auch den Namen hier!
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=umbrel
     volumes:
