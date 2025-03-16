@@ -17,7 +17,7 @@ services:
       - CMD_DB_URL=mysql://admin:umbrel@database:3306/umbrel_hedgedoc
       - CMD_HOST=umbrel-2.local
       - CMD_PORT=3456
-      - CMD_ALLOW_ORIGIN=['umbrel-2.local']
+      - CMD_ALLOW_ORIGIN=['localhost']
       - CMD_ALLOW_ANONYMOUS=true
       - CMD_ALLOW_ANONYMOUS_EDITS=true
       - CMD_SESSION_SECRET=XjL+Z6Jq8nBQXvFrOb1SajCcKcmqH6PWaaEbkO3HB/3iRueYs0qqEiJQ4C/TEsmE
