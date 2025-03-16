@@ -9,6 +9,8 @@ services:
   web:
     image: linuxserver/hedgedoc:1.10.1@sha256:16d21ebfd4b7867cb0e712027c31df6316cc276ae3b11afb538f494e1487e082
     restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config:rw
     healthcheck:
       test: wget --no-verbose --tries=1 --spider http://localhost:3000 || exit 1
     environment:
@@ -22,7 +24,7 @@ services:
       - CMD_PORT=3000
       - CMD_ALLOW_ORIGIN=['localhost']
       - CMD_SESSION_SECRET=uQK8isBS24wvfaATVj2FBA==
-      - DB_HOST=db
+      - DB_HOST=denny-hedgedoc_db_1
       - DB_PORT=3306
       - DB_USER=hedgedocuser
       - DB_PASS=hedgedocpass
