@@ -21,7 +21,7 @@ services:
       - CMD_URL_ADDPORT=false
       - CMD_PROTOCOL_USESSL=false
       - CMD_PORT=3000
-      - CMD_ALLOW_ORIGIN=*
+      - CMD_ALLOW_ORIGIN=['localhost']
       - DB_HOST=db
       - DB_PORT=3306
       - DB_USER=hedgedocuser
