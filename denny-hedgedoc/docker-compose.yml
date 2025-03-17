@@ -81,7 +81,7 @@ services:
       - CMD_HSTS_ENABLE=false
       # **URL_ADDPORT** defines if generated links should contain the port.
       # Set this to false if your reverse uses the default ports (443 for HTTPS or 80 for HTTP).
-      - CMD_URL_ADDPORT=true
+      - CMD_URL_ADDPORT=false
     volumes:
       - uploads:/hedgedoc/public/uploads
     ports:
