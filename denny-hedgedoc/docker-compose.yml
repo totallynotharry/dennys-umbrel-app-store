@@ -1,35 +1,39 @@
-version: '3'
-services:
-  database:
-    image: postgres:16-alpine    # Always uses latest minor version of PostgreSQL 16
-    environment:
-      - POSTGRES_USER=hedgedoc
-      - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=hedgedoc
-    volumes:
-      - database:/var/lib/postgresql/data
-    restart: unless-stopped
+version: '3.7'
 
-  app:
-    image: quay.io/hedgedoc/hedgedoc:latest
+services:
+  app_proxy:
     environment:
-      - CMD_DB_URL=postgres://hedgedoc:password@database:5432/hedgedoc
-      - CMD_DOMAIN=192.168.178.85    # change this
-      - CMD_PORT=3456
-      - CMD_URL_ADDPORT=true
-      - NODE_ENV=production
-      - CMD_ALLOW_ANONYMOUS=false
-      - CMD_ALLOW_ANONYMOUS_EDITS=true
-      - CMD_DEFAULT_PERMISSION=private
-      - CMD_ALLOW_EMAIL_REGISTER=false
-      - CMD_ALLOW_GRAVATAR=false
+      APP_HOST: denny-hedgedoc_web_1
+      APP_PORT: 3000
+
+  web:
+    image: quay.io/hedgedoc/hedgedoc:1.10.2@sha256:248d964e9a3c32ebf531847063112c51324474e7cb2393bbf615d82341b64e69
+    restart: on-failure
     volumes:
-      - uploads:/hedgedoc/public/uploads
-    ports:
-      - 3456:3000
-    restart: unless-stopped
+      - ${APP_DATA_DIR}/data/uploads:/hedgedoc/public/uploads
+    environment:
+      - CMD_DOMAIN=umbrel-2.local:3456
+      - CMD_URL_ADDPORT=false
+      - CMD_PROTOCOL_USESSL=false
+      - CMD_PORT=3000
+      - CMD_ALLOW_ORIGIN=['localhost']
+      - CMD_DB_URL=mysql://admin:umbrel@database:3306/umbrel_hedgedoc
+      - CMD_ALLOW_ANONYMOUS=true
+      - CMD_ALLOW_ANONYMOUS_EDITS=true
+      - CMD_SESSION_SECRET=XjL+Z6Jq8nBQXvFrOb1SajCcKcmqH6PWaaEbkO3HB/3iRueYs0qqEiJQ4C/TEsmE
+      - UPLOADS_MODE=0755
     depends_on:
-      - database
-volumes:
+      database:
+        condition: service_started
+
   database:
-  uploads:
+    image: mariadb:11.8-noble-rc@sha256:ce3ce0a61f9cec258cc95f3dcebd0eaebe012712aa3d546f374159dfc799bbc8
+    environment:
+      - TZ=Europe/Berlin
+      - MYSQL_ROOT_PASSWORD=rootpass
+      - MYSQL_DATABASE=umbrel_hedgedoc
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=umbrel
+    volumes:
+      - ${APP_DATA_DIR}/data/db:/var/lib/mysql:rw
+    restart: on-failure
