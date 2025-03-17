@@ -26,7 +26,7 @@ services:
     volumes:
       - uploads:/hedgedoc/public/uploads
     ports:
-      - 3000:3000
+      - 3456:3000
     restart: unless-stopped
     depends_on:
       - database
