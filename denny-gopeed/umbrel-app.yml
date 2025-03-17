@@ -33,9 +33,10 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/GopeedLab/gopeed
 support: https://github.com/GopeedLab/gopeed/issues
 gallery:
-  - https://i.imgur.com/mTLwI0F.png
-  - https://i.imgur.com/mTLwI0F.png
-  - https://i.imgur.com/mTLwI0F.png
+  - https://i.imgur.com/tUdQZwt.png
+  - https://i.imgur.com/MQqM9om.png
+  - https://i.imgur.com/YiK7hNe.png
+  - https://i.imgur.com/jBKw20C.png
 releaseNotes: >-
   The latest Gopeed update introduces several improvements, including caching and gzip support for the built-in web file server, an auto-updater, and an enhanced HTTP download retry strategy. 
   
