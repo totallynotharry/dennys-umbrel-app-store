@@ -4,7 +4,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: denny-mirotalk_web_1
-      APP_PORT: 3000
+      APP_PORT: 3501
 
   web:
     image: mirotalk/p2p:latest@sha256:4988531fc11232f2eeab14f74492f76392feb83854df664c8aafa8c25807ffd7
