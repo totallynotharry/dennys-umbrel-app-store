@@ -15,7 +15,7 @@ services:
     environment:
       - CMD_DB_URL=postgres://hedgedoc:password@database:5432/hedgedoc
       - CMD_DOMAIN=192.168.178.85    # change this
-      - CMD_PORT=3000
+      - CMD_PORT=3456
       - CMD_URL_ADDPORT=true
       - NODE_ENV=production
       - CMD_ALLOW_ANONYMOUS=false
