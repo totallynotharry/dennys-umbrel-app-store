@@ -72,7 +72,7 @@ services:
       # You MUST change this if your instance should be available under another domain than "localhost", otherwise your
       # instance may be broken.
       # You can define only ONE domain.
-      - CMD_DOMAIN=localhost
+      - CMD_DOMAIN=umbrel-2.local
       # **PROTOCOL_USESSL** defines if generated links should be HTTPS URLs.
       # This variable won't activate encryption on the listen port.
       # Set this to true if your reverse proxy exposes your instance via HTTPS.
