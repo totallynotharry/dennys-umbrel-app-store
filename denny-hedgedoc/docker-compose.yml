@@ -14,7 +14,7 @@ services:
     environment:
       - CMD_DOMAIN=umbrel-2.local:3456
       - CMD_URL_ADDPORT=true
-      - CMD_PROTOCOL_USESSL=false
+      - CMD_PROTOCOL_USESSL=true
       - CMD_PORT=3000
       - CMD_ALLOW_ORIGIN=['localhost']
       - CMD_DB_URL=mysql://admin:umbrel@database:3306/umbrel_hedgedoc
