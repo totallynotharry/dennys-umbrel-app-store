@@ -1,26 +1,19 @@
 services:
-    mirotalk:
-        image: mirotalk/p2p:latest
-        container_name: mirotalk
-        hostname: mirotalk
+    mirotalksfu:
+        image: mirotalk/sfu:latest
+        container_name: mirotalksfu
+        hostname: mirotalksfu
+        restart: unless-stopped
         volumes:
-            - .env:/src/.env:ro
-            # Rebranding:
-            # - ./app/src/config.js:/src/app/src/config.js:ro
+            - ./app/src/config.js:/src/app/src/config.js:ro
+            # Mandatory volume if `server.recording.enabled` is true in app/src/config.js
+            # - ./app/rec:/src/app/rec
+            # Mandatory volume if `server.rtmp.enabled.fromFile` is true in app/src/config.js
+            # - ./app/rtmp:/src/app/rtmp
             # Optional volumes for real-time updates:
             # - ./app/:/src/app/:ro
             # - ./public/:/src/public/:ro
-        restart: unless-stopped
         ports:
-            - '3501:3000'
-# Uncomment below, remove "ports:" section above and configure labels as
-# needed for LetsEncrypt TLS certificates with Traefik.
-# See https://doc.traefik.io/traefik/user-guides/docker-compose/basic-example/
-#   expose:
-#     - 3000
-#   labels:
-#     - "traefik.enable=true"
-#     - "traefik.http.routers.mirotalk.rule=Host(`mirotalk.example.com`)"
-#     - "traefik.http.routers.mirotalk.entrypoints=websecure"
-#     - "traefik.http.routers.mirotalk.tls.certresolver=myresolver"
-#     - "traefik.http.services.mirotalk.loadbalancer.server.port=3000"
+            - '3010:3010/tcp'
+            - '40000-40100:40000-40100/tcp'
+            - '40000-40100:40000-40100/udp'
