@@ -1,0 +1,41 @@
+manifestVersion: 1
+id: denny-mirotalk
+name: MiroTalk
+tagline: An easy, secure P2P solution for fast, high-quality video conferences
+icon: https://i.imgur.com/W8jzfpT.png
+category: In Progress
+version: "1.0"
+port: 3501
+description: >-
+  MiroTalk P2P is an open-source, self-hosted video conferencing platform that enables secure, real-time communication directly between participants without relying on central servers. It uses WebRTC technology to establish peer-to-peer connections for audio, video, screen sharing, and text chat, ensuring end-to-end encryption and low latency. This makes it an attractive alternative to mainstream platforms like Zoom or Google Meet, especially for those who prioritize privacy and data ownership.
+
+
+  One of MiroTalk P2P’s strengths is its simplicity. Users can join meetings with just a link, without needing to create an account or install software. The platform is entirely browser-based and works on all major browsers, making it accessible on desktops, tablets, and smartphones. Despite its simplicity, MiroTalk P2P offers a range of features, including file sharing, presenter roles, and the ability to lock rooms for added security.
+
+
+  For those seeking more control, MiroTalk P2P is highly customizable. You can enable host authentication, restrict access to certain IP addresses, and integrate with OpenID Connect (OIDC) providers for user authentication, defining who can join or start meetings. Additionally, the platform supports STUN and TURN servers to improve connectivity behind firewalls and NAT, ensuring stable connections even in challenging network environments.
+
+
+  MiroTalk P2P also provides advanced customization options. You can rebrand the interface, modify configuration files to suit your needs, or extend its functionality using API endpoints. For developers, this offers a flexible foundation for building tailored communication solutions, whether for business meetings, online classrooms, or private social gatherings.
+
+
+  Unlike many other solutions, MiroTalk P2P does not route your data through external servers, meaning no third parties can access your calls. Everything stays between you and your peers. This approach not only enhances privacy but also reduces server load and hosting costs, making it practical for running on low-resource devices such as a Raspberry Pi.
+
+
+  As privacy concerns grow in the digital world, MiroTalk P2P offers a powerful alternative, allowing users full control over their communication while maintaining ease of use and performance.
+developer: Miroslav Pejic
+website: https://p2p.mirotalk.com/
+submitter: dennysubke
+submission: https://github.com/getumbrel/umbrel-apps/pull/
+repo: https://github.com/miroslavpejic85/mirotalk
+support: https://github.com/miroslavpejic85/mirotalk/issues
+gallery:
+  - https://i.imgur.com/RpuWBam.png
+  - https://i.imgur.com/RpuWBam.png
+  - https://i.imgur.com/RpuWBam.png
+releaseNotes: >-
+  MiroTalk P2P is continuously updated to improve security, video quality, and user experience, with new features such as enhanced TURN server support, OpenID Connect integration, and up to 8k resolution at 60fps.
+dependencies:
+path: ""
+defaultUsername: ""
+defaultPassword: ""

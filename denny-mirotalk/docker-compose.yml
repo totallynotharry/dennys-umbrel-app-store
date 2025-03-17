@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-mirotalk_web_1
+      APP_PORT: 3000
+
+  web:
+    image: mirotalk/p2p:latest@sha256:4988531fc11232f2eeab14f74492f76392feb83854df664c8aafa8c25807ffd7
+    environment:
+      - PORT=3000
+      - TZ=Europe/Berlin 
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/.env:/src/.env:ro
