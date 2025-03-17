@@ -9,7 +9,6 @@ services:
   web:
     image: mirotalk/p2p:latest@sha256:4988531fc11232f2eeab14f74492f76392feb83854df664c8aafa8c25807ffd7
     environment:
-      - PORT=3000
       - TZ=Europe/Berlin 
     restart: on-failure
     volumes:
