@@ -5,7 +5,7 @@ tagline: A low-latency, high-quality voice chat
 icon: https://i.imgur.com/n50s7gd.png
 category: In Progress
 version: "1.5.634"
-port: 64738
+port: 8879
 description: >-
   Mumble is an open-source voice communication software that is primarily used for real-time communication, particularly in gaming and collaborative environments. The software is known for its low-latency, high-quality audio, which is a key feature for users who need clear communication with minimal delays. One of the main advantages of Mumble is that it operates in a decentralized manner, allowing users to host their own servers, providing greater control and security over their communications. This decentralized setup ensures that users don't rely on third-party servers, giving them more privacy and reducing the risk of data breaches.
 
