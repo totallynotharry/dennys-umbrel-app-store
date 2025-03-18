@@ -19,7 +19,7 @@ services:
       - "64738:64738/udp"
 
   web:
-    image: rankenstein/mumble-web:0.5@sha256:a142ad156214e79eafdf1973bab68c1f9e762e3d3a6dce50121b5973cf9150e5
+    image: leoverto/mumble-web:latest@sha256:9590ed597b295adebe9be0b08a99e5dc8fe1651f8fcd90dc50038c0ec40366f3
     restart: on-failure
     user: "1000:1000"
     environment:
