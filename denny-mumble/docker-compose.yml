@@ -11,6 +11,8 @@ services:
     restart: on-failure
     user: "1000:1000"
     environment:
+      - MUMBLE_CONFIG_SSL_CERT=/certificates/fullchain.pem
+      - MUMBLE_CONFIG_SSL_KEY=/certificates/privkey.pem
       - MUMBLE_SUPERUSER_PASSWORD=umbrel
     volumes:
       - ${APP_DATA_DIR}/data/mumble:/data:rw
