@@ -4,7 +4,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: denny-mumble_web_1
-      APP_PORT: 8080
+      APP_PORT: 64738
 
   server:
     image: mumblevoip/mumble-server:v1.5.634@sha256:11169b76bc418b414a3cb170694a4245ed51025fa0cba765886b28a8dff0dd97
@@ -13,17 +13,7 @@ services:
       - MUMBLE_CHOWN_DATA=false
       - MUMBLE_ACCEPT_UNKNOWN_SETTINGS=true
       - MUMBLE_SUPERUSER_PASSWORD=umbrel
-      - MUMBLE_CUSTOM_CONFIG_FILE=/data/mumble_server_config.ini
     volumes:
       - ${APP_DATA_DIR}/data/mumble:/data:rw
     ports:
-      - "64738:64738"
       - "64738:64738/udp"
-    entrypoint: ["/bin/bash", "-c", "/data/generate_ssl_cert.sh && /usr/bin/mumble-server -fg -ini /data/mumble_server_config.ini"]
-
-  web:
-    image: rankenstein/mumble-web:0.5@sha256:a142ad156214e79eafdf1973bab68c1f9e762e3d3a6dce50121b5973cf9150e5
-    restart: on-failure
-    user: "1000:1000"
-    environment:
-      - MUMBLE_SERVER=server:64738
