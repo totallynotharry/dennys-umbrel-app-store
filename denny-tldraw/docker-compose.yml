@@ -4,7 +4,7 @@ services:
   app:
     image: ghcr.io/hpi-schul-cloud/tldraw-client:cda440f332d778e0178f2402a03d6b6f2de135cf@sha256:4a263561b18604198138e1978205c496f6546bea51e3b1633436be5277111a75
     ports:
-      - "8383:83"
+      - "8383:80"
     volumes:
       - ./public:/usr/share/nginx/html/public
       - ./src:/app/src
