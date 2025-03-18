@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   app:
-    image: ghcr.io/hpi-schul-cloud/tldraw-client:cda440f332d778e0178f2402a03d6b6f2de135cf@sha256:4a263561b18604198138e1978205c496f6546bea51e3b1633436be5277111a75
+    image: ghcr.io/hpi-schul-cloud/tldraw-client:077e8c6dbddd549bd1e0dce3c3be93fbf380978a
     ports:
       - "8383:3046"
     volumes:
