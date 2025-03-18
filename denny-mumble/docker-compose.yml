@@ -10,9 +10,10 @@ services:
     image: mumblevoip/mumble-server:v1.5.634@sha256:11169b76bc418b414a3cb170694a4245ed51025fa0cba765886b28a8dff0dd97
     restart: on-failure
     environment:
-      - MUMBLE_CHOWN_DATA=true
+      - MUMBLE_CHOWN_DATA=false
       - MUMBLE_ACCEPT_UNKNOWN_SETTINGS=true
       - MUMBLE_SUPERUSER_PASSWORD=umbrel
+      - MUMBLE_CUSTOM_CONFIG_FILE=/data/mumble_server_config.ini
     volumes:
       - ${APP_DATA_DIR}/data/mumble:/data:rw
     ports:
@@ -25,6 +26,3 @@ services:
     user: "1000:1000"
     environment:
       - MUMBLE_SERVER=server:64738
-
-
-# https://hub.docker.com/r/goofball222/murmur
