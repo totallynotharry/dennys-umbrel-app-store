@@ -26,3 +26,6 @@ services:
     user: "1001:1001"
     environment:
       - MUMBLE_SERVER=server:64738
+
+
+# https://hub.docker.com/r/goofball222/murmur
