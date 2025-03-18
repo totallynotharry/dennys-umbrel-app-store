@@ -4,7 +4,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: denny-tldraw_web_1
-      APP_PORT: 83
+      APP_PORT: 3046
 
   web:
     image: schulcloud/tldraw-client:33.4@sha256:3925421e66dda4e846822ff3f20fe10ab4da3303f96caf815014b50e13eb7461
