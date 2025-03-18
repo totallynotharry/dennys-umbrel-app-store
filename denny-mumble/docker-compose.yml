@@ -9,7 +9,7 @@ services:
   server:
     image: mumblevoip/mumble-server:v1.5.634@sha256:11169b76bc418b414a3cb170694a4245ed51025fa0cba765886b28a8dff0dd97
     restart: on-failure
-    user: "10000:10000"
+    user: "1000:1000"
     environment:
       - MUMBLE_SUPERUSER_PASSWORD=umbrel
     volumes:
