@@ -5,7 +5,7 @@ tagline: An open-source CRM for personal relationships
 icon: https://i.imgur.com/AkYZbIs.png
 category: In Progress
 version: "4.1.2"
-port: 3344
+port: 8559
 description: >-
   🐼 Monica is an open-source personal relationship management (CRM) tool designed to help individuals organize and nurture their personal connections in a thoughtful and intentional way. Unlike traditional CRMs focused on business or sales, Monica is built to support the relationships that matter most in everyday life, from close friends and family to colleagues and acquaintances. It acts as a private, digital assistant that helps users remember important details, ensuring meaningful connections remain strong over time.
 
