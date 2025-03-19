@@ -2,12 +2,12 @@ manifestVersion: 1
 id: denny-tldraw
 name: tldraw
 tagline: An intuitive whiteboard for ideas
-icon: https://i.imgur.com/wfT4QX3.png
+icon: https://i.imgur.com/whMjRSE.png
 category: In Progress
 version: "2.0.0"
 port: 8505
 description: >-
-  tldraw is an open-source, browser-based digital whiteboard designed to empower users to express their ideas visually, whether through sketching, diagramming, or collaborative brainstorming. It provides an intuitive, clean canvas where users can draw freely, create shapes, add text, and import images — all without the need for installation or complex setup. The interface is minimalist yet functional, ensuring that the creative process remains smooth and distraction-free.
+  🎨 tldraw is an open-source, browser-based digital whiteboard designed to empower users to express their ideas visually, whether through sketching, diagramming, or collaborative brainstorming. It provides an intuitive, clean canvas where users can draw freely, create shapes, add text, and import images — all without the need for installation or complex setup. The interface is minimalist yet functional, ensuring that the creative process remains smooth and distraction-free.
 
 
   One of tldraw’s standout features is its real-time collaboration capability, allowing multiple users to join the same canvas and contribute simultaneously. This makes it an excellent tool for remote teams, educators, and creatives who need a shared visual workspace. Each user can see the others' changes instantly, fostering dynamic brainstorming sessions, live design work, or even remote teaching.
@@ -27,11 +27,14 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/tldraw/tldraw
 support: https://github.com/tldraw/tldraw/issues
 gallery:
-  - https://i.imgur.com/rn7Zivn.png
-  - https://i.imgur.com/bDy2X8i.png
-  - https://i.imgur.com/ERsYpg3.png
+  - https://i.imgur.com/LJezkpY.png
+  - https://i.imgur.com/LJezkpY.png
+  - https://i.imgur.com/LJezkpY.png
 releaseNotes: >-
   This tldraw release has loads of performance improvements, plus completely redesigned sticky notes.
+
+
+  ⚠️ The application tldraw is available in a newer version, but no corresponding Docker image exists yet. Therefore, the latest available Docker image (v2.0.0) was used to provide the app.
 dependencies:
 path: ""
 defaultUsername: ""
