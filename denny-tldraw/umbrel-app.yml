@@ -1,31 +1,37 @@
 manifestVersion: 1
 id: denny-tldraw
 name: tldraw
-tagline: A WhatsApp client with themes and multiple account support
+tagline: An intuitive whiteboard for ideas
 icon: https://i.imgur.com/wfT4QX3.png
-category: test
+category: In Progress
 version: "2.0.0"
 port: 8505
 description: >-
-  📱 Altus is a powerful Electron-based WhatsApp client that enhances the desktop WhatsApp experience by adding a variety of extra features. Using the GitHub-developed Electron framework, Altus integrates WhatsApp Web while adding functionality that goes beyond what the standard WhatsApp Web offers. One of the standout features of Altus is its support for multiple WhatsApp accounts, allowing users to manage and switch between different accounts simultaneously.
+  tldraw is an open-source, browser-based digital whiteboard designed to empower users to express their ideas visually, whether through sketching, diagramming, or collaborative brainstorming. It provides an intuitive, clean canvas where users can draw freely, create shapes, add text, and import images — all without the need for installation or complex setup. The interface is minimalist yet functional, ensuring that the creative process remains smooth and distraction-free.
 
 
-  The app also provides native notification support, so users are instantly notified when new messages arrive. Clicking on a notification opens the corresponding chat directly. A useful online indicator shows in the bottom-left corner of each chat whether the contact is currently online, making communication easier. For a more comfortable experience in low light or during the evening, Altus offers a Dark Mode that reduces eye strain and adapts the app's design to the lighting conditions.
+  One of tldraw’s standout features is its real-time collaboration capability, allowing multiple users to join the same canvas and contribute simultaneously. This makes it an excellent tool for remote teams, educators, and creatives who need a shared visual workspace. Each user can see the others' changes instantly, fostering dynamic brainstorming sessions, live design work, or even remote teaching.
 
 
-  Additionally, Altus allows users to fully customize their WhatsApp interface. They can create custom themes either by writing their own CSS or using the built-in theme customizer, which allows for easy color selection to personalize the app's appearance. This flexibility in interface customization ensures a more tailored and comfortable user experience. Altus thus provides not only a practical but also a highly customizable solution for WhatsApp on the desktop.
-developer: Aman Harwara
-website: https://github.com/amanharwara/altus
+  What sets tldraw apart is its flexibility and openness. Since it’s open-source, developers can modify, extend, or integrate it into their own projects. Whether it's embedding the whiteboard into an existing platform or customizing the functionality for a specialized workflow, tldraw's architecture supports a wide range of use cases. This adaptability has led to it being used in diverse environments, from software design and product planning to education and collaborative art projects.
+
+
+  Furthermore, tldraw embraces modern web technologies, ensuring smooth performance and accessibility across different devices and browsers. Its lightweight nature means it loads quickly, making it ideal for spontaneous ideation sessions without delays or complicated logins. The platform supports both personal use — for quick sketches or visual notes — and professional scenarios, where structured diagrams, flowcharts, or collaborative mind maps are needed.
+
+
+  Overall, tldraw stands out as a versatile, user-friendly, and customizable tool that bridges the gap between casual drawing apps and professional diagramming software. Its blend of simplicity, power, and openness makes it a compelling choice for anyone looking to think visually, whether alone or with a team.
+developer: Steve Ruiz
+website: https://www.tldraw.com/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/amanharwara/altus
-support: https://github.com/amanharwara/altus/issues
+repo: https://github.com/tldraw/tldraw
+support: https://github.com/tldraw/tldraw/issues
 gallery:
   - https://i.imgur.com/rn7Zivn.png
   - https://i.imgur.com/bDy2X8i.png
   - https://i.imgur.com/ERsYpg3.png
 releaseNotes: >-
-  The per-tab microphone and camera permission option is enabled by default, allowing users to manage permissions on a tab-by-tab basis for enhanced privacy and security. In addition, various other improvements have been implemented, such as performance optimizations, bug fixes, and a more streamlined user interface for better overall experience.
+  This tldraw release has loads of performance improvements, plus completely redesigned sticky notes.
 dependencies:
 path: ""
 defaultUsername: ""
