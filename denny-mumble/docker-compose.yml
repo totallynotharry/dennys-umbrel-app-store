@@ -3,7 +3,7 @@ version: '3.7'
 services:
   app_proxy:
     environment:
-      APP_HOST: denny-mumble_server_1
+      APP_HOST: denny-mumble_web_1
       APP_PORT: 64738
 
   server:
