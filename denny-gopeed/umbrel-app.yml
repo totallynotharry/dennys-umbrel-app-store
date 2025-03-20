@@ -7,7 +7,7 @@ category: files & productivity
 version: "1.6.11"
 port: 9999
 description: >-
-  📥 Gopeed is a powerful, open-source, cross-platform download manager designed to optimize speed, performance, and flexibility for a wide range of downloading needs. Written in Golang and Flutter, it takes advantage of Goroutines — a lightweight concurrency feature in Go — to handle multiple downloads simultaneously, improving download speed and resource efficiency. Unlike traditional download managers that may rely on heavier threading models, Gopeed's approach ensures high-speed performance without overloading system resources, making it especially effective on low-end devices or servers.
+  📥 Gopeed is a powerful, open-source, cross-platform download manager designed to optimize speed, performance, and flexibility for a wide range of downloading needs. Written in Golang and Flutter, it takes advantage of Goroutines - a lightweight concurrency feature in Go — to handle multiple downloads simultaneously, improving download speed and resource efficiency. Unlike traditional download managers that may rely on heavier threading models, Gopeed's approach ensures high-speed performance without overloading system resources, making it especially effective on low-end devices or servers.
 
 
   One of its key strengths is its broad protocol support. It seamlessly handles HTTP, HTTPS, BitTorrent, and Magnet links, covering everything from standard file downloads to torrent-based content retrieval. This makes Gopeed a versatile solution for users who want to manage different types of downloads within a single application, eliminating the need for multiple, specialized download tools.
@@ -19,7 +19,7 @@ description: >-
   Gopeed’s multi-platform availability makes it even more appealing. It runs on Windows, macOS, Linux, Android, iOS, and also provides a web-based interface, making it accessible from virtually any device. This enables users to maintain and manage downloads across different environments, whether they’re on a desktop computer, mobile device, or even remotely through a browser.
 
 
-  In addition to standalone functionality, Gopeed offers browser extensions for Chrome, Edge, and Firefox. These extensions integrate directly into the browser, allowing users to capture downloads from web pages with a single click — particularly useful for videos, large files, or batch downloads.
+  In addition to standalone functionality, Gopeed offers browser extensions for Chrome, Edge, and Firefox. These extensions integrate directly into the browser, allowing users to capture downloads from web pages with a single click - particularly useful for videos, large files, or batch downloads.
 
 
   For those who want more customization, Gopeed supports an API that allows developers and advanced users to extend its functionality or integrate it into other systems. This could include anything from creating custom plugins to automating downloads based on triggers from other software. The API also opens the door for community-built add-ons, enhancing Gopeed’s feature set beyond what comes out of the box.
