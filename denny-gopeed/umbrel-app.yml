@@ -7,25 +7,16 @@ category: files & productivity
 version: "1.6.11"
 port: 9999
 description: >-
-  📥 Gopeed is an open-source tool designed to measure internet connection performance, primarily focusing on internet speed tests. Built using the Go programming language, it is optimized for efficiency and provides reliable results. The tool is aimed at developers, system administrators, and network engineers who need to assess and monitor their network performance, as well as general users looking to test their internet connection.
+  📥 Gopeed is an open-source, cross-platform download manager designed for high performance and flexibility. Built using Golang and Flutter, it leverages Goroutines to enable multi-threaded downloading, which boosts speed and efficiency. It supports a wide range of protocols, including HTTP, BitTorrent, and Magnet links, making it versatile for different types of downloads.
 
 
-  The Gopeed tool measures several key metrics such as download speed, upload speed, ping (latency), and jitter, offering a comprehensive view of your network's performance. It does this by performing a series of tests, including connecting to remote servers and transferring data in both directions (download and upload), while also measuring the response time (ping). This makes it suitable not just for general speed testing, but also for understanding the stability and quality of your internet connection.
+  The application features a clean, modern user interface based on Material Design principles, ensuring an intuitive user experience. It’s available on multiple platforms, including Windows, macOS, Linux, Android, iOS, and even as a web-based version and a command-line tool. This broad availability allows users to manage downloads seamlessly across devices.
 
 
-  One of the defining features of Gopeed is its versatility. It provides both a command-line interface (CLI) for local usage and an API for integration into other applications, giving developers the ability to incorporate speed tests into their projects. For instance, you can use Gopeed to create automated network monitoring systems, integrate it with performance dashboards, or trigger alerts when network performance falls below a certain threshold.
+  Gopeed also supports browser extensions for Chrome, Edge, and Firefox, enabling users to initiate downloads directly from web pages. Additionally, the software provides an API for integration with other tools and services, allowing advanced customization and automation possibilities.
 
 
-  Additionally, Gopeed supports testing against custom servers. You can either use public test servers or set up your own server to run tests against, which is particularly useful for businesses or organizations that want to monitor internal networks or assess private server performance. Setting up your own server with Gopeed allows for more control over the test results, ensuring they reflect the exact conditions of your specific network infrastructure.
-
-
-  The tool also comes with a straightforward setup process, and the GitHub repository includes clear instructions on how to compile, configure, and run the tool. The installation is relatively simple, making Gopeed accessible even to those who are not deeply familiar with Go or programming in general. The project is maintained actively, and developers are encouraged to contribute by adding features, fixing bugs, or improving documentation.
-
-
-  In terms of deployment, Gopeed is lightweight and can be run on various systems, including local machines, cloud environments, and Docker containers. Its ability to run in diverse environments makes it an attractive option for both personal and enterprise-level network performance testing.
-
-
-  Overall, Gopeed is an efficient, flexible, and user-friendly internet speed test tool with a focus on developer-friendly features, making it an excellent choice for anyone who needs to monitor or diagnose their network's performance in an easy-to-use, open-source package.
+  Its lightweight nature and extendability make it suitable for both casual users and power users who need more control over their downloads. The project is actively maintained on GitHub, inviting contributions and ensuring ongoing improvements.
 developer: GopeedLab
 website: https://gopeed.com/
 submitter: dennysubke
