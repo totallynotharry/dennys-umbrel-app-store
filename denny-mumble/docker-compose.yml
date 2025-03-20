@@ -17,5 +17,5 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/mumble:/data:rw
       - ${APP_DATA_DIR}/data/www:/denny-mumble/www:rw
-    #ports:
-      # "64739:64738/udp"
+    ports:
+      - "64739:64738/udp"
