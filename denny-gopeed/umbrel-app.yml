@@ -7,31 +7,22 @@ category: files & productivity
 version: "1.6.11"
 port: 9999
 description: >-
-  📥 Gopeed is a powerful, open-source, cross-platform download manager designed to optimize speed, performance, and flexibility for a wide range of downloading needs. Written in Golang and Flutter, it takes advantage of Goroutines - a lightweight concurrency feature in Go — to handle multiple downloads simultaneously, improving download speed and resource efficiency. Unlike traditional download managers that may rely on heavier threading models, Gopeed's approach ensures high-speed performance without overloading system resources, making it especially effective on low-end devices or servers.
+  📥 Gopeed is an advanced, open-source download manager that focuses on performance, flexibility, and ease of use. It is developed using Golang and Flutter, allowing it to take advantage of Goroutines, a lightweight concurrency model that enables multiple downloads to run simultaneously. This approach significantly boosts download speed while keeping resource usage low. The result is a highly efficient performance that remains stable even on systems with limited hardware capabilities.
 
 
-  One of its key strengths is its broad protocol support. It seamlessly handles HTTP, HTTPS, BitTorrent, and Magnet links, covering everything from standard file downloads to torrent-based content retrieval. This makes Gopeed a versatile solution for users who want to manage different types of downloads within a single application, eliminating the need for multiple, specialized download tools.
+  One of Gopeed’s most impressive features is its ability to support various download protocols. It works seamlessly with HTTP, HTTPS, BitTorrent, and Magnet links. This broad compatibility ensures that users can handle everything from standard file downloads to large torrent-based content within a single application. There is no need to rely on multiple, specialized tools to cover different types of downloads. Gopeed can also split files into smaller parts to accelerate downloads and resume interrupted transfers without losing progress.
 
 
-  The user interface is designed with simplicity and accessibility in mind, following Google's Material Design guidelines. It provides a clean, modern layout that ensures ease of use for beginners while still offering advanced controls for more experienced users. For those who prefer command-line tools, Gopeed offers a CLI version that retains the same performance capabilities, allowing tech-savvy users to script or automate downloads directly from their terminal.
+  The user interface follows modern Material Design principles and combines a clean layout with intuitive controls. This ensures that beginners can easily find their way around the app while advanced users still have access to powerful management features. It includes options to prioritize downloads, limit speeds, and monitor progress in detail. This balance between simplicity and control ensures that Gopeed remains user-friendly without sacrificing functionality.
 
 
-  Gopeed’s multi-platform availability makes it even more appealing. It runs on Windows, macOS, Linux, Android, iOS, and also provides a web-based interface, making it accessible from virtually any device. This enables users to maintain and manage downloads across different environments, whether they’re on a desktop computer, mobile device, or even remotely through a browser.
+  In addition to its flexible download management, Gopeed offers an API that supports integration with other applications and services. This feature makes it possible to automate downloads or adapt Gopeed to fit more complex workflows. Users with specific needs can tailor the software to suit their individual requirements, whether that involves automating repetitive tasks or creating custom extensions to expand its capabilities.
 
 
-  In addition to standalone functionality, Gopeed offers browser extensions for Chrome, Edge, and Firefox. These extensions integrate directly into the browser, allowing users to capture downloads from web pages with a single click - particularly useful for videos, large files, or batch downloads.
+  Gopeed remains lightweight despite its extensive feature set. It avoids unnecessary bloat and keeps system performance smooth, even when handling large queues or high-speed downloads. It stays responsive and reliable, whether it is managing individual files or overseeing complex, multi-part downloads. This combination of speed, stability, and low resource consumption makes it an ideal choice for anyone who wants a download manager that works efficiently without slowing down their system.
 
-
-  For those who want more customization, Gopeed supports an API that allows developers and advanced users to extend its functionality or integrate it into other systems. This could include anything from creating custom plugins to automating downloads based on triggers from other software. The API also opens the door for community-built add-ons, enhancing Gopeed’s feature set beyond what comes out of the box.
-
-
-  Despite its performance capabilities, Gopeed remains lightweight and efficient. It avoids the bloat that many traditional download managers accumulate over time, focusing instead on maintaining a balance between speed, flexibility, and system resource usage. This makes it an excellent choice for everything from everyday file downloads to more demanding scenarios, like managing large queues or handling torrent traffic.
-
-
-  As an open-source project, Gopeed encourages contributions from the community. Its codebase is hosted on GitHub, where developers can submit improvements, report issues, or propose new features. This collaborative approach ensures the software stays up-to-date with the latest technologies and user needs, evolving alongside the community that supports it.
-
-
-  Gopeed stands out not only for its performance and versatility but also for its adaptability. It caters to casual users looking for a straightforward download manager while providing enough advanced functionality to satisfy power users and developers who require more control and customization. Whether you need a fast, reliable tool for downloading large files, managing torrents, or automating file retrieval processes, Gopeed delivers a comprehensive, modern solution across virtually any platform.
+  
+  With its powerful performance, extensive protocol support, and user-friendly design, Gopeed offers a modern and reliable solution for managing downloads. It provides the right balance of speed, control, and simplicity, making it suitable for both everyday users and those with more advanced needs.
 developer: GopeedLab
 website: https://gopeed.com/
 submitter: dennysubke
