@@ -1,11 +1,6 @@
 version: '3.7'
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: denny-mumble_server_1
-      APP_PORT: 64738
-
   server:
     image: mumblevoip/mumble-server:v1.5.634@sha256:11169b76bc418b414a3cb170694a4245ed51025fa0cba765886b28a8dff0dd97
     restart: on-failure
@@ -18,4 +13,5 @@ services:
       - ${APP_DATA_DIR}/data/mumble:/data:rw
       - ${APP_DATA_DIR}/data/www:/denny-mumble/www:rw
     ports:
-      - "64739:64738/udp"
+      - "64738:64738/tcp"
+      - "64738:64738/udp"
