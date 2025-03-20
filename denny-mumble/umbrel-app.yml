@@ -3,7 +3,7 @@ id: denny-mumble
 name: Mumble Server
 tagline: A low-latency, high-quality voice chat
 icon: https://i.imgur.com/n50s7gd.png
-category: In Progress
+category: media
 version: "1.5.634"
 port: 8879
 description: >-
