@@ -16,8 +16,6 @@ services:
       - MUMBLE_SUPERUSER_PASSWORD=umbrel
     volumes:
       - ${APP_DATA_DIR}/data/mumble:/data:rw
-      - ${APP_DATA_DIR}/data/www:/data/www:rw
-      - ${APP_DATA_DIR}/data/config:/data/config:rw
     ports:
       - "64738:64738"
       - "64738:64738/udp"
@@ -30,7 +28,7 @@ services:
       - MUMBLE_SERVER=server:64738
 
   static_site:
-    image: nginx:latest
+    image: nginx:1.27@sha256:124b44bfc9ccd1f3cedf4b592d4d1e8bddb78b51ec2ed5056c52d3692baebc19
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/www:/usr/share/nginx/html:ro
