@@ -19,7 +19,8 @@ services:
       - ${APP_DATA_DIR}/data/www:/data/www:rw
       - ${APP_DATA_DIR}/data/config:/data/config:rw
     ports:
-      - "64739:64738/udp"
+      - "64738:64738"
+      - "64738:64738/udp"
 
   web:
     image: leoverto/mumble-web:latest@sha256:9590ed597b295adebe9be0b08a99e5dc8fe1651f8fcd90dc50038c0ec40366f3
