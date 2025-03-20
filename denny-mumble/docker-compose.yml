@@ -35,4 +35,4 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/www:/usr/share/nginx/html:ro
     ports:
-      - "8879:80"
+      - "8878:80"
