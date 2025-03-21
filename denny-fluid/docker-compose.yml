@@ -5,23 +5,26 @@ services:
     environment:
       APP_HOST: denny-fluid_web_1
       APP_PORT: 3000
+      PROXY_AUTH_ADD: "false"
 
   web:
-    image: eibrahim/fluid-calendar:latest
+    image: eibrahim/fluid-calendar:1.2.3@sha256:460e40e8aa8d72812eb8b9c7ac02692f2e5ab3efbd88afb1512b20973bd92932
+    container_name: denny-fluid_web_1
     environment:
-      NEXTAUTH_URL: http://umbrel.local:3411
-      NEXT_PUBLIC_APP_URL: http://umbrel.local:3411
-      NEXT_PUBLIC_SITE_URL: http://umbrel.local:3411
-      NEXTAUTH_SECRET: dOxZYTTZgXKMHkqLBIQVImayQXAVWdzGBPuFJKggzcgvgPJPXpWzqzKaUOIOGGIr
+      NEXTAUTH_URL: http://${DEVICE_DOMAIN_NAME}:3411
+      NEXT_PUBLIC_APP_URL: http://${DEVICE_DOMAIN_NAME}:3411
+      NEXT_PUBLIC_SITE_URL: http://${DEVICE_DOMAIN_NAME}:3411
+      NEXTAUTH_SECRET: ${APP_SEED}
       DATABASE_URL: postgresql://fluidcalendaruser:fluidcalendarpass@fluidcalendar-db:5432/fluidcalendar
       NEXT_PUBLIC_ENABLE_SAAS_FEATURES: false
+    user: "1000:1000"
     depends_on:
       db:
         condition: service_healthy
     restart: on-failure
 
   db:
-    image: postgres:17
+    image: postgres:17@sha256:7f29c02ba9eeff4de9a9f414d803faa0e6fe5e8d15ebe217e3e418c82e652b35
     container_name: FluidCalendar-DB
     hostname: fluidcalendar-db
     security_opt:
@@ -31,6 +34,7 @@ services:
       timeout: 45s
       interval: 10s
       retries: 10
+    user: "1000:1000"
     volumes:
       - ${APP_DATA_DIR}/data/fluidcalendardb:/var/lib/postgresql/data:rw
     environment:
