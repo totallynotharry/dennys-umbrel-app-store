@@ -31,6 +31,7 @@ services:
       timeout: 45s
       interval: 10s
       retries: 10
+    user: "1000:1000"
     volumes:
       - ${APP_DATA_DIR}/data/fluidcalendardb:/var/lib/postgresql/data:rw
     environment:
