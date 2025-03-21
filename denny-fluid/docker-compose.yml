@@ -1,0 +1,40 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-fluid_web_1
+      APP_PORT: 3000
+
+  web:
+    image: eibrahim/fluid-calendar:latest
+    environment:
+      NEXTAUTH_URL: http://umbrel.local:3411
+      NEXT_PUBLIC_APP_URL: http://umbrel.local:3411
+      NEXT_PUBLIC_SITE_URL: http://umbrel.local:3411
+      NEXTAUTH_SECRET: dOxZYTTZgXKMHkqLBIQVImayQXAVWdzGBPuFJKggzcgvgPJPXpWzqzKaUOIOGGIr
+      DATABASE_URL: postgresql://fluidcalendaruser:fluidcalendarpass@fluidcalendar-db:5432/fluidcalendar
+      NEXT_PUBLIC_ENABLE_SAAS_FEATURES: false
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: on-failure
+
+  db:
+    image: postgres:17
+    container_name: FluidCalendar-DB
+    hostname: fluidcalendar-db
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD", "pg_isready", "-q", "-d", "fluidcalendar", "-U", "fluidcalendaruser"]
+      timeout: 45s
+      interval: 10s
+      retries: 10
+    volumes:
+      - ${APP_DATA_DIR}/data/fluidcalendardb:/var/lib/postgresql/data:rw
+    environment:
+      POSTGRES_DB: fluidcalendar
+      POSTGRES_USER: fluidcalendaruser
+      POSTGRES_PASSWORD: fluidcalendarpass
+    restart: on-failure
