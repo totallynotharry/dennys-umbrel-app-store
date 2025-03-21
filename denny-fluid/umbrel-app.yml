@@ -1,29 +1,35 @@
 manifestVersion: 1
 id: denny-fluid
 name: Fluid Calendar
-tagline: A WhatsApp client with themes and multiple account support
-icon: https://i.imgur.com/wfT4QX3.png
+tagline: An open-source intelligent calendar for smarter scheduling
+icon: https://i.imgur.com/pSCyqAP.png
 category: test
-version: "5.4.0"
+version: "1.2.3"
 port: 3411
 description: >-
-  📱 Altus is a powerful Electron-based WhatsApp client that enhances the desktop WhatsApp experience by adding a variety of extra features. Using the GitHub-developed Electron framework, Altus integrates WhatsApp Web while adding functionality that goes beyond what the standard WhatsApp Web offers. One of the standout features of Altus is its support for multiple WhatsApp accounts, allowing users to manage and switch between different accounts simultaneously.
+  📅 FluidCalendar is an open-source intelligent calendar designed to transform the way you manage your time, tasks, and schedule. It merges powerful automation with a clean, intuitive interface, allowing you to stay organized, productive, and in control of your day, whether you are handling personal tasks, managing a busy work calendar, or coordinating with a team.
 
 
-  The app also provides native notification support, so users are instantly notified when new messages arrive. Clicking on a notification opens the corresponding chat directly. A useful online indicator shows in the bottom-left corner of each chat whether the contact is currently online, making communication easier. For a more comfortable experience in low light or during the evening, Altus offers a Dark Mode that reduces eye strain and adapts the app's design to the lighting conditions.
+  At its core, FluidCalendar offers more than just a traditional calendar by adapting intelligently to your workflow. It automatically prioritizes tasks, optimizes your schedule, and reschedules events when conflicts arise, ensuring you never lose sight of important tasks. By considering deadlines, task priority, and available time slots, FluidCalendar helps you create a balanced and productive day without the mental burden of manual planning.
 
 
-  Additionally, Altus allows users to fully customize their WhatsApp interface. They can create custom themes either by writing their own CSS or using the built-in theme customizer, which allows for easy color selection to personalize the app's appearance. This flexibility in interface customization ensures a more tailored and comfortable user experience. Altus thus provides not only a practical but also a highly customizable solution for WhatsApp on the desktop.
+  FluidCalendar integrates seamlessly with popular calendar platforms like Google Calendar and Outlook, syncing your events and tasks effortlessly to keep you up to date. It also supports customizable workflows and recurring events, which helps automate repetitive scheduling tasks, saving you time and reducing the need for constant attention.
+
+
+  What makes FluidCalendar stand out is its commitment to flexibility and privacy. As an open-source project, it offers the option to self-host, allowing you to have complete control over your data, which is a significant advantage over proprietary calendar tools. Whether you are privacy-conscious or part of a team looking for a tailored solution, FluidCalendar provides the freedom to customize the system to fit your exact needs.
+
+
+  In essence, FluidCalendar is not just a calendar, but an intelligent, adaptable time management system designed to work for you, freeing you to focus on what matters most while it handles the complexities of scheduling behind the scenes.
 developer: Aman Harwara
-website: https://github.com/amanharwara/altus
+website: https://fluidcalendar.com/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/amanharwara/altus
-support: https://github.com/amanharwara/altus/issues
+repo: https://github.com/dotnetfactory/fluid-calendar
+support: https://github.com/dotnetfactory/fluid-calendar/issues
 gallery:
-  - https://i.imgur.com/rn7Zivn.png
-  - https://i.imgur.com/bDy2X8i.png
-  - https://i.imgur.com/ERsYpg3.png
+  - https://i.imgur.com/uG9i8Bv.png
+  - https://i.imgur.com/uG9i8Bv.png
+  - https://i.imgur.com/uG9i8Bv.png
 releaseNotes: >-
   The per-tab microphone and camera permission option is enabled by default, allowing users to manage permissions on a tab-by-tab basis for enhanced privacy and security. In addition, various other improvements have been implemented, such as performance optimizations, bug fixes, and a more streamlined user interface for better overall experience.
 dependencies:
