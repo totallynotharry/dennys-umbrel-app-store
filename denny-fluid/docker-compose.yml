@@ -23,13 +23,12 @@ services:
 
   db:
     image: postgres:17@sha256:7f29c02ba9eeff4de9a9f414d803faa0e6fe5e8d15ebe217e3e418c82e652b35
-    container_name: FluidCalendar-DB
+    container_name: fluidcalendar_db_1
     healthcheck:
       test: ["CMD", "pg_isready", "-q", "-d", "fluidcalendar", "-U", "fluidcalendaruser"]
       timeout: 45s
       interval: 10s
       retries: 10
-    user: "1000:1000" 
     volumes:
       - ${APP_DATA_DIR}/data/db:/var/lib/postgresql/data:rw
     environment:
