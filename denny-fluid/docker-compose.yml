@@ -12,7 +12,7 @@ services:
     environment:
       NEXTAUTH_URL: http://${DEVICE_DOMAIN_NAME}:3411
       NEXTAUTH_SECRET: ${APP_SEED}
-      DATABASE_URL: postgresql://fluidcalendaruser:fluidcalendarpass@fluidcalendar-db:5432/fluidcalendar
+      DATABASE_URL: postgresql://fluidcalendaruser:fluidcalendarpass@fluidcalendar_db_1:5432/fluidcalendar
       NEXT_PUBLIC_ENABLE_SAAS_FEATURES: false
     depends_on:
       db:
