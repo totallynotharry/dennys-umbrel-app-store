@@ -11,6 +11,7 @@ services:
     image: eibrahim/fluid-calendar:1.2.3@sha256:460e40e8aa8d72812eb8b9c7ac02692f2e5ab3efbd88afb1512b20973bd92932
     environment:
       NEXTAUTH_URL: http://${DEVICE_DOMAIN_NAME}:3411
+      NEXT_PUBLIC_BASE_URL: http://${DEVICE_DOMAIN_NAME}:3411
       NEXTAUTH_SECRET: ${APP_SEED}
       DATABASE_URL: postgresql://fluidcalendaruser:fluidcalendarpass@fluidcalendar_db_1:5432/fluidcalendar
       NEXT_PUBLIC_ENABLE_SAAS_FEATURES: false
