@@ -12,8 +12,6 @@ services:
     container_name: denny-fluid_web_1
     environment:
       NEXTAUTH_URL: http://${DEVICE_DOMAIN_NAME}:3411
-      NEXT_PUBLIC_APP_URL: http://${DEVICE_DOMAIN_NAME}:3411
-      NEXT_PUBLIC_SITE_URL: http://${DEVICE_DOMAIN_NAME}:3411
       NEXTAUTH_SECRET: ${APP_SEED}
       DATABASE_URL: postgresql://fluidcalendaruser:fluidcalendarpass@fluidcalendar-db:5432/fluidcalendar
       NEXT_PUBLIC_ENABLE_SAAS_FEATURES: false
