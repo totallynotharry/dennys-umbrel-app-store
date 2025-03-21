@@ -1,9 +1,9 @@
 manifestVersion: 1
 id: denny-fluid
-name: Fluid Calendar
+name: FluidCalendar
 tagline: An open-source intelligent calendar for smarter scheduling
 icon: https://i.imgur.com/pSCyqAP.png
-category: test
+category: In Progress
 version: "1.2.3"
 port: 3411
 description: >-
@@ -20,7 +20,7 @@ description: >-
 
 
   In essence, FluidCalendar is not just a calendar, but an intelligent, adaptable time management system designed to work for you, freeing you to focus on what matters most while it handles the complexities of scheduling behind the scenes.
-developer: Aman Harwara
+developer: Dot Net Factory
 website: https://fluidcalendar.com/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
@@ -31,7 +31,7 @@ gallery:
   - https://i.imgur.com/uG9i8Bv.png
   - https://i.imgur.com/uG9i8Bv.png
 releaseNotes: >-
-  The per-tab microphone and camera permission option is enabled by default, allowing users to manage permissions on a tab-by-tab basis for enhanced privacy and security. In addition, various other improvements have been implemented, such as performance optimizations, bug fixes, and a more streamlined user interface for better overall experience.
+  Version 1.2.3 of FluidCalendar introduces a new task start date feature, allowing tasks to be scheduled only when their start date arrives, along with improved sorting and filtering options. Calendar settings now allow for choosing the first day of the week, and expanded timezone options are available. Bug fixes include resolving all-day event display issues with Google Calendar and Outlook, along with other UI and technical improvements.
 dependencies:
 path: ""
 defaultUsername: ""
