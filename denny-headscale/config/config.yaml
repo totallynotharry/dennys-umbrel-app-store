@@ -1,24 +1,7 @@
-server_url: http://umbrel.local:8085
-listen_addr: 0.0.0.0:8085
-grpc_listen_addr: 0.0.0.0:50443
-private_key_path: /etc/headscale/private.key
-noise:
-  private_key_path: /etc/headscale/noise_private.key   # Fügt die noise.private_key_path Konfiguration hinzu
-db_type: sqlite3
-db_path: /var/lib/headscale/db.sqlite
-log_level: info
+server:
+  listen_address: "0.0.0.0:8080"
+  auth_key: "2Vt7jT2P1xaD4Qs9VtY9zR1t4JH1"
 
-dns:
-  nameservers:
-    global:
-      - 1.1.1.1
-      - 8.8.8.8
-
-magic_dns: true
-node_update_check: true
-
-# Web UI Config
-ui:
-  base_path: /web
-  listen_addr: 0.0.0.0:8383
-  enable: true
+database:
+  sqlite:
+    database_path: "/var/lib/headscale/headscale.db"
