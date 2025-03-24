@@ -10,7 +10,7 @@ description: >
 
 
   RustDesk provides a wide range of useful features, including file transfer, session recording, and detailed access controls, allowing users to effectively monitor and manage usage. Its decentralized architecture enables users to leverage their own infrastructure, making the solution highly flexible. RustDesk is ideal for secure and efficient remote access, offering a high level of usability for those seeking a stable, private, and reliable remote desktop software.
-developer: Purslane Ltd.
+developer: RustDesk Team
 website: https://rustdesk.com/
 dependencies: []
 repo: https://github.com/rustdesk/rustdesk
