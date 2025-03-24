@@ -11,6 +11,8 @@ services:
     depends_on:
       - db
     environment:
+      - 
+      - APP_TRUSTED_PROXIES=*
       - APP_ENV=local
       - DB_HOST=db
       - DB_DATABASE=monica
