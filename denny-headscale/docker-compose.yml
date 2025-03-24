@@ -12,7 +12,7 @@ services:
     ports:
       - "8085:8080"
       - "3478:3478/udp"
-    restart: on-failure
+    restart: unless-stopped
     networks:
       - headscale_network
 
@@ -21,12 +21,13 @@ services:
     container_name: headscale-ui
     environment:
       - HEADSCALE_URL=http://headscale:8085
-      - HTTP_PORT=8086 # Portanpassung für das UI
+      - HTTP_PORT=8383  # UI auf Port 8383
+      - HTTPS_PORT= # HTTPS-Port deaktiviert
     ports:
-      - "8086:8086"
+      - "8383:8383"
     depends_on:
       - headscale
-    restart: uon-failure
+    restart: unless-stopped
     networks:
       - headscale_network
 
