@@ -4,7 +4,7 @@ name: RustDesk Client
 category: networking
 version: "1.3.7"
 tagline: A full-featured remote control for self-hosting with minimal configuration
-icon: https://i.imgur.com/pej4v0o.png
+icon: https://i.imgur.com/MziM945.png
 description: >
   RustDesk is an open-source remote access and desktop solution that offers a compelling alternative to commercial applications like TeamViewer. One of RustDesk's standout features is the ability to fully self-host the software, giving users complete control over their data without relying on external servers. This is particularly advantageous for businesses and individuals who prioritize privacy and security.
 
