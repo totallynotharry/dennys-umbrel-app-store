@@ -11,14 +11,12 @@ services:
     depends_on:
       - db
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/Berlin
-      - APP_TRUSTED_PROXIES=*
-      - DB_HOST=db
-      - DB_DATABASE=monica
-      - DB_USERNAME=monica
-      - DB_PASSWORD=secret
+     PUID: 1000
+     PGID: 1000
+     TZ: Europe/Berlin
+     DB_PORT: 3306
+      
+
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/monica:/var/www/html/storage:rw
@@ -26,10 +24,23 @@ services:
   db:
     image: mariadb:11.4-noble@sha256:5dfb3093333fa0ea53194ddef0a2bfa21d3b1e1353bd228b22610cd6fc0c04da
     environment:
-      - MYSQL_RANDOM_ROOT_PASSWORD=true
-      - MYSQL_DATABASE=monica
-      - MYSQL_USER=monica
-      - MYSQL_PASSWORD=secret
+      DB_PORT: 3306
+      DB_HOST: db
+      DB_USERNAME: monicauser
+      DB_PASSWORD: monicapass
+      DB_DATABASE: monica
+      #APP_ENV: production
+      APP_URL: http://${DEVICE_DOMAIN_NAME}:8559
+      TRUSTED_PROXIES: "*"
+      MAIL_MAILER: smtp
+      MAIL_HOST: smtp.gmail.com
+      MAIL_PORT: 587
+      MAIL_USERNAME: Your-own-gmail-address
+      MAIL_PASSWORD: Your-own-app-password
+      MAIL_ENCRYPTION: tls
+      MAIL_FROM_ADDRESS: Your-own-gmail-address
+      MAIL_FROM_NAME: Monica
+      #APP_DISABLE_SIGNUP: false
     volumes:
       - ${APP_DATA_DIR}/data/db:/var/lib/mysql:rw
     restart: on-failure
