@@ -1,7 +1,7 @@
 server:
   listen_address: "0.0.0.0:8080"
   auth_key: "2Vt7jT2P1xaD4Qs9VtY9zR1t4JH1"
-  server_url: "http://umbrel.local:8080"  # Hier die korrekte URL anpassen
+  server_url: "http://umbrel.local:8085"  # Hier die korrekte URL anpassen
 
 database:
   sqlite:
