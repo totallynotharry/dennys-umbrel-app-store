@@ -1,6 +1,6 @@
 manifestVersion: 1
 id: denny-rustdesk
-name: Rustdesk
+name: RustDesk
 category: networking
 version: "1.3.7"
 tagline: A full-featured remote control for self-hosting with minimal configuration
