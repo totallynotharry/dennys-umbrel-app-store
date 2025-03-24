@@ -19,4 +19,4 @@ services:
     pull_policy: always
     restart: unless-stopped
     ports:
-        - 9380:80 # Port für die Headscale-UI bleibt bei 9380
+        - 8383:80
