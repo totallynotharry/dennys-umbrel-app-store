@@ -2,21 +2,20 @@ version: '3.7'
 
 services:
   headscale:
+    image: headscale/headscale:v0.24@sha256:2a2dcc9fef8f6e520a096743b668e3fd5df06ae422298c808c4e934a78764860
     container_name: headscale
-    image: headscale/headscale:latest
-    command: serve # Führt den Headscale-Dienst aus
-    restart: unless-stopped
-    ports:
-        - 8380:8080 # Port für Headscale-Dienst geändert auf 8380
-        - 9299:9090 # Port für Monitoring/Metriken
     volumes:
-      - ${APP_DATA_DIR}/config:/etc/headscale/
+      - ${APP_DATA_DIR}/config:/etc/headscale
       - ${APP_DATA_DIR}/data:/var/lib/headscale
+    ports:
+      - "27896:8080"
+    command: serve
+    restart: on-failure
 
   headscale-ui:
+    image: ghcr.io/gurucomputing/headscale-ui:2025.01.20@sha256:dda8534d5bde03b35b5bd11def3409938ec265d08c431c43294632573a2f3ae3
     container_name: headscale-ui
-    image: ghcr.io/gurucomputing/headscale-ui:latest
-    pull_policy: always
-    restart: unless-stopped
     ports:
-        - 8383:80
+      - "8543:8443"  
+      - "8383:8080" 
+    restart: on-failure
