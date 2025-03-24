@@ -15,7 +15,7 @@ services:
      PGID: 1000
      TZ: Europe/Berlin
      DB_PORT: 3306
-     DB_HOST: db
+     DB_HOST: denny-monica_db_1
      DB_USERNAME: monicauser
      DB_PASSWORD: monicapass
      DB_DATABASE: monica
