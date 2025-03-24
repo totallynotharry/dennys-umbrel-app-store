@@ -8,9 +8,12 @@ services:
 
   web:
     image: monica:4.1.2@sha256:b1b332533066ac3d8daddc58acdcbe0feeeb8ea6dd983c27d316eb6e04e90571
+    depends_on:
+      - db
     environment:
-      - APP_ENV=local
-      - APP_TRUSTED_PROXIES=*
+      # APP_ENV=local
+      - APP_KEY=NwfnGJ5eahcPn2En/k4ytcZ9cBpjZVeGaTEFw8N9a1U=
+      # APP_TRUSTED_PROXIES=*
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Berlin
