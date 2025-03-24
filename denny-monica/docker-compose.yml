@@ -22,7 +22,7 @@ services:
      APP_URL: http://${DEVICE_DOMAIN_NAME}:8559
      TRUSTED_PROXIES: "*"
      #APP_DISABLE_SIGNUP: false
-     #APP_ENV: production
+     APP_ENV: local
      #MAIL_MAILER: smtp
      #MAIL_HOST: smtp.gmail.com
      #MAIL_PORT: 587
