@@ -24,9 +24,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/rustdesk/rustdesk-server
 support: https://github.com/rustdesk/rustdesk/issues
 gallery:
-  - https://i.imgur.com/TFBSnQn.png
-  - https://i.imgur.com/hOFjONh.png
-  - https://i.imgur.com/xipa1cl.png
+  - https://i.imgur.com/gICl9jn.png
+  - https://i.imgur.com/qmwRJDp.png
+  - https://i.imgur.com/wDFd5ZO.png
 defaultUsername: ""
 defaultPassword: ""
 dependencies: []
