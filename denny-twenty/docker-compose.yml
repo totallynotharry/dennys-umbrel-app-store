@@ -1,6 +1,11 @@
-name: twenty
+version: '3.7'
 
 services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-twenty_server_1
+      APP_PORT: 3000
+      
   change-vol-ownership:
     image: ubuntu
     user: root
@@ -17,8 +22,8 @@ services:
     volumes:
       - server-local-data:/app/packages/twenty-server/.local-storage
       - docker-data:/app/docker-data
-    ports:
-      - "2020:3000"
+    #ports:
+      # "2020:3000"
     environment:
       NODE_PORT: 3000
       PG_DATABASE_URL: postgres://postgres:postgres@db:5432/default
