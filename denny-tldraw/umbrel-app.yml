@@ -3,7 +3,7 @@ id: denny-tldraw
 name: tldraw
 tagline: An intuitive whiteboard for ideas
 icon: https://i.imgur.com/whMjRSE.png
-category: In Progress
+category: files & productivity
 version: "2.0.0"
 port: 8505
 description: >-
