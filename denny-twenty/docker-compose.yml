@@ -15,22 +15,22 @@ services:
   server:
     image: twentycrm/twenty:latest
     volumes:
-      - server-local-data:/app/packages/twenty-server/${STORAGE_LOCAL_PATH:-.local-storage}
+      - server-local-data:/app/packages/twenty-server/.local-storage
       - docker-data:/app/docker-data
     ports:
       - "2020:3000"
     environment:
       NODE_PORT: 3000
-      PG_DATABASE_URL: postgres://${PG_DATABASE_USER:-postgres}:${PG_DATABASE_PASSWORD:-postgres}@${PG_DATABASE_HOST:-db}:${PG_DATABASE_PORT:-5432}/default
-      SERVER_URL: ${SERVER_URL}
-      REDIS_URL: ${REDIS_URL:-redis://redis:6379}
+      PG_DATABASE_URL: postgres://postgres:postgres@db:5432/default
+      SERVER_URL: http://umbrel.local:3000
+      REDIS_URL: redis://redis:6379
 
-      STORAGE_TYPE: ${STORAGE_TYPE}
-      STORAGE_S3_REGION: ${STORAGE_S3_REGION}
-      STORAGE_S3_NAME: ${STORAGE_S3_NAME}
-      STORAGE_S3_ENDPOINT: ${STORAGE_S3_ENDPOINT}
+      STORAGE_TYPE: local
+      STORAGE_S3_REGION: us-east-1
+      STORAGE_S3_NAME: your-bucket-name
+      STORAGE_S3_ENDPOINT: s3.amazonaws.com
 
-      APP_SECRET: ${APP_SECRET:-replace_me_with_a_random_string}
+      APP_SECRET: replace_me_with_a_random_string
 
     depends_on:
       change-vol-ownership:
@@ -47,21 +47,21 @@ services:
   worker:
     image: twentycrm/twenty:latest
     volumes:
-      - server-local-data:/app/packages/twenty-server/${STORAGE_LOCAL_PATH:-.local-storage}
+      - server-local-data:/app/packages/twenty-server/.local-storage
     command: ["yarn", "worker:prod"]
     environment:
-      PG_DATABASE_URL: postgres://${PG_DATABASE_USER:-postgres}:${PG_DATABASE_PASSWORD:-postgres}@${PG_DATABASE_HOST:-db}:${PG_DATABASE_PORT:-5432}/default
-      SERVER_URL: ${SERVER_URL}
-      REDIS_URL: ${REDIS_URL:-redis://redis:6379}
-      DISABLE_DB_MIGRATIONS: "true" # it already runs on the server
+      PG_DATABASE_URL: postgres://postgres:postgres@db:5432/default
+      SERVER_URL: http://umbrel.local:3000
+      REDIS_URL: redis://redis:6379
+      DISABLE_DB_MIGRATIONS: "true"
 
-      STORAGE_TYPE: ${STORAGE_TYPE}
-      STORAGE_S3_REGION: ${STORAGE_S3_REGION}
-      STORAGE_S3_NAME: ${STORAGE_S3_NAME}
-      STORAGE_S3_ENDPOINT: ${STORAGE_S3_ENDPOINT}
+      STORAGE_TYPE: local
+      STORAGE_S3_REGION: us-east-1
+      STORAGE_S3_NAME: your-bucket-name
+      STORAGE_S3_ENDPOINT: s3.amazonaws.com
 
-      APP_SECRET: ${APP_SECRET:-replace_me_with_a_random_string}
-      
+      APP_SECRET: replace_me_with_a_random_string
+
     depends_on:
       db:
         condition: service_healthy
@@ -74,10 +74,10 @@ services:
     volumes:
       - db-data:/var/lib/postgresql/data
     environment:
-      POSTGRES_USER: ${PG_DATABASE_USER:-postgres}
-      POSTGRES_PASSWORD: ${PG_DATABASE_PASSWORD:-postgres}
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
     healthcheck:
-      test: pg_isready -U ${PG_DATABASE_USER:-postgres} -h localhost -d postgres
+      test: pg_isready -U postgres -h localhost -d postgres
       interval: 5s
       timeout: 5s
       retries: 10
