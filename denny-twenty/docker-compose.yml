@@ -18,7 +18,7 @@ services:
       && chown -R 1000:1000 /tmp/docker-data"
 
   server:
-    image: twentycrm/twenty:v0.44.19@sha256:bb010ca3a6d369809a222b9f6b2cebeeebce7bbcf56b04ee5d516d3e6194e641
+    image: twentycrm/twenty:v0.50@sha256:a3adbaa1f82da177c94b2eb222bcf28849fd31733412d95c3dac92fe1c28ba54
     volumes:
       - ${APP_DATA_DIR}/data/server-local-data:/app/packages/twenty-server/.local-storage
       - ${APP_DATA_DIR}/data/docker-data:/app/docker-data
@@ -48,7 +48,7 @@ services:
     restart: on-failure
 
   worker:
-    image: twentycrm/twenty:v0.44.19@sha256:bb010ca3a6d369809a222b9f6b2cebeeebce7bbcf56b04ee5d516d3e6194e641
+    image: twentycrm/twenty:v0.50@sha256:a3adbaa1f82da177c94b2eb222bcf28849fd31733412d95c3dac92fe1c28ba54
     volumes:
       - ${APP_DATA_DIR}/data/server-local-data:/app/packages/twenty-server/.local-storage
     command: ["yarn", "worker:prod"]
