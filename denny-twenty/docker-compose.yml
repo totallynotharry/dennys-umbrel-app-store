@@ -7,7 +7,7 @@ services:
       APP_PORT: 3000
       
   change-vol-ownership:
-    image: ubuntu
+    image: ubuntu:24.04@sha256:72297848456d5d37d1262630108ab308d3e9ec7ed1c3286a32fe09856619a782
     user: root
     volumes:
       - ${APP_DATA_DIR}/data/server-local-data:/tmp/server-local-data
@@ -18,16 +18,14 @@ services:
       && chown -R 1000:1000 /tmp/docker-data"
 
   server:
-    image: twentycrm/twenty:latest
+    image: twentycrm/twenty:v0.44.19@sha256:bb010ca3a6d369809a222b9f6b2cebeeebce7bbcf56b04ee5d516d3e6194e641
     volumes:
       - ${APP_DATA_DIR}/data/server-local-data:/app/packages/twenty-server/.local-storage
       - ${APP_DATA_DIR}/data/docker-data:/app/docker-data
-    #ports:
-      # "2020:3000"
     environment:
       NODE_PORT: 3000
       PG_DATABASE_URL: postgres://postgres:postgres@db:5432/default
-      SERVER_URL: http://umbrel.local:3000
+      SERVER_URL: http://umbrel.local:2020
       REDIS_URL: redis://redis:6379
 
       STORAGE_TYPE: local
@@ -35,7 +33,7 @@ services:
       STORAGE_S3_NAME: your-bucket-name
       STORAGE_S3_ENDPOINT: s3.amazonaws.com
 
-      APP_SECRET: replace_me_with_a_random_string
+      APP_SECRET: 2Gn5puuVCH0SI386E9RqOqHm0hGIAyrB
 
     depends_on:
       change-vol-ownership:
@@ -47,16 +45,16 @@ services:
       interval: 5s
       timeout: 5s
       retries: 10
-    restart: always
+    restart: on-failure
 
   worker:
-    image: twentycrm/twenty:latest
+    image: twentycrm/twenty:v0.44.19@sha256:bb010ca3a6d369809a222b9f6b2cebeeebce7bbcf56b04ee5d516d3e6194e641
     volumes:
       - ${APP_DATA_DIR}/data/server-local-data:/app/packages/twenty-server/.local-storage
     command: ["yarn", "worker:prod"]
     environment:
       PG_DATABASE_URL: postgres://postgres:postgres@db:5432/default
-      SERVER_URL: http://umbrel.local:3000
+      SERVER_URL: http://umbrel.local:2020
       REDIS_URL: redis://redis:6379
       DISABLE_DB_MIGRATIONS: "true"
 
@@ -65,17 +63,17 @@ services:
       STORAGE_S3_NAME: your-bucket-name
       STORAGE_S3_ENDPOINT: s3.amazonaws.com
 
-      APP_SECRET: replace_me_with_a_random_string
+      APP_SECRET: 2Gn5puuVCH0SI386E9RqOqHm0hGIAyrB
 
     depends_on:
       db:
         condition: service_healthy
       server:
         condition: service_healthy
-    restart: always
+    restart: on-failure
 
   db:
-    image: postgres:16
+    image: postgres:16@sha256:e95b0cb95f719e0ce156c2bc5545c89fbd98a1a692845a5331ddc79ea61f1b1e
     volumes:
       - ${APP_DATA_DIR}/data/db-data:/var/lib/postgresql/data
     environment:
@@ -86,11 +84,11 @@ services:
       interval: 5s
       timeout: 5s
       retries: 10
-    restart: always
+    restart: on-failure
 
   redis:
-    image: redis
-    restart: always
+    image: redis:7.4.2@sha256:bd41d55aae1ecff61b2fafd0d66761223fe94a60373eb6bb781cfbb570a84079
+    restart: on-failure
 
 volumes:
   docker-data:
