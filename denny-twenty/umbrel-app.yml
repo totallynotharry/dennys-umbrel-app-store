@@ -27,9 +27,10 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/twentyhq/twenty
 support: https://github.com/twentyhq/twenty/issues
 gallery:
-  - https://i.imgur.com/08sAND8.png
-  - https://i.imgur.com/08sAND8.png
-  - https://i.imgur.com/08sAND8.png
+  - https://i.imgur.com/MCKiLbK.png
+  - https://i.imgur.com/2dSecar.png
+  - https://i.imgur.com/UKZ6CVW.png
+  - https://i.imgur.com/bpDU2d4.png
 releaseNotes: >-
   In version v0.40.0, several significant improvements and bug fixes were implemented across the platform. These included enhancements to the workflow visualizer, better integration with emails and calendars, as well as improved error handling and API support for aggregations. Key updates also included the addition of new features like the ability to manage user permissions more effectively, smoother table actions, and fixes for issues related to dark mode and navigation. Additionally, the release improved workflow management with new command menu options, more customization in views, and the introduction of new aggregation operations on dates. Other refinements targeted performance, UI design, and user experience for a more polished and stable system.
 dependencies:
