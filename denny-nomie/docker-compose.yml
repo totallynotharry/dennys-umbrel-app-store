@@ -7,14 +7,19 @@ services:
       APP_PORT: 3000
 
   web:
-    image: ghcr.io/linuxserver/altus:5.4.0@sha256:65387a1324bd2037c41fe270d5781000852b917f3e184739f46ed146d3178480
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/Berlin
-    shm_size: "2gb"
+    image: rogerrum/docker-nomie6-oss:6.3.0@sha256:b49550995d68e0cd0513ac54bac614912f88f779f6f538880e1139cf7b631b19
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
+    depends_on:
+      - db
 
-#https://docs.linuxserver.io/images/docker-altus/#options-in-all-kasmvnc-based-gui-containers
+  db:
+    image: couchdb:3.4.3@sha256:b5491a6cdf6417bf8762166a207380c5393e075020b3168fd958649b2417f24f
+    ports:
+      - 5985:5984
+    environment:
+      COUCHDB_USER: admin
+      COUCHDB_PASSWORD: umbrel
+    volumes:
+      - ${APP_DATA_DIR}/data/db:/opt/couchdb/data:rw
