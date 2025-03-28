@@ -7,7 +7,8 @@ category: In Progress
 version: "6.3.0"
 port: 8737
 description: >-
-  Nomie is a privacy-focused journaling app designed for effortless daily tracking. Built with simplicity in mind, it allows users to log activities, moods, habits, and personal experiences with a single tap. Unlike many other tracking apps, Nomie ensures complete data ownership by storing everything locally or allowing users to self-host their data. There are no accounts, no ads, and no third-party analytics, making it a truly private solution for personal journaling.
+  🐘 Nomie is a privacy-focused journaling app designed for effortless daily tracking. Built with simplicity in mind, it allows users to log activities, moods, habits, and personal experiences with a single tap. Unlike many other tracking apps, Nomie ensures complete data ownership by storing everything locally or allowing users to self-host their data. There are no accounts, no ads, and no third-party analytics, making it a truly private solution for personal journaling.
+
 
   The app’s flexibility makes it suitable for a wide range of use cases, whether someone wants to track their mental health, monitor productivity, or simply keep a record of daily life. Customizable trackers enable users to tailor the experience to their specific needs, and the open-source nature of the project allows for continuous community-driven improvements. By prioritizing privacy and ease of use, Nomie provides a seamless way to document life without worrying about data security or intrusive monitoring.
 developer: Happy Data, LLC
