@@ -18,9 +18,11 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/open-nomie/nomie6-oss
 support: https://github.com/open-nomie/nomie6-oss/issues
 gallery:
-  - https://i.imgur.com/F4DDWYB.png
-  - https://i.imgur.com/F4DDWYB.png
-  - https://i.imgur.com/F4DDWYB.png
+  - https://i.imgur.com/x3fNklL.png
+  - https://i.imgur.com/k4H5ecb.png
+  - https://i.imgur.com/gYXf0Ng.png
+  - https://i.imgur.com/X3R7Y89.png
+  - https://i.imgur.com/o7ppKwn.png
 releaseNotes: >-
   This update introduces resumable timers, multiple widgets for a single plugin, and improved input retention when switching tabs on desktop. It also fixes issues with the tracking board not loading after onboarding, plugin titles in the database editor, location caching on startup, and a text overwrite bug in the capture field.
 dependencies:
