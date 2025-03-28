@@ -8,6 +8,11 @@ services:
 
   web:
     image: rogerrum/docker-nomie6-oss:6.3.0@sha256:b49550995d68e0cd0513ac54bac614912f88f779f6f538880e1139cf7b631b19
+    environment:
+      DB_HOST: denny-nomie_db_1 
+      DB_PORT: 5984
+      DB_USER: admin
+      DB_PASSWORD: umbrel
     healthcheck:
       test: timeout 10s bash -c ':> /dev/tcp/127.0.0.1/80' || exit 1
       interval: 10s
