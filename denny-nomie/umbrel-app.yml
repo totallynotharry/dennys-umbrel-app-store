@@ -3,7 +3,7 @@ id: denny-nomie
 name: Nomie
 tagline: A privacy-first journaling app for tracking life on your terms
 icon: https://i.imgur.com/jRYvLB4.png
-category: In Progress
+category: social
 version: "6.3.0"
 port: 8737
 description: >-
