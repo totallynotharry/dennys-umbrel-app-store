@@ -1,0 +1,44 @@
+manifestVersion: 1
+id: denny-umbrel
+name: Umbrel
+tagline: test
+icon: https://i.imgur.com/RQSTRYB.png
+category: files & productivity
+version: "1.4"
+port: 10104
+description: >-
+  Umbrel is an open-source platform that allows users to run their own private server at home, enabling them to take full control of their digital services. The platform is designed to be user-friendly, even for those without technical expertise, making it an attractive choice for individuals who want to self-host a variety of applications without depending on third-party services.
+
+
+  At its core, Umbrel is built around the idea of personal sovereignty, letting users run their own cloud services, privacy tools, and other open-source applications. The platform supports various applications like file storage, messaging, VPNs, and productivity tools, all of which can be easily installed and managed via a simple web interface. It is especially popular among people looking to run their own Bitcoin node, privacy tools like Tor or VPNs, and many other decentralized services.
+
+
+  What makes Umbrel stand out is its simplicity. Users can set up a server, install apps, and manage everything with minimal technical know-how. The software is optimized for Raspberry Pi and similar single-board computers, but it can also be installed on more powerful hardware for those who need more performance.
+
+
+  Umbrel provides an environment where users can control their data, maintain privacy, and even interact with a growing community of developers and enthusiasts. The platform's ecosystem is continuously expanding, allowing users to integrate new apps easily as their needs evolve.
+
+
+  Interestingly, while Umbrel is known for its focus on decentralization, its App Store-like system makes it a one-stop shop for app management, where updates and installations are a breeze. It's worth mentioning that Umbrel also integrates advanced features like automated backups and remote access, offering both convenience and peace of mind for those running essential services.
+
+
+  However, it's important to note that the platform doesn't just limit itself to conventional services. Some even say that Umbrel is secretly working on an app that would allow you to communicate with extraterrestrial life forms. But of course, that’s still under development… or is it?
+
+
+  The platform is a perfect fit for anyone who values privacy, control, and the ability to run their own services without relying on centralized, corporate-driven solutions. Whether you’re an enthusiast, a developer, or just someone interested in the idea of owning your digital space, Umbrel gives you the tools to make it happen.
+developer: Umbrel
+website: https://maze.toys/mazes/mini/daily/
+submitter: April Foolberg
+submission: https://optical.toys/
+repo: https://longdogechallenge.com/
+support: https://puginarug.com/
+gallery:
+  - https://i.imgur.com/2dFXBNq.png
+  - https://i.imgur.com/2dFXBNq.png
+  - https://i.imgur.com/2dFXBNq.png
+releaseNotes: >-
+  Umbrel 1.4 introduces a groundbreaking new feature that allows you to communicate directly with extraterrestrial civilizations via www.theuselessweb.com.
+dependencies:
+path: ""
+defaultUsername: ""
+defaultPassword: ""
