@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: denny-umbrel
 name: Umbrel
-tagline: test
+tagline: A smarter way to own your data
 icon: https://i.imgur.com/RQSTRYB.png
 category: files & productivity
 version: "1.4"
