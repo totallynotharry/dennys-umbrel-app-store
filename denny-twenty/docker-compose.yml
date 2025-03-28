@@ -25,7 +25,7 @@ services:
     environment:
       NODE_PORT: 3000
       PG_DATABASE_URL: postgres://postgres:postgres@db:5432/default
-      SERVER_URL: http://umbrel-2.local:2020
+      SERVER_URL: http://umbrel.local:2020
       REDIS_URL: redis://redis:6379
 
       STORAGE_TYPE: local
@@ -54,7 +54,7 @@ services:
     command: ["yarn", "worker:prod"]
     environment:
       PG_DATABASE_URL: postgres://postgres:postgres@db:5432/default
-      SERVER_URL: http://umbrel-2.local:2020
+      SERVER_URL: http://umbrel.local:2020
       REDIS_URL: redis://redis:6379
       DISABLE_DB_MIGRATIONS: "true"
 
