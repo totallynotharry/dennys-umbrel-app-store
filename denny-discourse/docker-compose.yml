@@ -18,7 +18,7 @@ services:
       - ./pgdata:/var/lib/postgresql/data
 
   discourse:
-    image: discourse:latest
+    image: discourse/base:release
     container_name: discourse_app
     restart: always
     depends_on:
