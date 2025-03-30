@@ -1,11 +1,14 @@
-version: '3.7'
+version: '3'
 
 services:
   redis:
     image: redis:latest
     container_name: discourse_redis
     restart: always
-
+    command: redis-server --requirepass your-redis-password # Optional: Passworteinstellung für Redis
+    sysctls:
+      - vm.overcommit_memory=1 # Aktiviert "memory overcommit"
+  
   postgres:
     image: postgres:13
     container_name: discourse_postgres
@@ -16,9 +19,10 @@ services:
       POSTGRES_PASSWORD: discoursepassword
     volumes:
       - ./pgdata:/var/lib/postgresql/data
+    command: postgres -c 'log_statement=all' # Optional: Für detailliertere Logs während der Entwicklung
 
   discourse:
-    image: discourse/base:release
+    image: discourse/base:latest
     container_name: discourse_app
     restart: always
     depends_on:
@@ -28,10 +32,10 @@ services:
       - "3490:80"
     environment:
       DISCOURSE_HOSTNAME: umbrel-2.local:3490
-      DISCOURSE_DEVELOPER_EMAILS: 'youremail@example.com'
-      DISCOURSE_SMTP_ADDRESS: smtp.example.com
+      DISCOURSE_DEVELOPER_EMAILS: 'youremail@example.com'  # Deine Entwickler-E-Mail-Adresse
+      DISCOURSE_SMTP_ADDRESS: smtp.example.com            # SMTP-Server-Adresse
       DISCOURSE_SMTP_PORT: 587
-      DISCOURSE_SMTP_USER_NAME: your-smtp-username
-      DISCOURSE_SMTP_PASSWORD: your-smtp-password
+      DISCOURSE_SMTP_USER_NAME: your-smtp-username        # SMTP-Benutzername
+      DISCOURSE_SMTP_PASSWORD: your-smtp-password        # SMTP-Passwort
     volumes:
       - ./discourse_data:/var/www/discourse
