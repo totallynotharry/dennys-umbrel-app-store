@@ -16,6 +16,7 @@ services:
       POSTGRESQL_DATABASE: bitnami_discourse
       POSTGRESQL_USERNAME: bn_discourse
       POSTGRESQL_PASSWORD: bitnami123
+      PGDATA: /bitnami/postgresql/data
     restart: on-failure:5
 
   redis:
