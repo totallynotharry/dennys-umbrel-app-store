@@ -22,7 +22,7 @@ services:
       POSTGRESQL_DATABASE: bitnami_discourse
       POSTGRESQL_USERNAME: bn_discourse
       POSTGRESQL_PASSWORD: bitnami123
-    restart: unless-stopped
+    restart: on-failure
 
   redis:
     image: redis
