@@ -1,14 +1,8 @@
-version: '3.7'
-
 services:
-  app_proxy:
-    environment:
-      APP_HOST: denny-discourse_web_1
-      APP_PORT: 3000
-
   postgresql:
     image: bitnami/postgresql:16
-    user: root
+    container_name: denny-discourse_db_1
+    hostname: postgresql
     security_opt:
       - no-new-privileges:true
     healthcheck:
@@ -17,33 +11,37 @@ services:
       interval: 10s
       retries: 10
     volumes:
-      - ${APP_DATA_DIR}/db:/bitnami/postgresql:rw
+      - ${APP_DATA_DIR}/data/db:/bitnami/postgresql:rw
     environment:
       POSTGRESQL_DATABASE: bitnami_discourse
       POSTGRESQL_USERNAME: bn_discourse
       POSTGRESQL_PASSWORD: bitnami123
-    restart: on-failure
+    restart: on-failure:5
 
   redis:
     image: redis
+    container_name: denny-discourse_redis_1
     command: redis-server --requirepass redispass
     healthcheck:
-      test: ["CMD", "redis-cli", "-a", "redispass", "ping"]
+      test: ["CMD-SHELL", "redis-cli ping || exit 1"]
     volumes:
-      - ${APP_DATA_DIR}/redis:/data:rw
+      - ${APP_DATA_DIR}/data/redis:/data:rw
     environment:
       TZ: Europe/Berlin
-    restart: on-failure
+    restart: on-failure:5
 
-  web:
-    image: bitnami/discourse:3.3.3
-    restart: unless-stopped
+  discourse:
+    image: bitnami/discourse:3.4.1
+    container_name: denny-discourse_web_1
+    restart: on-failure:5
     healthcheck:
       test: timeout 10s bash -c ':> /dev/tcp/127.0.0.1/3000' || exit 1
       interval: 10s
       timeout: 5s
       retries: 3
       start_period: 90s
+    ports:
+      - 3490:3000
     depends_on:
       - postgresql
       - redis
@@ -61,7 +59,6 @@ services:
       - DISCOURSE_REDIS_HOST=redis
       - DISCOURSE_REDIS_PORT_NUMBER=6379
       - DISCOURSE_REDIS_PASSWORD=redispass
-      - DISCOURSE_HOST=umbrel-2.local:3490
       - DISCOURSE_DEVELOPER_EMAILS=yourown@email
       - DISCOURSE_SMTP_HOST=smtp.gmail.com
       - DISCOURSE_SMTP_AUTH=login
@@ -70,17 +67,17 @@ services:
       - DISCOURSE_SMTP_PASSWORD=Your-own-app-password
       - DISCOURSE_SMTP_PROTOCOL=tls
     volumes:
-      - ${APP_DATA_DIR}/data:/bitnami/discourse:rw
+      - ${APP_DATA_DIR}/data/discourse:/bitnami/discourse:rw
 
   sidekiq:
-    image: bitnami/discourse:3.3.3
+    image: bitnami/discourse:3.4.1
+    container_name: denny-discourse_sidekiq_1
     depends_on:
-      - web
+      - discourse
     volumes:
-      - ${APP_DATA_DIR}/sidekiq:/bitnami/discourse:rw
+      - ${APP_DATA_DIR}/data/sidekiq:/bitnami/discourse:rw
     command: /opt/bitnami/scripts/discourse-sidekiq/run.sh
     environment:
-      - DISCOURSE_HOST=umbrel-2.local:3490
       - DISCOURSE_ENABLE_HTTPS=no
       - DISCOURSE_ENV=production
       - DISCOURSE_DATABASE_HOST=postgresql
