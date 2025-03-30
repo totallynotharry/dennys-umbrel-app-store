@@ -5,7 +5,6 @@ services:
     image: redis:latest
     container_name: discourse_redis
     restart: always
-    command: redis-server --requirepass your-redis-password # Optional: Passworteinstellung für Redis
   
   postgres:
     image: postgres:13
