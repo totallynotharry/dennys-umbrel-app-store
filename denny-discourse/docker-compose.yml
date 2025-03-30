@@ -2,7 +2,6 @@ services:
   postgresql:
     image: bitnami/postgresql:16
     container_name: denny-discourse_db_1
-    user: "1001:1001"
     hostname: postgresql
     security_opt:
       - no-new-privileges:true
@@ -19,6 +18,8 @@ services:
       POSTGRESQL_PASSWORD: bitnami123
       PGDATA: /bitnami/postgresql/data
     restart: on-failure:5
+    volumePermissions:
+      enabled: true  # Diese Zeile hinzuzufügen
 
   redis:
     image: redis
