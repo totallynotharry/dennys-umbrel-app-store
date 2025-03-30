@@ -6,8 +6,6 @@ services:
     container_name: discourse_redis
     restart: always
     command: redis-server --requirepass your-redis-password # Optional: Passworteinstellung für Redis
-    sysctls:
-      - vm.overcommit_memory=1 # Aktiviert "memory overcommit"
   
   postgres:
     image: postgres:13
