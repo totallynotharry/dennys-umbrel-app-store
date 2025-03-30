@@ -3,7 +3,7 @@ services:
     image: bitnami/postgresql:16
     container_name: denny-discourse_db_1
     entrypoint: /bin/bash -c "chown -R 1001:1001 /bitnami/postgresql && /opt/bitnami/scripts/postgresql/run.sh"
-    user: root
+    user: "0:0"
     hostname: postgresql
     security_opt:
       - no-new-privileges:true
