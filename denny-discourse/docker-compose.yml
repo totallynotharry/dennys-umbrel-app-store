@@ -33,7 +33,7 @@ services:
       - ${APP_DATA_DIR}/redis:/data:rw
     environment:
       TZ: Europe/Berlin
-    restart: unless-stopped
+    restart: on-failure
 
   web:
     image: bitnami/discourse:3.3.3
@@ -61,7 +61,7 @@ services:
       - DISCOURSE_REDIS_HOST=redis
       - DISCOURSE_REDIS_PORT_NUMBER=6379
       - DISCOURSE_REDIS_PASSWORD=redispass
-      - DISCOURSE_HOST=umbrel.local:3490
+      - DISCOURSE_HOST=umbrel-2.local:3490
       - DISCOURSE_DEVELOPER_EMAILS=yourown@email
       - DISCOURSE_SMTP_HOST=smtp.gmail.com
       - DISCOURSE_SMTP_AUTH=login
@@ -80,7 +80,7 @@ services:
       - ${APP_DATA_DIR}/sidekiq:/bitnami/discourse:rw
     command: /opt/bitnami/scripts/discourse-sidekiq/run.sh
     environment:
-      - DISCOURSE_HOST=umbrel.local:3490
+      - DISCOURSE_HOST=umbrel-2.local:3490
       - DISCOURSE_ENABLE_HTTPS=no
       - DISCOURSE_ENV=production
       - DISCOURSE_DATABASE_HOST=postgresql
