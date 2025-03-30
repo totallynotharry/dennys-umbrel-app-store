@@ -1,100 +1,37 @@
-services:
-  postgresql:
-    image: bitnami/postgresql:16
-    container_name: denny-discourse_db_1
-    entrypoint: /bin/bash -c "chown -R 1001:1001 /bitnami/postgresql && /opt/bitnami/scripts/postgresql/run.sh"
-    user: "0:0"
-    hostname: postgresql
-    security_opt:
-      - no-new-privileges:true
-    healthcheck:
-      test: ["CMD", "pg_isready", "-q", "-d", "bitnami_discourse", "-U", "bn_discourse"]
-      timeout: 45s
-      interval: 10s
-      retries: 10
-    volumes:
-      - ${APP_DATA_DIR}/data/db:/bitnami/postgresql:rw
-    environment:
-      POSTGRESQL_DATABASE: bitnami_discourse
-      POSTGRESQL_USERNAME: bn_discourse
-      POSTGRESQL_PASSWORD: bitnami123
-      PGDATA: /bitnami/postgresql/data
-    restart: on-failure:5
+version: '3'
 
+services:
   redis:
-    image: redis
-    container_name: denny-discourse_redis_1
-    command: redis-server --requirepass redispass
-    healthcheck:
-      test: ["CMD-SHELL", "redis-cli ping || exit 1"]
-    volumes:
-      - ${APP_DATA_DIR}/data/redis:/data:rw
+    image: redis:latest
+    container_name: discourse_redis
+    restart: always
+
+  postgres:
+    image: postgres:13
+    container_name: discourse_postgres
+    restart: always
     environment:
-      TZ: Europe/Berlin
-    restart: on-failure:5
+      POSTGRES_DB: discourse
+      POSTGRES_USER: discourse
+      POSTGRES_PASSWORD: discoursepassword
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
 
   discourse:
-    image: bitnami/discourse:3.4.1
-    container_name: denny-discourse_web_1
-    restart: on-failure:5
-    healthcheck:
-      test: timeout 10s bash -c ':> /dev/tcp/127.0.0.1/3000' || exit 1
-      interval: 10s
-      timeout: 5s
-      retries: 3
-      start_period: 90s
-    ports:
-      - 3490:3000
+    image: discourse/base:latest
+    container_name: discourse_app
+    restart: always
     depends_on:
-      - postgresql
       - redis
+      - postgres
+    ports:
+      - "8080:80"
     environment:
-      - DISCOURSE_USERNAME=marius
-      - DISCOURSE_PASSWORD=mariushosting
-      - DISCOURSE_EMAIL=yourown@email
-      - DISCOURSE_ENV=production
-      - DISCOURSE_ENABLE_HTTPS=no
-      - DISCOURSE_DATABASE_HOST=postgresql
-      - DISCOURSE_DATABASE_PORT_NUMBER=5432
-      - DISCOURSE_DATABASE_USER=bn_discourse
-      - DISCOURSE_DATABASE_NAME=bitnami_discourse
-      - DISCOURSE_DATABASE_PASSWORD=bitnami123
-      - DISCOURSE_REDIS_HOST=redis
-      - DISCOURSE_REDIS_PORT_NUMBER=6379
-      - DISCOURSE_REDIS_PASSWORD=redispass
-      - DISCOURSE_DEVELOPER_EMAILS=yourown@email
-      - DISCOURSE_SMTP_HOST=smtp.gmail.com
-      - DISCOURSE_SMTP_AUTH=login
-      - DISCOURSE_SMTP_PORT_NUMBER=587
-      - DISCOURSE_SMTP_USER=Your-own-gmail-address
-      - DISCOURSE_SMTP_PASSWORD=Your-own-app-password
-      - DISCOURSE_SMTP_PROTOCOL=tls
+      DISCOURSE_HOSTNAME: localhost
+      DISCOURSE_DEVELOPER_EMAILS: 'youremail@example.com'
+      DISCOURSE_SMTP_ADDRESS: smtp.example.com
+      DISCOURSE_SMTP_PORT: 587
+      DISCOURSE_SMTP_USER_NAME: your-smtp-username
+      DISCOURSE_SMTP_PASSWORD: your-smtp-password
     volumes:
-      - ${APP_DATA_DIR}/data/discourse:/bitnami/discourse:rw
-
-  sidekiq:
-    image: bitnami/discourse:3.4.1
-    container_name: denny-discourse_sidekiq_1
-    depends_on:
-      - discourse
-    volumes:
-      - ${APP_DATA_DIR}/data/sidekiq:/bitnami/discourse:rw
-    command: /opt/bitnami/scripts/discourse-sidekiq/run.sh
-    environment:
-      - DISCOURSE_ENABLE_HTTPS=no
-      - DISCOURSE_ENV=production
-      - DISCOURSE_DATABASE_HOST=postgresql
-      - DISCOURSE_DATABASE_PORT_NUMBER=5432
-      - DISCOURSE_DATABASE_USER=bn_discourse
-      - DISCOURSE_DATABASE_NAME=bitnami_discourse
-      - DISCOURSE_DATABASE_PASSWORD=bitnami123
-      - DISCOURSE_REDIS_HOST=redis
-      - DISCOURSE_REDIS_PORT_NUMBER=6379
-      - DISCOURSE_REDIS_PASSWORD=redispass
-      - DISCOURSE_DEVELOPER_EMAILS=yourown@email
-      - DISCOURSE_SMTP_HOST=smtp.gmail.com
-      - DISCOURSE_SMTP_AUTH=login
-      - DISCOURSE_SMTP_PORT_NUMBER=587
-      - DISCOURSE_SMTP_USER=Your-own-gmail-address
-      - DISCOURSE_SMTP_PASSWORD=Your-own-app-password
-      - DISCOURSE_SMTP_PROTOCOL=tls
+      - ./discourse_data:/var/www/discourse
