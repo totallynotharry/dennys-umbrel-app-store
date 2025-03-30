@@ -16,7 +16,6 @@ services:
       POSTGRES_PASSWORD: discoursepassword
     volumes:
       - ./pgdata:/var/lib/postgresql/data
-    command: postgres -c 'log_statement=all' # Optional: Für detailliertere Logs während der Entwicklung
 
   discourse:
     image: discourse/base:latest
