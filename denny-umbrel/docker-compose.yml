@@ -1,0 +1,12 @@
+services:
+  umbrel:
+    image: dockurr/umbrel:1.4.0@sha256:069330fde30845602d244d59af1d1334e0aba1c993a2a348b4394014cc0346c2
+    container_name: umbrelos
+    pid: host
+    ports:
+      - 10401:80
+    volumes:
+      - ${APP_DATA_DIR}/data//umbrel:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: on-failure
+    stop_grace_period: 1m
