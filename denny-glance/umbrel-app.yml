@@ -1,0 +1,41 @@
+manifestVersion: 1
+id: denny-glance
+name: Glance
+tagline: A self-hosted dashboard that puts all your feeds in one place
+icon: https://i.imgur.com/krxJ46D.png
+category: files & productivity
+version: "0.7.9"
+port: 8907
+description: >-
+  Glance is a lightweight, self-hosted dashboard designed to help users keep track of their self-hosted services, applications, and resources in an intuitive and visually appealing way. Unlike traditional monitoring tools that can be complex and overloaded with data, Glance focuses on simplicity and accessibility, making it an excellent choice for both beginners and experienced self-hosting enthusiasts.
+
+
+  With its clean and minimalist interface, Glance allows users to see the status of their services at a glance, providing a quick overview without unnecessary distractions. Whether you are managing a few essential applications or a large number of self-hosted services, Glance ensures that all critical information is presented in an organized and easy-to-read format.
+
+
+  One of the key advantages of Glance is its flexibility. It is highly configurable, allowing users to customize the displayed services and their associated information according to their needs. This makes it suitable for a variety of use cases, whether you are running a personal server, a home lab, or even a small business infrastructure.
+
+
+  Since Glance is entirely self-hosted, users retain full control over their data and privacy. There are no dependencies on external services or third-party integrations, ensuring that sensitive information remains secure. The open-source nature of the project also means that it is actively maintained by the community, with regular updates and improvements based on user feedback.
+
+
+  Designed for efficiency, Glance is lightweight and does not require extensive system resources to run smoothly. It can be easily deployed using Docker or other containerization methods, making installation and maintenance straightforward.
+
+
+  Overall, Glance is an excellent tool for anyone looking to simplify the management of self-hosted services. By providing an elegant and user-friendly dashboard, it helps users stay organized, monitor their applications effortlessly, and maintain full control over their self-hosted environment.
+developer: Svilen Markov
+website: https://github.com/glanceapp
+submitter: dennysubke
+submission: https://github.com/getumbrel/umbrel-apps/pull/
+repo: https://github.com/glanceapp/glance
+support: https://github.com/glanceapp/glance/issues
+gallery:
+  - https://i.imgur.com/kDIqfBd.png
+  - https://i.imgur.com/kDIqfBd.png
+  - https://i.imgur.com/kDIqfBd.png
+releaseNotes: >-
+  Version 0.7.9 introduces improvements to the custom-api widget, including simplified mathematical operations and a new option to skip JSON validation for APIs that return newline-separated JSON objects. Additionally, new functions like concat, now, and offsetNow have been added, and a bug in the markets widget displaying prices below 0.01 has been fixed.
+dependencies:
+path: ""
+defaultUsername: ""
+defaultPassword: ""

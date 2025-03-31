@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-glance_app_1
+      APP_PORT: 8080
+
+  app:
+    image: glanceapp/glance:v0.7.9@sha256:6e14662ffe83d4bf4e09314d27ee233d51f3ed2dc7322c4d4b18c929177c4117
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/glance_data/glance.yml:/app/config/glance.yml
+      - ${APP_DATA_DIR}/data/assets:/app/assets:rw
+      - ${APP_DATA_DIR}/data/timezone:/etc/timezone:ro
+      - ${APP_DATA_DIR}/data/localtime:/etc/localtime:ro
