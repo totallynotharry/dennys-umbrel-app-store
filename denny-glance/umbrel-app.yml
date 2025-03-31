@@ -3,7 +3,7 @@ id: denny-glance
 name: Glance
 tagline: A self-hosted dashboard that puts all your feeds in one place
 icon: https://i.imgur.com/krxJ46D.png
-category: files & productivity
+category: In Progress
 version: "0.7.9"
 port: 8907
 description: >-
