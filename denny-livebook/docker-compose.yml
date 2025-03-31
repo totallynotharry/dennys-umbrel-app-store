@@ -14,5 +14,5 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data:/data
     environment:
-      LIVEBOOK_PASSWORD: umbrel
+      LIVEBOOK_PASSWORD: umbrel-livebook
     restart: on-failure
