@@ -4,10 +4,10 @@ services:
   app_proxy:
     environment:
       APP_HOST: denny-cobalt_web_1
-      APP_PORT: 9000
+      APP_PORT: 9001
       PROXY_AUTH_ADD: "false"
   web:
-    image: dennysubke/cobalt:10.9@sha256:81b019316b9b87a082d4d9af5d10b5481b0d63c7cdadf62b5854195a2d312903
+    image: ghcr.io/imputnet/cobalt:10.9@sha256:70d67552966ef02f8e7a481d24e15e0f3d722e88f0a20c52b8d34f3d7b9f2881
     read_only: true
     restart: on-failure
     user: "1000:1000"
