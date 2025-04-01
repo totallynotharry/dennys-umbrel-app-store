@@ -7,7 +7,7 @@ services:
       APP_PORT: 9001
       PROXY_AUTH_ADD: "false"
   web:
-    image: ghcr.io/imputnet/cobalt:10.9@sha256:70d67552966ef02f8e7a481d24e15e0f3d722e88f0a20c52b8d34f3d7b9f2881
+    image: dennysubke/cobalt:10.6@sha256:870110e7002b7080adc81f9cee5357ab784adba81385a7b51663a7c1e92030cd
     read_only: true
     restart: on-failure
     user: "1000:1000"
