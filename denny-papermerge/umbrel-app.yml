@@ -37,5 +37,5 @@ releaseNotes: >-
   In version 3.4, Papermerge updated the pyproject.toml for compatibility with Poetry 2.0. It introduced alphabetically sorted dropdowns for document types and custom fields, added column sorting and filtering for document types, custom fields, and tags, and fixed several issues, including a bug in "view by document type" and problems with deleting tags and nodes. Additionally, UX improvements were made, such as better notification messages for CRUD operations and a feature for Macintosh users to open documents in another panel using the Alt key.
 dependencies:
 path: ""
-defaultUsername: ""
-defaultPassword: ""
+defaultUsername: "admin"
+defaultPassword: "umbrel"
