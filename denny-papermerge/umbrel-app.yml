@@ -3,7 +3,7 @@ id: denny-papermerge
 name: Papermerge
 tagline: An open-source document management system for digital archives
 icon: https://i.imgur.com/abbsu0Z.png
-category: In Progress
+category: files & productivity
 version: "3.4"
 port: 12000
 description: >-
@@ -30,9 +30,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/ciur/papermerge
 support: https://github.com/ciur/papermerge/issues
 gallery:
-  - https://i.imgur.com/HAIibpk.png
-  - https://i.imgur.com/HAIibpk.png
-  - https://i.imgur.com/HAIibpk.png
+  - https://i.imgur.com/TxuWFw5.png
+  - https://i.imgur.com/VsNibDV.png
+  - https://i.imgur.com/BrbyqyJ.png
 releaseNotes: >-
   In version 3.4, Papermerge updated the pyproject.toml for compatibility with Poetry 2.0. It introduced alphabetically sorted dropdowns for document types and custom fields, added column sorting and filtering for document types, custom fields, and tags, and fixed several issues, including a bug in "view by document type" and problems with deleting tags and nodes. Additionally, UX improvements were made, such as better notification messages for CRUD operations and a feature for Macintosh users to open documents in another panel using the Alt key.
 dependencies:
