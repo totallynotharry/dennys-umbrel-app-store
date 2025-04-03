@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-openreader
 name: OpenReader WebUI
 tagline: A document reader with Text-to-Speech capabilities
-icon: https://i.imgur.com/Eq1PBs6.png
+icon: https://i.imgur.com/J3K1k4L.png
 category: In Progress
 version: "0.2.6"
 port: 3391
