@@ -24,9 +24,10 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/richardr1126/OpenReader-WebUI
 support: https://github.com/richardr1126/OpenReader-WebUI/issues
 gallery:
-  - https://i.imgur.com/aVC0ynw.png
-  - https://i.imgur.com/aVC0ynw.png
-  - https://i.imgur.com/aVC0ynw.png
+  - https://i.imgur.com/vp9q9Hu.png
+  - https://i.imgur.com/8OLsTMc.png
+  - https://i.imgur.com/GHHhDPB.png
+  - https://i.imgur.com/FXtMQdc.png
 releaseNotes: >-
   Version 0.2.6 of OpenReader WebUI adds support for Orpheus-FastAPI and improves space detection in PDF text extraction to prevent missing spaces between words in certain formats. Additionally, it ensures that the TTS correctly pauses when changing pages.
 dependencies:
