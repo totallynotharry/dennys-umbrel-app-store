@@ -3,7 +3,7 @@ id: denny-openreader
 name: OpenReader WebUI
 tagline: A document reader with Text-to-Speech capabilities
 icon: https://i.imgur.com/J3K1k4L.png
-category: In Progress
+category: AI
 version: "0.2.6"
 port: 3391
 description: >-
