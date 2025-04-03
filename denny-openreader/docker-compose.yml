@@ -9,7 +9,7 @@ services:
   web:
     image: ghcr.io/richardr1126/openreader-webui:latest
     environment:
-      - API_BASE=http://host.docker.internal:8880/v1
+      - API_BASE=http://umbrel-2.local:8877
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/docstore:/app/docstore
