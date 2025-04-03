@@ -17,6 +17,9 @@ description: >-
 
 
   Additionally, OpenReader WebUI is available as an open-source project, allowing developers to contribute to its improvement and expand its capabilities. A public demo is accessible online, enabling users to test its features without requiring installation, making it easy to evaluate its functionality before setting up a local instance. With a focus on usability and accessibility, OpenReader WebUI represents a modern approach to document reading, bridging the gap between text and speech in a user-friendly manner.
+
+
+  ⚠️ This app only works in Chromium-based browsers (e.g., Chrome, Edge, Brave).
 developer: Richard Roberson
 website: hhttps://openreader.richardr.dev/
 submitter: dennysubke
