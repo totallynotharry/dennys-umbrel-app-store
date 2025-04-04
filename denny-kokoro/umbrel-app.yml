@@ -14,6 +14,9 @@ description: >-
 
 
   ⚠️ This app only works in Chromium-based browsers (e.g., Chrome, Edge, Brave) and is available at "umbrel.local:8877/web/". Please note that the app is approximately 4GB in size, so the loading process may take a few moments.
+
+
+  ⚙️ The API is available at "umbrel.local:8877", and the API documentation can be found at "umbrel.local:8877/docs".
 developer: Hexgrad
 website: https://kokorotts.net/
 submitter: dennysubke
