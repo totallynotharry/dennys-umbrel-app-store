@@ -36,6 +36,6 @@ gallery:
 releaseNotes: >-
   The update includes a fix for LinkedIn and introduces auto-posting from RSS. Additionally, the LinkedIn marketing version has been updated from 202401 to 202501.
 dependencies:
-path: ""
+path: "/launches"
 defaultUsername: ""
 defaultPassword: ""
