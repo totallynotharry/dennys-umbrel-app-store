@@ -56,3 +56,21 @@ services:
       retries: 3
     volumes:
       - ${APP_DATA_DIR}/data/redis-volume:/data
+
+
+volumes:
+  postgres-volume:
+    external: false
+ 
+  postiz-redis-data:
+    external: false
+ 
+  postiz-config:
+    external: false
+ 
+  postiz-uploads:
+    external: false
+ 
+networks:
+  postiz-network:
+    external: false
