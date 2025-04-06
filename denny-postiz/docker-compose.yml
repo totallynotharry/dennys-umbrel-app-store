@@ -24,8 +24,6 @@ services:
     volumes:
       - postiz-config:/config/
       - postiz-uploads:/uploads/
-    networks:
-      - postiz-network
     depends_on:
       postiz-postgres:
         condition: service_healthy
@@ -34,7 +32,6 @@ services:
 
   postiz-postgres:
     image: postgres:17-alpine
-    container_name: postiz-postgres
     restart: always
     environment:
       POSTGRES_PASSWORD: postiz-password
@@ -42,8 +39,6 @@ services:
       POSTGRES_DB: postiz-db-local
     volumes:
       - postgres-volume:/var/lib/postgresql/data
-    networks:
-      - postiz-network
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "postiz-user", "-d", "postiz-db-local"]
       interval: 10s
@@ -52,7 +47,6 @@ services:
 
   postiz-redis:
     image: redis:7.2
-    container_name: postiz-redis
     restart: always
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
@@ -61,14 +55,3 @@ services:
       retries: 3
     volumes:
       - postiz-redis-data:/data
-    networks:
-      - postiz-network
-
-volumes:
-  postgres-volume:
-  postiz-redis-data:
-  postiz-config:
-  postiz-uploads:
-
-networks:
-  postiz-network:
