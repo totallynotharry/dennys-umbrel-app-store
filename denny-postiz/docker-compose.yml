@@ -30,8 +30,6 @@ services:
     volumes:
       - postiz-config:/config/
       - postiz-uploads:/uploads/
-    networks:
-      - postiz-network
     depends_on:
       postiz-postgres:
         condition: service_healthy
@@ -47,8 +45,6 @@ services:
       POSTGRES_DB: postiz-db-local
     volumes:
       - postgres-volume:/var/lib/postgresql/data
-    networks:
-      - postiz-network
     healthcheck:
       test: pg_isready -U postiz-user -d postiz-db-local
       interval: 10s
@@ -65,22 +61,3 @@ services:
       retries: 3
     volumes:
       - postiz-redis-data:/data
-    networks:
-      - postiz-network
-
-volumes:
-  postgres-volume:
-    external: false
-
-  postiz-redis-data:
-    external: false
-
-  postiz-config:
-    external: false
-
-  postiz-uploads:
-    external: false
-
-networks:
-  postiz-network:
-    external: false
