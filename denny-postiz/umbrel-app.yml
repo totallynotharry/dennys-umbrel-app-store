@@ -1,8 +1,8 @@
 manifestVersion: 1
 id: denny-postiz
 name: Postiz
-tagline: A smarter way to own your data
-icon: https://i.imgur.com/RQSTRYB.png
+tagline: An intuitive tool for managing social media
+icon: https://i.imgur.com/5MWBlid.png
 category: test
 version: "1.4"
 port: 5555
