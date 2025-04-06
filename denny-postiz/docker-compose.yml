@@ -57,6 +57,15 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/redis-volume:/data
 
+  postiz-pg-admin:
+    # ref: https://hub.docker.com/r/dpage/pgadmin4/tags
+    image: dpage/pgadmin4:latest
+    container_name: postiz-pg-admin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+
 volumes:
   postgres-volume:
     external: false
