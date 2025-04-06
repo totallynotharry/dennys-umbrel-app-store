@@ -14,5 +14,5 @@ services:
       - PGID=0
       - UMASK=022
     volumes:
-      - ${APP_DATA_DIR}/data/Downloads:/app/Downloads
+      - ${UMBREL_ROOT}/home/Downloads:/app/Downloads
       - ${APP_DATA_DIR}/data/storage:/app/storage
