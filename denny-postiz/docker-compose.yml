@@ -22,6 +22,8 @@ services:
       NOT_SECURED: "true"
       UPLOAD_DIRECTORY: "/uploads"
       NEXT_PUBLIC_UPLOAD_DIRECTORY: "/uploads"
+    ports:
+      - 5555:5000
     volumes:
       - ${APP_DATA_DIR}/data/postiz-config:/config
       - ${APP_DATA_DIR}/data/postiz-uploads:/uploads
