@@ -25,6 +25,7 @@ services:
     ports:
       - 4200:4200
     volumes:
+      - ${APP_DATA_DIR}/data/env/postiz.env:/config/postiz.env
       - ${APP_DATA_DIR}/data/postiz-config:/config
       - ${APP_DATA_DIR}/data/postiz-uploads:/uploads
     depends_on:
