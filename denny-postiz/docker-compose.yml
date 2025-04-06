@@ -1,30 +1,30 @@
-version: "3.8"
+version: '3.7'
 
 services:
-  postiz:
-    image: ghcr.io/gitroomhq/postiz-app:latest
-    container_name: postiz
-    restart: always
+  app_proxy:
+    environment:
+      APP_HOST: denny-postiz_web_1
+      APP_PORT: 4200
+
+  web:
+    image: ghcr.io/gitroomhq/postiz-app:v1.36.1-amd64@sha256:ee0f880f52d81751077f630b8d0c8d7b8f010f637bb18f389264aa2adfa99b5f
+    restart: on-failure
     environment:
       MAIN_URL: "http://umbrel-2.local:5555"
-      FRONTEND_URL: "http://umbrel-2.local:5555"
-      NEXT_PUBLIC_BACKEND_URL: "http://umbrel-2.local:5555/api"
-      JWT_SECRET: "W1a2S3d4F5g6H7j8K9l0QwertZyxcVbnmPoiUytRsdEfGhJkLmOpQrStUvWxYz1234"
+      FRONTEND_URL: "http://umbrel-2.local:4200"
+      NEXT_PUBLIC_BACKEND_URL: "http://umbrel-2.local:3000"
+      JWT_SECRET: "1VNJhz1fj1INZubVWE0KXCN9zhCCFL5mN7blCFDCH6k="
       DATABASE_URL: "postgresql://postiz-user:postiz-password@postiz-postgres:5432/postiz-db-local"
       REDIS_URL: "redis://postiz-redis:6379"
-      NOT_SECURED: "true"
       BACKEND_INTERNAL_URL: "http://localhost:3000"
       IS_GENERAL: "true"
       STORAGE_PROVIDER: "local"
+      NOT_SECURED: "true"
       UPLOAD_DIRECTORY: "/uploads"
       NEXT_PUBLIC_UPLOAD_DIRECTORY: "/uploads"
     volumes:
-      - postiz-config:/config/
-      - postiz-uploads:/uploads/
-    ports:
-      - 5555:5000
-    networks:
-      - postiz-network
+      - ${APP_DATA_DIR}/data/postiz-config:/config
+      - ${APP_DATA_DIR}/data/postiz-uploads:/uploads
     depends_on:
       postiz-postgres:
         condition: service_healthy
@@ -32,69 +32,40 @@ services:
         condition: service_healthy
 
   postiz-postgres:
-    image: postgres:17-alpine
-    container_name: postiz-postgres
-    restart: always
+    image: postgres:17-alpine@sha256:7062a2109c4b51f3c792c7ea01e83ed12ef9a980886e3b3d380a7d2e5f6ce3f5
+    restart: on-failure
+    healthcheck:
+      test: pg_isready -U postiz-user -d postiz-db-local
+      interval: 10s
+      timeout: 3s
+      retries: 3
     environment:
       POSTGRES_USER: postiz-user
       POSTGRES_PASSWORD: postiz-password
       POSTGRES_DB: postiz-db-local
     volumes:
-      - postgres-volume:/var/lib/postgresql/data
-    ports:
-      - 5432:5432
-    networks:
-      - postiz-network
-    healthcheck:
-      test: ["CMD", "pg_isready", "-U", "postiz-user"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+      - ${APP_DATA_DIR}/data/postgres-volume:/var/lib/postgresql/data
 
   postiz-redis:
-    image: redis:7-alpine
-    container_name: postiz-redis
-    restart: always
-    ports:
-      - 6379:6379
-    networks:
-      - postiz-network
+    image: redis:7.4.2@sha256:bd41d55aae1ecff61b2fafd0d66761223fe94a60373eb6bb781cfbb570a84079
+    restart: on-failure
     healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
+      test: redis-cli ping
       interval: 10s
-      timeout: 5s
-      retries: 5
-
-  postiz-pg-admin:
-    image: dpage/pgadmin4:latest
-    container_name: postiz-pg-admin
-    restart: always
-    ports:
-      - 8756:80
-    environment:
-      PGADMIN_DEFAULT_EMAIL: admin@admin.com
-      PGADMIN_DEFAULT_PASSWORD: admin
-    networks:
-      - postiz-network
-
-  postiz-redisinsight:
-    image: redis/redisinsight:latest
-    container_name: postiz-redisinsight
-    restart: always
-    links:
-      - postiz-redis
-    ports:
-      - 5540:8001
+      timeout: 3s
+      retries: 3
     volumes:
-      - redisinsight:/data
-    networks:
-      - postiz-network
+      - ${APP_DATA_DIR}/data/redis-volume:/data
 
 volumes:
-  postiz-config:
-  postiz-uploads:
-  redisinsight:
   postgres-volume:
-
-networks:
-  postiz-network:
+    external: false
+ 
+  postiz-redis-data:
+    external: false
+ 
+  postiz-config:
+    external: false
+ 
+  postiz-uploads:
+    external: false
