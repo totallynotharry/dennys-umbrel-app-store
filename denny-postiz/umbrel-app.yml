@@ -1,0 +1,40 @@
+manifestVersion: 1
+id: denny-postiz
+name: Postiz
+tagline: A smarter way to own your data
+icon: https://i.imgur.com/RQSTRYB.png
+category: test
+version: "1.4"
+port: 5555
+description: >-
+  Umbrel is an open-source platform that empowers individuals to take control of their data by hosting various self-hosted applications on a personal server. The platform’s main goal is to simplify the management of services typically hosted on cloud platforms, offering an easy-to-use interface for managing a wide range of applications. Whether it’s for personal cloud storage, communication tools, media servers, or other services, Umbrel provides a private and secure way for users to host their digital assets on their own hardware.
+
+
+  Umbrel OS, the heart of the platform, is a beautiful home server operating system designed for self-hosting with an integrated app store. It is the operating system that powers the Umbrel Bitcoin and Lightning node, providing a streamlined environment for managing these decentralized services. Umbrel OS is optimized for use on low-cost devices like the Raspberry Pi, though it also works on other Intel-based computers. Once installed, users can access Umbrel’s web-based interface to easily deploy, manage, and configure a variety of apps from the app store.
+
+
+  The app store within Umbrel allows users to install and update their apps automatically, ensuring they always have access to the latest versions. These apps cover a wide range of use cases, from productivity tools to security-focused services like VPNs and privacy-oriented messaging platforms. All apps run in Docker containers, ensuring isolation and stability, making it simple to manage and update each service independently.
+
+
+  Security is a key aspect of Umbrel’s design, with encrypted communication and complete control over user data. Advanced configurations such as VPNs, reverse proxies, and Docker networking are supported, allowing users to customize their setup. Umbrel also ensures that apps and the OS are regularly updated to maintain security and functionality.
+
+  
+  In essence, Umbrel offers a user-friendly, privacy-centric solution for self-hosting applications, with Umbrel OS serving as the foundation for a personal server experience. Whether it’s managing a Bitcoin and Lightning node, or hosting a variety of other self-hosted services, Umbrel gives individuals full control over their data and infrastructure, empowering them to break free from reliance on centralized cloud providers.
+developer: Umbrel
+website: https://maze.toys/mazes/mini/daily/
+submitter: April Foolberg
+submission: https://optical.toys/
+repo: https://longdogechallenge.com/
+support: https://puginarug.com/
+gallery:
+  - https://i.imgur.com/4WcjlPf.png
+  - https://i.imgur.com/pNmXd54.png
+  - https://i.imgur.com/TuVAQHq.png
+  - https://i.imgur.com/EwI0LPP.png
+  - https://i.imgur.com/UFHCDgc.png
+releaseNotes: >-
+  UmbrelOS 1.4 introduces Files, our new file manager that transforms your Umbrel into a complete home cloud solution. This update also adds support for the Korean language and includes several bug fixes.
+dependencies:
+path: ""
+defaultUsername: ""
+defaultPassword: ""
