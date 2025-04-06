@@ -6,20 +6,15 @@ services:
     container_name: postiz
     restart: always
     environment:
-      # Passe diese URLs an deine eigene Domain an!
       MAIN_URL: "http://umbrel-2.local:5555"
       FRONTEND_URL: "http://umbrel-2.local:5555"
       NEXT_PUBLIC_BACKEND_URL: "http://umbrel-2.local:5555/api"
-      JWT_SECRET: "your-random-secret-string"  # Ändern! Zufällige Zeichenkette für Sicherheit
-
-      # Datenbank- und Redis-Verbindungen
+      JWT_SECRET: "W1a2S3d4F5g6H7j8K9l0QwertZyxcVbnmPoiUytRsdEfGhJkLmOpQrStUvWxYz1234"
       DATABASE_URL: "postgresql://postiz-user:postiz-password@postiz-postgres:5432/postiz-db-local"
       REDIS_URL: "redis://postiz-redis:6379"
       NOT_SECURED: "true"
       BACKEND_INTERNAL_URL: "http://localhost:3000"
       IS_GENERAL: "true"
-
-      # Dateispeicher
       STORAGE_PROVIDER: "local"
       UPLOAD_DIRECTORY: "/uploads"
       NEXT_PUBLIC_UPLOAD_DIRECTORY: "/uploads"
@@ -89,7 +84,7 @@ services:
     links:
       - postiz-redis
     ports:
-      - 5540:5540
+      - 5540:8001
     volumes:
       - redisinsight:/data
     networks:
