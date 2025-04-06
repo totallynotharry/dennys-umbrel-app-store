@@ -11,7 +11,7 @@ services:
     restart: on-failure
     environment:
       MAIN_URL: "http://umbrel-2.local:5555"
-      FRONTEND_URL: "http://umbrel-2.local:4200"
+      FRONTEND_URL: "http://umbrel-2.local:5555"
       NEXT_PUBLIC_BACKEND_URL: "http://umbrel-2.local:3000"
       JWT_SECRET: "1VNJhz1fj1INZubVWE0KXCN9zhCCFL5mN7blCFDCH6k="
       DATABASE_URL: "postgresql://postiz-user:postiz-password@postiz-postgres:5432/postiz-db-local"
