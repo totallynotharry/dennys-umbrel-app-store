@@ -25,8 +25,6 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/postiz-config:/config
       - ${APP_DATA_DIR}/data/postiz-uploads:/uploads
-    networks:
-      - postiz-network
     depends_on:
       postiz-postgres:
         condition: service_healthy
@@ -47,8 +45,6 @@ services:
       POSTGRES_DB: postiz-db-local
     volumes:
       - ${APP_DATA_DIR}/data/postgres-volume:/var/lib/postgresql/data
-    networks:
-      - postiz-network
 
   postiz-redis:
     image: redis:7.4.2@sha256:bd41d55aae1ecff61b2fafd0d66761223fe94a60373eb6bb781cfbb570a84079
@@ -60,9 +56,6 @@ services:
       retries: 3
     volumes:
       - ${APP_DATA_DIR}/data/redis-volume:/data
-    networks:
-      - postiz-network
-
 
 volumes:
   postgres-volume:
@@ -75,8 +68,4 @@ volumes:
     external: false
  
   postiz-uploads:
-    external: false
- 
-networks:
-  postiz-network:
     external: false
