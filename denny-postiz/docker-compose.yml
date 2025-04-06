@@ -7,7 +7,7 @@ services:
       APP_PORT: 5000
 
   web:
-    image: ghcr.io/gitroomhq/postiz-app:v1.37.3-amd64@sha256:eeb0f61ab95443597504314ec84370fd9a2d0357ee582417c23dff082a662190
+    image: ghcr.io/gitroomhq/postiz-app:v1.35.1-amd64@sha256:5bbe9eff39362358aaec6aeb8907552733bbebc4ce72ef8e478f45276b395799
     restart: on-failure
     environment:
       MAIN_URL: "http://umbrel-2.local:5550"
