@@ -3,37 +3,38 @@ id: denny-postiz
 name: Postiz
 tagline: An intuitive tool for managing social media
 icon: https://i.imgur.com/5MWBlid.png
-category: test
-version: "1.4"
+category: In Progress
+version: "1.36.1"
 port: 5555
 description: >-
-  Umbrel is an open-source platform that empowers individuals to take control of their data by hosting various self-hosted applications on a personal server. The platform’s main goal is to simplify the management of services typically hosted on cloud platforms, offering an easy-to-use interface for managing a wide range of applications. Whether it’s for personal cloud storage, communication tools, media servers, or other services, Umbrel provides a private and secure way for users to host their digital assets on their own hardware.
+  Postiz is a comprehensive social media management tool designed to streamline the process of content creation, scheduling, and publication across multiple social media platforms. It is targeted at content creators, businesses, and agencies looking to optimize their online presence. With Postiz, users can plan, create, and automatically publish content to various social media channels, including Instagram, YouTube, LinkedIn, and more, all from one unified interface.
 
 
-  Umbrel OS, the heart of the platform, is a beautiful home server operating system designed for self-hosting with an integrated app store. It is the operating system that powers the Umbrel Bitcoin and Lightning node, providing a streamlined environment for managing these decentralized services. Umbrel OS is optimized for use on low-cost devices like the Raspberry Pi, though it also works on other Intel-based computers. Once installed, users can access Umbrel’s web-based interface to easily deploy, manage, and configure a variety of apps from the app store.
+  One of the standout features of Postiz is its AI-driven content creation assistance. This feature helps users generate posts, captions, and other social media content more efficiently, using artificial intelligence to streamline the writing process. It is particularly useful for users who need to produce high volumes of content or seek inspiration for their posts. Additionally, Postiz includes a built-in graphic design tool, similar to Canva, which enables users to create visually appealing images and graphics for their posts, further simplifying the content creation process.
 
 
-  The app store within Umbrel allows users to install and update their apps automatically, ensuring they always have access to the latest versions. These apps cover a wide range of use cases, from productivity tools to security-focused services like VPNs and privacy-oriented messaging platforms. All apps run in Docker containers, ensuring isolation and stability, making it simple to manage and update each service independently.
+  The platform also facilitates team collaboration, making it ideal for businesses or agencies with multiple team members. Users can assign tasks, share content drafts, and plan content calendars together, ensuring that the entire team is aligned on social media strategies. Postiz's analytics features provide users with detailed insights into the performance of their posts, helping them refine their strategies based on engagement data and reach.
 
 
-  Security is a key aspect of Umbrel’s design, with encrypted communication and complete control over user data. Advanced configurations such as VPNs, reverse proxies, and Docker networking are supported, allowing users to customize their setup. Umbrel also ensures that apps and the OS are regularly updated to maintain security and functionality.
+  Postiz supports a wide range of social media platforms, including both well-known networks like Facebook, Instagram, and Twitter, as well as emerging platforms like Mastodon and Bluesky. This extensive platform support allows users to manage all their social media accounts from a single dashboard, saving time and effort in switching between different tools and services.
 
-  
-  In essence, Umbrel offers a user-friendly, privacy-centric solution for self-hosting applications, with Umbrel OS serving as the foundation for a personal server experience. Whether it’s managing a Bitcoin and Lightning node, or hosting a variety of other self-hosted services, Umbrel gives individuals full control over their data and infrastructure, empowering them to break free from reliance on centralized cloud providers.
-developer: Umbrel
-website: https://maze.toys/mazes/mini/daily/
-submitter: April Foolberg
-submission: https://optical.toys/
-repo: https://longdogechallenge.com/
-support: https://puginarug.com/
+
+  The platform is offered in various pricing tiers to cater to different needs, from individual content creators to large agencies. Each plan includes different levels of access to features such as the number of social media channels, posts, and AI-generated images available per month, with more advanced features available in higher-priced plans.
+
+
+  Postiz offers a convenient and efficient way to manage and grow social media presence, combining content creation, scheduling, team collaboration, and analytics in a single, easy-to-use platform.
+developer: Postiz
+website: https://postiz.com/
+submitter: dennysubke
+submission: https://github.com/getumbrel/umbrel-apps/pull/
+repo: https://github.com/gitroomhq/postiz-app
+support: https://github.com/gitroomhq/postiz-app/issues
 gallery:
-  - https://i.imgur.com/4WcjlPf.png
-  - https://i.imgur.com/pNmXd54.png
-  - https://i.imgur.com/TuVAQHq.png
-  - https://i.imgur.com/EwI0LPP.png
-  - https://i.imgur.com/UFHCDgc.png
+  - https://i.imgur.com/zihjSkb.png
+  - https://i.imgur.com/zihjSkb.png
+  - https://i.imgur.com/zihjSkb.png
 releaseNotes: >-
-  UmbrelOS 1.4 introduces Files, our new file manager that transforms your Umbrel into a complete home cloud solution. This update also adds support for the Korean language and includes several bug fixes.
+  The update includes a fix for LinkedIn and introduces auto-posting from RSS. Additionally, the LinkedIn marketing version has been updated from 202401 to 202501.
 dependencies:
 path: ""
 defaultUsername: ""
