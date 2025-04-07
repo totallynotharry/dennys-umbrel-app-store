@@ -3,18 +3,13 @@ version: '3.7'
 services:
   app_proxy:
     environment:
-      APP_HOST: denny-altus_web_1
+      APP_HOST: denny-habittrove_web_1
       APP_PORT: 3000
 
   web:
-    image: ghcr.io/linuxserver/altus:5.4.0@sha256:65387a1324bd2037c41fe270d5781000852b917f3e184739f46ed146d3178480
+    image: dohsimpson/habittrove:v0.2.5@sha256:71dae53622b0686a12e3e830457e8ccf399906e624ff0190536d0781f339d647
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/Berlin
-    shm_size: "2gb"
+      - AUTH_SECRET=+wLHNEMMc3iAuD2R19Z+YtL2GyZ/ngpXWOGMKN8mAxU=
     restart: on-failure
     volumes:
-      - ${APP_DATA_DIR}/data/config:/config
-
-#https://docs.linuxserver.io/images/docker-altus/#options-in-all-kasmvnc-based-gui-containers
+      - ${APP_DATA_DIR}/data:/app/data
