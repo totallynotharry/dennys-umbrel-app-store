@@ -20,6 +20,9 @@ description: >-
 
 
   ⚠️ Note: This app is not the Ferdium client. It is the Ferdium server. A custom server allows you to manage the data of all registered users yourself and add your own recipes to the repository.
+  
+  
+  To use Ferdium, you also need the client, which can be downloaded here: 'ferdium.org/download'
 developer: Ferdium Team
 website: https://ferdium.org/
 submitter: dennysubke
