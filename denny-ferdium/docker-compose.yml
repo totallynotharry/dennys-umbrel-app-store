@@ -10,7 +10,7 @@ services:
     image: ghcr.io/ferdium/ferdium-server:2.0.10@sha256:2af65f3a79302b60a0f5079d6796388fa3b4840d3344968b69000c76f99fe46f
     environment:
       - NODE_ENV=production
-      - APP_URL=http://umbrel-2.local:3333
+      - APP_URL=http://umbrel.local:3333
       - DB_CONNECTION=sqlite
       - DB_HOST=127.0.0.1
       - DB_PORT=3306
