@@ -12,4 +12,4 @@ services:
       - AUTH_SECRET=+wLHNEMMc3iAuD2R19Z+YtL2GyZ/ngpXWOGMKN8mAxU=
     restart: on-failure
     volumes:
-      - ${APP_DATA_DIR}/data:/app/data
+      - ${APP_DATA_DIR}/data:/app/data:rw
