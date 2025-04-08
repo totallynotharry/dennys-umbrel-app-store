@@ -11,12 +11,12 @@ services:
     user: "1000:1000"
     environment:
       NEKO_DESKTOP_SCREEN: 1920x1080@30
-      NEKO_MEMBER_PROVIDER: noauth
+      #NEKO_MEMBER_PROVIDER: noauth
       NEKO_MEMBER_MULTIUSER_USER_PASSWORD: neko
-      NEKO_MEMBER_MULTIUSER_ADMIN_PASSWORD: umbrel
+      NEKO_MEMBER_MULTIUSER_ADMIN_PASSWORD: admin
       NEKO_WEBRTC_EPR: 52000-52100
       NEKO_WEBRTC_ICELITE: 1
-      NEKO_NAT1TO1: 0.0.0.0
+      NEKO_NAT1TO1: 0.0.0.0:3344
     shm_size: "2gb"
     restart: on-failure
     ports:
