@@ -14,7 +14,6 @@ services:
       NEKO_MEMBER_MULTIUSER_ADMIN_PASSWORD: umbrel
       NEKO_WEBRTC_EPR: 52000-52100
       NEKO_WEBRTC_ICELITE: 0
-      #NEKO_WEBRTC_IP_RETRIEVAL_URL: "https://ifconfig.co/ip"
     shm_size: "2gb"
     restart: on-failure
     ports:
