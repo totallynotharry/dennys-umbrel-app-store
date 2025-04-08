@@ -16,7 +16,7 @@ description: >-
   When integrated into Umbrel, Neko offers a private and always-available browser instance that can be accessed securely from within the home network or over the internet through Umbrel’s tunneling options. It fits seamlessly into the self-hosted ecosystem, providing a reliable and user-friendly way to browse the web without relying on third-party services or exposing your local device.
 
 
-  Neko is especially useful in scenarios where privacy, simplicity, and ease of access are important—whether for personal use, collaborative tasks, or secure remote browsing.
+  Neko is especially useful in scenarios where privacy, simplicity, and ease of access are important - whether for personal use, collaborative tasks, or secure remote browsing.
 developer: m1k1o
 website: https://neko.m1k1o.net/
 submitter: dennysubke
