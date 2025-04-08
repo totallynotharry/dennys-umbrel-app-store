@@ -17,6 +17,9 @@ description: >-
 
 
   Neko is especially useful in scenarios where privacy, simplicity, and ease of access are important - whether for personal use, collaborative tasks, or secure remote browsing.
+
+
+  💡 Neko offers a wide range of configuration options, including WebRTC configuration, plugin settings, and audio & video capture. For more detailed information, check out the official documentation here: https://neko.m1k1o.net/docs/v3/configuration.
 developer: m1k1o
 website: https://neko.m1k1o.net/
 submitter: dennysubke
