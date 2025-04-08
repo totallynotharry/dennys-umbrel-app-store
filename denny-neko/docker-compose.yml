@@ -14,7 +14,7 @@ services:
       NEKO_MEMBER_MULTIUSER_ADMIN_PASSWORD: admin
       NEKO_WEBRTC_EPR: 52000-52100
       NEKO_WEBRTC_ICELITE: 1
-      NEKO_WEBRTC_NAT1TO1: 192.168.178.85
+      NEKO_WEBRTC_NAT1TO1: 127.0.0.1
     shm_size: "2gb"
     restart: on-failure
     ports:
