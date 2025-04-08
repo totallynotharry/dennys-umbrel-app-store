@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-neko
 name: Neko
 tagline: A self-hosted virtual browser powered by WebRTC
-icon: https://i.imgur.com/gQnhuUH.png
+icon: https://i.imgur.com/on6sew2.png
 category: networking
 version: "3.0.3"
 port: 3880
