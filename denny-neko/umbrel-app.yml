@@ -35,4 +35,4 @@ releaseNotes: >-
 dependencies:
 path: ""
 defaultUsername: ""
-defaultPassword: ""
+defaultPassword: "umbrel"
