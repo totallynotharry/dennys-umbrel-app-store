@@ -9,15 +9,13 @@ services:
   web:
     image: ghcr.io/m1k1o/neko/xfce:3.0.3@sha256:f2344d3cce04607e6baa57699dc5cc343a0d7e437da7d231303ac27128eb7495
     environment:
-      NEKO_DESKTOP_SCREEN: '1920x1080@30'
+      NEKO_DESKTOP_SCREEN: 1920x1080@30
       NEKO_MEMBER_MULTIUSER_USER_PASSWORD: neko
       NEKO_MEMBER_MULTIUSER_ADMIN_PASSWORD: admin
       NEKO_WEBRTC_EPR: 52000-52100
       NEKO_WEBRTC_ICELITE: 1
-      NEKO_NAT_1_1_IP: umbrel-2.local
     shm_size: "2gb"
     restart: on-failure
     ports:
+      - "8080:8080"
       - "52000-52100:52000-52100/udp"
-    volumes:
-      - ${APP_DATA_DIR}/data:/home/neko/.mozilla/firefox
