@@ -4,7 +4,7 @@ name: OpenHands
 tagline: A local AI agent for writing and improving code
 icon: https://i.imgur.com/IQ4dW4G.png
 category: AI
-version: "0.31.0"
+version: "0.32.0"
 port: 3993
 description: >-
   OpenHands is a local-first AI development assistant that helps developers automate repetitive programming tasks and concentrate on more meaningful work. It runs entirely on your own Umbrel server and respects your privacy by keeping all operations offline and under your control. OpenHands understands, edits, and improves code independently by using intelligent software agents that analyze your repositories, execute commands, work with files, and follow instructions written in natural language.
@@ -25,7 +25,7 @@ gallery:
   - https://i.imgur.com/P5OFWwH.png
   - https://i.imgur.com/P5OFWwH.png
 releaseNotes: >-
-  Version 0.31.0 of OpenHands introduces several enhancements and new features. Vision-based browsing is now enabled by default, allowing OpenHands to view PDFs and images in the browser. The update also adds support for multiple providers (like GitHub and GitLab) and includes improvements to error handling, pull request behavior, and onboarding workflows.
+  Version 0.32.0 of OpenHands introduces several enhancements and new features. Vision-based browsing is now enabled by default, allowing OpenHands to view PDFs and images in the browser. The update also adds support for multiple providers (like GitHub and GitLab) and includes improvements to error handling, pull request behavior, and onboarding workflows.
 dependencies:
 path: ""
 defaultUsername: ""
