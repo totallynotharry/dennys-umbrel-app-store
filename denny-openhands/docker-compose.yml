@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-openhands_web_1
+      APP_PORT: 3000
+
+  web:
+    image: ghcr.io/all-hands-ai/openhands:0.31.0@sha256:e39bdeaed0c3aa3501911bd9b749d7d61be9d12c5a94bc4363391f843567cd4b
+    stdin_open: true
+    tty: true
+    pull_policy: always
+    container_name: OpenHands
+    healthcheck:
+      test: timeout 10s bash -c ':> /dev/tcp/127.0.0.1/3000' || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 90s
+    environment:
+      - SANDBOX_RUNTIME_CONTAINER_IMAGE=docker.all-hands.dev/all-hands-ai/runtime:0.31-nikolaik
+      - LOG_ALL_EVENTS=true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${APP_DATA_DIR}/data:/.openhands-state:rw
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    restart: on-failure
