@@ -17,7 +17,7 @@ services:
       retries: 3
       start_period: 90s
     environment:
-      - SANDBOX_RUNTIME_CONTAINER_IMAGE=docker.all-hands.dev/all-hands-ai/runtime:0.32-nikolaik
+      - SANDBOX_RUNTIME_CONTAINER_IMAGE=docker.all-hands.dev/all-hands-ai/runtime:0.31-nikolaik
       - WORKSPACE_MOUNT_PATH=${APP_DATA_DIR}/workspace
       - LOG_ALL_EVENTS=true
     volumes:
