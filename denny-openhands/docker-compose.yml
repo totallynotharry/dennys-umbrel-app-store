@@ -18,10 +18,12 @@ services:
       start_period: 90s
     environment:
       - SANDBOX_RUNTIME_CONTAINER_IMAGE=ghcr.io/all-hands-ai/openhands:0.31.0@sha256:e39bdeaed0c3aa3501911bd9b749d7d61be9d12c5a94bc4363391f843567cd4b
+      - WORKSPACE_MOUNT_PATH=${APP_DATA_DIR}/workspace
       - LOG_ALL_EVENTS=true
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:rw
       - ${APP_DATA_DIR}/data:/.openhands-state:rw
+      - ${APP_DATA_DIR}/workspace:/opt/workspace_base
     extra_hosts:
       - host.docker.internal:host-gateway
     restart: on-failure
