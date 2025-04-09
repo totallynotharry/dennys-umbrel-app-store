@@ -8,7 +8,7 @@ services:
 
   web:
     image: ghcr.io/all-hands-ai/openhands:0.32@sha256:7eb43d81737e7c8469d35502bb47e62485b218f542b8cb0aa6042494a1c29e4e
-    user: 1000:1000
+    user: 0:0
     stdin_open: true
     tty: true
     healthcheck:
