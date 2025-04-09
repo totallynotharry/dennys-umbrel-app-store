@@ -3,7 +3,7 @@ id: denny-openhands
 name: OpenHands
 tagline: A local AI agent for writing and improving code
 icon: https://i.imgur.com/IQ4dW4G.png
-category: AI
+category: In Progress
 version: "0.32.0"
 port: 3993
 description: >-
