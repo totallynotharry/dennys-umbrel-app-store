@@ -3,11 +3,11 @@ id: denny-openhands
 name: OpenHands
 tagline: A local AI agent for writing and improving code
 icon: https://i.imgur.com/IQ4dW4G.png
-category: In Progress
+category: AI
 version: "0.32.0"
 port: 3993
 description: >-
-  OpenHands is a local-first AI development assistant that helps developers automate repetitive programming tasks and concentrate on more meaningful work. It runs entirely on your own Umbrel server and respects your privacy by keeping all operations offline and under your control. OpenHands understands, edits, and improves code independently by using intelligent software agents that analyze your repositories, execute commands, work with files, and follow instructions written in natural language.
+  👐 OpenHands is a local-first AI development assistant that helps developers automate repetitive programming tasks and concentrate on more meaningful work. It runs entirely on your own Umbrel server and respects your privacy by keeping all operations offline and under your control. OpenHands understands, edits, and improves code independently by using intelligent software agents that analyze your repositories, execute commands, work with files, and follow instructions written in natural language.
 
 
   By having full access to your local codebase and development tools, OpenHands becomes a powerful companion throughout your software projects. Whether you want to refactor existing code, fix bugs, or develop new features, the assistant can suggest and apply changes while always keeping you in the loop. Its modern web interface offers a smooth experience with an integrated code editor and terminal, all running directly on your own hardware without any external dependencies.
