@@ -27,4 +27,5 @@ services:
       - ${APP_DATA_DIR}/workspace:/opt/workspace_base:rw
     extra_hosts:
       - host.docker.internal:host-gateway
+      - ${APP_DOMAIN}:host-gateway
     restart: on-failure
