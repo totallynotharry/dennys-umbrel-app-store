@@ -4,7 +4,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: denny-ungoogled-chromium_web_1
-      APP_PORT: 3001
+      APP_PORT: 3000
 
   web:
     image: ghcr.io/linuxserver/ungoogled-chromium:135.0.7049
