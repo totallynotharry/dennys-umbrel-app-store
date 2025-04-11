@@ -3,7 +3,7 @@ id: denny-ungoogled-chromium
 name: Ungoogled Chromium
 tagline: An optimized, privacy-focused browser experience
 icon: https://i.imgur.com/UckFwSb.png
-category: In Progress
+category: networking
 version: "135.0.7049"
 port: 3344
 description: >-
