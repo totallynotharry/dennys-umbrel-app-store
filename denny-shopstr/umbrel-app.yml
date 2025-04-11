@@ -1,0 +1,32 @@
+manifestVersion: 1
+id: denny-shopstr
+name: Shopstr
+tagline: A global, permissionless Nostr marketplace for Bitcoin commerce
+icon: https://i.imgur.com/Y9Gewqf.png
+category: In Progress
+version: "0.1.0"
+port: 30402
+description: >-
+  Shopstr is an open-source decentralized marketplace built on the Nostr protocol, designed to enable global peer-to-peer trade without relying on centralized platforms or intermediaries. It allows users to buy and sell goods and services using Bitcoin, including support for Lightning payments, while maintaining full control over their data and transactions. By embracing the principles of digital sovereignty and permissionless access, Shopstr offers a censorship-resistant alternative to traditional e-commerce platforms.
+
+
+  The platform makes use of various Nostr Improvement Proposals to provide features such as user identity, encrypted communication, and payment integration. Built with modern web technologies like TypeScript, Next.js, and Tailwind CSS, Shopstr delivers a fast and user-friendly experience. It can be self-hosted using Docker and is also accessible via the Tor network for enhanced privacy.
+
+
+  Shopstr is ideal for anyone seeking a decentralized and open environment for commerce, where transactions are powered by Bitcoin and governed by open protocols rather than corporate entities.
+developer: calvadev
+website: https://calva.dev
+submitter: dennysubke
+submission: https://github.com/getumbrel/umbrel-apps/pull/
+repo: https://github.com/shopstr-eng/shopstr
+support: https://github.com/shopstr-eng/shopstr/issues
+gallery:
+  - https://i.imgur.com/75ngV2y.png
+  - https://i.imgur.com/75ngV2y.png
+  - https://i.imgur.com/75ngV2y.png
+releaseNotes: >-
+  This is the initial release of the project, and there are no changelogs available at this time.
+dependencies:
+path: ""
+defaultUsername: ""
+defaultPassword: ""
