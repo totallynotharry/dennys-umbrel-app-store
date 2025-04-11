@@ -17,10 +17,9 @@ services:
     entrypoint: /entrypoint.sh
     command: >
       dockerd
-        --bridge dind0
-        --data-root /data/data
+        --host unix:///var/run/docker.sock
+        --data-root /data
         --exec-root /data/exec
-        --host unix:///data/docker.sock
         --pidfile /data/docker.pid
     volumes:
       - ${APP_DATA_DIR}/entrypoint.sh:/entrypoint.sh
@@ -45,6 +44,7 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data:/.openhands-state:rw
       - ${APP_DATA_DIR}/workspace:/opt/workspace_base:rw
+      - /var/run/docker.sock:/var/run/docker.sock
     extra_hosts:
       - host.docker.internal:host-gateway
       - ${APP_DOMAIN}:host-gateway
