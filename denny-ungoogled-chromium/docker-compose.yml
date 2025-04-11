@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-ungoogled-chromium_web_1
+      APP_PORT: 3001
+
+  web:
+    image: ghcr.io/linuxserver/ungoogled-chromium:135.0.7049
+    restart: on-failure
+    mem_limit: 3g
+    shm_size: 1g
+    cpu_shares: 1024
+    security_opt:
+      - no-new-privileges:true
+      - seccomp:unconfined
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config:rw
+    environment:
+      TZ: Europe/Berlin
+      CUSTOM_USER: admin
+      PASSWORD: umbrel
+      PUID: 1000
+      PGID: 1000
