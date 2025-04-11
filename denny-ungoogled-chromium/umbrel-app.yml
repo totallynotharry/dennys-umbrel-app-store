@@ -21,9 +21,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/linuxserver/docker-ungoogled-chromium
 support: https://github.com/linuxserver/docker-ungoogled-chromium/issues
 gallery:
-  - https://i.imgur.com/0u2eI6f.png
-  - https://i.imgur.com/0u2eI6f.png
-  - https://i.imgur.com/0u2eI6f.png
+  - https://i.imgur.com/qyYh9k2.png
+  - https://i.imgur.com/ZRdnEvr.png
+  - https://i.imgur.com/y7yTmrK.png
 releaseNotes: >-
   The latest release of Ungoogled Chromium includes updated launch options for improved performance and a portable Linux build.
 dependencies:
