@@ -10,7 +10,7 @@ services:
     image: dennysubke/btc-tracker:v0.3.0@sha256:810a5fec2ebef370e3f8739f96510a6c66dfa50518cac3c377f6d3c62f086231
     environment:
       - NODE_ENV=production
-      - PORT=3947
+      - PORT=3000
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data:/app/src/data:rw
