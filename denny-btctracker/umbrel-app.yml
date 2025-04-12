@@ -27,9 +27,10 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/wilqq-the/BTC-Tracker
 support: https://github.com/wilqq-the/BTC-Tracker/issues
 gallery:
-  - https://i.imgur.com/yMAMaaQ.png
-  - https://i.imgur.com/yMAMaaQ.png
-  - https://i.imgur.com/yMAMaaQ.png
+  - https://i.imgur.com/GU0E4U2.png
+  - https://i.imgur.com/kictNJi.png
+  - https://i.imgur.com/LqKllvs.png
+  - https://i.imgur.com/dbhGiAI.png
 releaseNotes: >-
   BTC-Tracker 0.3.0 is now available as a Docker image on Docker Hub, streamlining the setup process. The update includes automated builds and semantic versioning.
 dependencies:
