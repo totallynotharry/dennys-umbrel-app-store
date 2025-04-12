@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-btctracker_web_1
+      APP_PORT: 3000
+
+  web:
+    image: dennysubke/btc-tracker:v0.3.0@sha256:810a5fec2ebef370e3f8739f96510a6c66dfa50518cac3c377f6d3c62f086231
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    shm_size: "2gb"
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data:/app/src/data
