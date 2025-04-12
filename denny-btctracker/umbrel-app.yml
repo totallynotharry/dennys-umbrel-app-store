@@ -3,7 +3,7 @@ id: denny-btctracker
 name: BTC Tracker
 tagline: A simple, privacy-focused Bitcoin investment tracker
 icon: https://i.imgur.com/lyPIvkw.png
-category: In Progress
+category: bitcoin
 version: "0.3.0"
 port: 3947
 description: >-
@@ -20,6 +20,9 @@ description: >-
 
 
   Overall, BTC Tracker is a focused tool that puts privacy first and strips away unnecessary complexity. It gives you a clear, secure way to track your Bitcoin investments without compromising your data.
+
+
+  ⚠️ To use BTC Tracker, you need to create a user account. The application cannot function without it, as all data is securely linked to your personal profile and stored locally.
 developer: Szymon Szóstak 
 website: https://github.com/wilqq-the
 submitter: dennysubke
