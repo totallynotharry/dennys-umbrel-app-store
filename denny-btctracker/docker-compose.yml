@@ -1,22 +1,16 @@
-services:
-  btc-tracker:
-    image: docker.io/thewilqq/btc-tracker:latest
-    container_name: ${CONTAINER_NAME:-btc-tracker}
-    ports:
-      - "3947:3000"
-    volumes:
-      - ${APP_DATA_DIR}/data:/app/src/data:rw
-    restart: unless-stopped
-    environment:
-      - NODE_ENV=${NODE_ENV:-production}
-      - PORT=3000
+version: '3.7'
 
-  sqlite-web:
-    image: nouchka/sqlite-web
-    container_name: sqlite-web
-    ports:
-      - "8088:8080"
-    volumes:
-      - ${APP_DATA_DIR}/data:/data
+services:
+  app_proxy:
     environment:
-      - SQLITE_DATABASE=/data/btc-tracker.db
+      APP_HOST: denny-btctracker_web_1
+      APP_PORT: 3000
+
+  web:
+    image: docker.io/thewilqq/btc-tracker:latest #dennysubke/btc-tracker:v0.3.0@sha256:810a5fec2ebef370e3f8739f96510a6c66dfa50518cac3c377f6d3c62f086231
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data:/app/src/data
