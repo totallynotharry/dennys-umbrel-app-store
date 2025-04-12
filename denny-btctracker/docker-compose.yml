@@ -9,4 +9,14 @@ services:
     restart: unless-stopped
     environment:
       - NODE_ENV=${NODE_ENV:-production}
-      - PORT=3000 
+      - PORT=3000
+
+  sqlite-web:
+    image: nouchka/sqlite-web
+    container_name: sqlite-web
+    ports:
+      - "8088:8080"
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+    environment:
+      - SQLITE_DATABASE=/data/btc-tracker.db
