@@ -3,7 +3,7 @@ id: denny-shopstr
 name: Shopstr
 tagline: A global, permissionless Nostr marketplace for Bitcoin commerce
 icon: https://i.imgur.com/Y9Gewqf.png
-category: In Progress
+category: bitcoin
 version: "0.1.0"
 port: 30402
 description: >-
@@ -21,9 +21,11 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/shopstr-eng/shopstr
 support: https://github.com/shopstr-eng/shopstr/issues
 gallery:
-  - https://i.imgur.com/75ngV2y.png
-  - https://i.imgur.com/75ngV2y.png
-  - https://i.imgur.com/75ngV2y.png
+  - https://i.imgur.com/k9GqYML.png
+  - https://i.imgur.com/lPuiJnr.png
+  - https://i.imgur.com/3Phaszy.png
+  - https://i.imgur.com/kODsLYp.png
+  - https://i.imgur.com/qKTe6Iz.png
 releaseNotes: >-
   This is the initial release of the project, and there are no changelogs available at this time.
 dependencies:
