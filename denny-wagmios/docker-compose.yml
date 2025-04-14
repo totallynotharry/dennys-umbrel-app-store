@@ -5,7 +5,7 @@ services:
     image: itzmizzle/wagmi:frontend-latest@sha256:78aedfc3318a19fb013677180b7f94b027ef918a2f6fc94e753d81a18c937143 #only latest tag
     container_name: wagmios-frontend
     ports:
-      - "5174:5174"
+      - "15174:5174"
     depends_on:
       - backend
     environment:
@@ -20,13 +20,13 @@ services:
     image: itzmizzle/wagmi:backend-latest@sha256:f043af172e87ab8ee8cc2c33dd72b5300b7342120cf90b3985becea0e92530ab #only latest tag
     container_name: wagmios-backend
     ports:
-      - "8080:8080"
+      - "18080:8080"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ${APP_DATA_DIR}/backend_data:/app/data
     environment:
       - PORT=8080
-      - WILLOW_URL=http://willow:5678
+      - WILLOW_URL=http://willow:15678
     networks:
       - wagmios-network
 
@@ -35,7 +35,7 @@ services:
     container_name: willow
     restart: on-failure
     ports:
-      - "5678:5678"
+      - "15678:5678"
     environment:
       - N8N_SECURE_COOKIE=false
       - N8N_DEFAULT_WORKFLOW_STATE=active
@@ -57,7 +57,7 @@ services:
     container_name: postgres
     restart: on-failure
     ports:
-      - "5443:5432"
+      - "15432:5432"
     environment:
       - POSTGRES_USER=willow
       - POSTGRES_PASSWORD=wagmios
