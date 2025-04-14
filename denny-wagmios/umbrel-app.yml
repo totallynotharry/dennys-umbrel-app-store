@@ -27,8 +27,11 @@ description: >-
 
   W.I.L.L.O.W (Workflow Intelligent Localized Learning & Optimized Worker) is a powerful self-hosted AI agent built specifically for WAGMI – the ultimate Docker management layer on top of your OS.
 
-  📖 You can find all setup instructions and details in the following article:
-  👉 https://medium.com/@webdevmike01/introducing-w-i-l-l-o-w-827c3e965ef6
+
+  You can find all setup instructions and details in the following article:
+
+  
+  https://medium.com/@webdevmike01/introducing-w-i-l-l-o-w-827c3e965ef6
 developer: itzmizzle
 website: https://os.wagmilabs.fun/
 submitter: dennysubke
