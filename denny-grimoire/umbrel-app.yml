@@ -7,7 +7,7 @@ category: files & productivity
 version: "0.5.0"
 port: 5173
 description: >-
-  Grimoire is a feature-rich, open-source bookmark manager that allows users to store and organize their web bookmarks in a way that is both visually engaging and highly functional. Designed to streamline the bookmarking experience, Grimoire offers an automatic metadata extraction system. When users add URLs, the platform automatically pulls relevant data, such as the page title, description, main images, and sometimes even the page content. This feature significantly reduces the manual effort required to categorize and annotate bookmarks.
+  🧙‍♂️ Grimoire is a feature-rich, open-source bookmark manager that allows users to store and organize their web bookmarks in a way that is both visually engaging and highly functional. Designed to streamline the bookmarking experience, Grimoire offers an automatic metadata extraction system. When users add URLs, the platform automatically pulls relevant data, such as the page title, description, main images, and sometimes even the page content. This feature significantly reduces the manual effort required to categorize and annotate bookmarks.
 
 
   In addition to this, Grimoire lets users organize their bookmarks with tags and categories, providing a simple and efficient way to sort links based on personal preferences. The built-in full-text search functionality makes it easy to find specific bookmarks by scanning titles, descriptions, and other stored metadata.
