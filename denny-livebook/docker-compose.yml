@@ -7,7 +7,7 @@ services:
       APP_PORT: 8080
 
   web:
-    image: ghcr.io/livebook-dev/livebook:0.15.4@sha256:b23ef5c68de63132ebaa12e0b3120169074d932a8e6fc5bbce99b32aaf1c4299
+    image: ghcr.io/livebook-dev/livebook:0.15.5@sha256:f083cfce9fe7d440b8084a7e3b6b834b4d38eb32326a35780eddc92c95f12819
     user: 0:0
     ports:
       - 8371:8081
