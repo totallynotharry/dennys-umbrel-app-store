@@ -3,7 +3,7 @@ id: denny-livebook
 name: Livebook
 tagline: An interactive web app for writing and collaborating on code notebooks
 icon: https://i.imgur.com/la5pWnl.png
-category: In Progress
+category: developer tools
 version: "0.15.5"
 port: 8372
 description: >-
@@ -24,9 +24,11 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/livebook-dev/livebook
 support: https://github.com/livebook-dev/livebook/issues
 gallery:
-  - https://i.imgur.com/2SxR1G4.png
-  - https://i.imgur.com/2SxR1G4.png
-  - https://i.imgur.com/2SxR1G4.png
+  - https://i.imgur.com/u3SxkeD.png
+  - https://i.imgur.com/d8UGfz8.png
+  - https://i.imgur.com/Oy6rmwc.png
+  - https://i.imgur.com/dsercmH.png
+  - https://i.imgur.com/Rt0jZMb.png
 releaseNotes: >-
   The latest release of Livebook, version v0.15.4, fixes issues with the Kubernetes runtime failing to connect due to missing CA certificates and resolves a Windows installer problem with the path checks step.
 dependencies:
