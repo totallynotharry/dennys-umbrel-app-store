@@ -7,12 +7,10 @@ services:
       APP_PORT: 80
 
   web:
-    image: VERT-sh/vert:latest
+    image: ghcr.io/vert-sh/vert:latest@sha256:7464905a2acb14e561ea5bf4ad5b1490223c127b40dac15326f2fb2435759d2a
     environment:
-      PUB_HOSTNAME: ${PUB_HOSTNAME:-vert.sh}
-      PUB_PLAUSIBLE_URL: ${PUB_PLAUSIBLE_URL:-https://plausible.example.com}
-      PUB_ENV: ${PUB_ENV:-production}
-      PORT: ${PORT:-5621}
+      PUB_ENV: production
+      PORT: 80
       PUB_VERTD_URL: ${PUB_VERTD_URL:-https://vertd.vert.sh}
     restart: on-failure
     volumes:
