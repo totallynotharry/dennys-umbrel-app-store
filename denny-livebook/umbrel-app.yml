@@ -4,7 +4,7 @@ name: Livebook
 tagline: An interactive web app for writing and collaborating on code notebooks
 icon: https://i.imgur.com/la5pWnl.png
 category: In Progress
-version: "0.15.4"
+version: "0.15.5"
 port: 8372
 description: >-
   Livebook is an open-source, web-based platform designed for interactive and collaborative programming, specifically built for the Elixir programming language. It allows users to create dynamic, executable notebooks where code, documentation, and visualizations can coexist in a seamless and easy-to-use interface. Whether you're engaging in data analysis, experimenting with Elixir code, or working on team projects, Livebook provides a flexible and efficient environment to boost productivity and foster collaboration.
@@ -32,4 +32,4 @@ releaseNotes: >-
 dependencies:
 path: ""
 defaultUsername: ""
-defaultPassword: ""
+defaultPassword: "umbrel-livebook"
