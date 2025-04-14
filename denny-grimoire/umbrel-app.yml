@@ -1,31 +1,34 @@
 manifestVersion: 1
 id: denny-grimoire
 name: Grimoire
-tagline: A WhatsApp client with themes and multiple account support
-icon: https://i.imgur.com/wfT4QX3.png
+tagline: A bookmark manager for the wizards
+icon: https://i.imgur.com/m1soaVG.png
 category: files & productivity
-version: "5.4.0"
+version: "0.5.0"
 port: 5173
 description: >-
-  📱 Altus is a powerful Electron-based WhatsApp client that enhances the desktop WhatsApp experience by adding a variety of extra features. Using the GitHub-developed Electron framework, Altus integrates WhatsApp Web while adding functionality that goes beyond what the standard WhatsApp Web offers. One of the standout features of Altus is its support for multiple WhatsApp accounts, allowing users to manage and switch between different accounts simultaneously.
+  Grimoire is a feature-rich, open-source bookmark manager that allows users to store and organize their web bookmarks in a way that is both visually engaging and highly functional. Designed to streamline the bookmarking experience, Grimoire offers an automatic metadata extraction system. When users add URLs, the platform automatically pulls relevant data, such as the page title, description, main images, and sometimes even the page content. This feature significantly reduces the manual effort required to categorize and annotate bookmarks.
 
 
-  The app also provides native notification support, so users are instantly notified when new messages arrive. Clicking on a notification opens the corresponding chat directly. A useful online indicator shows in the bottom-left corner of each chat whether the contact is currently online, making communication easier. For a more comfortable experience in low light or during the evening, Altus offers a Dark Mode that reduces eye strain and adapts the app's design to the lighting conditions.
+  In addition to this, Grimoire lets users organize their bookmarks with tags and categories, providing a simple and efficient way to sort links based on personal preferences. The built-in full-text search functionality makes it easy to find specific bookmarks by scanning titles, descriptions, and other stored metadata.
 
 
-  Additionally, Altus allows users to fully customize their WhatsApp interface. They can create custom themes either by writing their own CSS or using the built-in theme customizer, which allows for easy color selection to personalize the app's appearance. This flexibility in interface customization ensures a more tailored and comfortable user experience. Altus thus provides not only a practical but also a highly customizable solution for WhatsApp on the desktop.
-developer: Aman Harwara
-website: https://github.com/amanharwara/altus
+  For those who want to add personal context or reminders, Grimoire allows users to attach notes to their bookmarks. This can be especially useful for keeping track of thoughts or relevant information that may not be immediately obvious from the webpage itself.
+
+
+  Grimoire supports user accounts, so each user has their own unique space to store and organize their bookmarks. This system is particularly useful for individuals who manage a large number of bookmarks and want to maintain a personalized and private collection. Moreover, the platform is optimized with a dark mode feature, which enhances user comfort when browsing in low-light environments.
+developer: Robert Goniszewski
+website: https://grimoire.pro/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/amanharwara/altus
-support: https://github.com/amanharwara/altus/issues
+repo: https://github.com/goniszewski/grimoire
+support: https://github.com/goniszewski/grimoire/issues
 gallery:
-  - https://i.imgur.com/rn7Zivn.png
-  - https://i.imgur.com/bDy2X8i.png
-  - https://i.imgur.com/ERsYpg3.png
+  - https://i.imgur.com/YLT6qsP.png
+  - https://i.imgur.com/YLT6qsP.png
+  - https://i.imgur.com/YLT6qsP.png
 releaseNotes: >-
-  The per-tab microphone and camera permission option is enabled by default, allowing users to manage permissions on a tab-by-tab basis for enhanced privacy and security. In addition, various other improvements have been implemented, such as performance optimizations, bug fixes, and a more streamlined user interface for better overall experience.
+  Release 0.5.0 introduces the ability to import bookmarks.
 dependencies:
 path: ""
 defaultUsername: ""
