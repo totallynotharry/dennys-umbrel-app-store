@@ -8,7 +8,7 @@ services:
 
   web:
     image: akaunting/akaunting:3.1.17@sha256:93749634bb7c8df4dfd88c9179e2a0cb2a3752294b6d53ab0bc344720bdc2044
-    user: 1000:1000
+    user: "1000:1000"
     environment:
       APP_URL: http://${DEVICE_DOMAIN_NAME}:8777
       LOCALE: en-US
@@ -30,7 +30,7 @@ services:
 
   akaunting-db:
     image: mariadb:11.7.2@sha256:81e893032978c4bf8ad43710b7a979774ed90787fa32d199162148ce28fe3b76
-    user: 1000:1000
+    user: "1000:1000"
     environment:
       MYSQL_DATABASE: akaunting
       MYSQL_USER: admin
