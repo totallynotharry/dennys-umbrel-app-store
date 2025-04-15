@@ -10,10 +10,10 @@ services:
     image: akaunting/akaunting:3.1.17@sha256:93749634bb7c8df4dfd88c9179e2a0cb2a3752294b6d53ab0bc344720bdc2044
     environment:
       AKAUNTING_SETUP: true
-      APP_URL: http://localhost:8773
+      APP_URL: http://${DEVICE_DOMAIN_NAME}:8773
       LOCALE: en-US
       DB_HOST: denny-akaunting-db_1
-      DB_PORT: 3347
+      DB_PORT: 3306
       DB_NAME: akaunting
       DB_USERNAME: admin
       DB_PASSWORD: akaunting_password
@@ -35,8 +35,6 @@ services:
       MYSQL_USER: admin
       MYSQL_PASSWORD: akaunting_password
       MYSQL_RANDOM_ROOT_PASSWORD: yes
-    ports:
-      - "3347:3306"
     volumes:
       - ${APP_DATA_DIR}/data/akaunting-db:/var/lib/mysql:rw
     restart: on-failure
