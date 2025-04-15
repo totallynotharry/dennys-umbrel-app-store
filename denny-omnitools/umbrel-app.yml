@@ -1,0 +1,32 @@
+manifestVersion: 1
+id: denny-omnitools
+name: OmniTools
+tagline: An all-in-one collection of powerful web-based tools for everyday tasks
+icon: https://i.imgur.com/TKwp0iD.png
+category: files & productivity
+version: "0.2.0"
+port: 8678
+description: >-
+  OmniTools is a self-hosted, open-source web application that brings together a wide range of practical online utilities in one unified interface. Developed by Ibrahima Gaye Coulibaly, the platform is designed with simplicity and privacy in mind—there are no ads, no tracking mechanisms, and all functionality is accessible directly in the browser. The project focuses on providing everyday tools that can handle tasks across various domains, such as image and video processing, text manipulation, data formatting, and mathematical operations.
+
+
+  Built using modern web technologies like React, TypeScript, and Material UI, OmniTools offers a clean and responsive user experience. It runs on Vite for fast performance and can be deployed easily via Docker, making it suitable for both personal and professional use. Whether it's resizing images, formatting JSON, converting time zones, or generating prime numbers, the application delivers fast, intuitive solutions for users who prefer local control over their digital workflows.
+
+
+  Because it’s entirely self-hosted, OmniTools offers an added layer of data sovereignty, allowing individuals or teams to run their own private instance. This is especially appealing to users who want a reliable, offline-capable toolbox without the noise or privacy concerns associated with many commercial online services. The project is actively maintained on GitHub and welcomes contributions, making it a compelling choice for anyone looking to integrate a comprehensive set of tools into their daily workflow.
+developer: Ibrahima Gaye Coulibaly
+website: https://omnitools.app/
+submitter: dennysubke
+submission: https://github.com/getumbrel/umbrel-apps/pull/
+repo: https://github.com/iib0011/omni-tools
+support: https://github.com/iib0011/omni-tools/issues
+gallery:
+  - https://i.imgur.com/hgHYQ5B.png
+  - https://i.imgur.com/hgHYQ5B.png
+  - https://i.imgur.com/hgHYQ5B.png
+releaseNotes: >-
+  OmniTools v0.2.0 introduces a wide range of new features, including AI-powered background removal for PNGs, various PDF manipulation options, and powerful text editing tools like line deduplication, case randomization, and palindrome generation. This release also adds utilities for JSON, CSV, video trimming, number sequences, and time conversions, expanding its role as a versatile, privacy-friendly toolbox for everyday tasks.
+dependencies:
+path: ""
+defaultUsername: ""
+defaultPassword: ""

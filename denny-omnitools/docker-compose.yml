@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-omnitools_app_1
+      APP_PORT: 80
+
+  app:
+    image: iib0011/omni-tools:0.2.0@sha256:f997ce53d8d95a581e48ed74203ea352e1fb1520930cf8f92884999e423cf3c6
+    security_opt:
+      - no-new-privileges:true
+    restart: on-failure
