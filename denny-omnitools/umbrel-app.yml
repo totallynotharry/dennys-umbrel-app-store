@@ -7,7 +7,7 @@ category: In Progress
 version: "0.2.0"
 port: 8678
 description: >-
-  OmniTools is a self-hosted, open-source web application that brings together a wide range of practical online utilities in one unified interface. Developed by Ibrahima Gaye Coulibaly, the platform is designed with simplicity and privacy in mind—there are no ads, no tracking mechanisms, and all functionality is accessible directly in the browser. The project focuses on providing everyday tools that can handle tasks across various domains, such as image and video processing, text manipulation, data formatting, and mathematical operations.
+  🛠️ OmniTools is a self-hosted, open-source web application that brings together a wide range of practical online utilities in one unified interface. Developed by Ibrahima Gaye Coulibaly, the platform is designed with simplicity and privacy in mind—there are no ads, no tracking mechanisms, and all functionality is accessible directly in the browser. The project focuses on providing everyday tools that can handle tasks across various domains, such as image and video processing, text manipulation, data formatting, and mathematical operations.
 
 
   Built using modern web technologies like React, TypeScript, and Material UI, OmniTools offers a clean and responsive user experience. It runs on Vite for fast performance and can be deployed easily via Docker, making it suitable for both personal and professional use. Whether it's resizing images, formatting JSON, converting time zones, or generating prime numbers, the application delivers fast, intuitive solutions for users who prefer local control over their digital workflows.
