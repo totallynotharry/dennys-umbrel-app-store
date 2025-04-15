@@ -7,7 +7,7 @@ category: In Progress
 version: "3.1.17"
 port: 8777
 description: >-
-  Akaunting is a free, open-source accounting software designed to meet the needs of small businesses, freelancers, and self-employed individuals. It runs entirely in the browser and offers a modern, user-friendly interface, making financial management accessible even to those without a background in accounting. Built with technologies like Laravel and Vue.js, Akaunting is known for its flexibility, scalability, and ease of customization. Users can manage invoices, track expenses, monitor cash flow, and generate various financial reports, all from a centralized dashboard.
+  📊 Akaunting is a free, open-source accounting software designed to meet the needs of small businesses, freelancers, and self-employed individuals. It runs entirely in the browser and offers a modern, user-friendly interface, making financial management accessible even to those without a background in accounting. Built with technologies like Laravel and Vue.js, Akaunting is known for its flexibility, scalability, and ease of customization. Users can manage invoices, track expenses, monitor cash flow, and generate various financial reports, all from a centralized dashboard.
 
 
   One of the key advantages of Akaunting is its open-source nature, which allows users to host it on their own servers, giving them full control over their data and privacy. This makes it particularly attractive to those who prefer self-hosted solutions over cloud-based subscription models. Although Akaunting offers a cloud-hosted version for convenience, the self-hosted variant remains completely free and open to modifications.
