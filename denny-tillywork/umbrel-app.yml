@@ -5,7 +5,7 @@ tagline: A work management solution for startups
 icon: https://i.imgur.com/ueUHKSr.png
 category: In Progress
 version: "0.1.2"
-port: 8558
+port: 8556
 description: >-
   💼 Tillywork is an open-source work management platform tailored for B2B teams, offering a unified solution for managing projects, sales pipelines, and agile workflows. It positions itself as a modern, customizable alternative to commercial tools like ClickUp, monday.com, and Jira, with a strong emphasis on flexibility, privacy, and user ownership.
 
