@@ -34,7 +34,7 @@ description: >-
   https://medium.com/@webdevmike01/introducing-w-i-l-l-o-w-827c3e965ef6
 
 
-  ⚠️ Warning: Use Wagmi Own Risk
+  ⚠️ Warning: Use Wagmi at your own risk!
 
 
   This app is currently in an alpha stage of development and may be unstable or incomplete. Additionally, it requires access to /var/run/docker.sock to interact with the Docker daemon. This grants the app elevated privileges, including the ability to start, stop, and modify containers, which poses a significant security risk if the app is compromised or behaves unexpectedly.
