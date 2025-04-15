@@ -12,7 +12,7 @@ services:
       APP_URL: http://${DEVICE_DOMAIN_NAME}:8777
       APP_ENV: local
       LOCALE: en-US
-      DB_HOST: akaunting-db
+      DB_HOST: akaunting-db_1
       DB_PORT: 3306
       DB_NAME: akaunting
       DB_USERNAME: admin
@@ -26,9 +26,9 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/akaunting-data:/var/www/html:rw
     depends_on:
-      - akaunting-db
+      - db
 
-  akaunting-db:
+  db:
     image: mariadb:latest@sha256:81e893032978c4bf8ad43710b7a979774ed90787fa32d199162148ce28fe3b76
     user: "0:0"
     environment:
