@@ -11,7 +11,7 @@ services:
     environment:
       #APP_URL: http://${DEVICE_DOMAIN_NAME}:8773
       LOCALE: en-US
-      DB_HOST: akaunting-db_1
+      DB_HOST: denny-akaunting-db_1
       DB_PORT: 3306
       DB_NAME: akaunting
       DB_USERNAME: admin
@@ -24,3 +24,16 @@ services:
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/akaunting-data:/var/www/html:rw
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:latest@sha256:81e893032978c4bf8ad43710b7a979774ed90787fa32d199162148ce28fe3b76
+    environment:
+      MYSQL_DATABASE: akaunting
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: akaunting_password
+      MYSQL_RANDOM_ROOT_PASSWORD: yes
+    volumes:
+      - ${APP_DATA_DIR}/data/akaunting-db:/var/lib/mysql:rw
+    restart: on-failure
