@@ -12,7 +12,7 @@ services:
       #APP_URL: http://${DEVICE_DOMAIN_NAME}:8773
       LOCALE: en-US
       DB_HOST: denny-akaunting-db_1
-      DB_PORT: 3306
+      DB_PORT: 3347
       DB_NAME: akaunting
       DB_USERNAME: admin
       DB_PASSWORD: akaunting_password
