@@ -30,6 +30,7 @@ services:
 
   akaunting-db:
     image: mariadb:11.7.2@sha256:81e893032978c4bf8ad43710b7a979774ed90787fa32d199162148ce28fe3b76
+    user: "0:0"
     environment:
       MYSQL_DATABASE: akaunting
       MYSQL_USER: admin
