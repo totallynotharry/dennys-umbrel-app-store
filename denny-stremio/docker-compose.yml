@@ -4,18 +4,14 @@ services:
   app_proxy:
     environment:
       APP_HOST: denny-stremio_server_1
-      APP_PORT: 11470
+      APP_PORT: 8080
 
   server:
-    image: stremio/server:latest
+    image: tsaridas/stremio-docker:latest
     ports:
       - 12470:12470
     environment:
-      - FFMPEG_BIN=/bin/ffmpeg
-      - FFPROBE_BIN=/bin/ffprobe
       - NO_CORS=1
-      #- APP_PATH=""
     restart: on-failure
     volumes:
-      - ${APP_DATA_DIR}/data/bin/ffmpeg:/bin/ffmpeg:ro
-      - ${APP_DATA_DIR}/data/bin/ffprobe:/bin/ffprobe:ro
+      - ${APP_DATA_DIR}/data:/root/.stremio-server
