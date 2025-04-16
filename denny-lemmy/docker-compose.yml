@@ -10,7 +10,23 @@ services:
     image: dockurr/lemmy
     environment:
       RUST_LOG: "warn"
+      LEMMY_DATABASE_URL: postgres://lemmy:lemmy@postgres:5432/lemmy
     restart: on-failure
     stop_grace_period: 1m
+    depends_on:
+      - postgres
     volumes:
       - ${APP_DATA_DIR}/data/lemmy.hjson:/config/config.hjson
+
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: lemmy
+      POSTGRES_PASSWORD: lemmy
+      POSTGRES_DB: lemmy
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
