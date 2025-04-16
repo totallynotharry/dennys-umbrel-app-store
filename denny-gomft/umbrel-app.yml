@@ -2,30 +2,36 @@ manifestVersion: 1
 id: denny-gomft
 name: GoMFT
 tagline: An innovative web-based file transfer application
-icon: https://i.imgur.com/wfT4QX3.png
+icon: https://i.imgur.com/yxe4B5O.png
 category: test
-version: "5.4.0"
+version: "0.2.11"
 port: 8979
 description: >-
-  📱 Altus is a powerful Electron-based WhatsApp client that enhances the desktop WhatsApp experience by adding a variety of extra features. Using the GitHub-developed Electron framework, Altus integrates WhatsApp Web while adding functionality that goes beyond what the standard WhatsApp Web offers. One of the standout features of Altus is its support for multiple WhatsApp accounts, allowing users to manage and switch between different accounts simultaneously.
+  GoMFT, short for "Go Managed File Transfer," is a web-based application designed to simplify and manage file transfers across a wide variety of storage providers. Built in Go and powered by the versatile backend tool rclone, GoMFT serves as a unified interface for moving data between local and cloud storage systems, making it ideal for users who require reliable and automated transfer workflows.
 
 
-  The app also provides native notification support, so users are instantly notified when new messages arrive. Clicking on a notification opens the corresponding chat directly. A useful online indicator shows in the bottom-left corner of each chat whether the contact is currently online, making communication easier. For a more comfortable experience in low light or during the evening, Altus offers a Dark Mode that reduces eye strain and adapts the app's design to the lighting conditions.
+  The application focuses heavily on usability, offering a modern and intuitive web interface that allows users to configure, schedule, and monitor transfers with ease. Behind the scenes, it leverages rclone’s extensive compatibility with over 40 storage backends, including popular platforms such as Google Drive, Amazon S3, WebDAV, SFTP, and many others. This makes GoMFT highly adaptable to different use cases, from simple personal backups to complex enterprise-level data flows.
 
 
-  Additionally, Altus allows users to fully customize their WhatsApp interface. They can create custom themes either by writing their own CSS or using the built-in theme customizer, which allows for easy color selection to personalize the app's appearance. This flexibility in interface customization ensures a more tailored and comfortable user experience. Altus thus provides not only a practical but also a highly customizable solution for WhatsApp on the desktop.
-developer: Aman Harwara
-website: https://github.com/amanharwara/altus
+  Security and observability are core to the design of GoMFT. It supports authentication via external providers such as OpenID Connect and OAuth2, allowing seamless integration into existing identity systems. Additionally, role-based access control and detailed audit logging ensure that administrators can tightly manage and track access to the system.
+
+
+  Another key feature of GoMFT is its webhook integration. It can notify external systems of transfer events in real-time, with optional HMAC-SHA256 signature verification for added security. This opens the door to building automated pipelines or alerting mechanisms that respond to file transfer results.
+
+
+  While still in active development, GoMFT is already a powerful tool for orchestrating file transfers in a centralized, secure, and scalable manner. It can be deployed easily via Docker and is continuously updated with new features and improvements by its open-source community.
+developer: StarFleetCPTN
+website: https://github.com/StarFleetCPTN
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/amanharwara/altus
-support: https://github.com/amanharwara/altus/issues
+repo: https://github.com/StarFleetCPTN/GoMFT
+support: https://github.com/StarFleetCPTN/GoMFT/issues
 gallery:
-  - https://i.imgur.com/rn7Zivn.png
-  - https://i.imgur.com/bDy2X8i.png
-  - https://i.imgur.com/ERsYpg3.png
+  - https://i.imgur.com/4CLnaBY.png
+  - https://i.imgur.com/4CLnaBY.png
+  - https://i.imgur.com/4CLnaBY.png
 releaseNotes: >-
-  The per-tab microphone and camera permission option is enabled by default, allowing users to manage permissions on a tab-by-tab basis for enhanced privacy and security. In addition, various other improvements have been implemented, such as performance optimizations, bug fixes, and a more streamlined user interface for better overall experience.
+  GoMFT v0.2.11 introduces a new documentation website built with Docusaurus, offering detailed guides and feature explanations for easier onboarding and usage. Additionally, the release adds multi-architecture Docker support, including images for amd64, arm64, and arm/v7, without introducing any breaking database changes - making the update safe and recommended for all users.
 dependencies:
 path: ""
 defaultUsername: ""
