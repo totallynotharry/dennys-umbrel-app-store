@@ -7,7 +7,7 @@ services:
       APP_PORT: 8080
 
   server:
-    image: tsaridas/stremio-docker:latest
+    image: tsaridas/stremio-docker:v1.1.118@sha256:1f7a09b1be001fe4770d2e1c6d8dae0e6c53b59217e3f30038ad3695387b80d9
     ports:
       - 11470:11470 #HTTP
       - 12470:12470 #HTTPS
@@ -16,3 +16,12 @@ services:
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data:/root/.stremio-server
+
+
+#Info
+
+#| Component            | Port         | Function                              |
+#|----------------------|--------------|---------------------------------------|
+#| Web Player           | 8080         | Browser-based UI                      |
+#| Stremio Server       | 11470        | Streams content to the player         |
+#| Certificate / HTTPS  | not required | Only relevant for HTTPS setup         |
