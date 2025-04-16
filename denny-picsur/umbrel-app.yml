@@ -1,38 +1,36 @@
 manifestVersion: 1
 id: denny-picsur
 name: Picsur
-tagline: A lightweight CalDAV+CardDAV server
-icon: https://i.imgur.com/h3B1DaG.png
-category: Test
-version: "0.9.5"
+tagline: An easy to use image sharing service
+icon: https://i.imgur.com/5cyHiul.png
+category: files & productivity
+version: "0.5.6"
 port: 8286
 description: >-
-  🪆 Baikal Server is a lightweight CalDAV and CardDAV server designed for users who want to manage their calendar and contact information securely on their own server. This robust application offers an extensive web interface that simplifies the management of users, address books, and calendars, making it accessible for both beginners and experienced users.
+  🖼️ Picsur is a lightweight, self-hosted image hosting platform designed for simplicity and control. It allows users to upload, store, and share images directly from their own server, without relying on third-party services. Inspired by the functionality of platforms like Imgur and Pastebin, Picsur focuses on offering a clean and efficient experience for users who need a straightforward way to manage images online.
 
 
-  One of the key features of Baikal is its ease of installation and configuration. It requires only a basic PHP-capable server, which means you don’t need extensive technical knowledge to get started. The server supports both MySQL and SQLite databases for data storage, providing flexibility depending on your preferences and needs.
+  Unlike more complex photo management solutions such as PhotoPrism or Immich, which include features like facial recognition, albums, and AI-assisted sorting, Picsur is purpose-built for quick uploads and direct sharing. It supports a wide range of image formats, including common ones like JPEG, PNG, and GIF, as well as newer or less standard types such as QOI and animated WebP files. Once uploaded, images can be edited with basic tools such as resizing, rotating, flipping, or applying grayscale and negative effects.
 
 
-  Baikal allows users to seamlessly access their contacts and calendars from any device. It is compatible with a wide range of applications, including iOS, macOS, DAVx5 on Android, Mozilla Thunderbird, and many other CalDAV and CardDAV capable applications. This compatibility ensures that you can sync your data across multiple platforms without any hassle.
+  The platform includes a user-friendly web interface that supports drag-and-drop uploads and provides direct links for sharing images instantly. Administrators can access a backend panel to manage uploaded files and user permissions, offering full control over how the service operates.
 
 
-  In addition to its user-friendly features, Baikal emphasizes privacy and data security. By hosting your calendars and contacts yourself, you maintain full control over your personal information, protecting it from potential breaches and unauthorized access. This is particularly important in an era where data privacy is a growing concern.
-
-
-  Whether you are an individual looking for a reliable personal organizer or a small team needing a collaborative solution, Baikal Server provides a practical and efficient way to manage your scheduling and contact needs while ensuring your data remains private and secure. With its fast performance and straightforward interface, Baikal is an excellent choice for anyone seeking a self-hosted calendar and contact management solution.
-
-developer: fruux GmbH
-website: https://sabre.io/baikal/
+  Because Picsur is self-hosted, it ensures maximum privacy and independence from cloud providers. It can be deployed using Docker on systems like a Synology NAS, making it accessible even to users without deep technical knowledge. This makes it an ideal solution for individuals or small teams looking to host images privately, efficiently, and with minimal overhead.
+developer: CaramelFur
+website: https://picsur.org/upload
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/sabre-io/Baikal
-support: https://github.com/sabre-io/Baikal/issues
+repo: https://github.com/CaramelFur/Picsur
+support: https://github.com/CaramelFur/Picsur/issues
 gallery:
-  - https://i.imgur.com/InOvJFa.png
-  - https://i.imgur.com/hIQ1ZIv.png
-  - https://i.imgur.com/nobRqdE.png
+  - https://i.imgur.com/xmpcGy3.png
+  - https://i.imgur.com/CGGjH8l.png
+  - https://i.imgur.com/lQ5aLBT.png
+  - https://i.imgur.com/3nBWDjw.png
+  - https://i.imgur.com/HtSnQLY.png
 releaseNotes: >-
-  The latest update includes dependency upgrades that enhance compatibility with PHP 8.2 and features the inclusion of sabre/dav version 4.6.0.
+  Version 0.5.6 of Picsur finally fixes a persistent thumbnail bug that remained unresolved in the previous release.
 dependencies:
 path: ""
 defaultUsername: ""
