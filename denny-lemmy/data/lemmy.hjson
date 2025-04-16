@@ -1,6 +1,6 @@
 {
   database: {
-    host: "lemmy-db"
+    host: "denny-lemmy_server_1"
     user: "lemmy"
     password: "lemmy"
     port: 5432
