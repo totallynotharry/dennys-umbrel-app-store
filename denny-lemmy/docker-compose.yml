@@ -10,7 +10,7 @@ services:
     image: dockurr/lemmy
     environment:
       RUST_LOG: "warn"
-      RUST_BACKTRACE=1
+      RUST_BACKTRACE: 1
     restart: on-failure
     stop_grace_period: 1m
     #volumes:
