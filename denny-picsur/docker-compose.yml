@@ -7,7 +7,7 @@ services:
       APP_PORT: 8286
 
   db:
-    image: postgres:16
+    image: postgres:16@sha256:cef2d22004db69e3d601442ca4cac142adda0987ad7ca4f28c4e998bef690951
     hostname: picsur-db
     mem_limit: 1g
     cpu_shares: 1024
@@ -27,7 +27,7 @@ services:
     restart: on-failure
 
   web:
-    image: ghcr.io/caramelfur/picsur:latest
+    image: ghcr.io/caramelfur/picsur:0.5.6@sha256:209ce21d338cd7d9a1adc838a67695e903149359bf192359819607df1b3c4417
     environment:
       PICSUR_PORT: 8286
       PICSUR_DB_HOST: picsur-db
