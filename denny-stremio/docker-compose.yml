@@ -9,7 +9,8 @@ services:
   server:
     image: tsaridas/stremio-docker:latest
     ports:
-      - 12470:12470
+      - 11470:11470 #HTTP
+      - 12470:12470 #HTTPS
     environment:
       - NO_CORS=1
     restart: on-failure
