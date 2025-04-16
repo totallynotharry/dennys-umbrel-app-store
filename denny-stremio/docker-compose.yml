@@ -13,9 +13,8 @@ services:
     environment:
       - FFMPEG_BIN=/bin/ffmpeg
       - FFPROBE_BIN=/bin/ffprobe
-      # Uncomment and set value as needed
+      - NO_CORS=1
       #- APP_PATH=""
-      #- NO_CORS=0 
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/bin/ffmpeg:/bin/ffmpeg:ro
