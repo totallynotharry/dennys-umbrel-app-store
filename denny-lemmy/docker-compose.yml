@@ -3,7 +3,7 @@ version: '3.7'
 services:
   app_proxy:
     environment:
-      APP_HOST: dockurr/lemmy-ui
+      APP_HOST: denny-lemmy_server_1
       APP_PORT: 1234
 
   server:
