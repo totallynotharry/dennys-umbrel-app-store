@@ -6,7 +6,7 @@ services:
       APP_HOST: denny-stremio_server_1
       APP_PORT: 11470
 
-  web:
+  server:
     image: stremio/server:latest
     ports:
       - 12470:12470
