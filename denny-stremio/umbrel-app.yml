@@ -27,9 +27,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/tsaridas/stremio-docker
 support: https://github.com/tsaridas/stremio-docker/issues
 gallery:
-  - https://i.imgur.com/8eCaccB.png
-  - https://i.imgur.com/8eCaccB.png
-  - https://i.imgur.com/8eCaccB.png
+  - https://i.imgur.com/edoVdHM.png
+  - https://i.imgur.com/edoVdHM.png
+  - https://i.imgur.com/edoVdHM.png
 releaseNotes: >-
   The latest release, v1.1.118, includes improvements and updates such as Web version v5.0.0-beta.21, with a server URL at https://dl.strem.io/server/v4.20.8/desktop/server.js.
 dependencies:
