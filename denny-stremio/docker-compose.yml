@@ -1,0 +1,24 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-stremio_server_1
+      APP_PORT: 11470
+
+  web:
+    image: stremio/server:latest
+    ports:
+      - 12470:12470
+    networks:
+      - proxy
+    environment:
+      - FFMPEG_BIN=/bin/ffmpeg
+      - FFPROBE_BIN=/bin/ffprobe
+      # Uncomment and set value as needed
+      #- APP_PATH=""
+      #- NO_CORS=0 
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/bin/ffmpeg:/bin/ffmpeg:ro
+      - ${APP_DATA_DIR}/data/bin/ffprobe:/bin/ffprobe:ro
