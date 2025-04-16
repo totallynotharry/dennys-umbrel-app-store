@@ -1,4 +1,4 @@
-version: "3.9"
+version: "3.7"
 
 services:
   db:
@@ -6,28 +6,25 @@ services:
     command:
       [
         "postgres",
-        "-c",
-        "session_preload_libraries=auto_explain",
-        "-c",
-        "auto_explain.log_min_duration=5ms",
-        "-c",
-        "auto_explain.log_analyze=true",
-        "-c",
-        "track_activity_query_size=1048576"
+        "-c", "session_preload_libraries=auto_explain",
+        "-c", "auto_explain.log_min_duration=5ms",
+        "-c", "auto_explain.log_analyze=true",
+        "-c", "track_activity_query_size=1048576"
       ]
-    container_name: Lemmy-DB
+    container_name: lemmy-db
     hostname: lemmy-db
     mem_limit: 1g
     cpu_shares: 1024
     security_opt:
       - no-new-privileges:true
+    user: 1000:1000
     healthcheck:
       test: ["CMD", "pg_isready", "-q", "-d", "lemmy", "-U", "lemmyuser"]
       timeout: 45s
       interval: 10s
       retries: 10
     volumes:
-      - /volume1/docker/lemmy/db:/var/lib/postgresql/data:rw
+      - ${APP_DATA_DIR}/db:/var/lib/postgresql/data:rw
     environment:
       POSTGRES_DB: lemmy
       POSTGRES_USER: lemmyuser
@@ -36,7 +33,7 @@ services:
 
   pictrs:
     image: asonix/pictrs:0.5.0-rc.2
-    container_name: Lemmy-PICTRS
+    container_name: lemmy-pictrs
     hostname: lemmy-pictrs
     mem_limit: 2g
     cpu_shares: 768
@@ -46,9 +43,8 @@ services:
     healthcheck:
       test: stat /etc/passwd || exit 1
     volumes:
-      - /volume1/docker/lemmy/pictrs:/mnt:rw
+      - ${APP_DATA_DIR}/pictrs:/mnt:rw
     environment:
-      PICTRS_OPENTELEMETRY_URL: http://otel:4137
       RUST_LOG: debug
       RUST_BACKTRACE: full
       PICTRS__MEDIA__VIDEO_CODEC: vp9
@@ -60,7 +56,7 @@ services:
 
   lemmy-back:
     image: dessalines/lemmy:0.19.3
-    container_name: Lemmy-BACK
+    container_name: lemmy-back
     hostname: lemmy-back
     mem_limit: 2g
     cpu_shares: 768
@@ -68,9 +64,9 @@ services:
       - no-new-privileges:true
     user: 1000:1000
     volumes:
-      - /volume1/docker/lemmy/config.hjson:/config/config.hjson:ro
+      - ${APP_DATA_DIR}/config/config.hjson:/config/config.hjson:ro
     environment:
-      RUST_LOG: "warn,lemmy_server=debug,lemmy_api=debug,lemmy_api_common=debug,lemmy_api_crud=debug,lemmy_apub=debug,lemmy_db_schema=debug,lemmy_db_views=debug,lemmy_db_views_actor=debug,lemmy_db_views_moderator=debug,lemmy_routes=debug,lemmy_utils=debug,lemmy_websocket=debug"
+      RUST_LOG: "warn,lemmy_server=debug"
       RUST_BACKTRACE: full
     restart: on-failure:5
     depends_on:
@@ -81,13 +77,12 @@ services:
 
   lemmy-front:
     image: dessalines/lemmy-ui:0.19.3
-    container_name: Lemmy-FRONT
+    container_name: lemmy-front
     hostname: lemmy-front
     mem_limit: 2g
     cpu_shares: 768
     security_opt:
       - no-new-privileges:true
-    read_only: false
     user: 1000:1000
     ports:
       - 8536:1234
