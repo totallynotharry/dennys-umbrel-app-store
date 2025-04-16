@@ -3,15 +3,14 @@ version: '3.7'
 services:
   app_proxy:
     environment:
-      APP_HOST: denny-lemmy_server_1
-      APP_PORT: 8536
+      APP_HOST: dockurr/lemmy-ui
+      APP_PORT: 1234
 
   server:
     image: dockurr/lemmy
     environment:
-      RUST_LOG: "warn"
-      RUST_BACKTRACE: 1
+      - LEMMY_UI_HTTPS=false
+      - LEMMY_UI_LEMMY_INTERNAL_HOST=lemmy:8536
+      - LEMMY_UI_LEMMY_EXTERNAL_HOST=umbrel.local
     restart: on-failure
     stop_grace_period: 1m
-    volumes:
-      - ${APP_DATA_DIR}/data/lemmy.hjson:/config/config.hjson:rw
