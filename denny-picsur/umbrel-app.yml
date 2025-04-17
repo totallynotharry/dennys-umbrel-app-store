@@ -33,5 +33,5 @@ releaseNotes: >-
   Version 0.5.6 of Picsur finally fixes a persistent thumbnail bug that remained unresolved in the previous release.
 dependencies:
 path: ""
-defaultUsername: ""
-defaultPassword: ""
+defaultUsername: "admin"
+defaultPassword: "picsur"
