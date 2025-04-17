@@ -13,6 +13,9 @@ services:
       - NODE_ENV=production
       - UID=1000
       - GID=1000
+    volumes:
+      - ${UMBREL_ROOT}/data/storage/config/config.yml:/app/user-data/conf.yml
+      - ${APP_DATA_DIR}/data/icons:/app/user-data/item-icons
     healthcheck:
       test: ['CMD', 'node', '/app/services/healthcheck']
       interval: 1m30s
