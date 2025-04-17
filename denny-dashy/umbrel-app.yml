@@ -1,31 +1,34 @@
 manifestVersion: 1
 id: denny-dashy
 name: Dashy
-tagline: A WhatsApp client with themes and multiple account support
-icon: https://i.imgur.com/wfT4QX3.png
-category: test
-version: "5.4.0"
+tagline: A personal dashboard built for you
+icon: https://i.imgur.com/aM8krGC.png
+category: files & productivity
+version: "3.1.1"
 port: 4444
 description: >-
-  📱 Altus is a powerful Electron-based WhatsApp client that enhances the desktop WhatsApp experience by adding a variety of extra features. Using the GitHub-developed Electron framework, Altus integrates WhatsApp Web while adding functionality that goes beyond what the standard WhatsApp Web offers. One of the standout features of Altus is its support for multiple WhatsApp accounts, allowing users to manage and switch between different accounts simultaneously.
+  Dashy is a modern, highly customizable dashboard application designed to serve as a central hub for managing and accessing all of your self-hosted services, tools, and web links. It is commonly used in homelab environments, where users run multiple services on personal servers, and need a visually appealing and efficient way to monitor and launch them from a single interface.
 
 
-  The app also provides native notification support, so users are instantly notified when new messages arrive. Clicking on a notification opens the corresponding chat directly. A useful online indicator shows in the bottom-left corner of each chat whether the contact is currently online, making communication easier. For a more comfortable experience in low light or during the evening, Altus offers a Dark Mode that reduces eye strain and adapts the app's design to the lighting conditions.
+  At its core, Dashy provides a sleek and responsive web interface where users can organize their resources using a YAML-based configuration file or an integrated configuration editor. The interface supports themes, icons, dynamic widgets, and service status indicators, allowing users to tailor the experience to fit their needs. It supports everything from simple link tiles to more advanced integrations, including Docker container monitoring, service uptime checks, and direct embedding of external applications via iframes.
 
 
-  Additionally, Altus allows users to fully customize their WhatsApp interface. They can create custom themes either by writing their own CSS or using the built-in theme customizer, which allows for easy color selection to personalize the app's appearance. This flexibility in interface customization ensures a more tailored and comfortable user experience. Altus thus provides not only a practical but also a highly customizable solution for WhatsApp on the desktop.
-developer: Aman Harwara
-website: https://github.com/amanharwara/altus
+  Built using modern web technologies like Vue.js, Dashy is lightweight but powerful, offering fast load times and a user-friendly experience on both desktop and mobile devices. It runs as a standalone web app, often deployed in Docker containers, making it easy to integrate into existing setups without the need for heavy dependencies. Users can set it up behind a reverse proxy for secure remote access, and because it's fully open-source, it's ideal for those who want full control over their infrastructure without relying on third-party dashboards or portals.
+
+
+  Dashy also includes a built-in search feature that lets users query across bookmarks, internal services, or even trigger external search engines directly from the dashboard. With its focus on self-hosting, customization, and ease of use, Dashy has become a popular choice among developers, system administrators, and tech enthusiasts looking to bring order and efficiency to their increasingly complex digital environments.
+developer: Alicia Sykes
+website: https://dashy.to/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/amanharwara/altus
-support: https://github.com/amanharwara/altus/issues
+repo: https://github.com/Lissy93/dashy
+support: https://github.com/Lissy93/dashy/issues
 gallery:
-  - https://i.imgur.com/rn7Zivn.png
-  - https://i.imgur.com/bDy2X8i.png
-  - https://i.imgur.com/ERsYpg3.png
+  - https://i.imgur.com/fPPvQzw.png
+  - https://i.imgur.com/fPPvQzw.png
+  - https://i.imgur.com/fPPvQzw.png
 releaseNotes: >-
-  The per-tab microphone and camera permission option is enabled by default, allowing users to manage permissions on a tab-by-tab basis for enhanced privacy and security. In addition, various other improvements have been implemented, such as performance optimizations, bug fixes, and a more streamlined user interface for better overall experience.
+  This release improves both user experience and security by organizing backup configs into their own folder, hardening authentication, and allowing protection of the config via HTTP auth. It also includes various bug fixes, UI tweaks, and documentation updates.
 dependencies:
 path: ""
 defaultUsername: ""
