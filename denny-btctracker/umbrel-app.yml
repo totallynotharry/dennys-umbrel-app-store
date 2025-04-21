@@ -35,7 +35,7 @@ gallery:
   - https://i.imgur.com/LqKllvs.png
   - https://i.imgur.com/dbhGiAI.png
 releaseNotes: >-
-  BTC-Tracker 0.3.0 is now available as a Docker image on Docker Hub, streamlining the setup process. The update includes automated builds and semantic versioning.
+  BTC-Tracker 0.3.2 is now available as a Docker image on Docker Hub, streamlining the setup process. The update includes automated builds and semantic versioning.
 dependencies:
 path: ""
 defaultUsername: ""
