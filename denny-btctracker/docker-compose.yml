@@ -8,6 +8,7 @@ services:
 
   web:
     image: dennysubke/btc-tracker:v0.3.0@sha256:810a5fec2ebef370e3f8739f96510a6c66dfa50518cac3c377f6d3c62f086231
+    user: 1000:1000
     environment:
       - NODE_ENV=development
       - PORT=3000
