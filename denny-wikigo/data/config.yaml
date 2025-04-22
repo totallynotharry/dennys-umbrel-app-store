@@ -23,4 +23,4 @@ wiki:
 users:
     - username: admin
       password: <bcrypt-hashed-password>
-      is_admin: true
+      is_admin: false
