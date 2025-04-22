@@ -3,7 +3,7 @@ id: denny-omnitools
 name: OmniTools
 tagline: An all-in-one collection of powerful web-based tools for everyday tasks
 icon: https://i.imgur.com/TKwp0iD.png
-category: In Progress
+category: files & productivity
 version: "0.2.0"
 port: 8678
 description: >-
