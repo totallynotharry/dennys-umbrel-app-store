@@ -27,4 +27,4 @@ services:
       POSTGRES_USER: ${DL_PG_USER:-postgres}
       POSTGRES_PASSWORD: ${DL_PG_PASSWORD:-changeme2420}
     volumes:
-      - ${APP_DATA_DIR}/db_data:/var/lib/postgresql/data
+      - ${APP_DATA_DIR}/data/db_data:/var/lib/postgresql/data
