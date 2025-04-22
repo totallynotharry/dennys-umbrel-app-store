@@ -3,7 +3,7 @@ id: denny-domain-locker
 name: Domain Locker
 tagline: An all-in-one tool for keeping track of your domain name portfolio
 icon: https://i.imgur.com/NnUrs9L.png
-category: In Progress
+category: networking
 version: "0.0.6"
 port: 8839
 description: >-
