@@ -24,9 +24,11 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/Lissy93/domain-locker
 support: https://github.com/Lissy93/domain-locker/issues
 gallery:
-  - https://i.imgur.com/duvTpOm.png
-  - https://i.imgur.com/duvTpOm.png
-  - https://i.imgur.com/duvTpOm.png
+  - https://i.imgur.com/EgvNWBL.png
+  - https://i.imgur.com/gww6jxm.png
+  - https://i.imgur.com/HrNeLrG.png
+  - https://i.imgur.com/F3e3fjL.png
+  - https://i.imgur.com/fwWUbxd.png
 releaseNotes: >-
   Domain Locker v0.0.6 has been released, introducing full support for self-hosting. This update includes new features like password reset, Docker Compose support, improved documentation, performance enhancements, and a range of bug fixes related to SSR, CORS, and Docker compatibility.
 dependencies:
