@@ -21,9 +21,11 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/iib0011/omni-tools
 support: https://github.com/iib0011/omni-tools/issues
 gallery:
-  - https://i.imgur.com/hgHYQ5B.png
-  - https://i.imgur.com/hgHYQ5B.png
-  - https://i.imgur.com/hgHYQ5B.png
+  - https://i.imgur.com/mCieXqS.png
+  - https://i.imgur.com/gAUR1yo.png
+  - https://i.imgur.com/WZnW92g.png
+  - https://i.imgur.com/UukaTO7.png
+  - https://i.imgur.com/d1UxbD3.png
 releaseNotes: >-
   OmniTools v0.2.0 introduces a wide range of new features, including AI-powered background removal for PNGs, various PDF manipulation options, and powerful text editing tools like line deduplication, case randomization, and palindrome generation. This release also adds utilities for JSON, CSV, video trimming, number sequences, and time conversions, expanding its role as a versatile, privacy-friendly toolbox for everyday tasks.
 dependencies:
