@@ -1,6 +1,6 @@
 server:
     host: 0.0.0.0
-    port: 8833
+    port: 8080
     # When set to true, allows cookies to be sent over non-HTTPS connections.
     # WARNING: Only enable this in trusted environments like a homelab
     # where HTTPS is not available. This reduces security by allowing
