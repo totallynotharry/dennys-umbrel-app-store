@@ -22,7 +22,7 @@ description: >-
   Overall, Stremio is a versatile and user-friendly media center that allows users to centralize all their streaming needs. It is ideal for those who want to manage their entertainment in one place, but it's important to be mindful of legal issues related to streaming copyrighted content through third-party add-ons.
 
 
-  ⚠️ The Stremio Web Player and the associated server run in the same container and are by default accessible through ports 8080 for the Web Player and 11470 for the server. Simply enter the system's LAN IP address in the Stremio settings to configure the streaming server and the server.
+  ⚠️ The Stremio Web Player and the associated server run in the same container and are by default accessible through ports 10470 for the Web Player and 11470 for the server. Simply enter the system's LAN IP address in the Stremio settings to configure the streaming server.
 developer: Stremio
 website: https://www.stremio.com/
 submitter: dennysubke
@@ -30,9 +30,11 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/tsaridas/stremio-docker
 support: https://github.com/tsaridas/stremio-docker/issues
 gallery:
-  - https://i.imgur.com/edoVdHM.png
-  - https://i.imgur.com/edoVdHM.png
-  - https://i.imgur.com/edoVdHM.png
+  - https://i.imgur.com/b1Ig6sW.png
+  - https://i.imgur.com/ZWBHgwv.png
+  - https://i.imgur.com/Y9TW3Jm.png
+  - https://i.imgur.com/lkp4IX9.png
+  - https://i.imgur.com/izZ4qOR.png
 releaseNotes: >-
   The latest release, v1.1.118, includes improvements and updates such as Web version v5.0.0-beta.21, with a server URL at https://dl.strem.io/server/v4.20.8/desktop/server.js.
 dependencies:
