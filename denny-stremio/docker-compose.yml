@@ -16,12 +16,3 @@ services:
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data:/root/.stremio-server
-
-
-#Info
-
-#| Component            | Port         | Function                              |
-#|----------------------|--------------|---------------------------------------|
-#| Web Player           | 8080         | Browser-based UI                      |
-#| Stremio Server       | 11470        | Streams content to the player         |
-#| Certificate / HTTPS  | not required | Only relevant for HTTPS setup         |
