@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-excalidraw
 name: Excalidraw
 tagline: An open source virtual hand-drawn style whiteboard
-icon: https://i.imgur.com/aFSx4XU.png
+icon: https://i.imgur.com/hRw2X6t.png
 category: files & productivity
 version: "1.0.3"
 port: 4002
@@ -27,9 +27,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/ozencb/excalidraw-persist
 support: https://github.com/ozencb/excalidraw-persist/issues
 gallery:
-  - https://i.imgur.com/seO3Bjj.png
-  - https://i.imgur.com/aBhrCkg.png
-  - https://i.imgur.com/nxt1Ekn.png
+  - https://i.imgur.com/MgPIOwq.png
+  - https://i.imgur.com/6IzA37g.png
+  - https://i.imgur.com/7bef6eS.png
 releaseNotes: >-
   This is a fork of Excalidraw and is not the official version. Please note that there are no changelogs available, and updates may differ from the main project.
 dependencies: []
