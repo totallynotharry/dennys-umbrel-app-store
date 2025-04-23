@@ -3,7 +3,7 @@ id: denny-stremio
 name: Stremio
 tagline: An all-in-one streaming hub for all your entertainment needs
 icon: https://i.imgur.com/sCDDgMX.png
-category: In Progress
+category: media
 version: "1.1.118"
 port: 10470
 description: >-
