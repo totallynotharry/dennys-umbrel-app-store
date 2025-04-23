@@ -20,6 +20,9 @@ description: >-
 
 
   Overall, Stremio is a versatile and user-friendly media center that allows users to centralize all their streaming needs. It is ideal for those who want to manage their entertainment in one place, but it's important to be mindful of legal issues related to streaming copyrighted content through third-party add-ons.
+
+
+  ⚠️ The Stremio Web Player and the associated server run in the same container and are by default accessible through ports 8080 for the Web Player and 11470 for the server. Simply enter the system's LAN IP address in the Stremio settings to configure the streaming server and the server.
 developer: Stremio
 website: https://www.stremio.com/
 submitter: dennysubke
