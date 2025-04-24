@@ -8,6 +8,7 @@ services:
 
   web:
     image: ghcr.io/joaovitoriasilva/endurain:v0.10.0@sha256:47a3025c702ddfb8c475e8006f07733b878fbd8057568404d85bbc785bb432c3
+    user: "1000:1000"
     restart: on-failure
     environment:
       - TZ=Europe/Berlin
@@ -31,6 +32,7 @@ services:
 
   postgres:
     image: postgres:15@sha256:fe45ed1a824b81c0c9c605890963b67501758ca8c946db89089c85ce0f88e974
+    user: "1000:1000"
     restart: on-failure
     environment:
       - POSTGRES_DB=endurain
