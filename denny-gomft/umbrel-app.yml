@@ -27,9 +27,12 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/StarFleetCPTN/GoMFT
 support: https://github.com/StarFleetCPTN/GoMFT/issues
 gallery:
-  - https://i.imgur.com/4CLnaBY.png
-  - https://i.imgur.com/4CLnaBY.png
-  - https://i.imgur.com/4CLnaBY.png
+  - https://imgur.com/yyxoQb5.png
+  - https://imgur.com/c9PYUb3.png
+  - https://imgur.com/iWhut05.png
+  - https://imgur.com/hGiKwbb.png
+  - https://imgur.com/v8TedvW.png
+  - https://imgur.com/6jr7SaH.png
 releaseNotes: >-
   GoMFT v0.2.11 introduces a new documentation website built with Docusaurus, offering detailed guides and feature explanations for easier onboarding and usage. Additionally, the release adds multi-architecture Docker support, including images for amd64, arm64, and arm/v7, without introducing any breaking database changes - making the update safe and recommended for all users.
 dependencies:
