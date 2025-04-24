@@ -1,25 +1,22 @@
 pages:
-  - name: Home
+  - name: Tech Dashboard
     theme:
-      background-color: 186 21 20
+      background-color: 231 15 21
+      primary-color: 265 89 79
       contrast-multiplier: 1.2
-      primary-color: 97 13 80
-    font-family: "Arial, sans-serif"
+      positive-color: 135 94 66
+      negative-color: 0 100 67
+    font-family: "Helvetica, sans-serif"
     columns:
       - size: small
         widgets:
-          - type: calendar
-            first-day-of-week: monday
-
           - type: rss
-            limit: 10
-            cache: 12h
+            limit: 5
             feeds:
-              - url: https://selfh.st/rss/
-                title: selfh.st
-              - url: https://ciechanow.ski/atom.xml
-              - url: https://www.joshwcomeau.com/rss.xml
-                title: Josh Comeau
+              - url: https://techcrunch.com/feed/
+                title: TechCrunch
+              - url: https://www.theverge.com/rss/index.xml
+                title: The Verge
 
       - size: full
         widgets:
@@ -35,7 +32,11 @@ pages:
 
       - size: small
         widgets:
-          - type: weather
-            location: London, United Kingdom
-            units: metric
-            hour-format: 12h
+          - type: markets
+            markets:
+              - symbol: SPY
+                name: S&P 500
+              - symbol: BTC-USD
+                name: Bitcoin
+              - symbol: AAPL
+                name: Apple
