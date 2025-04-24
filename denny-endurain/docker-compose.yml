@@ -16,8 +16,8 @@ services:
       - DB_PORT=5432
       - DB_USER=endurain
       - DB_PASSWORD=changeme
-      - SECRET_KEY=changeme
-      - GEOCODES_MAPS_API=changeme
+      - SECRET_KEY=52810395309574409458744107389202
+      - GEOCODES_MAPS_API=
       - ENDURAIN_HOST=http://localhost:8080
       - BEHIND_PROXY=true
     volumes:
