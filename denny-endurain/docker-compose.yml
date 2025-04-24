@@ -8,7 +8,7 @@ services:
 
   web:
     image: ghcr.io/joaovitoriasilva/endurain:v0.10.0@sha256:47a3025c702ddfb8c475e8006f07733b878fbd8057568404d85bbc785bb432c3
-    user: "1000:1000"
+    user: "0:0"
     restart: on-failure
     environment:
       - TZ=Europe/Berlin
@@ -22,10 +22,10 @@ services:
       - ENDURAIN_HOST=http://0.0.0.0:8635
       - BEHIND_PROXY=false
     volumes:
-      - ${APP_DATA_DIR}/data/user_images:/app/backend/user_images
-      - ${APP_DATA_DIR}/data/bulk_import:/app/backend/files/bulk_import
-      - ${APP_DATA_DIR}/data/processed_files:/app/backend/files/processed
-      - ${APP_DATA_DIR}/data/logs:/app/backend/logs
+      - ${APP_DATA_DIR}/data/user_images:/app/backend/user_images:rw
+      - ${APP_DATA_DIR}/data/bulk_import:/app/backend/files/bulk_import:rw
+      - ${APP_DATA_DIR}/data/processed_files:/app/backend/files/processed:rw
+      - ${APP_DATA_DIR}/data/logs:/app/backend/logs:rw
     depends_on:
       postgres:
         condition: service_healthy
