@@ -7,7 +7,7 @@ category: In Progress
 version: "0.6.11"
 port: 8474
 description: >-
-  🍽️ KitchenOwl is a self-hosted, open-source application designed to simplify household management, particularly when it comes to organizing groceries, recipes, meal planning, and shared expenses. Built with privacy and usability in mind, KitchenOwl empowers individuals, families, and shared households to collaboratively manage kitchen-related tasks through a sleek and intuitive interface available on mobile, desktop, and the web.
+  👨‍🍳 KitchenOwl is a self-hosted, open-source application designed to simplify household management, particularly when it comes to organizing groceries, recipes, meal planning, and shared expenses. Built with privacy and usability in mind, KitchenOwl empowers individuals, families, and shared households to collaboratively manage kitchen-related tasks through a sleek and intuitive interface available on mobile, desktop, and the web.
 
 
   The app allows users to create and maintain dynamic shopping lists that can be shared and edited in real time. As users add items to the list, KitchenOwl automatically categorizes them and even learns from shopping habits to improve future suggestions. This makes weekly shopping more efficient and less prone to forgetting essential items. Items can be checked off as they're purchased, and multiple lists can be maintained simultaneously to accommodate different stores or household needs.
