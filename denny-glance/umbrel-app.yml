@@ -33,9 +33,11 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/glanceapp/glance
 support: https://github.com/glanceapp/glance/issues
 gallery:
-  - https://i.imgur.com/kDIqfBd.png
-  - https://i.imgur.com/kDIqfBd.png
-  - https://i.imgur.com/kDIqfBd.png
+  - https://i.imgur.com/RitrZ8M.png
+  - https://i.imgur.com/JrpI8iU.png
+  - https://i.imgur.com/UwcEbDe.png
+  - https://i.imgur.com/uelKMIj.png
+  - https://i.imgur.com/DaB9kHM.png
 releaseNotes: >-
   Version 0.7.13 introduces the new parseLocalTime function for custom APIs, which defaults to the local timezone when no timezone is specified. It also adds a target property to the search widget for opening results in new tabs. Bug fixes include improved temperature sensor detection in the server stats widget and proper URL escaping in the Reddit widget.
 dependencies:
