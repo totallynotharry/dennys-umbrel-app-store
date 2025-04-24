@@ -13,7 +13,7 @@ services:
     environment:
       JWT_SECRET_KEY: 3d054e5ca011d3cab6cc5a5e58be577a54d5049bf8ff7786cba37d663369065f
       DB_DRIVER: postgresql
-      DB_HOST: kitchenowl_db_1
+      DB_HOST: db_1
       DB_NAME: kitchenowl
       DB_USER: kitchenowl
       DB_PASSWORD: password
