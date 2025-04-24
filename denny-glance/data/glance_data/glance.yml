@@ -1,10 +1,8 @@
 theme:
   light: true
-  background-color: 28 40 77
-  primary-color: 155 100 20
-  negative-color: 0 100 60
-  contrast-multiplier: 1.1
-  text-saturation-multiplier: 0.5
+  background-color: 0 0 95
+  primary-color: 0 0 10
+  negative-color: 0 90 50
 branding:
   custom-footer: |
     <p><a href="https://github.com/dennysubke">github.com/dennysubke<a></p>
