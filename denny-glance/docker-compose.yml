@@ -7,7 +7,7 @@ services:
       APP_PORT: 8080
 
   app:
-    image: glanceapp/glance:v0.7.9@sha256:6e14662ffe83d4bf4e09314d27ee233d51f3ed2dc7322c4d4b18c929177c4117
+    image: glanceapp/glance:v0.7.13@sha256:a2371cabe498c5df8ff1e935eee7a383a1a6c9e17def2a18db82810019e5e4ab
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/glance_data/glance.yml:/app/config/glance.yml
