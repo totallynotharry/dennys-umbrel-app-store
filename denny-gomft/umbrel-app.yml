@@ -3,7 +3,7 @@ id: denny-gomft
 name: GoMFT
 tagline: An innovative web-based file transfer application
 icon: https://i.imgur.com/yxe4B5O.png
-category: In Progress
+category: files & productivity
 version: "0.2.11"
 port: 8979
 description: >-
