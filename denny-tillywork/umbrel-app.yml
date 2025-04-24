@@ -1,9 +1,9 @@
 manifestVersion: 1
 id: denny-tillywork
-name: tillywork
+name: Tillywork
 tagline: A work management solution for startups
 icon: https://i.imgur.com/ueUHKSr.png
-category: In Progress
+category: files & productivity
 version: "0.1.2"
 port: 8556
 description: >-
