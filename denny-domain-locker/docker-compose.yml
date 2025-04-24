@@ -8,6 +8,7 @@ services:
 
   app:
     image: lissy93/domain-locker:0.0.6@sha256:bd8b494b2a8b02e9fb612859f64c336e6eb1b21745199253b130705bd4ac8853
+    user: "1000:1000"
     restart: on-failure
     environment:
       DL_ENV_TYPE: ${DL_ENV_TYPE:-selfHosted}
