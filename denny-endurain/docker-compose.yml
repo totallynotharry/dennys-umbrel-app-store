@@ -8,17 +8,18 @@ services:
 
   web:
     image: ghcr.io/joaovitoriasilva/endurain:v0.10.0@sha256:47a3025c702ddfb8c475e8006f07733b878fbd8057568404d85bbc785bb432c3
-    user: "0:0"
     restart: on-failure
     environment:
+      - UID=1000
+      - GUID=1000
       - TZ=Europe/Berlin
       - DB_TYPE=postgres
       - DB_HOST=postgres
       - DB_PORT=5432
       - DB_USER=endurain
       - DB_PASSWORD=changeme
-      - SECRET_KEY=52810395309574409458744107389202
-      - GEOCODES_MAPS_API=
+      - SECRET_KEY=5806b1f62ba3286813a45c7aefbc951cffcd28d7ec07a6b88acf27f9b1b4e64b
+      - GEOCODES_MAPS_API=changeme
       - ENDURAIN_HOST=http://0.0.0.0:8635
       - BEHIND_PROXY=false
     volumes:
