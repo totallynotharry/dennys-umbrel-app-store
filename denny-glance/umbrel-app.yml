@@ -37,7 +37,7 @@ gallery:
   - https://i.imgur.com/kDIqfBd.png
   - https://i.imgur.com/kDIqfBd.png
 releaseNotes: >-
-  Version 0.7.13 introduces improvements to the custom-api widget, including simplified mathematical operations and a new option to skip JSON validation for APIs that return newline-separated JSON objects. Additionally, new functions like concat, now, and offsetNow have been added, and a bug in the markets widget displaying prices below 0.01 has been fixed.
+  Version 0.7.13 introduces the new parseLocalTime function for custom APIs, which defaults to the local timezone when no timezone is specified. It also adds a target property to the search widget for opening results in new tabs. Bug fixes include improved temperature sensor detection in the server stats widget and proper URL escaping in the Reddit widget.
 dependencies:
 path: ""
 defaultUsername: ""
