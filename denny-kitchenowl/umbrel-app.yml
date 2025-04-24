@@ -22,9 +22,6 @@ description: >-
   For shared living situations, KitchenOwl includes expense tracking capabilities. Household members can log expenses related to grocery shopping or other communal costs, and the app helps divide those expenses fairly among the group. This reduces the friction often associated with shared finances and ensures transparency within the household.
 
 
-  What sets KitchenOwl apart is its commitment to privacy and control. Unlike many commercial apps, it does not rely on external servers for data storage. Users can choose to host KitchenOwl on their own server or private network, giving them full ownership of their data. For those less technically inclined, it is also available through app stores and can be used via a hosted web version.
-
-
   KitchenOwl is actively developed and maintained by a community of contributors who prioritize open access and user feedback. The project welcomes new users and developers alike to participate, offering detailed documentation and support to help anyone get started. With its thoughtful design and robust feature set, KitchenOwl provides a comprehensive solution for modern, collaborative kitchen management.
 developer: Tom Bursch
 website: https://kitchenowl.org/
