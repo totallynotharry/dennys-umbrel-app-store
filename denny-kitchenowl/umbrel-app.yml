@@ -1,31 +1,37 @@
 manifestVersion: 1
 id: denny-kitchenowl
 name: KitchenOwl
-tagline: A seamless way to stream torrents directly in your browser
-icon: https://i.imgur.com/Z0BTDQX.png
-category: test
+tagline: A grocery list and recipe manager
+icon: https://i.imgur.com/GANtxzI.png
+category: In Progress
 version: "0.6.11"
 port: 8474
 description: >-
-  BitPlay is an open-source web application developed by Aculix Technologies that allows users to stream video content directly from torrent files or magnet links without needing to download the entire file first. It’s designed to provide a seamless, browser-based streaming experience using a clean and intuitive interface. Built with Go, BitPlay manages torrent sessions in the background and handles video playback through a built-in HTML5 player. The application automatically detects and converts subtitles from SRT to VTT format, making them compatible with most modern browsers.
+  🍽️ KitchenOwl is a self-hosted, open-source application designed to simplify household management, particularly when it comes to organizing groceries, recipes, meal planning, and shared expenses. Built with privacy and usability in mind, KitchenOwl empowers individuals, families, and shared households to collaboratively manage kitchen-related tasks through a sleek and intuitive interface available on mobile, desktop, and the web.
 
+  The app allows users to create and maintain dynamic shopping lists that can be shared and edited in real time. As users add items to the list, KitchenOwl automatically categorizes them and even learns from shopping habits to improve future suggestions. This makes weekly shopping more efficient and less prone to forgetting essential items. Items can be checked off as they're purchased, and multiple lists can be maintained simultaneously to accommodate different stores or household needs.
 
-  One of the standout features of BitPlay is its support for SOCKS5 proxies, enabling users to route all torrent traffic, including metadata fetching and peer connections, through a secure proxy. This helps preserve privacy and avoid potential network restrictions. Additionally, BitPlay integrates with tools like Prowlarr and Jackett, allowing users to search for torrents directly within the application, further streamlining the content discovery process.
+  Another key feature of KitchenOwl is its recipe management functionality. Users can manually add their own recipes or import them from popular websites using a built-in recipe parser. Recipes are stored in a centralized digital cookbook and can be searched or filtered by tags, ingredients, or categories. When planning meals, users can simply add a recipe’s ingredients to their shopping list with a single click, streamlining the preparation process.
 
+  Meal planning is seamlessly integrated, allowing users to schedule meals for upcoming days or weeks. This feature not only helps in maintaining a balanced diet but also reduces food waste by encouraging the use of ingredients already on hand. KitchenOwl even nudges users to revisit recipes they haven’t used in a while, bringing forgotten favorites back into rotation.
 
-  It also offers session management features such as automatic cleanup of inactive torrents to save system resources.
-developer: Aculix Technologies LLP
-website: https://bitplay.to/
+  For shared living situations, KitchenOwl includes expense tracking capabilities. Household members can log expenses related to grocery shopping or other communal costs, and the app helps divide those expenses fairly among the group. This reduces the friction often associated with shared finances and ensures transparency within the household.
+
+  What sets KitchenOwl apart is its commitment to privacy and control. Unlike many commercial apps, it does not rely on external servers for data storage. Users can choose to host KitchenOwl on their own server or private network, giving them full ownership of their data. For those less technically inclined, it is also available through app stores and can be used via a hosted web version.
+
+  KitchenOwl is actively developed and maintained by a community of contributors who prioritize open access and user feedback. The project welcomes new users and developers alike to participate, offering detailed documentation and support to help anyone get started. With its thoughtful design and robust feature set, KitchenOwl provides a comprehensive solution for modern, collaborative kitchen management.
+developer: Tom Bursch
+website: https://kitchenowl.org/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/aculix/bitplay
-support: https://github.com/aculix/bitplay/issues
+repo: https://github.com/TomBursch/kitchenowl
+support: https://github.com/TomBursch/kitchenowl/issues
 gallery:
-  - https://i.imgur.com/hj6GwIv.png
-  - https://i.imgur.com/hj6GwIv.png
-  - https://i.imgur.com/hj6GwIv.png
+  - https://i.imgur.com/HGZm49g.png
+  - https://i.imgur.com/HGZm49g.png
+  - https://i.imgur.com/HGZm49g.png
 releaseNotes: >-
-  BitPlay currently does not use any versioning system, and there are no changelogs available to track updates or changes.
+  KitchenOwl version 0.6.11 includes several bug fixes, such as properly rounding household member balances and improving the display of planned meals with varying portions. The update also adds a Caddy example to the documentation and introduces new translations for Romanian and Japanese, along with updates to existing languages.
 dependencies:
 path: ""
 defaultUsername: ""
