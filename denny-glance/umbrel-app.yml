@@ -23,6 +23,9 @@ description: >-
 
 
   Overall, Glance is an excellent tool for anyone looking to simplify the management of self-hosted services. By providing an elegant and user-friendly dashboard, it helps users stay organized, monitor their applications effortlessly, and maintain full control over their self-hosted environment.
+
+
+  ⚙️ You can find everything you need to configure the app in the official documentation: https://github.com/glanceapp/glance/blob/main/docs/configuration.md
 developer: Svilen Markov
 website: https://github.com/glanceapp
 submitter: dennysubke
