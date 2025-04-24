@@ -27,9 +27,11 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/tillywork/tillywork
 support: https://github.com/tillywork/tillywork/issues
 gallery:
-  - https://i.imgur.com/Y82tT7c.png
-  - https://i.imgur.com/Y82tT7c.png
-  - https://i.imgur.com/Y82tT7c.png
+  - https://i.imgur.com/8qHWNOt.png
+  - https://i.imgur.com/JJm8H2y.png
+  - https://i.imgur.com/mzkJ9EN.png
+  - https://i.imgur.com/MhEen9n.png
+  - https://i.imgur.com/FGNo2fz.png
 releaseNotes: >-
   The v0.1.2 introduces the new Gantt view feature and general bug fixes.
 dependencies:
