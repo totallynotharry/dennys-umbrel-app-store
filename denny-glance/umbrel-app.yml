@@ -4,7 +4,7 @@ name: Glance
 tagline: A self-hosted dashboard that puts all your feeds in one place
 icon: https://i.imgur.com/krxJ46D.png
 category: In Progress
-version: "0.7.9"
+version: "0.7.13"
 port: 8907
 description: >-
   Glance is a lightweight, self-hosted dashboard designed to help users keep track of their self-hosted services, applications, and resources in an intuitive and visually appealing way. Unlike traditional monitoring tools that can be complex and overloaded with data, Glance focuses on simplicity and accessibility, making it an excellent choice for both beginners and experienced self-hosting enthusiasts.
@@ -34,7 +34,7 @@ gallery:
   - https://i.imgur.com/kDIqfBd.png
   - https://i.imgur.com/kDIqfBd.png
 releaseNotes: >-
-  Version 0.7.9 introduces improvements to the custom-api widget, including simplified mathematical operations and a new option to skip JSON validation for APIs that return newline-separated JSON objects. Additionally, new functions like concat, now, and offsetNow have been added, and a bug in the markets widget displaying prices below 0.01 has been fixed.
+  Version 0.7.13 introduces improvements to the custom-api widget, including simplified mathematical operations and a new option to skip JSON validation for APIs that return newline-separated JSON objects. Additionally, new functions like concat, now, and offsetNow have been added, and a bug in the markets widget displaying prices below 0.01 has been fixed.
 dependencies:
 path: ""
 defaultUsername: ""
