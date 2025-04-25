@@ -30,9 +30,12 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/TomBursch/kitchenowl
 support: https://github.com/TomBursch/kitchenowl/issues
 gallery:
-  - https://i.imgur.com/HGZm49g.png
-  - https://i.imgur.com/HGZm49g.png
-  - https://i.imgur.com/HGZm49g.png
+  - https://i.imgur.com/86GzRWy.png
+  - https://i.imgur.com/R3hpO2r.png
+  - https://i.imgur.com/Qg9j1DD.png
+  - https://i.imgur.com/KGuDhYT.png
+  - https://i.imgur.com/xa8OroD.png
+  - https://i.imgur.com/brZEisJ.png
 releaseNotes: >-
   KitchenOwl version 0.6.11 includes several bug fixes, such as properly rounding household member balances and improving the display of planned meals with varying portions. The update also adds a Caddy example to the documentation and introduces new translations for Romanian and Japanese, along with updates to existing languages.
 dependencies:
