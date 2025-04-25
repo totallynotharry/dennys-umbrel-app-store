@@ -3,7 +3,7 @@ id: denny-kitchenowl
 name: KitchenOwl
 tagline: A grocery list and recipe manager
 icon: https://i.imgur.com/GANtxzI.png
-category: In Progress
+category: files & productivity
 version: "0.6.11"
 port: 8474
 description: >-
