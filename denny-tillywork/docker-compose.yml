@@ -41,8 +41,7 @@ services:
       POSTGRES_DB: tillywork
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 12345678
-    restart: unless-stopped
-
+    restart: on-failure
   redis:
     image: redis:7.2.5-alpine@sha256:6aaf3f5e6bc8a592fbfe2cccf19eb36d27c39d12dab4f4b01556b7449e7b1f44
     restart: on-failure
