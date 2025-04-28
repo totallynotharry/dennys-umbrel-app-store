@@ -7,7 +7,7 @@ category: In Progress
 version: "0.24.1"
 port: 8620
 description: >-
-  Karakeep is an open-source application designed to provide users with a secure and private solution for managing sensitive information such as passwords, notes, and personal data. It focuses on privacy and security, ensuring that all stored information is encrypted with strong cryptographic algorithms. This encryption ensures that even if the storage medium is compromised, the data remains inaccessible to unauthorized individuals.
+  📒 Karakeep is an open-source application designed to provide users with a secure and private solution for managing sensitive information such as passwords, notes, and personal data. It focuses on privacy and security, ensuring that all stored information is encrypted with strong cryptographic algorithms. This encryption ensures that even if the storage medium is compromised, the data remains inaccessible to unauthorized individuals.
 
  
   The application allows users to store a variety of sensitive information, including login credentials, secure notes, and other private details. Karakeep's user-friendly interface makes it easy to organize and manage this data, with features like categories or tags for easy access and retrieval. This simplicity makes it accessible even to those without technical expertise, allowing anyone to take advantage of its security features.
