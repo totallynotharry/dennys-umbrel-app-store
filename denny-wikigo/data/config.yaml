@@ -12,7 +12,7 @@ wiki:
     title: "Wiki-Go"
     owner: wiki.example.com
     notice: Copyright 2025    All rights reserved.
-    timezone: America/Vancouver
+    timezone: Europe/Berlin
     private: false
     disable_comments: false
     max_versions: 10
