@@ -1,0 +1,13 @@
+services:
+  vert:
+    container_name: vert
+    image: vert-sh/vert:latest
+    environment:
+      - PUB_HOSTNAME=${PUB_HOSTNAME:-vert.sh}
+      - PUB_PLAUSIBLE_URL=${PUB_PLAUSIBLE_URL:-https://plausible.example.com}
+      - PUB_ENV=${PUB_ENV:-production}
+      - PORT=3000
+      - PUB_VERTD_URL=${PUB_VERTD_URL:-https://vertd.vert.sh}
+    restart: unless-stopped
+    ports:
+      - 8732:80
