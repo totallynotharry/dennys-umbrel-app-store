@@ -22,5 +22,5 @@ wiki:
     language: en
 users:
     - username: admin
-      password: umbrel
+      password: admin
       is_admin: true
