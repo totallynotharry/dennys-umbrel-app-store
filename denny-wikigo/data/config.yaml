@@ -9,7 +9,7 @@ server:
 wiki:
     root_dir: data
     documents_dir: documents
-    title: " ^=^s^z Wiki-Go"
+    title: "Wiki-Go"
     owner: wiki.example.com
     notice: Copyright 2025    All rights reserved.
     timezone: America/Vancouver
