@@ -24,9 +24,10 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/leomoon-studios/wiki-go
 support: https://github.com/leomoon-studios/wiki-go/issues
 gallery:
-  - https://i.imgur.com/c5u80iR.png
-  - https://i.imgur.com/c5u80iR.png
-  - https://i.imgur.com/c5u80iR.png
+  - https://i.imgur.com/aMBdyz5.png
+  - https://i.imgur.com/UGvCZAI.png
+  - https://i.imgur.com/c4WUZ2M.png
+  - https://i.imgur.com/6oHbp4W.png
 releaseNotes: >-
   Release v1.3.14 introduces several improvements: comment timestamps are now displayed in a human-readable format. The document picker search input now supports bidirectional text and includes new translations. Additionally, CSS for the recent edits stats has been refined.
 dependencies:
