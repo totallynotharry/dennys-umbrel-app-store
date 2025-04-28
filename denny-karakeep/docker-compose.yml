@@ -18,7 +18,7 @@ services:
       NEXTAUTH_URL: http://localhost:3000
       #OPENAI_API_KEY:
     volumes:
-      - ${APP_DATA_DIR}/data:/data
+      - ${APP_DATA_DIR}/data/karakeep_data:/data
     depends_on:
       - chrome
       - meilisearch
@@ -41,4 +41,4 @@ services:
       MEILI_NO_ANALYTICS: "true"
       MEILI_MASTER_KEY: Zx7Nq2BvR5LgFpMiTkUwJyHcXsVdQoPaWeUzYbXnCmDrLfGhAzPvBsYqXtRwEc3T
     volumes:
-      - ${APP_DATA_DIR}/meilisearch:/meili_data
+      - ${APP_DATA_DIR}/data/meilisearch_data:/meili_data
