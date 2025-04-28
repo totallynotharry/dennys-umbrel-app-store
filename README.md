@@ -46,7 +46,7 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | 29  | [Dynamic QR Code](https://github.com/giandonatoinverso/PHP-Dynamic-Qr-code) | An intuitive dashboard for seamless QR code creation | 8216   |
 | 30  | [Enclosed](https://github.com/CorentinTh/enclosed)   | A minimalistic web application designed for sending private and secure notes | 8525   |
 | 31  | [Etherpad](https://github.com/ether/etherpad-lite)   | An intuitive tool for real-time collaborative writing                     | 9002   |
-| 32  | [Excalidraw](https://github.com/excalidraw/excalidraw) | An open-source virtual hand-drawn style whiteboard                      | 4002   |
+| 32  | [Excalidraw](https://github.com/excalidraw/excalidraw) | An open-source virtual hand-drawn style whiteboard                      | 4422   |
 | 33  | [Ferdium](https://github.com/ferdium/ferdium-server) | An all-in-one messaging hub                                               | 3333   |
 | 34  | [FileFlows](https://github.com/revenz/FileFlows)     | A file processing app that performs actions on files using a tree flow structure | 19200  |
 | 35  | [Flatnotes](https://github.com/dullage/flatnotes)    | A self-hosted note-taking app with flat Markdown file storage             | 8061   |
