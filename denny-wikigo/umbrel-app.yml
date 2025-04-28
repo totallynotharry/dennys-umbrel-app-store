@@ -31,5 +31,5 @@ releaseNotes: >-
   Release v1.3.14 introduces several improvements: comment timestamps are now displayed in a human-readable format. The document picker search input now supports bidirectional text and includes new translations. Additionally, CSS for the recent edits stats has been refined.
 dependencies:
 path: ""
-defaultUsername: ""
-defaultPassword: ""
+defaultUsername: "admin"
+defaultPassword: "admin"
