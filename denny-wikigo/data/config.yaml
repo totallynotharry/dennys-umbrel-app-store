@@ -22,5 +22,5 @@ wiki:
     language: en
 users:
     - username: admin
-      password: <bcrypt-hashed-password>
+      password: umbrel
       is_admin: true
