@@ -162,10 +162,11 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 | 145 | [Wakapi](https://github.com/muety/wakapi)            | A minimalist, self-hosted WakaTime-compatible backend for coding statistics     | 3366   |
 | 146 | [WebCheck](https://github.com/Lissy93/web-check)     | An all-in-one open-source intelligence tool for analyzing any website     | 3093   |
 | 147 | [Webtop](https://github.com/linuxserver/docker-webtop) | An easy-to-use desktop that brings the power of Ubuntu to your fingertips | 3399   |
-| 148 | [Yopass](https://github.com/jhaals/yopass)           | A secure, open-source sharing platform for encrypted secret transfers     | 3006   |
-| 149 | [YTPTube](https://github.com/arabcoders/ytptube)     | A WebGUI for yt-dlp with concurrent downloads support                     | 8562   |
-| 150 | [Zipline](https://github.com/diced/zipline) | An advanced solution for seamless and secure file sharing                          | 3472   |
-| 151 | [Zoraxy Proxy Server](https://github.com/tobychui/zoraxy) | An efficient reverse proxy server with automated SSL management      | 8400   |
+| 148 | [Wiki-Go](https://github.com/leomoon-studios/wiki-go)| A modern flat-file wiki built with Go                                     | 8833   |
+| 149 | [Yopass](https://github.com/jhaals/yopass)           | A secure, open-source sharing platform for encrypted secret transfers     | 3006   |
+| 150 | [YTPTube](https://github.com/arabcoders/ytptube)     | A WebGUI for yt-dlp with concurrent downloads support                     | 8562   |
+| 151 | [Zipline](https://github.com/diced/zipline) | An advanced solution for seamless and secure file sharing                          | 3472   |
+| 152 | [Zoraxy Proxy Server](https://github.com/tobychui/zoraxy) | An efficient reverse proxy server with automated SSL management      | 8400   |
 
 🔄 All Apps are continually updated and new Apps are added over time.
 
