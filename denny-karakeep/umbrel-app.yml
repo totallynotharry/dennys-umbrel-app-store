@@ -24,9 +24,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/karakeep-app/karakeep
 support: https://github.com/karakeep-app/karakeep/issues
 gallery:
-  - https://i.imgur.com/5KMGMrC.png
-  - https://i.imgur.com/5KMGMrC.png
-  - https://i.imgur.com/5KMGMrC.png
+  - https://i.imgur.com/HaXEFyG.png
+  - https://i.imgur.com/HaXEFyG.png
+  - https://i.imgur.com/HaXEFyG.png
 releaseNotes: >-
   Version 0.24.1 is a hotfix for 0.24.0, addressing an issue where smart list expansion in qualifiers caused Karakeep's server to run out of memory (OOM). It also adds missing translations for new features introduced in 0.24.0.
 dependencies:
