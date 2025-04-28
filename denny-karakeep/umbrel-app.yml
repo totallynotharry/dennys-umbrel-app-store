@@ -1,31 +1,34 @@
 manifestVersion: 1
 id: denny-karakeep
 name: Karakeep
-tagline: A WhatsApp client with themes and multiple account support
+tagline: A bookmark-everything app
 icon: https://i.imgur.com/6AHtIAj.png
-category: test
-version: "5.4.0"
+category: In Progress
+version: "0.24.1"
 port: 8620
 description: >-
-  📱 Altus is a powerful Electron-based WhatsApp client that enhances the desktop WhatsApp experience by adding a variety of extra features. Using the GitHub-developed Electron framework, Altus integrates WhatsApp Web while adding functionality that goes beyond what the standard WhatsApp Web offers. One of the standout features of Altus is its support for multiple WhatsApp accounts, allowing users to manage and switch between different accounts simultaneously.
+  Karakeep is an open-source application designed to provide users with a secure and private solution for managing sensitive information such as passwords, notes, and personal data. It focuses on privacy and security, ensuring that all stored information is encrypted with strong cryptographic algorithms. This encryption ensures that even if the storage medium is compromised, the data remains inaccessible to unauthorized individuals.
+
+ 
+  The application allows users to store a variety of sensitive information, including login credentials, secure notes, and other private details. Karakeep's user-friendly interface makes it easy to organize and manage this data, with features like categories or tags for easy access and retrieval. This simplicity makes it accessible even to those without technical expertise, allowing anyone to take advantage of its security features.
 
 
-  The app also provides native notification support, so users are instantly notified when new messages arrive. Clicking on a notification opens the corresponding chat directly. A useful online indicator shows in the bottom-left corner of each chat whether the contact is currently online, making communication easier. For a more comfortable experience in low light or during the evening, Altus offers a Dark Mode that reduces eye strain and adapts the app's design to the lighting conditions.
+  Karakeep operates with a zero-trust model, meaning that only the user can decrypt their stored data. This approach ensures that no one, not even the administrators or developers of Karakeep, can access the stored information, providing an extra layer of security for sensitive data. By eliminating the need for third-party storage services, Karakeep allows users to maintain full control over their private information while ensuring that it remains safe and secure.
 
 
-  Additionally, Altus allows users to fully customize their WhatsApp interface. They can create custom themes either by writing their own CSS or using the built-in theme customizer, which allows for easy color selection to personalize the app's appearance. This flexibility in interface customization ensures a more tailored and comfortable user experience. Altus thus provides not only a practical but also a highly customizable solution for WhatsApp on the desktop.
-developer: Aman Harwara
-website: https://github.com/amanharwara/altus
+  For anyone looking to manage their sensitive data privately and securely, Karakeep offers an easy-to-use solution that provides peace of mind without sacrificing security or usability.
+developer: karakeep.app
+website: https://karakeep.app/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/amanharwara/altus
-support: https://github.com/amanharwara/altus/issues
+repo: https://github.com/karakeep-app/karakeep
+support: https://github.com/karakeep-app/karakeep/issues
 gallery:
   - https://i.imgur.com/5KMGMrC.png
   - https://i.imgur.com/5KMGMrC.png
   - https://i.imgur.com/5KMGMrC.png
 releaseNotes: >-
-  The per-tab microphone and camera permission option is enabled by default, allowing users to manage permissions on a tab-by-tab basis for enhanced privacy and security. In addition, various other improvements have been implemented, such as performance optimizations, bug fixes, and a more streamlined user interface for better overall experience.
+  Version 0.24.1 is a hotfix for 0.24.0, addressing an issue where smart list expansion in qualifiers caused Karakeep's server to run out of memory (OOM). It also adds missing translations for new features introduced in 0.24.0.
 dependencies:
 path: ""
 defaultUsername: ""
