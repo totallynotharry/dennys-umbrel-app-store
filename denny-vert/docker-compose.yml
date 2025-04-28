@@ -3,7 +3,7 @@ services:
     container_name: vert
     image: ghcr.io/vert-sh/vert:latest
     environment:
-      - PUB_HOSTNAME=${PUB_HOSTNAME:-vert.sh}
+      - PUB_HOSTNAME=umbrel-2.local:8732
       - PUB_PLAUSIBLE_URL=${PUB_PLAUSIBLE_URL:-https://plausible.example.com}
       - PUB_ENV=${PUB_ENV:-production}
       - PORT=3000
