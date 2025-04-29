@@ -24,6 +24,15 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
   </span>
 </p>
 
+<style>
+  a:focus, a:hover {
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
+</style>
+
+
 
 
 
