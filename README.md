@@ -13,16 +13,17 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 <p align="left">
   <span>
     <a href="https://buymeacoffee.com/dennysubke" style="text-decoration: none; border: none;">
-      <img src="https://imgur.com/RcNFWcb.png" width="100" alt="Buy Me a Coffee"/>
+      <img src="https://imgur.com/RcNFWcb.png" width="200" alt="Buy Me a Coffee"/>
     </a>
   </span>
   &nbsp;&nbsp;&nbsp;
   <span>
     <a href="https://paynym.rs/+bulkypackage58" style="text-decoration: none; border: none;">
-      <img src="https://imgur.com/ARj0Rde.png" width="100" alt="PayNym"/>
+      <img src="https://imgur.com/ARj0Rde.png" width="200" alt="PayNym"/>
     </a>
   </span>
 </p>
+
 
 
 
