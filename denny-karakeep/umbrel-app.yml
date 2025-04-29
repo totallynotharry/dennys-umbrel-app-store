@@ -7,16 +7,13 @@ category: In Progress
 version: "0.24.1"
 port: 8620
 description: >-
-  📒 Karakeep is an open-source application designed to provide users with a secure and private solution for managing sensitive information such as passwords, notes, and personal data. It focuses on privacy and security, ensuring that all stored information is encrypted with strong cryptographic algorithms. This encryption ensures that even if the storage medium is compromised, the data remains inaccessible to unauthorized individuals.
-
- 
-  The application allows users to store a variety of sensitive information, including login credentials, secure notes, and other private details. Karakeep's user-friendly interface makes it easy to organize and manage this data, with features like categories or tags for easy access and retrieval. This simplicity makes it accessible even to those without technical expertise, allowing anyone to take advantage of its security features.
+  📒 Karakeep is a modern application designed to help users collect, organize, and rediscover information in a way that feels natural and effortless. It blends the functions of a bookmarking tool, a note-taking app, and an image archive, enhanced by intelligent automation that makes managing digital content simple and intuitive. Users can save links, jot down ideas, or store visual inspiration, and Karakeep immediately processes this input to make it more accessible and useful. With the help of built-in artificial intelligence, the app automatically assigns relevant tags based on content, so users can stay organized without needing to manually sort or categorize their entries.
 
 
-  Karakeep operates with a zero-trust model, meaning that only the user can decrypt their stored data. This approach ensures that no one, not even the administrators or developers of Karakeep, can access the stored information, providing an extra layer of security for sensitive data. By eliminating the need for third-party storage services, Karakeep allows users to maintain full control over their private information while ensuring that it remains safe and secure.
+  What makes Karakeep unique is its focus on helping users rediscover what they have saved. Everything is fully indexed for fast and accurate full text search, allowing users to find anything they saved just by recalling a keyword or a phrase. There is no need to remember specific titles or folders, as the system is designed to bring content to the surface quickly and intuitively. The interface is clean and distraction free, placing the user’s content at the center and removing unnecessary complexity.
 
 
-  For anyone looking to manage their sensitive data privately and securely, Karakeep offers an easy-to-use solution that provides peace of mind without sacrificing security or usability.
+  Karakeep supports the creation of custom lists to group related entries in meaningful ways, adapting to the personal workflows and habits of each user. Instead of relying on rigid structures or manual effort, the app encourages a more fluid and natural way of working with digital information. Whether someone is gathering research, saving useful links, capturing notes, or archiving visual material, Karakeep turns this process into a smooth and rewarding experience. It gives users full control over their digital space and helps them stay connected to what matters most in their personal and creative work.
 developer: karakeep.app
 website: https://karakeep.app/
 submitter: dennysubke
