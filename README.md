@@ -7,7 +7,9 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 
 ##
 
-🤝 Growing together in the Umbrel community – [My profile here](https://community.umbrel.com/u/denny) 
+<a href="https://buymeacoffee.com/dennysubke" target="_blank">
+  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Beer" width="120" />
+</a>
 
 ##
 
