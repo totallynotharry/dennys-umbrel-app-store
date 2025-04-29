@@ -11,17 +11,32 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 
 <p align="left">
   <span>
-    <a href="https://buymeacoffee.com/dennysubke" style="text-decoration: none;" title="">
+    <a href="https://buymeacoffee.com/dennysubke" style="text-decoration: none;">
       <img src="https://imgur.com/RcNFWcb.png" width="150" alt="Buy Me a Coffee" style="border: none; outline: none; display: block;"/>
     </a>
   </span>
   &nbsp;&nbsp;&nbsp;
   <span>
-    <a href="https://paynym.rs/+bulkypackage58" style="text-decoration: none;" title="">
+    <a href="https://paynym.rs/+bulkypackage58" style="text-decoration: none;">
       <img src="https://imgur.com/ARj0Rde.png" width="150" alt="PayNym" style="border: none; outline: none; display: block;"/>
     </a>
   </span>
 </p>
+
+<style>
+  /* Entfernt alle Fokus-Effekte und das Hover-Tooltip */
+  a:focus, a:hover {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Entfernt den blauen Strich durch den Link-Fokus im gesamten Browser */
+  a:focus-visible {
+    outline: none !important;
+  }
+</style>
+
 
 ##
 
