@@ -3,7 +3,7 @@ id: denny-karakeep
 name: Karakeep
 tagline: A bookmark-everything app
 icon: https://i.imgur.com/6AHtIAj.png
-category: In Progress
+category: files & productivity
 version: "0.24.1"
 port: 8620
 description: >-
