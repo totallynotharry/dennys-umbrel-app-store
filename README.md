@@ -12,27 +12,17 @@ This repository contains my custom Umbrel App Store. Unlike the official store, 
 
 <p align="left">
   <span>
-    <a href="https://buymeacoffee.com/dennysubke" style="text-decoration: none; border: none; outline: none; box-shadow: none;">
-      <img src="https://imgur.com/RcNFWcb.png" width="150" alt="Buy Me a Coffee"/>
+    <a href="https://buymeacoffee.com/dennysubke" style="text-decoration: none;">
+      <img src="https://imgur.com/RcNFWcb.png" width="150" alt="Buy Me a Coffee" style="border: none; outline: none; display: block;"/>
     </a>
   </span>
   &nbsp;&nbsp;&nbsp;
   <span>
-    <a href="https://paynym.rs/+bulkypackage58" style="text-decoration: none; border: none; outline: none; box-shadow: none;">
-      <img src="https://imgur.com/ARj0Rde.png" width="150" alt="PayNym"/>
+    <a href="https://paynym.rs/+bulkypackage58" style="text-decoration: none;">
+      <img src="https://imgur.com/ARj0Rde.png" width="150" alt="PayNym" style="border: none; outline: none; display: block;"/>
     </a>
   </span>
 </p>
-
-<style>
-  a:focus, a:hover {
-    outline: none;
-    border: none;
-    box-shadow: none;
-  }
-</style>
-
-
 
 
 
