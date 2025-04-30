@@ -7,7 +7,7 @@ services:
       APP_PORT: 8000
 
   web:
-    image: dennysubke/gitdiagram:1.0@sha256:8388e9e6485a3fc99bc39891e8748ab8e59ae51511ad7800be306d75d74d67e3
+    image: dennysubke/gitdiagram:1.0@sha256:117b117baa73e1db2e72bf1417deeffbbae0de5d274c61f6d42cf047684f91c3
     environment:
       - ENVIRONMENT=${ENVIRONMENT:-development}
       - NEXT_PUBLIC_API_DEV_URL=http://localhost:8000
