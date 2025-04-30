@@ -1,0 +1,68 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-standardnotes_web_1
+      APP_PORT: 3000
+
+  web:
+    image: standardnotes/server
+    restart: on-failure
+    environment:
+      # DB
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USERNAME: std_notes_user
+      DB_PASSWORD: changeme123
+      DB_DATABASE: standard_notes_db
+      DB_TYPE: mysql
+
+      # CACHE
+      REDIS_PORT: 6379
+      REDIS_HOST: cache
+      CACHE_TYPE: redis
+
+      # KEYS
+      AUTH_JWT_SECRET: 8f3d2e7c1a4b9d8e2c7f0a5d6b3e1f49
+      AUTH_SERVER_ENCRYPTION_SERVER_KEY: a7f6c5d4e3b2a1908e7d6c5b4a392817
+      VALET_TOKEN_SECRET: 1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f
+    ports:
+      - 3125:3104
+    volumes:
+      - ${APP_DATA_DIR}/data/logs:/var/lib/server/logs
+      - ${APP_DATA_DIR}/data/uploads:/opt/server/packages/files/dist/uploads
+
+  localstack:
+    image: localstack/localstack:3.0
+    restart: on-failure
+    expose:
+      - 4566
+    environment:
+      - SERVICES=sns,sqs
+      - HOSTNAME_EXTERNAL=localstack
+      - LS_LOG=warn
+    volumes:
+      - ${APP_DATA_DIR}/data/localstack_bootstrap.sh:/etc/localstack/init/ready.d/localstack_bootstrap.sh
+
+  db:
+    image: mysql:8
+    restart: on-failure
+    expose:
+      - 3306
+    environment:
+      - MYSQL_DATABASE=standard_notes_db
+      - MYSQL_USER=std_notes_user
+      - MYSQL_ROOT_PASSWORD=changeme123
+      - MYSQL_PASSWORD=changeme123
+    volumes:
+      - ${APP_DATA_DIR}/data/mysql:/var/lib/mysql
+      - ${APP_DATA_DIR}/data/import:/docker-entrypoint-initdb.d
+
+  cache:
+    image: redis:6.0-alpine
+    restart: on-failure
+    expose:
+      - 6379
+    volumes:
+      - ${APP_DATA_DIR}/data/redis:/data
