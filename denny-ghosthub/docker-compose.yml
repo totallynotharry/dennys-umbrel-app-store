@@ -11,7 +11,7 @@ services:
     environment:
       - PORT=5589
       - FLASK_CONFIG=production
-      # DOCKER_ENV=true
+      - DOCKER_ENV=true
       # USE_CLOUDFLARE_TUNNEL=n 
     restart: on-failure
     volumes:
