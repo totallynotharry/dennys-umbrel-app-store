@@ -9,7 +9,7 @@ services:
   web:
     image: dennysubke/ghosthub:1.2@sha256:2836397a3f8e80bc080f65bb159038c2a41d3619d9c047e3889bce6d5ea1e78d
     environment:
-      - PORT=5000
+      - PORT=5589
       - FLASK_CONFIG=production
       # DOCKER_ENV=true
       # USE_CLOUDFLARE_TUNNEL=n 
