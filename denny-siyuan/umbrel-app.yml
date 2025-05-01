@@ -24,9 +24,10 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/siyuan-note/siyuan
 support: https://github.com/siyuan-note/siyuan/issues
 gallery:
-  - https://i.imgur.com/o10pcD5.png
-  - https://i.imgur.com/o10pcD5.png
-  - https://i.imgur.com/o10pcD5.png
+  - https://i.imgur.com/6XxUOlZ.png
+  - https://i.imgur.com/QQwoPBS.png
+  - https://i.imgur.com/FKVMtg5.png
+  - https://i.imgur.com/537xuWL.png
 releaseNotes: >-
   This SiYuan update delivers various usability improvements and bug fixes, particularly enhancing tag handling, table editing, web clipping, and PDF exports. It also improves the user experience on Android and introduces better synchronization and search behavior. 
   
