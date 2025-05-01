@@ -1,31 +1,34 @@
 manifestVersion: 1
 id: denny-siyuan
 name: SiYuan
-tagline: A WhatsApp client with themes and multiple account support
-icon: https://i.imgur.com/wfT4QX3.png
-category: test
-version: "5.4.0"
+tagline: A privacy-first personal knowledge management system
+icon: https://i.imgur.com/r9jMdOo.png
+category: In Progress
+version: "3.1.28"
 port: 6806
 description: >-
-  📱 Altus is a powerful Electron-based WhatsApp client that enhances the desktop WhatsApp experience by adding a variety of extra features. Using the GitHub-developed Electron framework, Altus integrates WhatsApp Web while adding functionality that goes beyond what the standard WhatsApp Web offers. One of the standout features of Altus is its support for multiple WhatsApp accounts, allowing users to manage and switch between different accounts simultaneously.
+  SiYuan is a powerful and privacy-focused personal knowledge management (PKM) system designed for users who value full control over their data. Unlike many mainstream note-taking applications that rely heavily on cloud storage and online access, SiYuan is built around the principle of local-first data storage and offline accessibility. At its core, it employs a block-based editor, which allows users to structure and interconnect their content in a highly flexible and modular way. This approach supports fine-grained referencing and bi-directional linking between blocks, encouraging users to build rich, interrelated knowledge graphs.
 
+  The user experience in SiYuan centers on a WYSIWYG editor that preserves the simplicity of Markdown while enhancing it with advanced features such as mathematical formulas, diagrams, flowcharts, Gantt charts, and musical notation. It supports importing and annotating PDFs, clipping web content, and embedding various types of media, making it suitable not only for writing notes but also for managing research, documentation, and creative projects. SiYuan also includes a built-in spaced repetition system, enabling users to turn their notes into flashcards for long-term memory retention.
 
-  The app also provides native notification support, so users are instantly notified when new messages arrive. Clicking on a notification opens the corresponding chat directly. A useful online indicator shows in the bottom-left corner of each chat whether the contact is currently online, making communication easier. For a more comfortable experience in low light or during the evening, Altus offers a Dark Mode that reduces eye strain and adapts the app's design to the lighting conditions.
+  One of SiYuan’s distinguishing features is its commitment to privacy. All data remains stored locally by default, and even when users choose to sync their data across devices, SiYuan offers end-to-end encryption through user-hosted solutions like S3 or WebDAV. This ensures that no third party can access the contents of a user’s notes, even during synchronization. For those who prefer a more integrated experience, SiYuan provides optional cloud-based services, available under a one-time or lifetime license, without compromising its core philosophy of user autonomy and data ownership.
 
-
-  Additionally, Altus allows users to fully customize their WhatsApp interface. They can create custom themes either by writing their own CSS or using the built-in theme customizer, which allows for easy color selection to personalize the app's appearance. This flexibility in interface customization ensures a more tailored and comfortable user experience. Altus thus provides not only a practical but also a highly customizable solution for WhatsApp on the desktop.
-developer: Aman Harwara
-website: https://github.com/amanharwara/altus
+  In addition to its functional robustness, SiYuan is highly extensible. It features a plugin and theme system, enabling users to customize and enhance their workflows. The project is open-source and actively maintained, with a growing community of contributors and users who continue to expand its capabilities. Overall, SiYuan is well-suited for anyone seeking a comprehensive, customizable, and privacy-respecting tool to manage personal knowledge, write documents, and build a long-term second brain.
+developer: B3log
+website: https://b3log.org/siyuan/en/
 submitter: dennysubke
 submission: https://github.com/getumbrel/umbrel-apps/pull/
-repo: https://github.com/amanharwara/altus
-support: https://github.com/amanharwara/altus/issues
+repo: https://github.com/siyuan-note/siyuan
+support: https://github.com/siyuan-note/siyuan/issues
 gallery:
-  - https://i.imgur.com/rn7Zivn.png
-  - https://i.imgur.com/bDy2X8i.png
-  - https://i.imgur.com/ERsYpg3.png
+  - https://i.imgur.com/o10pcD5.png
+  - https://i.imgur.com/o10pcD5.png
+  - https://i.imgur.com/o10pcD5.png
 releaseNotes: >-
-  The per-tab microphone and camera permission option is enabled by default, allowing users to manage permissions on a tab-by-tab basis for enhanced privacy and security. In addition, various other improvements have been implemented, such as performance optimizations, bug fixes, and a more streamlined user interface for better overall experience.
+  This SiYuan update delivers various usability improvements and bug fixes, particularly enhancing tag handling, table editing, web clipping, and PDF exports. It also improves the user experience on Android and introduces better synchronization and search behavior. 
+  
+  
+  Additionally, the software has been upgraded to Electron v34.5.0 and includes refinements to its internal API and plugin system.
 dependencies:
 path: ""
 defaultUsername: ""
