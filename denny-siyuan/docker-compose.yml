@@ -3,11 +3,11 @@ version: '3.7'
 services:
   app_proxy:
     environment:
-      APP_HOST: denny-siyuan_web_1
+      APP_HOST: denny-siyuan_app_1
       APP_PORT: 6806
       PROXY_AUTH_ADD: "false"
 
-  web:
+  app:
     image: b3log/siyuan:v3.1.28@sha256:69e167eff47566e6f69e717df37b282d62e979751e0301526c989cb32cb9c17b
     healthcheck:
       test: ["CMD-SHELL", "nc -z 127.0.0.1 6806 || exit 1"]
