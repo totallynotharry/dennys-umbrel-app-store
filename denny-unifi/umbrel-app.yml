@@ -2,7 +2,7 @@ manifestVersion: 1
 id: denny-unifi
 name: UniFi Network Server
 tagline: An intuitive solution for seamless network management
-icon: https://i.imgur.com/wfT4QX3.png
+icon: https://i.imgur.com/mB4LM3F.png
 category: In Progress
 version: "9.0.114"
 port: 8892
@@ -21,9 +21,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/linuxserver/docker-unifi-network-application
 support: https://github.com/linuxserver/docker-unifi-network-application/issues
 gallery:
-  - https://i.imgur.com/rn7Zivn.png
-  - https://i.imgur.com/bDy2X8i.png
-  - https://i.imgur.com/ERsYpg3.png
+  - https://i.imgur.com/JPXM0Ep.png
+  - https://i.imgur.com/JPXM0Ep.png
+  - https://i.imgur.com/JPXM0Ep.png
 releaseNotes: >-
   The release 9.0.114 reverts the JRE to version 17, addressing compatibility or performance issues, and includes an update to UniFi Network Server version 9.0.114. The changes also reflect improvements or fixes based on feedback from remote updates, ensuring better functionality and stability.
 dependencies:
