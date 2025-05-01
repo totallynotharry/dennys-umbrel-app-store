@@ -5,6 +5,7 @@ services:
     environment:
       APP_HOST: denny-siyuan_web_1
       APP_PORT: 6806
+      PROXY_AUTH_ADD: "false"
 
   web:
     image: b3log/siyuan:v3.1.28@sha256:69e167eff47566e6f69e717df37b282d62e979751e0301526c989cb32cb9c17b
