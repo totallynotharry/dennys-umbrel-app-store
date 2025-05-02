@@ -27,6 +27,6 @@ gallery:
 releaseNotes: >-
   The release 9.0.114 reverts the JRE to version 17, addressing compatibility or performance issues, and includes an update to UniFi Network Server version 9.0.114. The changes also reflect improvements or fixes based on feedback from remote updates, ensuring better functionality and stability.
 dependencies:
-path: "http://${DEVICE_DOMAIN_NAME}:8893"
+path: "http://umbrel-2.local:8893"
 defaultUsername: ""
 defaultPassword: ""
