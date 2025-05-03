@@ -26,3 +26,8 @@ services:
       - POSTGRES_PASSWORD=briefkasten
     volumes:
       - ${APP_DATA_DIR}/data/postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "bkAdmin"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
