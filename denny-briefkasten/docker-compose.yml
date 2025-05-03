@@ -10,7 +10,6 @@ services:
     image: ndom91/briefkasten:sha-a37d2dc@sha256:c5ad2df826b3c69292373912e5dfccc4f6b650fad4a3c07fbcd11a22db7c98ed
     restart: on-failure
     environment:
-      - PORT=3000
       - DATABASE_URL=postgresql://bkAdmin:briefkasten@denny-briefkasten_postgres_1:5432/briefkasten
       - NEXTAUTH_SECRET=${APP_SEED}
       - NEXTAUTH_URL=http://${DEVICE_DOMAIN_NAME}:3852
