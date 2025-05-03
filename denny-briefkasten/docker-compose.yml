@@ -11,8 +11,8 @@ services:
     restart: on-failure
     environment:
       - DATABASE_URL=postgresql://bkAdmin:briefkasten@denny-briefkasten_postgres_1:5432/briefkasten
-      - NEXTAUTH_SECRET=${APP_SEED}
-      - NEXTAUTH_URL=http://${DEVICE_DOMAIN_NAME}:3852
+      - NEXTAUTH_SECRET=dad0f465256e408bb53110952136cc4c361ff9c31527f5b5764628f0eba73ccb #${APP_SEED}
+      - NEXTAUTH_URL=http://umbrel-2.local:3852 #http://${DEVICE_DOMAIN_NAME}:3852
     depends_on:
       - postgres
 
