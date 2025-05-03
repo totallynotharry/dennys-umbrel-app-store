@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: denny-briefkasten_web_1
+      APP_PORT: 3000
+
+  web:
+    image: ndom91/briefkasten:sha-a37d2dc@sha256:c5ad2df826b3c69292373912e5dfccc4f6b650fad4a3c07fbcd11a22db7c98ed
+    restart: on-failure
+    environment:
+      - PORT=3000
+      - DATABASE_URL=postgres://bkAdmin:briefkasten@postgres:5432/briefkasten?sslmode=disable
+      - NEXTAUTH_SECRET=changeme123
+      - NEXTAUTH_URL=http://umbrel-2.local:3852
+    depends_on:
+      - postgres
+    user: "1000:1000"
+
+  postgres:
+    image: postgres:15-alpine
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=briefkasten
+      - POSTGRES_USER=bkAdmin
+      - POSTGRES_PASSWORD=briefkasten
+    volumes:
+      - ${APP_DATA_DIR}/postgres:/var/lib/postgresql/data
+    user: "1000:1000"
