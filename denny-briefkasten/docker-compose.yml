@@ -1,4 +1,4 @@
-version: "3.8"
+version: '3.7'
 
 services:
   app_proxy:
@@ -12,17 +12,17 @@ services:
     environment:
       - PORT=3000
       - DATABASE_URL=postgres://bkAdmin:briefkasten@postgres:5432/briefkasten?sslmode=disable
-      - NEXTAUTH_SECRET=changeme123
-      - NEXTAUTH_URL=http://umbrel-2.local:3852
+      - NEXTAUTH_SECRET=${APP_SEED}
+      - NEXTAUTH_URL=http://${DEVICE_DOMAIN_NAME}:3852
     depends_on:
       - postgres
 
   postgres:
-    image: postgres:15-alpine
-    restart: unless-stopped
+    image: postgres:17.3@sha256:6e3358e46e34dae6c184f48fd06fe1b3dbf958ad5b83480031907e52b9ec2a7d
+    restart: on-failure
     environment:
       - POSTGRES_DB=briefkasten
       - POSTGRES_USER=bkAdmin
       - POSTGRES_PASSWORD=briefkasten
     volumes:
-      - ${APP_DATA_DIR}/postgres:/var/lib/postgresql/data
+      - ${APP_DATA_DIR}/data/postgres:/var/lib/postgresql/data
